@@ -44,6 +44,15 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Crouch"",
+                    ""type"": ""Button"",
+                    ""id"": ""147c83e7-4677-4d2b-9892-349c93d4d5d2"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -112,6 +121,17 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""db60ce22-b4b7-4083-a303-1dc68b0800e2"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Crouch"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -122,6 +142,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         m_Controls = asset.FindActionMap("Controls", throwIfNotFound: true);
         m_Controls_Move = m_Controls.FindAction("Move", throwIfNotFound: true);
         m_Controls_Look = m_Controls.FindAction("Look", throwIfNotFound: true);
+        m_Controls_Crouch = m_Controls.FindAction("Crouch", throwIfNotFound: true);
     }
 
     ~@PlayerInputs()
@@ -190,12 +211,14 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     private List<IControlsActions> m_ControlsActionsCallbackInterfaces = new List<IControlsActions>();
     private readonly InputAction m_Controls_Move;
     private readonly InputAction m_Controls_Look;
+    private readonly InputAction m_Controls_Crouch;
     public struct ControlsActions
     {
         private @PlayerInputs m_Wrapper;
         public ControlsActions(@PlayerInputs wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Controls_Move;
         public InputAction @Look => m_Wrapper.m_Controls_Look;
+        public InputAction @Crouch => m_Wrapper.m_Controls_Crouch;
         public InputActionMap Get() { return m_Wrapper.m_Controls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -211,6 +234,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Look.started += instance.OnLook;
             @Look.performed += instance.OnLook;
             @Look.canceled += instance.OnLook;
+            @Crouch.started += instance.OnCrouch;
+            @Crouch.performed += instance.OnCrouch;
+            @Crouch.canceled += instance.OnCrouch;
         }
 
         private void UnregisterCallbacks(IControlsActions instance)
@@ -221,6 +247,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Look.started -= instance.OnLook;
             @Look.performed -= instance.OnLook;
             @Look.canceled -= instance.OnLook;
+            @Crouch.started -= instance.OnCrouch;
+            @Crouch.performed -= instance.OnCrouch;
+            @Crouch.canceled -= instance.OnCrouch;
         }
 
         public void RemoveCallbacks(IControlsActions instance)
@@ -242,5 +271,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     {
         void OnMove(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
+        void OnCrouch(InputAction.CallbackContext context);
     }
 }

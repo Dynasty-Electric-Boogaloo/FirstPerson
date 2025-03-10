@@ -10,5 +10,7 @@ namespace Player
         public Transform CameraHolder;
         public Vector3 Forward;
         public Vector3 Right;
+        public bool Grounded;
+        public bool Crouched;
     }
 }

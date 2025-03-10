@@ -6,22 +6,22 @@ namespace Player
     public class PlayerMovement : PlayerBehaviour
     {
         [Serializable]
-        private struct MovementSpeedConfig
+        private struct MovementConfig
         {
             public float speed;
             public float acceleration;
             public float deceleration;
+            public float groundOffset;
         }
 
-        [SerializeField] private MovementSpeedConfig walkConfig;
+        [SerializeField] private MovementConfig walkConfig;
+        [SerializeField] private MovementConfig crouchConfig;
         [SerializeField] private LayerMask groundMask;
         [SerializeField] private float groundedGroundCheckLength;
         [SerializeField] private float airborneGroundCheckLength;
-        [SerializeField] private float groundOffset;
         [SerializeField] private float groundLerpSpeed;
         [SerializeField] private float gravity;
         [SerializeField] private float maxFallSpeed;
-        private bool _grounded;
         private Ray _groundCheckRay;
         private RaycastHit _hitInfo;
 
@@ -33,31 +33,32 @@ namespace Player
 
         private void UpdateMovement()
         {
+            var moveConfig = PlayerData.Crouched ? crouchConfig : walkConfig;
             var move = PlayerData.PlayerInputs.Controls.Move.ReadValue<Vector2>();
             var targetMovement = new Vector3(
                 move.x * PlayerData.Right.x + move.y * PlayerData.Forward.x, 
                 0, 
-                move.x * PlayerData.Right.z + move.y * PlayerData.Forward.z) * walkConfig.speed;
+                move.x * PlayerData.Right.z + move.y * PlayerData.Forward.z) * moveConfig.speed;
 
             var linearVelocity = PlayerData.Rigidbody.linearVelocity;
             linearVelocity.y = 0;
             var diff = targetMovement - linearVelocity;
             var acceleration = Vector3.Dot(targetMovement, diff) < 0
-                ? walkConfig.deceleration
-                : walkConfig.acceleration;
+                ? moveConfig.deceleration
+                : moveConfig.acceleration;
 
             PlayerData.Rigidbody.AddForce(diff * acceleration, ForceMode.Acceleration);
         }
 
         private void UpdateGravity()
         {
-            var groundCheckLength = _grounded ? groundedGroundCheckLength : airborneGroundCheckLength;
+            var groundCheckLength = PlayerData.Grounded ? groundedGroundCheckLength : airborneGroundCheckLength;
             _groundCheckRay.origin = PlayerData.Rigidbody.position;
             _groundCheckRay.direction = Vector3.down;
 
-            _grounded = Physics.SphereCast(_groundCheckRay, .5f, out _hitInfo, groundCheckLength, groundMask);
+            PlayerData.Grounded = Physics.SphereCast(_groundCheckRay, .5f, out _hitInfo, groundCheckLength, groundMask);
 
-            if (!_grounded)
+            if (!PlayerData.Grounded)
             {
                 AccelerateGravity();
                 return;
@@ -75,12 +76,13 @@ namespace Player
 
         private void GroundPlayer()
         {
+            var moveConfig = PlayerData.Crouched ? crouchConfig : walkConfig;
             var linearVelocity = PlayerData.Rigidbody.linearVelocity;
             linearVelocity.y = 0;
             PlayerData.Rigidbody.linearVelocity = linearVelocity;
 
             var position = PlayerData.Rigidbody.position;
-            position.y = Mathf.Lerp(position.y, _hitInfo.point.y + groundOffset, groundLerpSpeed * Time.deltaTime);
+            position.y = Mathf.Lerp(position.y, _hitInfo.point.y + moveConfig.groundOffset, groundLerpSpeed * Time.deltaTime);
             PlayerData.Rigidbody.position = position;
         }
     }
