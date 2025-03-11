@@ -23,7 +23,8 @@ namespace Player
         [SerializeField] private float gravity;
         [SerializeField] private float maxFallSpeed;
         private Ray _groundCheckRay;
-        private RaycastHit _hitInfo;
+        private RaycastHit _sphereHitInfo;
+        private RaycastHit _rayHitInfo;
 
         private void Update()
         {
@@ -56,7 +57,7 @@ namespace Player
             _groundCheckRay.origin = PlayerData.Rigidbody.position;
             _groundCheckRay.direction = Vector3.down;
 
-            PlayerData.Grounded = Physics.SphereCast(_groundCheckRay, .5f, out _hitInfo, groundCheckLength, groundMask);
+            PlayerData.Grounded = Physics.SphereCast(_groundCheckRay, .5f, out _sphereHitInfo, groundCheckLength, groundMask);
 
             if (!PlayerData.Grounded)
             {
@@ -64,7 +65,7 @@ namespace Player
                 return;
             }
 
-            GroundPlayer();
+            GroundPlayer(groundCheckLength);
         }
 
         private void AccelerateGravity()
@@ -74,15 +75,18 @@ namespace Player
             PlayerData.Rigidbody.linearVelocity = linearVelocity;
         }
 
-        private void GroundPlayer()
+        private void GroundPlayer(float groundCheckLength)
         {
             var moveConfig = PlayerData.Crouched ? crouchConfig : walkConfig;
             var linearVelocity = PlayerData.Rigidbody.linearVelocity;
             linearVelocity.y = 0;
             PlayerData.Rigidbody.linearVelocity = linearVelocity;
 
+            var rayHit = Physics.Raycast(_groundCheckRay, out _rayHitInfo, groundCheckLength + .5f, groundMask);
+            var hitInfo = rayHit ? _rayHitInfo : _sphereHitInfo;
+
             var position = PlayerData.Rigidbody.position;
-            position.y = Mathf.Lerp(position.y, _hitInfo.point.y + moveConfig.groundOffset, groundLerpSpeed * Time.deltaTime);
+            position.y = Mathf.Lerp(position.y, hitInfo.point.y + moveConfig.groundOffset, groundLerpSpeed * Time.deltaTime);
             PlayerData.Rigidbody.position = position;
         }
     }
