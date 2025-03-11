@@ -41,7 +41,7 @@ namespace Player
             Debug.DrawLine(_ceilingCheckRay.origin,
                 _ceilingCheckRay.origin + _ceilingCheckRay.direction * ceilingHeightCheck);
 
-            return !Physics.SphereCast(_ceilingCheckRay, .5f, ceilingHeightCheck, ceilingMask);
+            return !Physics.SphereCast(_ceilingCheckRay, .45f, ceilingHeightCheck, ceilingMask);
         }
     }
 }
