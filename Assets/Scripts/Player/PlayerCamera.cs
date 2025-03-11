@@ -24,6 +24,7 @@ namespace Player
             transform.localEulerAngles = new Vector3(0, _angle.x, 0);
             PlayerData.Forward = transform.forward;
             PlayerData.Right = transform.right;
+            PlayerData.CameraRotationX = -_angle.y;
         }
     }
 }
