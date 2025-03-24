@@ -37,7 +37,7 @@ namespace Player
 
         private void LightUpdate()
         {
-            if (_playerInput.Controls.UseFlash.IsPressed())
+            if (_playerInput.Controls.UseFlash.WasPressedThisFrame())
                SetLightVisible(!_isOn);
             
             if (_playerInput.Controls.ReloadFlash.IsPressed())
@@ -45,8 +45,11 @@ namespace Player
             
             if (_battery > batteryMax)
                 _battery = batteryMax;
+
+            if (!_isOn)
+                return;
             
-            if (_isOn && _battery > 0)
+            if (_battery > 0)
             {
                 _battery -= Time.deltaTime;
                 light.intensity = (_battery / batteryMax) * lightIntensityMultiplier;
@@ -56,17 +59,15 @@ namespace Player
                 batterySlider.value = _battery / batteryMax;
         }
 
-        private void SetLightVisible(bool setOn)
+        private void SetLightVisible(bool visible)
         {
-            _isOn = setOn;
+            _isOn = visible;
             
-            if(setOn)
+            if(!visible)
                 light.intensity = 0;
             
             if(batterySlider)
                 batterySlider.gameObject.SetActive(_isOn);
-            
         }
-
     }
 }
