@@ -55,9 +55,27 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
+                    ""name"": ""UseFlash"",
+                    ""type"": ""Button"",
+                    ""id"": ""eda0b0ef-1e56-46ef-896a-68e9431936f0"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ReloadFlash"",
+                    ""type"": ""Button"",
+                    ""id"": ""5e24723f-1382-4114-ac14-9bff6f682e57"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Grab"",
                     ""type"": ""Button"",
-                    ""id"": ""6093de7d-950c-485d-9d40-e66411057a33"",
+                    ""id"": ""eff71d3c-1977-4ab9-950b-18592396a3c6"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -66,7 +84,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""Throw"",
                     ""type"": ""Button"",
-                    ""id"": ""6ac2c0ac-af6c-4e14-a2db-a70d641bfd2b"",
+                    ""id"": ""9973139c-ac8b-4ea7-a36f-c5ccdae1fbc2"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -153,7 +171,29 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""44ec279b-ecfe-439d-82f4-61f7fcf5b253"",
+                    ""id"": ""18edf257-a565-44ae-a8a5-867fa5fedf81"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UseFlash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""df0b1fea-2ac6-4672-9d45-c5791e6c2ba8"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ReloadFlash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7557f4c5-160b-4000-9504-7c9597201c1f"",
                     ""path"": ""<Keyboard>/e"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -164,7 +204,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""00b5800a-ce94-452a-8578-637b6db57ea7"",
+                    ""id"": ""c067b36f-b711-47d3-94e3-c4c86dd939a8"",
                     ""path"": ""<Mouse>/leftButton"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -183,6 +223,8 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         m_Controls_Move = m_Controls.FindAction("Move", throwIfNotFound: true);
         m_Controls_Look = m_Controls.FindAction("Look", throwIfNotFound: true);
         m_Controls_Crouch = m_Controls.FindAction("Crouch", throwIfNotFound: true);
+        m_Controls_UseFlash = m_Controls.FindAction("UseFlash", throwIfNotFound: true);
+        m_Controls_ReloadFlash = m_Controls.FindAction("ReloadFlash", throwIfNotFound: true);
         m_Controls_Grab = m_Controls.FindAction("Grab", throwIfNotFound: true);
         m_Controls_Throw = m_Controls.FindAction("Throw", throwIfNotFound: true);
     }
@@ -254,6 +296,8 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_Controls_Move;
     private readonly InputAction m_Controls_Look;
     private readonly InputAction m_Controls_Crouch;
+    private readonly InputAction m_Controls_UseFlash;
+    private readonly InputAction m_Controls_ReloadFlash;
     private readonly InputAction m_Controls_Grab;
     private readonly InputAction m_Controls_Throw;
     public struct ControlsActions
@@ -263,6 +307,8 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         public InputAction @Move => m_Wrapper.m_Controls_Move;
         public InputAction @Look => m_Wrapper.m_Controls_Look;
         public InputAction @Crouch => m_Wrapper.m_Controls_Crouch;
+        public InputAction @UseFlash => m_Wrapper.m_Controls_UseFlash;
+        public InputAction @ReloadFlash => m_Wrapper.m_Controls_ReloadFlash;
         public InputAction @Grab => m_Wrapper.m_Controls_Grab;
         public InputAction @Throw => m_Wrapper.m_Controls_Throw;
         public InputActionMap Get() { return m_Wrapper.m_Controls; }
@@ -283,6 +329,12 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Crouch.started += instance.OnCrouch;
             @Crouch.performed += instance.OnCrouch;
             @Crouch.canceled += instance.OnCrouch;
+            @UseFlash.started += instance.OnUseFlash;
+            @UseFlash.performed += instance.OnUseFlash;
+            @UseFlash.canceled += instance.OnUseFlash;
+            @ReloadFlash.started += instance.OnReloadFlash;
+            @ReloadFlash.performed += instance.OnReloadFlash;
+            @ReloadFlash.canceled += instance.OnReloadFlash;
             @Grab.started += instance.OnGrab;
             @Grab.performed += instance.OnGrab;
             @Grab.canceled += instance.OnGrab;
@@ -302,6 +354,12 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Crouch.started -= instance.OnCrouch;
             @Crouch.performed -= instance.OnCrouch;
             @Crouch.canceled -= instance.OnCrouch;
+            @UseFlash.started -= instance.OnUseFlash;
+            @UseFlash.performed -= instance.OnUseFlash;
+            @UseFlash.canceled -= instance.OnUseFlash;
+            @ReloadFlash.started -= instance.OnReloadFlash;
+            @ReloadFlash.performed -= instance.OnReloadFlash;
+            @ReloadFlash.canceled -= instance.OnReloadFlash;
             @Grab.started -= instance.OnGrab;
             @Grab.performed -= instance.OnGrab;
             @Grab.canceled -= instance.OnGrab;
@@ -330,6 +388,8 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnCrouch(InputAction.CallbackContext context);
+        void OnUseFlash(InputAction.CallbackContext context);
+        void OnReloadFlash(InputAction.CallbackContext context);
         void OnGrab(InputAction.CallbackContext context);
         void OnThrow(InputAction.CallbackContext context);
     }

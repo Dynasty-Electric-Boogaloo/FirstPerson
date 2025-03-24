@@ -36,7 +36,7 @@ namespace Player
                 return;
             
             grabPoint.localPosition = Vector3.forward * (grabOffset + _selectedObject.GetBounds().extents.z);
-            grabHinge.localRotation = Quaternion.Euler(-PlayerData.Angle.y, 0, 0);
+            grabHinge.localRotation = Quaternion.Euler(-PlayerData.CameraRotation.y, 0, 0);
         }
 
         private void HandleGrabbed()
