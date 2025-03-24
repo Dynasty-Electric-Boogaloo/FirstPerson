@@ -46,7 +46,7 @@ namespace Player
             if (_battery > batteryMax)
                 _battery = batteryMax;
             
-            if (_isOn & _battery > 0)
+            if (_isOn && _battery > 0)
             {
                 _battery -= Time.deltaTime;
                 light.intensity = (_battery / batteryMax) * lightIntensityMultiplier;
