@@ -39,13 +39,7 @@ namespace Player
         {
             if (_playerInput.Controls.UseFlash.IsPressed())
             {
-                if(_isOn)
-                    HideLight();
-                else
-                    ShowLight();
-                
-                if(batterySlider)
-                    batterySlider.gameObject.SetActive(_isOn);
+               SetLightVisible(!_isOn);
             }
             
             if (_playerInput.Controls.ReloadFlash.IsPressed())
@@ -64,15 +58,16 @@ namespace Player
                 batterySlider.value = _battery / batteryMax;
         }
 
-        private void ShowLight()
+        private void SetLightVisible(bool setOn)
         {
-            _isOn = true;
-        }
-
-        private void HideLight()
-        {
-            _isOn = false;
-            light.intensity = 0;
+            _isOn = setOn;
+            
+            if(setOn)
+                light.intensity = 0;
+            
+            if(batterySlider)
+                batterySlider.gameObject.SetActive(_isOn);
+            
         }
 
     }
