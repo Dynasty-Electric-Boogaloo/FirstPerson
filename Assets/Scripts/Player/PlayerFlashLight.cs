@@ -21,31 +21,23 @@ namespace Player
         //Private variables
         private float _battery;
         private bool _isOn;
+        private PlayerInputs _playerInput; 
 
         private void Start()
         {
+            _playerInput = PlayerData.PlayerInputs; 
             _battery = batteryMax;
             HideLight();
         }
 
         private void Update()
         {
-            PositionUpdate();
             LightUpdate();
-        }
-
-        private void PositionUpdate()
-        {
-            var angles = flashLightTransform.rotation.eulerAngles;
-            angles.x = PlayerData.CameraRotationX;
-            var rotation = flashLightTransform.rotation;
-            rotation.eulerAngles = angles;
-            flashLightTransform.rotation = rotation;
         }
 
         private void LightUpdate()
         {
-            if (PlayerData.PlayerInputs.Controls.UseFlash.IsPressed())
+            if (_playerInput.Controls.UseFlash.IsPressed())
             {
                 if(_isOn)
                 {
@@ -57,7 +49,7 @@ namespace Player
                     ShowLight();
                 }
             }
-            if (PlayerData.PlayerInputs.Controls.HideLight.IsPressed())
+            if (_playerInput.Controls.HideLight.IsPressed())
             {
                 HideLight();
             }
