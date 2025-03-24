@@ -64,7 +64,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""HideLight"",
+                    ""name"": ""ReloadFlash"",
                     ""type"": ""Button"",
                     ""id"": ""5e24723f-1382-4114-ac14-9bff6f682e57"",
                     ""expectedControlType"": """",
@@ -169,7 +169,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""HideLight"",
+                    ""action"": ""ReloadFlash"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -184,7 +184,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         m_Controls_Look = m_Controls.FindAction("Look", throwIfNotFound: true);
         m_Controls_Crouch = m_Controls.FindAction("Crouch", throwIfNotFound: true);
         m_Controls_UseFlash = m_Controls.FindAction("UseFlash", throwIfNotFound: true);
-        m_Controls_HideLight = m_Controls.FindAction("HideLight", throwIfNotFound: true);
+        m_Controls_ReloadFlash = m_Controls.FindAction("ReloadFlash", throwIfNotFound: true);
     }
 
     ~@PlayerInputs()
@@ -255,7 +255,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_Controls_Look;
     private readonly InputAction m_Controls_Crouch;
     private readonly InputAction m_Controls_UseFlash;
-    private readonly InputAction m_Controls_HideLight;
+    private readonly InputAction m_Controls_ReloadFlash;
     public struct ControlsActions
     {
         private @PlayerInputs m_Wrapper;
@@ -264,7 +264,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         public InputAction @Look => m_Wrapper.m_Controls_Look;
         public InputAction @Crouch => m_Wrapper.m_Controls_Crouch;
         public InputAction @UseFlash => m_Wrapper.m_Controls_UseFlash;
-        public InputAction @HideLight => m_Wrapper.m_Controls_HideLight;
+        public InputAction @ReloadFlash => m_Wrapper.m_Controls_ReloadFlash;
         public InputActionMap Get() { return m_Wrapper.m_Controls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -286,9 +286,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @UseFlash.started += instance.OnUseFlash;
             @UseFlash.performed += instance.OnUseFlash;
             @UseFlash.canceled += instance.OnUseFlash;
-            @HideLight.started += instance.OnHideLight;
-            @HideLight.performed += instance.OnHideLight;
-            @HideLight.canceled += instance.OnHideLight;
+            @ReloadFlash.started += instance.OnReloadFlash;
+            @ReloadFlash.performed += instance.OnReloadFlash;
+            @ReloadFlash.canceled += instance.OnReloadFlash;
         }
 
         private void UnregisterCallbacks(IControlsActions instance)
@@ -305,9 +305,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @UseFlash.started -= instance.OnUseFlash;
             @UseFlash.performed -= instance.OnUseFlash;
             @UseFlash.canceled -= instance.OnUseFlash;
-            @HideLight.started -= instance.OnHideLight;
-            @HideLight.performed -= instance.OnHideLight;
-            @HideLight.canceled -= instance.OnHideLight;
+            @ReloadFlash.started -= instance.OnReloadFlash;
+            @ReloadFlash.performed -= instance.OnReloadFlash;
+            @ReloadFlash.canceled -= instance.OnReloadFlash;
         }
 
         public void RemoveCallbacks(IControlsActions instance)
@@ -331,6 +331,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         void OnLook(InputAction.CallbackContext context);
         void OnCrouch(InputAction.CallbackContext context);
         void OnUseFlash(InputAction.CallbackContext context);
-        void OnHideLight(InputAction.CallbackContext context);
+        void OnReloadFlash(InputAction.CallbackContext context);
     }
 }

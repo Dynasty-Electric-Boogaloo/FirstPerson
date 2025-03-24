@@ -39,18 +39,14 @@ namespace Player
         {
             if (_playerInput.Controls.UseFlash.IsPressed())
             {
+                _isOn = !_isOn;
                 if(_isOn)
-                {
-                    _battery += addByButtonPressed;
-                    if (_battery > batteryMax) _battery = batteryMax;
-                }
-                else
-                {
                     ShowLight();
-                }
+                if(!_isOn)
+                    HideLight();
             }
-            if (_playerInput.Controls.HideLight.IsPressed())
-                HideLight();
+            if (_playerInput.Controls.ReloadFlash.IsPressed())
+                _battery += addByButtonPressed;
             if (_isOn & _battery > 0)
             {
                 _battery -= Time.deltaTime;
