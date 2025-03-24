@@ -53,6 +53,24 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Grab"",
+                    ""type"": ""Button"",
+                    ""id"": ""6093de7d-950c-485d-9d40-e66411057a33"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Throw"",
+                    ""type"": ""Button"",
+                    ""id"": ""6ac2c0ac-af6c-4e14-a2db-a70d641bfd2b"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -132,6 +150,28 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""action"": ""Crouch"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""44ec279b-ecfe-439d-82f4-61f7fcf5b253"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Grab"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""00b5800a-ce94-452a-8578-637b6db57ea7"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Throw"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -143,6 +183,8 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         m_Controls_Move = m_Controls.FindAction("Move", throwIfNotFound: true);
         m_Controls_Look = m_Controls.FindAction("Look", throwIfNotFound: true);
         m_Controls_Crouch = m_Controls.FindAction("Crouch", throwIfNotFound: true);
+        m_Controls_Grab = m_Controls.FindAction("Grab", throwIfNotFound: true);
+        m_Controls_Throw = m_Controls.FindAction("Throw", throwIfNotFound: true);
     }
 
     ~@PlayerInputs()
@@ -212,6 +254,8 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_Controls_Move;
     private readonly InputAction m_Controls_Look;
     private readonly InputAction m_Controls_Crouch;
+    private readonly InputAction m_Controls_Grab;
+    private readonly InputAction m_Controls_Throw;
     public struct ControlsActions
     {
         private @PlayerInputs m_Wrapper;
@@ -219,6 +263,8 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         public InputAction @Move => m_Wrapper.m_Controls_Move;
         public InputAction @Look => m_Wrapper.m_Controls_Look;
         public InputAction @Crouch => m_Wrapper.m_Controls_Crouch;
+        public InputAction @Grab => m_Wrapper.m_Controls_Grab;
+        public InputAction @Throw => m_Wrapper.m_Controls_Throw;
         public InputActionMap Get() { return m_Wrapper.m_Controls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -237,6 +283,12 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Crouch.started += instance.OnCrouch;
             @Crouch.performed += instance.OnCrouch;
             @Crouch.canceled += instance.OnCrouch;
+            @Grab.started += instance.OnGrab;
+            @Grab.performed += instance.OnGrab;
+            @Grab.canceled += instance.OnGrab;
+            @Throw.started += instance.OnThrow;
+            @Throw.performed += instance.OnThrow;
+            @Throw.canceled += instance.OnThrow;
         }
 
         private void UnregisterCallbacks(IControlsActions instance)
@@ -250,6 +302,12 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Crouch.started -= instance.OnCrouch;
             @Crouch.performed -= instance.OnCrouch;
             @Crouch.canceled -= instance.OnCrouch;
+            @Grab.started -= instance.OnGrab;
+            @Grab.performed -= instance.OnGrab;
+            @Grab.canceled -= instance.OnGrab;
+            @Throw.started -= instance.OnThrow;
+            @Throw.performed -= instance.OnThrow;
+            @Throw.canceled -= instance.OnThrow;
         }
 
         public void RemoveCallbacks(IControlsActions instance)
@@ -272,5 +330,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnCrouch(InputAction.CallbackContext context);
+        void OnGrab(InputAction.CallbackContext context);
+        void OnThrow(InputAction.CallbackContext context);
     }
 }

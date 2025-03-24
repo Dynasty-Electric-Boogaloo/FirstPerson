@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Player
 {
@@ -12,5 +11,6 @@ namespace Player
         public Vector3 Right;
         public bool Grounded;
         public bool Crouched;
+        public Vector2 Angle;
     }
 }

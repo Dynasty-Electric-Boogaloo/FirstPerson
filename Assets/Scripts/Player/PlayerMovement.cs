@@ -36,6 +36,12 @@ namespace Player
         {
             var moveConfig = PlayerData.Crouched ? crouchConfig : walkConfig;
             var move = PlayerData.PlayerInputs.Controls.Move.ReadValue<Vector2>();
+
+            if (move.sqrMagnitude < 0.01f)
+            {
+                move = Vector2.zero;
+            }
+            
             var targetMovement = new Vector3(
                 move.x * PlayerData.Right.x + move.y * PlayerData.Forward.x, 
                 0, 
@@ -44,7 +50,7 @@ namespace Player
             var linearVelocity = PlayerData.Rigidbody.linearVelocity;
             linearVelocity.y = 0;
             var diff = targetMovement - linearVelocity;
-            var acceleration = Vector3.Dot(targetMovement, diff) < 0
+            var acceleration = Vector3.Dot(targetMovement, diff) <= 0
                 ? moveConfig.deceleration
                 : moveConfig.acceleration;
 
