@@ -12,6 +12,6 @@ namespace Player
         public Vector3 Right;
         public bool Grounded;
         public bool Crouched;
-        public float CameraRotationX;
+        public Vector2 CameraRotation;
     }
 }
