@@ -22,9 +22,11 @@ public class GrabObject : MonoBehaviour
     [SerializeField] private MaterialSet regularMaterialSet;
     [SerializeField] private bool isInfected;
     [SerializeField] private float maxTimeBeforeAlert = 5;
+    [SerializeField] private LayerMask breakableLayers;
     private Collider _collider;
     private Rigidbody _rigidbody;
     private float _timer;
+    private bool isThrown;
     
 
     private void Awake()
@@ -38,6 +40,7 @@ public class GrabObject : MonoBehaviour
     public void ReduceTime()
     {
         _timer -= Time.deltaTime;
+        
         if (_timer < 0)
             Debug.Log("Menace alerted...");
     }
@@ -46,11 +49,19 @@ public class GrabObject : MonoBehaviour
     {
         if(isInfected)
             Debug.Log("Menace alerted...");
+        
         SetHighlight(false);
         transform.SetParent(grabPoint, false);
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
         _rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+    }
+
+    private void Update()
+    {
+        if (!isThrown) return;
+        if (Physics.OverlapSphere(transform.position, 0.25f, breakableLayers).Length < 1) return;
+        Break();
     }
 
     public void Interact()
@@ -60,6 +71,7 @@ public class GrabObject : MonoBehaviour
             Debug.Log("QTE");
             Debug.Log("More battery");
         }
+        
         Break();
     }
 
@@ -73,6 +85,7 @@ public class GrabObject : MonoBehaviour
     {
         Ungrab();
         _rigidbody.linearVelocity = velocity;
+        isThrown = true;
     }
 
     public Bounds GetBounds()

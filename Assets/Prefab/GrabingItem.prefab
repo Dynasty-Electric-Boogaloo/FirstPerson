@@ -52,7 +52,11 @@ MonoBehaviour:
     normal: {fileID: 2100000, guid: 64859cf955a5fb047880af754183e463, type: 2}
     highlighted: {fileID: 2100000, guid: dd66d467961812f4383351e477499b93, type: 2}
     infectedMaterial: {fileID: 2100000, guid: 572218b186e96c648853f56156b07925, type: 2}
-  _isInfected: 1
+  isInfected: 0
+  maxTimeBeforeAlert: 5
+  breakableLayers:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!54 &3548664020859346674
 Rigidbody:
   m_ObjectHideFlags: 0
