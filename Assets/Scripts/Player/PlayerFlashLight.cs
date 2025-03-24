@@ -50,27 +50,21 @@ namespace Player
                 }
             }
             if (_playerInput.Controls.HideLight.IsPressed())
-            {
                 HideLight();
-            }
             if (_isOn & _battery > 0)
             {
                 _battery -= Time.deltaTime;
                 light.intensity = (_battery / batteryMax) * lightIntensityMultiplier;
             }
             if(batterySlider)
-            {
                 batterySlider.value = _battery / batteryMax;
-            }
         }
 
         private void ShowLight()
         {
             _isOn = true;
             if(batterySlider)
-            {
                 batterySlider.gameObject.SetActive(true);
-            }
         }
 
         private void HideLight()
@@ -78,9 +72,7 @@ namespace Player
             _isOn = false;
             light.intensity = 0;
             if(batterySlider)
-            {
                 batterySlider.gameObject.SetActive(false);
-            }
         }
 
     }
