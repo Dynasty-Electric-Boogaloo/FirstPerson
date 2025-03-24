@@ -47,6 +47,8 @@ namespace Player
             }
             if (_playerInput.Controls.ReloadFlash.IsPressed())
                 _battery += addByButtonPressed;
+            if (_battery > batteryMax)
+                _battery = batteryMax;
             if (_isOn & _battery > 0)
             {
                 _battery -= Time.deltaTime;
