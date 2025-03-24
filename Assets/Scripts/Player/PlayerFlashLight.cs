@@ -38,9 +38,7 @@ namespace Player
         private void LightUpdate()
         {
             if (_playerInput.Controls.UseFlash.IsPressed())
-            {
                SetLightVisible(!_isOn);
-            }
             
             if (_playerInput.Controls.ReloadFlash.IsPressed())
                 _battery += addByButtonPressed;
