@@ -27,7 +27,7 @@ namespace Player
         {
             _playerInput = PlayerData.PlayerInputs; 
             _battery = batteryMax;
-            HideLight();
+            SetLightVisible(false);
         }
 
         private void Update()
