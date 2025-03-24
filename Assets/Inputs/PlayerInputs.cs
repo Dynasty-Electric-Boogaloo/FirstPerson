@@ -53,6 +53,24 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""UseFlash"",
+                    ""type"": ""Button"",
+                    ""id"": ""eda0b0ef-1e56-46ef-896a-68e9431936f0"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ReloadFlash"",
+                    ""type"": ""Button"",
+                    ""id"": ""5e24723f-1382-4114-ac14-9bff6f682e57"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -132,6 +150,28 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""action"": ""Crouch"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""18edf257-a565-44ae-a8a5-867fa5fedf81"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""UseFlash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""df0b1fea-2ac6-4672-9d45-c5791e6c2ba8"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ReloadFlash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -143,6 +183,8 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         m_Controls_Move = m_Controls.FindAction("Move", throwIfNotFound: true);
         m_Controls_Look = m_Controls.FindAction("Look", throwIfNotFound: true);
         m_Controls_Crouch = m_Controls.FindAction("Crouch", throwIfNotFound: true);
+        m_Controls_UseFlash = m_Controls.FindAction("UseFlash", throwIfNotFound: true);
+        m_Controls_ReloadFlash = m_Controls.FindAction("ReloadFlash", throwIfNotFound: true);
     }
 
     ~@PlayerInputs()
@@ -212,6 +254,8 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_Controls_Move;
     private readonly InputAction m_Controls_Look;
     private readonly InputAction m_Controls_Crouch;
+    private readonly InputAction m_Controls_UseFlash;
+    private readonly InputAction m_Controls_ReloadFlash;
     public struct ControlsActions
     {
         private @PlayerInputs m_Wrapper;
@@ -219,6 +263,8 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         public InputAction @Move => m_Wrapper.m_Controls_Move;
         public InputAction @Look => m_Wrapper.m_Controls_Look;
         public InputAction @Crouch => m_Wrapper.m_Controls_Crouch;
+        public InputAction @UseFlash => m_Wrapper.m_Controls_UseFlash;
+        public InputAction @ReloadFlash => m_Wrapper.m_Controls_ReloadFlash;
         public InputActionMap Get() { return m_Wrapper.m_Controls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -237,6 +283,12 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Crouch.started += instance.OnCrouch;
             @Crouch.performed += instance.OnCrouch;
             @Crouch.canceled += instance.OnCrouch;
+            @UseFlash.started += instance.OnUseFlash;
+            @UseFlash.performed += instance.OnUseFlash;
+            @UseFlash.canceled += instance.OnUseFlash;
+            @ReloadFlash.started += instance.OnReloadFlash;
+            @ReloadFlash.performed += instance.OnReloadFlash;
+            @ReloadFlash.canceled += instance.OnReloadFlash;
         }
 
         private void UnregisterCallbacks(IControlsActions instance)
@@ -250,6 +302,12 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Crouch.started -= instance.OnCrouch;
             @Crouch.performed -= instance.OnCrouch;
             @Crouch.canceled -= instance.OnCrouch;
+            @UseFlash.started -= instance.OnUseFlash;
+            @UseFlash.performed -= instance.OnUseFlash;
+            @UseFlash.canceled -= instance.OnUseFlash;
+            @ReloadFlash.started -= instance.OnReloadFlash;
+            @ReloadFlash.performed -= instance.OnReloadFlash;
+            @ReloadFlash.canceled -= instance.OnReloadFlash;
         }
 
         public void RemoveCallbacks(IControlsActions instance)
@@ -272,5 +330,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnCrouch(InputAction.CallbackContext context);
+        void OnUseFlash(InputAction.CallbackContext context);
+        void OnReloadFlash(InputAction.CallbackContext context);
     }
 }
