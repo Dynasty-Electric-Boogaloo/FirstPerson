@@ -23,10 +23,11 @@ public class GrabObject : MonoBehaviour
     [SerializeField] private bool isInfected;
     [SerializeField] private float maxTimeBeforeAlert = 5;
     [SerializeField] private LayerMask breakableLayers;
+    [SerializeField] private LayerMask playerLayer;
     private Collider _collider;
     private Rigidbody _rigidbody;
     private float _timer;
-    private bool isThrown;
+    private bool _isThrown;
     
 
     private void Awake()
@@ -59,9 +60,31 @@ public class GrabObject : MonoBehaviour
 
     private void Update()
     {
-        if (!isThrown) return;
-        if (Physics.OverlapSphere(transform.position, 0.25f, breakableLayers).Length < 1) return;
+        if (!_isThrown) 
+            return;
+        
+        var hitColliders = new Collider[1];
+        Physics.OverlapSphereNonAlloc(transform.position, 1, hitColliders, breakableLayers);
+        
+        if (hitColliders.Length < 1) 
+            return;
+        
         Break();
+    }
+
+
+    private void FixedUpdate()
+    {
+        if(!isInfected) 
+            return;
+        
+        var hitColliders = new Collider[1];
+        Physics.OverlapSphereNonAlloc(transform.position, 1, hitColliders, playerLayer);
+        
+        if (hitColliders.Length < 1) 
+            return;
+        
+        ReduceTime();
     }
 
     public void Interact()
@@ -85,7 +108,7 @@ public class GrabObject : MonoBehaviour
     {
         Ungrab();
         _rigidbody.linearVelocity = velocity;
-        isThrown = true;
+        _isThrown = true;
     }
 
     public Bounds GetBounds()
