@@ -31,4 +31,5 @@ public class BatteryManager : MonoBehaviour
     }
 
     public float GetCurrentBattery() => _currentBattery; 
+    public float GetCurrentBatteryMax() => maxBattery; 
 }
