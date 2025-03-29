@@ -9,6 +9,7 @@ namespace Player
         [SerializeField] private float grabDistance;
         [SerializeField] private Transform grabPoint;
         [SerializeField] private Transform grabHinge;
+        [SerializeField] private float grabSize = 2;
         private GrabObject _selectedObject;
         private bool _grabbed;
         private RaycastHit _raycastHit;
@@ -54,7 +55,7 @@ namespace Player
                 PlayerData.CameraHolder.position + PlayerData.CameraHolder.forward * grabOffset,
                 PlayerData.CameraHolder.forward);
             
-            var hit = Physics.Raycast(ray, out _raycastHit, grabDistance);
+            var hit = Physics.SphereCast(ray, grabSize, out _raycastHit, grabDistance);
             
             if (!hit)
             {
