@@ -38,7 +38,7 @@ public class GrabObject : MonoBehaviour
         _timer = maxTimeBeforeAlert;
     }
 
-    public void ReduceTime()
+    private void ReduceTime()
     {
         _timer -= Time.deltaTime;
         
@@ -64,12 +64,15 @@ public class GrabObject : MonoBehaviour
             return;
         
         var hitColliders = new Collider[1];
-        Physics.OverlapSphereNonAlloc(transform.position, 1, hitColliders, breakableLayers);
+        int numColliders = Physics.OverlapSphereNonAlloc(transform.position, 0.2f, hitColliders, breakableLayers);
         
-        if (hitColliders.Length < 1) 
-            return;
+        for (int i = 0; i < numColliders; i++)
+        {
+           Debug.Log(hitColliders[i].gameObject.name);
+        }
         
-        Break();
+        if(numColliders > 0)
+            Break();
     }
 
 
@@ -83,7 +86,6 @@ public class GrabObject : MonoBehaviour
         
         if (hitColliders.Length < 1) 
             return;
-        
         ReduceTime();
     }
 

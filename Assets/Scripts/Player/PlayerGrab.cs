@@ -9,7 +9,7 @@ namespace Player
         [SerializeField] private float grabDistance;
         [SerializeField] private Transform grabPoint;
         [SerializeField] private Transform grabHinge;
-        [SerializeField] private float grabSize = 2;
+        [SerializeField] private float grabSize = 0.1f;
         private GrabObject _selectedObject;
         private bool _grabbed;
         private RaycastHit _raycastHit;
