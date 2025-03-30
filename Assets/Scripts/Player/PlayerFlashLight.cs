@@ -25,7 +25,7 @@ namespace Player
         private PlayerInputs _playerInput;
         private BatteryManager _batteryManager;
         private float CurrentBattery => _special ? _batteryManager.GetCurrentBattery() : _battery;
-        private float CurrentBatteryMax  => _special ? _batteryManager.GetCurrentBatteryMax() : CurrentBatteryMax;
+        private float CurrentBatteryMax  => _special ? _batteryManager.GetCurrentBatteryMax() : batteryMax;
         
 
         private void Start()
