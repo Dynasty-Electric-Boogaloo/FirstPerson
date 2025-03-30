@@ -243,7 +243,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""50f323c9-cb94-48c4-83eb-4b0b67de587c"",
-                    ""path"": ""<Keyboard>/enter"",
+                    ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
