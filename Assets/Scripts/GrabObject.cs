@@ -30,7 +30,8 @@ public class GrabObject : MonoBehaviour
     private Rigidbody _rigidbody;
     private float _timer;
     private bool _isThrown;
-    
+
+    public bool IsThrown => _isThrown;
 
     private void Awake()
     {
@@ -42,10 +43,10 @@ public class GrabObject : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = new Color(1, 1, 0, 0.75F);
-        Gizmos.DrawSphere(transform.position, checkPlayerRadius);
+        Gizmos.DrawWireSphere(transform.position, checkPlayerRadius);
         
         Gizmos.color = new Color(1, 0, 0, 0.75F);
-        Gizmos.DrawSphere(transform.position, breakRadius);
+        Gizmos.DrawWireSphere(transform.position, breakRadius);
     }
 
     private void ReduceTime()
@@ -65,6 +66,7 @@ public class GrabObject : MonoBehaviour
         transform.SetParent(grabPoint, false);
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
+        _collider.enabled = false;
         _rigidbody.constraints = RigidbodyConstraints.FreezeAll;
     }
 
@@ -113,6 +115,7 @@ public class GrabObject : MonoBehaviour
     public void Ungrab()
     {
         transform.SetParent(null);
+        _collider.enabled = true;
         _rigidbody.constraints = RigidbodyConstraints.None;
     }
 

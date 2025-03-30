@@ -62,11 +62,12 @@ namespace Player
             if (CurrentBattery > 0)
             {
                 if(_special)
-                    _battery -= Time.deltaTime;
-                else 
                     _batteryManager.ReduceBattery();
-                light.intensity = (CurrentBattery / CurrentBatteryMax) * lightIntensityMultiplier;
+                else 
+                    _battery -= Time.deltaTime;
             }
+            
+            light.intensity = Mathf.Pow(CurrentBattery / CurrentBatteryMax, 2) * lightIntensityMultiplier;
             
             if(batterySlider)
                 batterySlider.value = CurrentBattery / CurrentBatteryMax;
