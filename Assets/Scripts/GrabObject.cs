@@ -10,11 +10,11 @@ public class GrabObject : MonoBehaviour
     {
         public Material normal;
         public Material highlighted;
-        public Material infectedMaterial;
+        public Material infected;
 
         public Material GetMaterial(bool highlighted, bool infected = false)
         {
-            return highlighted ? this.highlighted : infected? infectedMaterial : normal;
+            return highlighted ? this.highlighted : infected? this.infected : normal;
         }
     }
         
