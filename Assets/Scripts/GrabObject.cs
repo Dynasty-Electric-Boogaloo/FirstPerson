@@ -24,6 +24,8 @@ public class GrabObject : MonoBehaviour
     [SerializeField] private float maxTimeBeforeAlert = 5;
     [SerializeField] private LayerMask breakableLayers;
     [SerializeField] private LayerMask playerLayer;
+    [SerializeField] private float breakRadius = 0.2f;
+    [SerializeField] private float checkPlayerRadius = 1;
     private Collider _collider;
     private Rigidbody _rigidbody;
     private float _timer;
@@ -36,6 +38,11 @@ public class GrabObject : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
         SetHighlight(false);
         _timer = maxTimeBeforeAlert;
+    }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = new Color(1, 1, 0, 0.75F);
+        Gizmos.DrawSphere(transform.position, checkPlayerRadius);
     }
 
     private void ReduceTime()
@@ -58,18 +65,13 @@ public class GrabObject : MonoBehaviour
         _rigidbody.constraints = RigidbodyConstraints.FreezeAll;
     }
 
-    private void Update()
+    private void BreakOnImpact()
     {
         if (!_isThrown) 
             return;
         
         var hitColliders = new Collider[1];
-        int numColliders = Physics.OverlapSphereNonAlloc(transform.position, 0.2f, hitColliders, breakableLayers);
-        
-        for (int i = 0; i < numColliders; i++)
-        {
-           Debug.Log(hitColliders[i].gameObject.name);
-        }
+        var numColliders = Physics.OverlapSphereNonAlloc(transform.position, breakRadius, hitColliders, breakableLayers);
         
         if(numColliders > 0)
             Break();
@@ -78,17 +80,22 @@ public class GrabObject : MonoBehaviour
 
     private void FixedUpdate()
     {
+        AlertCreature();
+        BreakOnImpact();
+    }
+
+    private void AlertCreature()
+    {
         if(!isInfected) 
             return;
         
         var hitColliders = new Collider[1];
-        Physics.OverlapSphereNonAlloc(transform.position, 1, hitColliders, playerLayer);
+        var numColliders = Physics.OverlapSphereNonAlloc(transform.position, checkPlayerRadius, hitColliders, playerLayer);
         
-        if (hitColliders.Length < 1) 
-            return;
-        ReduceTime();
+        if (numColliders > 0) 
+            ReduceTime();
     }
-
+    
     public void Interact()
     {
         if(isInfected)
