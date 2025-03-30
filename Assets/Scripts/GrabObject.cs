@@ -43,6 +43,9 @@ public class GrabObject : MonoBehaviour
     {
         Gizmos.color = new Color(1, 1, 0, 0.75F);
         Gizmos.DrawSphere(transform.position, checkPlayerRadius);
+        
+        Gizmos.color = new Color(1, 0, 0, 0.75F);
+        Gizmos.DrawSphere(transform.position, breakRadius);
     }
 
     private void ReduceTime()
