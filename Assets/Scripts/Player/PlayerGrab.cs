@@ -76,6 +76,17 @@ namespace Player
             if (!_selectedObject)
                 return;
             
+            if (_selectedObject.GetIsInfected())
+            {
+                _selectedObject.ReduceTime();
+            }
+
+            if (PlayerData.PlayerInputs.Controls.Interact.WasPressedThisFrame())
+            {
+                _selectedObject.Interact();
+                return;
+            }
+            
             if (!PlayerData.PlayerInputs.Controls.Grab.WasPressedThisFrame())
                 return;
             
