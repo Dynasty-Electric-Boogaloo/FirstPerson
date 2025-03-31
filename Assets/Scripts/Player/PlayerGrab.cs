@@ -68,7 +68,13 @@ namespace Player
                 DeselectObject();
                 return;
             }
-            
+
+            if (grabObject.IsThrown)
+            {
+                DeselectObject();
+                return;
+            }
+
             SelectObject(grabObject);
         }
 
