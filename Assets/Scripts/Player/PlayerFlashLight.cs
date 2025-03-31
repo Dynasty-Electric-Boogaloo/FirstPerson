@@ -64,7 +64,7 @@ namespace Player
             
             if (CurrentBattery > 0)
             {
-                if(_special)
+                if(!_special)
                     _battery -= Time.deltaTime;
                 else 
                     _batteryManager.ReduceBattery();
