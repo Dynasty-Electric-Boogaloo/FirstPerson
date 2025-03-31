@@ -17,6 +17,8 @@ namespace Player
         [SerializeField] private float batteryMax;
         [SerializeField] private float addByButtonPressed = 0.25f;
         [SerializeField] private float lightIntensityMultiplier = 5000000;
+        [SerializeField] private Color lightColor = Color.white;
+        [SerializeField] private Color specialLightColor = Color.red;
         
         //Private variables
         private float _battery;
@@ -31,7 +33,8 @@ namespace Player
         private void Start()
         {
             _playerInput = PlayerData.PlayerInputs; 
-            _battery = batteryMax;
+            _battery = batteryMax; 
+            light.color = lightColor;
             SetLightVisible(false);
             
             if (GetComponent<BatteryManager>())
@@ -89,10 +92,16 @@ namespace Player
                 return;
 
             if (_playerInput.Controls.UseObject1.WasPressedThisFrame())
+            {
                 _special = false;
+                light.color = lightColor;
+            }
             
             if (_playerInput.Controls.UseObject2.WasPressedThisFrame())
+            {
                 _special = true;
+                light.color = specialLightColor;
+            }
         }
         
     }
