@@ -7,7 +7,7 @@ Shader "Custom/TestingStencilBuffer"
     }
     SubShader
     {
-        Tags { "RenderType"="Opaque" "Queue" = "Transparent+4"}
+        Tags { "RenderType"="Transparent" "Queue" = "Transparent+4"}
 
         Stencil{
    Ref 5
