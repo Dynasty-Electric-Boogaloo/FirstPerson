@@ -12,11 +12,14 @@ namespace Player
         [SerializeField] private Transform flashLightTransform;
         [SerializeField] private new Light light;
         [SerializeField] private Slider batterySlider;
+        [SerializeField] private Image batterySliderColor;
         
         [Header("Variables")]
         [SerializeField] private float batteryMax;
         [SerializeField] private float addByButtonPressed = 0.25f;
         [SerializeField] private float lightIntensityMultiplier = 5000000;
+        [SerializeField] private Color lightColor = Color.white;
+        [SerializeField] private Color specialLightColor = Color.red;
         
         //Private variables
         private float _battery;
@@ -31,7 +34,9 @@ namespace Player
         private void Start()
         {
             _playerInput = PlayerData.PlayerInputs; 
-            _battery = batteryMax;
+            _battery = batteryMax; 
+            light.color = lightColor;
+            batterySliderColor.color = lightColor;
             SetLightVisible(false);
             
             if (GetComponent<BatteryManager>())
@@ -61,7 +66,7 @@ namespace Player
             
             if (CurrentBattery > 0)
             {
-                if(_special)
+                if(!_special)
                     _battery -= Time.deltaTime;
                 else 
                     _batteryManager.ReduceBattery();
@@ -89,10 +94,18 @@ namespace Player
                 return;
 
             if (_playerInput.Controls.UseObject1.WasPressedThisFrame())
+            {
                 _special = false;
+                light.color = lightColor;
+                batterySliderColor.color = lightColor;
+            }
             
             if (_playerInput.Controls.UseObject2.WasPressedThisFrame())
+            {
                 _special = true;
+                light.color = specialLightColor;
+                batterySliderColor.color = specialLightColor;
+            }
         }
         
     }
