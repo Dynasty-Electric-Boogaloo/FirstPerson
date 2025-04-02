@@ -15,15 +15,22 @@ public class ZoneGraphManager : MonoBehaviour
     
     private static ZoneGraphManager _instance;
     [SerializeField] private float connexionDistance;
+    [SerializeField] private float collisionHeight;
+    [SerializeField] private float collisionOffset;
+    [SerializeField] private float collisionRadius;
+    [SerializeField] private LayerMask collisionMask;
     [SerializeField, HideInInspector] private List<Node> nodes;
     [SerializeField, HideInInspector] private ZoneBox[] zones;
-
+    
     public static ZoneGraphManager Instance => _instance;
+    private RaycastHit[] _collisionBuffer;
 
     private void Awake()
     {
         if (_instance == null)
             _instance = this;
+        
+        _collisionBuffer = new RaycastHit[1];
     }
 
     private void OnDestroy()
@@ -60,15 +67,23 @@ public class ZoneGraphManager : MonoBehaviour
         {
             var connexions = new List<int>();
             
+            var bottomPoint = zonePoint.transform.position + Vector3.up * collisionOffset;
+            var topPoint = zonePoint.transform.position + Vector3.up * (collisionOffset + collisionHeight);
+            
             for (var i = 0; i < zonePoints.Length; i++)
             {
                 if (zonePoint == zonePoints[i])
                     continue;
 
-                if (Vector3.Distance(zonePoint.transform.position, zonePoints[i].transform.position) > connexionDistance)
+                var diff = zonePoints[i].transform.position - zonePoint.transform.position;
+                var distance = diff.magnitude;
+                if (distance > connexionDistance)
                     continue;
 
-                connexions.Add(i);
+                var count = Physics.CapsuleCastNonAlloc(bottomPoint, topPoint, collisionRadius, diff.normalized, _collisionBuffer, distance, collisionMask);
+
+                if (count <= 0)
+                    connexions.Add(i);
             }
 
             zonePoint.SetRoom(0);
