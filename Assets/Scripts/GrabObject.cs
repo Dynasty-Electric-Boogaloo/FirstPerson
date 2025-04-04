@@ -10,11 +10,11 @@ public class GrabObject : MonoBehaviour
     {
         public Material normal;
         public Material highlighted;
-        public Material infectedMaterial;
+        public Material infected;
 
         public Material GetMaterial(bool highlighted, bool infected = false)
         {
-            return highlighted ? this.highlighted : infected? infectedMaterial : normal;
+            return highlighted ? this.highlighted : infected? this.infected : normal;
         }
     }
         
@@ -23,10 +23,13 @@ public class GrabObject : MonoBehaviour
     [SerializeField] private bool isInfected;
     [SerializeField] private float maxTimeBeforeAlert = 5;
     [SerializeField] private LayerMask breakableLayers;
+    [SerializeField] private LayerMask playerLayer;
+    [SerializeField] private float breakRadius = 0.2f;
+    [SerializeField] private float checkPlayerRadius = 1;
     private Collider _collider;
     private Rigidbody _rigidbody;
     private float _timer;
-    private bool isThrown;
+    private bool _isThrown;
     
 
     private void Awake()
@@ -36,8 +39,16 @@ public class GrabObject : MonoBehaviour
         SetHighlight(false);
         _timer = maxTimeBeforeAlert;
     }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = new Color(1, 1, 0, 0.75F);
+        Gizmos.DrawSphere(transform.position, checkPlayerRadius);
+        
+        Gizmos.color = new Color(1, 0, 0, 0.75F);
+        Gizmos.DrawSphere(transform.position, breakRadius);
+    }
 
-    public void ReduceTime()
+    private void ReduceTime()
     {
         _timer -= Time.deltaTime;
         
@@ -57,13 +68,37 @@ public class GrabObject : MonoBehaviour
         _rigidbody.constraints = RigidbodyConstraints.FreezeAll;
     }
 
-    private void Update()
+    private void BreakOnImpact()
     {
-        if (!isThrown) return;
-        if (Physics.OverlapSphere(transform.position, 0.25f, breakableLayers).Length < 1) return;
-        Break();
+        if (!_isThrown) 
+            return;
+        
+        var hitColliders = new Collider[1];
+        var numColliders = Physics.OverlapSphereNonAlloc(transform.position, breakRadius, hitColliders, breakableLayers);
+        
+        if(numColliders > 0)
+            Break();
     }
 
+
+    private void FixedUpdate()
+    {
+        AlertCreature();
+        BreakOnImpact();
+    }
+
+    private void AlertCreature()
+    {
+        if(!isInfected) 
+            return;
+        
+        var hitColliders = new Collider[1];
+        var numColliders = Physics.OverlapSphereNonAlloc(transform.position, checkPlayerRadius, hitColliders, playerLayer);
+        
+        if (numColliders > 0) 
+            ReduceTime();
+    }
+    
     public void Interact()
     {
         if(isInfected)
@@ -85,7 +120,7 @@ public class GrabObject : MonoBehaviour
     {
         Ungrab();
         _rigidbody.linearVelocity = velocity;
-        isThrown = true;
+        _isThrown = true;
     }
 
     public Bounds GetBounds()
