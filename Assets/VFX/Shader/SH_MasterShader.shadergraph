@@ -27,6 +27,15 @@
     "m_CategoryData": [
         {
             "m_Id": "b25c5288332e45359b106d250bc459a9"
+        },
+        {
+            "m_Id": "c99726b59f984368b20009cd4f172ec8"
+        },
+        {
+            "m_Id": "7b73c4712bcd4ce8b1c32e592e9d3c64"
+        },
+        {
+            "m_Id": "bfc1614306784d59b3c653c4ddca134c"
         }
     ],
     "m_Nodes": [
@@ -1721,6 +1730,18 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.CategoryData",
+    "m_ObjectId": "7b73c4712bcd4ce8b1c32e592e9d3c64",
+    "m_Name": "Normal",
+    "m_ChildObjectList": [
+        {
+            "m_Id": "999eefd94b2148dabbd8f8fddc008d8a"
+        }
+    ]
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.BlockNode",
     "m_ObjectId": "7c6426cfa84143a795ee0223e2fda323",
     "m_Group": {
@@ -2302,26 +2323,7 @@
     "m_Type": "UnityEditor.ShaderGraph.CategoryData",
     "m_ObjectId": "b25c5288332e45359b106d250bc459a9",
     "m_Name": "",
-    "m_ChildObjectList": [
-        {
-            "m_Id": "308c87192bed400fac0dc68607129109"
-        },
-        {
-            "m_Id": "74a92190120e470db4655495418def72"
-        },
-        {
-            "m_Id": "961e738eeae34f7689248f26f18b4a9d"
-        },
-        {
-            "m_Id": "999eefd94b2148dabbd8f8fddc008d8a"
-        },
-        {
-            "m_Id": "bffa449754b1423f8646821914e9d387"
-        },
-        {
-            "m_Id": "c18d912e50a74f40bfb039f569d0a637"
-        }
-    ]
+    "m_ChildObjectList": []
 }
 
 {
@@ -2370,6 +2372,18 @@
     "m_ShaderOutputName": "Sampler",
     "m_StageCapability": 3,
     "m_BareResource": false
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.CategoryData",
+    "m_ObjectId": "bfc1614306784d59b3c653c4ddca134c",
+    "m_Name": "AORM",
+    "m_ChildObjectList": [
+        {
+            "m_Id": "c18d912e50a74f40bfb039f569d0a637"
+        }
+    ]
 }
 
 {
@@ -2475,6 +2489,27 @@
     "m_Value": 0.0,
     "m_DefaultValue": 0.0,
     "m_Labels": []
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.CategoryData",
+    "m_ObjectId": "c99726b59f984368b20009cd4f172ec8",
+    "m_Name": "Base Texture",
+    "m_ChildObjectList": [
+        {
+            "m_Id": "308c87192bed400fac0dc68607129109"
+        },
+        {
+            "m_Id": "bffa449754b1423f8646821914e9d387"
+        },
+        {
+            "m_Id": "74a92190120e470db4655495418def72"
+        },
+        {
+            "m_Id": "961e738eeae34f7689248f26f18b4a9d"
+        }
+    ]
 }
 
 {
