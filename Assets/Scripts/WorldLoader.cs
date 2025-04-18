@@ -10,10 +10,9 @@ public class WorldLoader : MonoBehaviour
     private void Start()
     {
         Load();
-        //Invoke("Load", 3);
     }
 
-    void Load()
+    private void Load()
     {
         foreach (var sceneGroup in sceneGroups)
         {

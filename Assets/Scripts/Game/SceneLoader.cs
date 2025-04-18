@@ -17,9 +17,8 @@ namespace Game
             #if UNITY_EDITOR
             config.ComputeBuildList();
             
-            var buildIndex = SceneManager.GetActiveScene().buildIndex;
-            var index = GetSceneGroupIndexByBuildIndex(buildIndex);
-
+            var index = GetSceneGroupIndexByBuildIndex(SceneManager.GetActiveScene().buildIndex);
+            
             if (index < 0)
                 return;
             
@@ -67,7 +66,7 @@ namespace Game
 
             if (sceneId.ids[0] == -1)
             {
-                Debug.LogError("Scene group is empty! Cannot load anything!");
+                Debug.Log("Scene group is empty! Cannot load anything!");
                 return;
             }
 
