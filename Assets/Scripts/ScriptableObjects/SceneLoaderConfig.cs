@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 namespace ScriptableObjects
 {
@@ -11,39 +14,54 @@ namespace ScriptableObjects
         [Serializable]
         public struct SceneReference
         {
-            public GUID logicSceneGuid;
-            public GUID blockoutSceneGuid;
-            public GUID decoSceneGuid;
-            public bool included;
+            public string logicSceneGuid;
+            public string blockoutSceneGuid;
+            public string decoSceneGuid;
+        }
+
+        [Serializable]
+        public struct SceneIds
+        {
+            public int[] ids;
         }
 
         public SceneReference[] sceneReferences;
+        public SceneIds[] sceneIds;
 
-        private void OnValidate()
+        public void ComputeBuildList()
         {
             var editorBuildScenes = new List<EditorBuildSettingsScene>();
+            sceneIds = new SceneIds[sceneReferences.Length];
 
-            foreach (var sceneReference in sceneReferences)
+            for (var i = 0; i < sceneReferences.Length; i++)
             {
-                if (!sceneReference.included)
-                    continue;
+                sceneIds[i].ids = new int[3];
+                for (var j = 0; j < 3; j++)
+                {
+                    sceneIds[i].ids[j] = -1;
+                }
 
-                var sceneGuid = sceneReference.logicSceneGuid;
-                if (!sceneGuid.Empty())
+                var currentId = 0;
+                
+                var sceneGuid = sceneReferences[i].logicSceneGuid;
+                if (!string.IsNullOrEmpty(sceneGuid))
                 {
-                    editorBuildScenes.Add(new EditorBuildSettingsScene(sceneGuid, true));
+                    sceneIds[i].ids[currentId++] = editorBuildScenes.Count;
+                    editorBuildScenes.Add(new EditorBuildSettingsScene(new GUID(sceneGuid), true));
                 }
                 
-                sceneGuid = sceneReference.blockoutSceneGuid;
-                if (!sceneGuid.Empty())
+                sceneGuid = sceneReferences[i].blockoutSceneGuid;
+                if (!string.IsNullOrEmpty(sceneGuid))
                 {
-                    editorBuildScenes.Add(new EditorBuildSettingsScene(sceneGuid, true));
+                    sceneIds[i].ids[currentId++] = editorBuildScenes.Count;
+                    editorBuildScenes.Add(new EditorBuildSettingsScene(new GUID(sceneGuid), true));
                 }
                 
-                sceneGuid = sceneReference.decoSceneGuid;
-                if (!sceneGuid.Empty())
+                sceneGuid = sceneReferences[i].decoSceneGuid;
+                if (!string.IsNullOrEmpty(sceneGuid))
                 {
-                    editorBuildScenes.Add(new EditorBuildSettingsScene(sceneGuid, true));
+                    sceneIds[i].ids[currentId] = editorBuildScenes.Count;
+                    editorBuildScenes.Add(new EditorBuildSettingsScene(new GUID(sceneGuid), true));
                 }
             }
 
