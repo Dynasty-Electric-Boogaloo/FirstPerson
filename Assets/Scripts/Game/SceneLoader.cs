@@ -23,7 +23,7 @@ namespace Game
             if (index < 0)
                 return;
             
-            LoadSceneGroupAsync(index);
+            LoadSceneGroupAsync(index, LoadSceneMode.Single);
             #else
             LoadSceneGroupAsync(0);
             #endif
@@ -49,7 +49,7 @@ namespace Game
             return -1;
         }
 
-        public static void LoadSceneGroupAsync(int index)
+        public static void LoadSceneGroupAsync(int index, LoadSceneMode mode)
         {
             if (_instance == null)
             {
@@ -71,14 +71,46 @@ namespace Game
                 return;
             }
 
-            SceneManager.LoadSceneAsync(sceneId.ids[0], LoadSceneMode.Single);
+            SceneManager.LoadSceneAsync(sceneId.ids[0], mode);
 
             for (var i = 1; i < 3; i++)
             {
                 if (sceneId.ids[i] < 0)
-                    continue;
+                    return;
                 
                 SceneManager.LoadSceneAsync(sceneId.ids[i], LoadSceneMode.Additive);
+            }
+        }
+
+        public static void UnloadSceneGroupAsync(int index)
+        {
+            if (_instance == null)
+            {
+                Debug.LogError("No SceneLoader instance exists!");
+                return;
+            }
+
+            if (index < 0 || index >= _instance.config.sceneIds.Length)
+            {
+                Debug.LogError("Scene group index out of bounds!");
+                return;
+            }
+
+            var sceneId = _instance.config.sceneIds[index];
+
+            if (sceneId.ids[0] == -1)
+            {
+                return;
+            }
+
+            SceneManager.UnloadSceneAsync(sceneId.ids[0]);
+
+            for (var i = 1; i < 3; i++)
+            {
+                if (sceneId.ids[i] < 0)
+                    return;
+                
+                SceneManager.UnloadSceneAsync(sceneId.ids[i]);
             }
         }
     }
