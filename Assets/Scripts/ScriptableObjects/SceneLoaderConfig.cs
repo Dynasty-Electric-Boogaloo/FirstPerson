@@ -27,6 +27,8 @@ namespace ScriptableObjects
 
         public SceneReference[] sceneReferences;
         public SceneIds[] sceneIds;
+        
+        #if UNITY_EDITOR
 
         public void ComputeBuildList()
         {
@@ -67,5 +69,7 @@ namespace ScriptableObjects
 
             EditorBuildSettings.scenes = editorBuildScenes.ToArray();
         }
+        
+        #endif
     }
 }

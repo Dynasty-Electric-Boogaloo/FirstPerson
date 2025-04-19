@@ -132,10 +132,8 @@ public class ZoneGraphManager : MonoBehaviour
             Gizmos.color = Color.white;
             foreach (var connexion in nodes[i].connexions)
             {
-                if (connexion < i)
-                    continue;
-                
-                Gizmos.DrawLine(nodes[i].point.transform.position, nodes[connexion].point.transform.position);
+                if (connexion >= i)
+                    Gizmos.DrawLine(nodes[i].point.transform.position, nodes[connexion].point.transform.position);
             }
         }
     }

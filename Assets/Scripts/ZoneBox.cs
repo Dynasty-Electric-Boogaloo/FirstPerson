@@ -46,7 +46,9 @@ public class ZoneBox : MonoBehaviour
             transform.localScale.z * collider.bounds.size.z
         );
         
-        if (transform.position + collider.bounds.center == _lastPosition && transform.rotation == _lastRotation && size == _lastScale)
+        if (transform.position + collider.bounds.center == _lastPosition && 
+            transform.rotation == _lastRotation && 
+            size == _lastScale)
             return;
         
         ZoneGraphManager.Instance.ComputeZones();

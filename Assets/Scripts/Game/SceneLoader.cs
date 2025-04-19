@@ -24,7 +24,7 @@ namespace Game
             
             LoadSceneGroupAsync(index, LoadSceneMode.Single);
             #else
-            LoadSceneGroupAsync(0);
+            LoadSceneGroupAsync(0, LoadSceneMode.Single);
             #endif
         }
 
