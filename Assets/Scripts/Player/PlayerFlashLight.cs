@@ -68,7 +68,6 @@ namespace Player
 
         private void UpdateInfectedObjects()
         {
-            print(_currentLightObjects.Count + " " + _lastUpdateLightObjects.Count);
             foreach (var prop in _lastUpdateLightObjects)
             {
                 if (_currentLightObjects.Contains(prop)) continue;
