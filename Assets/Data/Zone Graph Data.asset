@@ -1,0 +1,4219 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b5d51c16b2a4dfa9d2d28382fdd9832, type: 3}
+  m_Name: Zone Graph Data
+  m_EditorClassIdentifier: 
+  nodes:
+  - position: {x: 17, y: 0, z: 17}
+    room:
+      id: 7
+    connexions:
+    - id: 198
+    - id: 248
+    - id: 359
+    - id: 381
+  - position: {x: -6.9999986, y: 0, z: -21}
+    room:
+      id: 5
+    connexions:
+    - id: 5
+    - id: 10
+    - id: 73
+    - id: 99
+    - id: 219
+  - position: {x: -4.9999986, y: 0, z: -17}
+    room:
+      id: 5
+    connexions:
+    - id: 192
+    - id: 219
+    - id: 258
+    - id: 328
+  - position: {x: -19, y: 0, z: 15}
+    room:
+      id: 8
+    connexions:
+    - id: 69
+    - id: 228
+    - id: 320
+    - id: 364
+    - id: 382
+  - position: {x: -2.999998, y: 0, z: -17}
+    room:
+      id: 5
+    connexions:
+    - id: 2
+    - id: 60
+    - id: 184
+    - id: 258
+  - position: {x: -4.999998, y: 0, z: -21}
+    room:
+      id: 5
+    connexions:
+    - id: 1
+    - id: 2
+    - id: 10
+    - id: 73
+    - id: 192
+  - position: {x: -5, y: 0, z: 15}
+    room:
+      id: 8
+    connexions:
+    - id: 41
+    - id: 143
+    - id: 297
+    - id: 406
+    - id: 407
+  - position: {x: 5, y: 0, z: 19.000002}
+    room:
+      id: 7
+    connexions:
+    - id: 178
+    - id: 211
+    - id: 254
+    - id: 292
+    - id: 408
+  - position: {x: -13, y: 0, z: 3}
+    room:
+      id: 8
+    connexions:
+    - id: 78
+    - id: 84
+    - id: 253
+    - id: 295
+    - id: 363
+    - id: 383
+  - position: {x: -19, y: 0, z: 5}
+    room:
+      id: 8
+    connexions:
+    - id: 14
+    - id: 231
+    - id: 370
+  - position: {x: -8.999998, y: 0, z: -21}
+    room:
+      id: 5
+    connexions:
+    - id: 1
+    - id: 73
+    - id: 99
+    - id: 147
+    - id: 200
+    - id: 316
+  - position: {x: -9, y: 0, z: -10.999999}
+    room:
+      id: 5
+    connexions:
+    - id: 40
+    - id: 55
+    - id: 116
+    - id: 118
+    - id: 204
+    - id: 298
+    - id: 393
+    - id: 398
+  - position: {x: -3, y: 0, z: -2.999998}
+    room:
+      id: 5
+    connexions:
+    - id: 177
+    - id: 251
+    - id: 262
+  - position: {x: 9, y: 0, z: -9}
+    room:
+      id: 6
+    connexions:
+    - id: 15
+    - id: 108
+    - id: 161
+    - id: 194
+    - id: 260
+    - id: 291
+    - id: 338
+    - id: 350
+  - position: {x: -17, y: 0, z: 5}
+    room:
+      id: 8
+    connexions:
+    - id: 156
+    - id: 295
+    - id: 370
+  - position: {x: 9, y: 0, z: -7}
+    room:
+      id: 6
+    connexions:
+    - id: 13
+    - id: 108
+    - id: 120
+    - id: 260
+    - id: 291
+    - id: 350
+  - position: {x: 21, y: 0, z: -7}
+    room:
+      id: 6
+    connexions:
+    - id: 18
+    - id: 112
+    - id: 391
+  - position: {x: 17, y: 0, z: -19}
+    room:
+      id: 6
+    connexions:
+    - id: 91
+    - id: 272
+    - id: 306
+    - id: 354
+  - position: {x: 19, y: 0, z: -7}
+    room:
+      id: 6
+    connexions:
+    - id: 112
+    - id: 214
+    - id: 250
+    - id: 391
+  - position: {x: 4.999998, y: 0, z: 5}
+    room:
+      id: 7
+    connexions:
+    - id: 163
+    - id: 207
+    - id: 311
+    - id: 386
+  - position: {x: -17, y: 0, z: -11}
+    room:
+      id: 5
+    connexions:
+    - id: 56
+    - id: 145
+    - id: 166
+    - id: 202
+    - id: 257
+    - id: 332
+  - position: {x: 5, y: 0, z: -5}
+    room:
+      id: 6
+    connexions:
+    - id: 144
+    - id: 350
+    - id: 392
+  - position: {x: 9, y: 0, z: 13.000001}
+    room:
+      id: 7
+    connexions:
+    - id: 27
+    - id: 125
+    - id: 132
+    - id: 220
+    - id: 264
+    - id: 346
+    - id: 389
+    - id: 409
+  - position: {x: 19, y: 0, z: 6.9999986}
+    room:
+      id: 7
+    connexions:
+    - id: 30
+    - id: 88
+    - id: 242
+    - id: 351
+    - id: 358
+  - position: {x: 15, y: 0, z: -11}
+    room:
+      id: 6
+    connexions:
+    - id: 31
+    - id: 121
+    - id: 139
+    - id: 214
+    - id: 232
+    - id: 274
+    - id: 339
+    - id: 341
+  - position: {x: -21, y: 0, z: 7}
+    room:
+      id: 8
+    connexions:
+    - id: 231
+    - id: 370
+    - id: 395
+  - position: {x: -21, y: 0, z: -11.000001}
+    room:
+      id: 5
+    connexions:
+    - id: 20
+    - id: 56
+    - id: 87
+    - id: 103
+    - id: 133
+    - id: 235
+  - position: {x: 11, y: 0, z: 11}
+    room:
+      id: 7
+    connexions:
+    - id: 22
+    - id: 64
+    - id: 125
+    - id: 142
+    - id: 160
+    - id: 264
+    - id: 325
+    - id: 337
+  - position: {x: -15, y: 0, z: 15}
+    room:
+      id: 8
+    connexions:
+    - id: 38
+    - id: 90
+    - id: 105
+    - id: 111
+    - id: 169
+    - id: 228
+    - id: 320
+    - id: 382
+  - position: {x: -21, y: 0, z: -19.000002}
+    room:
+      id: 5
+    connexions:
+    - id: 110
+    - id: 179
+    - id: 189
+    - id: 273
+    - id: 275
+  - position: {x: 19, y: 0, z: 8.999998}
+    room:
+      id: 7
+    connexions:
+    - id: 23
+    - id: 88
+    - id: 249
+    - id: 351
+    - id: 371
+    - id: 405
+  - position: {x: 17, y: 0, z: -11}
+    room:
+      id: 6
+    connexions:
+    - id: 24
+    - id: 139
+    - id: 214
+    - id: 232
+    - id: 339
+  - position: {x: -21, y: 0, z: 17}
+    room:
+      id: 8
+    connexions:
+    - id: 3
+    - id: 364
+    - id: 382
+  - position: {x: -21, y: 0, z: -21.000002}
+    room:
+      id: 5
+    connexions:
+    - id: 29
+    - id: 179
+    - id: 273
+    - id: 286
+    - id: 369
+  - position: {x: -13.000001, y: 0, z: -4.999999}
+    room:
+      id: 5
+    connexions:
+    - id: 48
+    - id: 176
+    - id: 181
+    - id: 182
+    - id: 302
+  - position: {x: 9, y: 0, z: 21.000002}
+    room:
+      id: 7
+    connexions:
+    - id: 94
+    - id: 101
+    - id: 178
+    - id: 211
+    - id: 402
+  - position: {x: -17, y: 0, z: 9}
+    room:
+      id: 8
+    connexions:
+    - id: 156
+    - id: 229
+    - id: 245
+    - id: 313
+    - id: 370
+  - position: {x: 15, y: 0, z: 13}
+    room:
+      id: 7
+    connexions:
+    - id: 64
+    - id: 160
+    - id: 210
+    - id: 239
+    - id: 249
+    - id: 359
+    - id: 361
+    - id: 381
+  - position: {x: -13, y: 0, z: 15}
+    room:
+      id: 8
+    connexions:
+    - id: 28
+    - id: 90
+    - id: 105
+    - id: 111
+    - id: 152
+    - id: 169
+    - id: 170
+    - id: 277
+  - position: {x: 7, y: 0, z: -15}
+    room:
+      id: 6
+    connexions:
+    - id: 65
+    - id: 212
+    - id: 255
+    - id: 368
+    - id: 375
+  - position: {x: -9, y: 0, z: -8.999999}
+    room:
+      id: 5
+    connexions:
+    - id: 11
+    - id: 48
+    - id: 116
+    - id: 118
+    - id: 150
+    - id: 186
+    - id: 204
+    - id: 393
+  - position: {x: -7, y: 0, z: 13}
+    room:
+      id: 8
+    connexions:
+    - id: 68
+    - id: 122
+    - id: 149
+    - id: 297
+    - id: 322
+  - position: {x: -17, y: 0, z: 21}
+    room:
+      id: 8
+    connexions:
+    - id: 71
+    - id: 86
+    - id: 382
+  - position: {x: 15, y: 0, z: -7}
+    room:
+      id: 6
+    connexions:
+    - id: 214
+    - id: 232
+    - id: 305
+    - id: 341
+    - id: 352
+    - id: 391
+  - position: {x: -9, y: 0, z: -4.9999986}
+    room:
+      id: 5
+    connexions:
+    - id: 48
+    - id: 150
+    - id: 182
+    - id: 186
+    - id: 280
+  - position: {x: 19.000002, y: 0, z: 21}
+    room:
+      id: 7
+    connexions:
+    - id: 53
+    - id: 67
+    - id: 80
+    - id: 198
+    - id: 244
+  - position: {x: -17, y: 0, z: 3}
+    room:
+      id: 8
+    connexions:
+    - id: 14
+    - id: 84
+    - id: 295
+    - id: 370
+  - position: {x: -3, y: 0, z: 3}
+    room:
+      id: 8
+    connexions:
+    - id: 216
+  - position: {x: -11, y: 0, z: -6.9999995}
+    room:
+      id: 5
+    connexions:
+    - id: 40
+    - id: 118
+    - id: 176
+    - id: 186
+    - id: 267
+  - position: {x: -4.999999, y: 0, z: -10.999999}
+    room:
+      id: 5
+    connexions:
+    - id: 116
+    - id: 134
+    - id: 298
+    - id: 330
+    - id: 393
+  - position: {x: -2.0000005, y: 0, z: 8}
+    room:
+      id: 1
+    connexions: []
+  - position: {x: -3, y: 0, z: -6.9999986}
+    room:
+      id: 5
+    connexions:
+    - id: 137
+    - id: 150
+    - id: 215
+    - id: 262
+    - id: 330
+  - position: {x: -15, y: 0, z: 21}
+    room:
+      id: 8
+    connexions:
+    - id: 71
+    - id: 86
+    - id: 105
+    - id: 323
+  - position: {x: 15.000002, y: 0, z: 21}
+    room:
+      id: 7
+    connexions:
+    - id: 67
+    - id: 172
+    - id: 198
+    - id: 230
+    - id: 248
+    - id: 299
+  - position: {x: 11, y: 0, z: -13}
+    room:
+      id: 6
+    connexions:
+    - id: 58
+    - id: 65
+    - id: 121
+    - id: 194
+    - id: 274
+    - id: 338
+    - id: 362
+    - id: 375
+  - position: {x: -11, y: 0, z: -13}
+    room:
+      id: 5
+    connexions:
+    - id: 11
+    - id: 157
+    - id: 164
+    - id: 197
+    - id: 199
+    - id: 204
+    - id: 309
+    - id: 398
+  - position: {x: -19, y: 0, z: -11.000001}
+    room:
+      id: 5
+    connexions:
+    - id: 20
+    - id: 87
+    - id: 103
+    - id: 145
+    - id: 166
+    - id: 202
+  - position: {x: -15.000002, y: 0, z: -3}
+    room:
+      id: 5
+    connexions:
+    - id: 34
+    - id: 154
+    - id: 162
+    - id: 302
+    - id: 380
+  - position: {x: 13, y: 0, z: -15}
+    room:
+      id: 6
+    connexions:
+    - id: 54
+    - id: 91
+    - id: 121
+    - id: 300
+    - id: 339
+    - id: 342
+    - id: 362
+    - id: 394
+  - position: {x: -3, y: 0, z: 9}
+    room:
+      id: 8
+    connexions:
+    - id: 82
+    - id: 102
+    - id: 158
+    - id: 324
+  - position: {x: -2.999998, y: 0, z: -14.999999}
+    room:
+      id: 5
+    connexions:
+    - id: 2
+    - id: 4
+    - id: 134
+    - id: 258
+    - id: 266
+  - position: {x: 13, y: 0, z: -3}
+    room:
+      id: 6
+    connexions:
+    - id: 208
+    - id: 263
+    - id: 305
+    - id: 352
+    - id: 378
+    - id: 404
+  - position: {x: 21, y: 0, z: 4.999998}
+    room:
+      id: 7
+    connexions:
+    - id: 23
+    - id: 155
+    - id: 247
+    - id: 312
+    - id: 358
+  - position: {x: 13, y: 0, z: 6.9999995}
+    room:
+      id: 7
+    connexions:
+    - id: 114
+    - id: 142
+    - id: 242
+    - id: 304
+    - id: 337
+    - id: 371
+  - position: {x: 13, y: 0, z: 11}
+    room:
+      id: 7
+    connexions:
+    - id: 27
+    - id: 37
+    - id: 142
+    - id: 160
+    - id: 210
+    - id: 264
+    - id: 337
+    - id: 371
+  - position: {x: 9, y: 0, z: -13}
+    room:
+      id: 6
+    connexions:
+    - id: 39
+    - id: 54
+    - id: 161
+    - id: 194
+    - id: 338
+    - id: 362
+    - id: 368
+    - id: 375
+  - position: {x: 17, y: 0, z: -5}
+    room:
+      id: 6
+    connexions:
+    - id: 43
+    - id: 352
+    - id: 391
+  - position: {x: 17.000002, y: 0, z: 21}
+    room:
+      id: 7
+    connexions:
+    - id: 0
+    - id: 45
+    - id: 53
+    - id: 172
+    - id: 198
+  - position: {x: -9, y: 0, z: 11}
+    room:
+      id: 8
+    connexions:
+    - id: 41
+    - id: 82
+    - id: 122
+    - id: 173
+    - id: 252
+    - id: 277
+    - id: 322
+    - id: 387
+  - position: {x: -19, y: 0, z: 13}
+    room:
+      id: 8
+    connexions:
+    - id: 3
+    - id: 180
+    - id: 228
+    - id: 229
+    - id: 320
+  - position: {x: -3, y: 0, z: 17}
+    room:
+      id: 8
+    connexions:
+    - id: 6
+    - id: 143
+    - id: 407
+  - position: {x: -15, y: 0, z: 19}
+    room:
+      id: 8
+    connexions:
+    - id: 28
+    - id: 86
+    - id: 105
+    - id: 111
+    - id: 323
+    - id: 382
+  - position: {x: 11, y: 0, z: -21}
+    room:
+      id: 6
+    connexions:
+    - id: 319
+    - id: 342
+    - id: 366
+    - id: 376
+  - position: {x: -6.9999986, y: 0, z: -19}
+    room:
+      id: 5
+    connexions:
+    - id: 99
+    - id: 192
+    - id: 200
+    - id: 219
+    - id: 328
+  - position: {x: 3, y: 0, z: 15.000002}
+    room:
+      id: 7
+    connexions:
+    - id: 126
+    - id: 153
+    - id: 243
+    - id: 292
+    - id: 389
+    - id: 408
+  - position: {x: 9, y: 0, z: -21}
+    room:
+      id: 6
+    connexions:
+    - id: 130
+    - id: 212
+    - id: 319
+    - id: 366
+  - position: {x: 3, y: 0, z: -9}
+    room:
+      id: 6
+    connexions:
+    - id: 124
+    - id: 291
+    - id: 379
+    - id: 392
+  - position: {x: 19, y: 0, z: 12.999999}
+    room:
+      id: 7
+    connexions:
+    - id: 37
+    - id: 136
+    - id: 239
+    - id: 249
+    - id: 381
+    - id: 405
+  - position: {x: -11, y: 0, z: 5}
+    room:
+      id: 8
+    connexions:
+    - id: 223
+    - id: 253
+    - id: 259
+    - id: 363
+    - id: 390
+  - position: {x: 2.999999, y: 0, z: 11.000001}
+    room:
+      id: 7
+    connexions:
+    - id: 126
+    - id: 153
+    - id: 238
+    - id: 265
+    - id: 329
+  - position: {x: 19.000002, y: 0, z: 17}
+    room:
+      id: 7
+    connexions:
+    - id: 0
+    - id: 136
+    - id: 244
+    - id: 381
+  - position: {x: 21, y: 0, z: 10.999999}
+    room:
+      id: 7
+    connexions:
+    - id: 30
+    - id: 77
+    - id: 249
+    - id: 312
+    - id: 374
+    - id: 405
+  - position: {x: -7, y: 0, z: 9}
+    room:
+      id: 8
+    connexions:
+    - id: 68
+    - id: 322
+    - id: 387
+    - id: 390
+    - id: 410
+  - position: {x: -21, y: 0, z: 21}
+    room:
+      id: 8
+    connexions:
+    - id: 400
+  - position: {x: -15, y: 0, z: 3}
+    room:
+      id: 8
+    connexions:
+    - id: 8
+    - id: 14
+    - id: 46
+    - id: 156
+    - id: 253
+    - id: 295
+  - position: {x: -21.000002, y: 0, z: -7.000001}
+    room:
+      id: 5
+    connexions:
+    - id: 103
+    - id: 133
+    - id: 217
+    - id: 225
+  - position: {x: -17, y: 0, z: 19}
+    room:
+      id: 8
+    connexions:
+    - id: 71
+    - id: 105
+    - id: 320
+    - id: 382
+  - position: {x: -19, y: 0, z: -13.000001}
+    room:
+      id: 5
+    connexions:
+    - id: 20
+    - id: 56
+    - id: 145
+    - id: 257
+    - id: 293
+    - id: 331
+  - position: {x: 17, y: 0, z: 8.999999}
+    room:
+      id: 7
+    connexions:
+    - id: 30
+    - id: 210
+    - id: 242
+    - id: 249
+    - id: 351
+    - id: 371
+  - position: {x: 13, y: 0, z: -21}
+    room:
+      id: 6
+    connexions:
+    - id: 272
+    - id: 366
+    - id: 376
+    - id: 394
+  - position: {x: -15, y: 0, z: 13}
+    room:
+      id: 8
+    connexions:
+    - id: 28
+    - id: 38
+    - id: 169
+    - id: 193
+    - id: 228
+    - id: 229
+    - id: 313
+    - id: 320
+  - position: {x: 15, y: 0, z: -17}
+    room:
+      id: 6
+    connexions:
+    - id: 58
+    - id: 300
+    - id: 306
+    - id: 354
+    - id: 394
+  - position: {x: 2.999998, y: 0, z: 3.000001}
+    room:
+      id: 7
+    connexions:
+    - id: 19
+    - id: 167
+    - id: 237
+    - id: 340
+  - position: {x: -15, y: 0, z: -17}
+    room:
+      id: 5
+    connexions:
+    - id: 197
+    - id: 303
+    - id: 314
+    - id: 331
+    - id: 357
+  - position: {x: 11.000001, y: 0, z: 21}
+    room:
+      id: 7
+    connexions:
+    - id: 115
+    - id: 178
+    - id: 230
+    - id: 299
+    - id: 402
+  - position: {x: -8, y: 0, z: 0}
+    room:
+      id: 4
+    connexions: []
+  - position: {x: -3, y: 0, z: 21}
+    room:
+      id: 8
+    connexions:
+    - id: 321
+  - position: {x: -21, y: 0, z: 11}
+    room:
+      id: 8
+    connexions:
+    - id: 69
+    - id: 180
+    - id: 229
+    - id: 395
+  - position: {x: 6.9999986, y: 0, z: 3}
+    room:
+      id: 7
+    connexions:
+    - id: 174
+    - id: 207
+    - id: 340
+    - id: 386
+  - position: {x: -8.999998, y: 0, z: -19}
+    room:
+      id: 5
+    connexions:
+    - id: 73
+    - id: 147
+    - id: 199
+    - id: 200
+    - id: 219
+    - id: 287
+  - position: {x: 6.999999, y: 0, z: 9}
+    room:
+      id: 7
+    connexions:
+    - id: 125
+    - id: 163
+    - id: 220
+    - id: 238
+    - id: 325
+    - id: 399
+  - position: {x: 7.0000005, y: 0, z: 21.000002}
+    room:
+      id: 7
+    connexions:
+    - id: 35
+    - id: 178
+    - id: 211
+    - id: 360
+  - position: {x: -5, y: 0, z: 9}
+    room:
+      id: 8
+    connexions:
+    - id: 82
+    - id: 158
+    - id: 322
+    - id: 324
+    - id: 410
+  - position: {x: -19.000002, y: 0, z: -9.000001}
+    room:
+      id: 5
+    connexions:
+    - id: 20
+    - id: 56
+    - id: 202
+    - id: 217
+    - id: 234
+  - position: {x: -7, y: 0, z: 5}
+    room:
+      id: 8
+    connexions:
+    - id: 259
+    - id: 390
+    - id: 410
+  - position: {x: -15, y: 0, z: 17}
+    room:
+      id: 8
+    connexions:
+    - id: 28
+    - id: 38
+    - id: 111
+    - id: 320
+    - id: 382
+  - position: {x: 17, y: 0, z: 2.999998}
+    room:
+      id: 7
+    connexions:
+    - id: 209
+    - id: 247
+    - id: 296
+    - id: 367
+  - position: {x: 21.000002, y: 0, z: 17}
+    room:
+      id: 7
+    connexions:
+    - id: 80
+    - id: 129
+    - id: 136
+    - id: 140
+  - position: {x: 11, y: 0, z: -9}
+    room:
+      id: 6
+    connexions:
+    - id: 13
+    - id: 15
+    - id: 194
+    - id: 260
+    - id: 274
+    - id: 305
+    - id: 338
+    - id: 341
+  - position: {x: 21, y: 0, z: -5}
+    room:
+      id: 6
+    connexions:
+    - id: 18
+    - id: 66
+    - id: 250
+  - position: {x: -19, y: 0, z: -17.000002}
+    room:
+      id: 5
+    connexions:
+    - id: 93
+    - id: 179
+    - id: 293
+    - id: 314
+    - id: 331
+  - position: {x: -13, y: 0, z: 17}
+    room:
+      id: 8
+    connexions:
+    - id: 28
+    - id: 38
+    - id: 105
+    - id: 152
+    - id: 170
+  - position: {x: 19, y: 0, z: -9}
+    room:
+      id: 6
+    connexions:
+    - id: 18
+    - id: 31
+    - id: 190
+    - id: 214
+    - id: 391
+  - position: {x: 5, y: 0, z: -3}
+    room:
+      id: 6
+    connexions:
+    - id: 21
+    - id: 144
+    - id: 392
+  - position: {x: 10.999999, y: 0, z: 6.9999995}
+    room:
+      id: 7
+    connexions:
+    - id: 63
+    - id: 142
+    - id: 325
+    - id: 337
+    - id: 384
+    - id: 399
+  - position: {x: 11, y: 0, z: 17}
+    room:
+      id: 7
+    connexions:
+    - id: 224
+    - id: 346
+    - id: 348
+    - id: 361
+    - id: 402
+    - id: 409
+  - position: {x: -6.9999995, y: 0, z: -11}
+    room:
+      id: 5
+    connexions:
+    - id: 11
+    - id: 40
+    - id: 49
+    - id: 298
+    - id: 393
+    - id: 398
+  - position: {x: -19.000002, y: 0, z: -5}
+    room:
+      id: 5
+    connexions:
+    - id: 162
+    - id: 217
+    - id: 234
+    - id: 302
+  - position: {x: -11, y: 0, z: -9}
+    room:
+      id: 5
+    connexions:
+    - id: 11
+    - id: 40
+    - id: 48
+    - id: 157
+    - id: 176
+    - id: 186
+    - id: 204
+    - id: 267
+  - position: {x: 3, y: 0, z: -15}
+    room:
+      id: 6
+    connexions:
+    - id: 39
+    - id: 175
+    - id: 327
+    - id: 333
+  - position: {x: 9, y: 0, z: -5}
+    room:
+      id: 6
+    connexions:
+    - id: 15
+    - id: 144
+    - id: 260
+    - id: 350
+    - id: 378
+  - position: {x: 13, y: 0, z: -13}
+    room:
+      id: 6
+    connexions:
+    - id: 24
+    - id: 54
+    - id: 58
+    - id: 274
+    - id: 300
+    - id: 338
+    - id: 339
+    - id: 362
+  - position: {x: -9, y: 0, z: 13}
+    room:
+      id: 8
+    connexions:
+    - id: 41
+    - id: 68
+    - id: 149
+    - id: 152
+    - id: 173
+    - id: 277
+    - id: 297
+    - id: 322
+  - position: {x: -21, y: 0, z: 9}
+    room:
+      id: 8
+    connexions:
+    - id: 36
+    - id: 180
+    - id: 231
+    - id: 395
+  - position: {x: 5, y: 0, z: -11}
+    room:
+      id: 6
+    connexions:
+    - id: 161
+    - id: 291
+    - id: 333
+    - id: 368
+    - id: 379
+  - position: {x: 9, y: 0, z: 11}
+    room:
+      id: 7
+    connexions:
+    - id: 22
+    - id: 27
+    - id: 100
+    - id: 132
+    - id: 142
+    - id: 220
+    - id: 264
+    - id: 325
+  - position: {x: 4.999999, y: 0, z: 13.000001}
+    room:
+      id: 7
+    connexions:
+    - id: 132
+    - id: 220
+    - id: 265
+    - id: 292
+    - id: 389
+  - position: {x: -13, y: 0, z: 9}
+    room:
+      id: 8
+    connexions:
+    - id: 156
+    - id: 173
+    - id: 193
+    - id: 223
+    - id: 245
+    - id: 252
+    - id: 313
+    - id: 363
+  - position: {x: 19, y: 0, z: -3}
+    room:
+      id: 6
+    connexions:
+    - id: 18
+    - id: 66
+    - id: 195
+    - id: 250
+  - position: {x: 21.000002, y: 0, z: 14.999999}
+    room:
+      id: 7
+    connexions:
+    - id: 77
+    - id: 80
+    - id: 107
+    - id: 136
+    - id: 374
+  - position: {x: 7, y: 0, z: -19}
+    room:
+      id: 6
+    connexions:
+    - id: 39
+    - id: 212
+    - id: 255
+    - id: 319
+  - position: {x: 8, y: 0, z: -2}
+    room:
+      id: 3
+    connexions:
+    - id: 120
+    - id: 144
+    - id: 183
+    - id: 285
+    - id: 404
+  - position: {x: 6.9999995, y: 0, z: 13}
+    room:
+      id: 7
+    connexions:
+    - id: 22
+    - id: 125
+    - id: 126
+    - id: 220
+    - id: 389
+    - id: 409
+  - position: {x: -21.000002, y: 0, z: -9.000001}
+    room:
+      id: 5
+    connexions:
+    - id: 26
+    - id: 56
+    - id: 85
+    - id: 103
+    - id: 217
+  - position: {x: -4.999999, y: 0, z: -12.999999}
+    room:
+      id: 5
+    connexions:
+    - id: 49
+    - id: 116
+    - id: 258
+    - id: 298
+    - id: 328
+  - position: {x: -3, y: 0, z: 19}
+    room:
+      id: 8
+    connexions:
+    - id: 321
+    - id: 335
+    - id: 407
+  - position: {x: 19.000002, y: 0, z: 14.999999}
+    room:
+      id: 7
+    connexions:
+    - id: 0
+    - id: 77
+    - id: 80
+    - id: 239
+    - id: 381
+  - position: {x: -3, y: 0, z: -8.999998}
+    room:
+      id: 5
+    connexions:
+    - id: 49
+    - id: 51
+    - id: 215
+    - id: 330
+    - id: 373
+    - id: 393
+  - position: {x: -21, y: 0, z: 5}
+    room:
+      id: 8
+    connexions:
+    - id: 9
+    - id: 14
+    - id: 231
+  - position: {x: 17, y: 0, z: -13}
+    room:
+      id: 6
+    connexions:
+    - id: 24
+    - id: 31
+    - id: 300
+    - id: 306
+    - id: 339
+  - position: {x: 21.000002, y: 0, z: 19}
+    room:
+      id: 7
+    connexions:
+    - id: 80
+    - id: 107
+    - id: 198
+    - id: 244
+  - position: {x: 7, y: 0, z: -21}
+    room:
+      id: 6
+    connexions:
+    - id: 130
+    - id: 255
+    - id: 319
+  - position: {x: 10.999999, y: 0, z: 9}
+    room:
+      id: 7
+    connexions:
+    - id: 27
+    - id: 63
+    - id: 64
+    - id: 114
+    - id: 125
+    - id: 325
+    - id: 337
+    - id: 399
+  - position: {x: -7, y: 0, z: 17}
+    room:
+      id: 8
+    connexions:
+    - id: 149
+    - id: 270
+    - id: 297
+  - position: {x: 7, y: 0, z: -5}
+    room:
+      id: 6
+    connexions:
+    - id: 15
+    - id: 120
+    - id: 350
+  - position: {x: -17, y: 0, z: -13}
+    room:
+      id: 5
+    connexions:
+    - id: 20
+    - id: 87
+    - id: 166
+    - id: 257
+    - id: 303
+    - id: 331
+  - position: {x: -21, y: 0, z: 15}
+    room:
+      id: 8
+    connexions:
+    - id: 3
+    - id: 69
+    - id: 320
+    - id: 364
+  - position: {x: -10.999999, y: 0, z: -19}
+    room:
+      id: 5
+    connexions:
+    - id: 99
+    - id: 200
+    - id: 287
+    - id: 357
+    - id: 388
+  - position: {x: -2.999998, y: 0, z: -21}
+    room:
+      id: 5
+    connexions:
+    - id: 4
+    - id: 5
+    - id: 184
+    - id: 192
+  - position: {x: -9, y: 0, z: 15}
+    room:
+      id: 8
+    connexions:
+    - id: 41
+    - id: 122
+    - id: 143
+    - id: 152
+    - id: 170
+    - id: 270
+    - id: 277
+    - id: 297
+  - position: {x: -7, y: 0, z: -6.999999}
+    room:
+      id: 5
+    connexions:
+    - id: 40
+    - id: 186
+    - id: 215
+    - id: 280
+    - id: 393
+  - position: {x: -7, y: 0, z: 3}
+    room:
+      id: 8
+    connexions:
+    - id: 104
+    - id: 259
+    - id: 283
+    - id: 410
+  - position: {x: -11, y: 0, z: 15}
+    room:
+      id: 8
+    connexions:
+    - id: 38
+    - id: 111
+    - id: 122
+    - id: 149
+    - id: 169
+    - id: 170
+    - id: 270
+    - id: 277
+  - position: {x: 2.999999, y: 0, z: 13.000001}
+    room:
+      id: 7
+    connexions:
+    - id: 74
+    - id: 79
+    - id: 126
+    - id: 265
+    - id: 292
+  - position: {x: -17.000002, y: 0, z: -3}
+    room:
+      id: 5
+    connexions:
+    - id: 57
+    - id: 162
+    - id: 185
+    - id: 302
+  - position: {x: 21, y: 0, z: 6.9999986}
+    room:
+      id: 7
+    connexions:
+    - id: 23
+    - id: 30
+    - id: 62
+    - id: 312
+    - id: 351
+  - position: {x: -15, y: 0, z: 7}
+    room:
+      id: 8
+    connexions:
+    - id: 36
+    - id: 127
+    - id: 245
+    - id: 295
+    - id: 363
+    - id: 370
+  - position: {x: -13, y: 0, z: -11}
+    room:
+      id: 5
+    connexions:
+    - id: 55
+    - id: 118
+    - id: 164
+    - id: 166
+    - id: 204
+    - id: 257
+    - id: 267
+    - id: 332
+  - position: {x: -5, y: 0, z: 11}
+    room:
+      id: 8
+    connexions:
+    - id: 41
+    - id: 82
+    - id: 102
+    - id: 322
+    - id: 406
+  - position: {x: 21, y: 0, z: -3}
+    room:
+      id: 6
+    connexions:
+    - id: 128
+    - id: 250
+  - position: {x: 13, y: 0, z: 13}
+    room:
+      id: 7
+    connexions:
+    - id: 27
+    - id: 37
+    - id: 64
+    - id: 210
+    - id: 264
+    - id: 346
+    - id: 359
+    - id: 361
+  - position: {x: 7, y: 0, z: -11}
+    room:
+      id: 6
+    connexions:
+    - id: 13
+    - id: 65
+    - id: 194
+    - id: 291
+    - id: 368
+  - position: {x: -17.000002, y: 0, z: -4.9999995}
+    room:
+      id: 5
+    connexions:
+    - id: 117
+    - id: 181
+    - id: 234
+    - id: 302
+  - position: {x: 6.999999, y: 0, z: 7.0000005}
+    room:
+      id: 7
+    connexions:
+    - id: 100
+    - id: 311
+    - id: 325
+    - id: 386
+    - id: 399
+  - position: {x: -13, y: 0, z: -13}
+    room:
+      id: 5
+    connexions:
+    - id: 55
+    - id: 157
+    - id: 166
+    - id: 197
+    - id: 204
+    - id: 257
+    - id: 303
+    - id: 309
+  - position: {x: 19, y: 0, z: -13}
+    room:
+      id: 6
+    connexions:
+    - id: 31
+    - id: 139
+    - id: 190
+    - id: 205
+    - id: 306
+  - position: {x: -15, y: 0, z: -11}
+    room:
+      id: 5
+    connexions:
+    - id: 20
+    - id: 145
+    - id: 157
+    - id: 164
+    - id: 202
+    - id: 257
+    - id: 267
+    - id: 332
+  - position: {x: 2.999998, y: 0, z: 7.000001}
+    room:
+      id: 7
+    connexions:
+    - id: 237
+    - id: 238
+    - id: 311
+    - id: 329
+  - position: {x: -3, y: 0, z: 7}
+    room:
+      id: 8
+    connexions:
+    - id: 102
+    - id: 324
+    - id: 410
+  - position: {x: -13, y: 0, z: 13}
+    room:
+      id: 8
+    connexions:
+    - id: 28
+    - id: 38
+    - id: 90
+    - id: 152
+    - id: 173
+    - id: 193
+    - id: 277
+    - id: 313
+  - position: {x: -11, y: 0, z: 17}
+    room:
+      id: 8
+    connexions:
+    - id: 38
+    - id: 111
+    - id: 149
+    - id: 152
+    - id: 270
+  - position: {x: -15, y: 0, z: -21.000002}
+    room:
+      id: 5
+    connexions:
+    - id: 189
+    - id: 286
+    - id: 310
+    - id: 345
+    - id: 388
+  - position: {x: 15.000002, y: 0, z: 19}
+    room:
+      id: 7
+    connexions:
+    - id: 0
+    - id: 198
+    - id: 248
+    - id: 299
+    - id: 348
+    - id: 359
+  - position: {x: -11, y: 0, z: 11}
+    room:
+      id: 8
+    connexions:
+    - id: 68
+    - id: 122
+    - id: 127
+    - id: 169
+    - id: 193
+    - id: 252
+    - id: 277
+    - id: 387
+  - position: {x: 8.999998, y: 0, z: 3}
+    room:
+      id: 7
+    connexions:
+    - id: 98
+    - id: 207
+    - id: 261
+    - id: 384
+    - id: 386
+  - position: {x: 5, y: 0, z: -17}
+    room:
+      id: 6
+    connexions:
+    - id: 39
+    - id: 255
+    - id: 327
+  - position: {x: -13.000001, y: 0, z: -6.9999995}
+    room:
+      id: 5
+    connexions:
+    - id: 34
+    - id: 48
+    - id: 118
+    - id: 181
+    - id: 267
+    - id: 332
+  - position: {x: -5, y: 0, z: -2.999998}
+    room:
+      id: 5
+    connexions:
+    - id: 188
+    - id: 226
+    - id: 251
+    - id: 280
+  - position: {x: 9, y: 0, z: 19.000002}
+    room:
+      id: 7
+    connexions:
+    - id: 115
+    - id: 211
+    - id: 224
+    - id: 254
+    - id: 402
+  - position: {x: -19, y: 0, z: -19.000002}
+    room:
+      id: 5
+    connexions:
+    - id: 110
+    - id: 189
+    - id: 293
+    - id: 310
+    - id: 314
+  - position: {x: -19, y: 0, z: 11}
+    room:
+      id: 8
+    connexions:
+    - id: 36
+    - id: 69
+    - id: 228
+    - id: 229
+    - id: 395
+  - position: {x: -15.000001, y: 0, z: -7.0000005}
+    room:
+      id: 5
+    connexions:
+    - id: 176
+    - id: 202
+    - id: 234
+    - id: 267
+    - id: 332
+  - position: {x: -11.000001, y: 0, z: -4.999999}
+    room:
+      id: 5
+    connexions:
+    - id: 34
+    - id: 44
+    - id: 48
+    - id: 176
+    - id: 186
+  - position: {x: 7, y: 0, z: -3}
+    room:
+      id: 6
+    connexions:
+    - id: 120
+    - id: 144
+    - id: 285
+    - id: 350
+  - position: {x: -2.999998, y: 0, z: -19}
+    room:
+      id: 5
+    connexions:
+    - id: 2
+    - id: 4
+    - id: 192
+  - position: {x: -19.000002, y: 0, z: -3.000001}
+    room:
+      id: 5
+    connexions:
+    - id: 57
+    - id: 117
+    - id: 154
+    - id: 162
+    - id: 217
+  - position: {x: -9, y: 0, z: -6.999999}
+    room:
+      id: 5
+    connexions:
+    - id: 40
+    - id: 44
+    - id: 48
+    - id: 118
+    - id: 150
+    - id: 393
+  - position: {x: -11, y: 0, z: 21}
+    room:
+      id: 8
+    connexions:
+    - id: 170
+    - id: 201
+    - id: 323
+    - id: 326
+  - position: {x: -9, y: 0, z: -2.999998}
+    room:
+      id: 5
+    connexions:
+    - id: 44
+    - id: 182
+    - id: 191
+    - id: 226
+    - id: 280
+  - position: {x: -17, y: 0, z: -19.000002}
+    room:
+      id: 5
+    connexions:
+    - id: 93
+    - id: 179
+    - id: 310
+    - id: 314
+  - position: {x: 19, y: 0, z: -11}
+    room:
+      id: 6
+    connexions:
+    - id: 31
+    - id: 112
+    - id: 139
+    - id: 165
+    - id: 214
+  - position: {x: -11.000001, y: 0, z: -2.999999}
+    room:
+      id: 5
+    connexions:
+    - id: 34
+    - id: 44
+    - id: 182
+    - id: 188
+    - id: 380
+  - position: {x: -4.999998, y: 0, z: -19}
+    room:
+      id: 5
+    connexions:
+    - id: 2
+    - id: 73
+    - id: 99
+    - id: 219
+  - position: {x: -13, y: 0, z: 11}
+    room:
+      id: 8
+    connexions:
+    - id: 90
+    - id: 127
+    - id: 169
+    - id: 173
+    - id: 245
+    - id: 252
+    - id: 277
+    - id: 313
+  - position: {x: 9, y: 0, z: -11}
+    room:
+      id: 6
+    connexions:
+    - id: 13
+    - id: 54
+    - id: 65
+    - id: 108
+    - id: 161
+    - id: 291
+    - id: 338
+    - id: 368
+  - position: {x: 17, y: 0, z: -3}
+    room:
+      id: 6
+    connexions:
+    - id: 66
+    - id: 263
+    - id: 352
+    - id: 391
+  - position: {x: 3, y: 0, z: -19}
+    room:
+      id: 6
+    connexions:
+    - id: 130
+    - id: 175
+    - id: 336
+  - position: {x: -13, y: 0, z: -15}
+    room:
+      id: 5
+    connexions:
+    - id: 55
+    - id: 93
+    - id: 164
+    - id: 257
+    - id: 287
+    - id: 303
+    - id: 309
+    - id: 357
+  - position: {x: 17.000002, y: 0, z: 19}
+    room:
+      id: 7
+    connexions:
+    - id: 0
+    - id: 172
+    - id: 244
+    - id: 248
+    - id: 381
+  - position: {x: -8.999999, y: 0, z: -15}
+    room:
+      id: 5
+    connexions:
+    - id: 55
+    - id: 200
+    - id: 219
+    - id: 287
+    - id: 298
+    - id: 309
+    - id: 328
+    - id: 398
+  - position: {x: -8.999999, y: 0, z: -17}
+    room:
+      id: 5
+    connexions:
+    - id: 99
+    - id: 199
+    - id: 219
+    - id: 287
+    - id: 309
+    - id: 328
+  - position: {x: -9, y: 0, z: 19}
+    room:
+      id: 8
+    connexions:
+    - id: 143
+    - id: 149
+    - id: 170
+    - id: 270
+    - id: 326
+    - id: 335
+  - position: {x: -17, y: 0, z: -9}
+    room:
+      id: 5
+    connexions:
+    - id: 20
+    - id: 166
+    - id: 181
+    - id: 234
+    - id: 332
+  - position: {x: -19, y: 0, z: 21}
+    room:
+      id: 8
+    connexions:
+    - id: 86
+    - id: 364
+    - id: 400
+  - position: {x: -11, y: 0, z: -11}
+    room:
+      id: 5
+    connexions:
+    - id: 11
+    - id: 40
+    - id: 55
+    - id: 118
+    - id: 157
+    - id: 164
+    - id: 267
+    - id: 398
+  - position: {x: 19, y: 0, z: -15}
+    room:
+      id: 6
+    connexions:
+    - id: 139
+    - id: 165
+    - id: 271
+    - id: 306
+    - id: 354
+  - position: {x: 21, y: 0, z: -9}
+    room:
+      id: 6
+    connexions:
+    - id: 18
+    - id: 112
+    - id: 190
+    - id: 214
+  - position: {x: 8.999998, y: 0, z: 4.9999995}
+    room:
+      id: 7
+    connexions:
+    - id: 114
+    - id: 163
+    - id: 384
+    - id: 386
+    - id: 399
+  - position: {x: 13, y: 0, z: -5}
+    room:
+      id: 6
+    connexions:
+    - id: 43
+    - id: 260
+    - id: 305
+    - id: 352
+    - id: 378
+  - position: {x: 15, y: 0, z: 2.999998}
+    room:
+      id: 7
+    connexions:
+    - id: 106
+    - id: 247
+    - id: 276
+    - id: 304
+    - id: 367
+  - position: {x: 15, y: 0, z: 10.999999}
+    room:
+      id: 7
+    connexions:
+    - id: 37
+    - id: 64
+    - id: 88
+    - id: 160
+    - id: 239
+    - id: 249
+    - id: 337
+    - id: 371
+  - position: {x: 7.0000005, y: 0, z: 19.000002}
+    room:
+      id: 7
+    connexions:
+    - id: 7
+    - id: 178
+    - id: 224
+    - id: 254
+  - position: {x: 9, y: 0, z: -17}
+    room:
+      id: 6
+    connexions:
+    - id: 39
+    - id: 255
+    - id: 342
+    - id: 362
+    - id: 375
+  - position: {x: 21, y: 0, z: -13}
+    room:
+      id: 6
+    connexions:
+    - id: 139
+    - id: 165
+    - id: 190
+    - id: 205
+  - position: {x: 17, y: 0, z: -9}
+    room:
+      id: 6
+    connexions:
+    - id: 24
+    - id: 31
+    - id: 43
+    - id: 232
+    - id: 391
+  - position: {x: -4.9999995, y: 0, z: -6.9999986}
+    room:
+      id: 5
+    connexions:
+    - id: 150
+    - id: 251
+    - id: 330
+    - id: 393
+  - position: {x: -5, y: 0, z: 5}
+    room:
+      id: 8
+    connexions:
+    - id: 104
+    - id: 324
+    - id: 410
+  - position: {x: -19.000002, y: 0, z: -7.000001}
+    room:
+      id: 5
+    connexions:
+    - id: 103
+    - id: 202
+    - id: 234
+  - position: {x: -2.0000002, y: 0, z: -8.000008}
+    room:
+      id: 2
+    connexions: []
+  - position: {x: -6.999999, y: 0, z: -17}
+    room:
+      id: 5
+    connexions:
+    - id: 2
+    - id: 73
+    - id: 199
+    - id: 200
+    - id: 328
+  - position: {x: 6.9999995, y: 0, z: 11}
+    room:
+      id: 7
+    connexions:
+    - id: 22
+    - id: 100
+    - id: 125
+    - id: 132
+    - id: 325
+  - position: {x: 3, y: 0, z: -11}
+    room:
+      id: 6
+    connexions:
+    - id: 124
+    - id: 161
+    - id: 333
+    - id: 379
+  - position: {x: -3, y: 0, z: 13}
+    room:
+      id: 8
+    connexions:
+    - id: 6
+    - id: 41
+    - id: 158
+    - id: 406
+  - position: {x: -11, y: 0, z: 7}
+    room:
+      id: 8
+    connexions:
+    - id: 78
+    - id: 127
+    - id: 252
+    - id: 363
+    - id: 387
+    - id: 390
+  - position: {x: 9, y: 0, z: 17}
+    room:
+      id: 7
+    connexions:
+    - id: 115
+    - id: 254
+    - id: 346
+    - id: 389
+    - id: 409
+  - position: {x: -21.000002, y: 0, z: -5.000001}
+    room:
+      id: 5
+    connexions:
+    - id: 85
+    - id: 117
+    - id: 133
+    - id: 162
+    - id: 217
+  - position: {x: -7.0000005, y: 0, z: -2.999998}
+    room:
+      id: 5
+    connexions:
+    - id: 44
+    - id: 177
+    - id: 188
+    - id: 280
+  - position: {x: 3, y: 0, z: -21}
+    room:
+      id: 6
+    connexions:
+    - id: 336
+  - position: {x: -17, y: 0, z: 13}
+    room:
+      id: 8
+    connexions:
+    - id: 28
+    - id: 90
+    - id: 229
+    - id: 313
+    - id: 320
+  - position: {x: -17, y: 0, z: 11}
+    room:
+      id: 8
+    connexions:
+    - id: 36
+    - id: 90
+    - id: 228
+    - id: 245
+    - id: 313
+  - position: {x: 13.000001, y: 0, z: 21}
+    room:
+      id: 7
+    connexions:
+    - id: 53
+    - id: 94
+    - id: 172
+    - id: 299
+    - id: 348
+    - id: 402
+  - position: {x: -19, y: 0, z: 7}
+    room:
+      id: 8
+    connexions:
+    - id: 9
+    - id: 36
+    - id: 370
+    - id: 395
+  - position: {x: 15, y: 0, z: -9}
+    room:
+      id: 6
+    connexions:
+    - id: 24
+    - id: 31
+    - id: 43
+    - id: 214
+    - id: 274
+    - id: 305
+    - id: 341
+    - id: 391
+  - position: {x: -5, y: 0, z: 3}
+    room:
+      id: 8
+    connexions:
+    - id: 104
+    - id: 216
+    - id: 324
+  - position: {x: -17, y: 0, z: -7.0000005}
+    room:
+      id: 5
+    connexions:
+    - id: 181
+    - id: 202
+    - id: 332
+  - position: {x: -21, y: 0, z: -13.000001}
+    room:
+      id: 5
+    connexions:
+    - id: 26
+    - id: 56
+    - id: 87
+    - id: 145
+    - id: 275
+    - id: 293
+  - position: {x: -9, y: 0, z: 21}
+    room:
+      id: 8
+    connexions:
+    - id: 201
+    - id: 270
+    - id: 326
+    - id: 335
+  - position: {x: 2.999998, y: 0, z: 5.000001}
+    room:
+      id: 7
+    connexions:
+    - id: 19
+    - id: 167
+    - id: 311
+    - id: 329
+  - position: {x: 4.9999986, y: 0, z: 9.000001}
+    room:
+      id: 7
+    connexions:
+    - id: 100
+    - id: 163
+    - id: 220
+    - id: 265
+    - id: 311
+  - position: {x: 17, y: 0, z: 13}
+    room:
+      id: 7
+    connexions:
+    - id: 37
+    - id: 77
+    - id: 210
+    - id: 249
+    - id: 359
+    - id: 381
+  - position: {x: 21, y: 0, z: 2.999998}
+    room:
+      id: 7
+    connexions:
+    - id: 62
+    - id: 296
+    - id: 358
+  - position: {x: -3, y: 0, z: 15}
+    room:
+      id: 8
+    connexions:
+    - id: 6
+    - id: 297
+    - id: 406
+    - id: 407
+  - position: {x: 15, y: 0, z: 6.999999}
+    room:
+      id: 7
+    connexions:
+    - id: 63
+    - id: 88
+    - id: 337
+    - id: 351
+    - id: 367
+    - id: 371
+  - position: {x: 3, y: 0, z: 17.000002}
+    room:
+      id: 7
+    connexions:
+    - id: 74
+    - id: 254
+    - id: 292
+    - id: 396
+    - id: 408
+  - position: {x: 19.000002, y: 0, z: 19}
+    room:
+      id: 7
+    connexions:
+    - id: 0
+    - id: 80
+    - id: 172
+    - id: 198
+  - position: {x: -15, y: 0, z: 9}
+    room:
+      id: 8
+    connexions:
+    - id: 36
+    - id: 127
+    - id: 156
+    - id: 193
+    - id: 229
+    - id: 313
+    - id: 363
+    - id: 370
+  - position: {x: -5, y: 0, z: 21}
+    room:
+      id: 8
+    connexions:
+    - id: 321
+    - id: 335
+    - id: 407
+  - position: {x: 17, y: 0, z: 4.9999986}
+    room:
+      id: 7
+    connexions:
+    - id: 242
+    - id: 351
+    - id: 358
+    - id: 367
+  - position: {x: 15.000001, y: 0, z: 17}
+    room:
+      id: 7
+    connexions:
+    - id: 0
+    - id: 172
+    - id: 348
+    - id: 359
+    - id: 361
+    - id: 381
+  - position: {x: 17, y: 0, z: 11}
+    room:
+      id: 7
+    connexions:
+    - id: 37
+    - id: 88
+    - id: 210
+    - id: 239
+    - id: 371
+    - id: 405
+  - position: {x: 19, y: 0, z: -5}
+    room:
+      id: 6
+    connexions:
+    - id: 18
+    - id: 66
+    - id: 391
+  - position: {x: -5, y: 0, z: -4.999998}
+    room:
+      id: 5
+    connexions:
+    - id: 44
+    - id: 150
+    - id: 215
+    - id: 280
+    - id: 330
+  - position: {x: -11, y: 0, z: 9}
+    room:
+      id: 8
+    connexions:
+    - id: 68
+    - id: 127
+    - id: 173
+    - id: 193
+    - id: 223
+    - id: 363
+    - id: 387
+    - id: 390
+  - position: {x: -13, y: 0, z: 5}
+    room:
+      id: 8
+    connexions:
+    - id: 78
+    - id: 156
+    - id: 223
+    - id: 295
+    - id: 363
+  - position: {x: 7, y: 0, z: 17}
+    room:
+      id: 7
+    connexions:
+    - id: 224
+    - id: 389
+    - id: 408
+    - id: 409
+  - position: {x: 7, y: 0, z: -17}
+    room:
+      id: 6
+    connexions:
+    - id: 39
+    - id: 212
+    - id: 375
+  - position: {x: 17, y: 0, z: -21}
+    room:
+      id: 6
+    connexions:
+    - id: 17
+    - id: 272
+    - id: 354
+  - position: {x: -15, y: 0, z: -13.000001}
+    room:
+      id: 5
+    connexions:
+    - id: 20
+    - id: 145
+    - id: 157
+    - id: 164
+    - id: 166
+    - id: 197
+    - id: 303
+    - id: 331
+  - position: {x: -4.9999986, y: 0, z: -14.999999}
+    room:
+      id: 5
+    connexions:
+    - id: 2
+    - id: 134
+    - id: 219
+    - id: 298
+    - id: 328
+  - position: {x: -9, y: 0, z: 5}
+    room:
+      id: 8
+    connexions:
+    - id: 78
+    - id: 104
+    - id: 223
+    - id: 390
+    - id: 410
+  - position: {x: 11, y: 0, z: -7}
+    room:
+      id: 6
+    connexions:
+    - id: 13
+    - id: 15
+    - id: 108
+    - id: 305
+    - id: 341
+    - id: 378
+  - position: {x: 10.999999, y: 0, z: 2.999999}
+    room:
+      id: 7
+    connexions:
+    - id: 174
+    - id: 207
+    - id: 276
+    - id: 304
+    - id: 384
+  - position: {x: -3, y: 0, z: -4.999998}
+    room:
+      id: 5
+    connexions:
+    - id: 51
+    - id: 137
+    - id: 215
+    - id: 251
+  - position: {x: 15, y: 0, z: -3}
+    room:
+      id: 6
+    connexions:
+    - id: 43
+    - id: 61
+    - id: 66
+    - id: 195
+    - id: 208
+    - id: 352
+  - position: {x: 11, y: 0, z: 13}
+    room:
+      id: 7
+    connexions:
+    - id: 22
+    - id: 27
+    - id: 64
+    - id: 125
+    - id: 160
+    - id: 346
+    - id: 361
+    - id: 409
+  - position: {x: 4.999999, y: 0, z: 11.000001}
+    room:
+      id: 7
+    connexions:
+    - id: 100
+    - id: 126
+    - id: 132
+    - id: 220
+    - id: 238
+  - position: {x: -2.999999, y: 0, z: -12.999999}
+    room:
+      id: 5
+    connexions:
+    - id: 49
+    - id: 60
+    - id: 134
+    - id: 258
+    - id: 373
+  - position: {x: -13.000001, y: 0, z: -9}
+    room:
+      id: 5
+    connexions:
+    - id: 48
+    - id: 118
+    - id: 157
+    - id: 166
+    - id: 176
+    - id: 181
+    - id: 204
+    - id: 332
+  - position: {x: 21, y: 0, z: -17}
+    room:
+      id: 6
+    connexions:
+    - id: 205
+    - id: 271
+    - id: 354
+  - position: {x: -3, y: 0, z: 11}
+    room:
+      id: 8
+    connexions:
+    - id: 102
+    - id: 158
+    - id: 322
+    - id: 406
+  - position: {x: -9, y: 0, z: 17}
+    room:
+      id: 8
+    connexions:
+    - id: 143
+    - id: 149
+    - id: 152
+    - id: 170
+    - id: 297
+  - position: {x: 19, y: 0, z: -17}
+    room:
+      id: 6
+    connexions:
+    - id: 205
+    - id: 306
+    - id: 354
+  - position: {x: 15, y: 0, z: -19}
+    room:
+      id: 6
+    connexions:
+    - id: 17
+    - id: 91
+    - id: 300
+    - id: 354
+    - id: 376
+    - id: 394
+  - position: {x: -21, y: 0, z: -17.000002}
+    room:
+      id: 5
+    connexions:
+    - id: 29
+    - id: 110
+    - id: 275
+    - id: 293
+    - id: 314
+  - position: {x: 13, y: 0, z: -11}
+    room:
+      id: 6
+    connexions:
+    - id: 24
+    - id: 54
+    - id: 108
+    - id: 121
+    - id: 232
+    - id: 338
+    - id: 339
+    - id: 341
+  - position: {x: -21, y: 0, z: -15.000002}
+    room:
+      id: 5
+    connexions:
+    - id: 87
+    - id: 110
+    - id: 235
+    - id: 273
+    - id: 293
+    - id: 331
+  - position: {x: 12.999999, y: 0, z: 2.999999}
+    room:
+      id: 7
+    connexions:
+    - id: 209
+    - id: 261
+    - id: 304
+    - id: 367
+    - id: 384
+  - position: {x: -11, y: 0, z: 13}
+    room:
+      id: 8
+    connexions:
+    - id: 38
+    - id: 68
+    - id: 122
+    - id: 149
+    - id: 152
+    - id: 169
+    - id: 173
+    - id: 193
+  - position: {x: 21, y: 0, z: -11}
+    room:
+      id: 6
+    connexions:
+    - id: 31
+    - id: 112
+    - id: 165
+    - id: 190
+  - position: {x: 21.000002, y: 0, z: 21}
+    room:
+      id: 7
+    connexions:
+    - id: 45
+    - id: 67
+    - id: 140
+    - id: 244
+  - position: {x: -7.0000005, y: 0, z: -4.9999986}
+    room:
+      id: 5
+    connexions:
+    - id: 44
+    - id: 150
+    - id: 186
+    - id: 251
+  - position: {x: -21, y: 0, z: 19}
+    room:
+      id: 8
+    connexions:
+    - id: 86
+    - id: 364
+    - id: 400
+  - position: {x: -21, y: 0, z: 3}
+    room:
+      id: 8
+    connexions:
+    - id: 9
+    - id: 401
+  - position: {x: -9, y: 0, z: 3}
+    room:
+      id: 8
+    connexions:
+    - id: 78
+    - id: 104
+    - id: 259
+    - id: 383
+    - id: 390
+  - position: {x: 3, y: 0, z: -13}
+    room:
+      id: 6
+    connexions:
+    - id: 124
+    - id: 327
+    - id: 333
+    - id: 368
+  - position: {x: 9, y: 0, z: -3}
+    room:
+      id: 6
+    connexions:
+    - id: 15
+    - id: 120
+    - id: 144
+    - id: 378
+    - id: 404
+  - position: {x: -17, y: 0, z: -21.000002}
+    room:
+      id: 5
+    connexions:
+    - id: 171
+    - id: 189
+    - id: 310
+    - id: 369
+  - position: {x: -10.999999, y: 0, z: -17}
+    room:
+      id: 5
+    connexions:
+    - id: 147
+    - id: 197
+    - id: 199
+    - id: 200
+    - id: 309
+    - id: 357
+  - position: {x: 21, y: 0, z: -21}
+    room:
+      id: 6
+    connexions:
+    - id: 349
+  - position: {x: -21, y: 0, z: 13}
+    room:
+      id: 8
+    connexions:
+    - id: 3
+    - id: 69
+    - id: 180
+    - id: 228
+  - position: {x: 3, y: 0, z: -17}
+    room:
+      id: 6
+    connexions:
+    - id: 175
+    - id: 255
+    - id: 327
+  - position: {x: 7, y: 0, z: -9}
+    room:
+      id: 6
+    connexions:
+    - id: 13
+    - id: 15
+    - id: 161
+    - id: 194
+    - id: 350
+  - position: {x: 4.9999995, y: 0, z: 15.000002}
+    room:
+      id: 7
+    connexions:
+    - id: 126
+    - id: 132
+    - id: 254
+    - id: 389
+    - id: 408
+  - position: {x: -19, y: 0, z: -15.000002}
+    room:
+      id: 5
+    connexions:
+    - id: 87
+    - id: 110
+    - id: 145
+    - id: 303
+    - id: 314
+    - id: 331
+  - position: {x: -0.0000038146973, y: 0, z: 8.000004}
+    room:
+      id: 1
+    connexions: []
+  - position: {x: -15, y: 0, z: 5}
+    room:
+      id: 8
+    connexions:
+    - id: 14
+    - id: 156
+    - id: 253
+    - id: 363
+    - id: 370
+  - position: {x: 19, y: 0, z: 2.999998}
+    room:
+      id: 7
+    connexions:
+    - id: 106
+    - id: 247
+    - id: 358
+  - position: {x: -7, y: 0, z: 15}
+    room:
+      id: 8
+    connexions:
+    - id: 41
+    - id: 122
+    - id: 143
+    - id: 149
+    - id: 270
+  - position: {x: -6.9999995, y: 0, z: -13}
+    room:
+      id: 5
+    connexions:
+    - id: 11
+    - id: 116
+    - id: 134
+    - id: 199
+    - id: 328
+    - id: 398
+  - position: {x: 13.000001, y: 0, z: 19}
+    room:
+      id: 7
+    connexions:
+    - id: 115
+    - id: 172
+    - id: 248
+    - id: 348
+    - id: 361
+    - id: 402
+  - position: {x: 15, y: 0, z: -15}
+    room:
+      id: 6
+    connexions:
+    - id: 58
+    - id: 91
+    - id: 121
+    - id: 139
+    - id: 306
+    - id: 339
+    - id: 354
+    - id: 394
+  - position: {x: -13, y: 0, z: 21}
+    room:
+      id: 8
+    connexions:
+    - id: 71
+    - id: 111
+    - id: 323
+    - id: 326
+  - position: {x: -15.000002, y: 0, z: -4.9999995}
+    room:
+      id: 5
+    connexions:
+    - id: 34
+    - id: 162
+    - id: 176
+    - id: 181
+    - id: 234
+  - position: {x: -15, y: 0, z: -15.000001}
+    room:
+      id: 5
+    connexions:
+    - id: 93
+    - id: 145
+    - id: 164
+    - id: 197
+    - id: 257
+    - id: 314
+    - id: 331
+    - id: 357
+  - position: {x: 12.999999, y: 0, z: 4.999999}
+    room:
+      id: 7
+    connexions:
+    - id: 63
+    - id: 114
+    - id: 242
+    - id: 367
+    - id: 384
+  - position: {x: 13, y: 0, z: -7}
+    room:
+      id: 6
+    connexions:
+    - id: 43
+    - id: 108
+    - id: 208
+    - id: 232
+    - id: 260
+    - id: 341
+  - position: {x: 17, y: 0, z: -15}
+    room:
+      id: 6
+    connexions:
+    - id: 91
+    - id: 139
+    - id: 300
+    - id: 339
+    - id: 354
+  - position: {x: -8, y: 0, z: 2}
+    room:
+      id: 4
+    connexions:
+    - id: 104
+    - id: 151
+    - id: 259
+    - id: 283
+    - id: 383
+  - position: {x: 2.0000005, y: 0, z: 8}
+    room:
+      id: 1
+    connexions: []
+  - position: {x: -10.999999, y: 0, z: -15}
+    room:
+      id: 5
+    connexions:
+    - id: 55
+    - id: 164
+    - id: 197
+    - id: 199
+    - id: 200
+    - id: 287
+    - id: 357
+    - id: 398
+  - position: {x: -15, y: 0, z: -19.000002}
+    room:
+      id: 5
+    connexions:
+    - id: 93
+    - id: 189
+    - id: 314
+    - id: 357
+    - id: 388
+  - position: {x: 4.9999986, y: 0, z: 7.000001}
+    room:
+      id: 7
+    connexions:
+    - id: 100
+    - id: 163
+    - id: 238
+  - position: {x: 21, y: 0, z: 8.999998}
+    room:
+      id: 7
+    connexions:
+    - id: 23
+    - id: 30
+    - id: 81
+    - id: 88
+    - id: 155
+    - id: 405
+  - position: {x: -15, y: 0, z: 11}
+    room:
+      id: 8
+    connexions:
+    - id: 36
+    - id: 90
+    - id: 127
+    - id: 169
+    - id: 193
+    - id: 228
+    - id: 229
+    - id: 245
+  - position: {x: -17, y: 0, z: -17}
+    room:
+      id: 5
+    connexions:
+    - id: 93
+    - id: 110
+    - id: 303
+    - id: 331
+  - position: {x: 3, y: 0, z: -3}
+    room:
+      id: 6
+    connexions:
+    - id: 21
+  - position: {x: -10.999999, y: 0, z: -21}
+    room:
+      id: 5
+    connexions:
+    - id: 10
+    - id: 99
+    - id: 147
+    - id: 287
+    - id: 345
+    - id: 388
+  - position: {x: 2.0000002, y: 0, z: -8.000004}
+    room:
+      id: 2
+    connexions: []
+  - position: {x: 21, y: 0, z: -19}
+    room:
+      id: 6
+    connexions:
+    - id: 17
+    - id: 271
+    - id: 349
+  - position: {x: 9, y: 0, z: -19}
+    room:
+      id: 6
+    connexions:
+    - id: 130
+    - id: 212
+    - id: 255
+    - id: 342
+    - id: 366
+    - id: 375
+  - position: {x: -17, y: 0, z: 15}
+    room:
+      id: 8
+    connexions:
+    - id: 28
+    - id: 90
+    - id: 105
+    - id: 228
+    - id: 382
+  - position: {x: -5, y: 0, z: 19}
+    room:
+      id: 8
+    connexions:
+    - id: 143
+    - id: 335
+    - id: 407
+  - position: {x: -7, y: 0, z: 11}
+    room:
+      id: 8
+    connexions:
+    - id: 41
+    - id: 68
+    - id: 82
+    - id: 122
+    - id: 387
+  - position: {x: -13, y: 0, z: 19}
+    room:
+      id: 8
+    connexions:
+    - id: 38
+    - id: 71
+    - id: 105
+    - id: 111
+    - id: 170
+    - id: 326
+  - position: {x: -5, y: 0, z: 7}
+    room:
+      id: 8
+    connexions:
+    - id: 82
+    - id: 102
+    - id: 410
+  - position: {x: 8.999999, y: 0, z: 9}
+    room:
+      id: 7
+    connexions:
+    - id: 27
+    - id: 100
+    - id: 114
+    - id: 125
+    - id: 142
+    - id: 163
+    - id: 220
+    - id: 399
+  - position: {x: -11, y: 0, z: 19}
+    room:
+      id: 8
+    connexions:
+    - id: 111
+    - id: 152
+    - id: 170
+    - id: 201
+    - id: 270
+    - id: 323
+  - position: {x: 5, y: 0, z: -15}
+    room:
+      id: 6
+    connexions:
+    - id: 39
+    - id: 175
+    - id: 255
+    - id: 333
+    - id: 368
+  - position: {x: -6.999999, y: 0, z: -15}
+    room:
+      id: 5
+    connexions:
+    - id: 199
+    - id: 200
+    - id: 219
+    - id: 258
+    - id: 298
+    - id: 398
+  - position: {x: 2.999998, y: 0, z: 9.000001}
+    room:
+      id: 7
+    connexions:
+    - id: 79
+    - id: 167
+    - id: 238
+    - id: 265
+    - id: 311
+  - position: {x: -4.9999995, y: 0, z: -8.999998}
+    room:
+      id: 5
+    connexions:
+    - id: 49
+    - id: 116
+    - id: 150
+    - id: 215
+    - id: 393
+  - position: {x: -17, y: 0, z: -15.000001}
+    room:
+      id: 5
+    connexions:
+    - id: 93
+    - id: 145
+    - id: 257
+    - id: 293
+    - id: 303
+    - id: 314
+  - position: {x: -15.000001, y: 0, z: -9}
+    room:
+      id: 5
+    connexions:
+    - id: 20
+    - id: 157
+    - id: 166
+    - id: 176
+    - id: 181
+    - id: 202
+    - id: 234
+    - id: 267
+  - position: {x: 5, y: 0, z: -13}
+    room:
+      id: 6
+    connexions:
+    - id: 39
+    - id: 124
+    - id: 161
+    - id: 327
+    - id: 368
+  - position: {x: 5, y: 0, z: -21}
+    room:
+      id: 6
+    connexions:
+    - id: 130
+    - id: 175
+    - id: 336
+  - position: {x: -7, y: 0, z: 19}
+    room:
+      id: 8
+    connexions:
+    - id: 143
+    - id: 201
+    - id: 270
+    - id: 297
+  - position: {x: 5, y: 0, z: -19}
+    room:
+      id: 6
+    connexions:
+    - id: 130
+    - id: 175
+    - id: 255
+  - position: {x: 13, y: 0, z: 9}
+    room:
+      id: 7
+    connexions:
+    - id: 27
+    - id: 63
+    - id: 64
+    - id: 114
+    - id: 142
+    - id: 210
+    - id: 242
+    - id: 371
+  - position: {x: 11, y: 0, z: -11}
+    room:
+      id: 6
+    connexions:
+    - id: 13
+    - id: 54
+    - id: 65
+    - id: 108
+    - id: 121
+    - id: 194
+    - id: 274
+    - id: 341
+  - position: {x: 15, y: 0, z: -13}
+    room:
+      id: 6
+    connexions:
+    - id: 24
+    - id: 31
+    - id: 58
+    - id: 121
+    - id: 139
+    - id: 274
+    - id: 300
+    - id: 306
+  - position: {x: 4.999998, y: 0, z: 3.000001}
+    room:
+      id: 7
+    connexions:
+    - id: 19
+    - id: 98
+    - id: 174
+    - id: 311
+    - id: 386
+  - position: {x: 13, y: 0, z: -9}
+    room:
+      id: 6
+    connexions:
+    - id: 24
+    - id: 43
+    - id: 108
+    - id: 232
+    - id: 260
+    - id: 274
+    - id: 305
+    - id: 338
+  - position: {x: 11, y: 0, z: -17}
+    room:
+      id: 6
+    connexions:
+    - id: 58
+    - id: 212
+    - id: 362
+    - id: 375
+    - id: 394
+  - position: {x: 3, y: 0, z: 21.000002}
+    room:
+      id: 7
+    connexions:
+    - id: 7
+    - id: 243
+    - id: 360
+    - id: 396
+  - position: {x: 8, y: 0, z: 0}
+    room:
+      id: 3
+    connexions: []
+  - position: {x: -12.999999, y: 0, z: -21}
+    room:
+      id: 5
+    connexions:
+    - id: 147
+    - id: 310
+    - id: 316
+    - id: 357
+    - id: 388
+  - position: {x: 11, y: 0, z: 15}
+    room:
+      id: 7
+    connexions:
+    - id: 22
+    - id: 115
+    - id: 160
+    - id: 224
+    - id: 264
+    - id: 348
+    - id: 361
+    - id: 409
+  - position: {x: -7, y: 0, z: 21}
+    room:
+      id: 8
+    connexions:
+    - id: 143
+    - id: 201
+    - id: 335
+  - position: {x: 13.000001, y: 0, z: 17}
+    room:
+      id: 7
+    connexions:
+    - id: 115
+    - id: 248
+    - id: 299
+    - id: 346
+    - id: 359
+    - id: 361
+  - position: {x: 19, y: 0, z: -19}
+    room:
+      id: 6
+    connexions:
+    - id: 17
+    - id: 205
+    - id: 271
+    - id: 354
+  - position: {x: 7, y: 0, z: -7}
+    room:
+      id: 6
+    connexions:
+    - id: 13
+    - id: 15
+    - id: 144
+    - id: 291
+  - position: {x: 17, y: 0, z: 6.999999}
+    room:
+      id: 7
+    connexions:
+    - id: 23
+    - id: 88
+    - id: 242
+    - id: 247
+    - id: 371
+  - position: {x: 15, y: 0, z: -5}
+    room:
+      id: 6
+    connexions:
+    - id: 43
+    - id: 66
+    - id: 208
+    - id: 305
+    - id: 391
+  - position: {x: -21.000002, y: 0, z: -3.000001}
+    room:
+      id: 5
+    connexions:
+    - id: 85
+    - id: 117
+    - id: 154
+    - id: 185
+    - id: 225
+  - position: {x: 17, y: 0, z: -17}
+    room:
+      id: 6
+    connexions:
+    - id: 91
+    - id: 300
+    - id: 306
+  - position: {x: 19, y: 0, z: -21}
+    room:
+      id: 6
+    connexions:
+    - id: 17
+    - id: 271
+    - id: 349
+  - position: {x: 15, y: 0, z: -21}
+    room:
+      id: 6
+    connexions:
+    - id: 17
+    - id: 91
+    - id: 272
+    - id: 376
+  - position: {x: -13, y: 0, z: -17}
+    room:
+      id: 5
+    connexions:
+    - id: 93
+    - id: 197
+    - id: 287
+    - id: 303
+    - id: 309
+    - id: 388
+  - position: {x: 19, y: 0, z: 4.999998}
+    room:
+      id: 7
+    connexions:
+    - id: 23
+    - id: 30
+    - id: 247
+    - id: 351
+    - id: 367
+  - position: {x: 15.000001, y: 0, z: 15}
+    room:
+      id: 7
+    connexions:
+    - id: 0
+    - id: 37
+    - id: 160
+    - id: 239
+    - id: 248
+    - id: 348
+    - id: 361
+    - id: 381
+  - position: {x: 5, y: 0, z: 21.000002}
+    room:
+      id: 7
+    connexions:
+    - id: 7
+    - id: 35
+    - id: 101
+    - id: 211
+    - id: 408
+  - position: {x: 13.000001, y: 0, z: 15}
+    room:
+      id: 7
+    connexions:
+    - id: 37
+    - id: 115
+    - id: 160
+    - id: 248
+    - id: 264
+    - id: 346
+    - id: 348
+    - id: 359
+  - position: {x: 11, y: 0, z: -15}
+    room:
+      id: 6
+    connexions:
+    - id: 54
+    - id: 58
+    - id: 65
+    - id: 121
+    - id: 212
+    - id: 342
+    - id: 375
+    - id: 394
+  - position: {x: -13, y: 0, z: 7}
+    room:
+      id: 8
+    connexions:
+    - id: 127
+    - id: 156
+    - id: 223
+    - id: 245
+    - id: 252
+    - id: 253
+  - position: {x: -19, y: 0, z: 17}
+    room:
+      id: 8
+    connexions:
+    - id: 3
+    - id: 320
+    - id: 382
+  - position: {x: 3, y: 0, z: -7}
+    room:
+      id: 6
+    connexions:
+    - id: 350
+    - id: 379
+    - id: 392
+  - position: {x: 11, y: 0, z: -19}
+    room:
+      id: 6
+    connexions:
+    - id: 212
+    - id: 319
+    - id: 342
+    - id: 362
+    - id: 376
+    - id: 394
+  - position: {x: 15, y: 0, z: 4.9999986}
+    room:
+      id: 7
+    connexions:
+    - id: 63
+    - id: 242
+    - id: 247
+    - id: 304
+    - id: 351
+  - position: {x: 7, y: 0, z: -13}
+    room:
+      id: 6
+    connexions:
+    - id: 39
+    - id: 65
+    - id: 161
+    - id: 194
+    - id: 375
+  - position: {x: -19, y: 0, z: -21.000002}
+    room:
+      id: 5
+    connexions:
+    - id: 110
+    - id: 171
+    - id: 179
+    - id: 189
+    - id: 286
+  - position: {x: -17, y: 0, z: 7}
+    room:
+      id: 8
+    connexions:
+    - id: 14
+    - id: 36
+    - id: 156
+    - id: 245
+  - position: {x: 15, y: 0, z: 8.999999}
+    room:
+      id: 7
+    connexions:
+    - id: 63
+    - id: 64
+    - id: 88
+    - id: 210
+    - id: 242
+    - id: 249
+    - id: 337
+    - id: 351
+  - position: {x: 21, y: 0, z: -15}
+    room:
+      id: 6
+    connexions:
+    - id: 165
+    - id: 205
+    - id: 271
+    - id: 306
+  - position: {x: -2.999999, y: 0, z: -10.999999}
+    room:
+      id: 5
+    connexions:
+    - id: 49
+    - id: 134
+    - id: 137
+    - id: 266
+    - id: 330
+  - position: {x: 21, y: 0, z: 12.999999}
+    room:
+      id: 7
+    connexions:
+    - id: 77
+    - id: 81
+    - id: 136
+    - id: 239
+    - id: 405
+  - position: {x: 9, y: 0, z: -15}
+    room:
+      id: 6
+    connexions:
+    - id: 39
+    - id: 54
+    - id: 65
+    - id: 212
+    - id: 255
+    - id: 342
+    - id: 362
+    - id: 368
+  - position: {x: 13, y: 0, z: -19}
+    room:
+      id: 6
+    connexions:
+    - id: 58
+    - id: 91
+    - id: 272
+    - id: 342
+    - id: 366
+    - id: 394
+  - position: {x: 8, y: 0, z: 2}
+    room:
+      id: 3
+    connexions:
+    - id: 98
+    - id: 174
+    - id: 207
+    - id: 261
+    - id: 386
+  - position: {x: 11, y: 0, z: -5}
+    room:
+      id: 6
+    connexions:
+    - id: 15
+    - id: 120
+    - id: 208
+    - id: 260
+    - id: 305
+  - position: {x: 5, y: 0, z: -9}
+    room:
+      id: 6
+    connexions:
+    - id: 124
+    - id: 161
+    - id: 291
+    - id: 350
+    - id: 392
+  - position: {x: -13.000001, y: 0, z: -2.999999}
+    room:
+      id: 5
+    connexions:
+    - id: 34
+    - id: 57
+    - id: 182
+    - id: 191
+    - id: 302
+  - position: {x: 17, y: 0, z: 15}
+    room:
+      id: 7
+    connexions:
+    - id: 0
+    - id: 37
+    - id: 239
+    - id: 248
+    - id: 359
+  - position: {x: -17, y: 0, z: 17}
+    room:
+      id: 8
+    connexions:
+    - id: 28
+    - id: 105
+    - id: 320
+  - position: {x: -11, y: 0, z: 3}
+    room:
+      id: 8
+    connexions:
+    - id: 8
+    - id: 78
+    - id: 223
+    - id: 253
+    - id: 259
+    - id: 283
+  - position: {x: 10.999999, y: 0, z: 4.999999}
+    room:
+      id: 7
+    connexions:
+    - id: 63
+    - id: 114
+    - id: 207
+    - id: 304
+    - id: 399
+  - position: {x: -9.094947e-13, y: 0, z: -8.000008}
+    room:
+      id: 2
+    connexions: []
+  - position: {x: 6.9999986, y: 0, z: 4.9999995}
+    room:
+      id: 7
+    connexions:
+    - id: 19
+    - id: 163
+    - id: 207
+    - id: 399
+  - position: {x: -9, y: 0, z: 9}
+    room:
+      id: 8
+    connexions:
+    - id: 68
+    - id: 82
+    - id: 173
+    - id: 223
+    - id: 252
+    - id: 322
+    - id: 390
+    - id: 410
+  - position: {x: -12.999999, y: 0, z: -19}
+    room:
+      id: 5
+    connexions:
+    - id: 93
+    - id: 147
+    - id: 197
+    - id: 287
+    - id: 310
+    - id: 357
+  - position: {x: 7, y: 0, z: 15.000001}
+    room:
+      id: 7
+    connexions:
+    - id: 22
+    - id: 132
+    - id: 224
+    - id: 254
+    - id: 292
+    - id: 409
+  - position: {x: -9, y: 0, z: 7}
+    room:
+      id: 8
+    connexions:
+    - id: 82
+    - id: 223
+    - id: 252
+    - id: 259
+    - id: 387
+    - id: 410
+  - position: {x: 17, y: 0, z: -7}
+    room:
+      id: 6
+    connexions:
+    - id: 43
+    - id: 66
+    - id: 214
+    - id: 232
+  - position: {x: 5, y: 0, z: -7}
+    room:
+      id: 6
+    connexions:
+    - id: 291
+    - id: 350
+    - id: 379
+  - position: {x: -7, y: 0, z: -8.999999}
+    room:
+      id: 5
+    connexions:
+    - id: 11
+    - id: 40
+    - id: 116
+    - id: 150
+    - id: 186
+    - id: 330
+  - position: {x: 13, y: 0, z: -17}
+    room:
+      id: 6
+    connexions:
+    - id: 58
+    - id: 91
+    - id: 300
+    - id: 342
+    - id: 362
+  - position: {x: -19, y: 0, z: 9}
+    room:
+      id: 8
+    connexions:
+    - id: 36
+    - id: 180
+    - id: 229
+    - id: 231
+    - id: 370
+  - position: {x: 3, y: 0, z: 19.000002}
+    room:
+      id: 7
+    connexions:
+    - id: 7
+    - id: 243
+    - id: 408
+  - position: {x: -3, y: 0, z: 5}
+    room:
+      id: 8
+    connexions:
+    - id: 104
+    - id: 216
+    - id: 324
+  - position: {x: -9, y: 0, z: -13}
+    room:
+      id: 5
+    connexions:
+    - id: 11
+    - id: 55
+    - id: 116
+    - id: 199
+    - id: 204
+    - id: 298
+    - id: 309
+    - id: 328
+  - position: {x: 8.999999, y: 0, z: 7.0000005}
+    room:
+      id: 7
+    connexions:
+    - id: 100
+    - id: 114
+    - id: 142
+    - id: 163
+    - id: 207
+    - id: 325
+  - position: {x: -19, y: 0, z: 19}
+    room:
+      id: 8
+    connexions:
+    - id: 3
+    - id: 86
+    - id: 364
+    - id: 382
+  - position: {x: -19, y: 0, z: 3}
+    room:
+      id: 8
+    connexions:
+    - id: 9
+    - id: 14
+    - id: 46
+    - id: 231
+  - position: {x: 11.000001, y: 0, z: 19}
+    room:
+      id: 7
+    connexions:
+    - id: 115
+    - id: 178
+    - id: 224
+    - id: 299
+    - id: 346
+    - id: 348
+  - position: {x: -8, y: 0, z: -2}
+    room:
+      id: 4
+    connexions:
+    - id: 44
+    - id: 188
+    - id: 191
+    - id: 226
+    - id: 280
+  - position: {x: 11, y: 0, z: -3}
+    room:
+      id: 6
+    connexions:
+    - id: 61
+    - id: 120
+    - id: 208
+    - id: 260
+    - id: 285
+    - id: 378
+  - position: {x: 19, y: 0, z: 10.999999}
+    room:
+      id: 7
+    connexions:
+    - id: 30
+    - id: 77
+    - id: 88
+    - id: 210
+    - id: 239
+    - id: 249
+  - position: {x: -5, y: 0, z: 13}
+    room:
+      id: 8
+    connexions:
+    - id: 6
+    - id: 41
+    - id: 158
+    - id: 297
+    - id: 322
+  - position: {x: -5, y: 0, z: 17}
+    room:
+      id: 8
+    connexions:
+    - id: 6
+    - id: 143
+    - id: 297
+  - position: {x: 4.9999995, y: 0, z: 17.000002}
+    room:
+      id: 7
+    connexions:
+    - id: 7
+    - id: 254
+    - id: 292
+    - id: 389
+  - position: {x: 9, y: 0, z: 15.000001}
+    room:
+      id: 7
+    connexions:
+    - id: 22
+    - id: 115
+    - id: 132
+    - id: 224
+    - id: 254
+    - id: 264
+    - id: 346
+    - id: 389
+  - position: {x: -7, y: 0, z: 7}
+    room:
+      id: 8
+    connexions:
+    - id: 82
+    - id: 104
+    - id: 387
+    - id: 390
+  - position: {x: 3, y: 0, z: -5}
+    room:
+      id: 6
+    connexions:
+    - id: 21
+    - id: 144
+    - id: 392
+  rooms:
+  - position: {x: 0, y: 0, z: 0}
+    nodes: []
+    connexions: []
+    entryPointKeys: []
+    entryPointValues: []
+  - position: {x: 0, y: 2, z: 8}
+    nodes:
+    - id: 50
+    - id: 294
+    - id: 308
+    connexions: []
+    entryPointKeys: []
+    entryPointValues: []
+  - position: {x: 0, y: 2, z: -8}
+    nodes:
+    - id: 218
+    - id: 317
+    - id: 385
+    connexions: []
+    entryPointKeys: []
+    entryPointValues: []
+  - position: {x: 8, y: 2, z: 0}
+    nodes:
+    - id: 131
+    - id: 344
+    - id: 377
+    connexions:
+    - id: 6
+    - id: 7
+    entryPointKeys:
+    - id: 6
+    - id: 7
+    entryPointValues:
+    - nodes:
+      - id: 131
+      - id: 131
+      - id: 131
+      - id: 131
+      - id: 131
+    - nodes:
+      - id: 377
+      - id: 377
+      - id: 377
+      - id: 377
+      - id: 377
+  - position: {x: -8, y: 2, z: 0}
+    nodes:
+    - id: 95
+    - id: 307
+    - id: 403
+    connexions:
+    - id: 8
+    - id: 5
+    entryPointKeys:
+    - id: 8
+    - id: 5
+    entryPointValues:
+    - nodes:
+      - id: 307
+      - id: 307
+      - id: 307
+      - id: 307
+      - id: 307
+    - nodes:
+      - id: 403
+      - id: 403
+      - id: 403
+      - id: 403
+      - id: 403
+  - position: {x: -12, y: 7.5, z: -12}
+    nodes:
+    - id: 1
+    - id: 2
+    - id: 4
+    - id: 5
+    - id: 10
+    - id: 11
+    - id: 12
+    - id: 20
+    - id: 26
+    - id: 29
+    - id: 33
+    - id: 34
+    - id: 40
+    - id: 44
+    - id: 48
+    - id: 49
+    - id: 51
+    - id: 55
+    - id: 56
+    - id: 57
+    - id: 60
+    - id: 73
+    - id: 85
+    - id: 87
+    - id: 93
+    - id: 99
+    - id: 103
+    - id: 110
+    - id: 116
+    - id: 117
+    - id: 118
+    - id: 133
+    - id: 134
+    - id: 137
+    - id: 145
+    - id: 147
+    - id: 148
+    - id: 150
+    - id: 154
+    - id: 157
+    - id: 162
+    - id: 164
+    - id: 166
+    - id: 171
+    - id: 176
+    - id: 177
+    - id: 179
+    - id: 181
+    - id: 182
+    - id: 184
+    - id: 185
+    - id: 186
+    - id: 188
+    - id: 189
+    - id: 191
+    - id: 192
+    - id: 197
+    - id: 199
+    - id: 200
+    - id: 202
+    - id: 204
+    - id: 215
+    - id: 217
+    - id: 219
+    - id: 225
+    - id: 226
+    - id: 234
+    - id: 235
+    - id: 251
+    - id: 257
+    - id: 258
+    - id: 262
+    - id: 266
+    - id: 267
+    - id: 273
+    - id: 275
+    - id: 280
+    - id: 286
+    - id: 287
+    - id: 293
+    - id: 298
+    - id: 302
+    - id: 303
+    - id: 309
+    - id: 310
+    - id: 314
+    - id: 316
+    - id: 328
+    - id: 330
+    - id: 331
+    - id: 332
+    - id: 345
+    - id: 353
+    - id: 357
+    - id: 369
+    - id: 373
+    - id: 380
+    - id: 388
+    - id: 393
+    - id: 398
+    connexions: []
+    entryPointKeys: []
+    entryPointValues: []
+  - position: {x: 12, y: 7.5, z: -12}
+    nodes:
+    - id: 13
+    - id: 15
+    - id: 16
+    - id: 17
+    - id: 18
+    - id: 21
+    - id: 24
+    - id: 31
+    - id: 39
+    - id: 43
+    - id: 54
+    - id: 58
+    - id: 61
+    - id: 65
+    - id: 66
+    - id: 72
+    - id: 75
+    - id: 76
+    - id: 89
+    - id: 91
+    - id: 108
+    - id: 109
+    - id: 112
+    - id: 113
+    - id: 119
+    - id: 120
+    - id: 121
+    - id: 124
+    - id: 128
+    - id: 130
+    - id: 139
+    - id: 141
+    - id: 144
+    - id: 159
+    - id: 161
+    - id: 165
+    - id: 175
+    - id: 183
+    - id: 190
+    - id: 194
+    - id: 195
+    - id: 196
+    - id: 205
+    - id: 206
+    - id: 208
+    - id: 212
+    - id: 213
+    - id: 214
+    - id: 221
+    - id: 227
+    - id: 232
+    - id: 250
+    - id: 255
+    - id: 256
+    - id: 260
+    - id: 263
+    - id: 268
+    - id: 271
+    - id: 272
+    - id: 274
+    - id: 278
+    - id: 284
+    - id: 285
+    - id: 288
+    - id: 290
+    - id: 291
+    - id: 300
+    - id: 305
+    - id: 306
+    - id: 315
+    - id: 318
+    - id: 319
+    - id: 327
+    - id: 333
+    - id: 334
+    - id: 336
+    - id: 338
+    - id: 339
+    - id: 341
+    - id: 342
+    - id: 349
+    - id: 350
+    - id: 352
+    - id: 354
+    - id: 355
+    - id: 356
+    - id: 362
+    - id: 365
+    - id: 366
+    - id: 368
+    - id: 372
+    - id: 375
+    - id: 376
+    - id: 378
+    - id: 379
+    - id: 391
+    - id: 392
+    - id: 394
+    - id: 404
+    - id: 411
+    connexions: []
+    entryPointKeys: []
+    entryPointValues: []
+  - position: {x: 12, y: 7.5, z: 12}
+    nodes:
+    - id: 0
+    - id: 7
+    - id: 19
+    - id: 22
+    - id: 23
+    - id: 27
+    - id: 30
+    - id: 35
+    - id: 37
+    - id: 45
+    - id: 53
+    - id: 62
+    - id: 63
+    - id: 64
+    - id: 67
+    - id: 74
+    - id: 77
+    - id: 79
+    - id: 80
+    - id: 81
+    - id: 88
+    - id: 92
+    - id: 94
+    - id: 98
+    - id: 100
+    - id: 101
+    - id: 106
+    - id: 107
+    - id: 114
+    - id: 115
+    - id: 125
+    - id: 126
+    - id: 129
+    - id: 132
+    - id: 136
+    - id: 140
+    - id: 142
+    - id: 153
+    - id: 155
+    - id: 160
+    - id: 163
+    - id: 167
+    - id: 172
+    - id: 174
+    - id: 178
+    - id: 198
+    - id: 207
+    - id: 209
+    - id: 210
+    - id: 211
+    - id: 220
+    - id: 224
+    - id: 230
+    - id: 237
+    - id: 238
+    - id: 239
+    - id: 240
+    - id: 242
+    - id: 243
+    - id: 244
+    - id: 247
+    - id: 248
+    - id: 249
+    - id: 254
+    - id: 261
+    - id: 264
+    - id: 265
+    - id: 276
+    - id: 279
+    - id: 292
+    - id: 296
+    - id: 299
+    - id: 304
+    - id: 311
+    - id: 312
+    - id: 325
+    - id: 329
+    - id: 337
+    - id: 340
+    - id: 343
+    - id: 346
+    - id: 348
+    - id: 351
+    - id: 358
+    - id: 359
+    - id: 360
+    - id: 361
+    - id: 367
+    - id: 371
+    - id: 374
+    - id: 381
+    - id: 384
+    - id: 386
+    - id: 389
+    - id: 396
+    - id: 399
+    - id: 402
+    - id: 405
+    - id: 408
+    - id: 409
+    connexions: []
+    entryPointKeys: []
+    entryPointValues: []
+  - position: {x: -12, y: 7.5, z: 12}
+    nodes:
+    - id: 3
+    - id: 6
+    - id: 8
+    - id: 9
+    - id: 14
+    - id: 25
+    - id: 28
+    - id: 32
+    - id: 36
+    - id: 38
+    - id: 41
+    - id: 42
+    - id: 46
+    - id: 47
+    - id: 52
+    - id: 59
+    - id: 68
+    - id: 69
+    - id: 70
+    - id: 71
+    - id: 78
+    - id: 82
+    - id: 83
+    - id: 84
+    - id: 86
+    - id: 90
+    - id: 96
+    - id: 97
+    - id: 102
+    - id: 104
+    - id: 105
+    - id: 111
+    - id: 122
+    - id: 123
+    - id: 127
+    - id: 135
+    - id: 138
+    - id: 143
+    - id: 146
+    - id: 149
+    - id: 151
+    - id: 152
+    - id: 156
+    - id: 158
+    - id: 168
+    - id: 169
+    - id: 170
+    - id: 173
+    - id: 180
+    - id: 187
+    - id: 193
+    - id: 201
+    - id: 203
+    - id: 216
+    - id: 222
+    - id: 223
+    - id: 228
+    - id: 229
+    - id: 231
+    - id: 233
+    - id: 236
+    - id: 241
+    - id: 245
+    - id: 246
+    - id: 252
+    - id: 253
+    - id: 259
+    - id: 269
+    - id: 270
+    - id: 277
+    - id: 281
+    - id: 282
+    - id: 283
+    - id: 289
+    - id: 295
+    - id: 297
+    - id: 301
+    - id: 313
+    - id: 320
+    - id: 321
+    - id: 322
+    - id: 323
+    - id: 324
+    - id: 326
+    - id: 335
+    - id: 347
+    - id: 363
+    - id: 364
+    - id: 370
+    - id: 382
+    - id: 383
+    - id: 387
+    - id: 390
+    - id: 395
+    - id: 397
+    - id: 400
+    - id: 401
+    - id: 406
+    - id: 407
+    - id: 410
+    connexions: []
+    entryPointKeys: []
+    entryPointValues: []

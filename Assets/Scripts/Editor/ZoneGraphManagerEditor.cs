@@ -1,15 +1,17 @@
 ﻿using UnityEditor;
 using UnityEngine;
+using ZoneGraph;
 
-[CustomEditor(typeof(ZoneGraphManager))]
-public class ZoneGraphManagerEditor : Editor
+[CustomEditor(typeof(ZoneGraphComputer))]
+public class ZoneGraphComputerEditor : Editor
 {
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
         if (GUILayout.Button("Compute graph"))
         {
-            ((ZoneGraphManager)target).ComputeZones();
+            ((ZoneGraphComputer)target).ComputeZones(false);
+            SceneView.RepaintAll();
         }
     }
 }

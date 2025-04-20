@@ -1,9 +1,10 @@
 ﻿using System;
+using Player;
 using UnityEngine;
 
-namespace Player
+namespace Monster
 {
-    public class PlayerMovement : PlayerBehaviour
+    public class MonsterMovement : MonsterBehaviour
     {
         [Serializable]
         private struct MovementConfig
@@ -11,15 +12,14 @@ namespace Player
             public float speed;
             public float acceleration;
             public float deceleration;
-            public float groundOffset;
         }
 
         [SerializeField] private MovementConfig walkConfig;
-        [SerializeField] private MovementConfig crouchConfig;
         [SerializeField] private LayerMask groundMask;
         [SerializeField] private float groundedGroundCheckLength;
         [SerializeField] private float airborneGroundCheckLength;
         [SerializeField] private float groundCheckRadius;
+        [SerializeField] private float groundOffset;
         [SerializeField] private float groundLerpSpeed;
         [SerializeField] private float gravity;
         [SerializeField] private float maxFallSpeed;
@@ -35,38 +35,36 @@ namespace Player
 
         private void UpdateMovement()
         {
-            var moveConfig = PlayerData.Crouched ? crouchConfig : walkConfig;
-            var move = PlayerData.PlayerInputs.Controls.Move.ReadValue<Vector2>();
+            var move = MonsterData.TargetPoint - transform.position;
+            move.y = 0;
+            move.Normalize();
 
             if (move.sqrMagnitude < 0.01f)
             {
                 move = Vector2.zero;
             }
             
-            var targetMovement = new Vector3(
-                move.x * PlayerData.Right.x + move.y * PlayerData.Forward.x, 
-                0, 
-                move.x * PlayerData.Right.z + move.y * PlayerData.Forward.z) * moveConfig.speed;
+            var targetMovement = move * walkConfig.speed;
 
-            var linearVelocity = PlayerData.Rigidbody.linearVelocity;
+            var linearVelocity = MonsterData.Rigidbody.linearVelocity;
             linearVelocity.y = 0;
             var diff = targetMovement - linearVelocity;
             var acceleration = Vector3.Dot(targetMovement, diff) <= 0
-                ? moveConfig.deceleration
-                : moveConfig.acceleration;
+                ? walkConfig.deceleration
+                : walkConfig.acceleration;
 
-            PlayerData.Rigidbody.AddForce(diff * acceleration, ForceMode.Acceleration);
+            MonsterData.Rigidbody.AddForce(diff * acceleration, ForceMode.Acceleration);
         }
 
         private void UpdateGravity()
         {
-            var groundCheckLength = PlayerData.Grounded ? groundedGroundCheckLength : airborneGroundCheckLength;
-            _groundCheckRay.origin = PlayerData.Rigidbody.position;
+            var groundCheckLength = MonsterData.Grounded ? groundedGroundCheckLength : airborneGroundCheckLength;
+            _groundCheckRay.origin = MonsterData.Rigidbody.position;
             _groundCheckRay.direction = Vector3.down;
 
-            PlayerData.Grounded = Physics.SphereCast(_groundCheckRay, groundCheckRadius, out _sphereHitInfo, groundCheckLength, groundMask);
+            MonsterData.Grounded = Physics.SphereCast(_groundCheckRay, groundCheckRadius, out _sphereHitInfo, groundCheckLength, groundMask);
 
-            if (!PlayerData.Grounded)
+            if (!MonsterData.Grounded)
             {
                 AccelerateGravity();
                 return;
@@ -77,24 +75,31 @@ namespace Player
 
         private void AccelerateGravity()
         {
-            var linearVelocity = PlayerData.Rigidbody.linearVelocity;
+            var linearVelocity = MonsterData.Rigidbody.linearVelocity;
             linearVelocity.y = Mathf.Max(linearVelocity.y + gravity * Time.deltaTime, maxFallSpeed);
-            PlayerData.Rigidbody.linearVelocity = linearVelocity;
+            MonsterData.Rigidbody.linearVelocity = linearVelocity;
         }
 
         private void GroundPlayer(float groundCheckLength)
-        {
-            var moveConfig = PlayerData.Crouched ? crouchConfig : walkConfig;
-            var linearVelocity = PlayerData.Rigidbody.linearVelocity;
+        { ;
+            var linearVelocity = MonsterData.Rigidbody.linearVelocity;
             linearVelocity.y = 0;
-            PlayerData.Rigidbody.linearVelocity = linearVelocity;
+            MonsterData.Rigidbody.linearVelocity = linearVelocity;
 
             var rayHit = Physics.Raycast(_groundCheckRay, out _rayHitInfo, groundCheckLength + .5f, groundMask);
             var hitInfo = rayHit ? _rayHitInfo : _sphereHitInfo;
 
-            var position = PlayerData.Rigidbody.position;
-            position.y = Mathf.Lerp(position.y, hitInfo.point.y + moveConfig.groundOffset, groundLerpSpeed * Time.deltaTime);
-            PlayerData.Rigidbody.position = position;
+            var position = MonsterData.Rigidbody.position;
+            position.y = Mathf.Lerp(position.y, hitInfo.point.y + groundOffset, groundLerpSpeed * Time.deltaTime);
+            MonsterData.Rigidbody.position = position;
+        }
+
+        private void OnDrawGizmosSelected()
+        {
+            if (!Application.isPlaying)
+                return;
+            
+            Gizmos.DrawSphere(MonsterData.TargetPoint, 1);
         }
     }
 }
