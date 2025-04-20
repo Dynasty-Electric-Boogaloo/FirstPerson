@@ -71,7 +71,6 @@ namespace Player
             foreach (var prop in _lastUpdateLightObjects)
             {
                 if (_currentLightObjects.Contains(prop)) continue;
-                print(prop.name);
                 prop.SetLightened(false);
             }
 
