@@ -21,8 +21,8 @@ public class BatteryManager : MonoBehaviour
 
     private void Start()
     {
-        _currentBattery = maxPowerByBattery * ((float)startBatteryPercent/100);
         _currentPower = maxPowerByBattery * ((float)startBatteryPercent/100);
+        _currentBattery = maxBattery;
     }
     
     public void AddBattery(float newBattery)
@@ -39,7 +39,7 @@ public class BatteryManager : MonoBehaviour
 
         if (_currentPower > 0) return;
         
-        _currentBattery--;
+        _currentBattery -= 1;
         
         if (_currentBattery <= 0)
             _currentBattery = 0;
@@ -47,9 +47,9 @@ public class BatteryManager : MonoBehaviour
             _currentPower = maxPowerByBattery;
     }
 
-    public float GetCurrentBattery() => _currentPower; 
-    public float GetCurrentBatteryMax() => maxPowerByBattery;
+    public float GetCurrentPower() => _currentPower; 
+    public float GetCurrentPowerMax() => maxPowerByBattery;
 
-    public float GetMaxBatteryUnits() => maxBattery;
-    public float GetCurrentBatteryUnits() => _currentBattery;
+    public float GetMaxBattery() => maxBattery;
+    public float GetCurrentBattery() => _currentBattery;
 }

@@ -34,8 +34,8 @@ namespace Player
         private bool _special;
         private PlayerInputs _playerInput;
         private BatteryManager _batteryManager;
-        private float CurrentBattery => _special ? _batteryManager.GetCurrentBattery() : _battery;
-        private float CurrentBatteryMax  => _special ? _batteryManager.GetCurrentBatteryMax() : batteryMax;
+        private float CurrentBattery => _special ? _batteryManager.GetCurrentPower() : _battery;
+        private float CurrentBatteryMax  => _special ? _batteryManager.GetCurrentPowerMax() : batteryMax;
         private RaycastHit[] _hits;
         
         private readonly HashSet<GrabObject>[] _lightObjectBuffers = new HashSet<GrabObject>[2];
