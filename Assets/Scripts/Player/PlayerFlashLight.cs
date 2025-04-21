@@ -36,7 +36,7 @@ namespace Player
         private BatteryManager _batteryManager;
         private float CurrentBattery => _special ? _batteryManager.GetCurrentBattery() : _battery;
         private float CurrentBatteryMax  => _special ? _batteryManager.GetCurrentBatteryMax() : batteryMax;
-        private readonly RaycastHit[] _hits = new RaycastHit[10];
+        private RaycastHit[] _hits;
         
         private readonly HashSet<GrabObject>[] _lightObjectBuffers = new HashSet<GrabObject>[2];
         private int _bufferSelection;
@@ -47,6 +47,7 @@ namespace Player
 
         private void Start()
         {
+            _hits = new RaycastHit [maxObjectInSight];
             _playerInput = PlayerData.PlayerInputs; 
             _battery = batteryMax; 
             light.color = lightColor;
