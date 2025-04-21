@@ -104,7 +104,7 @@ namespace Player
             }
             
             if (hud)
-                hud.UpdateBattery(CurrentBattery, CurrentBatteryMax);
+                hud.UpdateBattery(CurrentBattery, CurrentBatteryMax, _special);
             
             RevealObjects();
         }

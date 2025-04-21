@@ -34,10 +34,15 @@ namespace UI
 
         }
 
-        public void UpdateBattery(float currentBattery, float currentMax)
+        public void UpdateBattery(float currentBattery, float currentMax, bool special)
         {
             if (!batterySlider) return;
             batterySlider.value = currentBattery / currentMax;
+            if (special)
+            {
+                batteryImage.fillAmount = BatteryManager.Battery.GetCurrentBatteryUnits() /
+                                          BatteryManager.Battery.GetMaxBatteryUnits();
+            }
         }
         
     }

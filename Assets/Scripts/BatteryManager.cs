@@ -22,6 +22,7 @@ public class BatteryManager : MonoBehaviour
     private void Start()
     {
         _currentBattery = maxPowerByBattery * ((float)startBatteryPercent/100);
+        _currentPower = maxPowerByBattery * ((float)startBatteryPercent/100);
     }
     
     public void AddBattery(float newBattery)
