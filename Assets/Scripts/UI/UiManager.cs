@@ -9,8 +9,8 @@ namespace UI
     public class UiManager : MonoBehaviour
     {
         [SerializeField] private Canvas canvas;
-        [SerializeField] private GameObject inputShow;
-        private Dictionary<IInteractable, GameObject> _elements;
+        [SerializeField] private Image inputShow;
+        private Dictionary<IInteractable, Image> _elements;
         
         public static UiManager UserInterface;
         private void Awake()
