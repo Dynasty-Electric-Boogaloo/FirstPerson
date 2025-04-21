@@ -256,6 +256,7 @@ GameObject:
   - component: {fileID: 5667010963127754384}
   - component: {fileID: 1970423395360904056}
   - component: {fileID: 1006920574172991004}
+  - component: {fileID: 266798638669423720}
   m_Layer: 0
   m_Name: PF_HandController
   m_TagString: Untagged
@@ -523,10 +524,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashLightTransform: {fileID: 5027031290628114069}
   light: {fileID: 7799891747133625662}
-  batterySlider: {fileID: 0}
+  hud: {fileID: 266798638669423720}
   batteryMax: 10
   addByButtonPressed: 0.25
   lightIntensityMultiplier: 10000
+  lightColor: {r: 1, g: 1, b: 1, a: 1}
+  specialLightColor: {r: 1, g: 0, b: 0, a: 1}
+  maxDistanceHit: 5
+  radiusHit: 1
+  layerToHit:
+    serializedVersion: 2
+    m_Bits: 64
+  coneRadius: 0.5
+  maxObjectInSight: 10
+--- !u!114 &266798638669423720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2439608249139616169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d81bed876cebf04486def187e1f9691, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  batterySlider: {fileID: 0}
+  batterySliderColor: {fileID: 0}
+  lightColor: {r: 1, g: 1, b: 1, a: 1}
+  specialLightColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &4167932192429471914
 GameObject:
   m_ObjectHideFlags: 0

@@ -29,6 +29,7 @@ namespace UI
 
         public void UpdateBattery(float currentBattery, float currentMax)
         {
+            if (!batterySlider) return;
             batterySlider.value = currentBattery / currentMax;
         }
         
