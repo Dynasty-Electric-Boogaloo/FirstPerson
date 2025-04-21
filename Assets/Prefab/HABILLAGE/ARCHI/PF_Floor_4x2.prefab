@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &881664820157167569
 Transform:
@@ -85,6 +85,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Floor_4x2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ff9216cee860cd54a83cd848d263cfba, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ff9216cee860cd54a83cd848d263cfba, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -146,6 +154,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: be2897d7f31238d49928f9c76054ff3f, type: 3}
       propertyPath: m_Name
       value: SM_Ceiling_4x2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: be2897d7f31238d49928f9c76054ff3f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
