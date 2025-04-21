@@ -2,13 +2,19 @@
 
 namespace Player
 {
-    public class Player : MonoBehaviour
+    public class PlayerRoot : MonoBehaviour
     {
+        private static PlayerRoot _instance;
         [SerializeField] private Transform cameraHolder;
         private PlayerData _playerData;
+
+        public static Vector3 Position => _instance ? _instance.transform.position : Vector3.zero;
         
         private void Awake()
         {
+            if (_instance == null)
+                _instance = this;
+            
             _playerData = new PlayerData
             {
                 PlayerInputs = new PlayerInputs(),
@@ -22,6 +28,14 @@ namespace Player
             {
                 behaviour.Setup(_playerData);
             }
+        }
+
+        private void OnDestroy()
+        {
+            if (_instance == this)
+                _instance = null;
+            
+            _playerData.PlayerInputs.Disable();
         }
     }
 }
