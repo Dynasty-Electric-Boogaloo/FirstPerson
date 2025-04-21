@@ -433,6 +433,7 @@ MonoBehaviour:
     m_Bits: 8
   groundedGroundCheckLength: 1
   airborneGroundCheckLength: 0.6
+  groundCheckRadius: 0.45
   groundLerpSpeed: 20
   gravity: -20
   maxFallSpeed: -20
@@ -527,7 +528,7 @@ MonoBehaviour:
   hud: {fileID: 266798638669423720}
   batteryMax: 10
   addByButtonPressed: 0.25
-  lightIntensityMultiplier: 10000
+  lightIntensityMultiplier: 2000
   lightColor: {r: 1, g: 1, b: 1, a: 1}
   specialLightColor: {r: 1, g: 0, b: 0, a: 1}
   maxDistanceHit: 5
