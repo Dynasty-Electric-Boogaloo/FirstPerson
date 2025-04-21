@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8300082443230475124}
   - component: {fileID: 3548664020859346674}
   - component: {fileID: 1958400607929490488}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PF_PickableVase_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48,13 +48,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3b26386d4354140a0be95c4772cca84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meshRenderer: {fileID: 0}
+  meshRenderer: {fileID: 2444476447147424138}
   regularMaterialSet:
-    normal: {fileID: 2100000, guid: 8474bf551220f0e4993899dfdc95aed3, type: 2}
-    highlighted: {fileID: 2100000, guid: dd66d467961812f4383351e477499b93, type: 2}
-    infected: {fileID: 0}
+    normal: {fileID: 2100000, guid: 42e2f3004d6cd804584b5cc95336b5d4, type: 2}
+    revealed: {fileID: 2100000, guid: 7c1ec54872b23d1468b2723c1d45848f, type: 2}
+    awake: {fileID: 2100000, guid: 7c1ec54872b23d1468b2723c1d45848f, type: 2}
   isInfected: 0
-  maxTimeBeforeAlert: 5
+  maxTimeBeforeAlert: 15
   breakableLayers:
     serializedVersion: 2
     m_Bits: 8
@@ -121,7 +121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5758219303983985280}
   - component: {fileID: 9202466121952774298}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: decal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -185,10 +185,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_Vase
       objectReference: {fileID: 0}
+    - target: {fileID: 4307184086453005727, guid: 6db438bbb8773b54aa9e6e08d92d249a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5637405298363120772, guid: 6db438bbb8773b54aa9e6e08d92d249a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5637405298363120772, guid: 6db438bbb8773b54aa9e6e08d92d249a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: f29b9efacb0fa1b45a6ebd5778585717, type: 2}
+      objectReference: {fileID: 4062772198854137186, guid: a7ad524a28579d34a81bab299f95443b, type: 3}
+    - target: {fileID: 6142041483998993745, guid: 6db438bbb8773b54aa9e6e08d92d249a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: 6db438bbb8773b54aa9e6e08d92d249a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -303,18 +315,35 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 41923c4ba545f1c4aae155aa75553626, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 41923c4ba545f1c4aae155aa75553626, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 42e2f3004d6cd804584b5cc95336b5d4, type: 2}
+      objectReference: {fileID: 2100000, guid: 9aded32c167b34e4b9deee61c0676255, type: 2}
     - target: {fileID: 919132149155446097, guid: 41923c4ba545f1c4aae155aa75553626, type: 3}
       propertyPath: m_Name
       value: SM_Shell_Vase_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41923c4ba545f1c4aae155aa75553626, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 41923c4ba545f1c4aae155aa75553626, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41923c4ba545f1c4aae155aa75553626, type: 3}
+--- !u!23 &2444476447147424138 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 41923c4ba545f1c4aae155aa75553626, type: 3}
+  m_PrefabInstance: {fileID: 3903798172801393934}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3578016154374374117 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 41923c4ba545f1c4aae155aa75553626, type: 3}

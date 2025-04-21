@@ -47,8 +47,8 @@ namespace Player
 
         private void Start()
         {
-            _hits = new RaycastHit [maxObjectInSight];
-            _playerInput = PlayerData.PlayerInputs; 
+            _playerInput = PlayerData.PlayerInputs;
+            _hits = new RaycastHit[maxObjectInSight];
             _battery = batteryMax; 
             light.color = lightColor;
             SetLightVisible(false);
@@ -115,13 +115,13 @@ namespace Player
                 return;
             
             var origin = transform.position + transform.forward * radiusHit;
-            var size = Physics.SphereCastNonAlloc(origin, radiusHit, transform.forward, _hits, maxDistanceHit - 2 * radiusHit, layerToHit);
-            
+            var size = Physics.SphereCastNonAlloc(origin, radiusHit, transform.forward, _hits, maxDistanceHit - (2 * radiusHit), layerToHit);
             for (var index = 0; index < size; index++)
             {
                 var normalizedLightToObject = Vector3.Normalize(_hits[index].transform.position - origin);
 
-                if (!(Vector3.Dot(transform.forward, normalizedLightToObject) > coneRadius)) continue;
+                if (!(Vector3.Dot(transform.forward, normalizedLightToObject) > coneRadius)) 
+                    continue;
                 
                 var element = _hits[index].transform.GetComponent<GrabObject>();
                 _currentLightObjects.Add(element);

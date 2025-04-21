@@ -126,6 +126,7 @@ Transform:
   m_Children:
   - {fileID: 817024269385754134}
   - {fileID: 6591615927447918695}
+  - {fileID: 3086082087142341323}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4421312315093298667
@@ -280,6 +281,7 @@ MonoBehaviour:
     m_Bits: 8
   groundedGroundCheckLength: 1
   airborneGroundCheckLength: 0.6
+  groundCheckRadius: 0
   groundLerpSpeed: 20
   gravity: -20
   maxFallSpeed: -20
@@ -371,13 +373,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashLightTransform: {fileID: 817490273935785480}
   light: {fileID: 3733239660850254676}
-  batterySlider: {fileID: 0}
-  batterySliderColor: {fileID: 0}
+  hud: {fileID: 0}
   batteryMax: 10
   addByButtonPressed: 0.25
   lightIntensityMultiplier: 10000
   lightColor: {r: 1, g: 1, b: 1, a: 1}
   specialLightColor: {r: 1, g: 0, b: 0, a: 1}
+  maxDistanceHit: 5
+  radiusHit: 5
+  layerToHit:
+    serializedVersion: 2
+    m_Bits: 64
+  coneRadius: 0.75
+  maxObjectInSight: 10
 --- !u!114 &482864857669088454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -950,6 +958,69 @@ MonoBehaviour:
   m_ObsoleteUseShadowQualitySettings: 0
   m_ObsoleteCustomShadowResolution: 512
   m_ObsoleteContactShadows: 0
+--- !u!1 &6662737360781039650
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3086082087142341323}
+  m_Layer: 0
+  m_Name: GrabHinge
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3086082087142341323
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6662737360781039650}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 4831013599801493773}
+  m_Father: {fileID: 3378203135897797629}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6714537233708729670
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4831013599801493773}
+  m_Layer: 0
+  m_Name: GrabPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4831013599801493773
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6714537233708729670}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3086082087142341323}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7837960298275896240
 GameObject:
   m_ObjectHideFlags: 0
