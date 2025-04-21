@@ -9,6 +9,7 @@ namespace Monster
     {
         [SerializeField] private float refreshTime;
         private float _refreshTimer;
+        private NodeId _targetNode;
         
         private void Update()
         {
@@ -20,15 +21,24 @@ namespace Monster
 
             _refreshTimer = refreshTime;
 
-            var node = ZoneGraphManager.Pathfinding.PathfindToPoint(transform.position, PlayerRoot.Position);
+            _targetNode = ZoneGraphManager.Pathfinding.PathfindToPoint(transform.position, PlayerRoot.Position);
 
-            if (node.id < 0)
+            if (_targetNode.id < 0)
             {
                 MonsterData.TargetPoint = transform.position;
                 return;
             }
             
-            MonsterData.TargetPoint = ZoneGraphManager.Instance.GetNodePosition(node);
+            MonsterData.TargetPoint = ZoneGraphManager.Instance.GetNodePosition(_targetNode);
+        }
+
+        private void OnDrawGizmosSelected()
+        {
+            if (!Application.isPlaying)
+                return;
+
+            Gizmos.color = _targetNode.id > 0 ? Color.white : Color.red;
+            Gizmos.DrawSphere(MonsterData.TargetPoint, 1);
         }
     }
 }

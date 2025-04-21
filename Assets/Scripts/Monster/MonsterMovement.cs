@@ -93,13 +93,5 @@ namespace Monster
             position.y = Mathf.Lerp(position.y, hitInfo.point.y + groundOffset, groundLerpSpeed * Time.deltaTime);
             MonsterData.Rigidbody.position = position;
         }
-
-        private void OnDrawGizmosSelected()
-        {
-            if (!Application.isPlaying)
-                return;
-            
-            Gizmos.DrawSphere(MonsterData.TargetPoint, 1);
-        }
     }
 }

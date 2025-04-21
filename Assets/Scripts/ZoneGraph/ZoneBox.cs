@@ -8,6 +8,7 @@ namespace ZoneGraph
     {
         [SerializeField] private new Collider collider;
         [SerializeField] private int priority;
+        public int zoneId;
 
         public int Priority => priority;
 

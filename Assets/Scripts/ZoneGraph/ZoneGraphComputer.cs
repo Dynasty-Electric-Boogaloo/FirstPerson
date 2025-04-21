@@ -64,6 +64,11 @@ namespace ZoneGraph
             var zones = FindObjectsByType<ZoneBox>(FindObjectsInactive.Exclude, FindObjectsSortMode.InstanceID);
             var zonePoints = FindObjectsByType<ZonePoint>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
 
+            for (var i = 0; i < zones.Length; i++)
+            {
+                zones[i].zoneId = i + 1;
+            }
+
             var sqrDistance = connexionDistance * connexionDistance;
             
             _rooms.Add(new SerializableRoom
@@ -111,9 +116,7 @@ namespace ZoneGraph
                 var room = GetPointRoom(zonePoint.transform.position, zones);
 
                 if (room.id == 0)
-                {
                     Debug.LogWarning($"Node {zonePoint.name} is not in any room! Please adjust _rooms or the node's position!");
-                }
                 
                 zonePoint.SetRoom(room);
                 _rooms[room.id].nodes.Add(new NodeId(_nodes.Count));
@@ -176,7 +179,7 @@ namespace ZoneGraph
                 if (!zones[i].ContainsPoint(position))
                     continue;
 
-                room = i + 1;
+                room = zones[i].zoneId;
                 priority = zones[i].Priority;
             }
 

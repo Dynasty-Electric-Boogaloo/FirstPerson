@@ -70,7 +70,7 @@ namespace ZoneGraph
                 if (!_zones[i].ContainsPoint(position))
                     continue;
 
-                room = i + 1;
+                room = _zones[i].zoneId;
                 priority = _zones[i].Priority;
             }
 
