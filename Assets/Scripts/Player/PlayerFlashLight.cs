@@ -36,7 +36,7 @@ namespace Player
         private BatteryManager _batteryManager;
         private float CurrentBattery => _special ? _batteryManager.GetCurrentBattery() : _battery;
         private float CurrentBatteryMax  => _special ? _batteryManager.GetCurrentBatteryMax() : batteryMax;
-        private readonly RaycastHit[] _hits = new RaycastHit[10];
+        private RaycastHit[] _hits = new RaycastHit[10];
         
         private readonly HashSet<GrabObject>[] _lightObjectBuffers = new HashSet<GrabObject>[2];
         private int _bufferSelection;
@@ -47,7 +47,8 @@ namespace Player
 
         private void Start()
         {
-            _playerInput = PlayerData.PlayerInputs; 
+            _playerInput = PlayerData.PlayerInputs;
+            _hits = new RaycastHit[maxObjectInSight];
             _battery = batteryMax; 
             light.color = lightColor;
             SetLightVisible(false);
@@ -70,7 +71,8 @@ namespace Player
         {
             foreach (var prop in _lastUpdateLightObjects)
             {
-                if (_currentLightObjects.Contains(prop)) continue;
+                if (_currentLightObjects.Contains(prop)) 
+                    continue;
                 prop.SetLightened(false);
             }
 
@@ -109,16 +111,16 @@ namespace Player
 
         private void RevealObjects()
         {
-            if (!_special) return;
-            
+            if (!_special) 
+                return; ;
             var origin = transform.position + transform.forward * radiusHit;
-            var size = Physics.SphereCastNonAlloc(origin, radiusHit, transform.forward, _hits, maxDistanceHit - 2 * radiusHit, layerToHit);
-            
+            var size = Physics.SphereCastNonAlloc(origin, radiusHit, transform.forward, _hits, maxDistanceHit - (2 * radiusHit), layerToHit);
             for (var index = 0; index < size; index++)
             {
                 var normalizedLightToObject = Vector3.Normalize(_hits[index].transform.position - origin);
 
-                if (!(Vector3.Dot(transform.forward, normalizedLightToObject) > coneRadius)) continue;
+                if (!(Vector3.Dot(transform.forward, normalizedLightToObject) > coneRadius)) 
+                    continue;
                 
                 var element = _hits[index].transform.GetComponent<GrabObject>();
                 _currentLightObjects.Add(element);

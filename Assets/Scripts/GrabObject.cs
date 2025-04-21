@@ -17,7 +17,7 @@ public class GrabObject : MonoBehaviour
     [SerializeField] private MeshRenderer meshRenderer;
     [SerializeField] private MaterialSet regularMaterialSet;
     [SerializeField] private bool isInfected;
-    [SerializeField] private float maxTimeBeforeAlert = 5;
+    [SerializeField] private float maxTimeBeforeAlert = 15;
     [SerializeField] private LayerMask breakableLayers;
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private float breakRadius = 0.2f;
@@ -37,6 +37,7 @@ public class GrabObject : MonoBehaviour
         SetHighlight(false);
         _timer = maxTimeBeforeAlert;
         meshRenderer.enabled = isInfected;
+        meshRenderer.material = regularMaterialSet.normal;
     }
     private void OnDrawGizmosSelected()
     {

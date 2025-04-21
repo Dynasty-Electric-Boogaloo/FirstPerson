@@ -371,13 +371,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashLightTransform: {fileID: 817490273935785480}
   light: {fileID: 3733239660850254676}
-  batterySlider: {fileID: 0}
-  batterySliderColor: {fileID: 0}
+  hud: {fileID: 0}
   batteryMax: 10
   addByButtonPressed: 0.25
   lightIntensityMultiplier: 10000
   lightColor: {r: 1, g: 1, b: 1, a: 1}
   specialLightColor: {r: 1, g: 0, b: 0, a: 1}
+  maxDistanceHit: 5
+  radiusHit: 5
+  layerToHit:
+    serializedVersion: 2
+    m_Bits: 64
+  coneRadius: 0.75
+  maxObjectInSight: 10
 --- !u!114 &482864857669088454
 MonoBehaviour:
   m_ObjectHideFlags: 0
