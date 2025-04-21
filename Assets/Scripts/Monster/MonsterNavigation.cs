@@ -32,6 +32,10 @@ namespace Monster
                 _instance = this;
             
             _heatmap = new HeatmapData("Monster map");
+        }
+
+        private void Start()
+        {
             _baseRoom = ZoneGraphManager.Pathfinding.GetPointRoom(transform.position);
         }
 
