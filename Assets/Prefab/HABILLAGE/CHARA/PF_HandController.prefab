@@ -253,6 +253,7 @@ GameObject:
   - component: {fileID: 8077780547725054095}
   - component: {fileID: 2334033331561239044}
   - component: {fileID: 5030427077509621976}
+  - component: {fileID: 85294643338218035}
   - component: {fileID: 5667010963127754384}
   - component: {fileID: 1970423395360904056}
   - component: {fileID: 1006920574172991004}
@@ -461,6 +462,24 @@ MonoBehaviour:
   crouchedCamHeight: 0.375
   capsuleCollider: {fileID: 5667010963127754384}
   meshTransform: {fileID: 5420549689992328108}
+--- !u!114 &85294643338218035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2439608249139616169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ed01a1290e1450d827c6244b4951fa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwForce: 2
+  grabOffset: 2
+  grabDistance: 2
+  grabPoint: {fileID: 7091416503431337263}
+  grabHinge: {fileID: 7091416503431337263}
+  grabSize: 0.1
 --- !u!136 &5667010963127754384
 CapsuleCollider:
   m_ObjectHideFlags: 0

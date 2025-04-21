@@ -121,11 +121,11 @@ namespace Player
         {
             if (_selectedObject != null)
             {
-                _selectedObject.SetHighlight(false);
+                _selectedObject.Highlight(false);
             }
             
             _selectedObject = grabObject;
-            _selectedObject.SetHighlight(true);
+            _selectedObject.Highlight(true);
         }
 
         private void DeselectObject()
@@ -133,7 +133,7 @@ namespace Player
             if (_selectedObject == null)
                 return;
             
-            _selectedObject.SetHighlight(false);
+            _selectedObject.Highlight(false);
             _selectedObject = null;
         }
     }
