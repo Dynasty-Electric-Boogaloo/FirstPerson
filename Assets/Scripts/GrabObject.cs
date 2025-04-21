@@ -65,13 +65,13 @@ public class GrabObject : MonoBehaviour, IInteractable
         _timer -= Time.deltaTime;
         
         if (_timer < 0)
-            WakingUo();
+            WakingUp();
     }
 
     public void Grab(Transform grabPoint)
     {
         if(isInfected)
-            WakingUo();
+            WakingUp();
         
         Highlight(false);
         transform.SetParent(grabPoint, false);
@@ -81,7 +81,7 @@ public class GrabObject : MonoBehaviour, IInteractable
         _rigidbody.constraints = RigidbodyConstraints.FreezeAll;
     }
 
-    private void WakingUo()
+    private void WakingUp()
     {
         Debug.Log("Menace alerted...");
         _isAwake = true;
