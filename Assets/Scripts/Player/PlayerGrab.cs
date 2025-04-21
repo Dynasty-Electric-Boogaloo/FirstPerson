@@ -6,6 +6,7 @@ namespace Player
     {
         [SerializeField] private float throwForce;
         [SerializeField] private float grabOffset;
+        [SerializeField] private float grabHoldOffset;
         [SerializeField] private float grabDistance;
         [SerializeField] private Transform grabPoint;
         [SerializeField] private Transform grabHinge;
@@ -36,7 +37,7 @@ namespace Player
             if (!_selectedObject)
                 return;
             
-            grabPoint.localPosition = Vector3.forward * (grabOffset + _selectedObject.GetBounds().extents.z);
+            grabPoint.localPosition = Vector3.forward * (grabHoldOffset + _selectedObject.GetBounds().extents.z);
             grabHinge.localRotation = Quaternion.Euler(-PlayerData.CameraRotation.y, 0, 0);
         }
 
@@ -56,7 +57,7 @@ namespace Player
                 PlayerData.CameraHolder.forward);
             
             var hit = Physics.SphereCast(ray, grabSize, out _raycastHit, grabDistance);
-            
+
             if (!hit)
             {
                 DeselectObject();
@@ -121,11 +122,11 @@ namespace Player
         {
             if (_selectedObject != null)
             {
-                _selectedObject.SetHighlight(false);
+                _selectedObject.Highlight(false);
             }
             
             _selectedObject = grabObject;
-            _selectedObject.SetHighlight(true);
+            _selectedObject.Highlight(true);
         }
 
         private void DeselectObject()
@@ -133,7 +134,7 @@ namespace Player
             if (_selectedObject == null)
                 return;
             
-            _selectedObject.SetHighlight(false);
+            _selectedObject.Highlight(false);
             _selectedObject = null;
         }
     }

@@ -1,9 +1,10 @@
 ﻿using System;
 using Player;
+using UI;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class GrabObject : MonoBehaviour
+public class GrabObject : MonoBehaviour, IInteractable
 {
     
     [Serializable]
@@ -34,10 +35,12 @@ public class GrabObject : MonoBehaviour
     {
         _collider = GetComponent<Collider>();
         _rigidbody = GetComponent<Rigidbody>();
-        SetHighlight(false);
+        Transform = transform;
+        Highlight(false);
         _timer = maxTimeBeforeAlert;
         meshRenderer.enabled = isInfected;
         meshRenderer.material = regularMaterialSet.normal;
+        
     }
     private void OnDrawGizmosSelected()
     {
@@ -62,15 +65,15 @@ public class GrabObject : MonoBehaviour
         _timer -= Time.deltaTime;
         
         if (_timer < 0)
-            WakingUo();
+            WakingUp();
     }
 
     public void Grab(Transform grabPoint)
     {
         if(isInfected)
-            WakingUo();
+            WakingUp();
         
-        SetHighlight(false);
+        Highlight(false);
         transform.SetParent(grabPoint, false);
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
@@ -78,7 +81,7 @@ public class GrabObject : MonoBehaviour
         _rigidbody.constraints = RigidbodyConstraints.FreezeAll;
     }
 
-    private void WakingUo()
+    private void WakingUp()
     {
         Debug.Log("Menace alerted...");
         _isAwake = true;
@@ -118,6 +121,15 @@ public class GrabObject : MonoBehaviour
             ReduceTime();
     }
     
+
+    public void Highlight(bool canInteract)
+    {
+        if(!UiManager.UserInterface)
+            return;
+        if(canInteract) UiManager.UserInterface.AddInput(this);
+        else UiManager.UserInterface.RemoveInput(this);
+    }
+
     public void Interact()
     {
         if(isInfected)
@@ -128,6 +140,9 @@ public class GrabObject : MonoBehaviour
         
         Break();
     }
+
+    public Transform Transform { get; set; }
+
 
     public void Ungrab()
     {
@@ -147,11 +162,7 @@ public class GrabObject : MonoBehaviour
     {
         return _collider ? _collider.bounds : default;
     }
-        
-    public void SetHighlight(bool highlighted)
-    {
-        //meshRenderer.sharedMaterial = regularMaterialSet.GetMaterial(highlighted);
-    }
+    
 
     private void Break()
     {
