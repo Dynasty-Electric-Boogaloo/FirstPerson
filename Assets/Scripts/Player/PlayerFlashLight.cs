@@ -70,7 +70,8 @@ namespace Player
         {
             foreach (var prop in _lastUpdateLightObjects)
             {
-                if (_currentLightObjects.Contains(prop)) continue;
+                if (_currentLightObjects.Contains(prop)) 
+                    continue;
                 prop.SetLightened(false);
             }
 
@@ -109,7 +110,8 @@ namespace Player
 
         private void RevealObjects()
         {
-            if (!_special) return;
+            if (!_special) 
+                return;
             
             var origin = transform.position + transform.forward * radiusHit;
             var size = Physics.SphereCastNonAlloc(origin, radiusHit, transform.forward, _hits, maxDistanceHit - 2 * radiusHit, layerToHit);
