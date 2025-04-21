@@ -1,5 +1,4 @@
 ﻿using System;
-using Player;
 using UnityEngine;
 
 namespace Monster
@@ -9,12 +8,14 @@ namespace Monster
         [Serializable]
         private struct MovementConfig
         {
-            public float speed;
+            public AnimationCurve speed;
             public float acceleration;
             public float deceleration;
         }
 
-        [SerializeField] private MovementConfig walkConfig;
+        [SerializeField] private MovementConfig patrolConfig;
+        [SerializeField] private MovementConfig searchConfig;
+        [SerializeField] private MovementConfig chaseConfig;
         [SerializeField] private LayerMask groundMask;
         [SerializeField] private float groundedGroundCheckLength;
         [SerializeField] private float airborneGroundCheckLength;
@@ -23,6 +24,7 @@ namespace Monster
         [SerializeField] private float groundLerpSpeed;
         [SerializeField] private float gravity;
         [SerializeField] private float maxFallSpeed;
+        [SerializeField] private float rotationSpeed;
         private Ray _groundCheckRay;
         private RaycastHit _sphereHitInfo;
         private RaycastHit _rayHitInfo;
@@ -35,6 +37,8 @@ namespace Monster
 
         private void UpdateMovement()
         {
+            var moveConfig = MonsterData.Chasing ? chaseConfig : MonsterData.Searching ? searchConfig : patrolConfig;
+            
             var move = MonsterData.TargetPoint - transform.position;
             move.y = 0;
             move.Normalize();
@@ -44,16 +48,25 @@ namespace Monster
                 move = Vector2.zero;
             }
             
-            var targetMovement = move * walkConfig.speed;
+            var targetMovement = move * moveConfig.speed.Evaluate(MonsterData.StateTime);
 
             var linearVelocity = MonsterData.Rigidbody.linearVelocity;
             linearVelocity.y = 0;
             var diff = targetMovement - linearVelocity;
             var acceleration = Vector3.Dot(targetMovement, diff) <= 0
-                ? walkConfig.deceleration
-                : walkConfig.acceleration;
+                ? moveConfig.deceleration
+                : moveConfig.acceleration;
 
             MonsterData.Rigidbody.AddForce(diff * acceleration, ForceMode.Acceleration);
+
+            if (linearVelocity.magnitude < 0.1f)
+                return;
+            
+            transform.rotation = Quaternion.Slerp(
+                transform.rotation, 
+                Quaternion.LookRotation(linearVelocity.normalized, Vector3.up),
+                rotationSpeed * Time.deltaTime);
+
         }
 
         private void UpdateGravity()

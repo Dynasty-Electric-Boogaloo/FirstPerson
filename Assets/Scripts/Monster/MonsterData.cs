@@ -7,5 +7,8 @@ namespace Monster
         public Rigidbody Rigidbody;
         public Vector3 TargetPoint;
         public bool Grounded;
+        public bool Chasing;
+        public bool Searching;
+        public float StateTime;
     }
 }

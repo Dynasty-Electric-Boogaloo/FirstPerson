@@ -36,7 +36,7 @@ namespace Player
         private BatteryManager _batteryManager;
         private float CurrentBattery => _special ? _batteryManager.GetCurrentBattery() : _battery;
         private float CurrentBatteryMax  => _special ? _batteryManager.GetCurrentBatteryMax() : batteryMax;
-        private RaycastHit[] _hits = new RaycastHit[10];
+        private RaycastHit[] _hits;
         
         private readonly HashSet<GrabObject>[] _lightObjectBuffers = new HashSet<GrabObject>[2];
         private int _bufferSelection;
@@ -112,7 +112,8 @@ namespace Player
         private void RevealObjects()
         {
             if (!_special) 
-                return; ;
+                return;
+            
             var origin = transform.position + transform.forward * radiusHit;
             var size = Physics.SphereCastNonAlloc(origin, radiusHit, transform.forward, _hits, maxDistanceHit - (2 * radiusHit), layerToHit);
             for (var index = 0; index < size; index++)
