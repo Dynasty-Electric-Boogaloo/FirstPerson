@@ -87,7 +87,7 @@ namespace ZoneGraph
                     new SerializableNode()
                     {
                         position = zonePoint.transform.position,
-                        heat = zonePoint.Heat,
+                        heat = Mathf.Clamp01(zonePoint.Heat),
                         room = room,
                         connexions = new List<NodeId>(connexions)
                     });
@@ -168,7 +168,7 @@ namespace ZoneGraph
                     Gizmos.color = Color.red;
                 }
             
-                Gizmos.DrawSphere(outputGraphData.nodes[i].position, .25f + outputGraphData.nodes[i].heat * .25f);
+                Gizmos.DrawSphere(outputGraphData.nodes[i].position, .25f + outputGraphData.nodes[i].heat * 2.5f);
                 Gizmos.color = Color.white;
                 foreach (var connexion in outputGraphData.nodes[i].connexions)
                 {

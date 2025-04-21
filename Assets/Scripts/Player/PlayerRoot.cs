@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using System;
+using Monster;
+using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Player
 {
@@ -36,6 +39,14 @@ namespace Player
                 _instance = null;
             
             _playerData.PlayerInputs.Disable();
+        }
+
+        private void Update()
+        {
+            if (Keyboard.current.spaceKey.wasPressedThisFrame)
+            {
+                MonsterNavigation.Alert(transform.position);
+            }
         }
     }
 }

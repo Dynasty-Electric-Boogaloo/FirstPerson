@@ -92,7 +92,7 @@ namespace ZoneGraph
             
             foreach (var nodeId in _graph.Rooms[room.id].Nodes)
             {
-                var distance = SqrDistance(_graph.Nodes[nodeId.id].Position, position);
+                var distance = Vector3.Distance(_graph.Nodes[nodeId.id].Position, position);
 
                 if (!(distance < closestDistance)) 
                     continue;
@@ -116,7 +116,7 @@ namespace ZoneGraph
             
             _openBuffer.Add(startNode.id);
             _costBuffer[startNode.id] = 0;
-            _guessCostBuffer[startNode.id] = SqrDistance(nodes[startNode.id].Position, endPosition);
+            _guessCostBuffer[startNode.id] = Vector3.Distance(nodes[startNode.id].Position, endPosition);
 
             while (_openBuffer.Count > 0)
             {
@@ -133,12 +133,12 @@ namespace ZoneGraph
                 foreach (var neighbor in nodes[current].Connexions)
                 {
                     _costBuffer.TryAdd(neighbor.id, float.PositiveInfinity);
-                    var cost = _costBuffer[current] + SqrDistance(nodes[current].Position, nodes[neighbor.id].Position);
+                    var cost = _costBuffer[current] + Vector3.Distance(nodes[current].Position, nodes[neighbor.id].Position);
 
                     if (cost > _costBuffer[neighbor.id])
                         continue;
 
-                    UpdateNeighborNode(current, neighbor.id, cost, SqrDistance(nodes[neighbor.id].Position, endPosition));
+                    UpdateNeighborNode(current, neighbor.id, cost, Vector3.Distance(nodes[neighbor.id].Position, endPosition));
                 }
             }
 
@@ -157,7 +157,7 @@ namespace ZoneGraph
             
             _openBuffer.Add(startRoom.id);
             _costBuffer[startRoom.id] = 0;
-            _guessCostBuffer[startRoom.id] = SqrDistance(rooms[startRoom.id].Position, endPosition);
+            _guessCostBuffer[startRoom.id] = Vector3.Distance(rooms[startRoom.id].Position, endPosition);
 
             while (_openBuffer.Count > 0)
             {
@@ -174,12 +174,12 @@ namespace ZoneGraph
                 foreach (var neighbor in rooms[current].EntryPoints.Keys)
                 {
                     _costBuffer.TryAdd(neighbor.id, float.PositiveInfinity);
-                    var cost = _costBuffer[current] + SqrDistance(rooms[current].Position, rooms[neighbor.id].Position);
+                    var cost = _costBuffer[current] + Vector3.Distance(rooms[current].Position, rooms[neighbor.id].Position);
 
                     if (cost > _costBuffer[neighbor.id])
                         continue;
 
-                    UpdateNeighborNode(current, neighbor.id, cost, SqrDistance(rooms[neighbor.id].Position, endPosition));
+                    UpdateNeighborNode(current, neighbor.id, cost, Vector3.Distance(rooms[neighbor.id].Position, endPosition));
                 }
             }
 
@@ -196,7 +196,7 @@ namespace ZoneGraph
 
             foreach (var nodeId in rooms[currentRoom.id].EntryPoints[targetRoom])
             {
-                var distance = SqrDistance(nodes[startNode.id].Position, nodes[nodeId.id].Position);
+                var distance = Vector3.Distance(nodes[startNode.id].Position, nodes[nodeId.id].Position);
                 
                 if (distance > closestDistance)
                     continue;
@@ -235,7 +235,7 @@ namespace ZoneGraph
                 last = current;
                 current = _cameFromBuffer[current];
 
-                Debug.DrawLine(_graph.Nodes[current].Position + Vector3.up, _graph.Nodes[last].Position + Vector3.up, Color.white, .2f);
+                Debug.DrawLine(_graph.Nodes[current].Position + Vector3.up, _graph.Nodes[last].Position + Vector3.up, Color.white, .1f);
             }
         }
         
@@ -249,7 +249,7 @@ namespace ZoneGraph
                 last = current;
                 current = _cameFromBuffer[current];
 
-                Debug.DrawLine(_graph.Rooms[current].Position, _graph.Rooms[last].Position, Color.green, .2f);
+                Debug.DrawLine(_graph.Rooms[current].Position, _graph.Rooms[last].Position, Color.green, .1f);
             }
         }
 
@@ -275,9 +275,9 @@ namespace ZoneGraph
             _openBuffer.Add(neighbor);
         }
 
-        private static float SqrDistance(Vector3 a, Vector3 b)
+        /*private static float SqrDistance(Vector3 a, Vector3 b)
         {
             return (a - b).sqrMagnitude;
-        }
+        }*/
     }
 }

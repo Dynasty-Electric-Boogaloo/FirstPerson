@@ -2094,7 +2094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb384080ebb4882a19bcf6a561aad1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heat: 0
+  heat: 0.1
 --- !u!115 &152862204
 MonoScript:
   m_ObjectHideFlags: 0
@@ -3099,7 +3099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb384080ebb4882a19bcf6a561aad1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heat: 0
+  heat: 0.1
 --- !u!1 &235732033
 GameObject:
   m_ObjectHideFlags: 0
@@ -3908,7 +3908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb384080ebb4882a19bcf6a561aad1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heat: 0
+  heat: 0.1
 --- !u!1 &283339077
 GameObject:
   m_ObjectHideFlags: 0
@@ -3998,7 +3998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb384080ebb4882a19bcf6a561aad1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heat: 0
+  heat: 0.1
 --- !u!1 &287220094
 GameObject:
   m_ObjectHideFlags: 0
@@ -4448,7 +4448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb384080ebb4882a19bcf6a561aad1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heat: 0
+  heat: 0.1
 --- !u!1 &326842026
 GameObject:
   m_ObjectHideFlags: 0
@@ -5260,7 +5260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb384080ebb4882a19bcf6a561aad1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heat: 0
+  heat: 0.1
 --- !u!1 &386908660
 GameObject:
   m_ObjectHideFlags: 0
@@ -6250,7 +6250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb384080ebb4882a19bcf6a561aad1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heat: 0
+  heat: 0.1
 --- !u!1 &459454617
 GameObject:
   m_ObjectHideFlags: 0
@@ -10690,7 +10690,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb384080ebb4882a19bcf6a561aad1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heat: 0
+  heat: 0.1
 --- !u!43 &933187978
 Mesh:
   m_ObjectHideFlags: 0
@@ -12835,7 +12835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb384080ebb4882a19bcf6a561aad1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heat: 0
+  heat: 0.1
 --- !u!1 &1130530391
 GameObject:
   m_ObjectHideFlags: 0
@@ -13110,7 +13110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb384080ebb4882a19bcf6a561aad1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heat: 0
+  heat: 0.1
 --- !u!1 &1158582483
 GameObject:
   m_ObjectHideFlags: 0
@@ -13284,6 +13284,10 @@ PrefabInstance:
     - target: {fileID: 2439608249139616169, guid: b28454a2dfdabce4ca564f502211a1f2, type: 3}
       propertyPath: m_Name
       value: PF_HandController
+      objectReference: {fileID: 0}
+    - target: {fileID: 2439608249139616169, guid: b28454a2dfdabce4ca564f502211a1f2, type: 3}
+      propertyPath: m_Layer
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7118096204552314928, guid: b28454a2dfdabce4ca564f502211a1f2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13509,7 +13513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb384080ebb4882a19bcf6a561aad1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heat: 0
+  heat: 0.1
 --- !u!1 &1174172436
 GameObject:
   m_ObjectHideFlags: 0
@@ -15042,7 +15046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb384080ebb4882a19bcf6a561aad1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heat: 0
+  heat: 0.1
 --- !u!1 &1301658026
 GameObject:
   m_ObjectHideFlags: 0
@@ -15177,7 +15181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb384080ebb4882a19bcf6a561aad1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heat: 0
+  heat: 0.1
 --- !u!1 &1306142030
 GameObject:
   m_ObjectHideFlags: 0
@@ -15612,7 +15616,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb384080ebb4882a19bcf6a561aad1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heat: 0
+  heat: 0.1
 --- !u!1 &1366890142
 GameObject:
   m_ObjectHideFlags: 0
@@ -15837,7 +15841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb384080ebb4882a19bcf6a561aad1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heat: 0
+  heat: 0.1
 --- !u!1 &1393120363
 GameObject:
   m_ObjectHideFlags: 0
@@ -16423,7 +16427,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb384080ebb4882a19bcf6a561aad1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heat: 0
+  heat: 0.1
 --- !u!1 &1441078060
 GameObject:
   m_ObjectHideFlags: 0
@@ -18867,6 +18871,7 @@ GameObject:
   - component: {fileID: 1653906399}
   - component: {fileID: 1653906398}
   - component: {fileID: 1653906400}
+  - component: {fileID: 1653906401}
   m_Layer: 0
   m_Name: ZoneGraphManager
   m_TagString: Untagged
@@ -18886,7 +18891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db55747a2f59446eaf78c6e211d68bdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connexionDistance: 3
+  connexionDistance: 5
   collisionHeight: 1.5
   collisionOffset: 1.5
   collisionRadius: 0.5
@@ -18930,6 +18935,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   zoneGraphData: {fileID: 11400000, guid: 0c765f3447c9df34a8fec0b79a44ebb8, type: 2}
+--- !u!114 &1653906401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653906397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9e95783ac2740c4a17755896e882271, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHeat: 0.25
 --- !u!1 &1665970493
 GameObject:
   m_ObjectHideFlags: 0
@@ -19289,7 +19307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb384080ebb4882a19bcf6a561aad1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heat: 0
+  heat: 0.1
 --- !u!1 &1680751585
 GameObject:
   m_ObjectHideFlags: 0
@@ -19874,7 +19892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb384080ebb4882a19bcf6a561aad1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heat: 0
+  heat: 0.1
 --- !u!43 &1742628486
 Mesh:
   m_ObjectHideFlags: 0
@@ -20094,7 +20112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb384080ebb4882a19bcf6a561aad1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heat: 0
+  heat: 0.1
 --- !u!1 &1751654528
 GameObject:
   m_ObjectHideFlags: 0
@@ -20679,7 +20697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb384080ebb4882a19bcf6a561aad1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heat: 0
+  heat: 0.1
 --- !u!1 &1826357989
 GameObject:
   m_ObjectHideFlags: 0
@@ -21596,7 +21614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb384080ebb4882a19bcf6a561aad1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heat: 0
+  heat: 0.1
 --- !u!1 &1934817110
 GameObject:
   m_ObjectHideFlags: 0
