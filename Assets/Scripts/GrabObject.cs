@@ -1,27 +1,24 @@
 ﻿using System;
 using Player;
+using UI;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class GrabObject : MonoBehaviour
+public class GrabObject : MonoBehaviour, IInteractable
 {
+    
     [Serializable]
     private struct MaterialSet
     {
         public Material normal;
-        public Material highlighted;
-        public Material infected;
-
-        public Material GetMaterial(bool highlighted, bool infected = false)
-        {
-            return highlighted ? this.highlighted : infected? this.infected : normal;
-        }
+        public Material revealed;
+        public Material awake;
     }
         
     [SerializeField] private MeshRenderer meshRenderer;
     [SerializeField] private MaterialSet regularMaterialSet;
     [SerializeField] private bool isInfected;
-    [SerializeField] private float maxTimeBeforeAlert = 5;
+    [SerializeField] private float maxTimeBeforeAlert = 15;
     [SerializeField] private LayerMask breakableLayers;
     [SerializeField] private LayerMask playerLayer;
     [SerializeField] private float breakRadius = 0.2f;
@@ -30,6 +27,7 @@ public class GrabObject : MonoBehaviour
     private Rigidbody _rigidbody;
     private float _timer;
     private bool _isThrown;
+    private bool _isAwake;
 
     public bool IsThrown => _isThrown;
 
@@ -37,8 +35,12 @@ public class GrabObject : MonoBehaviour
     {
         _collider = GetComponent<Collider>();
         _rigidbody = GetComponent<Rigidbody>();
-        SetHighlight(false);
+        Transform = transform;
+        Highlight(false);
         _timer = maxTimeBeforeAlert;
+        meshRenderer.enabled = isInfected;
+        meshRenderer.material = regularMaterialSet.normal;
+        
     }
     private void OnDrawGizmosSelected()
     {
@@ -49,25 +51,43 @@ public class GrabObject : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, breakRadius);
     }
 
+    /// <summary>
+    /// Change l'apparence des objets en fonction de s'ils sont infecté et dans la lumiere spéciale ou non. 
+    /// </summary>
+    public void SetLightened(bool inLight)
+    {
+        if(_isAwake) return;
+        meshRenderer.sharedMaterial = isInfected && inLight ? regularMaterialSet.revealed : regularMaterialSet.normal;
+    }
+
     private void ReduceTime()
     {
         _timer -= Time.deltaTime;
         
         if (_timer < 0)
-            Debug.Log("Menace alerted...");
+            WakingUp();
     }
 
     public void Grab(Transform grabPoint)
     {
         if(isInfected)
-            Debug.Log("Menace alerted...");
+            WakingUp();
         
-        SetHighlight(false);
+        Highlight(false);
         transform.SetParent(grabPoint, false);
         transform.localPosition = Vector3.zero;
         transform.localRotation = Quaternion.identity;
         _collider.enabled = false;
         _rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+    }
+
+    private void WakingUp()
+    {
+        Debug.Log("Menace alerted...");
+        _isAwake = true;
+        meshRenderer.sharedMaterial = regularMaterialSet.awake;
+        
+        //possible sound design ?
     }
 
     private void BreakOnImpact()
@@ -101,6 +121,15 @@ public class GrabObject : MonoBehaviour
             ReduceTime();
     }
     
+
+    public void Highlight(bool canInteract)
+    {
+        if(!UiManager.UserInterface)
+            return;
+        if(canInteract) UiManager.UserInterface.AddInput(this);
+        else UiManager.UserInterface.RemoveInput(this);
+    }
+
     public void Interact()
     {
         if(isInfected)
@@ -111,6 +140,9 @@ public class GrabObject : MonoBehaviour
         
         Break();
     }
+
+    public Transform Transform { get; set; }
+
 
     public void Ungrab()
     {
@@ -130,11 +162,7 @@ public class GrabObject : MonoBehaviour
     {
         return _collider ? _collider.bounds : default;
     }
-        
-    public void SetHighlight(bool highlighted)
-    {
-        meshRenderer.sharedMaterial = regularMaterialSet.GetMaterial(highlighted, isInfected);
-    }
+    
 
     private void Break()
     {

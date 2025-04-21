@@ -240,6 +240,69 @@ MonoBehaviour:
   m_ObsoleteUseShadowQualitySettings: 0
   m_ObsoleteCustomShadowResolution: 512
   m_ObsoleteContactShadows: 0
+--- !u!1 &806771244269494695
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 287704792547671887}
+  m_Layer: 0
+  m_Name: GrabHinge
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &287704792547671887
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806771244269494695}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 954975179973298045}
+  m_Father: {fileID: 7118096204552314928}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2126410163316584200
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 954975179973298045}
+  m_Layer: 0
+  m_Name: GrabPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &954975179973298045
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126410163316584200}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 287704792547671887}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2439608249139616169
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,9 +316,12 @@ GameObject:
   - component: {fileID: 8077780547725054095}
   - component: {fileID: 2334033331561239044}
   - component: {fileID: 5030427077509621976}
+  - component: {fileID: 85294643338218035}
   - component: {fileID: 5667010963127754384}
   - component: {fileID: 1970423395360904056}
   - component: {fileID: 1006920574172991004}
+  - component: {fileID: 266798638669423720}
+  - component: {fileID: 2331429056364898136}
   m_Layer: 0
   m_Name: PF_HandController
   m_TagString: Untagged
@@ -278,6 +344,7 @@ Transform:
   m_Children:
   - {fileID: 5420549689992328108}
   - {fileID: 8213212419984779292}
+  - {fileID: 287704792547671887}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2130408577461022810
@@ -432,6 +499,7 @@ MonoBehaviour:
     m_Bits: 8
   groundedGroundCheckLength: 1
   airborneGroundCheckLength: 0.6
+  groundCheckRadius: 0.45
   groundLerpSpeed: 20
   gravity: -20
   maxFallSpeed: -20
@@ -459,6 +527,25 @@ MonoBehaviour:
   crouchedCamHeight: 0.375
   capsuleCollider: {fileID: 5667010963127754384}
   meshTransform: {fileID: 5420549689992328108}
+--- !u!114 &85294643338218035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2439608249139616169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ed01a1290e1450d827c6244b4951fa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwForce: 5
+  grabOffset: 0.5
+  grabHoldOffset: 1
+  grabDistance: 2
+  grabPoint: {fileID: 954975179973298045}
+  grabHinge: {fileID: 287704792547671887}
+  grabSize: 0.05
 --- !u!136 &5667010963127754384
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -523,10 +610,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashLightTransform: {fileID: 5027031290628114069}
   light: {fileID: 7799891747133625662}
-  batterySlider: {fileID: 0}
+  hud: {fileID: 266798638669423720}
   batteryMax: 10
   addByButtonPressed: 0.25
-  lightIntensityMultiplier: 10000
+  lightIntensityMultiplier: 2000
+  lightColor: {r: 1, g: 1, b: 1, a: 1}
+  specialLightColor: {r: 1, g: 0, b: 0, a: 1}
+  maxDistanceHit: 5
+  radiusHit: 0.75
+  layerToHit:
+    serializedVersion: 2
+    m_Bits: 64
+  coneRadius: 0.5
+  maxObjectInSight: 10
+--- !u!114 &266798638669423720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2439608249139616169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d81bed876cebf04486def187e1f9691, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  batterySlider: {fileID: 0}
+  batterySliderColor: {fileID: 0}
+  lightColor: {r: 1, g: 1, b: 1, a: 1}
+  specialLightColor: {r: 1, g: 0, b: 0, a: 1}
+--- !u!114 &2331429056364898136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2439608249139616169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd855b69e66906428d3c7d94a1425e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxBattery: 5
+  startBatteryPercent: 100
 --- !u!1 &4167932192429471914
 GameObject:
   m_ObjectHideFlags: 0
