@@ -21,6 +21,7 @@ namespace UI
 
         public void AddInput(IInteractable interactable)
         {
+            print(interactable.Transform.gameObject);
         }
 
         public void RemoveInput(IInteractable interactable)

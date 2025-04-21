@@ -118,15 +118,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Extract"",
-                    ""type"": ""Button"",
-                    ""id"": ""262d8a38-a943-4431-8e2a-6ea9b6e4c4d4"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Inspect"",
                     ""type"": ""Button"",
                     ""id"": ""fe89eaf1-868a-4554-bc14-3ab351f17123"",
@@ -270,7 +261,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""50f323c9-cb94-48c4-83eb-4b0b67de587c"",
-                    ""path"": ""<Keyboard>/e"",
+                    ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -297,17 +288,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""UseObject2"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""da09881e-8b49-4b61-8232-81ee600e58c3"",
-                    ""path"": ""<Keyboard>/q"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Extract"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -350,7 +330,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         m_Controls_Interact = m_Controls.FindAction("Interact", throwIfNotFound: true);
         m_Controls_UseObject1 = m_Controls.FindAction("UseObject1", throwIfNotFound: true);
         m_Controls_UseObject2 = m_Controls.FindAction("UseObject2", throwIfNotFound: true);
-        m_Controls_Extract = m_Controls.FindAction("Extract", throwIfNotFound: true);
         m_Controls_Inspect = m_Controls.FindAction("Inspect", throwIfNotFound: true);
         m_Controls_Dance = m_Controls.FindAction("Dance", throwIfNotFound: true);
     }
@@ -429,7 +408,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_Controls_Interact;
     private readonly InputAction m_Controls_UseObject1;
     private readonly InputAction m_Controls_UseObject2;
-    private readonly InputAction m_Controls_Extract;
     private readonly InputAction m_Controls_Inspect;
     private readonly InputAction m_Controls_Dance;
     public struct ControlsActions
@@ -446,7 +424,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         public InputAction @Interact => m_Wrapper.m_Controls_Interact;
         public InputAction @UseObject1 => m_Wrapper.m_Controls_UseObject1;
         public InputAction @UseObject2 => m_Wrapper.m_Controls_UseObject2;
-        public InputAction @Extract => m_Wrapper.m_Controls_Extract;
         public InputAction @Inspect => m_Wrapper.m_Controls_Inspect;
         public InputAction @Dance => m_Wrapper.m_Controls_Dance;
         public InputActionMap Get() { return m_Wrapper.m_Controls; }
@@ -488,9 +465,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @UseObject2.started += instance.OnUseObject2;
             @UseObject2.performed += instance.OnUseObject2;
             @UseObject2.canceled += instance.OnUseObject2;
-            @Extract.started += instance.OnExtract;
-            @Extract.performed += instance.OnExtract;
-            @Extract.canceled += instance.OnExtract;
             @Inspect.started += instance.OnInspect;
             @Inspect.performed += instance.OnInspect;
             @Inspect.canceled += instance.OnInspect;
@@ -531,9 +505,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @UseObject2.started -= instance.OnUseObject2;
             @UseObject2.performed -= instance.OnUseObject2;
             @UseObject2.canceled -= instance.OnUseObject2;
-            @Extract.started -= instance.OnExtract;
-            @Extract.performed -= instance.OnExtract;
-            @Extract.canceled -= instance.OnExtract;
             @Inspect.started -= instance.OnInspect;
             @Inspect.performed -= instance.OnInspect;
             @Inspect.canceled -= instance.OnInspect;
@@ -569,7 +540,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         void OnInteract(InputAction.CallbackContext context);
         void OnUseObject1(InputAction.CallbackContext context);
         void OnUseObject2(InputAction.CallbackContext context);
-        void OnExtract(InputAction.CallbackContext context);
         void OnInspect(InputAction.CallbackContext context);
         void OnDance(InputAction.CallbackContext context);
     }
