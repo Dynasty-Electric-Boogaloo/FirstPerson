@@ -326,21 +326,21 @@ MonoBehaviour:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 5
+        value: 4
         inSlope: 0
         outSlope: 0
-        tangentMode: 34
+        tangentMode: 0
         weightedMode: 0
         inWeight: 0
-        outWeight: 0.33333334
+        outWeight: 0
       - serializedVersion: 3
-        time: 1
-        value: 5
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 34
+        time: 10
+        value: 7
+        inSlope: 0.40137225
+        outSlope: 0.40137225
+        tangentMode: 0
         weightedMode: 0
-        inWeight: 0.33333334
+        inWeight: 0.0916667
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -383,7 +383,7 @@ MonoBehaviour:
   playerMask:
     serializedVersion: 2
     m_Bits: 1073741824
-  chaseTime: 0.5
+  chaseTime: 0.1
 --- !u!54 &7354742177963990005
 Rigidbody:
   m_ObjectHideFlags: 0
