@@ -19,6 +19,7 @@ namespace Player
         [SerializeField] private LayerMask groundMask;
         [SerializeField] private float groundedGroundCheckLength;
         [SerializeField] private float airborneGroundCheckLength;
+        [SerializeField] private float groundCheckRadius;
         [SerializeField] private float groundLerpSpeed;
         [SerializeField] private float gravity;
         [SerializeField] private float maxFallSpeed;
@@ -63,7 +64,7 @@ namespace Player
             _groundCheckRay.origin = PlayerData.Rigidbody.position;
             _groundCheckRay.direction = Vector3.down;
 
-            PlayerData.Grounded = Physics.SphereCast(_groundCheckRay, .5f, out _sphereHitInfo, groundCheckLength, groundMask);
+            PlayerData.Grounded = Physics.SphereCast(_groundCheckRay, groundCheckRadius, out _sphereHitInfo, groundCheckLength, groundMask);
 
             if (!PlayerData.Grounded)
             {
