@@ -152,6 +152,7 @@ namespace Monster
             {
                 var diff = nodes[_targetNode.id].Position - transform.position;
                 diff.y = 0;
+                
                 if (diff.magnitude < 0.1f)
                     _heatmap.Data.Remove(_targetNode);
             }
@@ -163,9 +164,8 @@ namespace Monster
                 MonsterData.Searching = false;
             }
 
-
-            NodeId bestNode = new NodeId(-1);
-            float bestScore = float.PositiveInfinity;
+            var bestNode = new NodeId(-1);
+            var bestScore = float.PositiveInfinity;
 
             foreach (var node in _heatmap.Data.Keys)
             {

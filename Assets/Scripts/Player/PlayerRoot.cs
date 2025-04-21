@@ -40,13 +40,5 @@ namespace Player
             
             _playerData.PlayerInputs.Disable();
         }
-
-        private void Update()
-        {
-            if (Keyboard.current.spaceKey.wasPressedThisFrame)
-            {
-                MonsterNavigation.Alert(transform.position);
-            }
-        }
     }
 }

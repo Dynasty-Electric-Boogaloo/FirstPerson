@@ -274,10 +274,5 @@ namespace ZoneGraph
             _cameFromBuffer[neighbor] = current;
             _openBuffer.Add(neighbor);
         }
-
-        /*private static float SqrDistance(Vector3 a, Vector3 b)
-        {
-            return (a - b).sqrMagnitude;
-        }*/
     }
 }
