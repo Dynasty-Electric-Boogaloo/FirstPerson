@@ -8,6 +8,7 @@ namespace ZoneGraph
     public struct SerializableNode
     {
         public Vector3 position;
+        public float heat;
         public RoomId room;
         public List<NodeId> connexions;
 
@@ -16,6 +17,7 @@ namespace ZoneGraph
             return new Node
             {
                 Position = position,
+                Heat = heat,
                 Room = room,
                 Connexions = new HashSet<NodeId>(connexions)
             };

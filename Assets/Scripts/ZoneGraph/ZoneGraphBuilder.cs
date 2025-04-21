@@ -6,11 +6,10 @@ using Random = System.Random;
 namespace ZoneGraph
 {
     [ExecuteInEditMode]
-    public class ZoneGraphComputer : MonoBehaviour
+    public class ZoneGraphBuilder : MonoBehaviour
     {
         #if UNITY_EDITOR
-        private static ZoneGraphComputer _instance;
-        [SerializeField] private bool enableAutoZoneCompute;
+        private static ZoneGraphBuilder _instance;
         [SerializeField] private float connexionDistance;
         [SerializeField] private float collisionHeight;
         [SerializeField] private float collisionOffset;
@@ -20,7 +19,7 @@ namespace ZoneGraph
         private List<SerializableNode> _nodes = new ();
         private List<SerializableRoom> _rooms = new ();
 
-        public static ZoneGraphComputer Instance => _instance;
+        public static ZoneGraphBuilder Instance => _instance;
         
         private ZonePathfinding _pathfinding;
         private RaycastHit[] _collisionBuffer;
@@ -51,11 +50,8 @@ namespace ZoneGraph
                 _instance = null;
         }
 
-        public void ComputeZones(bool auto)
+        public void ComputeZones()
         {
-            if (!enableAutoZoneCompute && auto)
-                return;
-
             outputGraphData.valid = false;
         
             _nodes.Clear();
@@ -107,9 +103,9 @@ namespace ZoneGraph
                     if (distance > sqrDistance)
                         continue;
 
-                    //var count = Physics.CapsuleCastNonAlloc(bottomPoint, topPoint, collisionRadius, diff.normalized, _collisionBuffer, distance, collisionMask);
+                    var count = Physics.CapsuleCastNonAlloc(bottomPoint, topPoint, collisionRadius, diff.normalized, _collisionBuffer, distance, collisionMask);
 
-                    //if (count <= 0)
+                    if (count <= 0)
                         connexions.Add(new NodeId(i));
                 }
 
@@ -125,6 +121,7 @@ namespace ZoneGraph
                     new SerializableNode()
                     {
                         position = zonePoint.transform.position,
+                        heat = zonePoint.Heat,
                         room = room,
                         connexions = new List<NodeId>(connexions)
                     });
@@ -205,7 +202,7 @@ namespace ZoneGraph
                     Gizmos.color = Color.red;
                 }
             
-                Gizmos.DrawSphere(_nodes[i].position, .5f);
+                Gizmos.DrawSphere(_nodes[i].position, .25f + _nodes[i].heat * .25f);
                 Gizmos.color = Color.white;
                 foreach (var connexion in _nodes[i].connexions)
                 {

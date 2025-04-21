@@ -2,7 +2,7 @@
 using UnityEngine;
 using ZoneGraph;
 
-[CustomEditor(typeof(ZoneGraphComputer))]
+[CustomEditor(typeof(ZoneGraphBuilder))]
 public class ZoneGraphComputerEditor : Editor
 {
     public override void OnInspectorGUI()
@@ -10,7 +10,7 @@ public class ZoneGraphComputerEditor : Editor
         base.OnInspectorGUI();
         if (GUILayout.Button("Compute graph"))
         {
-            ((ZoneGraphComputer)target).ComputeZones(false);
+            ((ZoneGraphBuilder)target).ComputeZones();
             SceneView.RepaintAll();
         }
     }

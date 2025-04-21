@@ -8,38 +8,9 @@ namespace ZoneGraph
     public class ZonePoint : MonoBehaviour
     {
         [SerializeField] private RoomId roomId;
+        [SerializeField] private float heat;
 
-#if UNITY_EDITOR
-        private Vector3 _lastPosition;
-
-        private void OnEnable()
-        {
-            if (EditorApplication.isPlaying || ZoneGraphComputer.Instance == null)
-                return;
-        
-            ZoneGraphComputer.Instance.ComputeZones(true);
-        }
-
-        private void OnDisable()
-        {
-            if (EditorApplication.isPlaying || ZoneGraphComputer.Instance == null)
-                return;
-
-            ZoneGraphComputer.Instance.ComputeZones(true);
-        }
-
-        private void Update()
-        {
-            if (EditorApplication.isPlaying || ZoneGraphComputer.Instance == null)
-                return;
-
-            if (transform.position == _lastPosition)
-                return;
-        
-            ZoneGraphComputer.Instance.ComputeZones(true);
-            _lastPosition = transform.position;
-        }
-#endif
+        public float Heat => heat;
 
         public void SetRoom(RoomId id)
         {

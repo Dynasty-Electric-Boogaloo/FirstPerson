@@ -11,14 +11,16 @@ namespace ZoneGraph
         private Dictionary<int, float> _costBuffer;
         private Dictionary<int, float> _guessCostBuffer;
         private ZoneBox[] _zones;
+        private bool _debugDrawLines;
         
-        public ZonePathfinding(ZoneGraphManager graphManager)
+        public ZonePathfinding(ZoneGraphManager graphManager, bool debug = false)
         {
             _graph = graphManager;
             _openBuffer = new HashSet<int>();
             _cameFromBuffer = new Dictionary<int, int>();
             _costBuffer = new Dictionary<int, float>();
             _guessCostBuffer = new Dictionary<int, float>();
+            _debugDrawLines = debug;
             _zones = Object.FindObjectsByType<ZoneBox>(FindObjectsInactive.Exclude, FindObjectsSortMode.InstanceID);
         }
 
@@ -41,6 +43,12 @@ namespace ZoneGraph
                 
                 var targetNode = GetClosestConnexionToRoom(currentNode, currentRoom, travelRoom);
                 
+                if (targetNode.id < 0)
+                    return targetNode;
+
+                if (currentNode == targetNode)
+                    targetNode = GetPointClosestNode(currentPoint, travelRoom);
+
                 if (targetNode.id < 0)
                     return targetNode;
                 
@@ -115,7 +123,11 @@ namespace ZoneGraph
                 var current = GetBestOpenNode();
 
                 if (current == endNode.id)
+                {
+                    if (_debugDrawLines)
+                        DrawNodePath(startNode.id, endNode.id);
                     return new NodeId(ReconstructPath(startNode.id, endNode.id));
+                }
 
                 _openBuffer.Remove(current);
                 foreach (var neighbor in nodes[current].Connexions)
@@ -152,7 +164,11 @@ namespace ZoneGraph
                 var current = GetBestOpenNode();
 
                 if (current == endRoom.id)
+                {
+                    if (_debugDrawLines)
+                        DrawRoomPath(startRoom.id, endRoom.id);
                     return new RoomId(ReconstructPath(startRoom.id, endRoom.id));
+                }
 
                 _openBuffer.Remove(current);
                 foreach (var neighbor in rooms[current].EntryPoints.Keys)
@@ -207,6 +223,34 @@ namespace ZoneGraph
             }
 
             return bestNode;
+        }
+
+        private void DrawNodePath(int startId, int endId)
+        {
+            var last = endId;
+            var current = endId;
+
+            while (current != startId)
+            {
+                last = current;
+                current = _cameFromBuffer[current];
+
+                Debug.DrawLine(_graph.Nodes[current].Position + Vector3.up, _graph.Nodes[last].Position + Vector3.up, Color.white, .2f);
+            }
+        }
+        
+        private void DrawRoomPath(int startId, int endId)
+        {
+            var last = endId;
+            var current = endId;
+
+            while (current != startId)
+            {
+                last = current;
+                current = _cameFromBuffer[current];
+
+                Debug.DrawLine(_graph.Rooms[current].Position, _graph.Rooms[last].Position, Color.green, .2f);
+            }
         }
 
         private int ReconstructPath(int startId, int endId)

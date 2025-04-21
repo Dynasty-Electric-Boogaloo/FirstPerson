@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿using System;
+using UnityEditor;
 using UnityEngine;
 
 namespace ZoneGraph
@@ -6,60 +7,37 @@ namespace ZoneGraph
     [ExecuteAlways]
     public class ZoneBox : MonoBehaviour
     {
-        [SerializeField] private new Collider collider;
         [SerializeField] private int priority;
         public int zoneId;
+        private Collider[] _colliders;
 
         public int Priority => priority;
 
-        public bool ContainsPoint(Vector3 point)
+        private void Awake()
         {
-            return Vector3.Distance(point, collider.ClosestPoint(point)) < 0.01f;
+            _colliders = GetComponents<Collider>();
         }
-    
-#if UNITY_EDITOR
-        private Vector3 _lastPosition;
-        private Quaternion _lastRotation;
-        private Vector3 _lastScale;
 
         private void OnEnable()
         {
-            if (EditorApplication.isPlaying || ZoneGraphComputer.Instance == null)
-                return;
-        
-            ZoneGraphComputer.Instance.ComputeZones(true);
+            _colliders ??= GetComponents<Collider>();
         }
 
-        private void OnDisable()
+        public bool ContainsPoint(Vector3 point)
         {
-            if (EditorApplication.isPlaying || ZoneGraphComputer.Instance == null)
-                return;
-        
-            ZoneGraphComputer.Instance.ComputeZones(true);
-        }
+            var closestDistance = float.PositiveInfinity;
 
-        private void Update()
-        {
-            if (EditorApplication.isPlaying || ZoneGraphComputer.Instance == null)
-                return;
-
-            var size = new Vector3(
-                transform.localScale.x * collider.bounds.size.x,
-                transform.localScale.y * collider.bounds.size.y,
-                transform.localScale.z * collider.bounds.size.z
-            );
-        
-            if (transform.position + collider.bounds.center == _lastPosition && 
-                transform.rotation == _lastRotation && 
-                size == _lastScale)
-                return;
-        
-            ZoneGraphComputer.Instance.ComputeZones(true);
-        
-            _lastPosition = transform.position + collider.bounds.center;
-            _lastRotation = transform.rotation;
-            _lastScale = size;
+            foreach (var col in _colliders)
+            {
+                var distance = Vector3.Distance(point, col.ClosestPoint(point));
+                
+                if (distance < closestDistance)
+                {
+                    closestDistance = distance;
+                }
+            }
+            
+            return closestDistance < 0.01f;
         }
-#endif
     }
 }

@@ -35,7 +35,7 @@ namespace ZoneGraph
                 Rooms.Add(room.Deserialize());
             }
 
-            _pathfinding = new ZonePathfinding(this);
+            _pathfinding = new ZonePathfinding(this, true);
         }
 
         private void OnDestroy()
