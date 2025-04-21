@@ -10,7 +10,7 @@ namespace Monster
         {
             _monsterData = new MonsterData
             {
-                Rigidbody = GetComponent<Rigidbody>(),
+                rigidbody = GetComponent<Rigidbody>(),
             };
             
             var behaviours = GetComponents<MonsterBehaviour>();

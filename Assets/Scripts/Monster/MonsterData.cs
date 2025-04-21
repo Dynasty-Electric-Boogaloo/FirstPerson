@@ -1,14 +1,16 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Monster
 {
+    [Serializable]
     public class MonsterData
     {
-        public Rigidbody Rigidbody;
-        public Vector3 TargetPoint;
-        public bool Grounded;
-        public bool Chasing;
-        public bool Searching;
-        public float StateTime;
+        public Rigidbody rigidbody;
+        public Vector3 targetPoint;
+        public bool grounded;
+        public bool chasing;
+        public bool searching;
+        public float stateTime;
     }
 }
