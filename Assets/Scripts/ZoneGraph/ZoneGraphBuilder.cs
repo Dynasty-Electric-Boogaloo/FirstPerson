@@ -81,7 +81,6 @@ namespace ZoneGraph
                 if (room.id == 0)
                     Debug.LogWarning($"Node {zonePoint.name} is not in any room! Please adjust _rooms or the node's position!");
                 
-                zonePoint.SetRoom(room);
                 rooms[room.id].nodes.Add(new NodeId(nodes.Count));
 
                 nodes.Add(
