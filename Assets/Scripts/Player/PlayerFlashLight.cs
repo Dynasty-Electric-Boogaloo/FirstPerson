@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Player;
+using UI;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,8 +13,7 @@ namespace Player
         [Header("To add in inspector")]
         [SerializeField] private Transform flashLightTransform;
         [SerializeField] private new Light light;
-        [SerializeField] private Slider batterySlider;
-        [SerializeField] private Image batterySliderColor;
+        [SerializeField] private Hud hud;
         
         [Header("Variables")]
         [SerializeField] private float batteryMax;
@@ -24,8 +24,9 @@ namespace Player
         [SerializeField] private float maxDistanceHit = 5;
         [SerializeField] private float radiusHit = 5;
         [SerializeField] private LayerMask layerToHit;
-        [UnityEngine.Range(-1,1)]
+        [Range(-1,1)]
         [SerializeField] private float coneRadius = 0.75f;
+        [SerializeField] private int maxObjectInSight = 10;
         
         //Private variables
         private float _battery;
@@ -49,7 +50,6 @@ namespace Player
             _playerInput = PlayerData.PlayerInputs; 
             _battery = batteryMax; 
             light.color = lightColor;
-            batterySliderColor.color = lightColor;
             SetLightVisible(false);
 
             _lightObjectBuffers[0] = new HashSet<GrabObject>();
@@ -101,24 +101,28 @@ namespace Player
                 light.intensity = (CurrentBattery / CurrentBatteryMax) * lightIntensityMultiplier;
             }
             
-            if(batterySlider)
-                batterySlider.value = CurrentBattery / CurrentBatteryMax;
+            if (hud)
+                hud.UpdateBattery(CurrentBattery, CurrentBatteryMax);
             
-            if (_special)
-            {
-                var origin = transform.position + transform.forward * radiusHit;
-                var size = Physics.SphereCastNonAlloc(origin, radiusHit, transform.forward, _hits, maxDistanceHit-2*radiusHit, layerToHit );
-                for (var index = 0; index < size; index++)
-                {
-                    var normalizedLightToObject = Vector3.Normalize(_hits[index].transform.position - origin);
+            RevealObjects();
+        }
 
-                    if (Vector3.Dot(transform.forward, normalizedLightToObject) > coneRadius)
-                    {
-                        var element = _hits[index].transform.GetComponent<GrabObject>();
-                        _currentLightObjects.Add(element);
-                        element.SetLightened(true);
-                    }
-                }
+        private void RevealObjects()
+        {
+            if (!_special) return;
+            
+            var origin = transform.position + transform.forward * radiusHit;
+            var size = Physics.SphereCastNonAlloc(origin, radiusHit, transform.forward, _hits, maxDistanceHit - 2 * radiusHit, layerToHit);
+            
+            for (var index = 0; index < size; index++)
+            {
+                var normalizedLightToObject = Vector3.Normalize(_hits[index].transform.position - origin);
+
+                if (!(Vector3.Dot(transform.forward, normalizedLightToObject) > coneRadius)) continue;
+                
+                var element = _hits[index].transform.GetComponent<GrabObject>();
+                _currentLightObjects.Add(element);
+                element.SetLightened(true);
             }
         }
 
@@ -129,8 +133,8 @@ namespace Player
             if(!visible)
                 light.intensity = 0;
             
-            if (batterySlider)
-                batterySlider.gameObject.SetActive(_isOn);
+            if (hud)
+                hud.SetFlashLight(_special, _isOn);
         }
 
         private void CheckSwitch()
@@ -142,24 +146,25 @@ namespace Player
             {
                 _special = false;
                 light.color = lightColor;
-                batterySliderColor.color = lightColor;
             }
             
             if (_playerInput.Controls.UseObject2.WasPressedThisFrame())
             {
                 _special = true;
                 light.color = specialLightColor;
-                batterySliderColor.color = specialLightColor;
             }
+            
+            if(hud)
+                hud.SetFlashLight(_special, _isOn);
         }
 
         private void OnDrawGizmosSelected()
         {
             var origin = transform.position + transform.forward * radiusHit;
             Gizmos.color = Color.red;
-            for (int i = 0; i < maxDistanceHit; i++)
+            for (var i = 0; i < maxDistanceHit; i++)
             {
-                Gizmos.DrawWireSphere(origin  , radiusHit);
+                Gizmos.DrawWireSphere(origin, radiusHit);
                 origin += transform.forward;
             }
         }

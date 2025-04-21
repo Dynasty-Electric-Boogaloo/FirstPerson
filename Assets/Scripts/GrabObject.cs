@@ -54,12 +54,7 @@ public class GrabObject : MonoBehaviour
     /// </summary>
     public void SetLightened(bool inLight)
     {
-        if(!isInfected)
-        {
-            meshRenderer.sharedMaterial = regularMaterialSet.normal;
-            return;
-        }
-        meshRenderer.sharedMaterial = inLight ? regularMaterialSet.infected : regularMaterialSet.normal;
+        meshRenderer.sharedMaterial = isInfected && inLight ? regularMaterialSet.infected : regularMaterialSet.normal;
     }
 
     private void ReduceTime()
