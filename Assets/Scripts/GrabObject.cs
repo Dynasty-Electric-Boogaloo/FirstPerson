@@ -12,9 +12,9 @@ public class GrabObject : MonoBehaviour
         public Material highlighted;
         public Material infected;
 
-        public Material GetMaterial(bool highlighted, bool infected = false)
+        public Material GetMaterial(bool highlighted)
         {
-            return highlighted ? this.highlighted : infected? this.infected : normal;
+            return highlighted ? this.highlighted  : normal;
         }
     }
         
@@ -47,6 +47,14 @@ public class GrabObject : MonoBehaviour
         
         Gizmos.color = new Color(1, 0, 0, 0.75F);
         Gizmos.DrawWireSphere(transform.position, breakRadius);
+    }
+
+    /// <summary>
+    /// Change l'apparence des objets en fonction de s'ils sont infecté et dans la lumiere spéciale ou non. 
+    /// </summary>
+    public void SetLightened(bool inLight)
+    {
+        meshRenderer.sharedMaterial = isInfected && inLight ? regularMaterialSet.infected : regularMaterialSet.normal;
     }
 
     private void ReduceTime()
@@ -133,7 +141,7 @@ public class GrabObject : MonoBehaviour
         
     public void SetHighlight(bool highlighted)
     {
-        meshRenderer.sharedMaterial = regularMaterialSet.GetMaterial(highlighted, isInfected);
+        meshRenderer.sharedMaterial = regularMaterialSet.GetMaterial(highlighted);
     }
 
     private void Break()
