@@ -9,6 +9,7 @@ namespace UI
         [Header("To add in inspector")]
         [SerializeField] private Slider batterySlider;
         [SerializeField] private Image batterySliderColor;
+        [SerializeField] private Image batteryImage;
         
         [Header("Variables")]
         [SerializeField] private Color lightColor = Color.white;
@@ -24,6 +25,12 @@ namespace UI
             if (!batterySlider) return;
             batterySlider.gameObject.SetActive(isOn);
             batterySliderColor.color = special ? specialLightColor : lightColor;
+
+            if (special)
+            {
+                batteryImage.fillAmount = BatteryManager.Battery.GetCurrentBatteryUnits() /
+                               BatteryManager.Battery.GetMaxBatteryUnits();
+            }
 
         }
 

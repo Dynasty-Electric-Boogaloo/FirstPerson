@@ -1,4 +1,5 @@
 ﻿using System;
+using Monster;
 using Player;
 using UI;
 using UnityEngine;
@@ -83,7 +84,7 @@ public class GrabObject : MonoBehaviour, IInteractable
 
     private void WakingUp()
     {
-        Debug.Log("Menace alerted...");
+       MonsterNavigation.Alert(transform.position);
         _isAwake = true;
         meshRenderer.sharedMaterial = regularMaterialSet.awake;
         
@@ -134,8 +135,7 @@ public class GrabObject : MonoBehaviour, IInteractable
     {
         if(isInfected)
         {
-            Debug.Log("QTE");
-            Debug.Log("More battery");
+            BatteryManager.Battery.AddBattery(1);
         }
         
         Break();
