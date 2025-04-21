@@ -13,13 +13,6 @@ namespace Monster
         
         private void Update()
         {
-            var diff = MonsterData.TargetPoint - transform.position;
-            diff.y = 0;
-            if (diff.sqrMagnitude < .01f)
-            {
-                _refreshTimer = 0;
-            }
-            
             if (_refreshTimer > 0)
             {
                 _refreshTimer -= Time.deltaTime;

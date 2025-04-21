@@ -70,16 +70,10 @@ namespace ZoneGraph
                     if (distance > sqrDistance)
                         continue;
 
-                    var count = Physics.RaycastNonAlloc(bottomPoint, diff.normalized, collisionBuffer, distance, collisionMask);
-
+                    var count = Physics.CapsuleCastNonAlloc(bottomPoint, topPoint, collisionRadius, diff.normalized, collisionBuffer, Mathf.Sqrt(distance), collisionMask);
+                    
                     if (count <= 0)
                         connexions.Add(new NodeId(i));
-                    else
-                    {
-                        Debug.Log($"{collisionBuffer[0].collider.name}, {zonePoint.name}, {zonePoints[i].name}");
-                        Debug.DrawLine(bottomPoint, bottomPoint + diff, Color.red);
-                        Debug.DrawLine(topPoint, topPoint + diff, Color.red);
-                    }
                 }
 
                 var room = GetPointRoom(zonePoint.transform.position, zones);
