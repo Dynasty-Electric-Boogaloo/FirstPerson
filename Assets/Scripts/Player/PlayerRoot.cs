@@ -10,6 +10,8 @@ namespace Player
         private static PlayerRoot _instance;
         [SerializeField] private Transform cameraHolder;
         private PlayerData _playerData;
+        private Vector3 _startPosition;
+        private Quaternion _startRotation;
 
         public static Vector3 Position => _instance ? _instance.transform.position : Vector3.zero;
         
@@ -31,6 +33,9 @@ namespace Player
             {
                 behaviour.Setup(_playerData);
             }
+
+            _startPosition = transform.position;
+            _startRotation = transform.rotation;
         }
 
         private void OnDestroy()
@@ -39,6 +44,13 @@ namespace Player
                 _instance = null;
             
             _playerData.PlayerInputs.Disable();
+        }
+
+        public static void ResetPosition()
+        {
+            _instance.transform.position = _instance._startPosition;
+            _instance.transform.rotation = _instance._startRotation;
+            _instance._playerData.Rigidbody.linearVelocity = Vector3.zero;
         }
     }
 }

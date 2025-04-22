@@ -1,4 +1,5 @@
 ﻿using System;
+using Heatmap;
 using UnityEngine;
 
 namespace Monster
@@ -12,5 +13,6 @@ namespace Monster
         public bool chasing;
         public bool searching;
         public float stateTime;
+        public HeatmapData Heatmap;
     }
 }

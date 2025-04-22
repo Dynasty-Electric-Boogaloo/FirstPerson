@@ -22,7 +22,6 @@ namespace Monster
         private float _refreshTimer;
         private NodeId _targetNode;
         private RoomId _baseRoom;
-        private HeatmapData _heatmap;
         private RaycastHit _playerHit;
         private float _chaseTimer;
 
@@ -30,8 +29,6 @@ namespace Monster
         {
             if (_instance == null)
                 _instance = this;
-            
-            _heatmap = new HeatmapData("Monster map");
         }
 
         private void Start()
@@ -77,7 +74,7 @@ namespace Monster
                 return;
             
             var room = ZoneGraphManager.Pathfinding.GetPointRoom(point);
-            HeatmapManager.GetRoomHeatmap(room, ref _instance._heatmap);
+            HeatmapManager.GetRoomHeatmap(room, ref _instance.MonsterData.Heatmap);
             HeatmapManager.StartRecording(room);
             _instance._refreshTimer = 0;
             _instance.MonsterData.searching = true;
@@ -158,12 +155,12 @@ namespace Monster
                 diff.y = 0;
                 
                 if (diff.magnitude < 0.1f)
-                    _heatmap.Data.Remove(_targetNode);
+                    MonsterData.Heatmap.Data.Remove(_targetNode);
             }
 
-            if (_heatmap.Data.Count == 0)
+            if (MonsterData.Heatmap.Data.Count == 0)
             {
-                HeatmapManager.GetRoomHeatmap(_baseRoom, ref _heatmap);
+                HeatmapManager.GetRoomHeatmap(_baseRoom, ref MonsterData.Heatmap);
                 HeatmapManager.StopRecording();
                 MonsterData.searching = false;
             }
@@ -171,10 +168,10 @@ namespace Monster
             var bestNode = new NodeId(-1);
             var bestScore = float.PositiveInfinity;
 
-            foreach (var node in _heatmap.Data.Keys)
+            foreach (var node in MonsterData.Heatmap.Data.Keys)
             {
                 var distance = Vector3.Distance(nodes[node.id].Position, transform.position);
-                var heat = 1 - _heatmap.Data[node];
+                var heat = 1 - MonsterData.Heatmap.Data[node];
 
                 var score = distance * distanceWeight + heat * heatWeight;
 

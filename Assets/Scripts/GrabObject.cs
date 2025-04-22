@@ -64,9 +64,12 @@ public class GrabObject : MonoBehaviour, IInteractable
     private void ReduceTime()
     {
         _timer -= Time.deltaTime;
+
+        if (_timer > 0)
+            return;
         
-        if (_timer < 0)
-            WakingUp();
+        WakingUp();
+        _timer = maxTimeBeforeAlert;
     }
 
     public void Grab(Transform grabPoint)

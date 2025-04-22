@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using Random = System.Random;
 
@@ -146,8 +147,8 @@ namespace ZoneGraph
 
             outputGraphData.nodes = nodes;
             outputGraphData.rooms = rooms;
-
             outputGraphData.valid = true;
+            EditorUtility.SetDirty(outputGraphData);
         }
 
         public RoomId GetPointRoom(Vector3 position, ZoneBox[] zones)
