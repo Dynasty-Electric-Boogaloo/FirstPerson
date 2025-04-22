@@ -20,10 +20,8 @@ namespace Monster
         [SerializeField] private LayerMask playerMask;
         [SerializeField] private float chaseTime;
         private float _refreshTimer;
-        private NodeId _targetNode;
         private RoomId _baseRoom;
         private RaycastHit _playerHit;
-        private float _chaseTimer;
 
         private void Awake()
         {
@@ -57,15 +55,15 @@ namespace Monster
 
             _refreshTimer = refreshTime;
 
-            _targetNode = EvaluateTargetNode();
+            MonsterData.targetNode = EvaluateTargetNode();
 
-            if (_targetNode.id < 0)
+            if (MonsterData.targetNode.id < 0)
             {
                 MonsterData.targetPoint = transform.position;
                 return;
             }
             
-            MonsterData.targetPoint = ZoneGraphManager.Instance.GetNodePosition(_targetNode);
+            MonsterData.targetPoint = ZoneGraphManager.Instance.GetNodePosition(MonsterData.targetNode);
         }
 
         public static void Alert(Vector3 point)
@@ -84,9 +82,9 @@ namespace Monster
         {
             var shouldChase = CanChase();
 
-            HandleStateChange(MonsterData.chasing, shouldChase || _chaseTimer > 0);
+            HandleStateChange(MonsterData.chasing, shouldChase || MonsterData.chaseTimer > 0);
 
-            MonsterData.chasing = shouldChase || _chaseTimer > 0;
+            MonsterData.chasing = shouldChase || MonsterData.chaseTimer > 0;
             UpdateChaseTimer(shouldChase);
 
             return MonsterData.chasing ? EvaluateChasingTargetNode() : EvaluateSearchingTargetNode();
@@ -123,9 +121,11 @@ namespace Monster
             switch (stateValue)
             {
                 case 1:
+                    MonsterData.stateTime = 0;
                     HeatmapManager.StartRecording(room);
                     break;
                 case 2:
+                    MonsterData.stateTime = 0;
                     Alert(PlayerRoot.Position);
                     break;
             }
@@ -133,11 +133,11 @@ namespace Monster
 
         private void UpdateChaseTimer(bool shouldChase)
         {
-            if (_chaseTimer > 0)
-                _chaseTimer -= Time.deltaTime;
+            if (MonsterData.chaseTimer > 0)
+                MonsterData.chaseTimer -= Time.deltaTime;
 
             if (shouldChase)
-                _chaseTimer = chaseTime;
+                MonsterData.chaseTimer = chaseTime;
         }
         
         private NodeId EvaluateChasingTargetNode()
@@ -149,13 +149,13 @@ namespace Monster
         {
             var nodes = ZoneGraphManager.Instance.Nodes;
 
-            if (_targetNode.id >= 0)
+            if (MonsterData.targetNode.id >= 0)
             {
-                var diff = nodes[_targetNode.id].Position - transform.position;
+                var diff = nodes[MonsterData.targetNode.id].Position - transform.position;
                 diff.y = 0;
                 
                 if (diff.magnitude < 0.1f)
-                    MonsterData.Heatmap.Data.Remove(_targetNode);
+                    MonsterData.Heatmap.Data.Remove(MonsterData.targetNode);
             }
 
             if (MonsterData.Heatmap.Data.Count == 0)
@@ -193,7 +193,7 @@ namespace Monster
             if (!Application.isPlaying)
                 return;
 
-            Gizmos.color = _targetNode.id > 0 ? Color.white : Color.red;
+            Gizmos.color = MonsterData.targetNode.id > 0 ? Color.white : Color.red;
             Gizmos.DrawSphere(MonsterData.targetPoint, 1);
         }
     }

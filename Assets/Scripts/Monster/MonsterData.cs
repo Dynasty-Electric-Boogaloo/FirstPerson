@@ -1,6 +1,8 @@
 ﻿using System;
 using Heatmap;
 using UnityEngine;
+using UnityEngine.Serialization;
+using ZoneGraph;
 
 namespace Monster
 {
@@ -14,5 +16,7 @@ namespace Monster
         public bool searching;
         public float stateTime;
         public HeatmapData Heatmap;
+        public float chaseTimer;
+        public NodeId targetNode;
     }
 }

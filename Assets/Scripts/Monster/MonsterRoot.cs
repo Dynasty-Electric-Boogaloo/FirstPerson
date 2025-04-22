@@ -2,6 +2,7 @@
 using Heatmap;
 using Player;
 using UnityEngine;
+using ZoneGraph;
 
 namespace Monster
 {
@@ -44,6 +45,8 @@ namespace Monster
                 _monsterData.chasing = false;
                 _monsterData.searching = false;
                 _monsterData.Heatmap.Data.Clear();
+                _monsterData.chaseTimer = 0;
+                _monsterData.targetNode = new NodeId(-1);
             }
         }
     }

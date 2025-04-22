@@ -229,40 +229,60 @@ namespace ZoneGraph
         {
             var last = endId;
             var current = endId;
+            var tries = _cameFromBuffer.Count * 10;
+            
+            if (startId == endId)
+                return;
 
-            while (current != startId)
+            do
             {
                 last = current;
                 current = _cameFromBuffer[current];
+                tries--;
 
                 Debug.DrawLine(_graph.Nodes[current].Position + Vector3.up, _graph.Nodes[last].Position + Vector3.up, Color.white, .1f);
-            }
+            } while (current != startId && tries >= 0);
         }
         
         private void DrawRoomPath(int startId, int endId)
         {
             var last = endId;
             var current = endId;
+            var tries = _cameFromBuffer.Count * 10;
+            
+            if (startId == endId)
+                return;
 
-            while (current != startId)
+            do
             {
                 last = current;
                 current = _cameFromBuffer[current];
-
+                tries--;
+                
                 Debug.DrawLine(_graph.Rooms[current].Position, _graph.Rooms[last].Position, Color.green, .1f);
-            }
+            } while (current != startId && tries >= 0);
         }
 
         private int ReconstructPath(int startId, int endId)
         {
             var last = endId;
             var current = endId;
+            var tries = _cameFromBuffer.Count * 10;
 
-            while (current != startId)
+            if (startId == endId)
+                return startId;
+
+            do
             {
                 last = current;
                 current = _cameFromBuffer[current];
-            }
+                tries--;
+            } while (current != startId && tries >= 0);
+            
+            Debug.Log($"{_cameFromBuffer.Count * 10}, {tries}");
+
+            if (tries < 0)
+                return -1;
 
             return last;
         }

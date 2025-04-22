@@ -87,7 +87,7 @@ public class GrabObject : MonoBehaviour, IInteractable
 
     private void WakingUp()
     {
-       MonsterNavigation.Alert(transform.position);
+        MonsterNavigation.Alert(transform.position);
         _isAwake = true;
         meshRenderer.sharedMaterial = regularMaterialSet.awake;
         
