@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8300082443230475124}
   - component: {fileID: 3548664020859346674}
   - component: {fileID: 1958400607929490488}
+  - component: {fileID: 686168858582924260}
   m_Layer: 6
   m_Name: PF_PickableVase_01
   m_TagString: Untagged
@@ -48,21 +49,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3b26386d4354140a0be95c4772cca84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meshRenderer: {fileID: 2444476447147424138}
-  regularMaterialSet:
-    normal: {fileID: 2100000, guid: 42e2f3004d6cd804584b5cc95336b5d4, type: 2}
-    revealed: {fileID: 2100000, guid: 9aded32c167b34e4b9deee61c0676255, type: 2}
-    awake: {fileID: 2100000, guid: 7c1ec54872b23d1468b2723c1d45848f, type: 2}
-  isInfected: 0
-  maxTimeBeforeAlert: 15
   breakableLayers:
     serializedVersion: 2
     m_Bits: 8
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 0
   breakRadius: 0.2
-  checkPlayerRadius: 2
 --- !u!54 &3548664020859346674
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -111,6 +101,29 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.2, y: 0.45, z: 0.2}
   m_Center: {x: 0, y: 0.1, z: 0}
+--- !u!114 &686168858582924260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114577427182245494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e5695be090262e4ab7cedb3e869b909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshRenderer: {fileID: 2444476447147424138}
+  regularMaterialSet:
+    normal: {fileID: 2100000, guid: 42e2f3004d6cd804584b5cc95336b5d4, type: 2}
+    revealed: {fileID: 2100000, guid: 9aded32c167b34e4b9deee61c0676255, type: 2}
+    awake: {fileID: 2100000, guid: 7c1ec54872b23d1468b2723c1d45848f, type: 2}
+  isInfected: 1
+  maxTimeBeforeAlert: 15
+  checkPlayerRadius: 1
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &3765680491263531146
 GameObject:
   m_ObjectHideFlags: 0

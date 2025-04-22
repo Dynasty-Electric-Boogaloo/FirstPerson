@@ -38,11 +38,11 @@ namespace Player
         private float CurrentBatteryMax  => _special ? _batteryManager.GetCurrentPowerMax() : batteryMax;
         private RaycastHit[] _hits;
         
-        private readonly HashSet<GrabObject>[] _lightObjectBuffers = new HashSet<GrabObject>[2];
+        private readonly HashSet<Mimic>[] _lightObjectBuffers = new HashSet<Mimic>[2];
         private int _bufferSelection;
         
-        private HashSet<GrabObject> _lastUpdateLightObjects => _lightObjectBuffers[1 ^ _bufferSelection];
-        private HashSet<GrabObject> _currentLightObjects => _lightObjectBuffers[_bufferSelection];
+        private HashSet<Mimic> _lastUpdateLightObjects => _lightObjectBuffers[1 ^ _bufferSelection];
+        private HashSet<Mimic> _currentLightObjects => _lightObjectBuffers[_bufferSelection];
         
 
         private void Start()
@@ -53,8 +53,8 @@ namespace Player
             light.color = lightColor;
             SetLightVisible(false);
 
-            _lightObjectBuffers[0] = new HashSet<GrabObject>();
-            _lightObjectBuffers[1] = new HashSet<GrabObject>();
+            _lightObjectBuffers[0] = new HashSet<Mimic>();
+            _lightObjectBuffers[1] = new HashSet<Mimic>();
             
             if (GetComponent<BatteryManager>())
                 _batteryManager = GetComponent<BatteryManager>();
@@ -125,7 +125,7 @@ namespace Player
                 if (!(Vector3.Dot(transform.forward, normalizedLightToObject) > coneRadius)) 
                     continue;
                 
-                var element = _hits[index].transform.GetComponent<GrabObject>();
+                var element = _hits[index].transform.GetComponent<Mimic>();
                 _currentLightObjects.Add(element);
                 element.SetLightened(true);
             }

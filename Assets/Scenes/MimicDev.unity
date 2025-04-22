@@ -34243,8 +34243,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e2867c1e9b1b5459fe1ba5124445aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1787759524}
   inputShow: {fileID: 8693008517090284894, guid: 9c7baf35aa1c3c448b323f99e3893d92, type: 3}
+  normalSprite: {fileID: 0}
+  grabbingSprite: {fileID: 0}
 --- !u!1 &1487266423
 GameObject:
   m_ObjectHideFlags: 0
@@ -39005,7 +39006,8 @@ PrefabInstance:
       propertyPath: isInfected
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 686168858582924260, guid: 0185a7430b688a7488e4afe3bc3a6dae, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

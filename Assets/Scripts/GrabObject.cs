@@ -5,30 +5,14 @@ using UI;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class GrabObject : MonoBehaviour, IInteractable
+public class GrabObject : Interactable, IInteractable
 {
     
-    [Serializable]
-    private struct MaterialSet
-    {
-        public Material normal;
-        public Material revealed;
-        public Material awake;
-    }
-        
-    [SerializeField] private MeshRenderer meshRenderer;
-    [SerializeField] private MaterialSet regularMaterialSet;
-    [SerializeField] private bool isInfected;
-    [SerializeField] private float maxTimeBeforeAlert = 15;
     [SerializeField] private LayerMask breakableLayers;
-    [SerializeField] private LayerMask playerLayer;
     [SerializeField] private float breakRadius = 0.2f;
-    [SerializeField] private float checkPlayerRadius = 1;
     private Collider _collider;
     private Rigidbody _rigidbody;
-    private float _timer;
     private bool _isThrown;
-    private bool _isAwake;
 
     public bool IsThrown => _isThrown;
 
@@ -38,45 +22,15 @@ public class GrabObject : MonoBehaviour, IInteractable
         _rigidbody = GetComponent<Rigidbody>();
         Transform = transform;
         Highlight(false);
-        _timer = maxTimeBeforeAlert;
-        meshRenderer.enabled = isInfected;
-        meshRenderer.material = regularMaterialSet.normal;
-        
     }
     private void OnDrawGizmosSelected()
     {
-        Gizmos.color = new Color(1, 1, 0, 0.75F);
-        Gizmos.DrawWireSphere(transform.position, checkPlayerRadius);
-        
         Gizmos.color = new Color(1, 0, 0, 0.75F);
         Gizmos.DrawWireSphere(transform.position, breakRadius);
     }
 
-    /// <summary>
-    /// Change l'apparence des objets en fonction de s'ils sont infecté et dans la lumiere spéciale ou non. 
-    /// </summary>
-    public void SetLightened(bool inLight)
-    {
-        if(_isAwake) return;
-        meshRenderer.sharedMaterial = isInfected && inLight ? regularMaterialSet.revealed : regularMaterialSet.normal;
-    }
-
-    private void ReduceTime()
-    {
-        _timer -= Time.deltaTime;
-
-        if (_timer > 0)
-            return;
-        
-        WakingUp();
-        _timer = maxTimeBeforeAlert;
-    }
-
     public void Grab(Transform grabPoint)
     {
-        if(isInfected)
-            WakingUp();
-        
         Highlight(false);
         transform.SetParent(grabPoint, false);
         transform.localPosition = Vector3.zero;
@@ -84,16 +38,7 @@ public class GrabObject : MonoBehaviour, IInteractable
         _collider.enabled = false;
         _rigidbody.constraints = RigidbodyConstraints.FreezeAll;
     }
-
-    private void WakingUp()
-    {
-        MonsterNavigation.Alert(transform.position);
-        _isAwake = true;
-        meshRenderer.sharedMaterial = regularMaterialSet.awake;
-        
-        //possible sound design ?
-    }
-
+    
     private void BreakOnImpact()
     {
         if (!_isThrown) 
@@ -109,43 +54,10 @@ public class GrabObject : MonoBehaviour, IInteractable
 
     private void FixedUpdate()
     {
-        AlertCreature();
         BreakOnImpact();
     }
-
-    private void AlertCreature()
-    {
-        if(!isInfected) 
-            return;
-        
-        var hitColliders = new Collider[1];
-        var numColliders = Physics.OverlapSphereNonAlloc(transform.position, checkPlayerRadius, hitColliders, playerLayer);
-        
-        if (numColliders > 0) 
-            ReduceTime();
-    }
     
-
-    public void Highlight(bool canInteract)
-    {
-        if(!UiManager.UserInterface)
-            return;
-        if(canInteract) UiManager.UserInterface.AddInput(this);
-        else UiManager.UserInterface.RemoveInput(this);
-    }
-
-    public void Interact()
-    {
-        if(isInfected)
-        {
-            BatteryManager.Battery.AddBattery(1);
-        }
-        
-        Break();
-    }
-
     public Transform Transform { get; set; }
-
 
     public void Ungrab()
     {
@@ -173,6 +85,12 @@ public class GrabObject : MonoBehaviour, IInteractable
         
         gameObject.SetActive(false);
     }
+
+    public override bool IsInteractable()
+    {
+        return !_isThrown;
+    }
     
-    public bool GetIsInfected() => isInfected;
+    
+
 }
