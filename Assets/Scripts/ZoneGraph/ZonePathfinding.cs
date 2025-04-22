@@ -279,8 +279,6 @@ namespace ZoneGraph
                 tries--;
             } while (current != startId && tries >= 0);
             
-            Debug.Log($"{_cameFromBuffer.Count * 10}, {tries}");
-
             if (tries < 0)
                 return -1;
 
