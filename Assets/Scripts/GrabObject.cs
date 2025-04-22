@@ -64,9 +64,12 @@ public class GrabObject : MonoBehaviour, IInteractable
     private void ReduceTime()
     {
         _timer -= Time.deltaTime;
+
+        if (_timer > 0)
+            return;
         
-        if (_timer < 0)
-            WakingUp();
+        WakingUp();
+        _timer = maxTimeBeforeAlert;
     }
 
     public void Grab(Transform grabPoint)
@@ -84,7 +87,7 @@ public class GrabObject : MonoBehaviour, IInteractable
 
     private void WakingUp()
     {
-       MonsterNavigation.Alert(transform.position);
+        MonsterNavigation.Alert(transform.position);
         _isAwake = true;
         meshRenderer.sharedMaterial = regularMaterialSet.awake;
         

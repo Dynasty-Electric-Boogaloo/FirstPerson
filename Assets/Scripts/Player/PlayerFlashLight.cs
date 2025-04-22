@@ -84,10 +84,12 @@ namespace Player
         {
             if (_playerInput.Controls.UseFlash.WasPressedThisFrame())
                SetLightVisible(!_isOn);
-            
-            if (_playerInput.Controls.ReloadFlash.IsPressed())
-                _battery += addByButtonPressed;
-            
+
+            var reload = _playerInput.Controls.ReloadFlash.IsPressed();
+            PlayerData.Crouched = reload;
+            if (reload)
+                _battery += addByButtonPressed * Time.deltaTime;
+
             if (_battery > batteryMax)
                 _battery = batteryMax;
 
