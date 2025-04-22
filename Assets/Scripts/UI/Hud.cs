@@ -25,12 +25,8 @@ namespace UI
             if (!batterySlider) return;
             batterySlider.gameObject.SetActive(isOn);
             batterySliderColor.color = special ? specialLightColor : lightColor;
-
-            if (special)
-            {
-                batteryImage.fillAmount = BatteryManager.Battery.GetCurrentBatteryUnits() /
-                               BatteryManager.Battery.GetMaxBatteryUnits();
-            }
+            batteryImage.gameObject.SetActive(special);
+            
 
         }
 
@@ -39,10 +35,7 @@ namespace UI
             if (!batterySlider) return;
             batterySlider.value = currentBattery / currentMax;
             if (special)
-            {
-                batteryImage.fillAmount = BatteryManager.Battery.GetCurrentBatteryUnits() /
-                                          BatteryManager.Battery.GetMaxBatteryUnits();
-            }
+                batteryImage.fillAmount = BatteryManager.Battery.GetCurrentBattery() / BatteryManager.Battery.GetMaxBattery();
         }
         
     }
