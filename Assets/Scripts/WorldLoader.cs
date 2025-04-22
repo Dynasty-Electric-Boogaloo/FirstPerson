@@ -16,7 +16,7 @@ public class WorldLoader : MonoBehaviour
     {
         foreach (var sceneGroup in sceneGroups)
         {
-            SceneLoader.LoadSceneGroupAsync(sceneGroup, LoadSceneMode.Additive);
+            SceneLoader.LoadSceneGroup(sceneGroup, LoadSceneMode.Additive);
         }
     }
 }

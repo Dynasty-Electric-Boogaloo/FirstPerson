@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &5713249328356679503
 Transform:
@@ -84,6 +84,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: da47c3833c102b24b8d7e1c52c011bf1, type: 3}
       propertyPath: m_Name
       value: SM_ChestCover_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: da47c3833c102b24b8d7e1c52c011bf1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -175,6 +179,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 71fb8d9b95e59d144a1b402c2acec32e, type: 3}
       propertyPath: m_Name
       value: SM_Chest_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 71fb8d9b95e59d144a1b402c2acec32e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

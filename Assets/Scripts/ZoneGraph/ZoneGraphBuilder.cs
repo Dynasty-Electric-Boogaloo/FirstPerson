@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using Object = UnityEngine.Object;
 using Random = System.Random;
 
 namespace ZoneGraph
@@ -22,14 +24,35 @@ namespace ZoneGraph
             outputGraphData.valid = false;
 
             var zones = FindObjectsByType<ZoneBox>(FindObjectsInactive.Exclude, FindObjectsSortMode.InstanceID);
-            var zonePoints = FindObjectsByType<ZonePoint>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+            var zonePoints = new List<ZonePoint>(FindObjectsByType<ZonePoint>(FindObjectsInactive.Exclude, FindObjectsSortMode.None));
             
-            var nodes = new List<SerializableNode>(zonePoints.Length);
+            var nodes = new List<SerializableNode>(zonePoints.Count);
             var rooms = new List<SerializableRoom>(zones.Length);
             
             for (var i = 0; i < zones.Length; i++)
             {
                 zones[i].zoneId = i + 1;
+            }
+
+            for (var i = 0; i < zonePoints.Count - 1; i++)
+            {
+                for (var j = i + 1; j < zonePoints.Count; j++)
+                {
+                    if (zonePoints[i].transform.position != zonePoints[j].transform.position)
+                        continue;
+
+                    if (zonePoints[i].Heat > zonePoints[j].Heat)
+                    {
+                        DestroyImmediate(zonePoints[j].gameObject, true);
+                        zonePoints.RemoveAt(j--);
+                    }
+                    else
+                    {
+                        DestroyImmediate(zonePoints[i].gameObject, true);
+                        zonePoints.RemoveAt(i--);
+                        j--;
+                    }
+                }
             }
 
             var sqrDistance = connexionDistance * connexionDistance;
@@ -53,14 +76,15 @@ namespace ZoneGraph
                 });
             }
 
-            foreach (var zonePoint in zonePoints)
+            for (var j = 0; j < zonePoints.Count; j++)
             {
+                var zonePoint = zonePoints[j];
                 var connexions = new HashSet<NodeId>();
             
                 var bottomPoint = zonePoint.transform.position + Vector3.up * collisionOffset;
                 var topPoint = zonePoint.transform.position + Vector3.up * (collisionOffset + collisionHeight);
             
-                for (var i = 0; i < zonePoints.Length; i++)
+                for (var i = 0; i < zonePoints.Count; i++)
                 {
                     if (zonePoint == zonePoints[i])
                         continue;
@@ -79,15 +103,34 @@ namespace ZoneGraph
                 var room = GetPointRoom(zonePoint.transform.position, zones);
 
                 if (room.id == 0)
-                    Debug.LogWarning($"Node {zonePoint.name} is not in any room! Please adjust _rooms or the node's position!");
-                
-                rooms[room.id].nodes.Add(new NodeId(nodes.Count));
+                    Debug.LogWarning($"Node {zonePoint.name} is not in any room! Please adjust rooms or the node's position!");
 
+                if (connexions.Count <= 0)
+                {
+                    foreach (var node in nodes)
+                    {
+                        for (var i = 0; i < node.connexions.Count; i++)
+                        {
+                            if (node.connexions[i].id < j)
+                                continue;
+                            
+                            var nodeId = node.connexions[i];
+                            nodeId.id--;
+                            node.connexions[i] = nodeId;
+                        }
+                    }
+                    
+                    zonePoints.RemoveAt(j--);
+                    continue;
+                }
+
+                rooms[room.id].nodes.Add(new NodeId(nodes.Count));
+                
                 nodes.Add(
                     new SerializableNode()
                     {
                         position = zonePoint.transform.position,
-                        heat = zonePoint.Heat,
+                        heat = Mathf.Clamp01(zonePoint.Heat),
                         room = room,
                         connexions = new List<NodeId>(connexions)
                     });
@@ -98,6 +141,7 @@ namespace ZoneGraph
                 foreach (var connexion in nodes[i].connexions)
                 {
                     var nodeRoom = nodes[i].room;
+                    
                     var otherRoom = nodes[connexion.id].room;
                     
                     if (nodeRoom == otherRoom)
@@ -125,8 +169,8 @@ namespace ZoneGraph
 
             outputGraphData.nodes = nodes;
             outputGraphData.rooms = rooms;
-
             outputGraphData.valid = true;
+            EditorUtility.SetDirty(outputGraphData);
         }
 
         public RoomId GetPointRoom(Vector3 position, ZoneBox[] zones)
@@ -168,7 +212,7 @@ namespace ZoneGraph
                     Gizmos.color = Color.red;
                 }
             
-                Gizmos.DrawSphere(outputGraphData.nodes[i].position, .25f + outputGraphData.nodes[i].heat * .25f);
+                Gizmos.DrawSphere(outputGraphData.nodes[i].position, .25f + outputGraphData.nodes[i].heat * 2.5f);
                 Gizmos.color = Color.white;
                 foreach (var connexion in outputGraphData.nodes[i].connexions)
                 {
