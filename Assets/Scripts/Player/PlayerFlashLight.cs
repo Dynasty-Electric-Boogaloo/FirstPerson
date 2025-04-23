@@ -4,6 +4,7 @@ using System.Linq;
 using Player;
 using UI;
 using UnityEngine;
+using UnityEngine.InputSystem.Interactions;
 using UnityEngine.UI;
 
 namespace Player
@@ -62,7 +63,6 @@ namespace Player
 
         private void Update()
         {
-            CheckSwitch();
             LightUpdate();
             UpdateInfectedObjects();
         }
@@ -82,8 +82,22 @@ namespace Player
 
         private void LightUpdate()
         {
-            if (_playerInput.Controls.UseFlash.WasPressedThisFrame())
-               SetLightVisible(!_isOn);
+            _playerInput.Controls.UseFlash.performed  +=
+                context =>
+                {
+                    switch (context.interaction)
+                    {
+                        case SlowTapInteraction:
+                            SetLightVisible(!_isOn);
+                            break;
+                        case TapInteraction when _isOn:
+                            CheckSwitch();
+                            break;
+                        case TapInteraction:
+                            SetLightVisible(true);
+                            break;
+                    }
+                };
 
             var reload = _playerInput.Controls.ReloadFlash.IsPressed();
             PlayerData.Crouched = reload;
@@ -147,17 +161,8 @@ namespace Player
             if(!_batteryManager) 
                 return;
 
-            if (_playerInput.Controls.UseObject1.WasPressedThisFrame())
-            {
-                _special = false;
-                light.color = lightColor;
-            }
-            
-            if (_playerInput.Controls.UseObject2.WasPressedThisFrame())
-            {
-                _special = true;
-                light.color = specialLightColor;
-            }
+            _special = !_special;
+            light.color =  light.color == lightColor ? specialLightColor : lightColor;
             
             if(hud)
                 hud.SetFlashLight(_special, _isOn);

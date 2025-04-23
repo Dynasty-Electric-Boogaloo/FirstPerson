@@ -27,7 +27,7 @@ namespace UI
             
             batterySlider.gameObject.SetActive(isOn);
             batterySliderColor.color = special ? specialLightColor : lightColor;
-            batteryImage.gameObject.SetActive(special);
+            batteryImage.gameObject.SetActive(special && isOn);
         }
 
         public void UpdateBattery(float currentBattery, float currentMax, bool special)
