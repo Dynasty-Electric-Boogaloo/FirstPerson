@@ -15,4 +15,11 @@ public class Interactable : MonoBehaviour
     {
         return true;
     }
+    
+    public virtual void Break()
+    {
+        //ajouter son de casse quand on aura le sound system
+        
+        gameObject.SetActive(false);
+    }
 }

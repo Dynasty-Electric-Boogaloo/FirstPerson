@@ -107,6 +107,15 @@ namespace Player
                 grab.Grab(grabPoint);
                 _grabbedObject = grab;
             }
+
+            if (!PlayerData.PlayerInputs.Controls.Extract.WasPressedThisFrame()) return;
+            {
+                //QTE
+                if (_selectedObject.TryGetComponent(out Mimic mimic))
+                    mimic.DestroyMimic();
+                
+                _selectedObject.Break();
+            }
         }
         
         private bool TryUngrab()

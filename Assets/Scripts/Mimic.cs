@@ -59,6 +59,12 @@ public class Mimic : MonoBehaviour
     {
         CheckForPlayer();
     }
+
+    public void DestroyMimic()
+    {
+        if(!BatteryManager.Battery) return;
+        BatteryManager.Battery.AddBattery(1);
+    }
     
     public void WakingUp()
     {
@@ -68,6 +74,12 @@ public class Mimic : MonoBehaviour
         meshRenderer.sharedMaterial = regularMaterialSet.awake;
         
         //possible sound design ?
+    }
+    
+    public void GetInfected()
+    {
+        isInfected = true;
+        meshRenderer.enabled = isInfected;
     }
     
     private void CheckForPlayer()

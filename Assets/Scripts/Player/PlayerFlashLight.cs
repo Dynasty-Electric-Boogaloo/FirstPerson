@@ -71,6 +71,8 @@ namespace Player
         {
             foreach (var prop in _lastUpdateLightObjects)
             {
+                if(!prop) return;
+                
                 if (_currentLightObjects.Contains(prop)) 
                     continue;
                 prop.SetLightened(false);
@@ -140,6 +142,9 @@ namespace Player
                     continue;
                 
                 var element = _hits[index].transform.GetComponent<Mimic>();
+                
+                if(!element) continue;
+                
                 _currentLightObjects.Add(element);
                 element.SetLightened(true);
             }

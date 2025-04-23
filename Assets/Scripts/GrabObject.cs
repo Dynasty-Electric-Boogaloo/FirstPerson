@@ -79,13 +79,6 @@ public class GrabObject : Interactable, IInteractable
     }
     
 
-    private void Break()
-    {
-        //ajouter son de casse quand on aura le sound system
-        
-        gameObject.SetActive(false);
-    }
-
     public override bool IsInteractable()
     {
         return !_isThrown;
