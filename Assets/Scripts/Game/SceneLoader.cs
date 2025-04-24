@@ -22,9 +22,9 @@ namespace Game
             if (index < 0)
                 return;
             
-            LoadSceneGroupAsync(index, LoadSceneMode.Single);
+            LoadSceneGroup(index, LoadSceneMode.Single);
             #else
-            LoadSceneGroupAsync(0, LoadSceneMode.Single);
+            LoadSceneGroup(0, LoadSceneMode.Single);
             #endif
         }
 
@@ -48,7 +48,7 @@ namespace Game
             return -1;
         }
 
-        public static void LoadSceneGroupAsync(int index, LoadSceneMode mode)
+        public static void LoadSceneGroup(int index, LoadSceneMode mode)
         {
             if (_instance == null)
             {
@@ -70,14 +70,14 @@ namespace Game
                 return;
             }
 
-            SceneManager.LoadSceneAsync(sceneId.ids[0], mode);
+            SceneManager.LoadScene(sceneId.ids[0], mode);
 
             for (var i = 1; i < 3; i++)
             {
                 if (sceneId.ids[i] < 0)
                     return;
                 
-                SceneManager.LoadSceneAsync(sceneId.ids[i], LoadSceneMode.Additive);
+                SceneManager.LoadScene(sceneId.ids[i], LoadSceneMode.Additive);
             }
         }
 

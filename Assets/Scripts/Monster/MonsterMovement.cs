@@ -37,9 +37,9 @@ namespace Monster
 
         private void UpdateMovement()
         {
-            var moveConfig = MonsterData.Chasing ? chaseConfig : MonsterData.Searching ? searchConfig : patrolConfig;
+            var moveConfig = MonsterData.chasing ? chaseConfig : MonsterData.searching ? searchConfig : patrolConfig;
             
-            var move = MonsterData.TargetPoint - transform.position;
+            var move = MonsterData.targetPoint - transform.position;
             move.y = 0;
             move.Normalize();
 
@@ -48,16 +48,16 @@ namespace Monster
                 move = Vector2.zero;
             }
             
-            var targetMovement = move * moveConfig.speed.Evaluate(MonsterData.StateTime);
+            var targetMovement = move * moveConfig.speed.Evaluate(MonsterData.stateTime);
 
-            var linearVelocity = MonsterData.Rigidbody.linearVelocity;
+            var linearVelocity = MonsterData.rigidbody.linearVelocity;
             linearVelocity.y = 0;
             var diff = targetMovement - linearVelocity;
             var acceleration = Vector3.Dot(targetMovement, diff) <= 0
                 ? moveConfig.deceleration
                 : moveConfig.acceleration;
 
-            MonsterData.Rigidbody.AddForce(diff * acceleration, ForceMode.Acceleration);
+            MonsterData.rigidbody.AddForce(diff * acceleration, ForceMode.Acceleration);
 
             if (linearVelocity.magnitude < 0.1f)
                 return;
@@ -71,13 +71,13 @@ namespace Monster
 
         private void UpdateGravity()
         {
-            var groundCheckLength = MonsterData.Grounded ? groundedGroundCheckLength : airborneGroundCheckLength;
-            _groundCheckRay.origin = MonsterData.Rigidbody.position;
+            var groundCheckLength = MonsterData.grounded ? groundedGroundCheckLength : airborneGroundCheckLength;
+            _groundCheckRay.origin = MonsterData.rigidbody.position;
             _groundCheckRay.direction = Vector3.down;
 
-            MonsterData.Grounded = Physics.SphereCast(_groundCheckRay, groundCheckRadius, out _sphereHitInfo, groundCheckLength, groundMask);
+            MonsterData.grounded = Physics.SphereCast(_groundCheckRay, groundCheckRadius, out _sphereHitInfo, groundCheckLength, groundMask);
 
-            if (!MonsterData.Grounded)
+            if (!MonsterData.grounded)
             {
                 AccelerateGravity();
                 return;
@@ -88,23 +88,23 @@ namespace Monster
 
         private void AccelerateGravity()
         {
-            var linearVelocity = MonsterData.Rigidbody.linearVelocity;
+            var linearVelocity = MonsterData.rigidbody.linearVelocity;
             linearVelocity.y = Mathf.Max(linearVelocity.y + gravity * Time.deltaTime, maxFallSpeed);
-            MonsterData.Rigidbody.linearVelocity = linearVelocity;
+            MonsterData.rigidbody.linearVelocity = linearVelocity;
         }
 
         private void GroundPlayer(float groundCheckLength)
         { ;
-            var linearVelocity = MonsterData.Rigidbody.linearVelocity;
+            var linearVelocity = MonsterData.rigidbody.linearVelocity;
             linearVelocity.y = 0;
-            MonsterData.Rigidbody.linearVelocity = linearVelocity;
+            MonsterData.rigidbody.linearVelocity = linearVelocity;
 
             var rayHit = Physics.Raycast(_groundCheckRay, out _rayHitInfo, groundCheckLength + .5f, groundMask);
             var hitInfo = rayHit ? _rayHitInfo : _sphereHitInfo;
 
-            var position = MonsterData.Rigidbody.position;
+            var position = MonsterData.rigidbody.position;
             position.y = Mathf.Lerp(position.y, hitInfo.point.y + groundOffset, groundLerpSpeed * Time.deltaTime);
-            MonsterData.Rigidbody.position = position;
+            MonsterData.rigidbody.position = position;
         }
     }
 }

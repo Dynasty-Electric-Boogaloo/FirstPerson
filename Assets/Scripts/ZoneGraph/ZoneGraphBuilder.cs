@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using Object = UnityEngine.Object;
 using Random = System.Random;
 
 namespace ZoneGraph
@@ -30,6 +32,27 @@ namespace ZoneGraph
             for (var i = 0; i < zones.Length; i++)
             {
                 zones[i].zoneId = i + 1;
+            }
+
+            for (var i = 0; i < zonePoints.Count - 1; i++)
+            {
+                for (var j = i + 1; j < zonePoints.Count; j++)
+                {
+                    if (zonePoints[i].transform.position != zonePoints[j].transform.position)
+                        continue;
+
+                    if (zonePoints[i].Heat > zonePoints[j].Heat)
+                    {
+                        DestroyImmediate(zonePoints[j].gameObject, true);
+                        zonePoints.RemoveAt(j--);
+                    }
+                    else
+                    {
+                        DestroyImmediate(zonePoints[i].gameObject, true);
+                        zonePoints.RemoveAt(i--);
+                        j--;
+                    }
+                }
             }
 
             var sqrDistance = connexionDistance * connexionDistance;
@@ -146,8 +169,8 @@ namespace ZoneGraph
 
             outputGraphData.nodes = nodes;
             outputGraphData.rooms = rooms;
-
             outputGraphData.valid = true;
+            EditorUtility.SetDirty(outputGraphData);
         }
 
         public RoomId GetPointRoom(Vector3 position, ZoneBox[] zones)

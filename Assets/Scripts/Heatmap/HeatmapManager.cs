@@ -55,6 +55,9 @@ namespace Heatmap
             var playerRoom = ZoneGraphManager.Pathfinding.GetPointRoom(PlayerRoot.Position);
             var playerNode = ZoneGraphManager.Pathfinding.GetPointClosestNode(PlayerRoot.Position, playerRoom);
 
+            if (playerNode.id < 0)
+                return;
+
             var heatData = _roomMaps[_currentRecording].Data;
 
             heatData.TryAdd(playerNode, 0);
