@@ -14,22 +14,22 @@ namespace UI
         
         private Interactable _current;
         
-        private static UiManager _userInterface;
+        private static UiManager _instance;
         
         private void Awake()
         {
-            if (_userInterface == null) 
-                _userInterface = this;
+            if (_instance == null) 
+                _instance = this;
             else 
                 Destroy(this);
         }
-        
-        public void CanInteract(Interactable interactable)
+
+        public static void CanInteract(Interactable interactable)
         {
-            if(interactable == null) 
+            if(!interactable || !_instance) 
                 return;
             
-            _current = interactable;
+            _instance._current = interactable;
         }
     }
 }

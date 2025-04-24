@@ -7,7 +7,6 @@ using UnityEngine.Serialization;
 
 public class GrabObject : Interactable
 {
-    
     [SerializeField] private LayerMask breakableLayers;
     [SerializeField] private float breakRadius = 0.2f;
     private Collider _collider;
@@ -20,14 +19,9 @@ public class GrabObject : Interactable
         _collider = GetComponent<Collider>();
         _rigidbody = GetComponent<Rigidbody>();
         Highlight(false);
+
     }
-    
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = new Color(1, 0, 0, 0.75F);
-        Gizmos.DrawWireSphere(transform.position, breakRadius);
-    }
-    
+
     private void FixedUpdate()
     {
         BreakOnImpact();
@@ -76,5 +70,11 @@ public class GrabObject : Interactable
         Ungrab();
         _rigidbody.linearVelocity = velocity;
         _isThrown = true;
+    }
+    
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = new Color(1, 0, 0, 0.75F);
+        Gizmos.DrawWireSphere(transform.position, breakRadius);
     }
 }

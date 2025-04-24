@@ -84,8 +84,7 @@ namespace Player
 
         private void TryInteract()
         {
-            if (UiManager.UserInterface)
-                UiManager.UserInterface.CanInteract(_selectedObject);
+            UiManager.CanInteract(_selectedObject);
 
 
             if (PlayerData.PlayerInputs.Controls.Interact.WasPressedThisFrame())
