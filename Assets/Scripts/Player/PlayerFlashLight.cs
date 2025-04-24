@@ -29,7 +29,6 @@ namespace Player
         [SerializeField] private float coneRadius = 0.75f;
         [SerializeField] private int maxObjectInSight = 10;
         
-        //Private variables
         private float _battery;
         private bool _isOn;
         private bool _special;
@@ -66,22 +65,6 @@ namespace Player
             LightUpdate();
             UpdateInfectedObjects();
         }
-
-        private void UpdateInfectedObjects()
-        {
-            foreach (var prop in _lastUpdateLightObjects)
-            {
-                if(!prop) return;
-                
-                if (_currentLightObjects.Contains(prop)) 
-                    continue;
-                prop.SetLightened(false);
-            }
-
-            _bufferSelection ^= 1;
-            _currentLightObjects.Clear();
-        }
-
         private void LightUpdate()
         {
             _playerInput.Controls.UseFlash.performed  +=
@@ -126,7 +109,7 @@ namespace Player
             
             RevealObjects();
         }
-
+        
         private void RevealObjects()
         {
             if (!_special) 
@@ -138,16 +121,33 @@ namespace Player
             {
                 var normalizedLightToObject = Vector3.Normalize(_hits[index].transform.position - origin);
 
-                if (!(Vector3.Dot(transform.forward, normalizedLightToObject) > coneRadius)) 
+                if (Vector3.Dot(transform.forward, normalizedLightToObject) <= coneRadius) 
                     continue;
                 
                 var element = _hits[index].transform.GetComponent<Mimic>();
                 
-                if(!element) continue;
+                if(!element) 
+                    continue;
                 
                 _currentLightObjects.Add(element);
                 element.SetLightened(true);
             }
+        }
+
+        private void UpdateInfectedObjects()
+        {
+            foreach (var prop in _lastUpdateLightObjects)
+            {
+                if(!prop) 
+                    return;
+                
+                if (_currentLightObjects.Contains(prop)) 
+                    continue;
+                prop.SetLightened(false);
+            }
+
+            _bufferSelection ^= 1;
+            _currentLightObjects.Clear();
         }
 
         private void SetLightVisible(bool visible)

@@ -15,6 +15,7 @@ namespace Player
         [SerializeField] private float grabSize = 0.1f;
         private Interactable _selectedObject;
         private GrabObject _grabbedObject;
+        private Mimic _mimic;
         private RaycastHit _raycastHit;
 
         private void Update()
@@ -83,23 +84,16 @@ namespace Player
 
         private void TryInteract()
         {
-            if (!_selectedObject)
-            {
-                if (UiManager.UserInterface)
-                    UiManager.UserInterface.CanInteract(false, _selectedObject);
-                return;
-            }
-
             if (UiManager.UserInterface)
-                UiManager.UserInterface.CanInteract(true, _selectedObject);
+                UiManager.UserInterface.CanInteract(_selectedObject);
 
 
             if (PlayerData.PlayerInputs.Controls.Interact.WasPressedThisFrame())
             {
                 _selectedObject.Interact();
                 
-                if (_selectedObject.TryGetComponent(out Mimic mimic)) 
-                    mimic.WakingUp();
+                if (_selectedObject.TryGetComponent(out _mimic)) 
+                    _mimic.WakingUp();
 
                 if (_selectedObject is not GrabObject grab) 
                     return;
@@ -108,14 +102,14 @@ namespace Player
                 _grabbedObject = grab;
             }
 
-            if (!PlayerData.PlayerInputs.Controls.Extract.WasPressedThisFrame()) return;
-            {
-                //QTE
-                if (_selectedObject.TryGetComponent(out Mimic mimic))
-                    mimic.DestroyMimic();
+            if (!PlayerData.PlayerInputs.Controls.Extract.WasPressedThisFrame()) 
+                return;
+            
+            //QTE
+            if (_selectedObject.TryGetComponent(out _mimic))
+                _mimic.DestroyMimic();
                 
-                _selectedObject.Break();
-            }
+            _selectedObject.Break();
         }
         
         private bool TryUngrab()
@@ -142,12 +136,10 @@ namespace Player
         private void SelectObject(Interactable interactable)
         {
             if (_selectedObject != null)
-            {
                 _selectedObject.Highlight(false);
-            }
             
             _selectedObject = interactable;
-            _selectedObject.Highlight(true);
+            _selectedObject.Highlight(interactable);
         }
 
         private void DeselectObject()

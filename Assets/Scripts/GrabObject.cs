@@ -5,7 +5,7 @@ using UI;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class GrabObject : Interactable, IInteractable
+public class GrabObject : Interactable
 {
     
     [SerializeField] private LayerMask breakableLayers;
@@ -13,22 +13,47 @@ public class GrabObject : Interactable, IInteractable
     private Collider _collider;
     private Rigidbody _rigidbody;
     private bool _isThrown;
-
-    public bool IsThrown => _isThrown;
+    private Collider[] hitColliders = new Collider[1];
 
     private void Awake()
     {
         _collider = GetComponent<Collider>();
         _rigidbody = GetComponent<Rigidbody>();
-        Transform = transform;
         Highlight(false);
     }
+    
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = new Color(1, 0, 0, 0.75F);
         Gizmos.DrawWireSphere(transform.position, breakRadius);
     }
+    
+    private void FixedUpdate()
+    {
+        BreakOnImpact();
+    }
 
+    public override bool IsInteractable()
+    {
+        return !_isThrown;
+    }
+    
+    public Bounds GetBounds()
+    {
+        return _collider ? _collider.bounds : default;
+    }
+    
+    private void BreakOnImpact()
+    {
+        if (!_isThrown) 
+            return;
+        
+        var numColliders = Physics.OverlapSphereNonAlloc(transform.position, breakRadius, hitColliders, breakableLayers);
+        
+        if(numColliders > 0)
+            Break();
+    }
+    
     public void Grab(Transform grabPoint)
     {
         Highlight(false);
@@ -39,26 +64,6 @@ public class GrabObject : Interactable, IInteractable
         _rigidbody.constraints = RigidbodyConstraints.FreezeAll;
     }
     
-    private void BreakOnImpact()
-    {
-        if (!_isThrown) 
-            return;
-        
-        var hitColliders = new Collider[1];
-        var numColliders = Physics.OverlapSphereNonAlloc(transform.position, breakRadius, hitColliders, breakableLayers);
-        
-        if(numColliders > 0)
-            Break();
-    }
-
-
-    private void FixedUpdate()
-    {
-        BreakOnImpact();
-    }
-    
-    public Transform Transform { get; set; }
-
     public void Ungrab()
     {
         transform.SetParent(null);
@@ -72,18 +77,4 @@ public class GrabObject : Interactable, IInteractable
         _rigidbody.linearVelocity = velocity;
         _isThrown = true;
     }
-
-    public Bounds GetBounds()
-    {
-        return _collider ? _collider.bounds : default;
-    }
-    
-
-    public override bool IsInteractable()
-    {
-        return !_isThrown;
-    }
-    
-    
-
 }

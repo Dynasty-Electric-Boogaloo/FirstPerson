@@ -11,16 +11,24 @@ namespace UI
         [SerializeField] private Image inputShow;
         [SerializeField] private Sprite normalSprite;
         [SerializeField] private Sprite grabbingSprite;
+        
         private Interactable _current;
         
-        public static UiManager UserInterface;
+        private static UiManager _userInterface;
+        
         private void Awake()
         {
-            if (UserInterface == null) UserInterface = this;
-            else Destroy(this);
+            if (_userInterface == null) 
+                _userInterface = this;
+            else 
+                Destroy(this);
         }
-        public void CanInteract(bool canInteract, Interactable interactable)
+        
+        public void CanInteract(Interactable interactable)
         {
+            if(interactable == null) 
+                return;
+            
             _current = interactable;
         }
     }

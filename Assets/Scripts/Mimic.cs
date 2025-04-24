@@ -21,65 +21,17 @@ public class Mimic : MonoBehaviour
     private float _timer;
     private bool _isAwake;
 
-    void Awake()
+    private void Awake()
     {
         _timer = maxTimeBeforeAlert;
         meshRenderer.enabled = isInfected;
         meshRenderer.material = regularMaterialSet.normal;
     }
-    
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = new Color(1, 1, 0, 0.75F);
-        Gizmos.DrawWireSphere(transform.position, checkPlayerRadius);
-    }
-    
-    /// <summary>
-    /// Change l'apparence des objets en fonction de s'ils sont infecté et dans la lumiere spéciale ou non. 
-    /// </summary>
-    public void SetLightened(bool inLight)
-    {
-        if(_isAwake) return;
-        meshRenderer.sharedMaterial = isInfected && inLight ? regularMaterialSet.revealed : regularMaterialSet.normal;
-    }
-    
-    private void ReduceTime()
-    {
-        _timer -= Time.deltaTime;
 
-        if (_timer > 0)
-            return;
-        
-        WakingUp();
-        _timer = maxTimeBeforeAlert;
-    }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         CheckForPlayer();
-    }
-
-    public void DestroyMimic()
-    {
-        if(!BatteryManager.Battery) return;
-        BatteryManager.Battery.AddBattery(1);
-    }
-    
-    public void WakingUp()
-    {
-        print("wakingUp");
-        MonsterNavigation.Alert(transform.position);
-        _isAwake = true;
-        meshRenderer.sharedMaterial = regularMaterialSet.awake;
-        
-        //possible sound design ?
-    }
-    
-    public void GetInfected()
-    {
-        isInfected = true;
-        meshRenderer.enabled = isInfected;
     }
     
     private void CheckForPlayer()
@@ -94,5 +46,51 @@ public class Mimic : MonoBehaviour
             ReduceTime();
     }
     
+    private void ReduceTime()
+    {
+        _timer -= Time.deltaTime;
+
+        if (_timer > 0)
+            return;
+        
+        WakingUp();
+        _timer = maxTimeBeforeAlert;
+    }
+    
     public bool GetIsInfected() => isInfected;
+    
+    public void SetLightened(bool inLight)
+    {
+        if(_isAwake) 
+            return;
+        meshRenderer.sharedMaterial = isInfected && inLight ? regularMaterialSet.revealed : regularMaterialSet.normal;
+    }
+
+    public void DestroyMimic()
+    {
+        if(!BatteryManager.Battery) 
+            return;
+        BatteryManager.Battery.AddBattery(1);
+    }
+    
+    public void WakingUp()
+    {
+        MonsterNavigation.Alert(transform.position);
+        _isAwake = true;
+        meshRenderer.sharedMaterial = regularMaterialSet.awake;
+        //possible sound design ?
+    }
+    
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = new Color(1, 1, 0, 0.75F);
+        Gizmos.DrawWireSphere(transform.position, checkPlayerRadius);
+    }
+
+    public void SetInfected(bool infection)
+    {
+        isInfected = infection;
+        meshRenderer.enabled = isInfected;
+    }
+    
 }
