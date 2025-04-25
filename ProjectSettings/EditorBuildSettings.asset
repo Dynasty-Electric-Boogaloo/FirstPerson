@@ -6,20 +6,39 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/ControllerDev.unity
-    guid: fc65f7aefb740be4184eafda02523046
-  - enabled: 1
     path: Assets/Scenes/World/World_Logique.unity
     guid: 35b6204b60ae84b43912bfa6c4164b21
+  - enabled: 1
+    path: Assets/Scenes/World/World_Habillage.unity
+    guid: 68d8ac58fff72554a9c6d8d246466529
+  - enabled: 1
+    path: Assets/Scenes/ZoneA/ZoneA_Logique.unity
+    guid: 009876ae8b8e3ec4493b1393a99e7bbc
   - enabled: 1
     path: Assets/Scenes/ZoneA/ZoneA_Blockout.unity
     guid: 2360503d05ccfbf42ac68533a50ad0e1
   - enabled: 1
+    path: Assets/Scenes/ZoneA/ZoneA_Habillage.unity
+    guid: 3980ae2f8ffbd9f43aeb54cf872644a8
+  - enabled: 1
+    path: Assets/Scenes/ZoneB/ZoneB_Logique.unity
+    guid: e43e2d5a9b5a18a49a883c3e83a00443
+  - enabled: 1
     path: Assets/Scenes/ZoneB/ZoneB_Blockout.unity
     guid: d29106a730d464042b70d9b2cd918381
   - enabled: 1
+    path: Assets/Scenes/ZoneB/ZoneB_Habillage.unity
+    guid: 68d18ae5a593b5942ae26f97677f5f26
+  - enabled: 1
+    path: Assets/Scenes/ZoneC/ZoneC_Logique.unity
+    guid: a64acdb7fa1263c478ff3ef0109e36bf
+  - enabled: 1
     path: Assets/Scenes/ZoneC/ZoneC_Blockout.unity
     guid: 91a9469dce4154d48ae8cdee6cd4ec0f
+  - enabled: 1
+    path: Assets/Scenes/ZoneC/ZoneC_Habillage.unity
+    guid: bd6555c1dc48ebc468f12564a1ffb97a
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 35845fe01580c41289b024647b1d1c53, type: 3}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 6dc481e8033396f4dba4601021b221c9, type: 2}
   m_UseUCBPForAssetBundles: 0

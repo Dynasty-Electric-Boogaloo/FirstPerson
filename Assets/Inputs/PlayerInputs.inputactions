@@ -94,6 +94,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Inspect",
+                    "type": "Button",
+                    "id": "fe89eaf1-868a-4554-bc14-3ab351f17123",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Dance",
+                    "type": "Button",
+                    "id": "cc6b6490-d1a7-434a-9b60-00f58e119166",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -221,7 +239,7 @@
                 {
                     "name": "",
                     "id": "50f323c9-cb94-48c4-83eb-4b0b67de587c",
-                    "path": "<Mouse>/rightButton",
+                    "path": "<Keyboard>/q",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -248,6 +266,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "UseObject2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "85cbced4-5072-4998-9d21-7e7a98bee9d0",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Inspect",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9a0062e0-733c-4ce8-951a-e1d6e8401698",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dance",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

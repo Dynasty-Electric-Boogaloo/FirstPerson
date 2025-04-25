@@ -116,6 +116,24 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Inspect"",
+                    ""type"": ""Button"",
+                    ""id"": ""fe89eaf1-868a-4554-bc14-3ab351f17123"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Dance"",
+                    ""type"": ""Button"",
+                    ""id"": ""cc6b6490-d1a7-434a-9b60-00f58e119166"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -243,7 +261,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""50f323c9-cb94-48c4-83eb-4b0b67de587c"",
-                    ""path"": ""<Mouse>/rightButton"",
+                    ""path"": ""<Keyboard>/q"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -272,6 +290,28 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""action"": ""UseObject2"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""85cbced4-5072-4998-9d21-7e7a98bee9d0"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Inspect"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9a0062e0-733c-4ce8-951a-e1d6e8401698"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dance"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -290,6 +330,8 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         m_Controls_Interact = m_Controls.FindAction("Interact", throwIfNotFound: true);
         m_Controls_UseObject1 = m_Controls.FindAction("UseObject1", throwIfNotFound: true);
         m_Controls_UseObject2 = m_Controls.FindAction("UseObject2", throwIfNotFound: true);
+        m_Controls_Inspect = m_Controls.FindAction("Inspect", throwIfNotFound: true);
+        m_Controls_Dance = m_Controls.FindAction("Dance", throwIfNotFound: true);
     }
 
     ~@PlayerInputs()
@@ -366,6 +408,8 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_Controls_Interact;
     private readonly InputAction m_Controls_UseObject1;
     private readonly InputAction m_Controls_UseObject2;
+    private readonly InputAction m_Controls_Inspect;
+    private readonly InputAction m_Controls_Dance;
     public struct ControlsActions
     {
         private @PlayerInputs m_Wrapper;
@@ -380,6 +424,8 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         public InputAction @Interact => m_Wrapper.m_Controls_Interact;
         public InputAction @UseObject1 => m_Wrapper.m_Controls_UseObject1;
         public InputAction @UseObject2 => m_Wrapper.m_Controls_UseObject2;
+        public InputAction @Inspect => m_Wrapper.m_Controls_Inspect;
+        public InputAction @Dance => m_Wrapper.m_Controls_Dance;
         public InputActionMap Get() { return m_Wrapper.m_Controls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -419,6 +465,12 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @UseObject2.started += instance.OnUseObject2;
             @UseObject2.performed += instance.OnUseObject2;
             @UseObject2.canceled += instance.OnUseObject2;
+            @Inspect.started += instance.OnInspect;
+            @Inspect.performed += instance.OnInspect;
+            @Inspect.canceled += instance.OnInspect;
+            @Dance.started += instance.OnDance;
+            @Dance.performed += instance.OnDance;
+            @Dance.canceled += instance.OnDance;
         }
 
         private void UnregisterCallbacks(IControlsActions instance)
@@ -453,6 +505,12 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @UseObject2.started -= instance.OnUseObject2;
             @UseObject2.performed -= instance.OnUseObject2;
             @UseObject2.canceled -= instance.OnUseObject2;
+            @Inspect.started -= instance.OnInspect;
+            @Inspect.performed -= instance.OnInspect;
+            @Inspect.canceled -= instance.OnInspect;
+            @Dance.started -= instance.OnDance;
+            @Dance.performed -= instance.OnDance;
+            @Dance.canceled -= instance.OnDance;
         }
 
         public void RemoveCallbacks(IControlsActions instance)
@@ -482,5 +540,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         void OnInteract(InputAction.CallbackContext context);
         void OnUseObject1(InputAction.CallbackContext context);
         void OnUseObject2(InputAction.CallbackContext context);
+        void OnInspect(InputAction.CallbackContext context);
+        void OnDance(InputAction.CallbackContext context);
     }
 }

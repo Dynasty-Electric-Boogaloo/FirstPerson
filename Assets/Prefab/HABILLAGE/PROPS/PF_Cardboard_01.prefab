@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &4018451975733623416
 Transform:
@@ -84,42 +84,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Cardboard_01
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b309601f0c4cb8445b4d8e1c9d26c6cd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b309601f0c4cb8445b4d8e1c9d26c6cd, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 66037397598070344}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b309601f0c4cb8445b4d8e1c9d26c6cd, type: 3}
 --- !u!4 &2637470163384007386 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b309601f0c4cb8445b4d8e1c9d26c6cd, type: 3}
   m_PrefabInstance: {fileID: 2526682525566016817}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3445813982022180960 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b309601f0c4cb8445b4d8e1c9d26c6cd, type: 3}
-  m_PrefabInstance: {fileID: 2526682525566016817}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &66037397598070344
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3445813982022180960}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.23, y: 0.12, z: 0.13000001}
-  m_Center: {x: 0, y: 0.06, z: 0}
