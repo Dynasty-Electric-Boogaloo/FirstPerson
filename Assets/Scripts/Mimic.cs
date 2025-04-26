@@ -20,6 +20,8 @@ public class Mimic : MonoBehaviour
     [SerializeField] private LayerMask playerLayer;
     private float _timer;
     private bool _isAwake;
+    private Collider[] _hitColliders = new Collider[1];
+    private int _numColliders;
 
     private void Awake()
     {
@@ -39,10 +41,10 @@ public class Mimic : MonoBehaviour
         if(!isInfected) 
             return;
         
-        var hitColliders = new Collider[1];
-        var numColliders = Physics.OverlapSphereNonAlloc(transform.position, checkPlayerRadius, hitColliders, playerLayer);
+        _hitColliders = new Collider[1];
+        _numColliders = Physics.OverlapSphereNonAlloc(transform.position, checkPlayerRadius, _hitColliders, playerLayer);
         
-        if (numColliders > 0) 
+        if (_numColliders > 0) 
             ReduceTime();
     }
     

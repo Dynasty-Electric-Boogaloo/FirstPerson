@@ -60,7 +60,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""id"": ""eda0b0ef-1e56-46ef-896a-68e9431936f0"",
                     ""expectedControlType"": """",
                     ""processors"": """",
-                    ""interactions"": ""SlowTap(pressPoint=0.5),Tap"",
+                    ""interactions"": ""SlowTap(duration=0.2),Tap"",
                     ""initialStateCheck"": false
                 },
                 {

@@ -15,7 +15,6 @@ namespace Player
         [SerializeField] private float grabSize = 0.1f;
         private Interactable _selectedObject;
         private GrabObject _grabbedObject;
-        private Mimic _mimic;
         private RaycastHit _raycastHit;
 
         private void Update()
@@ -23,10 +22,15 @@ namespace Player
             if (!_grabbedObject)
             {
                 HandleHighlight();
+                
+                if(!_selectedObject) 
+                    return;
+                
                 TryInteract();
+                TryExtract();
+                
                 return;
             }
-
             HandleGrabbed();
         }
 
@@ -87,30 +91,32 @@ namespace Player
             UiManager.CanInteract(_selectedObject);
 
 
-            if (PlayerData.PlayerInputs.Controls.Interact.WasPressedThisFrame())
-            {
-                _selectedObject.Interact();
+            if (!PlayerData.PlayerInputs.Controls.Interact.WasPressedThisFrame()) return;
+            
+            _selectedObject.Interact();
                 
-                if (_selectedObject.TryGetComponent(out _mimic)) 
-                    _mimic.WakingUp();
+            if (_selectedObject.TryGetComponent<Mimic>(out var mimic)) 
+                mimic.WakingUp();
 
-                if (_selectedObject is not GrabObject grab) 
-                    return;
+            if (_selectedObject is not GrabObject grab) 
+                return;
                 
-                grab.Grab(grabPoint);
-                _grabbedObject = grab;
-            }
+            grab.Grab(grabPoint);
+            _grabbedObject = grab;
+        }
 
+        private void TryExtract()
+        {
             if (!PlayerData.PlayerInputs.Controls.Extract.WasPressedThisFrame()) 
                 return;
             
             //QTE
-            if (_selectedObject.TryGetComponent(out _mimic))
-                _mimic.DestroyMimic();
+            if (_selectedObject.TryGetComponent<Mimic>(out var mimic))
+                mimic.DestroyMimic();
                 
             _selectedObject.Break();
         }
-        
+
         private bool TryUngrab()
         {
             if (!PlayerData.PlayerInputs.Controls.Interact.WasPressedThisFrame())

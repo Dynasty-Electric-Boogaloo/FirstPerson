@@ -37,7 +37,7 @@ namespace Player
         private float CurrentBattery => _special ? _batteryManager.GetCurrentPower() : _battery;
         private float CurrentBatteryMax  => _special ? _batteryManager.GetCurrentPowerMax() : batteryMax;
         private RaycastHit[] _hits;
-        
+
         private readonly HashSet<Mimic>[] _lightObjectBuffers = new HashSet<Mimic>[2];
         private int _bufferSelection;
         
@@ -124,13 +124,11 @@ namespace Player
                 if (Vector3.Dot(transform.forward, normalizedLightToObject) <= coneRadius) 
                     continue;
                 
-                var element = _hits[index].transform.GetComponent<Mimic>();
-                
-                if(!element) 
+                if(!_hits[index].transform.TryGetComponent<Mimic>(out var mimic)) 
                     continue;
                 
-                _currentLightObjects.Add(element);
-                element.SetLightened(true);
+                _currentLightObjects.Add(mimic);
+                mimic.SetLightened(true);
             }
         }
 
