@@ -2355,6 +2355,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1729511753}
     m_Modifications:
+    - target: {fileID: 3637027418859505467, guid: 9fd8d0d938e9cab45b85557fe6a3b74c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4316595319248480786, guid: 9fd8d0d938e9cab45b85557fe6a3b74c, type: 3}
       propertyPath: m_LocalScale.y
       value: 1.5
@@ -4623,6 +4627,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1729511753}
     m_Modifications:
+    - target: {fileID: 3637027418859505467, guid: 9fd8d0d938e9cab45b85557fe6a3b74c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4316595319248480786, guid: 9fd8d0d938e9cab45b85557fe6a3b74c, type: 3}
       propertyPath: m_LocalScale.y
       value: 1.5
@@ -9294,7 +9302,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1748715838}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
