@@ -4,6 +4,7 @@ using System.Linq;
 using Player;
 using UI;
 using UnityEngine;
+using UnityEngine.InputSystem.Interactions;
 using UnityEngine.UI;
 
 namespace Player
@@ -28,7 +29,6 @@ namespace Player
         [SerializeField] private float coneRadius = 0.75f;
         [SerializeField] private int maxObjectInSight = 10;
         
-        //Private variables
         private float _battery;
         private bool _isOn;
         private bool _special;
@@ -37,12 +37,12 @@ namespace Player
         private float CurrentBattery => _special ? _batteryManager.GetCurrentPower() : _battery;
         private float CurrentBatteryMax  => _special ? _batteryManager.GetCurrentPowerMax() : batteryMax;
         private RaycastHit[] _hits;
-        
-        private readonly HashSet<GrabObject>[] _lightObjectBuffers = new HashSet<GrabObject>[2];
+
+        private readonly HashSet<Mimic>[] _lightObjectBuffers = new HashSet<Mimic>[2];
         private int _bufferSelection;
         
-        private HashSet<GrabObject> _lastUpdateLightObjects => _lightObjectBuffers[1 ^ _bufferSelection];
-        private HashSet<GrabObject> _currentLightObjects => _lightObjectBuffers[_bufferSelection];
+        private HashSet<Mimic> _lastUpdateLightObjects => _lightObjectBuffers[1 ^ _bufferSelection];
+        private HashSet<Mimic> _currentLightObjects => _lightObjectBuffers[_bufferSelection];
         
 
         private void Start()
@@ -53,8 +53,8 @@ namespace Player
             light.color = lightColor;
             SetLightVisible(false);
 
-            _lightObjectBuffers[0] = new HashSet<GrabObject>();
-            _lightObjectBuffers[1] = new HashSet<GrabObject>();
+            _lightObjectBuffers[0] = new HashSet<Mimic>();
+            _lightObjectBuffers[1] = new HashSet<Mimic>();
             
             if (GetComponent<BatteryManager>())
                 _batteryManager = GetComponent<BatteryManager>();
@@ -62,28 +62,27 @@ namespace Player
 
         private void Update()
         {
-            CheckSwitch();
             LightUpdate();
             UpdateInfectedObjects();
         }
-
-        private void UpdateInfectedObjects()
-        {
-            foreach (var prop in _lastUpdateLightObjects)
-            {
-                if (_currentLightObjects.Contains(prop)) 
-                    continue;
-                prop.SetLightened(false);
-            }
-
-            _bufferSelection ^= 1;
-            _currentLightObjects.Clear();
-        }
-
         private void LightUpdate()
         {
-            if (_playerInput.Controls.UseFlash.WasPressedThisFrame())
-               SetLightVisible(!_isOn);
+            _playerInput.Controls.UseFlash.performed  +=
+                context =>
+                {
+                    switch (context.interaction)
+                    {
+                        case SlowTapInteraction:
+                            SetLightVisible(!_isOn);
+                            break;
+                        case TapInteraction when _isOn:
+                            CheckSwitch();
+                            break;
+                        case TapInteraction:
+                            SetLightVisible(true);
+                            break;
+                    }
+                };
 
             var reload = _playerInput.Controls.ReloadFlash.IsPressed();
             PlayerData.Crouched = reload;
@@ -110,7 +109,7 @@ namespace Player
             
             RevealObjects();
         }
-
+        
         private void RevealObjects()
         {
             if (!_special) 
@@ -122,13 +121,31 @@ namespace Player
             {
                 var normalizedLightToObject = Vector3.Normalize(_hits[index].transform.position - origin);
 
-                if (!(Vector3.Dot(transform.forward, normalizedLightToObject) > coneRadius)) 
+                if (Vector3.Dot(transform.forward, normalizedLightToObject) <= coneRadius) 
                     continue;
                 
-                var element = _hits[index].transform.GetComponent<GrabObject>();
-                _currentLightObjects.Add(element);
-                element.SetLightened(true);
+                if(!_hits[index].transform.TryGetComponent<Mimic>(out var mimic)) 
+                    continue;
+                
+                _currentLightObjects.Add(mimic);
+                mimic.SetLightened(true);
             }
+        }
+
+        private void UpdateInfectedObjects()
+        {
+            foreach (var prop in _lastUpdateLightObjects)
+            {
+                if(!prop) 
+                    return;
+                
+                if (_currentLightObjects.Contains(prop)) 
+                    continue;
+                prop.SetLightened(false);
+            }
+
+            _bufferSelection ^= 1;
+            _currentLightObjects.Clear();
         }
 
         private void SetLightVisible(bool visible)
@@ -147,17 +164,8 @@ namespace Player
             if(!_batteryManager) 
                 return;
 
-            if (_playerInput.Controls.UseObject1.WasPressedThisFrame())
-            {
-                _special = false;
-                light.color = lightColor;
-            }
-            
-            if (_playerInput.Controls.UseObject2.WasPressedThisFrame())
-            {
-                _special = true;
-                light.color = specialLightColor;
-            }
+            _special = !_special;
+            light.color =  light.color == lightColor ? specialLightColor : lightColor;
             
             if(hud)
                 hud.SetFlashLight(_special, _isOn);

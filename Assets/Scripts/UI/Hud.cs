@@ -22,17 +22,19 @@ namespace UI
 
         public void SetFlashLight(bool special, bool isOn)
         {
-            if (!batterySlider) return;
+            if (!batterySlider) 
+                return;
+            
             batterySlider.gameObject.SetActive(isOn);
             batterySliderColor.color = special ? specialLightColor : lightColor;
-            batteryImage.gameObject.SetActive(special);
-            
-
+            batteryImage.gameObject.SetActive(special && isOn);
         }
 
         public void UpdateBattery(float currentBattery, float currentMax, bool special)
         {
-            if (!batterySlider) return;
+            if (!batterySlider) 
+                return;
+            
             batterySlider.value = currentBattery / currentMax;
             if (special)
                 batteryImage.fillAmount = BatteryManager.Battery.GetCurrentBattery() / BatteryManager.Battery.GetMaxBattery();
