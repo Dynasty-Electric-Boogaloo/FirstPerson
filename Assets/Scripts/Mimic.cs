@@ -41,7 +41,6 @@ public class Mimic : MonoBehaviour
         if(!isInfected) 
             return;
         
-        _hitColliders = new Collider[1];
         _numColliders = Physics.OverlapSphereNonAlloc(transform.position, checkPlayerRadius, _hitColliders, playerLayer);
         
         if (_numColliders > 0) 
