@@ -8,24 +8,28 @@ namespace UI
 {
     public class UiManager : MonoBehaviour
     {
-        [SerializeField] private Canvas canvas;
         [SerializeField] private Image inputShow;
-        private Dictionary<IInteractable, Image> _elements;
+        [SerializeField] private Sprite normalSprite;
+        [SerializeField] private Sprite grabbingSprite;
         
-        public static UiManager UserInterface;
+        private Interactable _current;
+        
+        private static UiManager _instance;
+        
         private void Awake()
         {
-            if (UserInterface == null) UserInterface = this;
-            else Destroy(this);
+            if (_instance == null) 
+                _instance = this;
+            else 
+                Destroy(this);
         }
 
-        public void AddInput(IInteractable interactable)
+        public static void CanInteract(Interactable interactable)
         {
+            if(!interactable || !_instance) 
+                return;
+            
+            _instance._current = interactable;
         }
-
-        public void RemoveInput(IInteractable interactable)
-        {
-        }
-        
     }
 }

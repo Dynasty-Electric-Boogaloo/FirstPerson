@@ -1,8 +1,10 @@
-﻿using UnityEngine;
+﻿using NUnit.Framework;
+using UI;
+using UnityEngine;
 
 namespace Player
 {
-    public class PlayerGrab : PlayerBehaviour
+    public class PlayerInteract : PlayerBehaviour
     {
         [SerializeField] private float throwForce;
         [SerializeField] private float grabOffset;
@@ -11,19 +13,24 @@ namespace Player
         [SerializeField] private Transform grabPoint;
         [SerializeField] private Transform grabHinge;
         [SerializeField] private float grabSize = 0.1f;
-        private GrabObject _selectedObject;
-        private bool _grabbed;
+        private Interactable _selectedObject;
+        private GrabObject _grabbedObject;
         private RaycastHit _raycastHit;
 
         private void Update()
         {
-            if (!_grabbed)
+            if (!_grabbedObject)
             {
                 HandleHighlight();
-                TryGrab();
+                
+                if(!_selectedObject) 
+                    return;
+                
+                TryInteract();
+                TryExtract();
+                
                 return;
             }
-
             HandleGrabbed();
         }
 
@@ -34,10 +41,10 @@ namespace Player
 
         private void HandleGrabPoint()
         {
-            if (!_selectedObject)
+            if (!_grabbedObject)
                 return;
             
-            grabPoint.localPosition = Vector3.forward * (grabHoldOffset + _selectedObject.GetBounds().extents.z);
+            grabPoint.localPosition = Vector3.forward * (grabHoldOffset + _grabbedObject.GetBounds().extents.z);
             grabHinge.localRotation = Quaternion.Euler(-PlayerData.CameraRotation.y, 0, 0);
         }
 
@@ -64,46 +71,59 @@ namespace Player
                 return;
             }
 
-            if (!_raycastHit.transform.TryGetComponent<GrabObject>(out var grabObject))
+            if (!_raycastHit.transform.TryGetComponent<Interactable>(out var interactable))
             {
                 DeselectObject();
                 return;
             }
 
-            if (grabObject.IsThrown)
+            if (!interactable.IsInteractable())
             {
                 DeselectObject();
                 return;
             }
 
-            SelectObject(grabObject);
+            SelectObject(interactable);
         }
 
-        private void TryGrab()
+        private void TryInteract()
         {
-            if (!_selectedObject)
-                return;
+            UiManager.CanInteract(_selectedObject);
 
-            if (PlayerData.PlayerInputs.Controls.Interact.WasPressedThisFrame())
-            {
-                _selectedObject.Interact();
-                return;
-            }
+
+            if (!PlayerData.PlayerInputs.Controls.Interact.WasPressedThisFrame()) return;
             
-            if (!PlayerData.PlayerInputs.Controls.Grab.WasPressedThisFrame())
+            _selectedObject.Interact();
+                
+            if (_selectedObject.TryGetComponent<Mimic>(out var mimic)) 
+                mimic.WakingUp();
+
+            if (_selectedObject is not GrabObject grab) 
                 return;
-            
-            _selectedObject.Grab(grabPoint);
-            _grabbed = true;
+                
+            grab.Grab(grabPoint);
+            _grabbedObject = grab;
         }
-        
+
+        private void TryExtract()
+        {
+            if (!PlayerData.PlayerInputs.Controls.Extract.WasPressedThisFrame()) 
+                return;
+            
+            //QTE
+            if (_selectedObject.TryGetComponent<Mimic>(out var mimic))
+                mimic.DestroyMimic();
+                
+            _selectedObject.Break();
+        }
+
         private bool TryUngrab()
         {
-            if (!PlayerData.PlayerInputs.Controls.Grab.WasPressedThisFrame())
+            if (!PlayerData.PlayerInputs.Controls.Interact.WasPressedThisFrame())
                 return false;
             
-            _selectedObject.Ungrab();
-            _grabbed = false;
+            _grabbedObject.Ungrab();
+            _grabbedObject = null;
             return true;
         }
 
@@ -113,20 +133,18 @@ namespace Player
                 return false;
 
             var throwVelocity = PlayerData.CameraHolder.forward * throwForce;
-            _selectedObject.Throw(throwVelocity);
-            _grabbed = false;
+            _grabbedObject.Throw(throwVelocity);
+            _grabbedObject = null;
             return true;
         }
 
-        private void SelectObject(GrabObject grabObject)
+        private void SelectObject(Interactable interactable)
         {
             if (_selectedObject != null)
-            {
                 _selectedObject.Highlight(false);
-            }
             
-            _selectedObject = grabObject;
-            _selectedObject.Highlight(true);
+            _selectedObject = interactable;
+            _selectedObject.Highlight(interactable);
         }
 
         private void DeselectObject()
