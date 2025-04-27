@@ -1,5 +1,6 @@
 ﻿using System;
 using Heatmap;
+using Interactables;
 using Player;
 using UnityEngine;
 using ZoneGraph;
@@ -47,6 +48,7 @@ namespace Monster
                 _monsterData.Heatmap.Data.Clear();
                 _monsterData.chaseTimer = 0;
                 _monsterData.targetNode = new NodeId(-1);
+                InteractableManager.Restore();
             }
         }
     }

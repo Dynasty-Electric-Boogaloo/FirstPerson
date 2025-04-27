@@ -22,17 +22,17 @@ public class Mimic : MonoBehaviour
     private bool _isAwake;
     private Collider[] _hitColliders = new Collider[1];
     private int _numColliders;
-    private AudioSource _alertAudio;
 
     private void Awake()
     {
         _timer = maxTimeBeforeAlert;
         meshRenderer.enabled = isInfected;
         meshRenderer.material = regularMaterialSet.normal;
-        _alertAudio = GetComponent<AudioSource>();
+
+        if (TryGetComponent<Interactable>(out var interactable))
+            interactable.onRestore.AddListener(OnRestore);
     }
-
-
+    
     private void FixedUpdate()
     {
         CheckForPlayer();
@@ -40,7 +40,7 @@ public class Mimic : MonoBehaviour
     
     private void CheckForPlayer()
     {
-        if(!isInfected) 
+        if(!isInfected || _isAwake) 
             return;
         
         _numColliders = Physics.OverlapSphereNonAlloc(transform.position, checkPlayerRadius, _hitColliders, playerLayer);
@@ -57,7 +57,13 @@ public class Mimic : MonoBehaviour
             return;
         
         WakingUp();
+    }
+
+    private void OnRestore()
+    {
         _timer = maxTimeBeforeAlert;
+        _isAwake = false;
+        SetLightened(false);
     }
     
     public bool GetIsInfected() => isInfected;
@@ -78,11 +84,12 @@ public class Mimic : MonoBehaviour
     
     public void WakingUp()
     {
+        if (!isInfected)
+            return;
+        
         MonsterNavigation.Alert(transform.position);
         _isAwake = true;
         meshRenderer.sharedMaterial = regularMaterialSet.awake;
-        //possible sound design ?
-        _alertAudio.Play();
     }
     
     private void OnDrawGizmosSelected()
