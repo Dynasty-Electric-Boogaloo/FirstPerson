@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 using Object = UnityEngine.Object;
 using Random = System.Random;
@@ -28,6 +30,8 @@ namespace ZoneGraph
                 Debug.LogError("Couldn't find Zone Graph Builder!");
                 return;
             }
+            
+            Selection.activeGameObject = zoneGraphBuilder.gameObject;
             
             zoneGraphBuilder.ComputeZones();
         }
