@@ -58,10 +58,7 @@ namespace Monster
             MonsterData.targetNode = EvaluateTargetNode();
 
             if (MonsterData.targetNode.id < 0)
-            {
-                MonsterData.targetPoint = transform.position;
-                return;
-            }
+                MonsterData.targetNode = ZoneGraphManager.Pathfinding.GetPointClosestNode(transform.position, ZoneGraphManager.Pathfinding.GetPointRoom(transform.position));
             
             MonsterData.targetPoint = ZoneGraphManager.Instance.GetNodePosition(MonsterData.targetNode);
         }
