@@ -30,7 +30,8 @@ namespace UI
         {
             if(!_instance) 
                 return;
-            _instance.usageText.text = interactable != null ? "Grab - E\\nDestroy - A" : "";
+            if(_instance.usageText)
+                _instance.usageText.text = interactable != null ? "Grab - E\\nDestroy - A" : "";
             _instance._current = interactable;
         }
     }
