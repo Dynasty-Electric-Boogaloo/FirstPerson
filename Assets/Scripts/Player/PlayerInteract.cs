@@ -59,6 +59,7 @@ namespace Player
 
         private void HandleHighlight()
         {
+            
             var ray = new Ray(
                 PlayerData.CameraHolder.position + PlayerData.CameraHolder.forward * grabOffset,
                 PlayerData.CameraHolder.forward);
@@ -82,15 +83,11 @@ namespace Player
                 DeselectObject();
                 return;
             }
-
             SelectObject(interactable);
         }
 
         private void TryInteract()
         {
-            UiManager.CanInteract(_selectedObject);
-
-
             if (!PlayerData.PlayerInputs.Controls.Interact.WasPressedThisFrame()) return;
             
             _selectedObject.Interact();
@@ -145,6 +142,7 @@ namespace Player
             
             _selectedObject = interactable;
             _selectedObject.Highlight(interactable);
+            UiManager.SetInteract(interactable);
         }
 
         private void DeselectObject()
@@ -154,6 +152,7 @@ namespace Player
             
             _selectedObject.Highlight(false);
             _selectedObject = null;
+            UiManager.SetInteract(_selectedObject);
         }
     }
 }
