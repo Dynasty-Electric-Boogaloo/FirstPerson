@@ -50,6 +50,7 @@ namespace ZoneGraph
             for (var i = 0; i < zones.Length; i++)
             {
                 zones[i].zoneId = i + 1;
+                zones[i].RefreshColliderList();
             }
 
             for (var i = 0; i < zonePoints.Count - 1; i++)

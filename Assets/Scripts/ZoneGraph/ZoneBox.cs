@@ -37,5 +37,10 @@ namespace ZoneGraph
             
             return closestDistance < 0.01f;
         }
+
+        public void RefreshColliderList()
+        {
+            _colliders = GetComponents<Collider>();
+        }
     }
 }
