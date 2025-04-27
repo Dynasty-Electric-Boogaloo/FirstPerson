@@ -20,7 +20,7 @@ namespace ZoneGraph
         [SerializeField] private LayerMask collisionMask;
         [SerializeField] private ZoneGraphData outputGraphData;
 
-        [MenuItem("Tools/Compute Graph")]
+        [MenuItem("Tools/Compute Graph %W")]
         public static void ToolComputeZones()
         {
             var zoneGraphBuilder = FindFirstObjectByType<ZoneGraphBuilder>();
