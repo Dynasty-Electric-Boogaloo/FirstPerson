@@ -1,4 +1,5 @@
-﻿using UI;
+﻿using Monster;
+using UI;
 using UnityEngine;
 
 namespace Interactables
@@ -20,12 +21,15 @@ namespace Interactables
 		{
 			Break();
 			UiManager.AddCollected();
+			MonsterNavigation.Alert(transform.position);
 		}
 
 		public override bool IsInteractable()
 		{
 			return true;
 		}
+
+		public override void Restore(){}
 
 		public override InteractionType GetInteractionType()
 		{
