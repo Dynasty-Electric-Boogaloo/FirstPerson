@@ -1,3 +1,4 @@
+using Interactables;
 using UI;
 using UnityEngine;
 
@@ -21,5 +22,10 @@ public class Interactable : MonoBehaviour
         //ajouter son de casse quand on aura le sound system
         
         gameObject.SetActive(false);
+    }
+
+    public virtual InteractionType GetInteractionType()
+    {
+        return InteractionType.GrabObject;
     }
 }
