@@ -30,9 +30,7 @@ public class Mimic : MonoBehaviour
         meshRenderer.material = regularMaterialSet.normal;
 
         if (TryGetComponent<Interactable>(out var interactable))
-        {
             interactable.onRestore.AddListener(OnRestore);
-        }
     }
     
     private void FixedUpdate()
