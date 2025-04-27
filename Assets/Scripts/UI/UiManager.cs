@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
+using TMPro;
 
 namespace UI
 {
@@ -11,6 +12,7 @@ namespace UI
         [SerializeField] private Image inputShow;
         [SerializeField] private Sprite normalSprite;
         [SerializeField] private Sprite grabbingSprite;
+        [SerializeField] private TMP_Text usageText;
         
         private Interactable _current;
         
@@ -24,11 +26,11 @@ namespace UI
                 Destroy(this);
         }
 
-        public static void CanInteract(Interactable interactable)
+        public static void SetInteract(Interactable interactable)
         {
-            if(!interactable || !_instance) 
+            if(!_instance) 
                 return;
-            
+            _instance.usageText.text = interactable != null ? "Grab - E\\nDestroy - A" : "";
             _instance._current = interactable;
         }
     }
