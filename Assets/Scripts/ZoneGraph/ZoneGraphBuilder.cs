@@ -18,6 +18,20 @@ namespace ZoneGraph
         [SerializeField] private LayerMask collisionMask;
         [SerializeField] private ZoneGraphData outputGraphData;
 
+        [MenuItem("Tools/Compute Graph")]
+        public static void ToolComputeZones()
+        {
+            var zoneGraphBuilder = FindFirstObjectByType<ZoneGraphBuilder>();
+
+            if (!zoneGraphBuilder)
+            {
+                Debug.LogError("Couldn't find Zone Graph Builder!");
+                return;
+            }
+            
+            zoneGraphBuilder.ComputeZones();
+        }
+        
         public void ComputeZones()
         {
             var collisionBuffer = new RaycastHit[1];
