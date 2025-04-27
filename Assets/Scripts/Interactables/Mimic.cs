@@ -86,6 +86,9 @@ public class Mimic : MonoBehaviour
     
     public void WakingUp()
     {
+        if (!isInfected)
+            return;
+        
         MonsterNavigation.Alert(transform.position);
         _isAwake = true;
         meshRenderer.sharedMaterial = regularMaterialSet.awake;
