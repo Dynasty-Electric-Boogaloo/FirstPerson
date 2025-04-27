@@ -98,6 +98,10 @@ namespace ZoneGraph
             {
                 var zonePoint = zonePoints[j];
                 var connexions = new HashSet<NodeId>();
+
+                var ray = new Ray(zonePoint.transform.position + Vector3.up * collisionOffset, Vector3.down);
+                if (Physics.Raycast(ray, out var hit, collisionOffset * 10, collisionMask))
+                    zonePoint.transform.position = hit.point + Vector3.up * .1f;
             
                 var bottomPoint = zonePoint.transform.position + Vector3.up * collisionOffset;
                 var topPoint = zonePoint.transform.position + Vector3.up * (collisionOffset + collisionHeight);
