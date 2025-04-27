@@ -22,12 +22,14 @@ public class Mimic : MonoBehaviour
     private bool _isAwake;
     private Collider[] _hitColliders = new Collider[1];
     private int _numColliders;
+    private AudioSource _alertAudio;
 
     private void Awake()
     {
         _timer = maxTimeBeforeAlert;
         meshRenderer.enabled = isInfected;
         meshRenderer.material = regularMaterialSet.normal;
+        _alertAudio = GetComponent<AudioSource>();
     }
 
 
@@ -80,6 +82,7 @@ public class Mimic : MonoBehaviour
         _isAwake = true;
         meshRenderer.sharedMaterial = regularMaterialSet.awake;
         //possible sound design ?
+        _alertAudio.Play();
     }
     
     private void OnDrawGizmosSelected()
