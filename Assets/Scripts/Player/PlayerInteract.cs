@@ -1,5 +1,4 @@
-﻿using NUnit.Framework;
-using UI;
+﻿using UI;
 using UnityEngine;
 
 namespace Player

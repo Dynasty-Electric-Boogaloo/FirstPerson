@@ -19,6 +19,7 @@ namespace Monster
         [SerializeField] private LayerMask visionMask;
         [SerializeField] private LayerMask playerMask;
         [SerializeField] private float chaseTime;
+        [SerializeField] private AudioClip alertClip;
         private float _refreshTimer;
         private RoomId _baseRoom;
         private RaycastHit _playerHit;
@@ -63,7 +64,7 @@ namespace Monster
             MonsterData.targetPoint = ZoneGraphManager.Instance.GetNodePosition(MonsterData.targetNode);
         }
 
-        public static void Alert(Vector3 point)
+        public static void Alert(Vector3 point, bool silent = false)
         {
             if (_instance == null)
                 return;
@@ -73,6 +74,9 @@ namespace Monster
             HeatmapManager.StartRecording(room);
             _instance._refreshTimer = 0;
             _instance.MonsterData.searching = true;
+            
+            if (_instance.alertClip && !silent)
+                AudioSource.PlayClipAtPoint(_instance.alertClip, point, .25f);
         }
 
         private NodeId EvaluateTargetNode()
@@ -123,7 +127,7 @@ namespace Monster
                     break;
                 case 2:
                     MonsterData.stateTime = 0;
-                    Alert(PlayerRoot.Position);
+                    Alert(PlayerRoot.Position, true);
                     break;
             }
         }

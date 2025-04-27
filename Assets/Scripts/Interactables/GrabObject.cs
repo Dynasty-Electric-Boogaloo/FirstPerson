@@ -12,7 +12,7 @@ public class GrabObject : Interactable
     private Collider _collider;
     private Rigidbody _rigidbody;
     private bool _isThrown;
-    private Collider[] hitColliders = new Collider[1];
+    private Collider[] _hitColliders = new Collider[1];
 
     private void Awake()
     {
@@ -20,11 +20,19 @@ public class GrabObject : Interactable
         _rigidbody = GetComponent<Rigidbody>();
         Highlight(false);
 
+        onRestore.AddListener(OnRestore);
     }
 
     private void FixedUpdate()
     {
         BreakOnImpact();
+    }
+
+    private void OnRestore()
+    {
+        _rigidbody.linearVelocity = Vector3.zero;
+        _rigidbody.angularVelocity = Vector3.zero;
+        _isThrown = false;
     }
 
     public override bool IsInteractable()
@@ -42,7 +50,7 @@ public class GrabObject : Interactable
         if (!_isThrown) 
             return;
         
-        var numColliders = Physics.OverlapSphereNonAlloc(transform.position, breakRadius, hitColliders, breakableLayers);
+        var numColliders = Physics.OverlapSphereNonAlloc(transform.position, breakRadius, _hitColliders, breakableLayers);
         
         if(numColliders > 0)
             Break();
