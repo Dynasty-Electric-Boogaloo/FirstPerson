@@ -49,6 +49,8 @@ namespace Player
 
         private void HandleGrabbed()
         {
+            UiManager.SetGrab();
+            
             if (TryUngrab())
                 return;
 
