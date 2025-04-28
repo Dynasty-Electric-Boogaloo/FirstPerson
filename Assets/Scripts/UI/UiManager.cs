@@ -70,10 +70,15 @@ namespace UI
 
             _instance.usageText.text = interactable.GetInteractionType() switch
             {
-                InteractionType.GrabObject => "Grab - E\\nDestroy - A",
-                InteractionType.Collectible => "Collect - E",
+                InteractionType.GrabObject => "Grab - E\\nDestroy - A\\nInspect - T",
+                InteractionType.Collectible => "Collect - E\\nInspect - T",
                 _ => throw new ArgumentOutOfRangeException()
             };
+        }
+
+        public static void SetGrab()
+        {
+            _instance.usageText.text = "Drop - E\\nThrow - Left Click";
         }
     }
 }
