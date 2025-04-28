@@ -84,5 +84,10 @@ namespace UI
                 _ => throw new ArgumentOutOfRangeException()
             };
         }
+
+        public static void SetGrab()
+        {
+            _instance.usageText.text = "Drop - E\\nThrow - Left Click";
+        }
     }
 }
