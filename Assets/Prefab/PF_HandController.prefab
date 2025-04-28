@@ -802,10 +802,11 @@ MonoBehaviour:
   hud: {fileID: 266798638669423720}
   batteryMax: 30
   addByButtonPressed: 6
-  lightIntensityMultiplier: 10
+  lightIntensityMultiplier: 20
+  specialLightIntensityMultiplier: 40
   lightColor: {r: 1, g: 1, b: 1, a: 1}
-  specialLightColor: {r: 1, g: 0, b: 0, a: 1}
-  maxDistanceHit: 5
+  specialLightColor: {r: 1, g: 0.25943398, b: 0.25943398, a: 1}
+  maxDistanceHit: 10
   radiusHit: 0.75
   layerToHit:
     serializedVersion: 2
@@ -826,13 +827,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   batterySlider: {fileID: 4377977297178152916}
   batterySliderColor: {fileID: 7486074080883034113}
-  batteryImage: {fileID: 7450242194742911264}
   eyes:
   - {fileID: 6005934523476549694}
   - {fileID: 561709513359076713}
   - {fileID: 5643051538456306306}
   lightColor: {r: 1, g: 1, b: 1, a: 1}
-  specialLightColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &2331429056364898136
 MonoBehaviour:
   m_ObjectHideFlags: 0

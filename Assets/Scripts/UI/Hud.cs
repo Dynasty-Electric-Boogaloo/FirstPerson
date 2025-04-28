@@ -33,13 +33,13 @@ namespace UI
         {
             if (!batterySlider) 
                 return;
-            
-            if (special) 
-                batterySlider.value = currentBattery / currentMax;
-            
+
             if (!special)
+            {
+                batterySlider.value = currentBattery / currentMax;
                 return;
-            
+            }
+
             if (BatteryManager.Battery.GetCurrentBattery() > eyes.Count || BatteryManager.Battery.GetCurrentBattery() <= 0) 
                 return;
             
