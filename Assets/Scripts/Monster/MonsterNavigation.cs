@@ -93,6 +93,12 @@ namespace Monster
 
         private bool CanChase()
         {
+            var playerRoom = ZoneGraphManager.Pathfinding.GetPointRoom(PlayerRoot.Position);
+            var monsterRoom = ZoneGraphManager.Pathfinding.GetPointRoom(transform.position);
+            
+            if (playerRoom == _baseRoom && monsterRoom == _baseRoom)
+                return true;
+            
             var diff = PlayerRoot.Position - transform.position;
             var rayVector = diff.normalized;
 
