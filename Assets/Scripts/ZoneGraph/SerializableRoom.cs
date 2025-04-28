@@ -20,11 +20,11 @@ namespace ZoneGraph
 
         public Room Deserialize()
         {
-            var entryPointsDictionnary = new Dictionary<RoomId, List<NodeId>>(entryPointKeys.Count);
+            var entryPointsDictionnary = new Dictionary<RoomId, HashSet<NodeId>>(entryPointKeys.Count);
 
             for (var i = 0; i < entryPointKeys.Count; i++)
             {
-                entryPointsDictionnary[entryPointKeys[i]] = new List<NodeId>(entryPointValues[i].nodes);
+                entryPointsDictionnary[entryPointKeys[i]] = new HashSet<NodeId>(entryPointValues[i].nodes);
             }
 
             return new Room

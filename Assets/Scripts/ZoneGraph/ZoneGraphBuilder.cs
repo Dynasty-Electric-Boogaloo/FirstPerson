@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -158,35 +159,33 @@ namespace ZoneGraph
                         connexions = new List<NodeId>(connexions)
                     });
             }
-
-            for (var i = 0; i < nodes.Count; i++)
+            
+            for (var i = 0; i < rooms.Count; i++)
             {
-                foreach (var connexion in nodes[i].connexions)
+                var entryPoints = new Dictionary<RoomId, HashSet<NodeId>>();
+
+                for (var j = 0; j < rooms[i].nodes.Count; j++)
                 {
-                    var nodeRoom = nodes[i].room;
+                    var node = rooms[i].nodes[j];
                     
-                    var otherRoom = nodes[connexion.id].room;
-                    
-                    if (nodeRoom == otherRoom)
-                        continue;
-
-                    var index = rooms[nodeRoom.id].entryPointKeys.IndexOf(otherRoom);
-
-                    if (index >= 0)
+                    foreach (var connexion in nodes[node.id].connexions)
                     {
-                        rooms[nodeRoom.id].entryPointValues[index].nodes.Add(new NodeId(i));
+                        var otherRoom = nodes[connexion.id].room;
+
+                        if (i == otherRoom.id)
+                            continue;
+
+                        //Try node if connexion causes trouble
+                        entryPoints[otherRoom].Add(connexion);
                     }
-                    else
-                    {
-                        rooms[nodeRoom.id].entryPointKeys.Add(otherRoom);
-                        rooms[nodeRoom.id].entryPointValues.Add(
-                            new SerializableRoom.EntryPoints
-                            {
-                                nodes = new List<NodeId>(1)
-                            });
-                        
-                        rooms[nodeRoom.id].entryPointValues[rooms[nodeRoom.id].entryPointKeys.Count - 1].nodes.Add(new NodeId(i));
-                    }
+                }
+
+                var room = rooms[i];
+                room.entryPointKeys = entryPoints.Keys.ToList();
+
+                foreach (var value in entryPoints.Values)
+                {
+                    room.entryPointValues.Add(new SerializableRoom.EntryPoints{nodes = value.ToList()});
                 }
             }
 
