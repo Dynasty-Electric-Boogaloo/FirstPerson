@@ -3,6 +3,7 @@ using Interactables;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.InputSystem;
 
 namespace UI
 {
@@ -14,6 +15,7 @@ namespace UI
         [SerializeField] private TMP_Text usageText;
         //Code only for first playable, nuke it afterwards
         [SerializeField] private TMP_Text collectedText;
+        [SerializeField] private TMP_Text helpText;
         
         private Interactable _current;
         
@@ -36,8 +38,15 @@ namespace UI
             //Code only for first playable, nuke it afterwards
             _collectibleCount = FindObjectsByType<Collectible>(FindObjectsInactive.Exclude, FindObjectsSortMode.None).Length;
             _collectedCount = 0;
+            collectedText.text = $"{_instance._collectedCount}/{_instance._collectibleCount}";
         }
-        
+
+        private void Update()
+        {
+            if (Keyboard.current.eKey.wasPressedThisFrame)
+                helpText.enabled = false;
+        }
+
         //Code only for first playable, nuke it afterwards
         public static void AddCollected()
         {

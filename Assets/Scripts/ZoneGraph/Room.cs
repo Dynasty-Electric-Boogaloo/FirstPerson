@@ -8,7 +8,7 @@ namespace ZoneGraph
     {
         public Vector3 Position;
         public List<NodeId> Nodes;
-        public Dictionary<RoomId, List<NodeId>> EntryPoints;
+        public Dictionary<RoomId, HashSet<NodeId>> EntryPoints;
 
         public SerializableRoom Serialize()
         {

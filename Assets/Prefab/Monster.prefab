@@ -86,7 +86,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 30}
@@ -454,6 +454,7 @@ MonoBehaviour:
     m_Bits: 1073741824
   chaseTime: 0.1
   alertClip: {fileID: 8300000, guid: 3be83507e776a7145aac62375fcb1711, type: 3}
+  stageLight: {fileID: 3678632192750588968}
 --- !u!54 &7354742177963990005
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -526,7 +527,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 40
+  MaxDistance: 30
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
