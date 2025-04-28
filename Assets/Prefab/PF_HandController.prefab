@@ -802,10 +802,11 @@ MonoBehaviour:
   hud: {fileID: 266798638669423720}
   batteryMax: 30
   addByButtonPressed: 6
-  lightIntensityMultiplier: 10
+  lightIntensityMultiplier: 20
+  specialLightIntensityMultiplier: 40
   lightColor: {r: 1, g: 1, b: 1, a: 1}
-  specialLightColor: {r: 1, g: 0, b: 0, a: 1}
-  maxDistanceHit: 5
+  specialLightColor: {r: 1, g: 0.25943398, b: 0.25943398, a: 1}
+  maxDistanceHit: 10
   radiusHit: 0.75
   layerToHit:
     serializedVersion: 2
@@ -826,9 +827,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   batterySlider: {fileID: 4377977297178152916}
   batterySliderColor: {fileID: 7486074080883034113}
-  batteryImage: {fileID: 7450242194742911264}
+  eyes:
+  - {fileID: 6005934523476549694}
+  - {fileID: 561709513359076713}
+  - {fileID: 5643051538456306306}
   lightColor: {r: 1, g: 1, b: 1, a: 1}
-  specialLightColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &2331429056364898136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -842,7 +845,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxPowerByBattery: 20
-  maxBattery: 5
+  maxBattery: 3
   startBatteryPercent: 100
 --- !u!1 &4167932192429471914
 GameObject:
@@ -1974,6 +1977,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_Hand
       objectReference: {fileID: 0}
+    - target: {fileID: 2725931903555693889, guid: 943d3ba41751a61408159ba04470a238, type: 3}
+      propertyPath: m_Name
+      value: SM_Eye-EYE3
+      objectReference: {fileID: 0}
     - target: {fileID: 5256685341797322988, guid: 943d3ba41751a61408159ba04470a238, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.0795
@@ -2026,6 +2033,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -17.928
       objectReference: {fileID: 0}
+    - target: {fileID: 7804674614436962986, guid: 943d3ba41751a61408159ba04470a238, type: 3}
+      propertyPath: m_Name
+      value: SM_Eye-EYE1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8162421299704881174, guid: 943d3ba41751a61408159ba04470a238, type: 3}
+      propertyPath: m_Name
+      value: SM_Eye-EYE2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -2034,6 +2049,21 @@ PrefabInstance:
       addedObject: {fileID: 6441999085532419569}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 943d3ba41751a61408159ba04470a238, type: 3}
+--- !u!95 &561709513359076713 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3265440790187518122, guid: 943d3ba41751a61408159ba04470a238, type: 3}
+  m_PrefabInstance: {fileID: 3069971479002809795}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &5643051538456306306 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7262792938800015169, guid: 943d3ba41751a61408159ba04470a238, type: 3}
+  m_PrefabInstance: {fileID: 3069971479002809795}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &6005934523476549694 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8774110948691027453, guid: 943d3ba41751a61408159ba04470a238, type: 3}
+  m_PrefabInstance: {fileID: 3069971479002809795}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7091416503431337263 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5256685341797322988, guid: 943d3ba41751a61408159ba04470a238, type: 3}

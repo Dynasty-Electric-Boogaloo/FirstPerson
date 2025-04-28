@@ -20,6 +20,7 @@ namespace Player
         [SerializeField] private float batteryMax;
         [SerializeField] private float addByButtonPressed = 0.25f;
         [SerializeField] private float lightIntensityMultiplier = 5000000;
+        [SerializeField] private float specialLightIntensityMultiplier = 5000000;
         [SerializeField] private Color lightColor = Color.white;
         [SerializeField] private Color specialLightColor = Color.red;
         [SerializeField] private float maxDistanceHit = 5;
@@ -36,6 +37,7 @@ namespace Player
         private BatteryManager _batteryManager;
         private float CurrentBattery => _special ? _batteryManager.GetCurrentPower() : _battery;
         private float CurrentBatteryMax  => _special ? _batteryManager.GetCurrentPowerMax() : batteryMax;
+        private float CurrentLightIntensity  => _special ? specialLightIntensityMultiplier : lightIntensityMultiplier;
         private RaycastHit[] _hits;
 
         private readonly HashSet<Mimic>[] _lightObjectBuffers = new HashSet<Mimic>[2];
@@ -101,7 +103,7 @@ namespace Player
                     _battery -= Time.deltaTime;
                 else 
                     _batteryManager.ReduceBattery();
-                light.intensity = (CurrentBattery / CurrentBatteryMax) * lightIntensityMultiplier;
+                light.intensity = (CurrentBattery / CurrentBatteryMax) * CurrentLightIntensity;
             }
             
             if (hud)

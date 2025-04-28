@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,11 +10,10 @@ namespace UI
         [Header("To add in inspector")]
         [SerializeField] private Slider batterySlider;
         [SerializeField] private Image batterySliderColor;
-        [SerializeField] private Image batteryImage;
+        [SerializeField] private List<Animator> eyes;
         
         [Header("Variables")]
         [SerializeField] private Color lightColor = Color.white;
-        [SerializeField] private Color specialLightColor = Color.red;
 
         private void Start()
         {
@@ -25,19 +25,25 @@ namespace UI
             if (!batterySlider) 
                 return;
             
-            batterySlider.gameObject.SetActive(isOn);
-            batterySliderColor.color = special ? specialLightColor : lightColor;
-            batteryImage.gameObject.SetActive(special && isOn);
+            batterySlider.gameObject.SetActive(isOn && !special);
+            batterySliderColor.color = lightColor;
         }
-
+        
         public void UpdateBattery(float currentBattery, float currentMax, bool special)
         {
             if (!batterySlider) 
                 return;
+
+            if (!special)
+            {
+                batterySlider.value = currentBattery / currentMax;
+                return;
+            }
+
+            if (BatteryManager.Battery.GetCurrentBattery() > eyes.Count || BatteryManager.Battery.GetCurrentBattery() <= 0) 
+                return;
             
-            batterySlider.value = currentBattery / currentMax;
-            if (special)
-                batteryImage.fillAmount = BatteryManager.Battery.GetCurrentBattery() / BatteryManager.Battery.GetMaxBattery();
+            eyes[(int)BatteryManager.Battery.GetCurrentBattery()-1].Play("ClosingEye", 0, 1 -currentBattery / currentMax);
         }
         
     }
