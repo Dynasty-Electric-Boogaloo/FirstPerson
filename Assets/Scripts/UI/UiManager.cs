@@ -1,9 +1,11 @@
 using System;
+using Game;
 using Interactables;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 namespace UI
 {
@@ -54,11 +56,17 @@ namespace UI
                 return;
             
             _instance._collectedCount++;
+            if (_instance._collectedCount >= _instance._collectibleCount)
+            {
+                SceneLoader.LoadSceneGroup(4, LoadSceneMode.Single);
+                return;
+            }
 
             if (!_instance.collectedText)
                 return;
             
             _instance.collectedText.text = $"{_instance._collectedCount}/{_instance._collectibleCount}";
+            
         }
 
         public static void SetInteract(Interactable interactable)
