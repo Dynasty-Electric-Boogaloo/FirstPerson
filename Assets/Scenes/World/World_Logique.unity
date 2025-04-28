@@ -1309,10 +1309,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6365327022629292588, guid: eab028e0012386248bab747a1f03a100, type: 3}
-      propertyPath: refreshTime
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 8082506935737427434, guid: eab028e0012386248bab747a1f03a100, type: 3}
       propertyPath: m_Name
       value: Monster
@@ -1365,13 +1361,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1763796997072021195, guid: b28454a2dfdabce4ca564f502211a1f2, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2439608249139616169, guid: b28454a2dfdabce4ca564f502211a1f2, type: 3}
       propertyPath: m_Name
       value: PF_HandController
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516671525961325328, guid: b28454a2dfdabce4ca564f502211a1f2, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3516671525961325328, guid: b28454a2dfdabce4ca564f502211a1f2, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2584,6 +2580,11 @@ MonoBehaviour:
 
     Charge
     normal flashlight - Hold R
+
+
+    Mimics are hidden and warn the monster of your
+    presence. Find them with the red light, and charge your red energy by breaking
+    them.
 
 
     Press E.'
