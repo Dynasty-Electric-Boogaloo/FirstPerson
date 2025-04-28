@@ -36,6 +36,7 @@ namespace UI
             //Code only for first playable, nuke it afterwards
             _collectibleCount = FindObjectsByType<Collectible>(FindObjectsInactive.Exclude, FindObjectsSortMode.None).Length;
             _collectedCount = 0;
+            collectedText.text = $"{_instance._collectedCount}/{_instance._collectibleCount}";
         }
         
         //Code only for first playable, nuke it afterwards

@@ -20,6 +20,7 @@ namespace Monster
         [SerializeField] private LayerMask playerMask;
         [SerializeField] private float chaseTime;
         [SerializeField] private AudioClip alertClip;
+        [SerializeField] private Light stageLight;
         private float _refreshTimer;
         private RoomId _baseRoom;
         private RaycastHit _playerHit;
@@ -43,6 +44,9 @@ namespace Monster
 
         private void Update()
         {
+            var monsterRoom = ZoneGraphManager.Pathfinding.GetPointRoom(transform.position);
+            stageLight.enabled = monsterRoom == _baseRoom;
+            
             MonsterData.stateTime += Time.deltaTime;
             
             var diff = MonsterData.targetPoint - transform.position;
