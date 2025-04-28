@@ -71,7 +71,7 @@ namespace UI
             _instance.usageText.text = interactable.GetInteractionType() switch
             {
                 InteractionType.GrabObject => "Grab - E\\nDestroy - A",
-                InteractionType.Collectible => "Collect - E\\n",
+                InteractionType.Collectible => "Collect - E",
                 _ => throw new ArgumentOutOfRangeException()
             };
         }
