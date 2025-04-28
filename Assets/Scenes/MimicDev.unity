@@ -131,6 +131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_PickableVase_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 686168858582924260, guid: 0185a7430b688a7488e4afe3bc3a6dae, type: 3}
+      propertyPath: regularMaterialSet.revealed
+      value: 
+      objectReference: {fileID: 2100000, guid: 47f888b96f0c1f14ea3edaa6e6ef6545, type: 2}
     - target: {fileID: 2444476447147424138, guid: 0185a7430b688a7488e4afe3bc3a6dae, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -9053,7 +9057,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &323937824
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -19632,6 +19636,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_PickableVase_01
       objectReference: {fileID: 0}
+    - target: {fileID: 686168858582924260, guid: 0185a7430b688a7488e4afe3bc3a6dae, type: 3}
+      propertyPath: regularMaterialSet.revealed
+      value: 
+      objectReference: {fileID: 2100000, guid: 47f888b96f0c1f14ea3edaa6e6ef6545, type: 2}
     - target: {fileID: 6447303287640013889, guid: 0185a7430b688a7488e4afe3bc3a6dae, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.7336774

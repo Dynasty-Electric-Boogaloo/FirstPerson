@@ -49,6 +49,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3b26386d4354140a0be95c4772cca84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onRestore:
+    m_PersistentCalls:
+      m_Calls: []
   breakableLayers:
     serializedVersion: 2
     m_Bits: 8
@@ -116,7 +119,7 @@ MonoBehaviour:
   meshRenderer: {fileID: 2444476447147424138}
   regularMaterialSet:
     normal: {fileID: 2100000, guid: 42e2f3004d6cd804584b5cc95336b5d4, type: 2}
-    revealed: {fileID: 2100000, guid: 9aded32c167b34e4b9deee61c0676255, type: 2}
+    revealed: {fileID: 2100000, guid: 47f888b96f0c1f14ea3edaa6e6ef6545, type: 2}
     awake: {fileID: 2100000, guid: 7c1ec54872b23d1468b2723c1d45848f, type: 2}
   isInfected: 0
   maxTimeBeforeAlert: 5
