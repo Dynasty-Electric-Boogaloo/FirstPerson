@@ -21,16 +21,16 @@ namespace Player
         {
             if (!PlayerData.Grounded) return;
 
-            if (PlayerData.Crouched)
+            if (PlayerData.Reloading)
             {
                 if (!CanUncrouch()) return;
             }
             
-            PlayerData.Crouched = PlayerData.PlayerInputs.Controls.Crouch.IsPressed();
+            PlayerData.Reloading = PlayerData.PlayerInputs.Controls.Crouch.IsPressed();
 
-            capsuleCollider.height = PlayerData.Crouched ? crouchedColliderSize : standingColliderSize;
-            meshTransform.localScale = PlayerData.Crouched ? new Vector3(1, crouchedMeshSize, 1) : new Vector3(1, standingMeshSize, 1);
-            PlayerData.CameraHolder.localPosition = Vector3.up * (PlayerData.Crouched ? crouchedCamHeight : standingCamHeight);
+            capsuleCollider.height = PlayerData.Reloading ? crouchedColliderSize : standingColliderSize;
+            meshTransform.localScale = PlayerData.Reloading ? new Vector3(1, crouchedMeshSize, 1) : new Vector3(1, standingMeshSize, 1);
+            PlayerData.CameraHolder.localPosition = Vector3.up * (PlayerData.Reloading ? crouchedCamHeight : standingCamHeight);
         }
 
         private bool CanUncrouch()

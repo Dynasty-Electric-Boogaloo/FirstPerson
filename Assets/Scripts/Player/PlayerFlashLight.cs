@@ -87,7 +87,7 @@ namespace Player
                 };
 
             var reload = _playerInput.Controls.ReloadFlash.IsPressed();
-            PlayerData.Crouched = reload;
+            PlayerData.Reloading = reload;
             if (reload)
                 _battery += addByButtonPressed * Time.deltaTime;
 

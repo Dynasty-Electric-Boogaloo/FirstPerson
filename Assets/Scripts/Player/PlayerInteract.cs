@@ -89,7 +89,8 @@ namespace Player
 
         private void TryInteract()
         {
-            if (!PlayerData.PlayerInputs.Controls.Interact.WasPressedThisFrame()) return;
+            if (!PlayerData.PlayerInputs.Controls.Interact.WasPressedThisFrame()) 
+                return;
             
             _selectedObject.Interact();
                 
