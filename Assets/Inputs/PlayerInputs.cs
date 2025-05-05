@@ -107,15 +107,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""Extract"",
-                    ""type"": ""Button"",
-                    ""id"": ""01f2e88e-f980-4a86-baf5-957e0be8175d"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -254,22 +245,11 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""9a0062e0-733c-4ce8-951a-e1d6e8401698"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""path"": ""<Mouse>/rightButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Dance"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""8b9adaa9-a33a-48d0-a64f-9a75dbda5d3b"",
-                    ""path"": ""<Keyboard>/q"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Extract"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -289,7 +269,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         m_Controls_Interact = m_Controls.FindAction("Interact", throwIfNotFound: true);
         m_Controls_Inspect = m_Controls.FindAction("Inspect", throwIfNotFound: true);
         m_Controls_Dance = m_Controls.FindAction("Dance", throwIfNotFound: true);
-        m_Controls_Extract = m_Controls.FindAction("Extract", throwIfNotFound: true);
     }
 
     ~@PlayerInputs()
@@ -365,7 +344,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_Controls_Interact;
     private readonly InputAction m_Controls_Inspect;
     private readonly InputAction m_Controls_Dance;
-    private readonly InputAction m_Controls_Extract;
     public struct ControlsActions
     {
         private @PlayerInputs m_Wrapper;
@@ -379,7 +357,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         public InputAction @Interact => m_Wrapper.m_Controls_Interact;
         public InputAction @Inspect => m_Wrapper.m_Controls_Inspect;
         public InputAction @Dance => m_Wrapper.m_Controls_Dance;
-        public InputAction @Extract => m_Wrapper.m_Controls_Extract;
         public InputActionMap Get() { return m_Wrapper.m_Controls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -416,9 +393,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Dance.started += instance.OnDance;
             @Dance.performed += instance.OnDance;
             @Dance.canceled += instance.OnDance;
-            @Extract.started += instance.OnExtract;
-            @Extract.performed += instance.OnExtract;
-            @Extract.canceled += instance.OnExtract;
         }
 
         private void UnregisterCallbacks(IControlsActions instance)
@@ -450,9 +424,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Dance.started -= instance.OnDance;
             @Dance.performed -= instance.OnDance;
             @Dance.canceled -= instance.OnDance;
-            @Extract.started -= instance.OnExtract;
-            @Extract.performed -= instance.OnExtract;
-            @Extract.canceled -= instance.OnExtract;
         }
 
         public void RemoveCallbacks(IControlsActions instance)
@@ -481,6 +452,5 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         void OnInteract(InputAction.CallbackContext context);
         void OnInspect(InputAction.CallbackContext context);
         void OnDance(InputAction.CallbackContext context);
-        void OnExtract(InputAction.CallbackContext context);
     }
 }

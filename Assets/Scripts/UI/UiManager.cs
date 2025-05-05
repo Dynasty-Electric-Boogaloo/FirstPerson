@@ -1,4 +1,5 @@
 using System;
+using DG.Tweening;
 using Game;
 using Interactables;
 using UnityEngine;
@@ -12,9 +13,8 @@ namespace UI
     public class UiManager : MonoBehaviour
     {
         [SerializeField] private Image inputShow;
-        [SerializeField] private Sprite normalSprite;
-        [SerializeField] private Sprite grabbingSprite;
         [SerializeField] private TMP_Text usageText;
+        
         
         private Interactable _current;
         
@@ -59,5 +59,13 @@ namespace UI
         {
             _instance.usageText.text = "Drop - E\\nThrow - Left Click";
         }
+
+        public static void SetDance(bool isDancing)
+        {
+            _instance.inputShow.color = isDancing ? Color.blue : Color.white;
+            _instance.inputShow.transform.DOScale(isDancing ? 0: 1, isDancing ? 1 : 0);
+        }
+        
+        
     }
 }

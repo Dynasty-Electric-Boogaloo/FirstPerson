@@ -85,15 +85,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "Extract",
-                    "type": "Button",
-                    "id": "01f2e88e-f980-4a86-baf5-957e0be8175d",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -232,22 +223,11 @@
                 {
                     "name": "",
                     "id": "9a0062e0-733c-4ce8-951a-e1d6e8401698",
-                    "path": "<Keyboard>/space",
+                    "path": "<Mouse>/rightButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Dance",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "8b9adaa9-a33a-48d0-a64f-9a75dbda5d3b",
-                    "path": "<Keyboard>/q",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Extract",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

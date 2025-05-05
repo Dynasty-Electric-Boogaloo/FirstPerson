@@ -5,6 +5,7 @@ using Player;
 using UI;
 using UnityEngine;
 using UnityEngine.InputSystem.Interactions;
+using UnityEngine.Serialization;
 using UnityEngine.UI;
 
 namespace Player
@@ -20,6 +21,7 @@ namespace Player
         [SerializeField] private float batteryMax;
         [SerializeField] private float addByButtonPressed = 0.25f;
         [SerializeField] private float lightIntensityMultiplier = 5000000;
+        [SerializeField] [Range(0f, 1f)] private float lightFalloffThreshold = 0.7f;
         [SerializeField] private float specialLightIntensityMultiplier = 5000000;
         [SerializeField] private Color lightColor = Color.white;
         [SerializeField] private Color specialLightColor = Color.red;
@@ -60,6 +62,8 @@ namespace Player
             
             if (GetComponent<BatteryManager>())
                 _batteryManager = GetComponent<BatteryManager>();
+
+            light.intensity = CurrentLightIntensity;
         }
 
         private void Update()
@@ -103,7 +107,9 @@ namespace Player
                     _battery -= Time.deltaTime;
                 else 
                     _batteryManager.ReduceBattery();
-                light.intensity = (CurrentBattery / CurrentBatteryMax) * CurrentLightIntensity;
+                
+                if( CurrentBattery / CurrentBatteryMax < lightFalloffThreshold) 
+                    light.intensity = ((CurrentBattery  / CurrentBatteryMax ) * CurrentLightIntensity / lightFalloffThreshold ) ;
             }
             
             if (hud)
