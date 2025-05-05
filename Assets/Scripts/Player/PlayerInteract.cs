@@ -26,7 +26,6 @@ namespace Player
                     return;
                 
                 TryInteract();
-                TryExtract();
                 
                 return;
             }
@@ -93,9 +92,7 @@ namespace Player
                 return;
             
             _selectedObject.Interact();
-                
-            if (_selectedObject.TryGetComponent<Mimic>(out var mimic)) 
-                mimic.WakingUp();
+            TryExtract();
 
             if (_selectedObject is not GrabObject grab) 
                 return;
@@ -106,13 +103,11 @@ namespace Player
 
         private void TryExtract()
         {
-            if (!PlayerData.PlayerInputs.Controls.Extract.WasPressedThisFrame()) 
-                return;
-            
+
             //QTE
-            if (_selectedObject.TryGetComponent<Mimic>(out var mimic))
-                mimic.DestroyMimic();
-                
+            if (!_selectedObject.TryGetComponent<Mimic>(out var mimic)) return;
+            mimic.DestroyMimic();
+
             _selectedObject.Break();
         }
 
