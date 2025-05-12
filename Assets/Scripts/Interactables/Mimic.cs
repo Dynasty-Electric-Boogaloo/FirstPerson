@@ -1,5 +1,6 @@
 using System;
 using Monster;
+using Player;
 using UnityEngine;
 
 public class Mimic : MonoBehaviour
@@ -45,7 +46,7 @@ public class Mimic : MonoBehaviour
         
         _numColliders = Physics.OverlapSphereNonAlloc(transform.position, checkPlayerRadius, _hitColliders, playerLayer);
         
-        if (_numColliders > 0) 
+        if (_numColliders > 0 && !PlayerRoot.GetIsDancing()) 
             ReduceTime();
     }
     
