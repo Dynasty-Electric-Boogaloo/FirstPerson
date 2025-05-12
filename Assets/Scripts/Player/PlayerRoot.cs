@@ -54,5 +54,7 @@ namespace Player
         }
 
         public static bool GetIsDancing() => _instance._playerData.Dancing;
+        
+        public static void SetIsDancing(bool setOn) => _instance._playerData.Dancing = setOn;
     }
 }
