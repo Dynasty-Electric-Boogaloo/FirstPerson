@@ -8,9 +8,8 @@ public class Mannequin : Interactable
 
     public override void Interact()
     {
-        print("get in");
-        PlayerRoot.SetIsDancing(true);
-        UiManager.SetDance(true);
+        PlayerRoot.SetIsDancing(!PlayerRoot.GetIsDancing());
+        UiManager.SetDance(false);
     }
 
     public virtual InteractionType GetInteractionType()

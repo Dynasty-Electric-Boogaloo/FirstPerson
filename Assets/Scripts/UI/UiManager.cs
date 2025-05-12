@@ -2,6 +2,7 @@ using System;
 using DG.Tweening;
 using Game;
 using Interactables;
+using Player;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -60,8 +61,9 @@ namespace UI
             _instance.usageText.text = "Drop - E\\nThrow - Left Click";
         }
 
-        public static void SetDance(bool isDancing)
+        public static void SetDance(bool isManualDancing)
         {
+            var isDancing = isManualDancing || PlayerRoot.GetIsDancing();
             _instance.inputShow.color = isDancing ? Color.blue : Color.white;
             _instance.inputShow.transform.DOScale(isDancing ? 0: 1, isDancing ? 1 : 0);
         }
