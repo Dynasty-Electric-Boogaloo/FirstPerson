@@ -175,6 +175,7 @@ namespace ZoneGraph
                         if (i == otherRoom.id)
                             continue;
 
+                        entryPoints.TryAdd(otherRoom, new HashSet<NodeId>());
                         //Try node if connexion causes trouble
                         entryPoints[otherRoom].Add(connexion);
                     }
@@ -187,6 +188,8 @@ namespace ZoneGraph
                 {
                     room.entryPointValues.Add(new SerializableRoom.EntryPoints{nodes = value.ToList()});
                 }
+
+                rooms[i] = room;
             }
 
             outputGraphData.nodes = nodes;
