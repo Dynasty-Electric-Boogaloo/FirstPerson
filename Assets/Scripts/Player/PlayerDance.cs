@@ -17,19 +17,24 @@ namespace Player
         
         private void Update()
         {
-            _timer -= Time.deltaTime;
-            print(_timer);
-            
-            if(_timer < 0 - timeBetween * tolerance || (PlayerData.PlayerInputs.Controls.Dance.WasPressedThisFrame() && _timer > 0 + timeBetween * tolerance))
-                UiManager.SetDance(false);
-            
-            if (!PlayerData.PlayerInputs.Controls.Dance.WasPressedThisFrame()) 
-                return;
-            
             if(PlayerData.Dancing)
-                _timer = timeBetween;
-            else
-                SetDancing(true);
+            {
+                _timer -= Time.deltaTime;
+
+                if (_timer < 0 - timeBetween * tolerance ||
+                    (PlayerData.PlayerInputs.Controls.Dance.WasPressedThisFrame() &&
+                     _timer > 0 + timeBetween * tolerance))
+                    UiManager.SetDance(false);
+
+                if (!PlayerData.PlayerInputs.Controls.Dance.WasPressedThisFrame())
+                    return;
+
+                if (PlayerData.Dancing)
+                    _timer = timeBetween;
+                else
+                    SetDancing(true);
+            }
+            SetDancing(true);
         }
 
         private void SetDancing(bool setOn = false)

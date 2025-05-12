@@ -16,7 +16,7 @@ namespace Player
         }
 
         [SerializeField] private MovementConfig walkConfig;
-        [FormerlySerializedAs("crouchConfig")] [SerializeField] private MovementConfig slowConfig;
+        [SerializeField] private MovementConfig slowConfig;
         [SerializeField] private LayerMask groundMask;
         [SerializeField] private float groundedGroundCheckLength;
         [SerializeField] private float airborneGroundCheckLength;
