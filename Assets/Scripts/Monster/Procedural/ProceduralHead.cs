@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Monster.Procedural
 {
@@ -51,6 +49,7 @@ namespace Monster.Procedural
         [SerializeField] private float positionRecordDistance;
         [SerializeField] private float positionRecordingMaxDistance;
         [SerializeField] private float curvePointDistance;
+        [SerializeField] private float curvePointTotalDistance;
         [SerializeField] private List<AnimationPose> poses;
         [SerializeField] private AnimationCurve transitionOrderCurve;
         private Dictionary<string, int> _posesDict;
@@ -79,7 +78,9 @@ namespace Monster.Procedural
 
         private void Update()
         {
-            _transitionTimer -= Time.deltaTime;
+            if (_transitionTimer >= 0)
+                _transitionTimer -= Time.deltaTime;
+            
             TryRemovePoint();
             TryAddPoint();
             BakeCurve();
@@ -94,25 +95,37 @@ namespace Monster.Procedural
                 return;
             }
 
-            var diff = transform.position - _positionRecording[0].Position;
-            if (diff.magnitude < positionRecordDistance)
-                return;
-            
-            _positionRecording.Insert(0, new RecordPoint(transform));
+            while (true)
+            {
+                var diff = transform.position - _positionRecording[0].Position;
+                if (diff.magnitude < positionRecordDistance)
+                    return;
+
+                _positionRecording.Insert(0, new RecordPoint
+                {
+                    Position = _positionRecording[0].Position + diff.normalized * positionRecordDistance
+                });
+            }
         }
 
         private void TryRemovePoint()
         {
-            if (GetDistanceAtPoint(_positionRecording.Count - 1) < positionRecordingMaxDistance)
-                return;
-            
-            _positionRecording.RemoveAt(_positionRecording.Count - 1);
+            while (true)
+            {
+                if (_positionRecording.Count < 2)
+                    return;
+                
+                if ((_positionRecording.Count - 1) * positionRecordDistance < positionRecordingMaxDistance)
+                    return;
+
+                _positionRecording.RemoveAt(_positionRecording.Count - 1);
+            }
         }
 
         private void BakeCurve()
         {
             _curve.Clear();
-            for (var i = 0f; i <= positionRecordingMaxDistance; i += curvePointDistance)
+            for (var i = curvePointDistance * 2; i <= curvePointTotalDistance; i += curvePointDistance)
             {
                 _curve.Add(GetPointAtDistance(i).Position);
             }
@@ -161,6 +174,22 @@ namespace Monster.Procedural
             var factor = 2 * (_transitionTimer / poses[_currentPose].transitionTime) - 1 + transitionOrderCurve.Evaluate(time);
             var verticalOffset = Lerpaluate(poses[_currentPose].verticalCurve, poses[_previousPose].verticalCurve, time, factor);
             var forwardOffset = Lerpaluate(poses[_currentPose].forwardCurve, poses[_previousPose].forwardCurve, time, factor);
+
+            forwardOffset -= RecordPoint.Distance(GetStartPoint(0), GetEndPoint(0));
+
+            var remainder = (forwardOffset % positionRecordDistance) / positionRecordDistance;
+            var index = Mathf.FloorToInt(forwardOffset / positionRecordDistance);
+
+            if (index < 0)
+            {
+                index = 0;
+                remainder = 0;
+            }
+
+            if (index >= _positionRecording.Count)
+                return _positionRecording[^1];
+
+            return RecordPoint.Lerp(GetStartPoint(index), GetEndPoint(index), remainder).SetVerticalOffset(verticalOffset);
 
             var total = 0f;
             
@@ -238,6 +267,12 @@ namespace Monster.Procedural
             for (var i = 0; i < _positionRecording.Count; i++)
             {
                 Gizmos.DrawLine(GetStartPoint(i).Position, GetEndPoint(i).Position);
+            }
+
+            Gizmos.color = Color.blue;
+            for (var i = 0; i < _curve.Count - 1; i++)
+            {
+                Gizmos.DrawLine(_curve[i], _curve[i + 1]);
             }
         }
     }
