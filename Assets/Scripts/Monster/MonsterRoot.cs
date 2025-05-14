@@ -1,6 +1,7 @@
 ﻿using System;
 using Heatmap;
 using Interactables;
+using Monster.Procedural;
 using Player;
 using UnityEngine;
 using ZoneGraph;
@@ -9,6 +10,8 @@ namespace Monster
 {
     public class MonsterRoot : MonoBehaviour
     {
+        [SerializeField] private ProceduralHead proceduralHead;
+        [SerializeField] private bool chasing;
         private MonsterData _monsterData;
         private Vector3 _startPosition;
         private Quaternion _startRotation;
@@ -33,6 +36,8 @@ namespace Monster
 
         private void Update()
         {
+            proceduralHead.SetPose(chasing ? "Chasing" : "Patrolling");
+            
             var diff = PlayerRoot.Position - transform.position;
             diff.y = 0;
 
