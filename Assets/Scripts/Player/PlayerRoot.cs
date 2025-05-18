@@ -52,5 +52,11 @@ namespace Player
             _instance.transform.rotation = _instance._startRotation;
             _instance._playerData.Rigidbody.linearVelocity = Vector3.zero;
         }
+
+        public static bool GetIsDancing() => _instance._playerData.Dancing || _instance._playerData.IsInMannequin;
+        
+        public static bool GetIsInMannequin() => _instance._playerData.IsInMannequin;
+        
+        public static void SetIsDancing(bool setOn) => _instance._playerData.IsInMannequin = setOn;
     }
 }

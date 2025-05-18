@@ -3,6 +3,7 @@
 	public enum InteractionType
 	{
 		GrabObject,
-		Collectible
+		Collectible,
+		Mannequin
 	}
 }

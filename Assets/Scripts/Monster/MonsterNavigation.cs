@@ -118,7 +118,7 @@ namespace Monster
             var ray = new Ray(transform.position + Vector3.up * detectionRayOffset, rayVector);
             var hit = Physics.Raycast(ray, out _playerHit, detectionMaxDistance, visionMask);
 
-            if (hit)
+            if (hit && !PlayerRoot.GetIsDancing())
                 return ((1 << _playerHit.transform.gameObject.layer) & playerMask) != 0;
             
             return false;

@@ -1,6 +1,8 @@
 using System;
+using DG.Tweening;
 using Game;
 using Interactables;
+using Player;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -12,20 +14,12 @@ namespace UI
     public class UiManager : MonoBehaviour
     {
         [SerializeField] private Image inputShow;
-        [SerializeField] private Sprite normalSprite;
-        [SerializeField] private Sprite grabbingSprite;
         [SerializeField] private TMP_Text usageText;
-        //Code only for first playable, nuke it afterwards
-        [SerializeField] private TMP_Text collectedText;
-        [SerializeField] private TMP_Text helpText;
+        
         
         private Interactable _current;
         
         private static UiManager _instance;
-        
-        //Code only for first playable, nuke it afterwards
-        private int _collectibleCount;
-        private int _collectedCount;
         
         private void Awake()
         {
@@ -36,37 +30,6 @@ namespace UI
 
             if (usageText)
                 usageText.text = "";
-            
-            //Code only for first playable, nuke it afterwards
-            _collectibleCount = FindObjectsByType<Collectible>(FindObjectsInactive.Exclude, FindObjectsSortMode.None).Length;
-            _collectedCount = 0;
-            collectedText.text = $"{_instance._collectedCount}/{_instance._collectibleCount}";
-        }
-
-        private void Update()
-        {
-            if (Keyboard.current.eKey.wasPressedThisFrame)
-                helpText.enabled = false;
-        }
-
-        //Code only for first playable, nuke it afterwards
-        public static void AddCollected()
-        {
-            if (!_instance)
-                return;
-            
-            _instance._collectedCount++;
-            if (_instance._collectedCount >= _instance._collectibleCount)
-            {
-                SceneLoader.LoadSceneGroup(4, LoadSceneMode.Single);
-                return;
-            }
-
-            if (!_instance.collectedText)
-                return;
-            
-            _instance.collectedText.text = $"{_instance._collectedCount}/{_instance._collectibleCount}";
-            
         }
 
         public static void SetInteract(Interactable interactable)
@@ -97,5 +60,14 @@ namespace UI
         {
             _instance.usageText.text = "Drop - E\\nThrow - Left Click";
         }
+
+        public static void SetDance(bool isManualDancing)
+        {
+            var isDancing = isManualDancing || PlayerRoot.GetIsDancing();
+            _instance.inputShow.color = isDancing ? Color.blue : Color.white;
+            _instance.inputShow.transform.DOScale(isDancing ? 0: 1, isDancing ? 1 : 0);
+        }
+        
+        
     }
 }
