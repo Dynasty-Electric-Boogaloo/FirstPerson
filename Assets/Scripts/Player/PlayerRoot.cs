@@ -55,6 +55,8 @@ namespace Player
 
         public static bool GetIsDancing() => _instance._playerData.Dancing || _instance._playerData.IsInMannequin;
         
+        public static bool GetIsInMannequin() => _instance._playerData.IsInMannequin;
+        
         public static void SetIsDancing(bool setOn) => _instance._playerData.IsInMannequin = setOn;
     }
 }

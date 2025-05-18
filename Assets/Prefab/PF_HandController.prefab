@@ -752,6 +752,7 @@ MonoBehaviour:
   batteryMax: 30
   addByButtonPressed: 6
   lightIntensityMultiplier: 20
+  lightFalloffThreshold: 0.7
   specialLightIntensityMultiplier: 40
   lightColor: {r: 1, g: 1, b: 1, a: 1}
   specialLightColor: {r: 1, g: 0.25943398, b: 0.25943398, a: 1}
@@ -762,7 +763,6 @@ MonoBehaviour:
     m_Bits: 64
   coneRadius: 0.303
   maxObjectInSight: 10
-  percentBeforeIntensityChange: 0
 --- !u!114 &266798638669423720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -797,6 +797,7 @@ MonoBehaviour:
   maxPowerByBattery: 20
   maxBattery: 3
   startBatteryPercent: 100
+  hud: {fileID: 266798638669423720}
 --- !u!114 &4941221304825508424
 MonoBehaviour:
   m_ObjectHideFlags: 0

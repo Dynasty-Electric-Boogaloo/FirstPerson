@@ -1,4 +1,6 @@
 using System;
+using Player;
+using UI;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -11,6 +13,7 @@ public class BatteryManager : MonoBehaviour
     [SerializeField] private float maxBattery;
     [Range(0, 100)]
     [SerializeField] private int startBatteryPercent;
+    [SerializeField] private Hud hud;
 
 
     private void Awake()
@@ -24,7 +27,16 @@ public class BatteryManager : MonoBehaviour
         _currentPower = maxPowerByBattery * ((float)startBatteryPercent/100);
         _currentBattery = maxBattery;
     }
-    
+
+    private void Update()
+    {
+        if (!PlayerRoot.GetIsInMannequin()) return;
+        
+        if(hud)
+            hud.UpdateBattery(_currentPower, maxPowerByBattery, true);
+        ReduceBattery();
+    }
+
     public void AddBattery(float newBattery)
     {
         _currentBattery += newBattery;
