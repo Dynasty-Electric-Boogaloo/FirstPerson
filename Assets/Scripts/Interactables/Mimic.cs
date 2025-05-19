@@ -16,6 +16,7 @@ public class Mimic : MonoBehaviour
     [SerializeField] private MeshRenderer meshRenderer;
     [SerializeField] private MaterialSet regularMaterialSet;
     [SerializeField] private bool isInfected;
+    [SerializeField] private bool showObject;
     [SerializeField] private float maxTimeBeforeAlert = 15;
     [SerializeField] private float checkPlayerRadius = 1;
     [SerializeField] private LayerMask playerLayer;
@@ -27,7 +28,7 @@ public class Mimic : MonoBehaviour
     private void Awake()
     {
         _timer = maxTimeBeforeAlert;
-        meshRenderer.enabled = isInfected;
+        meshRenderer.enabled = isInfected || showObject;
         meshRenderer.material = regularMaterialSet.normal;
 
         if (TryGetComponent<Interactable>(out var interactable))
