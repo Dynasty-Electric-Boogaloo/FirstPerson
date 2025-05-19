@@ -370,7 +370,7 @@ Transform:
   m_GameObject: {fileID: 22269393}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.65, y: 4.6, z: -7.85}
+  m_LocalPosition: {x: -13.65, y: 1, z: -7.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -392,8 +392,9 @@ MonoBehaviour:
   targetHead: {fileID: 457196619}
   previousBody: {fileID: 986720907}
   distance: 3
-  hoverHeight: 1
+  hoverHeight: 0.5
   gravity: 10
+  maxFallSpeed: 5
   groundCheckLength: 1.2
   groundMask:
     serializedVersion: 2
@@ -925,8 +926,9 @@ MonoBehaviour:
   targetHead: {fileID: 457196619}
   previousBody: {fileID: 1644181908}
   distance: 1
-  hoverHeight: 1
+  hoverHeight: 0.5
   gravity: 10
+  maxFallSpeed: 5
   groundCheckLength: 1.2
   groundMask:
     serializedVersion: 2
@@ -940,7 +942,7 @@ Transform:
   m_GameObject: {fileID: 58446574}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.65, y: 4.6, z: -7.85}
+  m_LocalPosition: {x: -13.65, y: 1, z: -7.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -3465,8 +3467,9 @@ MonoBehaviour:
   targetHead: {fileID: 457196619}
   previousBody: {fileID: 22269396}
   distance: 4
-  hoverHeight: 1
+  hoverHeight: 0.5
   gravity: 10
+  maxFallSpeed: 5
   groundCheckLength: 1.2
   groundMask:
     serializedVersion: 2
@@ -3480,7 +3483,7 @@ Transform:
   m_GameObject: {fileID: 248923201}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.65, y: 4.6, z: -7.85}
+  m_LocalPosition: {x: -13.65, y: 1, z: -7.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6552,81 +6555,55 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   positionRecordDistance: 0.25
   positionRecordingMaxDistance: 10
-  curvePointDistance: 0.125
-  curvePointTotalDistance: 9
-  backwardEvaluationDistance: 0.1
+  backwardEvaluationDistance: 1
   poses:
   - name: Patrolling
-    transitionTime: 0.5
-    verticalCurve:
+    transitionTime: 2
+    angleCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
+        value: 1
+        inSlope: 141.19418
+        outSlope: 141.19418
+        tangentMode: 34
         weightedMode: 0
         inWeight: 0
-        outWeight: 0
+        outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.48080328
-        value: 0.00004386902
-        inSlope: 0.06312481
-        outSlope: 0.06312481
-        tangentMode: 0
+        time: 0.24310721
+        value: 35.325325
+        inSlope: -166.2399
+        outSlope: -166.2399
+        tangentMode: 34
         weightedMode: 0
-        inWeight: 0.6894781
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.635187
+        value: -150.39265
+        inSlope: -29.343506
+        outSlope: -29.343506
+        tangentMode: 34
+        weightedMode: 0
+        inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 3
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
+        value: 1
+        inSlope: 414.98697
+        outSlope: 414.98697
+        tangentMode: 34
         weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    forwardCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 6
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0.15817945
-      - serializedVersion: 3
-        time: 0.7990877
-        value: 2.1775548
-        inSlope: 21.271782
-        outSlope: 21.271782
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.17649561
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1
-        value: 0
-        inSlope: -0.21130946
-        outSlope: -0.21130946
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.54693955
+        inWeight: 0.33333334
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
   - name: Chasing
-    transitionTime: 0.5
-    verticalCurve:
+    transitionTime: 2
+    angleCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -6638,47 +6615,14 @@ MonoBehaviour:
         weightedMode: 0
         inWeight: 0
         outWeight: 0
-      - serializedVersion: 3
-        time: 0.7857367
-        value: 0.009527683
-        inSlope: 0.035522897
-        outSlope: 0.035522897
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.27221027
-      - serializedVersion: 3
-        time: 1.0079651
-        value: 0.38134766
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    forwardCurve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 9
-        inSlope: -9
-        outSlope: -9
-        tangentMode: 34
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0.33333334
       - serializedVersion: 3
         time: 1
-        value: 0
-        inSlope: -9
-        outSlope: -9
-        tangentMode: 34
+        value: 1
+        inSlope: 2
+        outSlope: 2
+        tangentMode: 0
         weightedMode: 0
-        inWeight: 0.33333334
+        inWeight: 0
         outWeight: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
@@ -6687,37 +6631,28 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
+      time: 0.000004810281
+      value: 0.50462174
+      inSlope: -6.412763
+      outSlope: -6.412763
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.24159016
     - serializedVersion: 3
-      time: 0.5183711
-      value: 0.36697605
-      inSlope: -0.74248767
-      outSlope: -0.74248767
+      time: 0.1617083
+      value: 0.0016623
+      inSlope: 0.17485702
+      outSlope: 0.17485702
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.8448897
-      value: 0.514601
-      inSlope: -0.09713444
-      outSlope: -0.09713444
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.5063468
-      outWeight: 0.33333334
-    - serializedVersion: 3
       time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
+      value: 1
+      inSlope: 2
+      outSlope: 2
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
@@ -6725,7 +6660,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  travelPoint: {fileID: 1644181910}
 --- !u!120 &457196620
 LineRenderer:
   serializedVersion: 2
@@ -12254,7 +12188,7 @@ Transform:
   m_GameObject: {fileID: 986720904}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.65, y: 4.6, z: -7.85}
+  m_LocalPosition: {x: -13.65, y: 1, z: -7.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12276,8 +12210,9 @@ MonoBehaviour:
   targetHead: {fileID: 457196619}
   previousBody: {fileID: 58446576}
   distance: 2
-  hoverHeight: 1
+  hoverHeight: 0.5
   gravity: 10
+  maxFallSpeed: 5
   groundCheckLength: 1.2
   groundMask:
     serializedVersion: 2
@@ -16376,8 +16311,9 @@ MonoBehaviour:
   targetHead: {fileID: 457196619}
   previousBody: {fileID: 1588205202}
   distance: 6
-  hoverHeight: 1
+  hoverHeight: 0.5
   gravity: 10
+  maxFallSpeed: 5
   groundCheckLength: 1.2
   groundMask:
     serializedVersion: 2
@@ -16391,7 +16327,7 @@ Transform:
   m_GameObject: {fileID: 1323532246}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.65, y: 4.6, z: -7.85}
+  m_LocalPosition: {x: -13.65, y: 1, z: -7.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16430,8 +16366,9 @@ MonoBehaviour:
   targetHead: {fileID: 457196619}
   previousBody: {fileID: 1323532247}
   distance: 7
-  hoverHeight: 1
+  hoverHeight: 0.5
   gravity: 10
+  maxFallSpeed: 5
   groundCheckLength: 1.2
   groundMask:
     serializedVersion: 2
@@ -16445,7 +16382,7 @@ Transform:
   m_GameObject: {fileID: 1324755725}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.65, y: 4.6, z: -7.85}
+  m_LocalPosition: {x: -13.65, y: 1, z: -7.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20075,8 +20012,9 @@ MonoBehaviour:
   targetHead: {fileID: 457196619}
   previousBody: {fileID: 248923203}
   distance: 5
-  hoverHeight: 1
+  hoverHeight: 0.5
   gravity: 10
+  maxFallSpeed: 5
   groundCheckLength: 1.2
   groundMask:
     serializedVersion: 2
@@ -20090,7 +20028,7 @@ Transform:
   m_GameObject: {fileID: 1588205201}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.65, y: 4.6, z: -7.85}
+  m_LocalPosition: {x: -13.65, y: 1, z: -7.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20443,9 +20381,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetHead: {fileID: 457196619}
   previousBody: {fileID: 0}
-  distance: 0
-  hoverHeight: 1
+  distance: 0.01
+  hoverHeight: 0.5
   gravity: 10
+  maxFallSpeed: 5
   groundCheckLength: 1.2
   groundMask:
     serializedVersion: 2
@@ -20459,7 +20398,7 @@ Transform:
   m_GameObject: {fileID: 1644181907}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.65, y: 4.6, z: -7.85}
+  m_LocalPosition: {x: -13.65, y: 1, z: -7.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22238,8 +22177,9 @@ MonoBehaviour:
   targetHead: {fileID: 457196619}
   previousBody: {fileID: 1324755726}
   distance: 8
-  hoverHeight: 1
+  hoverHeight: 0.5
   gravity: 10
+  maxFallSpeed: 5
   groundCheckLength: 1.2
   groundMask:
     serializedVersion: 2
@@ -22253,7 +22193,7 @@ Transform:
   m_GameObject: {fileID: 1792374281}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.65, y: 4.6, z: -7.85}
+  m_LocalPosition: {x: -13.65, y: 1, z: -7.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

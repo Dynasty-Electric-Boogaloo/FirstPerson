@@ -10,6 +10,7 @@ namespace Monster.Procedural
         [SerializeField] private float distance;
         [SerializeField] private float hoverHeight;
         [SerializeField] private float gravity;
+        [SerializeField] private float maxFallSpeed;
         [SerializeField] private float groundCheckLength;
         [SerializeField] private LayerMask groundMask;
         private float _verticalPosition;
@@ -20,10 +21,10 @@ namespace Monster.Procedural
             _verticalPosition = transform.position.y;
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
             UpdateGrounding();
-            UpdatePosition();
+            //UpdatePosition();
         }
 
         private void UpdateGrounding()
@@ -35,8 +36,15 @@ namespace Monster.Procedural
 
             if (!grounded)
             {
-                _verticalVelocity -= gravity * Time.deltaTime;
-                _verticalPosition += _verticalVelocity * Time.deltaTime;
+                _verticalVelocity -= gravity * Time.fixedDeltaTime;
+                _verticalVelocity = Mathf.Clamp(_verticalVelocity, -maxFallSpeed, maxFallSpeed);
+                _verticalPosition += _verticalVelocity * Time.fixedDeltaTime;
+
+                if (_verticalPosition < -10)
+                {
+                    _verticalPosition = previousBody._verticalPosition + 1;
+                    _verticalVelocity = 0;
+                }
             }
             else
             {
@@ -44,21 +52,26 @@ namespace Monster.Procedural
                 _verticalPosition = hitInfo.point.y + hoverHeight;
             }
         }
-        
-        private void UpdatePosition()
+
+        public void UpdatePosition(Vector3 position, Quaternion rotation)
         {
-            var targetPosition = targetHead.GetPointOnCurve(distance);
-            targetPosition.Position.y += _verticalPosition;
+            /*var targetPosition = targetHead.GetPointOnCurve(distance);
             if (float.IsNaN(targetPosition.Position.x) || float.IsNaN(targetPosition.Position.z))
-                return;
+                return;*/
 
-            transform.position = targetPosition.Position;
-            transform.rotation = targetPosition.Rotation;
+            position.y += _verticalPosition;
+            transform.position = position;
+            transform.rotation = rotation;
 
-            if (!previousBody)
+            /*if (!previousBody)
                 return;
             
-            transform.rotation = Quaternion.LookRotation((previousBody.transform.position - transform.position).normalized, transform.up);
+            transform.rotation = Quaternion.LookRotation((previousBody.transform.position - transform.position).normalized, transform.up);*/
+        }
+
+        public float GetDistance()
+        {
+            return distance;
         }
     }
 }
