@@ -6,6 +6,7 @@ namespace Monster.Procedural
     public class ProceduralBody : MonoBehaviour
     {
         [SerializeField] private ProceduralHead targetHead;
+        [SerializeField] private ProceduralBody previousBody;
         [SerializeField] private float distance;
         [SerializeField] private float hoverHeight;
         [SerializeField] private float gravity;
@@ -19,7 +20,7 @@ namespace Monster.Procedural
             _verticalPosition = transform.position.y;
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
             UpdateGrounding();
             UpdatePosition();
@@ -34,8 +35,8 @@ namespace Monster.Procedural
 
             if (!grounded)
             {
-                _verticalVelocity -= gravity * Time.fixedDeltaTime;
-                _verticalPosition += _verticalVelocity * Time.fixedDeltaTime;
+                _verticalVelocity -= gravity * Time.deltaTime;
+                _verticalPosition += _verticalVelocity * Time.deltaTime;
             }
             else
             {
@@ -47,11 +48,17 @@ namespace Monster.Procedural
         private void UpdatePosition()
         {
             var targetPosition = targetHead.GetPointOnCurve(distance);
-            targetPosition.y += _verticalPosition;
-            if (float.IsNaN(targetPosition.x) || float.IsNaN(targetPosition.z))
+            targetPosition.Position.y += _verticalPosition;
+            if (float.IsNaN(targetPosition.Position.x) || float.IsNaN(targetPosition.Position.z))
+                return;
+
+            transform.position = targetPosition.Position;
+            transform.rotation = targetPosition.Rotation;
+
+            if (!previousBody)
                 return;
             
-            transform.position = targetPosition;
+            transform.rotation = Quaternion.LookRotation((previousBody.transform.position - transform.position).normalized, transform.up);
         }
     }
 }

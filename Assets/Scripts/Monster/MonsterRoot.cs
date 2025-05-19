@@ -1,5 +1,4 @@
-﻿using System;
-using Heatmap;
+﻿using Heatmap;
 using Interactables;
 using Monster.Procedural;
 using Player;
@@ -41,20 +40,20 @@ namespace Monster
             var diff = PlayerRoot.Position - transform.position;
             diff.y = 0;
 
-            if (diff.magnitude < 1.5f)
-            {
-                PlayerRoot.ResetPosition();
-                transform.position = _startPosition;
-                transform.rotation = _startRotation;
-                _monsterData.targetPoint = transform.position;
-                _monsterData.stateTime = 0;
-                _monsterData.chasing = false;
-                _monsterData.searching = false;
-                _monsterData.Heatmap.Data.Clear();
-                _monsterData.chaseTimer = 0;
-                _monsterData.targetNode = new NodeId(-1);
-                InteractableManager.Restore();
-            }
+            if (!(diff.magnitude < 1.5f)) 
+                return;
+            
+            PlayerRoot.ResetPosition();
+            transform.position = _startPosition;
+            transform.rotation = _startRotation;
+            _monsterData.targetPoint = transform.position;
+            _monsterData.stateTime = 0;
+            _monsterData.chasing = false;
+            _monsterData.searching = false;
+            _monsterData.Heatmap.Data.Clear();
+            _monsterData.chaseTimer = 0;
+            _monsterData.targetNode = new NodeId(-1);
+            InteractableManager.Restore();
         }
     }
 }

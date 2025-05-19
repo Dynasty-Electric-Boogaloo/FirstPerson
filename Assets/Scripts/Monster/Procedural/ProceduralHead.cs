@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
 
 namespace Monster.Procedural
@@ -37,6 +38,12 @@ namespace Monster.Procedural
             }
         }
 
+        public struct CurvePoint
+        {
+            public Vector3 Position;
+            public Quaternion Rotation;
+        }
+
         [Serializable]
         public struct AnimationPose
         {
@@ -50,12 +57,13 @@ namespace Monster.Procedural
         [SerializeField] private float positionRecordingMaxDistance;
         [SerializeField] private float curvePointDistance;
         [SerializeField] private float curvePointTotalDistance;
+        [SerializeField] private float backwardEvaluationDistance;
         [SerializeField] private List<AnimationPose> poses;
         [SerializeField] private AnimationCurve transitionOrderCurve;
+        [SerializeField] private Transform travelPoint;
         private Dictionary<string, int> _posesDict;
         private List<RecordPoint> _positionRecording;
-        private List<Vector3> _curve;
-        private float _totalDistance;
+        private List<CurvePoint> _curve;
         
         private int _currentPose;
         private int _previousPose;
@@ -72,7 +80,7 @@ namespace Monster.Procedural
             
             _positionRecording = new List<RecordPoint>();
             _positionRecording.Add(new RecordPoint(transform));
-            _curve = new List<Vector3>();
+            _curve = new List<CurvePoint>();
             BakeCurve();
         }
 
@@ -84,7 +92,6 @@ namespace Monster.Procedural
             TryRemovePoint();
             TryAddPoint();
             BakeCurve();
-            _totalDistance = GetTotalDistance();
         }
         
         private void TryAddPoint()
@@ -125,26 +132,14 @@ namespace Monster.Procedural
         private void BakeCurve()
         {
             _curve.Clear();
-            for (var i = curvePointDistance * 2; i <= curvePointTotalDistance; i += curvePointDistance)
-            {
-                _curve.Add(GetPointAtDistance(i).Position);
-            }
-        }
-
-        private float GetDistanceAtPoint(int index)
-        {
-            var distance = Vector3.Distance(transform.position, _positionRecording[0].Position);
             
-            for (var i = 0; i < index; i++)
+            for (var i = 0; i * curvePointDistance <= curvePointTotalDistance; i++)
             {
-                var diff = _positionRecording[i].Position - _positionRecording[i + 1].Position;
-                distance += diff.magnitude;
+                _curve.Add(GetPointAtDistance(i * curvePointDistance));
             }
-
-            return distance;
         }
 
-        public Vector3 GetPointOnCurve(float distance)
+        public CurvePoint GetPointOnCurve(float distance)
         {
             var total = 0f;
             
@@ -153,79 +148,80 @@ namespace Monster.Procedural
                 var previousTotal = total;
                 var start = _curve[i - 1];
                 var end = _curve[i];
-                total += Vector3.Distance(start, end);
+                total += Vector3.Distance(start.Position, end.Position);
 
                 if (total < distance)
                     continue;
 
                 var factor = (distance - previousTotal) / (total - previousTotal);
-                return Vector3.Lerp(start, end, factor);
+                return new CurvePoint
+                {
+                    Position = Vector3.Lerp(start.Position, end.Position, factor),
+                    Rotation = Quaternion.Slerp(start.Rotation, end.Rotation, factor)
+                };
             }
 
             return _curve[^1];
         }
 
-        public RecordPoint GetPointAtDistance(float distance)
+        private Vector3 GetPointUp(int curve, float distance)
         {
-            if (distance >= _totalDistance)
-                return _positionRecording[^1];
+            var time = 1 - distance / positionRecordingMaxDistance;
+            var back = poses[curve].forwardCurve.Evaluate(time - 0.1f);
+            var forth = poses[curve].forwardCurve.Evaluate(time + 0.1f);
+            var sign = Sigmoid(forth - back);
+            
+            return Quaternion.AngleAxis(sign * 90, Vector3.right) * Vector3.forward;
+        }
 
+        private CurvePoint GetPointAtDistance(float distance)
+        {
             var time = 1 - distance / positionRecordingMaxDistance;
             var factor = 2 * (_transitionTimer / poses[_currentPose].transitionTime) - 1 + transitionOrderCurve.Evaluate(time);
-            var verticalOffset = Lerpaluate(poses[_currentPose].verticalCurve, poses[_previousPose].verticalCurve, time, factor);
-            var forwardOffset = Lerpaluate(poses[_currentPose].forwardCurve, poses[_previousPose].forwardCurve, time, factor);
+            
+            var previousPoint = GetTransformAtDistance(_previousPose, distance);
+            var currentPoint = GetTransformAtDistance(_currentPose, distance);
 
+            return new CurvePoint
+            {
+                Position = Vector3.Lerp(currentPoint.Position, previousPoint.Position, factor),
+                Rotation = Quaternion.Slerp(currentPoint.Rotation, previousPoint.Rotation, factor)
+            };
+        }
+
+        private CurvePoint GetTransformAtDistance(int pose, float distance)
+        {
+            var forward = GetTransformedRecordPoint(pose, distance);
+            var backward = GetTransformedRecordPoint(pose, distance + backwardEvaluationDistance);
+            
+            var up = GetPointUp(pose, distance);
+            var normal = (forward.Position - backward.Position).normalized;
+            
+            return new CurvePoint
+            {
+                Position = forward.Position,
+                Rotation = Quaternion.LookRotation(normal, up)
+            };
+        }
+
+        private RecordPoint GetTransformedRecordPoint(int curve, float distance)
+        {
+            //distance 
+            var time = 1 - distance / positionRecordingMaxDistance;
+            var verticalOffset = poses[curve].verticalCurve.Evaluate(time);
+            var forwardOffset = poses[curve].forwardCurve.Evaluate(time);
             forwardOffset -= RecordPoint.Distance(GetStartPoint(0), GetEndPoint(0));
-
+            
             var remainder = (forwardOffset % positionRecordDistance) / positionRecordDistance;
             var index = Mathf.FloorToInt(forwardOffset / positionRecordDistance);
 
             if (index < 0)
-            {
-                index = 0;
-                remainder = 0;
-            }
-
+                return GetStartPoint(0).SetVerticalOffset(verticalOffset);
+            
             if (index >= _positionRecording.Count)
-                return _positionRecording[^1];
-
+                return GetEndPoint(_positionRecording.Count - 1).SetVerticalOffset(verticalOffset);
+            
             return RecordPoint.Lerp(GetStartPoint(index), GetEndPoint(index), remainder).SetVerticalOffset(verticalOffset);
-
-            var total = 0f;
-            
-            for (var i = 0; i < _positionRecording.Count; i++)
-            {
-                var previousTotal = total;
-                total += GetDistance(i);
-
-                if (total < forwardOffset)
-                    continue;
-
-                factor = (forwardOffset - previousTotal) / (total - previousTotal);
-                return RecordPoint.Lerp(GetStartPoint(i), GetEndPoint(i), factor).SetVerticalOffset(verticalOffset);
-            }
-            
-            return _positionRecording[^1];
-        }
-
-        private float GetTotalDistance()
-        {
-            if (_positionRecording.Count < 2)
-                return 0;
-            
-            var total = 0f;
-
-            for (var i = 0; i < _positionRecording.Count; i++)
-            {
-                total += GetDistance(i);
-            }
-
-            return total;
-        }
-        
-        private float GetDistance(int point)
-        {
-            return RecordPoint.Distance(GetStartPoint(point), GetEndPoint(point));
         }
 
         private RecordPoint GetStartPoint(int point)
@@ -238,25 +234,28 @@ namespace Monster.Procedural
             return _positionRecording[point];
         }
 
-        private float Lerpaluate(AnimationCurve a, AnimationCurve b, float time, float factor)
-        {
-            return Mathf.Lerp(a.Evaluate(time), b.Evaluate(time), factor);
-        }
-
         public void SetPose(string name)
         {
-            if (!_posesDict.ContainsKey(name))
+            if (!_posesDict.TryGetValue(name, out var value))
             {
                 Debug.LogError($"No pose named {name} exists!");
                 return;
             }
 
-            if (_currentPose == _posesDict[name])
+            if (_currentPose == value)
                 return;
 
             _previousPose = _currentPose;
             _currentPose = _posesDict[name];
             _transitionTimer = poses[_currentPose].transitionTime;
+        }
+        
+        private static float _twoOverSqrtPi = 2.0f / Mathf.Sqrt(Mathf.PI);
+        private const float Fraction = 11.0f / 123.0f;
+        
+        private float Sigmoid(float value)
+        {
+            return MathF.Tanh(_twoOverSqrtPi * (value + Fraction * Mathf.Pow(value, 3)));
         }
 
         private void OnDrawGizmosSelected()
@@ -272,7 +271,7 @@ namespace Monster.Procedural
             Gizmos.color = Color.blue;
             for (var i = 0; i < _curve.Count - 1; i++)
             {
-                Gizmos.DrawLine(_curve[i], _curve[i + 1]);
+                Gizmos.DrawLine(_curve[i].Position, _curve[i + 1].Position);
             }
         }
     }
