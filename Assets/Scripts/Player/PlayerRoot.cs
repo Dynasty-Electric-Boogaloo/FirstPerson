@@ -57,6 +57,10 @@ namespace Player
         
         public static bool GetIsInMannequin() => _instance._playerData.IsInMannequin;
         
-        public static void SetIsDancing(bool setOn) => _instance._playerData.IsInMannequin = setOn;
+        public static void SetIsDancing(bool setOn, Mannequin holder = null)
+        {
+            _instance._playerData.IsInMannequin = setOn;
+            _instance.GetComponent<PlayerDance>().SetHolder (holder);
+        }
     }
 }
