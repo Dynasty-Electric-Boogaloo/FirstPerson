@@ -17,6 +17,8 @@ namespace Monster.Procedural
         [SerializeField] private float positionRecordDistance;
         [SerializeField] private float positionRecordingMaxDistance;
         [SerializeField] private float backwardEvaluationDistance;
+        [SerializeField] private float curveEvaluationSubstep;
+        [SerializeField] private float minimumFowardValue;
         [SerializeField] private List<AnimationPose> poses;
         [SerializeField] private AnimationCurve transitionOrderCurve;
         private Dictionary<string, int> _posesDict;
@@ -94,6 +96,7 @@ namespace Monster.Procedural
 
         private void UpdateBodies()
         {
+            float angle;
             var vertical = 0f;
             var forward = 0f;
 
@@ -108,12 +111,16 @@ namespace Monster.Procedural
                 var diff = distance;
                 if (i > 0)
                     diff -= _bodyParts[i - 1].GetDistance();
+
+                var steps = Mathf.FloorToInt(diff / curveEvaluationSubstep);
+                var lastStep = diff % curveEvaluationSubstep;
                 
-                var time = _bodyParts[i].GetDistance() / _bodyParts[^1].GetDistance();
-                var factor = Mathf.Clamp01(1 - (2 * (_transitionTimer / poses[_currentPose].transitionTime) - 1 + transitionOrderCurve.Evaluate(time)));
-                var angle = Mathf.LerpAngle(poses[_previousPose].angleCurve.Evaluate(time), poses[_currentPose].angleCurve.Evaluate(time), factor);
-                vertical += Mathf.Sin(angle * Mathf.Deg2Rad) * diff;
-                forward += Mathf.Cos(angle * Mathf.Deg2Rad) * diff;
+                for (var j = 0; j < steps; j++)
+                {
+                    ProgressCoordinates(distance - diff + j * curveEvaluationSubstep, curveEvaluationSubstep, out angle, ref vertical, ref forward);
+                }
+                
+                ProgressCoordinates(distance - lastStep, lastStep, out angle, ref vertical, ref forward);
 
                 if (vertical < minVertical)
                     minVertical = vertical;
@@ -132,24 +139,56 @@ namespace Monster.Procedural
             for (var i = 0; i < _bodyParts.Length; i++)
             {
                 _verticalKeys[i] -= minVertical;
+                _verticalKeys[i] += _bodyParts[i].GetVerticalPosition();
                 _forwardKeys[i] -= minForward;
+                _forwardKeys[i] += minimumFowardValue;
                 //_forwardKeys[i] += _bodyParts[^1].GetDistance() - maxForward;
 
                 var position = GetRecordPoint(_forwardKeys[i]);
                 position.y = _verticalKeys[i];
 
-                var backPosition = GetRecordPoint(_forwardKeys[i] + backwardEvaluationDistance);
-                var normal = position - backPosition;
-                normal.y = 0;
-                normal.Normalize();
+                Vector3 normal;
+                
+                if (i == 0)
+                {
+                    var backPosition = GetRecordPoint(_forwardKeys[i] + backwardEvaluationDistance);
+                    normal = position - backPosition;
+                    normal.y = 0;
+                    normal.Normalize();
+                }
+                else
+                {
+                    var forwardPosition = GetRecordPoint(_forwardKeys[i - 1]);
+                    normal = forwardPosition - position;
+                    normal.y = 0;
+                    normal.Normalize();
+                    normal *= Mathf.Sign(_forwardKeys[i] - _forwardKeys[i - 1]);
+                }
+
+                angle = _angleKeys[i];
+                if (i > 0)
+                {
+                    angle = Vector2.SignedAngle(
+                        new Vector2(_verticalKeys[i - 1] - _verticalKeys[i], _forwardKeys[i - 1] - _forwardKeys[i]).normalized,
+                        Vector2.down);
+                }
 
                 var verticalRotation = Vector3.SignedAngle(Vector3.forward, normal, Vector3.up);
 
-                var rotation = Quaternion.AngleAxis(verticalRotation, Vector3.up) * Quaternion.AngleAxis(_angleKeys[i], Vector3.right);
+                var rotation = Quaternion.AngleAxis(verticalRotation, Vector3.up) * Quaternion.AngleAxis(angle, Vector3.right);
                 _bodyParts[i].UpdatePosition(position, rotation);
             }
         }
 
+        private void ProgressCoordinates(float distance, float length, out float angle, ref float vertical, ref float forward)
+        {
+            var time = distance / _bodyParts[^1].GetDistance();
+            var factor = Mathf.Clamp01(1 - (2 * (_transitionTimer / poses[_currentPose].transitionTime) - 1 + transitionOrderCurve.Evaluate(time)));
+            angle = Mathf.LerpAngle(poses[_previousPose].angleCurve.Evaluate(time), poses[_currentPose].angleCurve.Evaluate(time), factor);
+            vertical += Mathf.Sin(angle * Mathf.Deg2Rad) * length;
+            forward += Mathf.Cos(angle * Mathf.Deg2Rad) * length;
+        }
+        
         private Vector3 GetRecordPoint(float distance)
         {
             distance -= Vector3.Distance(GetStartPoint(0), GetEndPoint(0));
