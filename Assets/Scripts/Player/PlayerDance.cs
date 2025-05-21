@@ -26,10 +26,7 @@ namespace Player
                    SetDancing(false);
 
                 if (PlayerData.IsInMannequin && PlayerData.PlayerInputs.Controls.Dance.WasPressedThisFrame())
-                {
                     SetDancing(false);
-                    print("feur");
-                }
 
                 if (!PlayerData.PlayerInputs.Controls.Dance.WasPressedThisFrame())
                     return;

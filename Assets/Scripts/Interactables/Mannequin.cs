@@ -20,6 +20,8 @@ public class Mannequin : Interactable
 
     public void Respawn(Vector3 newPos)
     {
+        if (Physics.Raycast(transform.position, -Vector3.up, out var hit))
+            newPos.y -= hit.transform.position.y;
         transform.position = newPos;
     }
 }
