@@ -53,11 +53,6 @@ namespace Monster
             
             MonsterData.stateTime += Time.deltaTime;
             
-            /*var diff = MonsterData.targetPoint - transform.position;
-            diff.y = 0;
-            
-            Debug.Log(diff.magnitude);*/
-            
             if (_refreshTimer > 0 && monsterPoint != MonsterData.targetNode)
             {
                 _refreshTimer -= Time.deltaTime;
