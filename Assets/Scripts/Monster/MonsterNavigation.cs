@@ -45,14 +45,20 @@ namespace Monster
         private void Update()
         {
             var monsterRoom = ZoneGraphManager.Pathfinding.GetPointRoom(transform.position);
+            var monsterPoint = ZoneGraphManager.Pathfinding.GetPointClosestNode(transform.position, monsterRoom);
+            
+            MonsterData.Heatmap.Data.Remove(monsterPoint);
+            
             stageLight.enabled = monsterRoom == _baseRoom;
             
             MonsterData.stateTime += Time.deltaTime;
             
-            var diff = MonsterData.targetPoint - transform.position;
+            /*var diff = MonsterData.targetPoint - transform.position;
             diff.y = 0;
             
-            if (_refreshTimer > 0 && diff.magnitude > 0.1f)
+            Debug.Log(diff.magnitude);*/
+            
+            if (_refreshTimer > 0 && monsterPoint != MonsterData.targetNode)
             {
                 _refreshTimer -= Time.deltaTime;
                 return;
@@ -159,15 +165,6 @@ namespace Monster
         private NodeId EvaluateSearchingTargetNode()
         {
             var nodes = ZoneGraphManager.Instance.Nodes;
-
-            if (MonsterData.targetNode.id >= 0)
-            {
-                var diff = nodes[MonsterData.targetNode.id].Position - transform.position;
-                diff.y = 0;
-                
-                if (diff.magnitude < 0.1f)
-                    MonsterData.Heatmap.Data.Remove(MonsterData.targetNode);
-            }
 
             if (MonsterData.Heatmap.Data.Count == 0)
             {
