@@ -43,7 +43,16 @@ namespace Monster.Procedural
             
             _positionRecording = new List<Vector3> { transform.position };
             _bodyParts = FindObjectsByType<ProceduralBody>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
-            Array.Sort(_bodyParts, (x, y) => x.GetDistance().CompareTo(y.GetDistance()));
+            Array.Sort(_bodyParts, (x, y) => x.OrderId.CompareTo(y.OrderId));
+
+            _bodyParts[0].distance = 0.01f;
+
+            for (var i = 1; i < _bodyParts.Length; i++)
+            {
+                _bodyParts[i].distance =
+                    Vector3.Distance(_bodyParts[i].transform.position, _bodyParts[i - 1].transform.position) +
+                    _bodyParts[i - 1].distance;
+            }
 
             _verticalKeys = new float[_bodyParts.Length];
             _forwardKeys = new float[_bodyParts.Length];
@@ -106,11 +115,11 @@ namespace Monster.Procedural
             
             for (var i = 0; i < _bodyParts.Length; i++)
             {
-                var distance = _bodyParts[i].GetDistance();
+                var distance = _bodyParts[i].distance;
 
                 var diff = distance;
                 if (i > 0)
-                    diff -= _bodyParts[i - 1].GetDistance();
+                    diff -= _bodyParts[i - 1].distance;
 
                 var steps = Mathf.FloorToInt(diff / curveEvaluationSubstep);
                 var lastStep = diff % curveEvaluationSubstep;
@@ -182,7 +191,7 @@ namespace Monster.Procedural
 
         private void ProgressCoordinates(float distance, float length, out float angle, ref float vertical, ref float forward)
         {
-            var time = distance / _bodyParts[^1].GetDistance();
+            var time = distance / _bodyParts[^1].distance;
             var factor = Mathf.Clamp01(1 - (2 * (_transitionTimer / poses[_currentPose].transitionTime) - 1 + transitionOrderCurve.Evaluate(time)));
             angle = Mathf.LerpAngle(poses[_previousPose].angleCurve.Evaluate(time), poses[_currentPose].angleCurve.Evaluate(time), factor);
             vertical += Mathf.Sin(angle * Mathf.Deg2Rad) * length;
