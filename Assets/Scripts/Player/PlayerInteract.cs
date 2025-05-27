@@ -93,6 +93,15 @@ namespace Player
             
             _selectedObject.Interact();
             TryExtract();
+            
+            if (_selectedObject.TryGetComponent<ObjectivePickUp>(out var objective))
+            {
+                objective.PickedUp();
+
+                if (!TryGetComponent<PlayerMusicBox>(out var music))
+                    return;
+                music.ChangeState();
+            }
 
             if (_selectedObject is not GrabObject grab) 
                 return;
