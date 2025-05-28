@@ -1,4 +1,5 @@
-﻿using UI;
+﻿using Interactables;
+using UI;
 using UnityEngine;
 
 namespace Player
@@ -14,22 +15,38 @@ namespace Player
         [SerializeField] private float grabSize = 0.1f;
         private Interactable _selectedObject;
         private GrabObject _grabbedObject;
+        private Mannequin _mannequin;
         private RaycastHit _raycastHit;
 
         private void Update()
         {
-            if (!_grabbedObject)
+            if (_mannequin)
             {
-                HandleHighlight();
-                
-                if(!_selectedObject) 
+                if (!PlayerData.PlayerInputs.Controls.Interact.WasPressedThisFrame()) 
                     return;
+
+                _mannequin = null;
+                PlayerRoot.SetIsInMannequin(false);
+                UiManager.InMannequin(false);
+                PlayerCamera.ReturnToPosition();
                 
-                TryInteract();
-                
-                return;
             }
-            HandleGrabbed();
+            else
+            {
+                if (!_grabbedObject)
+                {
+                    HandleHighlight();
+
+                    if (!_selectedObject)
+                        return;
+
+                    TryInteract();
+
+                    return;
+                }
+
+                HandleGrabbed();
+            }
         }
 
         private void FixedUpdate()
@@ -93,7 +110,15 @@ namespace Player
             
             _selectedObject.Interact();
             TryExtract();
-            
+
+            if (_selectedObject.TryGetComponent<Mannequin>(out var mannequin))
+            {
+                _mannequin = mannequin;
+                PlayerCamera.GoToPosition(mannequin.GetCameraPos());
+                PlayerData.Rigidbody.linearVelocity = Vector3.zero;
+                
+            }
+
             if (_selectedObject.TryGetComponent<ObjectivePickUp>(out var objective))
             {
                 objective.PickedUp();

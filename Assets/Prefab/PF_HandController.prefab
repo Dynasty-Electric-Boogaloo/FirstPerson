@@ -635,6 +635,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  rendererMesh: {fileID: 9079386926096019442}
 --- !u!114 &2334033331561239044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -750,7 +751,7 @@ MonoBehaviour:
   flashLightTransform: {fileID: 5027031290628114069}
   light: {fileID: 7799891747133625662}
   hud: {fileID: 266798638669423720}
-  batteryMax: 30
+  batteryMax: 10
   addByButtonPressed: 6
   lightIntensityMultiplier: 20
   lightFalloffThreshold: 0.7
@@ -812,7 +813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBetween: 1
-  tolerance: 0.5
+  tolerance: 0
 --- !u!114 &2989312559492078843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -827,6 +828,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minimalDistance: 5
   musicBoxObject: {fileID: 4005241433360813804}
+  state: 0
 --- !u!1 &4167932192429471914
 GameObject:
   m_ObjectHideFlags: 0

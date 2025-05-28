@@ -68,6 +68,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 346854845721823388}
   m_SourcePrefab: {fileID: 100100000, guid: 36db5c7416ac82340ad30a596a9b4fbc, type: 3}
+--- !u!137 &2127829811134130402 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8828624054336850521, guid: 36db5c7416ac82340ad30a596a9b4fbc, type: 3}
+  m_PrefabInstance: {fileID: 7422498699157529275}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &5548566461483408138 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3027110478792374705, guid: 36db5c7416ac82340ad30a596a9b4fbc, type: 3}
@@ -85,9 +90,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e5695be090262e4ab7cedb3e869b909, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meshRenderer: {fileID: 8503591660815035348}
+  meshRenderer: {fileID: 2127829811134130402}
   regularMaterialSet:
-    normal: {fileID: 2878906130077978799, guid: 8c232379cdb2fc743994b6cff2e889b6, type: 3}
+    normal: {fileID: 4062772198854137186, guid: a7ad524a28579d34a81bab299f95443b, type: 3}
     revealed: {fileID: 2100000, guid: e01697a139757304db5971e789637d31, type: 2}
     awake: {fileID: 2100000, guid: 47bfe1f39367b364b8af8f7d21f3c16b, type: 2}
   isInfected: 0
@@ -97,8 +102,3 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 0
---- !u!23 &8503591660815035348 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 1225208563258870127, guid: 36db5c7416ac82340ad30a596a9b4fbc, type: 3}
-  m_PrefabInstance: {fileID: 7422498699157529275}
-  m_PrefabAsset: {fileID: 0}

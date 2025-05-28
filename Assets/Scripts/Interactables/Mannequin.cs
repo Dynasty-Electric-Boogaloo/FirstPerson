@@ -6,14 +6,15 @@ namespace Interactables
 {
     public class Mannequin : Interactable
     {
+        [SerializeField] private Transform cameraPos;
+        
+        public Transform GetCameraPos() => cameraPos;
 
         [SerializeField] private LayerMask groundMask;
         public override void Interact()
         {
             PlayerRoot.SetIsInMannequin(!PlayerRoot.GetIsInMannequin());
-            //UiManager.SetDance(false);
             UiManager.InMannequin(PlayerRoot.GetIsInMannequin());
-            gameObject.SetActive(false);
         }
 
         public virtual InteractionType GetInteractionType()

@@ -13,7 +13,7 @@ public class Mimic : MonoBehaviour
         public Material awake;
     }
         
-    [SerializeField] private MeshRenderer meshRenderer;
+    [SerializeField] private Renderer meshRenderer;
     [SerializeField] private MaterialSet regularMaterialSet;
     [SerializeField] private bool isInfected;
     [SerializeField] private bool showObject;
