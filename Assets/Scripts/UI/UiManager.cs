@@ -15,6 +15,7 @@ namespace UI
     {
         [SerializeField] private Image inputShow;
         [SerializeField] private TMP_Text usageText;
+        [SerializeField] private Image mannequinMask;
         
         
         private Interactable _current;
@@ -58,16 +59,25 @@ namespace UI
 
         public static void SetGrab()
         {
-            _instance.usageText.text = "Drop - E\\nThrow - Left Click";
+            if(_instance) 
+                _instance.usageText.text = "Drop - E\\nThrow - Left Click";
         }
 
         public static void SetDance(bool isManualDancing)
         {
+            /*
             var isDancing = isManualDancing || PlayerRoot.GetIsDancing();
             _instance.inputShow.color = isDancing ? Color.blue : Color.white;
             _instance.inputShow.transform.DOScale(isDancing ? 0: 1, isDancing ? 1 : 0);
+             */
+            
         }
-        
+
+        public static void InMannequin(bool isInMannequin = true)
+        {
+            if(_instance)
+                _instance.mannequinMask.gameObject.SetActive(isInMannequin);
+        }
         
     }
 }

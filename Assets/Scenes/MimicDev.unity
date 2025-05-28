@@ -34921,6 +34921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputShow: {fileID: 238306370}
   usageText: {fileID: 110605591}
+  mannequinMask: {fileID: 7478955716371432925}
 --- !u!1 &1487266423
 GameObject:
   m_ObjectHideFlags: 0
@@ -50667,6 +50668,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5381016350415453617, guid: 79cc7e3d8390d3b4dac52d227b47dc53, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8839245516152664965, guid: 79cc7e3d8390d3b4dac52d227b47dc53, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -50679,6 +50684,17 @@ PrefabInstance:
       addedObject: {fileID: 736989194}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79cc7e3d8390d3b4dac52d227b47dc53, type: 3}
+--- !u!114 &7478955716371432925 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 834117125206045673, guid: 79cc7e3d8390d3b4dac52d227b47dc53, type: 3}
+  m_PrefabInstance: {fileID: 7478955716371432924}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

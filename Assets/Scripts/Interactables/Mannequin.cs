@@ -10,8 +10,9 @@ namespace Interactables
         [SerializeField] private LayerMask groundMask;
         public override void Interact()
         {
-            PlayerRoot.SetIsDancing(!PlayerRoot.GetIsDancing(), this);
-            UiManager.SetDance(false);
+            PlayerRoot.SetIsInMannequin(!PlayerRoot.GetIsInMannequin());
+            //UiManager.SetDance(false);
+            UiManager.InMannequin(PlayerRoot.GetIsInMannequin());
             gameObject.SetActive(false);
         }
 

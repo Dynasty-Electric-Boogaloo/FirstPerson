@@ -30,6 +30,9 @@ namespace Player
 
         private void Update()
         {
+            if(PlayerData.IsInMannequin)
+                return;
+            
             UpdateMovement();
             UpdateGravity();
         }
@@ -40,9 +43,7 @@ namespace Player
             var move = PlayerData.PlayerInputs.Controls.Move.ReadValue<Vector2>();
 
             if (move.sqrMagnitude < 0.01f)
-            {
                 move = Vector2.zero;
-            }
             
             var targetMovement = new Vector3(
                 move.x * PlayerData.Right.x + move.y * PlayerData.Forward.x, 
