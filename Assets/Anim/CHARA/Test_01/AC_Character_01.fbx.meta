@@ -1,0 +1,948 @@
+fileFormatVersion: 2
+guid: be6260d28e865604285bc43749dc8cbf
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Take 001
+      takeName: Take 001
+      internalID: 1827226128182048838
+      firstFrame: 0
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: B_Pelvis
+        weight: 1
+      - path: B_Pelvis/B_Leg_L_01
+        weight: 1
+      - path: B_Pelvis/B_Leg_L_01/B_Leg_L_02
+        weight: 1
+      - path: B_Pelvis/B_Leg_L_01/B_Leg_L_02/B_Foot_L_01
+        weight: 1
+      - path: B_Pelvis/B_Leg_L_01/B_Leg_L_02/B_Foot_L_01/B_Foot_L_02
+        weight: 1
+      - path: B_Pelvis/B_Leg_L_01/B_Leg_L_02/B_Foot_L_01/B_Foot_L_02/B_End_Bottom_L_01
+        weight: 1
+      - path: B_Pelvis/B_Leg_R_01
+        weight: 1
+      - path: B_Pelvis/B_Leg_R_01/B_Leg_R_02
+        weight: 1
+      - path: B_Pelvis/B_Leg_R_01/B_Leg_R_02/B_Foot_R_01
+        weight: 1
+      - path: B_Pelvis/B_Leg_R_01/B_Leg_R_02/B_Foot_R_01/B_Foot_R_02
+        weight: 1
+      - path: B_Pelvis/B_Leg_R_01/B_Leg_R_02/B_Foot_R_01/B_Foot_R_02/B_End_Bottom_R_01
+        weight: 1
+      - path: B_Pelvis/B_Stomach
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Chest
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Chest/B_End_Front_01
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Neck
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Neck/B_Head
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Neck/B_Head/B_End_Up_01
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_L_01
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_L_01/B_Arm_L_01
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_L_01/B_Arm_L_01/B_Arm_L_02
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_L_01/B_Arm_L_01/B_Arm_L_02/B_Hand_L_01
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_L_01/B_Arm_L_01/B_Arm_L_02/B_Hand_L_01/B_Finger_L_01_01
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_L_01/B_Arm_L_01/B_Arm_L_02/B_Hand_L_01/B_Finger_L_01_01/B_Finger_L_01_02
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_L_01/B_Arm_L_01/B_Arm_L_02/B_Hand_L_01/B_Finger_L_01_01/B_Finger_L_01_02/B_Finger_L_01_03
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_L_01/B_Arm_L_01/B_Arm_L_02/B_Hand_L_01/B_Finger_L_01_01/B_Finger_L_01_02/B_Finger_L_01_03/B_End_L_03
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_L_01/B_Arm_L_01/B_Arm_L_02/B_Hand_L_01/B_Finger_L_02_01
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_L_01/B_Arm_L_01/B_Arm_L_02/B_Hand_L_01/B_Finger_L_02_01/B_Finger_L_02_02
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_L_01/B_Arm_L_01/B_Arm_L_02/B_Hand_L_01/B_Finger_L_02_01/B_Finger_L_02_02/B_Finger_L_02_03
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_L_01/B_Arm_L_01/B_Arm_L_02/B_Hand_L_01/B_Finger_L_02_01/B_Finger_L_02_02/B_Finger_L_02_03/B_End_L_04
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_L_01/B_Arm_L_01/B_Arm_L_02/B_Hand_L_01/B_Finger_L_03_01
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_L_01/B_Arm_L_01/B_Arm_L_02/B_Hand_L_01/B_Finger_L_03_01/B_Finger_L_03_02
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_L_01/B_Arm_L_01/B_Arm_L_02/B_Hand_L_01/B_Finger_L_03_01/B_Finger_L_03_02/B_Finger_L_03_03
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_L_01/B_Arm_L_01/B_Arm_L_02/B_Hand_L_01/B_Finger_L_03_01/B_Finger_L_03_02/B_Finger_L_03_03/B_End_L_05
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_L_01/B_Arm_L_01/B_Arm_L_02/B_Hand_L_01/B_Finger_L_04_01
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_L_01/B_Arm_L_01/B_Arm_L_02/B_Hand_L_01/B_Finger_L_04_01/B_Finger_L_04_02
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_L_01/B_Arm_L_01/B_Arm_L_02/B_Hand_L_01/B_Finger_L_04_01/B_Finger_L_04_02/B_Finger_L_04_03
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_L_01/B_Arm_L_01/B_Arm_L_02/B_Hand_L_01/B_Finger_L_04_01/B_Finger_L_04_02/B_Finger_L_04_03/B_End_L_06
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_L_01/B_Arm_L_01/B_Arm_L_02/B_Hand_L_01/B_Thumb_L_01
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_L_01/B_Arm_L_01/B_Arm_L_02/B_Hand_L_01/B_Thumb_L_01/B_Thumb_L_02
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_L_01/B_Arm_L_01/B_Arm_L_02/B_Hand_L_01/B_Thumb_L_01/B_Thumb_L_02/B_End_L_02
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_R_01
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_R_01/B_Arm_R_01
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_R_01/B_Arm_R_01/B_Arm_R_02
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_R_01/B_Arm_R_01/B_Arm_R_02/B_Hand_R_01
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_R_01/B_Arm_R_01/B_Arm_R_02/B_Hand_R_01/B_Finger_R_01_01
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_R_01/B_Arm_R_01/B_Arm_R_02/B_Hand_R_01/B_Finger_R_01_01/B_Finger_R_01_02
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_R_01/B_Arm_R_01/B_Arm_R_02/B_Hand_R_01/B_Finger_R_01_01/B_Finger_R_01_02/B_Finger_R_01_03
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_R_01/B_Arm_R_01/B_Arm_R_02/B_Hand_R_01/B_Finger_R_01_01/B_Finger_R_01_02/B_Finger_R_01_03/B_End_R_03
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_R_01/B_Arm_R_01/B_Arm_R_02/B_Hand_R_01/B_Finger_R_02_01
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_R_01/B_Arm_R_01/B_Arm_R_02/B_Hand_R_01/B_Finger_R_02_01/B_Finger_R_02_02
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_R_01/B_Arm_R_01/B_Arm_R_02/B_Hand_R_01/B_Finger_R_02_01/B_Finger_R_02_02/B_Finger_R_02_03
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_R_01/B_Arm_R_01/B_Arm_R_02/B_Hand_R_01/B_Finger_R_02_01/B_Finger_R_02_02/B_Finger_R_02_03/B_End_R_04
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_R_01/B_Arm_R_01/B_Arm_R_02/B_Hand_R_01/B_Finger_R_03_01
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_R_01/B_Arm_R_01/B_Arm_R_02/B_Hand_R_01/B_Finger_R_03_01/B_Finger_R_03_02
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_R_01/B_Arm_R_01/B_Arm_R_02/B_Hand_R_01/B_Finger_R_03_01/B_Finger_R_03_02/B_Finger_R_03_03
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_R_01/B_Arm_R_01/B_Arm_R_02/B_Hand_R_01/B_Finger_R_03_01/B_Finger_R_03_02/B_Finger_R_03_03/B_End_R_05
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_R_01/B_Arm_R_01/B_Arm_R_02/B_Hand_R_01/B_Finger_R_04_01
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_R_01/B_Arm_R_01/B_Arm_R_02/B_Hand_R_01/B_Finger_R_04_01/B_Finger_R_04_02
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_R_01/B_Arm_R_01/B_Arm_R_02/B_Hand_R_01/B_Finger_R_04_01/B_Finger_R_04_02/B_Finger_R_04_03
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_R_01/B_Arm_R_01/B_Arm_R_02/B_Hand_R_01/B_Finger_R_04_01/B_Finger_R_04_02/B_Finger_R_04_03/B_End_R_06
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_R_01/B_Arm_R_01/B_Arm_R_02/B_Hand_R_01/B_Thumb_R_01
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_R_01/B_Arm_R_01/B_Arm_R_02/B_Hand_R_01/B_Thumb_R_01/B_Thumb_R_02
+        weight: 1
+      - path: B_Pelvis/B_Stomach/B_Spline_02/B_Spline_03/B_Back/B_Shoulder_R_01/B_Arm_R_01/B_Arm_R_02/B_Hand_R_01/B_Thumb_R_01/B_Thumb_R_02/B_End_R_02
+        weight: 1
+      - path: Blocking_Player
+        weight: 1
+      - path: Ctrl_Root_01
+        weight: 0
+      - path: Ctrl_Root_01/Ctrl_Foot_L_01
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Foot_L_01/Ctrl_Foot_L02
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Foot_R_01
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Foot_R_01/Ctrl_Foot_R_02
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01/Ctrl_Neck_01
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01/Ctrl_Neck_01/Ctrl_Head_01
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01/Ctrl_Shoulder_L_01
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01/Ctrl_Shoulder_L_01/Ctrl_Hand_L_01
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01/Ctrl_Shoulder_L_01/Ctrl_Hand_L_01/Ctrl_Finger_L_01_01
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01/Ctrl_Shoulder_L_01/Ctrl_Hand_L_01/Ctrl_Finger_L_01_01/Ctrl_Finger_L_01_02
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01/Ctrl_Shoulder_L_01/Ctrl_Hand_L_01/Ctrl_Finger_L_01_01/Ctrl_Finger_L_01_02/Ctrl_Finger_L_01_03
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01/Ctrl_Shoulder_L_01/Ctrl_Hand_L_01/Ctrl_Finger_L_02_01
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01/Ctrl_Shoulder_L_01/Ctrl_Hand_L_01/Ctrl_Finger_L_02_01/Ctrl_Finger_L_02_02
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01/Ctrl_Shoulder_L_01/Ctrl_Hand_L_01/Ctrl_Finger_L_02_01/Ctrl_Finger_L_02_02/Ctrl_Finger_L_02_03
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01/Ctrl_Shoulder_L_01/Ctrl_Hand_L_01/Ctrl_Finger_L_03_01
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01/Ctrl_Shoulder_L_01/Ctrl_Hand_L_01/Ctrl_Finger_L_03_01/Ctrl_Finger_L_03_02
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01/Ctrl_Shoulder_L_01/Ctrl_Hand_L_01/Ctrl_Finger_L_03_01/Ctrl_Finger_L_03_02/Ctrl_Finger_L_03_03
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01/Ctrl_Shoulder_L_01/Ctrl_Hand_L_01/Ctrl_Finger_L_04_01
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01/Ctrl_Shoulder_L_01/Ctrl_Hand_L_01/Ctrl_Finger_L_04_01/Ctrl_Finger_L_04_02
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01/Ctrl_Shoulder_L_01/Ctrl_Hand_L_01/Ctrl_Finger_L_04_01/Ctrl_Finger_L_04_02/Ctrl_Finger_L_04_03
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01/Ctrl_Shoulder_L_01/Ctrl_Hand_L_01/Ctrl_Thumb_L_01
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01/Ctrl_Shoulder_L_01/Ctrl_Hand_L_01/Ctrl_Thumb_L_01/Ctrl_Thumb_L_02
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01/Ctrl_Shoulder_R_01
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01/Ctrl_Shoulder_R_01/Ctrl_Hand_R_01
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01/Ctrl_Shoulder_R_01/Ctrl_Hand_R_01/Ctrl_Finger_R_01_01
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01/Ctrl_Shoulder_R_01/Ctrl_Hand_R_01/Ctrl_Finger_R_01_01/Ctrl_Finger_R_01_02
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01/Ctrl_Shoulder_R_01/Ctrl_Hand_R_01/Ctrl_Finger_R_01_01/Ctrl_Finger_R_01_02/Ctrl_Finger_R_01_03
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01/Ctrl_Shoulder_R_01/Ctrl_Hand_R_01/Ctrl_Finger_R_02_01
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01/Ctrl_Shoulder_R_01/Ctrl_Hand_R_01/Ctrl_Finger_R_02_01/Ctrl_Finger_R_02_02
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01/Ctrl_Shoulder_R_01/Ctrl_Hand_R_01/Ctrl_Finger_R_02_01/Ctrl_Finger_R_02_02/Ctrl_Finger_R_02_03
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01/Ctrl_Shoulder_R_01/Ctrl_Hand_R_01/Ctrl_Finger_R_03_01
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01/Ctrl_Shoulder_R_01/Ctrl_Hand_R_01/Ctrl_Finger_R_03_01/Ctrl_Finger_R_03_02
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01/Ctrl_Shoulder_R_01/Ctrl_Hand_R_01/Ctrl_Finger_R_03_01/Ctrl_Finger_R_03_02/Ctrl_Finger_R_03_03
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01/Ctrl_Shoulder_R_01/Ctrl_Hand_R_01/Ctrl_Finger_R_04_01
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01/Ctrl_Shoulder_R_01/Ctrl_Hand_R_01/Ctrl_Finger_R_04_01/Ctrl_Finger_R_04_02
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01/Ctrl_Shoulder_R_01/Ctrl_Hand_R_01/Ctrl_Finger_R_04_01/Ctrl_Finger_R_04_02/Ctrl_Finger_R_04_03
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01/Ctrl_Shoulder_R_01/Ctrl_Hand_R_01/Ctrl_Thumb_R_01
+        weight: 1
+      - path: Ctrl_Root_01/Ctrl_Pelvis_01/Ctrl_Spine_01/Ctrl_Spine_02/Ctrl_Spine_03/Ctrl_Chest_01/Ctrl_Shoulder_R_01/Ctrl_Hand_R_01/Ctrl_Thumb_R_01/Ctrl_Thumb_R_02
+        weight: 1
+      - path: IK Chain001
+        weight: 1
+      - path: IK Chain002
+        weight: 1
+      - path: IK Chain003
+        weight: 1
+      - path: IK Chain004
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: AC_Character_01(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: IK Chain001
+      parentName: AC_Character_01(Clone)
+      position: {x: -0.35048, y: 0.9645807, z: -0.024496516}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: IK Chain002
+      parentName: AC_Character_01(Clone)
+      position: {x: 0.35096583, y: 0.9645809, z: -0.024498047}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: IK Chain003
+      parentName: AC_Character_01(Clone)
+      position: {x: -0.055749357, y: 0.079514995, z: -0.051922508}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: IK Chain004
+      parentName: AC_Character_01(Clone)
+      position: {x: 0.056468505, y: 0.079506904, z: -0.05181445}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Blocking_Player
+      parentName: AC_Character_01(Clone)
+      position: {x: -0, y: 0.0000000047683715, z: -0.000000009536743}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_Root_01
+      parentName: AC_Character_01(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_Pelvis_01
+      parentName: Ctrl_Root_01
+      position: {x: 0.0001897478, y: -0.0000000047683715, z: 0.94191396}
+      rotation: {x: 0.5006389, y: 0.5006562, z: -0.49934298, w: 0.4993603}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_Spine_01
+      parentName: Ctrl_Pelvis_01
+      position: {x: -0.11864853, y: 0.000000025592744, z: 0.0000000062584875}
+      rotation: {x: -0.000028634951, y: -0.18808115, z: -0.00014725432, w: 0.9821535}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: Ctrl_Spine_02
+      parentName: Ctrl_Spine_01
+      position: {x: -0.05151924, y: 0.000000007431954, z: 0.000000038146972}
+      rotation: {x: -0.000017584018, y: 0.08653977, z: 0.00014815269, w: 0.9962484}
+      scale: {x: 0.9999999, y: 1, z: 0.99999994}
+    - name: Ctrl_Spine_03
+      parentName: Ctrl_Spine_02
+      position: {x: -0.04117676, y: 0.0000000085681675, z: 0.000000019073486}
+      rotation: {x: 0.000053482974, y: 0.09183088, z: 0.00003743831, w: 0.9957746}
+      scale: {x: 0.99999994, y: 0.99999994, z: 1}
+    - name: Ctrl_Chest_01
+      parentName: Ctrl_Spine_03
+      position: {x: -0.041417997, y: -0.000000030510126, z: 0.000000007152557}
+      rotation: {x: 0.000039520648, y: 0.027199697, z: -0.00012460089, w: 0.99963003}
+      scale: {x: 1.0000001, y: 0.99999964, z: 1.0000004}
+    - name: Ctrl_Neck_01
+      parentName: Ctrl_Chest_01
+      position: {x: -0.21845321, y: -0.0000062424688, z: 0.000000019073486}
+      rotation: {x: 0.00010466189, y: 0.11881517, z: -0.00062103575, w: 0.9929162}
+      scale: {x: 0.99999994, y: 1.0000002, z: 1}
+    - name: Ctrl_Head_01
+      parentName: Ctrl_Neck_01
+      position: {x: -0.11239425, y: 0.00000001847744, z: 0.000000076293944}
+      rotation: {x: -0.00007439658, y: -0.13555604, z: 0.00075567525, w: 0.99076945}
+      scale: {x: 0.21121338, y: 0.21121328, z: 0.21121319}
+    - name: Ctrl_Shoulder_R_01
+      parentName: Ctrl_Chest_01
+      position: {x: -0.1981224, y: 0.019111183, z: 0.020576762}
+      rotation: {x: -0.10025407, y: -0.139831, z: -0.6539784, w: 0.7366876}
+      scale: {x: 1.0000001, y: 0.9999999, z: 1.0000002}
+    - name: Ctrl_Hand_R_01
+      parentName: Ctrl_Shoulder_R_01
+      position: {x: -0.26878062, y: 0.46086395, z: 0.06914528}
+      rotation: {x: -0.093010224, y: 0.14241353, z: -0.54175717, w: 0.8231444}
+      scale: {x: -1.0000002, y: -1.0000007, z: -0.9999991}
+    - name: Ctrl_Thumb_R_01
+      parentName: Ctrl_Hand_R_01
+      position: {x: 0.047266234, y: -0.018688735, z: -0.029288517}
+      rotation: {x: 0.05577413, y: 0.23487212, z: -0.21848726, w: 0.9455092}
+      scale: {x: -1.0000002, y: -0.99999994, z: -1}
+    - name: Ctrl_Thumb_R_02
+      parentName: Ctrl_Thumb_R_01
+      position: {x: -0.025227584, y: 0, z: 0.000000038146972}
+      rotation: {x: 0.008755843, y: 0.022106199, z: 0.029003404, w: 0.9992965}
+      scale: {x: 1, y: 1.0000001, z: 0.99999994}
+    - name: Ctrl_Finger_R_03_01
+      parentName: Ctrl_Hand_R_01
+      position: {x: 0.07720886, y: -0.0054673003, z: 0.02514009}
+      rotation: {x: -0.004894718, y: -0.09382306, z: -0.06227794, w: 0.9936271}
+      scale: {x: -1.0000001, y: -0.9999999, z: -1}
+    - name: Ctrl_Finger_R_03_02
+      parentName: Ctrl_Finger_R_03_01
+      position: {x: -0.01690979, y: 0, z: 0.000000019073486}
+      rotation: {x: -0.04038774, y: 0.032784965, z: 0.06522525, w: 0.9965138}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000002}
+    - name: Ctrl_Finger_R_03_03
+      parentName: Ctrl_Finger_R_03_02
+      position: {x: -0.0141249085, y: 0, z: 0}
+      rotation: {x: -0.040344555, y: -0.017216597, z: 0.023791537, w: 0.9987542}
+      scale: {x: 0.9999998, y: 0.99999994, z: 0.9999999}
+    - name: Ctrl_Finger_R_04_01
+      parentName: Ctrl_Hand_R_01
+      position: {x: 0.080138244, y: -0.0033990478, z: 0.010588684}
+      rotation: {x: -0.0047848998, y: -0.05296179, z: -0.004571166, w: 0.9985746}
+      scale: {x: -1.0000001, y: -1.0000002, z: -0.9999999}
+    - name: Ctrl_Finger_R_04_02
+      parentName: Ctrl_Finger_R_04_01
+      position: {x: -0.026402358, y: 0, z: 0.000000009536743}
+      rotation: {x: -0.013819566, y: 0.014984864, z: -0.013837049, w: 0.9996965}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: Ctrl_Finger_R_04_03
+      parentName: Ctrl_Finger_R_04_02
+      position: {x: -0.018187866, y: 0, z: 0.000000019073486}
+      rotation: {x: 0.026339069, y: 0.000882895, z: 0.015555028, w: 0.9995317}
+      scale: {x: 1.0000001, y: 1, z: 0.99999994}
+    - name: Ctrl_Finger_R_01_01
+      parentName: Ctrl_Hand_R_01
+      position: {x: 0.08166828, y: -0.004135513, z: -0.020920033}
+      rotation: {x: 0.0023263257, y: 0.05389845, z: -0.017448891, w: 0.9983913}
+      scale: {x: -0.99999994, y: -1, z: -1}
+    - name: Ctrl_Finger_R_01_02
+      parentName: Ctrl_Finger_R_01_01
+      position: {x: -0.026226997, y: 0, z: 0}
+      rotation: {x: -0.013800014, y: 0.0036198457, z: 0.028520338, w: 0.9994914}
+      scale: {x: 1.0000001, y: 0.9999999, z: 1}
+    - name: Ctrl_Finger_R_01_03
+      parentName: Ctrl_Finger_R_01_02
+      position: {x: -0.022072906, y: -0.000000076293944, z: 0}
+      rotation: {x: 0.026543174, y: 0.012371566, z: -0.008411143, w: 0.99953574}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: Ctrl_Finger_R_02_01
+      parentName: Ctrl_Hand_R_01
+      position: {x: 0.081304625, y: -0.003887329, z: -0.005603634}
+      rotation: {x: -0.0009608446, y: -0.0029003306, z: -0.010104558, w: 0.9999443}
+      scale: {x: -1.0000005, y: -0.9999998, z: -1.0000001}
+    - name: Ctrl_Finger_R_02_02
+      parentName: Ctrl_Finger_R_02_01
+      position: {x: -0.029019736, y: 0, z: -0.0000000047683715}
+      rotation: {x: -0.01412284, y: 0.007844526, z: 0.01303803, w: 0.9997845}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ctrl_Finger_R_02_03
+      parentName: Ctrl_Finger_R_02_02
+      position: {x: -0.024074286, y: 0.000000076293944, z: -0.0000000047683715}
+      rotation: {x: 0.0326574, y: -0.01556329, z: -0.007645389, w: 0.9993162}
+      scale: {x: 1, y: 0.9999998, z: 0.9999999}
+    - name: Ctrl_Shoulder_L_01
+      parentName: Ctrl_Chest_01
+      position: {x: -0.19811523, y: -0.019100202, z: 0.020578017}
+      rotation: {x: 0.100259125, y: -0.13979296, z: 0.65412176, w: 0.7365669}
+      scale: {x: -1.0000005, y: -1, z: -0.9999997}
+    - name: Ctrl_Hand_L_01
+      parentName: Ctrl_Shoulder_L_01
+      position: {x: 0.26878083, y: 0.46086395, z: -0.06914533}
+      rotation: {x: 0.09301017, y: 0.14241375, z: 0.54175687, w: 0.82314456}
+      scale: {x: -1.0000001, y: -1.0000006, z: -0.99999964}
+    - name: Ctrl_Thumb_L_01
+      parentName: Ctrl_Hand_L_01
+      position: {x: -0.04726608, y: -0.018688811, z: 0.029288646}
+      rotation: {x: -0.05577401, y: 0.23487218, z: 0.21848758, w: 0.94550914}
+      scale: {x: -1, y: -1.0000002, z: -1}
+    - name: Ctrl_Thumb_L_02
+      parentName: Ctrl_Thumb_L_01
+      position: {x: 0.025227584, y: 0.000000076293944, z: 0}
+      rotation: {x: -0.008756081, y: 0.022106405, z: -0.029003574, w: 0.9992965}
+      scale: {x: 0.79287976, y: 0.7928797, z: 0.79288}
+    - name: Ctrl_Finger_L_01_01
+      parentName: Ctrl_Hand_L_01
+      position: {x: -0.08166812, y: -0.0041355896, z: 0.020920277}
+      rotation: {x: -0.0023263558, y: 0.053898204, z: 0.017449297, w: 0.9983913}
+      scale: {x: -0.79287994, y: -0.7928798, z: -0.7928801}
+    - name: Ctrl_Finger_L_01_02
+      parentName: Ctrl_Finger_L_01_01
+      position: {x: 0.03307823, y: 0.00000022888183, z: 0.00000028610228}
+      rotation: {x: 0.01380012, y: 0.0036200816, z: -0.028520864, w: 0.9994914}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000002}
+    - name: Ctrl_Finger_L_01_03
+      parentName: Ctrl_Finger_L_01_02
+      position: {x: 0.02783905, y: -0.00000015258789, z: -0.00000010967254}
+      rotation: {x: -0.026543206, y: 0.012371559, z: 0.00841134, w: 0.99953574}
+      scale: {x: 0.9999997, y: 0.9999995, z: 1.0000001}
+    - name: Ctrl_Finger_L_02_01
+      parentName: Ctrl_Hand_L_01
+      position: {x: -0.08130432, y: -0.003887329, z: 0.0056038164}
+      rotation: {x: 0.00096076325, y: -0.0029003785, z: 0.010104805, w: 0.9999443}
+      scale: {x: -0.7928798, y: -0.7928801, z: -0.79288}
+    - name: Ctrl_Finger_L_02_02
+      parentName: Ctrl_Finger_L_02_01
+      position: {x: 0.03660034, y: 0, z: -0.0000000047683715}
+      rotation: {x: 0.014122673, y: 0.007844525, z: -0.013038236, w: 0.9997845}
+      scale: {x: 1, y: 1, z: 0.9999999}
+    - name: Ctrl_Finger_L_02_03
+      parentName: Ctrl_Finger_L_02_02
+      position: {x: 0.03036293, y: -0.00000022888183, z: 0}
+      rotation: {x: -0.032657284, y: -0.015563153, z: 0.0076462147, w: 0.9993162}
+      scale: {x: 1.0000001, y: 1.0000001, z: 0.99999976}
+    - name: Ctrl_Finger_L_03_01
+      parentName: Ctrl_Hand_L_01
+      position: {x: -0.08013809, y: -0.0033988953, z: -0.0105885025}
+      rotation: {x: 0.0047852946, y: -0.052961897, z: 0.0045710253, w: 0.9985746}
+      scale: {x: -0.79288, y: -0.79288006, z: -0.79288006}
+    - name: Ctrl_Finger_L_03_02
+      parentName: Ctrl_Finger_L_03_01
+      position: {x: 0.033299256, y: -0.000000076293944, z: 0.00000018119812}
+      rotation: {x: 0.013819639, y: 0.014984872, z: 0.013837212, w: 0.99969643}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1}
+    - name: Ctrl_Finger_L_03_03
+      parentName: Ctrl_Finger_L_03_02
+      position: {x: 0.022939147, y: -0.000000076293944, z: -0.00000019073485}
+      rotation: {x: -0.026339035, y: 0.0008831162, z: -0.015554247, w: 0.9995317}
+      scale: {x: 1, y: 0.9999998, z: 1}
+    - name: Ctrl_Finger_L_04_01
+      parentName: Ctrl_Hand_L_01
+      position: {x: -0.07720863, y: -0.0054673767, z: -0.025139878}
+      rotation: {x: 0.004894794, y: -0.093822725, z: 0.0622777, w: 0.99362713}
+      scale: {x: -0.7928802, y: -0.7928799, z: -0.79288036}
+    - name: Ctrl_Finger_L_04_02
+      parentName: Ctrl_Finger_L_04_01
+      position: {x: 0.021327056, y: 0, z: 0.000000114440915}
+      rotation: {x: 0.040388037, y: 0.032784637, z: -0.06522668, w: 0.99651366}
+      scale: {x: 1.0000001, y: 0.99999994, z: 0.99999994}
+    - name: Ctrl_Finger_L_04_03
+      parentName: Ctrl_Finger_L_04_02
+      position: {x: 0.017814942, y: -0.00000015258789, z: -0.000000095367426}
+      rotation: {x: 0.040344622, y: -0.017216811, z: -0.023791445, w: 0.99875414}
+      scale: {x: 1.0000002, y: 0.99999994, z: 1.0000001}
+    - name: Ctrl_Foot_R_01
+      parentName: Ctrl_Root_01
+      position: {x: 0.056468505, y: 0.051814456, z: 0.07950691}
+      rotation: {x: 0.20709077, y: -0.18482435, z: 0.6759244, w: 0.6827002}
+      scale: {x: 1.0000002, y: 0.99999994, z: 1}
+    - name: Ctrl_Foot_R_02
+      parentName: Ctrl_Foot_R_01
+      position: {x: -0.087764174, y: 0.0000012874603, z: -0.0000000333786}
+      rotation: {x: -0.016430493, y: 0.27708605, z: 0.002414128, w: 0.9607016}
+      scale: {x: 1.0000001, y: 1, z: 0.9999998}
+    - name: Ctrl_Foot_L_01
+      parentName: Ctrl_Root_01
+      position: {x: -0.055749357, y: 0.05192251, z: 0.079514995}
+      rotation: {x: 0.18473393, y: -0.20726936, z: 0.6827336, w: 0.67586064}
+      scale: {x: -1.0000001, y: -1.0000004, z: -1.0000005}
+    - name: Ctrl_Foot_L02
+      parentName: Ctrl_Foot_L_01
+      position: {x: 0.08776418, y: 0.0000012969971, z: -0.000000028610229}
+      rotation: {x: 0.007654668, y: 0.27702454, z: 0.00015949518, w: 0.96083236}
+      scale: {x: -0.99999976, y: -1, z: -1}
+    - name: B_Pelvis
+      parentName: AC_Character_01(Clone)
+      position: {x: 0.0001897478, y: 0.9419139, z: 0.0000000047683715}
+      rotation: {x: 0.0009032854, y: 0.00092928216, z: -0.70710623, w: 0.70710623}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1}
+    - name: B_Leg_R_01
+      parentName: B_Pelvis
+      position: {x: 0.016527405, y: 0.06202397, z: -0.011230981}
+      rotation: {x: -0.051899355, y: -0.0004264954, z: 0.99864995, w: -0.002142497}
+      scale: {x: 1, y: 1.0000002, z: 0.99999994}
+    - name: B_Leg_R_02
+      parentName: B_Leg_R_01
+      position: {x: -0.41447452, y: -0.00000016212464, z: -0.000000028610229}
+      rotation: {x: -0.001397917, y: -0.14403138, z: -0.0109943375, w: 0.989511}
+      scale: {x: 1, y: 0.99999994, z: 1}
+    - name: B_Foot_R_01
+      parentName: B_Leg_R_02
+      position: {x: -0.4413921, y: 0.0000001001358, z: -0.000000009536743}
+      rotation: {x: 0.003924068, y: 0.56338495, z: -0.0065507926, w: 0.82615924}
+      scale: {x: 1.0000005, y: 1.0000001, z: 1.0000001}
+    - name: B_Foot_R_02
+      parentName: B_Foot_R_01
+      position: {x: -0.08776423, y: 0.0000012922287, z: 0.000000009536743}
+      rotation: {x: -0.01643043, y: 0.27708608, z: 0.0024141218, w: 0.9607016}
+      scale: {x: 1.0000005, y: 1.0000002, z: 1.0000002}
+    - name: B_End_Bottom_R_01
+      parentName: B_Foot_R_02
+      position: {x: -0.10102188, y: -0.000000009536743, z: 0.0000000023841857}
+      rotation: {x: 0.00033087004, y: -0.036924914, z: 0.005333747, w: 0.9993038}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000004}
+    - name: B_Stomach
+      parentName: B_Pelvis
+      position: {x: -0.11864853, y: 0.000000012144446, z: 0.0000000031292438}
+      rotation: {x: -0.00002773845, y: -0.18808119, z: -0.00014747186, w: 0.9821535}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000001}
+    - name: B_Spline_02
+      parentName: B_Stomach
+      position: {x: -0.05151924, y: -0.000000004842877, z: 0.000000038146972}
+      rotation: {x: -0.00001760253, y: 0.08653986, z: 0.00014814774, w: 0.9962484}
+      scale: {x: 1, y: 1.0000001, z: 1}
+    - name: B_Spline_03
+      parentName: B_Spline_02
+      position: {x: -0.04117676, y: 0.000000012814998, z: 0.000000019073486}
+      rotation: {x: 0.00005360692, y: 0.09183081, z: 0.000037467307, w: 0.9957746}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000001}
+    - name: B_Back
+      parentName: B_Spline_03
+      position: {x: -0.041417997, y: -0.00000003237277, z: -0.0000000023841857}
+      rotation: {x: 0.00003932463, y: 0.027199779, z: -0.00012465415, w: 0.9996301}
+      scale: {x: 0.9999998, y: 0.99999994, z: 1.0000001}
+    - name: B_Chest
+      parentName: B_Back
+      position: {x: -0.21451378, y: 0.000011252947, z: 0.05302637}
+      rotation: {x: -0.10375165, y: 0.6994765, z: 0.6994508, w: 0.10361918}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000002}
+    - name: B_End_Front_01
+      parentName: B_Chest
+      position: {x: -0.21777114, y: 0.000000038146972, z: 0.00000006610527}
+      rotation: {x: -0.0000318177, y: -0.000001400709, z: -0.0144199785, w: 0.99989605}
+      scale: {x: 1, y: 1.0000002, z: 1}
+    - name: B_Shoulder_R_01
+      parentName: B_Back
+      position: {x: -0.19812247, y: 0.019111142, z: 0.020576496}
+      rotation: {x: 0.090379305, y: 0.13005807, z: 0.65917313, w: -0.73512405}
+      scale: {x: 1.0000015, y: 1.0000021, z: 1.0000004}
+    - name: B_Arm_R_01
+      parentName: B_Shoulder_R_01
+      position: {x: -0.08787346, y: 0.00000015258789, z: -0.0000000047683715}
+      rotation: {x: -0.006498491, y: 0.15367357, z: -0.07456554, w: 0.9852828}
+      scale: {x: 0.99999994, y: 1.0000004, z: 0.99999994}
+    - name: B_Arm_R_02
+      parentName: B_Arm_R_01
+      position: {x: -0.26168677, y: -0.00000015258789, z: 0.000000023841856}
+      rotation: {x: 0.013281185, y: 0.036086086, z: -0.0033105789, w: 0.999255}
+      scale: {x: 1, y: 1.0000002, z: 1.0000005}
+    - name: B_Hand_R_01
+      parentName: B_Arm_R_02
+      position: {x: -0.23888884, y: 0, z: 0.000000009536743}
+      rotation: {x: -0.040129375, y: -0.030466957, z: 0.010021595, w: 0.99867964}
+      scale: {x: 1.0000004, y: 1, z: 1.0000004}
+    - name: B_Finger_R_01_01
+      parentName: B_Hand_R_01
+      position: {x: -0.081668206, y: 0.0041355896, z: 0.020920029}
+      rotation: {x: 0.0023265253, y: 0.053898428, z: -0.017448762, w: 0.99839133}
+      scale: {x: 1.0000004, y: 1.0000002, z: 0.99999994}
+    - name: B_Finger_R_01_02
+      parentName: B_Finger_R_01_01
+      position: {x: -0.026226958, y: 0.000000076293944, z: 0.000000009536743}
+      rotation: {x: -0.013800032, y: 0.0036197924, z: 0.028520145, w: 0.9994914}
+      scale: {x: 0.99999994, y: 1.0000001, z: 0.99999994}
+    - name: B_Finger_R_01_03
+      parentName: B_Finger_R_01_02
+      position: {x: -0.022072792, y: -0.000000076293944, z: 0}
+      rotation: {x: 0.026543213, y: 0.012371626, z: -0.008411189, w: 0.99953574}
+      scale: {x: 1.0000004, y: 1.0000002, z: 0.9999998}
+    - name: B_End_R_03
+      parentName: B_Finger_R_01_03
+      position: {x: -0.02080818, y: 0.00000015258789, z: 0.000000019073486}
+      rotation: {x: -0.01046032, y: 0.020384071, z: 0.0010335648, w: 0.99973696}
+      scale: {x: 1.0000005, y: 1.0000002, z: 0.99999994}
+    - name: B_Finger_R_02_01
+      parentName: B_Hand_R_01
+      position: {x: -0.08130443, y: 0.0038874054, z: 0.005603639}
+      rotation: {x: -0.00096085656, y: -0.002900317, z: -0.010104542, w: 0.9999443}
+      scale: {x: 1, y: 1.0000005, z: 1}
+    - name: B_Finger_R_02_02
+      parentName: B_Finger_R_02_01
+      position: {x: -0.029019736, y: -0.000000076293944, z: 0.0000000047683715}
+      rotation: {x: -0.014122843, y: 0.00784452, z: 0.013038096, w: 0.99978447}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000001}
+    - name: B_Finger_R_02_03
+      parentName: B_Finger_R_02_02
+      position: {x: -0.024074096, y: 0, z: 0}
+      rotation: {x: 0.03265742, y: -0.015563242, z: -0.0076455423, w: 0.99931616}
+      scale: {x: 1.0000005, y: 1.0000001, z: 0.9999997}
+    - name: B_End_R_04
+      parentName: B_Finger_R_02_03
+      position: {x: -0.023318939, y: 0.00000015258789, z: 0.000000013113022}
+      rotation: {x: -0.016184911, y: 0.006173617, z: -0.0072050006, w: 0.999824}
+      scale: {x: 0.9999996, y: 0.9999996, z: 1}
+    - name: B_Finger_R_04_01
+      parentName: B_Hand_R_01
+      position: {x: -0.077208705, y: 0.0054673003, z: -0.025140075}
+      rotation: {x: -0.003153963, y: -0.042709436, z: -0.047022834, w: 0.9979754}
+      scale: {x: 1, y: 1, z: 1}
+    - name: B_Finger_R_04_02
+      parentName: B_Finger_R_04_01
+      position: {x: -0.016909866, y: -0.000000076293944, z: 0.000000019073486}
+      rotation: {x: -0.040463097, y: 0.017952383, z: 0.035716623, w: 0.9983811}
+      scale: {x: 1, y: 1.0000002, z: 0.9999998}
+    - name: B_Finger_R_04_03
+      parentName: B_Finger_R_04_02
+      position: {x: -0.0141249085, y: 0.000000076293944, z: 0}
+      rotation: {x: -0.04034464, y: -0.017216485, z: 0.02379151, w: 0.9987542}
+      scale: {x: 1.0000008, y: 1.0000005, z: 0.99999994}
+    - name: B_End_R_06
+      parentName: B_Finger_R_04_03
+      position: {x: -0.016826019, y: 0.00000015258789, z: 0}
+      rotation: {x: 0.060429227, y: 0.010875408, z: -0.029452708, w: 0.99767864}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000005}
+    - name: B_Thumb_R_01
+      parentName: B_Hand_R_01
+      position: {x: -0.04726616, y: 0.018688735, z: 0.02928851}
+      rotation: {x: 0.11004511, y: 0.35948145, z: -0.10989424, w: 0.9201014}
+      scale: {x: 0.9999998, y: 1.0000002, z: 0.99999994}
+    - name: B_Thumb_R_02
+      parentName: B_Thumb_R_01
+      position: {x: -0.02522766, y: 0, z: 0.000000038146972}
+      rotation: {x: 0.008755833, y: 0.02210613, z: 0.029003566, w: 0.99929655}
+      scale: {x: 1, y: 0.9999998, z: 1}
+    - name: B_End_R_02
+      parentName: B_Thumb_R_02
+      position: {x: -0.02567047, y: -0.000000038146972, z: 0}
+      rotation: {x: -0.02663858, y: -0.014881287, z: 0.002447576, w: 0.99953145}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000002}
+    - name: B_Finger_R_03_01
+      parentName: B_Hand_R_01
+      position: {x: -0.08013817, y: 0.0033989714, z: -0.010588681}
+      rotation: {x: -0.004680102, y: -0.04639554, z: -0.0060145813, w: 0.9988941}
+      scale: {x: 1.000001, y: 1.0000001, z: 1.0000001}
+    - name: B_Finger_R_03_02
+      parentName: B_Finger_R_03_01
+      position: {x: -0.026402205, y: 0.000000076293944, z: 0.000000019073486}
+      rotation: {x: -0.01381953, y: 0.014984877, z: -0.013836982, w: 0.9996965}
+      scale: {x: 1.0000001, y: 1, z: 1}
+    - name: B_Finger_R_03_03
+      parentName: B_Finger_R_03_02
+      position: {x: -0.01818779, y: 0, z: 0.000000009536743}
+      rotation: {x: 0.026339162, y: 0.00088286266, z: 0.015554848, w: 0.9995316}
+      scale: {x: 1.0000001, y: 0.9999998, z: 1}
+    - name: B_End_R_05
+      parentName: B_Finger_R_03_03
+      position: {x: -0.024207534, y: 0.000000076293944, z: 0.000000009536743}
+      rotation: {x: -0.008400479, y: -0.008434501, z: 0.014347838, w: 0.9998262}
+      scale: {x: 1.0000006, y: 1.0000007, z: 0.9999998}
+    - name: B_Neck
+      parentName: B_Back
+      position: {x: -0.21845314, y: -0.0000062528065, z: 0.0000000047683715}
+      rotation: {x: 0.00010476046, y: 0.11881511, z: -0.00062099536, w: 0.9929162}
+      scale: {x: 1.0000005, y: 1.0000005, z: 1.0000004}
+    - name: B_Head
+      parentName: B_Neck
+      position: {x: -0.1123941, y: 4.4703483e-10, z: 0.000000038146972}
+      rotation: {x: -0.000076122575, y: -0.13555613, z: 0.0007554388, w: 0.9907694}
+      scale: {x: 0.9999998, y: 0.9999996, z: 0.9999996}
+    - name: B_End_Up_01
+      parentName: B_Head
+      position: {x: -0.16824874, y: 0.000000007264316, z: -0.0000000011920929}
+      rotation: {x: 0.000001565473, y: -0.0020606366, z: 0.00003128128, w: 0.99999785}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000001}
+    - name: B_Shoulder_L_01
+      parentName: B_Back
+      position: {x: -0.19811545, y: -0.019100232, z: 0.02057752}
+      rotation: {x: 0.090371355, y: -0.13001041, z: 0.65932125, w: 0.73500055}
+      scale: {x: 0.9999996, y: 1.0000004, z: 1.0000002}
+    - name: B_Arm_L_01
+      parentName: B_Shoulder_L_01
+      position: {x: -0.087873645, y: -0.00000045776366, z: -0.000000014305114}
+      rotation: {x: 0.006579166, y: 0.15367672, z: 0.07453994, w: 0.9852838}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    - name: B_Arm_L_02
+      parentName: B_Arm_L_01
+      position: {x: -0.26168707, y: 0.00000015258789, z: 0.00000022888183}
+      rotation: {x: -0.013280836, y: 0.036090516, z: 0.0033152706, w: 0.99925476}
+      scale: {x: 1.0000002, y: 1, z: 1.0000002}
+    - name: B_Hand_L_01
+      parentName: B_Arm_L_02
+      position: {x: -0.23888908, y: -0.000000076293944, z: -0.00000014781952}
+      rotation: {x: 0.040131852, y: -0.030331489, z: -0.01016256, w: 0.99868226}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: B_Finger_L_01_01
+      parentName: B_Hand_L_01
+      position: {x: -0.08166809, y: -0.0041355896, z: 0.020920258}
+      rotation: {x: -0.0023262943, y: 0.053898145, z: 0.017449282, w: 0.9983913}
+      scale: {x: 0.99999994, y: 0.9999997, z: 0.9999998}
+    - name: B_Finger_L_01_02
+      parentName: B_Finger_L_01_01
+      position: {x: -0.026227035, y: -0.00000015258789, z: -0.00000022411346}
+      rotation: {x: 0.013800154, y: 0.003620124, z: -0.028520675, w: 0.99949145}
+      scale: {x: 1.0000005, y: 1.0000001, z: 1.0000001}
+    - name: B_Finger_L_01_03
+      parentName: B_Finger_L_01_02
+      position: {x: -0.022073021, y: 0.000000076293944, z: 0.00000009059906}
+      rotation: {x: -0.026543153, y: 0.012371587, z: 0.008411158, w: 0.99953574}
+      scale: {x: 1.0000002, y: 0.99999994, z: 1.0000002}
+    - name: B_End_L_03
+      parentName: B_Finger_L_01_03
+      position: {x: -0.020808257, y: -0.0000003814697, z: 0}
+      rotation: {x: 0.010460381, y: 0.020383928, z: -0.0010332095, w: 0.99973696}
+      scale: {x: 0.99999994, y: 1, z: 1}
+    - name: B_Finger_L_02_01
+      parentName: B_Hand_L_01
+      position: {x: -0.08130439, y: -0.003887329, z: 0.0056037903}
+      rotation: {x: 0.00096074457, y: -0.0029004319, z: 0.010104838, w: 0.9999443}
+      scale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+    - name: B_Finger_L_02_02
+      parentName: B_Finger_L_02_01
+      position: {x: -0.029019546, y: -0.000000076293944, z: 0}
+      rotation: {x: 0.014122654, y: 0.007844589, z: -0.013038157, w: 0.99978447}
+      scale: {x: 1.0000001, y: 1, z: 0.9999998}
+    - name: B_Finger_L_02_03
+      parentName: B_Finger_L_02_02
+      position: {x: -0.024074096, y: 0.00000015258789, z: 0.0000000023841857}
+      rotation: {x: -0.032657202, y: -0.015563234, z: 0.007645919, w: 0.99931616}
+      scale: {x: 1.0000005, y: 1, z: 0.99999994}
+    - name: B_End_L_04
+      parentName: B_Finger_L_02_03
+      position: {x: -0.023318786, y: -0.00000015258789, z: -0.00000015214086}
+      rotation: {x: 0.016184973, y: 0.006173653, z: 0.0072051515, w: 0.99982405}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: B_Finger_L_04_01
+      parentName: B_Hand_L_01
+      position: {x: -0.07720863, y: -0.0054673767, z: -0.025139995}
+      rotation: {x: 0.0031530682, y: -0.042706065, z: 0.047021374, w: 0.9979755}
+      scale: {x: 1.0000001, y: 1.0000001, z: 0.9999998}
+    - name: B_Finger_L_04_02
+      parentName: B_Finger_L_04_01
+      position: {x: -0.016909713, y: -0.000000076293944, z: -0.000000095367426}
+      rotation: {x: 0.040463798, y: 0.017945878, z: -0.035707872, w: 0.9983815}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1}
+    - name: B_Finger_L_04_03
+      parentName: B_Finger_L_04_02
+      position: {x: -0.014124985, y: 0.00000015258789, z: 0.000000076293944}
+      rotation: {x: 0.04034459, y: -0.017216802, z: -0.023791581, w: 0.9987542}
+      scale: {x: 0.9999998, y: 0.99999994, z: 1}
+    - name: B_End_L_06
+      parentName: B_Finger_L_04_03
+      position: {x: -0.016826095, y: -0.000000076293944, z: 0.000000095367426}
+      rotation: {x: -0.0604292, y: 0.010875666, z: 0.029454075, w: 0.99767864}
+      scale: {x: 0.99999994, y: 1, z: 1.0000001}
+    - name: B_Thumb_L_01
+      parentName: B_Hand_L_01
+      position: {x: -0.047266196, y: -0.018688811, z: 0.02928864}
+      rotation: {x: -0.110064, y: 0.35949752, z: 0.10983809, w: 0.92009956}
+      scale: {x: 0.99999994, y: 1.0000002, z: 0.9999998}
+    - name: B_Thumb_L_02
+      parentName: B_Thumb_L_01
+      position: {x: -0.025227737, y: -0.000000114440915, z: 0.000000038146972}
+      rotation: {x: -0.008756062, y: 0.022106567, z: -0.029003559, w: 0.9992965}
+      scale: {x: 1.0000005, y: 1.0000004, z: 1.0000002}
+    - name: B_End_L_02
+      parentName: B_Thumb_L_02
+      position: {x: -0.025670394, y: -0.00000015258789, z: 0}
+      rotation: {x: 0.026638575, y: -0.014881261, z: -0.0024477176, w: 0.9995314}
+      scale: {x: 1, y: 1, z: 1.0000002}
+    - name: B_Finger_L_03_01
+      parentName: B_Hand_L_01
+      position: {x: -0.08013801, y: -0.0033988953, z: -0.010588531}
+      rotation: {x: 0.004680075, y: -0.04638985, z: 0.006015871, w: 0.99889433}
+      scale: {x: 1, y: 1, z: 0.9999998}
+    - name: B_Finger_L_03_02
+      parentName: B_Finger_L_03_01
+      position: {x: -0.026402244, y: 0.00000015258789, z: -0.00000016212464}
+      rotation: {x: 0.01381968, y: 0.014984945, z: 0.013837153, w: 0.99969643}
+      scale: {x: 1.0000002, y: 1.0000001, z: 1.0000002}
+    - name: B_Finger_L_03_03
+      parentName: B_Finger_L_03_02
+      position: {x: -0.018187905, y: 0.000000076293944, z: 0.00000015258789}
+      rotation: {x: -0.026338993, y: 0.0008831459, z: -0.01555415, w: 0.9995316}
+      scale: {x: 1.0000001, y: 1.0000002, z: 0.9999989}
+    - name: B_End_L_05
+      parentName: B_Finger_L_03_03
+      position: {x: -0.024207534, y: -0.00000015258789, z: -0.000000076293944}
+      rotation: {x: 0.008400402, y: -0.008434634, z: -0.014349161, w: 0.9998262}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1}
+    - name: B_Leg_L_01
+      parentName: B_Pelvis
+      position: {x: 0.016527252, y: -0.062023986, z: -0.0112306895}
+      rotation: {x: -0.05183351, y: 0.00040557462, z: 0.99865377, w: 0.0019417322}
+      scale: {x: 1.0000004, y: 1.0000005, z: 0.99999994}
+    - name: B_Leg_L_02
+      parentName: B_Leg_L_01
+      position: {x: -0.41447464, y: 0.00000010967254, z: -0.0000001335144}
+      rotation: {x: 0.001398466, y: -0.1440314, z: 0.010994115, w: 0.989511}
+      scale: {x: 1.0000004, y: 1.0000005, z: 1.0000001}
+    - name: B_Foot_L_01
+      parentName: B_Leg_L_02
+      position: {x: -0.4413922, y: -0.0000003004074, z: 0.0000000333786}
+      rotation: {x: -0.003935147, y: 0.56338567, z: 0.006546611, w: 0.8261588}
+      scale: {x: 1.0000002, y: 0.9999998, z: 0.9999998}
+    - name: B_Foot_L_02
+      parentName: B_Foot_L_01
+      position: {x: -0.08776421, y: -0.000001282692, z: 0.000000019073486}
+      rotation: {x: 0.0076546944, y: 0.2770244, z: 0.00015937349, w: 0.96083236}
+      scale: {x: 1.0000006, y: 1, z: 0.9999998}
+    - name: B_End_Bottom_L_01
+      parentName: B_Foot_L_02
+      position: {x: -0.10102188, y: 0.0000000333786, z: 0.000000026226044}
+      rotation: {x: -0.00033083788, y: -0.0369247, z: -0.0053340015, w: 0.9993038}
+      scale: {x: 1.0000004, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
