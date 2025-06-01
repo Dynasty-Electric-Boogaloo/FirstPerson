@@ -18,20 +18,18 @@ namespace Player
         
         private void Update()
         {
-            
             if (PlayerData.PlayerInputs.Controls.Dance.WasPressedThisFrame() && !PlayerData.IsInMannequin)
-            {
                 SetDancing(true);
-            }
         }
 
         public void SetDancing(bool setOn, bool isMimic = false )
         {
             UiManager.SetDance(tolerance, isMimic);
+            
             if(!isMimic)
                 PlayerData.Dancing = setOn;
+            
             PlayerData.DestroyingMimic = isMimic;
         }
-        
     }
 }

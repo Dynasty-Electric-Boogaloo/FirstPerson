@@ -6,11 +6,11 @@ namespace Player
 {
     public class PlayerMusicBox : PlayerBehaviour
     {
-        [FormerlySerializedAs("minimalDistance")] [SerializeField] private float thresholdDetectionDistance;
+        [SerializeField] private float thresholdDetectionDistance;
         [SerializeField] private MusicBoxObject musicBoxObject;
-        private bool _isOnDisplay;
         [SerializeField] private State state;
-
+        private bool _isOnDisplay;
+       
         private void Awake()
         {
             musicBoxObject.gameObject.SetActive(_isOnDisplay);
@@ -56,10 +56,10 @@ namespace Player
         [Serializable]
         private enum State
         {
-            empty,
-            ballerina,
-            key,
-            picture,
+            Empty,
+            Ballerina,
+            Key,
+            Picture,
         }
     }
 }
