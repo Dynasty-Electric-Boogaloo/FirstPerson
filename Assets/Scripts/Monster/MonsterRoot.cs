@@ -53,7 +53,7 @@ namespace Monster
             var diff = PlayerRoot.Position - transform.position;
             diff.y = 0;
 
-            if (!(diff.magnitude < 1.5f)) 
+            if (diff.magnitude > 1.5f) 
                 return;
             
             PlayerRoot.ResetPosition();

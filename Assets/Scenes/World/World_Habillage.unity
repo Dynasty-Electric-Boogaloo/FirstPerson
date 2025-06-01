@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000008, guid: 954704746388044458f78760550d8d83, type: 2}
+  m_LightingDataAsset: {fileID: 112000010, guid: 954704746388044458f78760550d8d83, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 36ca72716a3a4064ca92a7c3f6476afa, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -184,13 +184,6 @@ MonoBehaviour:
   m_Script: {fileID: 1998468699}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Entries:
-  - id: 0
-    category: 0
-    gameObject: {fileID: 1452969451}
-  - id: 1
-    category: 0
-    gameObject: {fileID: 369766232}
 --- !u!4 &162356215
 Transform:
   m_ObjectHideFlags: 19
@@ -500,33 +493,33 @@ MonoBehaviour:
     m_Aspect: 0
   m_HasValidSHForNormalization: 1
   m_SHForNormalization:
-    'sh[ 0]': 0.054411694
-    'sh[ 1]': 0.0018805518
-    'sh[ 2]': 0.0020547642
-    'sh[ 3]': 0.013026136
-    'sh[ 4]': 0.00083654904
-    'sh[ 5]': -0.0017086049
-    'sh[ 6]': 0.000630876
-    'sh[ 7]': 0.0027195541
-    'sh[ 8]': -0.00016295584
-    'sh[ 9]': 0.10009862
-    'sh[10]': 0.003785157
-    'sh[11]': -0.054736592
-    'sh[12]': 0.02007375
-    'sh[13]': 0.0048432164
-    'sh[14]': -0.0044742827
-    'sh[15]': 0.00055994716
-    'sh[16]': -0.004779416
-    'sh[17]': -0.002536051
-    'sh[18]': 0.14460616
-    'sh[19]': 0.0058318856
-    'sh[20]': -0.080555245
-    'sh[21]': 0.03591799
-    'sh[22]': 0.008763969
-    'sh[23]': -0.007828825
-    'sh[24]': 0.00063169736
-    'sh[25]': -0.0084080305
-    'sh[26]': -0.0044762916
+    'sh[ 0]': 0.030180603
+    'sh[ 1]': 0.009795911
+    'sh[ 2]': -0.0019154556
+    'sh[ 3]': 0.011627202
+    'sh[ 4]': 0.0016610019
+    'sh[ 5]': -0.0023042306
+    'sh[ 6]': 0.0006249798
+    'sh[ 7]': 0.00078737474
+    'sh[ 8]': 0.0005185467
+    'sh[ 9]': 0.06603539
+    'sh[10]': 0.032737326
+    'sh[11]': -0.044377033
+    'sh[12]': 0.016108477
+    'sh[13]': 0.0060892287
+    'sh[14]': -0.011330762
+    'sh[15]': 0.0012175479
+    'sh[16]': -0.0083640665
+    'sh[17]': -0.00023933967
+    'sh[18]': 0.10020974
+    'sh[19]': 0.053747214
+    'sh[20]': -0.06853896
+    'sh[21]': 0.026799047
+    'sh[22]': 0.010705409
+    'sh[23]': -0.019136555
+    'sh[24]': 0.0018160981
+    'sh[25]': -0.01460029
+    'sh[26]': -0.00046095578
   m_SHValidForCapturePosition: {x: -9.224453, y: 1.802213, z: -24.613928}
   m_SHValidForSourcePosition: {x: -9.224453, y: 1.802213, z: -24.613928}
   m_HDProbeVersion: 9
@@ -680,6 +673,109 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 45115535}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &566742563
+GameObject:
+  m_ObjectHideFlags: 19
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 566742565}
+  - component: {fileID: 566742564}
+  m_Layer: 0
+  m_Name: SceneIDMap
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &566742564
+MonoBehaviour:
+  m_ObjectHideFlags: 19
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566742563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1154563567}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &566742565
+Transform:
+  m_ObjectHideFlags: 19
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566742563}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!115 &575825327
+MonoScript:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  serializedVersion: 7
+  m_DefaultReferences: {}
+  m_Icon: {fileID: 0}
+  m_Type: 0
+  m_ExecutionOrder: 0
+  m_ClassName: SceneObjectIDMapSceneAsset
+  m_Namespace: UnityEngine.Rendering.HighDefinition
+  m_AssemblyName: Unity.RenderPipelines.HighDefinition.Runtime
+--- !u!1 &824922478
+GameObject:
+  m_ObjectHideFlags: 19
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 824922480}
+  - component: {fileID: 824922479}
+  m_Layer: 0
+  m_Name: SceneIDMap
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &824922479
+MonoBehaviour:
+  m_ObjectHideFlags: 19
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824922478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1340510620}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &824922480
+Transform:
+  m_ObjectHideFlags: 19
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824922478}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1028379223
 GameObject:
@@ -1168,33 +1264,33 @@ MonoBehaviour:
     m_Aspect: 0
   m_HasValidSHForNormalization: 1
   m_SHForNormalization:
-    'sh[ 0]': 0.04486207
-    'sh[ 1]': 0.008942871
-    'sh[ 2]': 0.01854744
-    'sh[ 3]': 0.014923403
-    'sh[ 4]': 0.0031997422
-    'sh[ 5]': 0.0022622654
-    'sh[ 6]': 0.000027601029
-    'sh[ 7]': 0.0059575858
-    'sh[ 8]': 0.00067049474
-    'sh[ 9]': 0.014974902
-    'sh[10]': 0.002596576
-    'sh[11]': -0.008566592
-    'sh[12]': -0.0018152336
-    'sh[13]': -0.000017242162
-    'sh[14]': -0.00030058797
-    'sh[15]': 0.00039033435
-    'sh[16]': 0.000470941
-    'sh[17]': -0.00004176813
-    'sh[18]': 0.011022609
-    'sh[19]': 0.0017025924
-    'sh[20]': -0.0060293213
-    'sh[21]': -0.0015865488
-    'sh[22]': -0.00010952816
-    'sh[23]': -0.00009732219
-    'sh[24]': 0.00027364545
-    'sh[25]': 0.000530409
-    'sh[26]': -0.000064648026
+    'sh[ 0]': 0.043339625
+    'sh[ 1]': 0.009303996
+    'sh[ 2]': 0.018249813
+    'sh[ 3]': -0.0035170664
+    'sh[ 4]': 0.00049802946
+    'sh[ 5]': 0.0026511871
+    'sh[ 6]': 0.00013179755
+    'sh[ 7]': 0.003439352
+    'sh[ 8]': 0.0013703745
+    'sh[ 9]': 0.009718063
+    'sh[10]': 0.0036757607
+    'sh[11]': 0.00087977014
+    'sh[12]': -0.005583832
+    'sh[13]': -0.00104561
+    'sh[14]': 0.00036946274
+    'sh[15]': 0.00006502114
+    'sh[16]': -0.00033004826
+    'sh[17]': 0.00012552802
+    'sh[18]': 0.0034694672
+    'sh[19]': 0.0011649808
+    'sh[20]': -0.00048427994
+    'sh[21]': -0.0017608141
+    'sh[22]': -0.0003078127
+    'sh[23]': 0.0000392411
+    'sh[24]': 0.000053777556
+    'sh[25]': 0.0000129198825
+    'sh[26]': 0.000032471766
   m_SHValidForCapturePosition: {x: -36.259575, y: 1.802213, z: -28.651724}
   m_SHValidForSourcePosition: {x: -36.259575, y: 1.802213, z: -28.651724}
   m_HDProbeVersion: 9
@@ -1349,6 +1445,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 45115535}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!115 &1154563567
+MonoScript:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  serializedVersion: 7
+  m_DefaultReferences: {}
+  m_Icon: {fileID: 0}
+  m_Type: 0
+  m_ExecutionOrder: 0
+  m_ClassName: SceneObjectIDMapSceneAsset
+  m_Namespace: UnityEngine.Rendering.HighDefinition
+  m_AssemblyName: Unity.RenderPipelines.HighDefinition.Runtime
+--- !u!115 &1340510620
+MonoScript:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  serializedVersion: 7
+  m_DefaultReferences: {}
+  m_Icon: {fileID: 0}
+  m_Type: 0
+  m_ExecutionOrder: 0
+  m_ClassName: SceneObjectIDMapSceneAsset
+  m_Namespace: UnityEngine.Rendering.HighDefinition
+  m_AssemblyName: Unity.RenderPipelines.HighDefinition.Runtime
 --- !u!1 &1452969451
 GameObject:
   m_ObjectHideFlags: 0
@@ -1561,7 +1687,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: 4d28e369c4b609e4db76cce5267b90e6, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: 0a7dddba617d9864e937d0893298cfca, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -1643,33 +1769,33 @@ MonoBehaviour:
     m_Aspect: 0
   m_HasValidSHForNormalization: 1
   m_SHForNormalization:
-    'sh[ 0]': 0.2901462
-    'sh[ 1]': 0.12848452
-    'sh[ 2]': -0.15612006
-    'sh[ 3]': 0.061797112
-    'sh[ 4]': 0.01594876
-    'sh[ 5]': -0.045377232
-    'sh[ 6]': 0.0016178594
-    'sh[ 7]': -0.013662115
-    'sh[ 8]': -0.016725294
-    'sh[ 9]': 0.010203936
-    'sh[10]': -0.0011592929
-    'sh[11]': -0.0066180956
-    'sh[12]': -0.00014823
-    'sh[13]': -0.00016838721
-    'sh[14]': 0.0005468153
-    'sh[15]': 0.0002589728
-    'sh[16]': 0.00019972473
-    'sh[17]': -0.00015218982
-    'sh[18]': 0.005613524
-    'sh[19]': -0.0011204344
-    'sh[20]': -0.0036901464
-    'sh[21]': -0.00060643174
-    'sh[22]': -0.00012477076
-    'sh[23]': 0.0005046495
-    'sh[24]': 0.00018228579
-    'sh[25]': 0.00025662957
-    'sh[26]': -0.0000009532934
+    'sh[ 0]': 0.1901852
+    'sh[ 1]': 0.11561923
+    'sh[ 2]': -0.11803625
+    'sh[ 3]': 0.045193736
+    'sh[ 4]': 0.0120284995
+    'sh[ 5]': -0.037452776
+    'sh[ 6]': 0.0012247374
+    'sh[ 7]': -0.013369356
+    'sh[ 8]': -0.011040208
+    'sh[ 9]': 0.004120055
+    'sh[10]': 0.0004379677
+    'sh[11]': -0.002909062
+    'sh[12]': -0.000061183455
+    'sh[13]': -0.0000770332
+    'sh[14]': -0.00009608201
+    'sh[15]': 0.000111197696
+    'sh[16]': 0.0000350023
+    'sh[17]': -0.000015421218
+    'sh[18]': 0.0019949623
+    'sh[19]': -0.00009623732
+    'sh[20]': -0.0013988641
+    'sh[21]': -0.00035129226
+    'sh[22]': -0.000100589015
+    'sh[23]': 0.0000696509
+    'sh[24]': 0.00007011724
+    'sh[25]': 0.00010462274
+    'sh[26]': 0.000052018713
   m_SHValidForCapturePosition: {x: 9.425718, y: 1.545007, z: -4.089719}
   m_SHValidForSourcePosition: {x: 9.425718, y: 1.545007, z: -4.089719}
   m_HDProbeVersion: 9
@@ -1853,16 +1979,6 @@ MonoBehaviour:
   m_Script: {fileID: 1902953592}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Entries:
-  - id: 0
-    category: 0
-    gameObject: {fileID: 1116955166}
-  - id: 1
-    category: 0
-    gameObject: {fileID: 369766232}
-  - id: 2
-    category: 0
-    gameObject: {fileID: 1452969451}
 --- !u!4 &1733615748
 Transform:
   m_ObjectHideFlags: 19
@@ -2172,33 +2288,33 @@ MonoBehaviour:
     m_Aspect: 0
   m_HasValidSHForNormalization: 1
   m_SHForNormalization:
-    'sh[ 0]': 0.3601907
-    'sh[ 1]': 0.12267158
-    'sh[ 2]': 0.05658803
-    'sh[ 3]': 0.051653698
-    'sh[ 4]': 0.028567377
-    'sh[ 5]': 0.0554034
-    'sh[ 6]': -0.009906359
-    'sh[ 7]': -0.037072554
-    'sh[ 8]': 0.03012015
-    'sh[ 9]': 0.16939694
-    'sh[10]': 0.068705596
-    'sh[11]': 0.036555953
-    'sh[12]': 0.019302195
-    'sh[13]': 0.021630846
-    'sh[14]': 0.033545196
-    'sh[15]': -0.0058499975
-    'sh[16]': -0.010504785
-    'sh[17]': 0.011925419
-    'sh[18]': 0.04765507
-    'sh[19]': 0.020327076
-    'sh[20]': 0.01355398
-    'sh[21]': 0.003099774
-    'sh[22]': 0.008319092
-    'sh[23]': 0.011217072
-    'sh[24]': -0.0018807887
-    'sh[25]': -0.0012834537
-    'sh[26]': 0.002030776
+    'sh[ 0]': 3.5055816
+    'sh[ 1]': 1.2516763
+    'sh[ 2]': 0.68615055
+    'sh[ 3]': 0.4888823
+    'sh[ 4]': 0.32917643
+    'sh[ 5]': 0.23102981
+    'sh[ 6]': -0.02393386
+    'sh[ 7]': 0.548429
+    'sh[ 8]': 0.2360915
+    'sh[ 9]': 1.6035099
+    'sh[10]': 0.65155387
+    'sh[11]': 0.318301
+    'sh[12]': 0.20091146
+    'sh[13]': 0.13833803
+    'sh[14]': 0.0874098
+    'sh[15]': -0.0018336751
+    'sh[16]': 0.20511131
+    'sh[17]': 0.11313902
+    'sh[18]': 0.39639795
+    'sh[19]': 0.16076551
+    'sh[20]': 0.06185063
+    'sh[21]': 0.01432943
+    'sh[22]': 0.014012257
+    'sh[23]': 0.0051181456
+    'sh[24]': 0.0028654286
+    'sh[25]': 0.018498616
+    'sh[26]': 0.0245042
   m_SHValidForCapturePosition: {x: -43.5542, y: 1.802213, z: -26.702599}
   m_SHValidForSourcePosition: {x: -43.5542, y: 1.802213, z: -26.702599}
   m_HDProbeVersion: 9
@@ -2677,33 +2793,33 @@ MonoBehaviour:
     m_Aspect: 0
   m_HasValidSHForNormalization: 1
   m_SHForNormalization:
-    'sh[ 0]': 0.041590646
-    'sh[ 1]': -0.0053190147
-    'sh[ 2]': 0.02245975
-    'sh[ 3]': -0.021441245
-    'sh[ 4]': 0.0030778975
-    'sh[ 5]': -0.0021464187
-    'sh[ 6]': 0.00007612874
-    'sh[ 7]': -0.008507436
-    'sh[ 8]': 0.00033954726
-    'sh[ 9]': 0.022959856
-    'sh[10]': -0.0025980389
-    'sh[11]': 0.01139721
-    'sh[12]': -0.011110277
-    'sh[13]': 0.0017458703
-    'sh[14]': -0.0009934709
-    'sh[15]': -0.000039213064
-    'sh[16]': -0.0048592295
-    'sh[17]': 0.00021193843
-    'sh[18]': 0.007480619
-    'sh[19]': -0.00074476347
-    'sh[20]': 0.003278439
-    'sh[21]': -0.0030406385
-    'sh[22]': 0.00053854985
-    'sh[23]': -0.00028023426
-    'sh[24]': -0.000030353427
-    'sh[25]': -0.0015458036
-    'sh[26]': 0.00008989129
+    'sh[ 0]': 0.035055142
+    'sh[ 1]': -0.0014248965
+    'sh[ 2]': 0.017394355
+    'sh[ 3]': -0.017997136
+    'sh[ 4]': 0.0015401728
+    'sh[ 5]': -0.001561919
+    'sh[ 6]': 0.0009398662
+    'sh[ 7]': -0.009863696
+    'sh[ 8]': 0.0019467527
+    'sh[ 9]': 0.014828762
+    'sh[10]': -0.00031319313
+    'sh[11]': 0.007764848
+    'sh[12]': -0.007966879
+    'sh[13]': 0.00058297225
+    'sh[14]': -0.0005469709
+    'sh[15]': 0.0003427257
+    'sh[16]': -0.0040098056
+    'sh[17]': 0.0008267394
+    'sh[18]': 0.0030218558
+    'sh[19]': 0.000011977552
+    'sh[20]': 0.0016655788
+    'sh[21]': -0.0017028002
+    'sh[22]': 0.000101549056
+    'sh[23]': -0.00007187677
+    'sh[24]': 0.000035638448
+    'sh[25]': -0.0006895638
+    'sh[26]': 0.00015117778
   m_SHValidForCapturePosition: {x: -27.95907, y: 1.802213, z: -18.175632}
   m_SHValidForSourcePosition: {x: -27.95907, y: 1.802213, z: -18.175632}
   m_HDProbeVersion: 9
@@ -2858,6 +2974,60 @@ Transform:
   m_Children: []
   m_Father: {fileID: 45115535}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2131872961
+GameObject:
+  m_ObjectHideFlags: 19
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2131872963}
+  - component: {fileID: 2131872962}
+  m_Layer: 0
+  m_Name: SceneIDMap
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2131872962
+MonoBehaviour:
+  m_ObjectHideFlags: 19
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131872961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 575825327}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Entries:
+  - id: 0
+    category: 0
+    gameObject: {fileID: 2114781003}
+  - id: 1
+    category: 0
+    gameObject: {fileID: 369766232}
+  - id: 2
+    category: 0
+    gameObject: {fileID: 1452969451}
+--- !u!4 &2131872963
+Transform:
+  m_ObjectHideFlags: 19
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131872961}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2868,3 +3038,6 @@ SceneRoots:
   - {fileID: 45115535}
   - {fileID: 1733615748}
   - {fileID: 162356215}
+  - {fileID: 824922480}
+  - {fileID: 566742565}
+  - {fileID: 2131872963}
