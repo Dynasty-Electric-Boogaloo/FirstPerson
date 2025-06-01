@@ -29,24 +29,19 @@ namespace Player
                 PlayerRoot.SetIsInMannequin(false);
                 UiManager.InMannequin(false);
                 PlayerCamera.ReturnToPosition();
-                
+                return;
             }
-            else
+            if (!_grabbedObject)
             {
-                if (!_grabbedObject)
-                {
-                    HandleHighlight();
+                HandleHighlight();
 
-                    if (!_selectedObject)
-                        return;
-
-                    TryInteract();
-
+                if (!_selectedObject)
                     return;
-                }
 
-                HandleGrabbed();
+                TryInteract();
+                return;
             }
+            HandleGrabbed();
         }
 
         private void FixedUpdate()
@@ -125,7 +120,7 @@ namespace Player
 
                 if (!TryGetComponent<PlayerMusicBox>(out var music))
                     return;
-                music.ChangeState();
+                music.IncreaseState();
             }
 
             if (_selectedObject is not GrabObject grab) 
@@ -137,9 +132,13 @@ namespace Player
 
         private void TryExtract()
         {
-
-            //QTE
-            if (!_selectedObject.TryGetComponent<Mimic>(out var mimic)) return;
+            if (!_selectedObject.TryGetComponent<Mimic>(out var mimic)) 
+                return;
+            
+            print("Try extract");
+            
+            GetComponent<PlayerDance>().SetDancing(true, true);
+            
             mimic.DestroyMimic();
 
             _selectedObject.Break();

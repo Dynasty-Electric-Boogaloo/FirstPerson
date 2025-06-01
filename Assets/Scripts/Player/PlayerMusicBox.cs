@@ -32,23 +32,34 @@ namespace Player
                 return;
 
             musicBoxObject.Using(
-                Vector3.Distance(Monster.MonsterRoot.GetMonsterPosition() / minimalDistance, transform.position),
-                Monster.MonsterRoot.GetMonsterPosition());
+                Vector3.Distance(Monster.MonsterRoot.GetMonsterPosition() / minimalDistance, transform.position));
         }
 
-        public void ChangeState(bool more = true)
+        public void IncreaseState()
         {
-            state += more ? 1 : -1;
+            if ((int)state >= 3)
+                return;
+            
+            state +=  1;
+            musicBoxObject.SetLevel((int)state);
+        }
+        
+        public void DecreaseState()
+        {
+            if((int)state <= 0)
+                return;
+            
+            state -=  1;
             musicBoxObject.SetLevel((int)state);
         }
     
         [Serializable]
         private enum State
         {
-            state0,
-            state1,
-            state2,
-            state3,
+            empty,
+            ballerina,
+            key,
+            picture,
         }
     }
 }

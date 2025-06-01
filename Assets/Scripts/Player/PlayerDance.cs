@@ -19,39 +19,18 @@ namespace Player
         private void Update()
         {
             
-            /*
-            if(PlayerData.Dancing)
-            {
-                _timer -= Time.deltaTime;
-
-                if (_timer < 0 - timeBetween * tolerance || (PlayerData.PlayerInputs.Controls.Dance.WasPressedThisFrame() && _timer > 0 + timeBetween * tolerance))
-                   SetDancing(false);
-
-                if (PlayerData.IsInMannequin && PlayerData.PlayerInputs.Controls.Dance.WasPressedThisFrame())
-                    SetDancing(false);
-
-                if (!PlayerData.PlayerInputs.Controls.Dance.WasPressedThisFrame())
-                    return;
-
-                if (PlayerData.Dancing)
-                    _timer = timeBetween;
-            }
-            else if (PlayerData.PlayerInputs.Controls.Dance.WasPressedThisFrame())
-            {
-                _timer = timeBetween;
-                SetDancing(true);
-            }
-            */
             if (PlayerData.PlayerInputs.Controls.Dance.WasPressedThisFrame())
             {
                 SetDancing(true);
             }
         }
 
-        private void SetDancing(bool setOn )
+        public void SetDancing(bool setOn, bool isMimic = false )
         {
-            UiManager.SetDance(tolerance);
-            PlayerData.Dancing = setOn;
+            UiManager.SetDance(tolerance, isMimic);
+            if(!isMimic)
+                PlayerData.Dancing = setOn;
+            PlayerData.DestroyingMimic = isMimic;
         }
         
     }

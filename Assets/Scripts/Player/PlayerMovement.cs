@@ -31,7 +31,9 @@ namespace Player
         private void Update()
         {
             if(PlayerData.IsInMannequin)
+            { 
                 return;
+            }
             
             UpdateMovement();
             UpdateGravity();
@@ -39,7 +41,7 @@ namespace Player
 
         private void UpdateMovement()
         {
-            var moveConfig = PlayerData.Reloading || PlayerData.Dancing || PlayerData.IsInMannequin ? slowConfig : walkConfig;
+            var moveConfig = PlayerData.Reloading || PlayerData.Dancing ? slowConfig : walkConfig;
             var move = PlayerData.PlayerInputs.Controls.Move.ReadValue<Vector2>();
 
             if (move.sqrMagnitude < 0.01f)

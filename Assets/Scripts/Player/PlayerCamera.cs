@@ -7,6 +7,9 @@ namespace Player
 {
     public class PlayerCamera : PlayerBehaviour
     {
+        private static MeshRenderer _renderer;
+        
+        [SerializeField] private MeshRenderer rendererMesh;
         [SerializeField] private float maxVerticalAngle;
         [SerializeField] private float sensitivity;
         [SerializeField] private float fadeoutSpeed;
@@ -18,8 +21,6 @@ namespace Player
         private float _horizontalBobbingTimer;
         private float _verticalBobbingTimer;
         private float _amplitude;
-        private static MeshRenderer _renderer;
-        [SerializeField] private MeshRenderer rendererMesh;
         private static Camera _camera;
 
         private void Start()
@@ -56,7 +57,7 @@ namespace Player
         public static void ReturnToPosition()
         {
             _camera.gameObject.transform.localPosition = Vector3.zero;
-            _camera.gameObject.transform.localRotation = new Quaternion();
+            _camera.gameObject.transform.localRotation = Quaternion.identity;
             
             if (_renderer)
                 _renderer.enabled = true;

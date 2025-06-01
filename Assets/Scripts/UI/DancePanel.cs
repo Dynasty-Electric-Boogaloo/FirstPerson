@@ -35,14 +35,15 @@ namespace UI
             }
         }
 
-        public void StartDance()
+        public void StartDance(bool isDancing)
         {
             for (var i = 0; i < playerImpulse.Count; i++)
             {
                 playerImpulse[i].gameObject.SetActive(true);
                 notes[i].gameObject.SetActive(true);
             }
-            _isDancing = true;
+            _isDancing = isDancing;
+            _isDestroyingMimic = !isDancing;
             Dance(0);
         }
 
@@ -58,15 +59,16 @@ namespace UI
            }
            else
            {
-               if(_isDancing)
+               if (_isDancing)
                {
                    _currentIndex += 1;
                    _currentIndex %= notePositions.Count;
                    Dance(_currentIndex);
                }
-               else
+               else if (_isDestroyingMimic)
                {
-                   //mimic destroyed ??
+                   print("gg");
+                   Fail();
                }
            }
         }
@@ -85,11 +87,11 @@ namespace UI
             }
         }
         
-        
-        
+      
         private void Fail()
         {
             _isDancing = false;
+            _isDestroyingMimic = false;
             PlayerRoot.SetIsDancing(false);
             for (var i = 0; i < playerImpulse.Count; i++)
             {

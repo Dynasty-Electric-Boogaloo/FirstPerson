@@ -6,6 +6,7 @@ using Player;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
@@ -24,6 +25,7 @@ namespace UI
         private Interactable _current;
         
         private static UiManager _instance;
+        private bool _pause;
         
         private void Awake()
         {
@@ -68,7 +70,7 @@ namespace UI
                 _instance.usageText.text = "Drop - E\\nThrow - Left Click";
         }
 
-        public static void SetDance(float tolerance)
+        public static void SetDance(float tolerance, bool isMimic)
         {
             var isDancing = PlayerRoot.GetIsDancing();
             _instance.inputShow.color = isDancing ? Color.blue : Color.white;
@@ -80,8 +82,11 @@ namespace UI
             if(isDancing)
                 _instance.dancePanel.SetInput(tolerance);
             else 
-                _instance.dancePanel.StartDance();
+                _instance.dancePanel.StartDance(!isMimic);
         }
+        
+        
+        
 
         public static void InMannequin(bool isInMannequin = true)
         {
@@ -96,8 +101,10 @@ namespace UI
             if(_instance &&  _instance.pausePanel)
                 _instance.pausePanel.gameObject.SetActive(setPause);
             
+            _instance._pause = setPause;
             Time.timeScale = setPause ? 0f : 1f;
         }
-        
+
+        public bool GetPause() => _pause;
     }
 }

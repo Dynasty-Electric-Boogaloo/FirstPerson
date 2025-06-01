@@ -13,8 +13,8 @@ namespace Player
         public bool Grounded;
         public bool Reloading;
         public bool Dancing;
+        public bool DestroyingMimic;
         public bool IsInMannequin;
         public Vector2 CameraRotation;
-
     }
 }

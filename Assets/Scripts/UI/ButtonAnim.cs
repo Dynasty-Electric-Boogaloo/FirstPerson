@@ -8,11 +8,11 @@ public class ButtonAnim : MonoBehaviour
     [SerializeField] private float enterTransitionTime = 0.5f;
     [SerializeField] private float exitTransitionTime = 1;
     [SerializeField] private Vector3 sizeToGo = new Vector3(1.25f, 1.25f, 1.25f);
-    private Vector3 currentSize;
+    private Vector3 _defaultSize;
 
     private void Start()
     {
-        currentSize = transform.lossyScale;
+        _defaultSize = transform.lossyScale;
     }
  
     public void OnPointerEnter()
@@ -22,7 +22,7 @@ public class ButtonAnim : MonoBehaviour
 
     public void OnPointerExit()
     {
-        transform.DOScale(currentSize, exitTransitionTime);
+        transform.DOScale(_defaultSize, exitTransitionTime);
     }
 
 }

@@ -11227,6 +11227,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_HandController
       objectReference: {fileID: 0}
+    - target: {fileID: 2989312559492078843, guid: b28454a2dfdabce4ca564f502211a1f2, type: 3}
+      propertyPath: state
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3516671525961325328, guid: b28454a2dfdabce4ca564f502211a1f2, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -34789,7 +34793,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputShow: {fileID: 238306370}
   pausePanel: {fileID: 0}
-  dancePanel: {fileID: 2047546047}
+  dancePanel: {fileID: 7478955716371432926}
   usageText: {fileID: 110605591}
   mannequinMask: {fileID: 7478955716371432925}
 --- !u!23 &1453173132 stripped
@@ -49438,11 +49442,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1881804522}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2047546047 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8079922156272910159, guid: 79cc7e3d8390d3b4dac52d227b47dc53, type: 3}
-  m_PrefabInstance: {fileID: 7478955716371432924}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2054458535
 GameObject:
   m_ObjectHideFlags: 0
@@ -50612,6 +50611,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7478955716371432926 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9045037556399909413, guid: 79cc7e3d8390d3b4dac52d227b47dc53, type: 3}
+  m_PrefabInstance: {fileID: 7478955716371432924}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 401d04f4e3864ee4b94058b80a71c6fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
