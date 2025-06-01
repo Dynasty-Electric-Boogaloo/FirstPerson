@@ -100,6 +100,8 @@ namespace UI
             
             _instance._pause = setPause;
             Time.timeScale = setPause ? 0f : 1f;
+            Cursor.visible = setPause;
+            Cursor.lockState = setPause ? CursorLockMode.Locked : CursorLockMode.None;
         }
 
         public bool GetPause() => _pause;
