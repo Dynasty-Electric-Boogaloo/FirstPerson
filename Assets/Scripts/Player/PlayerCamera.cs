@@ -7,7 +7,6 @@ namespace Player
 {
     public class PlayerCamera : PlayerBehaviour
     {
-        private static MeshRenderer _renderer;
         
         [SerializeField] private MeshRenderer rendererMesh;
         [SerializeField] private float maxVerticalAngle;
@@ -28,7 +27,6 @@ namespace Player
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             _camera = Camera.main;
-            _renderer = rendererMesh;
         }
 
         private void Update()
@@ -45,22 +43,22 @@ namespace Player
             UpdateRotation(speed);
         }
 
-        public static void GoToPosition(Transform pos)
+        public void GoToPosition(Transform pos)
         {
             _camera.gameObject.transform.position = pos.position;
             _camera.gameObject.transform.rotation = pos.rotation;
 
-            if (_renderer)
-                _renderer.enabled = false;
+            if (rendererMesh)
+                rendererMesh.enabled = false;
         }
         
-        public static void ReturnToPosition()
+        public void ReturnToPosition()
         {
             _camera.gameObject.transform.localPosition = Vector3.zero;
             _camera.gameObject.transform.localRotation = Quaternion.identity;
             
-            if (_renderer)
-                _renderer.enabled = true;
+            if (rendererMesh)
+                rendererMesh.enabled = true;
         }
 
         private void HandleViewRotation()

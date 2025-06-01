@@ -1,4 +1,5 @@
-﻿using Interactables;
+﻿using System;
+using Interactables;
 using UI;
 using UnityEngine;
 
@@ -17,6 +18,12 @@ namespace Player
         private GrabObject _grabbedObject;
         private Mannequin _mannequin;
         private RaycastHit _raycastHit;
+        private PlayerCamera _playerCamera;
+
+        private void Start()
+        {
+            _playerCamera = GetComponent<PlayerCamera>();
+        }
 
         private void Update()
         {
@@ -28,7 +35,7 @@ namespace Player
                 _mannequin = null;
                 PlayerRoot.SetIsInMannequin(false);
                 UiManager.InMannequin(false);
-                PlayerCamera.ReturnToPosition();
+                _playerCamera.ReturnToPosition();
                 return;
             }
             if (!_grabbedObject)
@@ -109,7 +116,7 @@ namespace Player
             if (_selectedObject.TryGetComponent<Mannequin>(out var mannequin))
             {
                 _mannequin = mannequin;
-                PlayerCamera.GoToPosition(mannequin.GetCameraPos());
+                _playerCamera.GoToPosition(mannequin.GetCameraPos());
                 PlayerData.Rigidbody.linearVelocity = Vector3.zero;
                 
             }
