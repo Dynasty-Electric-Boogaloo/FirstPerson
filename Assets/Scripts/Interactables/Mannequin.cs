@@ -17,7 +17,7 @@ namespace Interactables
             UiManager.InMannequin(PlayerRoot.GetIsInMannequin());
         }
 
-        public virtual InteractionType GetInteractionType()
+        public override InteractionType GetInteractionType()
         {
             return InteractionType.Mannequin;
         }

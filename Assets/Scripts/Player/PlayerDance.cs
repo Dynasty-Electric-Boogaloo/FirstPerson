@@ -10,7 +10,6 @@ namespace Player
         [SerializeField] private float timeBetween = 1f;
         [SerializeField] [Range(0.0f, 1.0f)] private float tolerance = 0.5f;
         private float _timer;
-        private Mannequin _holderMannequin;
 
         private void Start()
         {
@@ -19,6 +18,8 @@ namespace Player
         
         private void Update()
         {
+            
+            /*
             if(PlayerData.Dancing)
             {
                 _timer -= Time.deltaTime;
@@ -40,22 +41,18 @@ namespace Player
                 _timer = timeBetween;
                 SetDancing(true);
             }
+            */
+            if (PlayerData.PlayerInputs.Controls.Dance.WasPressedThisFrame())
+            {
+                SetDancing(true);
+            }
         }
 
         private void SetDancing(bool setOn )
         {
-            if (!setOn && _holderMannequin)
-            {
-                _holderMannequin.Respawn(transform.position);
-                _holderMannequin.gameObject.SetActive(!setOn);
-            }
+            UiManager.SetDance(tolerance);
             PlayerData.Dancing = setOn;
-            UiManager.SetDance(setOn);
         }
-
-        public void SetHolder(Mannequin holder)
-        {
-            _holderMannequin = holder;
-        }
+        
     }
 }
