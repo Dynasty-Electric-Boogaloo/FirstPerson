@@ -45,7 +45,7 @@ namespace Monster.Procedural
             _bodyParts = FindObjectsByType<ProceduralBody>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
             Array.Sort(_bodyParts, (x, y) => x.OrderId.CompareTo(y.OrderId));
 
-            _bodyParts[0].distance = 0.01f;
+            _bodyParts[0].distance = 0.1f;
 
             for (var i = 1; i < _bodyParts.Length; i++)
             {
@@ -184,7 +184,8 @@ namespace Monster.Procedural
 
                 var verticalRotation = Vector3.SignedAngle(Vector3.forward, normal, Vector3.up);
 
-                var rotation = Quaternion.AngleAxis(verticalRotation, Vector3.up) * Quaternion.AngleAxis(angle, Vector3.right);
+                var rotation = Quaternion.AngleAxis(verticalRotation, Vector3.up) *
+                               Quaternion.AngleAxis(angle + 90, Vector3.right); //* Quaternion.AngleAxis(180, Vector3.up);
                 _bodyParts[i].UpdatePosition(position, rotation);
             }
         }
