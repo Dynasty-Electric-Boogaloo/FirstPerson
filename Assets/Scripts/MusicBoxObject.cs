@@ -15,15 +15,16 @@ public class MusicBoxObject : MonoBehaviour
         picture.SetActive(level >= 3);
     }
 
-    public void Using(float distance )
+    public void Using(Vector3 diff, Vector3 forward)
     {
-        key.transform.Rotate(0,0,distance *maxRotateSpeed );
+        key.transform.Rotate(0,0, (1 - Mathf.Clamp01(diff.magnitude)) * maxRotateSpeed );
         
-        ballerina.transform.LookAt(Monster.MonsterRoot.GetMonsterPosition());
-        var rotation = ballerina.transform.rotation.eulerAngles;
-        rotation.x = 0;
-        rotation.z = 0;
-        ballerina.transform.eulerAngles = rotation;
+        if(diff.magnitude > 1) 
+            return;
         
+        var direction = diff;
+        direction.y = 0;
+        direction.Normalize();
+        ballerina.transform.localRotation = Quaternion.Euler(0, Vector3.SignedAngle(-forward, direction, Vector3.up), 0);
     }
 }

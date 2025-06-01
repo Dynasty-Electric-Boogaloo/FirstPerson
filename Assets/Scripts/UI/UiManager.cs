@@ -15,7 +15,6 @@ namespace UI
 {
     public class UiManager : MonoBehaviour
     {
-        [SerializeField] private Image inputShow;
         [SerializeField] private Image pausePanel;
         [SerializeField] private DancePanel dancePanel;
         [SerializeField] private TMP_Text usageText;
@@ -73,8 +72,6 @@ namespace UI
         public static void SetDance(float tolerance, bool isMimic)
         {
             var isDancing = PlayerRoot.GetIsDancing();
-            _instance.inputShow.color = isDancing ? Color.blue : Color.white;
-            _instance.inputShow.transform.DOScale(isDancing ? 0: 1, isDancing ? 1 : 0);
             
             if (!_instance.dancePanel) 
                 return;
