@@ -17,7 +17,7 @@ public class MusicBoxObject : MonoBehaviour
 
     public void Using(float distance )
     {
-        key.transform.Rotate(0,0,maxRotateSpeed -distance);
+        key.transform.Rotate(0,0,distance *maxRotateSpeed );
         
         ballerina.transform.LookAt(Monster.MonsterRoot.GetMonsterPosition());
         var rotation = ballerina.transform.rotation.eulerAngles;

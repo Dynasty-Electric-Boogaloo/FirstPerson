@@ -142,9 +142,8 @@ namespace Player
             if (!_selectedObject.TryGetComponent<Mimic>(out var mimic)) 
                 return;
             
-            print("Try extract");
             
-            GetComponent<PlayerDance>().SetDancing(true, true);
+            //GetComponent<PlayerDance>().SetDancing(true, true);
             
             mimic.DestroyMimic();
 
