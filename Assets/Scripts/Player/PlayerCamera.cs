@@ -20,7 +20,7 @@ namespace Player
         private float _horizontalBobbingTimer;
         private float _verticalBobbingTimer;
         private float _amplitude;
-        private static Camera _camera;
+        private Camera _camera;
 
         private void Start()
         {

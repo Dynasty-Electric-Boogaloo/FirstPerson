@@ -19,7 +19,7 @@ namespace Player
         private void Update()
         {
             
-            if (PlayerData.PlayerInputs.Controls.Dance.WasPressedThisFrame())
+            if (PlayerData.PlayerInputs.Controls.Dance.WasPressedThisFrame() && !PlayerData.IsInMannequin)
             {
                 SetDancing(true);
             }
