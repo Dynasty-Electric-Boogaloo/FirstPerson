@@ -1,4 +1,5 @@
 ﻿using System;
+using Interactables;
 using Monster;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -52,5 +53,13 @@ namespace Player
             _instance.transform.rotation = _instance._startRotation;
             _instance._playerData.Rigidbody.linearVelocity = Vector3.zero;
         }
+
+        public static bool GetIsDancing() => _instance._playerData.Dancing;
+        
+        public static bool SetIsDancing(bool setOn) => _instance._playerData.Dancing = setOn;
+        
+        public static bool GetIsInMannequin() => _instance._playerData.IsInMannequin;
+        
+        public static void SetIsInMannequin(bool setOn) => _instance._playerData.IsInMannequin = setOn;
     }
 }

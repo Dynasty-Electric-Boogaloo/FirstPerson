@@ -270,12 +270,12 @@ MonoBehaviour:
     speed: 5
     acceleration: 3
     deceleration: 5
-    groundOffset: 1
-  crouchConfig:
-    speed: 3
-    acceleration: 3
-    deceleration: 5
-    groundOffset: 0.75
+    groundOffset: 0
+  slowConfig:
+    speed: 0
+    acceleration: 0
+    deceleration: 0
+    groundOffset: 0
   groundMask:
     serializedVersion: 2
     m_Bits: 8
@@ -377,10 +377,12 @@ MonoBehaviour:
   batteryMax: 10
   addByButtonPressed: 0.25
   lightIntensityMultiplier: 10000
+  lightFalloffThreshold: 0.7
+  specialLightIntensityMultiplier: 5000000
   lightColor: {r: 1, g: 1, b: 1, a: 1}
   specialLightColor: {r: 1, g: 0, b: 0, a: 1}
   maxDistanceHit: 5
-  radiusHit: 5
+  radiusHit: 1
   layerToHit:
     serializedVersion: 2
     m_Bits: 64
@@ -398,8 +400,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdd855b69e66906428d3c7d94a1425e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxPowerByBattery: 0
   maxBattery: 100
   startBatteryPercent: 100
+  hud: {fileID: 0}
 --- !u!1 &5185623115099963146
 GameObject:
   m_ObjectHideFlags: 0

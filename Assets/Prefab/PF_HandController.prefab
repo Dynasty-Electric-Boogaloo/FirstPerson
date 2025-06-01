@@ -483,6 +483,8 @@ GameObject:
   - component: {fileID: 1006920574172991004}
   - component: {fileID: 266798638669423720}
   - component: {fileID: 2331429056364898136}
+  - component: {fileID: 4941221304825508424}
+  - component: {fileID: 2989312559492078843}
   m_Layer: 30
   m_Name: PF_HandController
   m_TagString: Untagged
@@ -633,6 +635,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  rendererMesh: {fileID: 9079386926096019442}
 --- !u!114 &2334033331561239044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -650,7 +653,7 @@ MonoBehaviour:
     acceleration: 3
     deceleration: 5
     groundOffset: 1
-  crouchConfig:
+  slowConfig:
     speed: 2.5
     acceleration: 3
     deceleration: 5
@@ -748,9 +751,10 @@ MonoBehaviour:
   flashLightTransform: {fileID: 5027031290628114069}
   light: {fileID: 7799891747133625662}
   hud: {fileID: 266798638669423720}
-  batteryMax: 30
+  batteryMax: 10
   addByButtonPressed: 6
   lightIntensityMultiplier: 20
+  lightFalloffThreshold: 0.7
   specialLightIntensityMultiplier: 40
   lightColor: {r: 1, g: 1, b: 1, a: 1}
   specialLightColor: {r: 1, g: 0.25943398, b: 0.25943398, a: 1}
@@ -759,7 +763,7 @@ MonoBehaviour:
   layerToHit:
     serializedVersion: 2
     m_Bits: 64
-  coneRadius: 0.5
+  coneRadius: 0.303
   maxObjectInSight: 10
 --- !u!114 &266798638669423720
 MonoBehaviour:
@@ -795,6 +799,36 @@ MonoBehaviour:
   maxPowerByBattery: 20
   maxBattery: 3
   startBatteryPercent: 100
+  hud: {fileID: 266798638669423720}
+--- !u!114 &4941221304825508424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2439608249139616169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e96455cc4b772af4aa929ca88d6153f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetween: 1
+  tolerance: 0
+--- !u!114 &2989312559492078843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2439608249139616169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 311da43baf6ff93449ec4aa9283b5cf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minimalDistance: 5
+  musicBoxObject: {fileID: 4005241433360813804}
+  state: 0
 --- !u!1 &4167932192429471914
 GameObject:
   m_ObjectHideFlags: 0
@@ -1305,6 +1339,7 @@ Transform:
   m_Children:
   - {fileID: 4176607000255464154}
   - {fileID: 7091416503431337263}
+  - {fileID: 6452049216004138026}
   - {fileID: 8033049641799047537}
   - {fileID: 5027031290628114069}
   - {fileID: 642168756232677934}
@@ -1937,4 +1972,77 @@ Animator:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5256685341797322988, guid: 943d3ba41751a61408159ba04470a238, type: 3}
   m_PrefabInstance: {fileID: 3069971479002809795}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6409580439854787185
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8213212419984779292}
+    m_Modifications:
+    - target: {fileID: 106168707580268123, guid: d3efe6af08568234e9e48e0080ed0930, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.585
+      objectReference: {fileID: 0}
+    - target: {fileID: 106168707580268123, guid: d3efe6af08568234e9e48e0080ed0930, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.444
+      objectReference: {fileID: 0}
+    - target: {fileID: 106168707580268123, guid: d3efe6af08568234e9e48e0080ed0930, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.711
+      objectReference: {fileID: 0}
+    - target: {fileID: 106168707580268123, guid: d3efe6af08568234e9e48e0080ed0930, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 106168707580268123, guid: d3efe6af08568234e9e48e0080ed0930, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 106168707580268123, guid: d3efe6af08568234e9e48e0080ed0930, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 106168707580268123, guid: d3efe6af08568234e9e48e0080ed0930, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 106168707580268123, guid: d3efe6af08568234e9e48e0080ed0930, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 106168707580268123, guid: d3efe6af08568234e9e48e0080ed0930, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 106168707580268123, guid: d3efe6af08568234e9e48e0080ed0930, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1444965687109796093, guid: d3efe6af08568234e9e48e0080ed0930, type: 3}
+      propertyPath: m_Name
+      value: MusicBox
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d3efe6af08568234e9e48e0080ed0930, type: 3}
+--- !u!114 &4005241433360813804 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8027137125888812189, guid: d3efe6af08568234e9e48e0080ed0930, type: 3}
+  m_PrefabInstance: {fileID: 6409580439854787185}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7983deca8bf7f734fb78e903a68df362, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &6452049216004138026 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 106168707580268123, guid: d3efe6af08568234e9e48e0080ed0930, type: 3}
+  m_PrefabInstance: {fileID: 6409580439854787185}
   m_PrefabAsset: {fileID: 0}

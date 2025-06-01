@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UI;
+using UnityEngine;
 
 namespace Player
 {
@@ -10,7 +11,10 @@ namespace Player
         public Vector3 Forward;
         public Vector3 Right;
         public bool Grounded;
-        public bool Crouched;
+        public bool Reloading;
+        public bool Dancing;
+        public bool DestroyingMimic;
+        public bool IsInMannequin;
         public Vector2 CameraRotation;
     }
 }

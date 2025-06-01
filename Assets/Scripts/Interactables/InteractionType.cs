@@ -2,7 +2,9 @@
 {
 	public enum InteractionType
 	{
+		Interactable,
 		GrabObject,
-		Collectible
+		Collectible,
+		Mannequin
 	}
 }

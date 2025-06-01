@@ -1,5 +1,6 @@
 using System;
 using Monster;
+using Player;
 using UnityEngine;
 
 public class Mimic : MonoBehaviour
@@ -12,9 +13,10 @@ public class Mimic : MonoBehaviour
         public Material awake;
     }
         
-    [SerializeField] private MeshRenderer meshRenderer;
+    [SerializeField] private Renderer meshRenderer;
     [SerializeField] private MaterialSet regularMaterialSet;
     [SerializeField] private bool isInfected;
+    [SerializeField] private bool showObject;
     [SerializeField] private float maxTimeBeforeAlert = 15;
     [SerializeField] private float checkPlayerRadius = 1;
     [SerializeField] private LayerMask playerLayer;
@@ -26,7 +28,7 @@ public class Mimic : MonoBehaviour
     private void Awake()
     {
         _timer = maxTimeBeforeAlert;
-        meshRenderer.enabled = isInfected;
+        meshRenderer.enabled = isInfected || showObject;
         meshRenderer.material = regularMaterialSet.normal;
 
         if (TryGetComponent<Interactable>(out var interactable))
@@ -45,7 +47,7 @@ public class Mimic : MonoBehaviour
         
         _numColliders = Physics.OverlapSphereNonAlloc(transform.position, checkPlayerRadius, _hitColliders, playerLayer);
         
-        if (_numColliders > 0) 
+        if (_numColliders > 0 && !PlayerRoot.GetIsDancing()) 
             ReduceTime();
     }
     
