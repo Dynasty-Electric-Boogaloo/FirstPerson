@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
 
 namespace Player
@@ -55,6 +56,13 @@ namespace Player
             state +=  1;
             PlayerData.CurrentIndexObjective = (int)state;
             musicBoxObject.SetLevel((int)state);
+            
+            
+            //a nuke
+            if (state == State.Picture)
+            {
+                SceneManager.LoadScene("Win_Logique");
+            }
         }
         
         public void DecreaseState()
