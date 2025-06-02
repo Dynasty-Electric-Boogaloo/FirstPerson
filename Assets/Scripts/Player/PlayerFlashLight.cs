@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Player;
@@ -22,6 +23,8 @@ namespace Player
         [SerializeField] private float addByButtonPressed = 0.25f;
         [SerializeField] private float lightIntensityMultiplier = 5000000;
         [SerializeField] [Range(0f, 1f)] private float lightFalloffThreshold = 0.7f;
+        [SerializeField] [Range(0f, 1f)] private float flicker = 0.7f;
+        [SerializeField] [Range(0f, 1f)] private float flickerWait = 0.05f;
         [SerializeField] private float specialLightIntensityMultiplier = 5000000;
         [SerializeField] private Color lightColor = Color.white;
         [SerializeField] private Color specialLightColor = Color.red;
@@ -47,6 +50,8 @@ namespace Player
         
         private HashSet<Mimic> _lastUpdateLightObjects => _lightObjectBuffers[1 ^ _bufferSelection];
         private HashSet<Mimic> _currentLightObjects => _lightObjectBuffers[_bufferSelection];
+
+        private bool isFlickering;
         
 
         private void Start()
@@ -110,6 +115,12 @@ namespace Player
                 
                 if( CurrentBattery / CurrentBatteryMax < lightFalloffThreshold) 
                     light.intensity = ((CurrentBattery  / CurrentBatteryMax ) * CurrentLightIntensity / lightFalloffThreshold ) ;
+                
+
+                if (Mathf.Abs((CurrentBattery  / CurrentBatteryMax ) - flicker) < 0.001f && !isFlickering)
+                {
+                    StartCoroutine(nameof(Flickering));
+                }
             }
             
             if (hud)
@@ -117,6 +128,20 @@ namespace Player
             
             RevealObjects();
         }
+
+        IEnumerator Flickering()
+        {
+            isFlickering = true;
+            for (int i = 0; i < 3; i++)
+            {
+                light.gameObject.SetActive(false);
+                yield return new WaitForSeconds(flickerWait);
+                light.gameObject.SetActive(true);
+                yield return new WaitForSeconds(flickerWait);
+            }
+            isFlickering = false;
+        }
+        
         
         private void RevealObjects()
         {

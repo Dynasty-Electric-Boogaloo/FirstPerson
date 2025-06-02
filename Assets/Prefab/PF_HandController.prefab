@@ -44,9 +44,9 @@ Light:
   serializedVersion: 11
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 10
-  m_Range: 100
-  m_SpotAngle: 76.57937
+  m_Intensity: 9.999999
+  m_Range: 19.59
+  m_SpotAngle: 76.57938
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
@@ -87,7 +87,7 @@ Light:
   m_LightShadowCasterMode: 2
   m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 0
-  m_ColorTemperature: 6570
+  m_ColorTemperature: 20000
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -95,7 +95,7 @@ Light:
   m_ForceVisible: 0
   m_ShadowRadius: 0.025
   m_ShadowAngle: 0
-  m_LightUnit: 2
+  m_LightUnit: 0
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
 --- !u!114 &8821605010656699283
@@ -117,7 +117,7 @@ MonoBehaviour:
   m_LightUnit: 0
   m_LuxAtDistance: 1
   m_Intensity: 0
-  m_InnerSpotPercent: 1.3058348
+  m_InnerSpotPercent: 1.3058347
   m_SpotIESCutoffPercent: 100
   m_LightDimmer: 1
   m_VolumetricDimmer: 1
@@ -680,7 +680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   throwForce: 5
-  grabOffset: 0.5
+  grabOffset: 0.4
   grabHoldOffset: 1
   grabDistance: 2
   grabPoint: {fileID: 954975179973298045}
@@ -754,7 +754,7 @@ MonoBehaviour:
   batteryMax: 10
   addByButtonPressed: 6
   lightIntensityMultiplier: 20
-  lightFalloffThreshold: 0.7
+  lightFalloffThreshold: 0.693
   specialLightIntensityMultiplier: 40
   lightColor: {r: 1, g: 1, b: 1, a: 1}
   specialLightColor: {r: 1, g: 0.25943398, b: 0.25943398, a: 1}
@@ -826,9 +826,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 311da43baf6ff93449ec4aa9283b5cf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thresholdDetectionDistance: 15
+  thresholdDetectionDistance: 25
   musicBoxObject: {fileID: 4005241433360813804}
-  state: 3
+  state: 0
 --- !u!1 &4167932192429471914
 GameObject:
   m_ObjectHideFlags: 0
