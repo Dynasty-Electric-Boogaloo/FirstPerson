@@ -25,4 +25,9 @@ public class MenuCaller : MonoBehaviour
     {
        Application.Quit();
     }
+
+    public void ChangeSize()
+    {
+        Screen.fullScreen = !Screen.fullScreen;
+    }
 }
