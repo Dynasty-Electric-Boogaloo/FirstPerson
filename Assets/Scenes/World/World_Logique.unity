@@ -787,6 +787,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: PauseGame
       objectReference: {fileID: 0}
+    - target: {fileID: 1944329077205795559, guid: 79cc7e3d8390d3b4dac52d227b47dc53, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 3245443444368145542, guid: 79cc7e3d8390d3b4dac52d227b47dc53, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -982,6 +986,78 @@ PrefabInstance:
     - target: {fileID: 8839245516152664965, guid: 79cc7e3d8390d3b4dac52d227b47dc53, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045037556399909413, guid: 79cc7e3d8390d3b4dac52d227b47dc53, type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045037556399909413, guid: 79cc7e3d8390d3b4dac52d227b47dc53, type: 3}
+      propertyPath: maxDistance
+      value: 650
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045037556399909413, guid: 79cc7e3d8390d3b4dac52d227b47dc53, type: 3}
+      propertyPath: qteMimic.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045037556399909413, guid: 79cc7e3d8390d3b4dac52d227b47dc53, type: 3}
+      propertyPath: 'notePositions.Array.data[3]'
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045037556399909413, guid: 79cc7e3d8390d3b4dac52d227b47dc53, type: 3}
+      propertyPath: 'notePositions.Array.data[4]'
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045037556399909413, guid: 79cc7e3d8390d3b4dac52d227b47dc53, type: 3}
+      propertyPath: 'notePositions.Array.data[5]'
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045037556399909413, guid: 79cc7e3d8390d3b4dac52d227b47dc53, type: 3}
+      propertyPath: qteMimic.Array.data[0].notes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045037556399909413, guid: 79cc7e3d8390d3b4dac52d227b47dc53, type: 3}
+      propertyPath: qteMimic.Array.data[1].notes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045037556399909413, guid: 79cc7e3d8390d3b4dac52d227b47dc53, type: 3}
+      propertyPath: qteMimic.Array.data[2].notes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045037556399909413, guid: 79cc7e3d8390d3b4dac52d227b47dc53, type: 3}
+      propertyPath: 'qteMimic.Array.data[0].notes.Array.data[0]'
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045037556399909413, guid: 79cc7e3d8390d3b4dac52d227b47dc53, type: 3}
+      propertyPath: 'qteMimic.Array.data[0].notes.Array.data[1]'
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045037556399909413, guid: 79cc7e3d8390d3b4dac52d227b47dc53, type: 3}
+      propertyPath: 'qteMimic.Array.data[0].notes.Array.data[2]'
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045037556399909413, guid: 79cc7e3d8390d3b4dac52d227b47dc53, type: 3}
+      propertyPath: 'qteMimic.Array.data[1].notes.Array.data[0]'
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045037556399909413, guid: 79cc7e3d8390d3b4dac52d227b47dc53, type: 3}
+      propertyPath: 'qteMimic.Array.data[1].notes.Array.data[1]'
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045037556399909413, guid: 79cc7e3d8390d3b4dac52d227b47dc53, type: 3}
+      propertyPath: 'qteMimic.Array.data[1].notes.Array.data[2]'
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045037556399909413, guid: 79cc7e3d8390d3b4dac52d227b47dc53, type: 3}
+      propertyPath: 'qteMimic.Array.data[2].notes.Array.data[0]'
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045037556399909413, guid: 79cc7e3d8390d3b4dac52d227b47dc53, type: 3}
+      propertyPath: 'qteMimic.Array.data[2].notes.Array.data[1]'
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 9045037556399909413, guid: 79cc7e3d8390d3b4dac52d227b47dc53, type: 3}
+      propertyPath: 'qteMimic.Array.data[2].notes.Array.data[2]'
+      value: 400
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -87,5 +87,6 @@ namespace UI
             if( _instance.usageText && isInMannequin) 
                 _instance.usageText.text = "Exit - E";
         }
+        
     }
 }

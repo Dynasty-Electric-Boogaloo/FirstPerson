@@ -148,7 +148,7 @@ namespace Player
                 return;
             
             
-            //GetComponent<PlayerDance>().SetDancing(true, true);
+            GetComponent<PlayerDance>().SetDancing(true, true);
             
             mimic.DestroyMimic();
 
