@@ -66,5 +66,11 @@ namespace Monster
             _monsterData.targetNode = new NodeId(-1);
             InteractableManager.Restore();
         }
+        
+        public static void SetVisible(bool visible)
+        {
+            if(_instance)
+                _instance.gameObject.SetActive(visible);
+        }
     }
 }

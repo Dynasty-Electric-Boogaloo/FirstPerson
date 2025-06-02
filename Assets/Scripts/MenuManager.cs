@@ -37,5 +37,8 @@ public class MenuManager : MonoBehaviour
         {
             SceneLoader.LoadSceneGroup(sceneGroup, LoadSceneMode.Additive);
         }
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }

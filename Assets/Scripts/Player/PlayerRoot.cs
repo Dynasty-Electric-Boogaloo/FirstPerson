@@ -58,6 +58,12 @@ namespace Player
             _instance._playerData.Rigidbody.linearVelocity = Vector3.zero;
         }
 
+        public static void SetVisible(bool visible)
+        {
+            if(_instance)
+                _instance.gameObject.SetActive(visible);
+        }
+
         public static void Die()
         {
             ResetPosition();
