@@ -10,14 +10,14 @@ public class MusicBoxObject : MonoBehaviour
 
     public void SetLevel(int level)
     {
-        ballerina.SetActive(level >= 1);
-        key.SetActive(level >= 2);
-        picture.SetActive(level >= 3);
+        ballerina.SetActive(level > 0);
+        key.SetActive(level > 1);
+        picture.SetActive(level > 2);
     }
 
     public void Using(Vector3 diff, Vector3 forward)
     {
-        key.transform.Rotate(0,0, (1 - Mathf.Clamp01(diff.magnitude)) * maxRotateSpeed );
+        key.transform.Rotate(0,0, (1 - Mathf.Clamp01(diff.magnitude)) * maxRotateSpeed * Time.deltaTime);
         
         if(diff.magnitude > 1) 
             return;

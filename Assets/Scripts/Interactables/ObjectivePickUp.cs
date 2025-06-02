@@ -1,7 +1,7 @@
 using Player;
 using UnityEngine;
 
-public class ObjectivePickUp : MonoBehaviour
+public class ObjectivePickUp : Interactable
 {
     [SerializeField] private Door trap;
     public void PickedUp()
@@ -10,5 +10,10 @@ public class ObjectivePickUp : MonoBehaviour
         if(trap)
             trap.ChangeState();
     }
-    
+
+    public override void Restore()
+    {
+        base.Restore();
+        
+    }
 }

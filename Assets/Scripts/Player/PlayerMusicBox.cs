@@ -11,6 +11,8 @@ namespace Player
         [SerializeField] private State state;
         private bool _isOnDisplay;
        
+        public bool GetIsOnDisplay() => _isOnDisplay;
+        
         private void Awake()
         {
             musicBoxObject.gameObject.SetActive(_isOnDisplay);
@@ -25,14 +27,23 @@ namespace Player
         {
             if (Input.GetKeyDown(KeyCode.C))
             {
-                _isOnDisplay = !_isOnDisplay;
-                musicBoxObject.gameObject.SetActive(_isOnDisplay);
+                SetMusicBox(!_isOnDisplay);
             }
+            if(!_isOnDisplay)
+                return;
+            
+            BatteryManager.Battery.UpdateBatteryWithHud();
 
-            if (!_isOnDisplay || (Vector3.Distance(Monster.MonsterRoot.GetMonsterPosition(), transform.position) > thresholdDetectionDistance)) 
+            if ((Vector3.Distance(Monster.MonsterRoot.GetMonsterPosition(), transform.position) > thresholdDetectionDistance)) 
                 return;
 
             musicBoxObject.Using((Monster.MonsterRoot.GetMonsterPosition() - transform.position) / thresholdDetectionDistance, transform.forward);
+        }
+
+        public void SetMusicBox(bool setOn)
+        {
+            _isOnDisplay = setOn;
+            musicBoxObject.gameObject.SetActive(setOn);
         }
 
         public void IncreaseState()

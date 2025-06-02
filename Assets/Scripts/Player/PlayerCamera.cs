@@ -32,7 +32,7 @@ namespace Player
 
         private void Update()
         {
-            if(PlayerData.IsInMannequin || PauseManager.GetPause()) 
+            if(PlayerData.IsInMannequin || (PauseManager.instance && PauseManager.GetPause())) 
                 return;
             
             var velocity = PlayerData.Rigidbody.linearVelocity;

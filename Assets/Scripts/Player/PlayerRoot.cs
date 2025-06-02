@@ -13,6 +13,7 @@ namespace Player
         private PlayerData _playerData;
         private Vector3 _startPosition;
         private Quaternion _startRotation;
+        private PlayerMusicBox _musicBox;
 
         public static Vector3 Position => _instance ? _instance.transform.position : Vector3.zero;
         
@@ -37,6 +38,7 @@ namespace Player
 
             _startPosition = transform.position;
             _startRotation = transform.rotation;
+            _musicBox = GetComponent<PlayerMusicBox>();
         }
 
         private void OnDestroy()
@@ -52,6 +54,13 @@ namespace Player
             _instance.transform.position = _instance._startPosition;
             _instance.transform.rotation = _instance._startRotation;
             _instance._playerData.Rigidbody.linearVelocity = Vector3.zero;
+        }
+
+        public static void Die()
+        {
+            ResetPosition();
+            if (_instance._musicBox)
+                _instance._musicBox.DecreaseState();
         }
 
         public static bool GetIsDancing() => _instance._playerData.Dancing;
