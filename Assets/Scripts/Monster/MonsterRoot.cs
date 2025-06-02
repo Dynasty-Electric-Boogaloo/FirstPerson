@@ -11,13 +11,11 @@ namespace Monster
     {
         private static MonsterRoot _instance;
         [SerializeField] private ProceduralHead proceduralHead;
-        [SerializeField] private bool chasing;
         private MonsterData _monsterData;
         private Vector3 _startPosition;
         private Quaternion _startRotation;
         
-       
-        public static Vector3 GetMonsterPosition() =>_instance.transform.position; 
+        public static Vector3 GetMonsterPosition() => _instance.transform.position; 
         
         private void Awake()
         {
@@ -48,7 +46,7 @@ namespace Monster
 
         private void Update()
         {
-            proceduralHead.SetPose(chasing ? "Chasing" : "Patrolling");
+            proceduralHead.SetPose(_monsterData.chasing ? "Chasing" : "Patrolling");
             
             var diff = PlayerRoot.Position - transform.position;
             diff.y = 0;
