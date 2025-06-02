@@ -20,4 +20,9 @@ public class MenuCaller : MonoBehaviour
         PlayerRoot.SetVisible(true);
         MonsterRoot.SetVisible(true);
     }
+    
+    public void Quit()
+    {
+       Application.Quit();
+    }
 }

@@ -41,4 +41,9 @@ public class MenuManager : MonoBehaviour
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
+
+    public static void QuitGame()
+    {
+        Application.Quit();
+    }
 }
