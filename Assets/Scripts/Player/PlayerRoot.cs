@@ -17,7 +17,7 @@ namespace Player
 
         public static Vector3 Position => _instance ? _instance.transform.position : Vector3.zero;
         
-        public static int CurrentIndex  =>  _instance ? _instance._playerData.currentIndexObjective : -1;
+        public static int CurrentIndex  =>  _instance ? _instance._playerData.CurrentIndexObjective : -1;
         
         private void Awake()
         {
@@ -73,7 +73,12 @@ namespace Player
 
         public static bool GetIsDancing() => _instance._playerData.Dancing;
         
-        public static bool SetIsDancing(bool setOn) => _instance._playerData.Dancing = setOn;
+        public static void SetIsDancing(bool setOn) => _instance._playerData.Dancing = setOn;
+        
+        public static bool GetIsDestroying => _instance._playerData.DestroyingMimic;
+        
+        public static void SetIsDestroying(bool setOn) => _instance._playerData.DestroyingMimic = setOn;
+        
         
         public static bool GetIsInMannequin() => _instance._playerData.IsInMannequin;
         

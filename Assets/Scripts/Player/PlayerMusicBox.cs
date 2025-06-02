@@ -48,21 +48,23 @@ namespace Player
 
         public void IncreaseState()
         {
+            ObjectiveManager.UpdateObjective();
             if ((int)state >= 3)
                 return;
             
             state +=  1;
-            PlayerData.currentIndexObjective = (int)state;
+            PlayerData.CurrentIndexObjective = (int)state;
             musicBoxObject.SetLevel((int)state);
         }
         
         public void DecreaseState()
         {
+            ObjectiveManager.UpdateObjective();
             if((int)state <= 0)
                 return;
             
             state -=  1;
-            PlayerData.currentIndexObjective = (int)state;
+            PlayerData.CurrentIndexObjective = (int)state;
             musicBoxObject.SetLevel((int)state);
         }
     

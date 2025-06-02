@@ -4,7 +4,7 @@ using UnityEngine;
 public class ObjectivePickUp : Interactable
 {
     [SerializeField] private Door trap;
-    [SerializeField] private int indexObjective;
+    [SerializeField] public int indexObjective;
     public void PickedUp()
     {
         gameObject.SetActive(false);

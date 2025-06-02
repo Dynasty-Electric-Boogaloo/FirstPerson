@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using DG.Tweening;
+using Monster;
 using Player;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -25,7 +26,7 @@ namespace UI
         
         private void Update()
         {
-            if (!_isDancing) return;
+            if (!_isDancing && !_isDestroyingMimic) return;
             for (var i = 0; i < playerImpulse.Count; i++)
             {
                 if ((playerImpulse[i].rectTransform.anchoredPosition.x >= maxDistance && i%2 == 0 ) ||
@@ -47,12 +48,13 @@ namespace UI
                 notes[i].gameObject.SetActive(true);
             }
             _isDancing = isDancing;
-            _isDestroyingMimic = !isDancing;
             if(isDancing)
                 Dance(0);
             else
             {
                 _currentMimicQTE = qteMimic[Random.Range(0, qteMimic.Count)];
+                PlayerRoot.SetIsDestroying(true);
+                _isDestroyingMimic = true;
                 DanceMimic(0);
             }
         }
@@ -65,7 +67,7 @@ namespace UI
                Fail();
                
                if(_isDestroyingMimic)
-                    print("alert");
+                   MonsterNavigation.Alert(PlayerRoot.Position);
            }
            else
            {
@@ -77,8 +79,14 @@ namespace UI
                }
                else if (_isDestroyingMimic)
                {
+                   if (_currentIndex >= notePositions.Count-1)
+                   {
+                       Fail();
+                       print("Dance finished");
+                       return;
+                   }
+                   _currentIndex += 1;
                    DanceMimic(_currentIndex);
-                   Fail();
                }
            }
         }
@@ -109,9 +117,8 @@ namespace UI
                 var playerVector3 = playerImpulse[i].rectTransform.anchoredPosition;
                 playerVector3.x = 0;
                 playerImpulse[i].rectTransform.anchoredPosition = playerVector3;
+                print(_currentIndex);
             }
-            if(_currentIndex == _currentMimicQTE.notes.Count)
-                Fail();
         }
 
         
@@ -121,6 +128,7 @@ namespace UI
             _isDancing = false;
             _isDestroyingMimic = false;
             PlayerRoot.SetIsDancing(false);
+            PlayerRoot.SetIsDestroying(false);
             for (var i = 0; i < playerImpulse.Count; i++)
             {
                 playerImpulse[i].gameObject.SetActive(false);
