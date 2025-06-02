@@ -48,7 +48,7 @@ namespace Monster
 
         private void Update()
         {
-            //proceduralHead.SetPose(chasing ? "Chasing" : "Patrolling");
+            proceduralHead.SetPose(chasing ? "Chasing" : "Patrolling");
             
             var diff = PlayerRoot.Position - transform.position;
             diff.y = 0;
