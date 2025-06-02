@@ -747,18 +747,18 @@ PrefabInstance:
     - target: {fileID: 8737898287094133910, guid: 79cc7e3d8390d3b4dac52d227b47dc53, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 909570767}
+      objectReference: {fileID: 1785450894}
     - target: {fileID: 8737898287094133910, guid: 79cc7e3d8390d3b4dac52d227b47dc53, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8737898287094133910, guid: 79cc7e3d8390d3b4dac52d227b47dc53, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: LoadWorld
+      value: Quit
       objectReference: {fileID: 0}
     - target: {fileID: 8737898287094133910, guid: 79cc7e3d8390d3b4dac52d227b47dc53, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: MenuManager, Game
+      value: UI.PauseManager, Game
       objectReference: {fileID: 0}
     - target: {fileID: 8737898287094133910, guid: 79cc7e3d8390d3b4dac52d227b47dc53, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1756,7 +1756,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -1854,7 +1854,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuGroup: 6
   dressingRoomGroup: 3
-  worldGroups: 01000000020000000300000005000000
+  worldGroups: 010000000200000005000000
 --- !u!1001 &935301429
 PrefabInstance:
   m_ObjectHideFlags: 0

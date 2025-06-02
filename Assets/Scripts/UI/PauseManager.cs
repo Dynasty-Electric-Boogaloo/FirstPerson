@@ -33,6 +33,11 @@ namespace UI
          Cursor.visible = setPause;
          Cursor.lockState = setPause ? CursorLockMode.None : CursorLockMode.Locked;
       }
+
+      public static void Quit()
+      {
+         Application.Quit();
+      }
       
       public static bool GetPause() => instance._pause;
    }

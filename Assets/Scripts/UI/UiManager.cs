@@ -6,7 +6,6 @@ using Player;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
