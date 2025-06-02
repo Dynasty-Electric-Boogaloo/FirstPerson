@@ -15,6 +15,7 @@ namespace Player
         public bool Dancing;
         public bool DestroyingMimic;
         public bool IsInMannequin;
+        public int currentIndexObjective = 0;
         public Vector2 CameraRotation;
     }
 }

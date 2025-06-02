@@ -17,6 +17,8 @@ namespace Player
 
         public static Vector3 Position => _instance ? _instance.transform.position : Vector3.zero;
         
+        public static int CurrentIndex  =>  _instance ? _instance._playerData.currentIndexObjective : -1;
+        
         private void Awake()
         {
             if (_instance == null)

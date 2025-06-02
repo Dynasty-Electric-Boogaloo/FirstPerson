@@ -52,6 +52,7 @@ namespace Player
                 return;
             
             state +=  1;
+            PlayerData.currentIndexObjective = (int)state;
             musicBoxObject.SetLevel((int)state);
         }
         
@@ -61,6 +62,7 @@ namespace Player
                 return;
             
             state -=  1;
+            PlayerData.currentIndexObjective = (int)state;
             musicBoxObject.SetLevel((int)state);
         }
     
