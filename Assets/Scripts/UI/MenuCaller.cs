@@ -6,6 +6,7 @@ using UnityEngine;
 public class MenuCaller : MonoBehaviour
 {
     [SerializeField] Camera menuCamera;
+    [SerializeField] Animator anim;
 
     private void Start()
     {
@@ -15,10 +16,12 @@ public class MenuCaller : MonoBehaviour
     
     public void Menu()
     {
+        //anim.Play("Turn");
         MenuManager.LoadWorld();
         menuCamera.enabled = false;
         PlayerRoot.SetVisible(true);
         MonsterRoot.SetVisible(true);
+        
     }
     
     public void Quit()
