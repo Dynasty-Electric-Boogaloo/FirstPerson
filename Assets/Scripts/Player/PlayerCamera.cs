@@ -1,5 +1,6 @@
 ﻿using System;
 using DG.Tweening.Plugins.Options;
+using UI;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -31,7 +32,7 @@ namespace Player
 
         private void Update()
         {
-            if(PlayerData.IsInMannequin) 
+            if(PlayerData.IsInMannequin || PauseManager.GetPause()) 
                 return;
             
             var velocity = PlayerData.Rigidbody.linearVelocity;

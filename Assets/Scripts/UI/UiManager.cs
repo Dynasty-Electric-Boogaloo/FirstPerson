@@ -15,16 +15,13 @@ namespace UI
 {
     public class UiManager : MonoBehaviour
     {
-        [SerializeField] private Image pausePanel;
         [SerializeField] private DancePanel dancePanel;
         [SerializeField] private TMP_Text usageText;
         [SerializeField] private Image mannequinMask;
         
-        
         private Interactable _current;
         
         private static UiManager _instance;
-        private bool _pause;
         
         private void Awake()
         {
@@ -36,6 +33,7 @@ namespace UI
             if (usageText)
                 usageText.text = "";
         }
+        
 
         public static void SetInteract(Interactable interactable)
         {
@@ -81,9 +79,6 @@ namespace UI
             else 
                 _instance.dancePanel.StartDance(!isMimic);
         }
-        
-        
-        
 
         public static void InMannequin(bool isInMannequin = true)
         {
@@ -92,18 +87,5 @@ namespace UI
             if( _instance.usageText && isInMannequin) 
                 _instance.usageText.text = "Exit - E";
         }
-
-        public static void PauseGame(bool setPause)
-        {
-            if(_instance &&  _instance.pausePanel)
-                _instance.pausePanel.gameObject.SetActive(setPause);
-            
-            _instance._pause = setPause;
-            Time.timeScale = setPause ? 0f : 1f;
-            Cursor.visible = setPause;
-            Cursor.lockState = setPause ? CursorLockMode.Locked : CursorLockMode.None;
-        }
-
-        public bool GetPause() => _pause;
     }
 }
