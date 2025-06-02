@@ -76,6 +76,9 @@ namespace Game
             {
                 if (sceneId.ids[i] < 0)
                     return;
+
+                if (SceneManager.GetSceneByBuildIndex(sceneId.ids[i]).isLoaded)
+                    continue;
                 
                 SceneManager.LoadScene(sceneId.ids[i], LoadSceneMode.Additive);
             }
