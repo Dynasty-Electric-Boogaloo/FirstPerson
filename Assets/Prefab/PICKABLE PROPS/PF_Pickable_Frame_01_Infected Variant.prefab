@@ -65,6 +65,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8719647032213403409, guid: 0d999e95a71638747b52a488e8fdcb51, type: 3}
   m_PrefabInstance: {fileID: 2133329377219924901}
   m_PrefabAsset: {fileID: 0}
+--- !u!23 &8775852288083025989 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 7228573088389379040, guid: 0d999e95a71638747b52a488e8fdcb51, type: 3}
+  m_PrefabInstance: {fileID: 2133329377219924901}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3972592129074677040
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -146,7 +151,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 327531022950425367, guid: dceb86ebc9e31a14f9e3f5c6a06f58bf, type: 3}
       propertyPath: m_Name
-      value: PF_Pickable_Frame_01_01_Infected Variant
+      value: PF_Pickable_Frame_01_Infected Variant
       objectReference: {fileID: 0}
     - target: {fileID: 907847896187899525, guid: dceb86ebc9e31a14f9e3f5c6a06f58bf, type: 3}
       propertyPath: isInfected
@@ -220,12 +225,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8517222974815585813, guid: dceb86ebc9e31a14f9e3f5c6a06f58bf, type: 3}
+      propertyPath: rend
+      value: 
+      objectReference: {fileID: 8775852288083025989}
+    - target: {fileID: 8517222974815585813, guid: dceb86ebc9e31a14f9e3f5c6a06f58bf, type: 3}
+      propertyPath: normal
+      value: 
+      objectReference: {fileID: 2100000, guid: 1d09ac58d78414045a42b46c8ecf3446, type: 2}
+    - target: {fileID: 8517222974815585813, guid: dceb86ebc9e31a14f9e3f5c6a06f58bf, type: 3}
+      propertyPath: highlight
+      value: 
+      objectReference: {fileID: 2100000, guid: 03fb8bfc4f2e61840936f8068b72bb0f, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 2865500054635462738, guid: dceb86ebc9e31a14f9e3f5c6a06f58bf, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6658004721324067104, guid: dceb86ebc9e31a14f9e3f5c6a06f58bf, type: 3}
-      insertIndex: 0
+      insertIndex: -1
       addedObject: {fileID: 7248951531813676212}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dceb86ebc9e31a14f9e3f5c6a06f58bf, type: 3}

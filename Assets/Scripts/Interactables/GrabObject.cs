@@ -44,7 +44,7 @@ public class GrabObject : Interactable
     {
         return _collider ? _collider.bounds : default;
     }
-    
+
     private void BreakOnImpact()
     {
         if (!_isThrown) 
