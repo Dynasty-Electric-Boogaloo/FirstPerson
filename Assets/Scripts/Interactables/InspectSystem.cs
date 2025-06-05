@@ -13,6 +13,7 @@ public class InspectSystem : MonoBehaviour
     [SerializeField] private TMP_Text commentText;
     [SerializeField] private List<GameObject> showcasePrefab = new List<GameObject>();
     private List<GameObject> showcase = new List<GameObject>();
+    private GameObject current;
     private void Awake()
     {
         if (_instance == null)
@@ -34,12 +35,13 @@ public class InspectSystem : MonoBehaviour
             showcase.Add(newObject);
             newObject.SetActive(false);
             newObject.layer = LayerMask.NameToLayer("Inspect");
+            
             foreach (var child in newObject.GetComponentsInChildren<MeshRenderer>())
                 child.gameObject.layer = LayerMask.NameToLayer("Inspect");
         }
     }
 
-    public static void Show(int index, string comment = "")
+    public static void Show (int index, string comment = "")
     {
         if(!_instance)
             return;
@@ -47,6 +49,19 @@ public class InspectSystem : MonoBehaviour
         _instance.cam.gameObject.SetActive(true);
         _instance.showcase[index].SetActive(true);
         _instance.commentText.text = comment;
+        _instance.current =  _instance.showcase[index];
     }
     
+    
+    public static void Hide ()
+    {
+        if(!_instance)
+            return;
+
+        if(_instance.current)
+            _instance. current.SetActive(false);
+        
+        _instance.cam.gameObject.SetActive(false);
+        _instance.commentText.text = "";
+    }
 }

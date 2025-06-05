@@ -20,12 +20,15 @@ namespace UI
       private void Update()
       {
          if(Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
+         {
             PauseGame(!_pause);
+            InspectSystem.Hide();
+         }
       }
       
-      public static void PauseGame(bool setPause)
+      public static void PauseGame(bool setPause, bool showMenu = true)
       {
-         if(instance &&  instance.pausePanel)
+         if(instance &&  instance.pausePanel && showMenu)
             instance.pausePanel.SetActive(setPause);
             
          instance._pause = setPause;
