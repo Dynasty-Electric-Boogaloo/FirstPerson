@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3548664020859346674}
   - component: {fileID: 1958400607929490488}
   - component: {fileID: 686168858582924260}
+  - component: {fileID: 6027317627638054440}
   m_Layer: 6
   m_Name: PF_Pickable_Root
   m_TagString: Untagged
@@ -130,6 +131,20 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 1073741824
+--- !u!114 &6027317627638054440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114577427182245494}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 845510d683f1d3346a211d4f206128cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possible: []
+  index: 13
 --- !u!1001 &1810143790326831276
 PrefabInstance:
   m_ObjectHideFlags: 0

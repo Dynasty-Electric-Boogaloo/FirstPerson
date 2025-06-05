@@ -53,11 +53,16 @@ namespace UI
             _instance.usageText.text = interactable.GetInteractionType() switch
             {
                 InteractionType.Interactable => "Interact - E",
-                InteractionType.GrabObject => "Grab - E\\nDestroy - A",
+                InteractionType.GrabObject => "Grab - E",
                 InteractionType.Collectible => "Collect - E",
                 InteractionType.Mannequin => "Enter - E",
                 _ => throw new ArgumentOutOfRangeException()
             };
+
+            if (interactable.gameObject.GetComponent<Inspectable>())
+            {
+                _instance.usageText.text += "\\nInspect - I";
+            }
         }
 
         public static void SetGrab()

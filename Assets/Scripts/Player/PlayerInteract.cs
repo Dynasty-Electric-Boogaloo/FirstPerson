@@ -46,6 +46,8 @@ namespace Player
 
                 if (!_selectedObject)
                     return;
+                
+                TryInspect();
 
                 TryInteract();
                 return;
@@ -140,6 +142,17 @@ namespace Player
             
             grab.Grab(grabPoint);
             _grabbedObject = grab;
+        }
+        
+        private void TryInspect()
+        {
+            if (!PlayerData.PlayerInputs.Controls.Inspect.WasPressedThisFrame()) 
+                return;
+            
+            if (!_selectedObject.TryGetComponent<Inspectable>(out var _inspectable)) 
+                return;
+
+            _inspectable.Inspect();
         }
 
         private void TryExtract()

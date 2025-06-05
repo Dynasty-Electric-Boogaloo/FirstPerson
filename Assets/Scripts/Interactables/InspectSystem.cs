@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using TMPro;
+using UnityEditor.Experimental.GraphView;
+using UnityEngine;
+
+public class InspectSystem : MonoBehaviour
+{
+    private static InspectSystem _instance;
+
+    [SerializeField] private Camera cam;
+    [SerializeField] private Transform point;
+    [SerializeField] private TMP_Text commentText;
+    [SerializeField] private List<GameObject> showcasePrefab = new List<GameObject>();
+    private List<GameObject> showcase = new List<GameObject>();
+    private void Awake()
+    {
+        if (_instance == null)
+            _instance = this;
+        else
+            Destroy(this);
+    }
+
+    private void Start()
+    {
+        if(!_instance)
+            return;
+
+        _instance.cam.gameObject.SetActive(false);
+
+        foreach (var obj in showcasePrefab)
+        {
+            var newObject = Instantiate(obj, point);
+            showcase.Add(newObject);
+            newObject.SetActive(false);
+            newObject.layer = LayerMask.NameToLayer("Inspect");
+            foreach (var child in newObject.GetComponentsInChildren<MeshRenderer>())
+                child.gameObject.layer = LayerMask.NameToLayer("Inspect");
+        }
+    }
+
+    public static void Show(int index, string comment = "")
+    {
+        if(!_instance)
+            return;
+
+        _instance.cam.gameObject.SetActive(true);
+        _instance.showcase[index].SetActive(true);
+        _instance.commentText.text = comment;
+    }
+    
+}
