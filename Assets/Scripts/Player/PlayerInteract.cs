@@ -119,13 +119,15 @@ namespace Player
             
             _selectedObject.Interact();
             TryExtract();
+            
+            if(_selectedObject.GetComponent<Mimic>())
+                return;
 
             if (_selectedObject.TryGetComponent<Mannequin>(out var mannequin))
             {
                 _mannequin = mannequin;
                 _playerCamera.GoToPosition(mannequin.GetCameraPos());
                 PlayerData.Rigidbody.linearVelocity = Vector3.zero;
-                
             }
 
             if (_selectedObject.TryGetComponent<ObjectivePickUp>(out var objective))
@@ -171,7 +173,7 @@ namespace Player
                 return;
             
             
-            //GetComponent<PlayerDance>().SetDancing(true, true);
+            GetComponent<PlayerDance>().SetDancing(true, true);
             
             mimic.DestroyMimic();
 
