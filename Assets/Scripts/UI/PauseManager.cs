@@ -19,11 +19,11 @@ namespace UI
       
       private void Update()
       {
-         if(Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
-         {
-            PauseGame(!_pause);
-            InspectSystem.Hide();
-         }
+         if (!Input.GetKeyDown(KeyCode.Escape) && !Input.GetKeyDown(KeyCode.P)) 
+            return;
+         
+         PauseGame(!_pause);
+         InspectSystem.Hide();
       }
       
       public static void PauseGame(bool setPause, bool showMenu = true)

@@ -78,7 +78,7 @@ namespace Player
         }
         private void LightUpdate()
         {
-            if (_playerInput.Controls.UseFlash.WasPressedThisFrame())
+            if (_playerInput.Controls.UseFlash.WasPressedThisFrame() && PlayerData.redLight)
                 CheckSwitch();
 
             var reload = _playerInput.Controls.ReloadFlash.IsPressed();

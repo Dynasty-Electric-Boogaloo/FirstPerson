@@ -2,10 +2,11 @@ using UnityEngine;
 
 public class ShowCaseObject : MonoBehaviour
 {
-    [SerializeField] private float _sensitivity;
+    [SerializeField] private float _sensitivity = 2;
     private Vector3 _mouseReference;
     private Vector3 _rotation;
     private bool _isRotating;
+    
 
     private void OnMouseDrag()
     {

@@ -91,6 +91,13 @@ namespace UI
             if( _instance.usageText && isInMannequin) 
                 _instance.usageText.text = "Exit - E";
         }
-        
+
+        public static void SetInspect()
+        {
+            if(!_instance) 
+                return;
+            
+            _instance.usageText.text = "Return - I";
+        }
     }
 }

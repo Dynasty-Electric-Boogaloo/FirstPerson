@@ -1,23 +1,15 @@
 using Player;
 using UnityEngine;
 
-public class ObjectivePickUp : Interactable
+public class SpecialEventPickUp : Interactable
 {
     [SerializeField] private Door trap;
     [SerializeField] public int indexObjective;
-    [SerializeField] private bool isEvent = true;
-    public bool GetIsEvent => isEvent;
     public void PickedUp()
     {
         gameObject.SetActive(false);
         if(trap)
             trap.ChangeState();
-
-        if (!isEvent) 
-            return;
-        
-        if (TryGetComponent<EventObject>(out var eventObject))
-            eventObject.DoEvent();
     }
 
     public override void Restore()

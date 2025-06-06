@@ -47,6 +47,7 @@ namespace Player
                 if (!_selectedObject)
                     return;
                 
+                
                 TryInspect();
 
                 TryInteract();
@@ -82,6 +83,8 @@ namespace Player
 
         private void HandleHighlight()
         {
+            if(InspectSystem.isOn())
+                return;
             
             var ray = new Ray(
                 PlayerData.CameraHolder.position + PlayerData.CameraHolder.forward * grabOffset,
@@ -129,8 +132,9 @@ namespace Player
             {
                 objective.PickedUp();
 
-                if (!TryGetComponent<PlayerMusicBox>(out var music))
+                if (!TryGetComponent<PlayerMusicBox>(out var music) || objective.GetIsEvent)
                     return;
+                
                 music.IncreaseState();
             }
 
@@ -148,6 +152,12 @@ namespace Player
         {
             if (!PlayerData.PlayerInputs.Controls.Inspect.WasPressedThisFrame()) 
                 return;
+            
+            if (InspectSystem.isOn())
+            {
+                InspectSystem.Hide();
+                return;
+            }
             
             if (!_selectedObject.TryGetComponent<Inspectable>(out var _inspectable)) 
                 return;

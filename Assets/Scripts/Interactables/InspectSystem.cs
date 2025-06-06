@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using TMPro;
+using UI;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
@@ -14,6 +15,8 @@ public class InspectSystem : MonoBehaviour
     [SerializeField] private List<GameObject> showcasePrefab = new List<GameObject>();
     private List<GameObject> showcase = new List<GameObject>();
     private GameObject current;
+    
+    public static bool isOn() => _instance.cam.gameObject.activeSelf;
     private void Awake()
     {
         if (_instance == null)
@@ -35,21 +38,27 @@ public class InspectSystem : MonoBehaviour
             showcase.Add(newObject);
             newObject.SetActive(false);
             newObject.layer = LayerMask.NameToLayer("Inspect");
+            newObject.AddComponent<BoxCollider>();
+            newObject.AddComponent<ShowCaseObject>();
             
             foreach (var child in newObject.GetComponentsInChildren<MeshRenderer>())
                 child.gameObject.layer = LayerMask.NameToLayer("Inspect");
         }
+        _instance.commentText.text = "";
     }
-
+    
     public static void Show (int index, string comment = "")
     {
         if(!_instance)
             return;
-
+        
         _instance.cam.gameObject.SetActive(true);
         _instance.showcase[index].SetActive(true);
+        _instance.showcase[index].transform.rotation = Quaternion.identity;
         _instance.commentText.text = comment;
         _instance.current =  _instance.showcase[index];
+        
+        UiManager.SetInspect();
     }
     
     
