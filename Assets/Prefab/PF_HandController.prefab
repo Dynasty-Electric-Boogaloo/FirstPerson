@@ -535,6 +535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b893f75076814c6eb83bd74d61cc1704, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rendererMesh: {fileID: 9079386926096019442}
   maxVerticalAngle: 80
   sensitivity: 0.1
   fadeoutSpeed: 0.1
@@ -635,7 +636,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  rendererMesh: {fileID: 9079386926096019442}
 --- !u!114 &2334033331561239044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -826,7 +826,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 311da43baf6ff93449ec4aa9283b5cf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minimalDistance: 5
+  thresholdDetectionDistance: 0
   musicBoxObject: {fileID: 4005241433360813804}
   state: 0
 --- !u!1 &4167932192429471914
@@ -841,6 +841,7 @@ GameObject:
   - component: {fileID: 3042059991456204213}
   - component: {fileID: 5989416459554243554}
   - component: {fileID: 8444648397390874759}
+  - component: {fileID: 4339113891236905166}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1061,6 +1062,20 @@ MonoBehaviour:
       enableFptlForForwardOpaque: 0
       enableBigTilePrepass: 0
       isFptlEnabled: 0
+--- !u!114 &4339113891236905166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4167932192429471914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c6556701af9e04380698b89f691b6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nonRigidbodyVelocity: 0
+  attenuationObject: {fileID: 0}
 --- !u!1 &4418548475430437484
 GameObject:
   m_ObjectHideFlags: 0
