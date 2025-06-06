@@ -19,12 +19,14 @@ namespace Player
         private Mannequin _mannequin;
         private RaycastHit _raycastHit;
         private PlayerCamera _playerCamera;
+        private PlayerDance _playerDance;
         private PlayerMusicBox _playerMusicBox;
 
         private void Start()
         {
             _playerCamera = GetComponent<PlayerCamera>();
             _playerMusicBox = GetComponent<PlayerMusicBox>();
+            _playerDance = GetComponent<PlayerDance>();
         }
 
         private void Update()
@@ -172,10 +174,8 @@ namespace Player
             if (!_selectedObject.TryGetComponent<Mimic>(out var mimic)) 
                 return;
             
-            
-            GetComponent<PlayerDance>().SetDancing(true, true);
-            
-            mimic.DestroyMimic();
+            _playerDance.SetCurrentMimic(mimic);
+            _playerDance.SetDancing();
 
             _selectedObject.Break();
         }

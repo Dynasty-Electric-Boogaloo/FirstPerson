@@ -83,6 +83,6 @@ namespace Player
         
         public static void SetIsInMannequin(bool setOn) => _instance._playerData.IsInMannequin = setOn;
         
-        public static void SetRedLight(bool setOn) => _instance._playerData.redLight = setOn;
+        public static void SetRedLight(bool setOn) => _instance._playerData.RedLight = setOn;
     }
 }
