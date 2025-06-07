@@ -14,7 +14,6 @@ namespace UI
 {
     public class UiManager : MonoBehaviour
     {
-        [SerializeField] private DancePanel dancePanel;
         [SerializeField] private TMP_Text usageText;
         [SerializeField] private Image mannequinMask;
         
@@ -70,20 +69,7 @@ namespace UI
             if(_instance && _instance.usageText) 
                 _instance.usageText.text = "Drop - E\\nThrow - Left Click";
         }
-
-        public static void SetDance(float tolerance, bool isMimic)
-        {
-            var isDancing = PlayerRoot.GetIsDancing();
-            
-            if (!_instance.dancePanel) 
-                return;
-            
-            if(isDancing)
-                _instance.dancePanel.SetInput(tolerance);
-            else 
-                _instance.dancePanel.StartDance(!isMimic);
-        }
-
+        
         public static void InMannequin(bool isInMannequin = true)
         {
             if(_instance && _instance.mannequinMask)

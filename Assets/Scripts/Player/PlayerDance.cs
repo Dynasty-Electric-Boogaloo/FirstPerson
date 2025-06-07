@@ -35,9 +35,10 @@ namespace Player
         {
             if(win)
                 currentMimic.DestroyMimic();
-
             else
                 MonsterNavigation.Alert(transform.position);
+            
+            QteUiPanel.HideQte();
         }
 
         public void SetCurrentMimic(Mimic newMimic)

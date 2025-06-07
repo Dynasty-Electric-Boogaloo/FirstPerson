@@ -33,7 +33,7 @@ public class DanceManager : MonoBehaviour
     private void PlayQte(MimicDestructionQte qte, int index)
     {
        print( qte.notes[index]);
-
+       QteUiPanel.SetQte(qte.notes[index]);
        if (false)
        {
            _playerDance.SetQteResult(false);
