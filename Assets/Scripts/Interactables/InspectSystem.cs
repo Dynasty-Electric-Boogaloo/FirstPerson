@@ -16,7 +16,7 @@ public class InspectSystem : MonoBehaviour
     private List<GameObject> showcase = new List<GameObject>();
     private GameObject current;
     
-    public static bool isOn() => _instance.cam.gameObject.activeSelf;
+    public static bool isOn() => _instance && _instance.cam.gameObject.activeSelf;
     private void Awake()
     {
         if (_instance == null)
