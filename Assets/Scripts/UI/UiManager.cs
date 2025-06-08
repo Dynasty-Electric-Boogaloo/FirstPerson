@@ -61,12 +61,18 @@ namespace UI
 
         public static void SetGrab()
         {
+            if(!_instance) 
+                return;
+            
             if(_instance && _instance.usageText) 
                 _instance.usageText.text = "Drop - E\\nThrow - Left Click";
         }
 
         public static void SetDance(float tolerance, bool isMimic)
         {
+            if(!_instance) 
+                return;
+            
             var isDancing = PlayerRoot.GetIsDancing();
             
             if (!_instance.dancePanel) 
@@ -80,6 +86,9 @@ namespace UI
 
         public static void InMannequin(bool isInMannequin = true)
         {
+            if(!_instance) 
+                return;
+            
             if(_instance && _instance.mannequinMask)
                 _instance.mannequinMask.gameObject.SetActive(isInMannequin);
             if( _instance.usageText && isInMannequin) 

@@ -21,6 +21,9 @@ public class ObjectiveManager : MonoBehaviour
 
    public static void UpdateObjective()
    {
+      if(instance == null)
+         return;
+
       foreach (var objective in instance.objectifs)
       {
          objective.gameObject.SetActive(PlayerRoot.CurrentIndex+1 == objective.indexObjective);

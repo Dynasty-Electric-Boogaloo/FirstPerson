@@ -25,6 +25,9 @@ namespace UI
       
       public static void PauseGame(bool setPause)
       {
+         if(instance == null)
+            return;
+         
          if(instance &&  instance.pausePanel)
             instance.pausePanel.SetActive(setPause);
             
