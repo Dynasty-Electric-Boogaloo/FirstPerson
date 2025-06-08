@@ -26,10 +26,9 @@ namespace Player
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.C))
-            {
+            if (PlayerData.PlayerInputs.Controls.UseMusicBox.WasPressedThisFrame())
                 SetMusicBox(!_isOnDisplay);
-            }
+            
             if(!_isOnDisplay)
                 return;
             

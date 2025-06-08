@@ -32,7 +32,6 @@ namespace UI
             if (usageText)
                 usageText.text = "";
         }
-        
 
         public static void SetInteract(Interactable interactable)
         {
@@ -86,6 +85,5 @@ namespace UI
             if( _instance.usageText && isInMannequin) 
                 _instance.usageText.text = "Exit - E";
         }
-        
     }
 }

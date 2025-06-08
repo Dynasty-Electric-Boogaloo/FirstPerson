@@ -39,6 +39,6 @@ namespace UI
          Application.Quit();
       }
       
-      public static bool GetPause() => instance._pause;
+      public static bool GetPause() =>instance && instance._pause;
    }
 }

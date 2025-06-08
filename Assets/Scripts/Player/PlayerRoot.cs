@@ -71,16 +71,16 @@ namespace Player
                 _instance._musicBox.DecreaseState();
         }
 
-        public static bool GetIsDancing() => _instance._playerData.Dancing;
+        public static bool GetIsDancing() => _instance && _instance._playerData.Dancing;
         
         public static void SetIsDancing(bool setOn) => _instance._playerData.Dancing = setOn;
         
-        public static bool GetIsDestroying => _instance._playerData.DestroyingMimic;
+        public static bool GetIsDestroying => _instance && _instance._playerData.DestroyingMimic;
         
         public static void SetIsDestroying(bool setOn) => _instance._playerData.DestroyingMimic = setOn;
         
         
-        public static bool GetIsInMannequin() => _instance._playerData.IsInMannequin;
+        public static bool GetIsInMannequin() =>_instance &&  _instance._playerData.IsInMannequin;
         
         public static void SetIsInMannequin(bool setOn) => _instance._playerData.IsInMannequin = setOn;
     }

@@ -26,5 +26,4 @@ public class ObjectiveManager : MonoBehaviour
          objective.gameObject.SetActive(PlayerRoot.CurrentIndex+1 == objective.indexObjective);
       }
    }
-   
 }
