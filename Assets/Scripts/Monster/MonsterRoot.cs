@@ -54,7 +54,7 @@ namespace Monster
             if (diff.magnitude > 1.5f) 
                 return;
             
-            PlayerRoot.ResetPosition();
+            PlayerRoot.Die();
             transform.position = _startPosition;
             transform.rotation = _startRotation;
             _monsterData.targetPoint = transform.position;
@@ -65,6 +65,12 @@ namespace Monster
             _monsterData.chaseTimer = 0;
             _monsterData.targetNode = new NodeId(-1);
             InteractableManager.Restore();
+        }
+        
+        public static void SetVisible(bool visible)
+        {
+            if(_instance)
+                _instance.gameObject.SetActive(visible);
         }
     }
 }

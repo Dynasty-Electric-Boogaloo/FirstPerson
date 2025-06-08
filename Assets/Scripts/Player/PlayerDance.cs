@@ -19,7 +19,7 @@ namespace Player
         private void Update()
         {
             if (PlayerData.PlayerInputs.Controls.Dance.WasPressedThisFrame() && !PlayerData.IsInMannequin)
-                SetDancing(true);
+                SetDancing(true, PlayerRoot.GetIsDestroying);
         }
 
         public void SetDancing(bool setOn, bool isMimic = false )

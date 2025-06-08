@@ -2,9 +2,13 @@ using System;
 using Interactables;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 public class Interactable : MonoBehaviour
 {
+    [SerializeField] private Material normal;
+    [SerializeField] private Material highlight;
+    [SerializeField] private Renderer rend;
     private Vector3 _startPosition;
     private Quaternion _startRotation;
     public UnityEvent onRestore;
@@ -17,6 +21,10 @@ public class Interactable : MonoBehaviour
 
     public void Highlight(bool canInteract)
     {
+        if(!rend || highlight == null || normal == null)
+            return;
+        
+        rend.material = canInteract ? highlight : normal;
     }
 
     public virtual void Interact()
