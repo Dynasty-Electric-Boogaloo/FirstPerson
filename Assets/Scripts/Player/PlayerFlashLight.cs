@@ -98,12 +98,9 @@ namespace Player
                 
                 if( CurrentBattery / CurrentBatteryMax < lightFalloffThreshold) 
                     light.intensity = ((CurrentBattery  / CurrentBatteryMax ) * CurrentLightIntensity / lightFalloffThreshold ) ;
-                
 
-                if (Mathf.Abs((CurrentBattery  / CurrentBatteryMax ) - flicker) < 0.001f && !isFlickering)
-                {
-                    StartCoroutine(nameof(Flickering));
-                }
+                if (Mathf.Abs(CurrentBattery  / CurrentBatteryMax  - flicker) < 0.1 && !isFlickering)
+                    StartCoroutine(Flickering());
             }
             
             if (hud)

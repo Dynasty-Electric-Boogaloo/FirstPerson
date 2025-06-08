@@ -53,6 +53,9 @@ namespace Player
 
         public static void ResetPosition()
         {
+            if(_instance == null)
+                return;
+            
             _instance.transform.position = _instance._startPosition;
             _instance.transform.rotation = _instance._startRotation;
             _instance._playerData.Rigidbody.linearVelocity = Vector3.zero;
@@ -66,23 +69,42 @@ namespace Player
 
         public static void Die()
         {
+            if(_instance == null)
+                return;
+
             ResetPosition();
             if (_instance._musicBox)
                 _instance._musicBox.DecreaseState();
         }
 
-        public static bool GetIsDancing() => _instance._playerData.Dancing;
+        public static bool GetIsDancing() => _instance && _instance._playerData.Dancing;
         
-        public static void SetIsDancing(bool setOn) => _instance._playerData.Dancing = setOn;
+        public static void SetIsDancing(bool setOn)
+        {
+            if(_instance)
+                _instance._playerData.Dancing = setOn;
+        }
         
-        public static bool GetIsDestroying => _instance._playerData.DestroyingMimic;
+        public static bool GetIsDestroying => _instance &&_instance._playerData.DestroyingMimic;
         
-        public static void SetIsDestroying(bool setOn) => _instance._playerData.DestroyingMimic = setOn;
+        public static void SetIsDestroying(bool setOn)
+        {
+            if(_instance)
+                _instance._playerData.DestroyingMimic = setOn;
+        }
         
-        public static bool GetIsInMannequin() => _instance._playerData.IsInMannequin;
+        public static bool GetIsInMannequin() =>_instance && _instance._playerData.IsInMannequin;
         
-        public static void SetIsInMannequin(bool setOn) => _instance._playerData.IsInMannequin = setOn;
+        public static void SetIsInMannequin(bool setOn)
+        {
+            if(_instance)
+                _instance._playerData.IsInMannequin = setOn;
+        }
         
-        public static void SetRedLight(bool setOn) => _instance._playerData.RedLight = setOn;
+        public static void SetRedLight(bool setOn) 
+        {
+            if(_instance)
+                _instance._playerData.RedLight = setOn;
+        }
     }
 }

@@ -26,16 +26,15 @@ namespace Player
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.C))
-            {
+            if (PlayerData.PlayerInputs.Controls.UseMusicBox.WasPressedThisFrame())
                 SetMusicBox(!_isOnDisplay);
-            }
+            
             if(!_isOnDisplay)
                 return;
             
             BatteryManager.Battery.UpdateBatteryWithHud();
 
-            if ((Vector3.Distance(Monster.MonsterRoot.GetMonsterPosition(), transform.position) > thresholdDetectionDistance)) 
+            if (Vector3.Distance(Monster.MonsterRoot.GetMonsterPosition(), transform.position) > thresholdDetectionDistance) 
                 return;
 
             musicBoxObject.Using((Monster.MonsterRoot.GetMonsterPosition() - transform.position) / thresholdDetectionDistance, transform.forward);

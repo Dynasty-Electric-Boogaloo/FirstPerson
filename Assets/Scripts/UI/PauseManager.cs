@@ -28,7 +28,10 @@ namespace UI
       
       public static void PauseGame(bool setPause, bool showMenu = true)
       {
-         if(instance &&  instance.pausePanel && showMenu)
+         if(instance == null)
+            return;
+         
+         if(instance.pausePanel && showMenu)
             instance.pausePanel.SetActive(setPause);
             
          instance._pause = setPause;
@@ -42,6 +45,6 @@ namespace UI
          Application.Quit();
       }
       
-      public static bool GetPause() => instance._pause;
+      public static bool GetPause() =>instance && instance._pause;
    }
 }

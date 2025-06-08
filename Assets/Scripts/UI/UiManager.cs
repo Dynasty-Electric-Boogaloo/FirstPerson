@@ -72,7 +72,10 @@ namespace UI
         
         public static void InMannequin(bool isInMannequin = true)
         {
-            if(_instance && _instance.mannequinMask)
+            if(!_instance)
+                return;
+            
+            if( _instance.mannequinMask)
                 _instance.mannequinMask.gameObject.SetActive(isInMannequin);
             if( _instance.usageText && isInMannequin) 
                 _instance.usageText.text = "Exit - E";

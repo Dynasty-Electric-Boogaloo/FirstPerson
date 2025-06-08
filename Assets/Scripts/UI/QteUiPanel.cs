@@ -1,3 +1,4 @@
+using System;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,12 +16,18 @@ public class QteUiPanel : MonoBehaviour
             _instance = this;
         else
             Destroy(this);
-        
+    }
+
+    private void Start()
+    {
         HideQte();
     }
 
     public static void SetQte(float timing)
     {
+        if(_instance == null)
+            return;
+        
         _instance._qteTarget.gameObject.SetActive(true);
         _instance._qtePlayerImpulse.gameObject.SetActive(true);
 
@@ -30,6 +37,9 @@ public class QteUiPanel : MonoBehaviour
 
     public static void HideQte()
     {
+        if(_instance == null)
+            return;
+        
         _instance._qteTarget.gameObject.SetActive(false);
         _instance._qtePlayerImpulse.gameObject.SetActive(false);
     }

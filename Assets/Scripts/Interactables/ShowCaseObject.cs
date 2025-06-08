@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class ShowCaseObject : MonoBehaviour
 {
@@ -13,8 +14,8 @@ public class ShowCaseObject : MonoBehaviour
         if (!_isRotating) 
             return;
         
-        _rotation.y = -Input.GetAxis("Mouse X") * _sensitivity;
-        _rotation.z = Input.GetAxis("Mouse Y") *_sensitivity;
+        _rotation.y = -Mouse.current.delta.x.ReadValue() * _sensitivity;
+        _rotation.z = Mouse.current.delta.y.ReadValue() *_sensitivity;
             
         transform.Rotate(_rotation);
     }
