@@ -101,9 +101,7 @@ namespace Player
                 
 
                 if (Mathf.Abs((CurrentBattery  / CurrentBatteryMax ) - flicker) < 0.001f && !_isFlickering)
-                {
                     StartCoroutine(Flickering());
-                }
             }
             
             if (hud)
