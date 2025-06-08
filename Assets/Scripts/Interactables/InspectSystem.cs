@@ -13,8 +13,8 @@ public class InspectSystem : MonoBehaviour
     [SerializeField] private Transform point;
     [SerializeField] private TMP_Text commentText;
     [SerializeField] private List<GameObject> showcasePrefab = new List<GameObject>();
-    private List<GameObject> showcase = new List<GameObject>();
-    private GameObject current;
+    private readonly List<GameObject> _showcase= new List<GameObject>();
+    private GameObject _current;
     
     public static bool isOn() => _instance && _instance.cam.gameObject.activeSelf;
     private void Awake()
@@ -35,7 +35,7 @@ public class InspectSystem : MonoBehaviour
         foreach (var obj in showcasePrefab)
         {
             var newObject = Instantiate(obj, point);
-            showcase.Add(newObject);
+            _showcase.Add(newObject);
             newObject.SetActive(false);
             newObject.layer = LayerMask.NameToLayer("Inspect");
             newObject.AddComponent<BoxCollider>();
@@ -53,10 +53,10 @@ public class InspectSystem : MonoBehaviour
             return;
         
         _instance.cam.gameObject.SetActive(true);
-        _instance.showcase[index].SetActive(true);
-        _instance.showcase[index].transform.rotation = Quaternion.identity;
+        _instance._showcase[index].SetActive(true);
+        _instance._showcase[index].transform.rotation = Quaternion.identity;
         _instance.commentText.text = comment;
-        _instance.current =  _instance.showcase[index];
+        _instance._current =  _instance._showcase[index];
         
         UiManager.SetInspect();
     }
@@ -67,10 +67,11 @@ public class InspectSystem : MonoBehaviour
         if(!_instance)
             return;
 
-        if(_instance.current)
-            _instance. current.SetActive(false);
+        if(_instance._current)
+            _instance. _current.SetActive(false);
         
         _instance.cam.gameObject.SetActive(false);
         _instance.commentText.text = "";
+        PauseManager.PauseGame(false, false);
     }
 }

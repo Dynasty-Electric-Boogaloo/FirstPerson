@@ -17,7 +17,10 @@ public class ShowCaseObject : MonoBehaviour
         _rotation.y = -Mouse.current.delta.x.ReadValue() * _sensitivity;
         _rotation.z = Mouse.current.delta.y.ReadValue() *_sensitivity;
             
-        transform.Rotate(_rotation);
+        //transform.Rotate(_rotation);
+        var rotation = transform.localRotation;
+        rotation.eulerAngles = rotation.eulerAngles + _rotation;
+        transform.localRotation = rotation;
     }
 
     private void OnMouseDown()

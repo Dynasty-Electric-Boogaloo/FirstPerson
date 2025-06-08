@@ -8,9 +8,6 @@ public class Inspectable : MonoBehaviour
 {
     [SerializeField] private List<string> possible = new List<string>();
     [SerializeField] private int index;
-    private void Start()
-    {
-    }
 
     public void Inspect()
     {
