@@ -72,6 +72,7 @@ namespace Player
             
             state -=  1;
             PlayerData.CurrentIndexObjective = (int)state;
+            ObjectiveManager.RemoveToFound();
             musicBoxObject.SetLevel((int)state);
         }
     

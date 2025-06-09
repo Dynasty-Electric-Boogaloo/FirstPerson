@@ -22,7 +22,7 @@ public class ObjectivePickUp : Interactable
 
     public override void Restore()
     {
-        if(indexObjective < PlayerRoot.CurrentIndex)
+        if(!ObjectiveManager.isInList(this))
             base.Restore();
         else
             gameObject.SetActive(false);
