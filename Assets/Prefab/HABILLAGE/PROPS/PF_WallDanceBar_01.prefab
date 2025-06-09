@@ -29,10 +29,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2308406708946953981}
+  - {fileID: 1196017657772169804}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &2847298432208732438
+--- !u!1001 &1662851651908124071
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -42,15 +42,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 3c7cbc4cad1706541b89ed9f7d529839, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0.034130014
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c7cbc4cad1706541b89ed9f7d529839, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 1.11035
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c7cbc4cad1706541b89ed9f7d529839, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: 0.09344013
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c7cbc4cad1706541b89ed9f7d529839, type: 3}
       propertyPath: m_LocalRotation.w
@@ -58,11 +58,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c7cbc4cad1706541b89ed9f7d529839, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.00000006953546
+      value: 0.000000021855694
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c7cbc4cad1706541b89ed9f7d529839, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3c7cbc4cad1706541b89ed9f7d529839, type: 3}
       propertyPath: m_LocalRotation.z
@@ -80,50 +80,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3c7cbc4cad1706541b89ed9f7d529839, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 05fdb48954d93454e82cce3f75019fe2, type: 2}
     - target: {fileID: 919132149155446097, guid: 3c7cbc4cad1706541b89ed9f7d529839, type: 3}
       propertyPath: m_Name
-      value: SM_WallDanseBar_01
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 3c7cbc4cad1706541b89ed9f7d529839, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
+      value: SM_WallDanceBar_01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3c7cbc4cad1706541b89ed9f7d529839, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 819695878552492052}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3c7cbc4cad1706541b89ed9f7d529839, type: 3}
---- !u!4 &2308406708946953981 stripped
+--- !u!4 &1196017657772169804 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3c7cbc4cad1706541b89ed9f7d529839, type: 3}
-  m_PrefabInstance: {fileID: 2847298432208732438}
+  m_PrefabInstance: {fileID: 1662851651908124071}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3117277124115381319 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3c7cbc4cad1706541b89ed9f7d529839, type: 3}
-  m_PrefabInstance: {fileID: 2847298432208732438}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &819695878552492052
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3117277124115381319}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.5, y: 0.33457062, z: 0.41561323}
-  m_Center: {x: 0, y: 0, z: 0.2078065}
