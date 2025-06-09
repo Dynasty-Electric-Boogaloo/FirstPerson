@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Player;
@@ -22,6 +23,8 @@ namespace Player
         [SerializeField] private float addByButtonPressed = 0.25f;
         [SerializeField] private float lightIntensityMultiplier = 5000000;
         [SerializeField] [Range(0f, 1f)] private float lightFalloffThreshold = 0.7f;
+        [SerializeField] [Range(0f, 1f)] private float flicker = 0.7f;
+        [SerializeField] [Range(0f, 1f)] private float flickerWait = 0.05f;
         [SerializeField] private float specialLightIntensityMultiplier = 5000000;
         [SerializeField] private Color lightColor = Color.white;
         [SerializeField] private Color specialLightColor = Color.red;
@@ -33,7 +36,6 @@ namespace Player
         [SerializeField] private int maxObjectInSight = 10;
         
         private float _battery;
-        private bool _isOn;
         private bool _special;
         private PlayerInputs _playerInput;
         private BatteryManager _batteryManager;
@@ -47,6 +49,8 @@ namespace Player
         
         private HashSet<Mimic> _lastUpdateLightObjects => _lightObjectBuffers[1 ^ _bufferSelection];
         private HashSet<Mimic> _currentLightObjects => _lightObjectBuffers[_bufferSelection];
+
+        private bool _isFlickering;
         
 
         private void Start()
@@ -55,7 +59,8 @@ namespace Player
             _hits = new RaycastHit[maxObjectInSight];
             _battery = batteryMax; 
             light.color = lightColor;
-            SetLightVisible(false);
+            if(hud)
+                hud.SetFlashLight(_special, true);
 
             _lightObjectBuffers[0] = new HashSet<Mimic>();
             _lightObjectBuffers[1] = new HashSet<Mimic>();
@@ -73,22 +78,8 @@ namespace Player
         }
         private void LightUpdate()
         {
-            _playerInput.Controls.UseFlash.performed  +=
-                context =>
-                {
-                    switch (context.interaction)
-                    {
-                        case SlowTapInteraction:
-                            SetLightVisible(!_isOn);
-                            break;
-                        case TapInteraction when _isOn:
-                            CheckSwitch();
-                            break;
-                        case TapInteraction:
-                            SetLightVisible(true);
-                            break;
-                    }
-                };
+            if (_playerInput.Controls.UseFlash.WasPressedThisFrame())
+                CheckSwitch();
 
             var reload = _playerInput.Controls.ReloadFlash.IsPressed();
             PlayerData.Reloading = reload;
@@ -97,9 +88,6 @@ namespace Player
 
             if (_battery > batteryMax)
                 _battery = batteryMax;
-
-            if (!_isOn)
-                return;
             
             if (CurrentBattery > 0)
             {
@@ -110,6 +98,10 @@ namespace Player
                 
                 if( CurrentBattery / CurrentBatteryMax < lightFalloffThreshold) 
                     light.intensity = ((CurrentBattery  / CurrentBatteryMax ) * CurrentLightIntensity / lightFalloffThreshold ) ;
+                
+
+                if (Mathf.Abs((CurrentBattery  / CurrentBatteryMax ) - flicker) < 0.01f && !_isFlickering)
+                    StartCoroutine(Flickering());
             }
             
             if (hud)
@@ -117,6 +109,20 @@ namespace Player
             
             RevealObjects();
         }
+
+        IEnumerator Flickering()
+        {
+            _isFlickering = true;
+            for (int i = 0; i < 3; i++)
+            {
+                light.gameObject.SetActive(false);
+                yield return new WaitForSeconds(flickerWait);
+                light.gameObject.SetActive(true);
+                yield return new WaitForSeconds(flickerWait);
+            }
+            _isFlickering = false;
+        }
+        
         
         private void RevealObjects()
         {
@@ -156,17 +162,6 @@ namespace Player
             _currentLightObjects.Clear();
         }
 
-        private void SetLightVisible(bool visible)
-        {
-            _isOn = visible;
-            
-            if(!visible)
-                light.intensity = 0;
-            
-            if (hud)
-                hud.SetFlashLight(_special, _isOn);
-        }
-
         private void CheckSwitch()
         {
             if(!_batteryManager) 
@@ -176,7 +171,7 @@ namespace Player
             light.color =  light.color == lightColor ? specialLightColor : lightColor;
             
             if(hud)
-                hud.SetFlashLight(_special, _isOn);
+                hud.SetFlashLight(_special, true);
         }
 
         private void OnDrawGizmosSelected()

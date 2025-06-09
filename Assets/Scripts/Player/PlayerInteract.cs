@@ -19,10 +19,12 @@ namespace Player
         private Mannequin _mannequin;
         private RaycastHit _raycastHit;
         private PlayerCamera _playerCamera;
+        private PlayerMusicBox _playerMusicBox;
 
         private void Start()
         {
             _playerCamera = GetComponent<PlayerCamera>();
+            _playerMusicBox = GetComponent<PlayerMusicBox>();
         }
 
         private void Update()
@@ -132,7 +134,10 @@ namespace Player
 
             if (_selectedObject is not GrabObject grab) 
                 return;
-                
+            
+            if(_playerMusicBox)
+                _playerMusicBox.SetMusicBox(false);
+            
             grab.Grab(grabPoint);
             _grabbedObject = grab;
         }

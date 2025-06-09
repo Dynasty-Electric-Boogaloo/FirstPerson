@@ -61,6 +61,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ccd5a00fadc6ef47ae61ebe80b20be9, type: 3}
+--- !u!23 &536744449002691947 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3834244201536026096, guid: 2ccd5a00fadc6ef47ae61ebe80b20be9, type: 3}
+  m_PrefabInstance: {fileID: 3622898453586127003}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5423871292594872202 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8719647032213403409, guid: 2ccd5a00fadc6ef47ae61ebe80b20be9, type: 3}
@@ -150,6 +155,18 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8007407015096281471, guid: 32808005daa302749be28b4a66407c54, type: 3}
+    - target: {fileID: 8517222974815585813, guid: 821d7aa0646bbc74ca1f2912225dd725, type: 3}
+      propertyPath: rend
+      value: 
+      objectReference: {fileID: 536744449002691947}
+    - target: {fileID: 8517222974815585813, guid: 821d7aa0646bbc74ca1f2912225dd725, type: 3}
+      propertyPath: normal
+      value: 
+      objectReference: {fileID: 2100000, guid: 8275dc484064d7046b1dc4998be0cbc1, type: 2}
+    - target: {fileID: 8517222974815585813, guid: 821d7aa0646bbc74ca1f2912225dd725, type: 3}
+      propertyPath: highlight
+      value: 
+      objectReference: {fileID: 2100000, guid: 4d8d6969e8cc5674cadd81603a5c629b, type: 2}
     m_RemovedComponents:
     - {fileID: 907847896187899525, guid: 821d7aa0646bbc74ca1f2912225dd725, type: 3}
     m_RemovedGameObjects:
