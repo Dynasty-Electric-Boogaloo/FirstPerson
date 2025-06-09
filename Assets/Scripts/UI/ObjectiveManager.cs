@@ -37,7 +37,7 @@ public class ObjectiveManager : MonoBehaviour
    
    public static void RemoveToFound()
    {
-      instance._pickedUp.RemoveAt( instance._pickedUp.Count-1);
+      instance._pickedUp.RemoveAt( instance._pickedUp.Count);
    }
 
    public static bool isInList(ObjectivePickUp pickUp) => instance && instance._pickedUp.Contains(pickUp);
