@@ -6,6 +6,7 @@ namespace UI
    {
       public static PauseManager instance;
       [SerializeField] private GameObject pausePanel;
+      [SerializeField] private PlayerInputs _playerInputs;
       private bool _pause;
 
       private void Awake()
@@ -19,7 +20,7 @@ namespace UI
       
       private void Update()
       {
-         if (!Input.GetKeyDown(KeyCode.Escape) && !Input.GetKeyDown(KeyCode.P)) 
+         if (!_playerInputs.Controls.Return.WasPressedThisFrame()) 
             return;
          
          PauseGame(!_pause);

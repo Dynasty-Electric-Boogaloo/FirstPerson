@@ -14,8 +14,12 @@ public class QteUiPanel : MonoBehaviour
     {
         if (_instance == null)
             _instance = this;
-        else
-            Destroy(this);
+    }
+
+    private void OnDestroy()
+    {
+        if (_instance == this)
+            _instance = null;
     }
 
     private void Start()

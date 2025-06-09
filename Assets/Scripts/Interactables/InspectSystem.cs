@@ -13,6 +13,7 @@ public class InspectSystem : MonoBehaviour
     [SerializeField] private Transform point;
     [SerializeField] private TMP_Text commentText;
     [SerializeField] private List<GameObject> showcasePrefab = new List<GameObject>();
+    [SerializeField] private LayerMask inspectLayer;
     private readonly List<GameObject> _showcase= new List<GameObject>();
     private GameObject _current;
     
@@ -21,8 +22,6 @@ public class InspectSystem : MonoBehaviour
     {
         if (_instance == null)
             _instance = this;
-        else
-            Destroy(this);
     }
 
     private void Start()
@@ -37,12 +36,12 @@ public class InspectSystem : MonoBehaviour
             var newObject = Instantiate(obj, point);
             _showcase.Add(newObject);
             newObject.SetActive(false);
-            newObject.layer = LayerMask.NameToLayer("Inspect");
+            newObject.layer = inspectLayer;
             newObject.AddComponent<BoxCollider>();
             newObject.AddComponent<ShowCaseObject>();
             
             foreach (var child in newObject.GetComponentsInChildren<MeshRenderer>())
-                child.gameObject.layer = LayerMask.NameToLayer("Inspect");
+                child.gameObject.layer = inspectLayer;
         }
         _instance.commentText.text = "";
     }

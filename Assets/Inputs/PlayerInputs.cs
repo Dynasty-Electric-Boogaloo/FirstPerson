@@ -171,6 +171,15 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Return"",
+                    ""type"": ""Button"",
+                    ""id"": ""482de74f-5124-40ec-98a6-1a68a2bbb525"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -316,6 +325,17 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""action"": ""UseMusicBox"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""04af4f92-5e39-4365-9634-d4c95841b361"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Return"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -333,6 +353,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         m_Controls_Inspect = m_Controls.FindAction("Inspect", throwIfNotFound: true);
         m_Controls_Dance = m_Controls.FindAction("Dance", throwIfNotFound: true);
         m_Controls_UseMusicBox = m_Controls.FindAction("UseMusicBox", throwIfNotFound: true);
+        m_Controls_Return = m_Controls.FindAction("Return", throwIfNotFound: true);
     }
 
     ~@PlayerInputs()
@@ -422,6 +443,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     private readonly InputAction m_Controls_Inspect;
     private readonly InputAction m_Controls_Dance;
     private readonly InputAction m_Controls_UseMusicBox;
+    private readonly InputAction m_Controls_Return;
     /// <summary>
     /// Provides access to input actions defined in input action map "Controls".
     /// </summary>
@@ -469,6 +491,10 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Controls/UseMusicBox".
         /// </summary>
         public InputAction @UseMusicBox => m_Wrapper.m_Controls_UseMusicBox;
+        /// <summary>
+        /// Provides access to the underlying input action "Controls/Return".
+        /// </summary>
+        public InputAction @Return => m_Wrapper.m_Controls_Return;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -522,6 +548,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @UseMusicBox.started += instance.OnUseMusicBox;
             @UseMusicBox.performed += instance.OnUseMusicBox;
             @UseMusicBox.canceled += instance.OnUseMusicBox;
+            @Return.started += instance.OnReturn;
+            @Return.performed += instance.OnReturn;
+            @Return.canceled += instance.OnReturn;
         }
 
         /// <summary>
@@ -560,6 +589,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @UseMusicBox.started -= instance.OnUseMusicBox;
             @UseMusicBox.performed -= instance.OnUseMusicBox;
             @UseMusicBox.canceled -= instance.OnUseMusicBox;
+            @Return.started -= instance.OnReturn;
+            @Return.performed -= instance.OnReturn;
+            @Return.canceled -= instance.OnReturn;
         }
 
         /// <summary>
@@ -663,5 +695,12 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnUseMusicBox(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Return" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnReturn(InputAction.CallbackContext context);
     }
 }
