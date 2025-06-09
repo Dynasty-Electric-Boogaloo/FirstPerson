@@ -23,7 +23,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_PickableLoge_02 3
+  m_Name: M_PickableTechnique_01
   m_Shader: {fileID: -6465566751694194690, guid: 98726aac83d9318428cd9df2bf1632c1, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -48,7 +48,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _AORM:
-        m_Texture: {fileID: 2800000, guid: e1d4225b9ef88ff48b25fa301658c78b, type: 3}
+        m_Texture: {fileID: 2800000, guid: a9b954a89f375a841b5a3c4524497381, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _AnisotropyMap:
@@ -60,7 +60,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseTexture:
-        m_Texture: {fileID: 2800000, guid: c5f1cf9c510361743b33cf76a24211db, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2822c31e0d5c41a44891a779bd1330dc, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BentNormalMap:
@@ -108,7 +108,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal:
-        m_Texture: {fileID: 2800000, guid: c539e0b7d1837df46b56e2da04297434, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6e142f0fc21148042ba4f526eb869798, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMap:
@@ -226,7 +226,7 @@ Material:
     - _Metallic: 0
     - _MetallicRemapMax: 1
     - _MetallicRemapMin: 0
-    - _NormalIntensity: 1
+    - _NormalIntensity: 0.6
     - _NormalMapSpace: 0
     - _NormalScale: 1
     - _ObjectSpaceUVMapping: 0
@@ -245,7 +245,7 @@ Material:
     - _RefractionModel: 0
     - _RenderQueueType: 1
     - _RequireSplitLighting: 0
-    - _RoughnessIntensity: 1
+    - _RoughnessIntensity: 0.8
     - _Saturation: 1
     - _Selected: 0
     - _Smoothness: 0.5
