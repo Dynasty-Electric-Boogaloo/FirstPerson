@@ -13,7 +13,7 @@ public class InspectSystem : MonoBehaviour
     [SerializeField] private Transform point;
     [SerializeField] private TMP_Text commentText;
     [SerializeField] private List<GameObject> showcasePrefab = new List<GameObject>();
-    [SerializeField] private LayerMask inspectLayer;
+    [SerializeField] private int inspectLayer;
     private readonly List<GameObject> _showcase= new List<GameObject>();
     private GameObject _current;
     

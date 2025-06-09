@@ -20,8 +20,7 @@ namespace UI
       
       public static void CallPause()
       {
-         PauseGame(!instance. _pause);
-         InspectSystem.Hide();
+         PauseGame(!instance._pause);
       }
       
       public static void PauseGame(bool setPause, bool showMenu = true)

@@ -127,6 +127,8 @@ namespace Player
 
             if (_selectedObject.TryGetComponent<Mannequin>(out var mannequin))
             {
+                PlayerRoot.SetIsInMannequin(!PlayerRoot.GetIsInMannequin());
+                UiManager.InMannequin(PlayerRoot.GetIsInMannequin());
                 _mannequin = mannequin;
                 _playerCamera.GoToPosition(mannequin.GetCameraPos());
                 PlayerData.Rigidbody.linearVelocity = Vector3.zero;
