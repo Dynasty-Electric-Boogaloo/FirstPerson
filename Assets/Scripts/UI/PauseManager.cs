@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace UI
 {
@@ -6,7 +7,6 @@ namespace UI
    {
       public static PauseManager instance;
       [SerializeField] private GameObject pausePanel;
-      [SerializeField] private PlayerInputs _playerInputs;
       private bool _pause;
 
       private void Awake()
@@ -18,12 +18,9 @@ namespace UI
             pausePanel.SetActive(false);
       }
       
-      private void Update()
+      public static void CallPause()
       {
-         if (!_playerInputs.Controls.Return.WasPressedThisFrame()) 
-            return;
-         
-         PauseGame(!_pause);
+         PauseGame(!instance. _pause);
          InspectSystem.Hide();
       }
       
