@@ -24,21 +24,12 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Crouch",
-                    "type": "Button",
-                    "id": "147c83e7-4677-4d2b-9892-349c93d4d5d2",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "UseFlash",
                     "type": "Button",
                     "id": "eda0b0ef-1e56-46ef-896a-68e9431936f0",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": "SlowTap(duration=0.2),Tap",
+                    "interactions": "",
                     "initialStateCheck": false
                 },
                 {
@@ -87,9 +78,9 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Extract",
+                    "name": "UseMusicBox",
                     "type": "Button",
-                    "id": "01f2e88e-f980-4a86-baf5-957e0be8175d",
+                    "id": "91348689-e4cd-4db5-b98d-98159eef2f5b",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -165,17 +156,6 @@
                 },
                 {
                     "name": "",
-                    "id": "db60ce22-b4b7-4083-a303-1dc68b0800e2",
-                    "path": "<Keyboard>/shift",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Crouch",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "18edf257-a565-44ae-a8a5-867fa5fedf81",
                     "path": "<Keyboard>/f",
                     "interactions": "",
@@ -221,7 +201,7 @@
                 {
                     "name": "",
                     "id": "85cbced4-5072-4998-9d21-7e7a98bee9d0",
-                    "path": "<Keyboard>/t",
+                    "path": "<Keyboard>/i",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -242,12 +222,12 @@
                 },
                 {
                     "name": "",
-                    "id": "8b9adaa9-a33a-48d0-a64f-9a75dbda5d3b",
-                    "path": "<Keyboard>/q",
+                    "id": "3947b719-b764-42d6-9f29-64554589b824",
+                    "path": "<Keyboard>/c",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Extract",
+                    "action": "UseMusicBox",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

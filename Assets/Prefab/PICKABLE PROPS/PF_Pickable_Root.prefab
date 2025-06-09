@@ -48,6 +48,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3b26386d4354140a0be95c4772cca84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normal: {fileID: 2100000, guid: 8f61a4baf85e43644ad160d206781087, type: 2}
+  highlight: {fileID: 2100000, guid: 86fb5372a1dd1244d85c782d128d9abf, type: 2}
+  rend: {fileID: 6278856189066994728}
   onRestore:
     m_PersistentCalls:
       m_Calls: []
@@ -121,6 +124,7 @@ MonoBehaviour:
     revealed: {fileID: 2100000, guid: 47f888b96f0c1f14ea3edaa6e6ef6545, type: 2}
     awake: {fileID: 2100000, guid: 7c1ec54872b23d1468b2723c1d45848f, type: 2}
   isInfected: 0
+  showObject: 0
   maxTimeBeforeAlert: 5
   checkPlayerRadius: 1
   playerLayer:
@@ -214,6 +218,11 @@ PrefabInstance:
       addedObject: {fileID: 3578016154374374117}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6db438bbb8773b54aa9e6e08d92d249a, type: 3}
+--- !u!23 &6278856189066994728 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 5637405298363120772, guid: 6db438bbb8773b54aa9e6e08d92d249a, type: 3}
+  m_PrefabInstance: {fileID: 1810143790326831276}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7949059687033350997 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8596904966076986361, guid: 6db438bbb8773b54aa9e6e08d92d249a, type: 3}

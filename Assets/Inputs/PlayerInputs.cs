@@ -110,21 +110,12 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Crouch"",
-                    ""type"": ""Button"",
-                    ""id"": ""147c83e7-4677-4d2b-9892-349c93d4d5d2"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""UseFlash"",
                     ""type"": ""Button"",
                     ""id"": ""eda0b0ef-1e56-46ef-896a-68e9431936f0"",
                     ""expectedControlType"": """",
                     ""processors"": """",
-                    ""interactions"": ""SlowTap(duration=0.2),Tap"",
+                    ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
@@ -173,9 +164,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Extract"",
+                    ""name"": ""UseMusicBox"",
                     ""type"": ""Button"",
-                    ""id"": ""01f2e88e-f980-4a86-baf5-957e0be8175d"",
+                    ""id"": ""91348689-e4cd-4db5-b98d-98159eef2f5b"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -251,17 +242,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""db60ce22-b4b7-4083-a303-1dc68b0800e2"",
-                    ""path"": ""<Keyboard>/shift"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Crouch"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""18edf257-a565-44ae-a8a5-867fa5fedf81"",
                     ""path"": ""<Keyboard>/f"",
                     ""interactions"": """",
@@ -307,7 +287,7 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""85cbced4-5072-4998-9d21-7e7a98bee9d0"",
-                    ""path"": ""<Keyboard>/t"",
+                    ""path"": ""<Keyboard>/i"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -328,12 +308,12 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""8b9adaa9-a33a-48d0-a64f-9a75dbda5d3b"",
-                    ""path"": ""<Keyboard>/q"",
+                    ""id"": ""3947b719-b764-42d6-9f29-64554589b824"",
+                    ""path"": ""<Keyboard>/c"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Extract"",
+                    ""action"": ""UseMusicBox"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -346,14 +326,13 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         m_Controls = asset.FindActionMap("Controls", throwIfNotFound: true);
         m_Controls_Move = m_Controls.FindAction("Move", throwIfNotFound: true);
         m_Controls_Look = m_Controls.FindAction("Look", throwIfNotFound: true);
-        m_Controls_Crouch = m_Controls.FindAction("Crouch", throwIfNotFound: true);
         m_Controls_UseFlash = m_Controls.FindAction("UseFlash", throwIfNotFound: true);
         m_Controls_ReloadFlash = m_Controls.FindAction("ReloadFlash", throwIfNotFound: true);
         m_Controls_Throw = m_Controls.FindAction("Throw", throwIfNotFound: true);
         m_Controls_Interact = m_Controls.FindAction("Interact", throwIfNotFound: true);
         m_Controls_Inspect = m_Controls.FindAction("Inspect", throwIfNotFound: true);
         m_Controls_Dance = m_Controls.FindAction("Dance", throwIfNotFound: true);
-        m_Controls_Extract = m_Controls.FindAction("Extract", throwIfNotFound: true);
+        m_Controls_UseMusicBox = m_Controls.FindAction("UseMusicBox", throwIfNotFound: true);
     }
 
     ~@PlayerInputs()
@@ -436,14 +415,13 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
     private List<IControlsActions> m_ControlsActionsCallbackInterfaces = new List<IControlsActions>();
     private readonly InputAction m_Controls_Move;
     private readonly InputAction m_Controls_Look;
-    private readonly InputAction m_Controls_Crouch;
     private readonly InputAction m_Controls_UseFlash;
     private readonly InputAction m_Controls_ReloadFlash;
     private readonly InputAction m_Controls_Throw;
     private readonly InputAction m_Controls_Interact;
     private readonly InputAction m_Controls_Inspect;
     private readonly InputAction m_Controls_Dance;
-    private readonly InputAction m_Controls_Extract;
+    private readonly InputAction m_Controls_UseMusicBox;
     /// <summary>
     /// Provides access to input actions defined in input action map "Controls".
     /// </summary>
@@ -463,10 +441,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Controls/Look".
         /// </summary>
         public InputAction @Look => m_Wrapper.m_Controls_Look;
-        /// <summary>
-        /// Provides access to the underlying input action "Controls/Crouch".
-        /// </summary>
-        public InputAction @Crouch => m_Wrapper.m_Controls_Crouch;
         /// <summary>
         /// Provides access to the underlying input action "Controls/UseFlash".
         /// </summary>
@@ -492,9 +466,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @Dance => m_Wrapper.m_Controls_Dance;
         /// <summary>
-        /// Provides access to the underlying input action "Controls/Extract".
+        /// Provides access to the underlying input action "Controls/UseMusicBox".
         /// </summary>
-        public InputAction @Extract => m_Wrapper.m_Controls_Extract;
+        public InputAction @UseMusicBox => m_Wrapper.m_Controls_UseMusicBox;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -527,9 +501,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Look.started += instance.OnLook;
             @Look.performed += instance.OnLook;
             @Look.canceled += instance.OnLook;
-            @Crouch.started += instance.OnCrouch;
-            @Crouch.performed += instance.OnCrouch;
-            @Crouch.canceled += instance.OnCrouch;
             @UseFlash.started += instance.OnUseFlash;
             @UseFlash.performed += instance.OnUseFlash;
             @UseFlash.canceled += instance.OnUseFlash;
@@ -548,9 +519,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Dance.started += instance.OnDance;
             @Dance.performed += instance.OnDance;
             @Dance.canceled += instance.OnDance;
-            @Extract.started += instance.OnExtract;
-            @Extract.performed += instance.OnExtract;
-            @Extract.canceled += instance.OnExtract;
+            @UseMusicBox.started += instance.OnUseMusicBox;
+            @UseMusicBox.performed += instance.OnUseMusicBox;
+            @UseMusicBox.canceled += instance.OnUseMusicBox;
         }
 
         /// <summary>
@@ -568,9 +539,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Look.started -= instance.OnLook;
             @Look.performed -= instance.OnLook;
             @Look.canceled -= instance.OnLook;
-            @Crouch.started -= instance.OnCrouch;
-            @Crouch.performed -= instance.OnCrouch;
-            @Crouch.canceled -= instance.OnCrouch;
             @UseFlash.started -= instance.OnUseFlash;
             @UseFlash.performed -= instance.OnUseFlash;
             @UseFlash.canceled -= instance.OnUseFlash;
@@ -589,9 +557,9 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
             @Dance.started -= instance.OnDance;
             @Dance.performed -= instance.OnDance;
             @Dance.canceled -= instance.OnDance;
-            @Extract.started -= instance.OnExtract;
-            @Extract.performed -= instance.OnExtract;
-            @Extract.canceled -= instance.OnExtract;
+            @UseMusicBox.started -= instance.OnUseMusicBox;
+            @UseMusicBox.performed -= instance.OnUseMusicBox;
+            @UseMusicBox.canceled -= instance.OnUseMusicBox;
         }
 
         /// <summary>
@@ -647,13 +615,6 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnLook(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Crouch" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnCrouch(InputAction.CallbackContext context);
-        /// <summary>
         /// Method invoked when associated input action "UseFlash" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
@@ -696,11 +657,11 @@ public partial class @PlayerInputs: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnDance(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Extract" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "UseMusicBox" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnExtract(InputAction.CallbackContext context);
+        void OnUseMusicBox(InputAction.CallbackContext context);
     }
 }

@@ -9,14 +9,19 @@ namespace Monster
 {
     public class MonsterRoot : MonoBehaviour
     {
+        private static MonsterRoot _instance;
         [SerializeField] private ProceduralHead proceduralHead;
-        [SerializeField] private bool chasing;
         private MonsterData _monsterData;
         private Vector3 _startPosition;
         private Quaternion _startRotation;
         
+        public static Vector3 GetMonsterPosition() => _instance.transform.position; 
+        
         private void Awake()
         {
+            if (_instance == null)
+                _instance = this;
+
             _monsterData = new MonsterData
             {
                 rigidbody = GetComponent<Rigidbody>(),
@@ -32,10 +37,16 @@ namespace Monster
             _startPosition = transform.position;
             _startRotation = transform.rotation;
         }
+            
+        private void OnDestroy()
+        {
+            if (_instance == this)
+                _instance = null;
+        }
 
         private void Update()
         {
-            proceduralHead.SetPose(chasing ? "Chasing" : "Patrolling");
+            proceduralHead.SetPose(_monsterData.chasing ? "Chasing" : "Patrolling");
             
             var diff = PlayerRoot.Position - transform.position;
             diff.y = 0;
@@ -43,7 +54,7 @@ namespace Monster
             if (diff.magnitude > 1.5f) 
                 return;
             
-            PlayerRoot.ResetPosition();
+            PlayerRoot.Die();
             transform.position = _startPosition;
             transform.rotation = _startRotation;
             _monsterData.targetPoint = transform.position;
@@ -54,6 +65,12 @@ namespace Monster
             _monsterData.chaseTimer = 0;
             _monsterData.targetNode = new NodeId(-1);
             InteractableManager.Restore();
+        }
+        
+        public static void SetVisible(bool visible)
+        {
+            if(_instance)
+                _instance.gameObject.SetActive(visible);
         }
     }
 }

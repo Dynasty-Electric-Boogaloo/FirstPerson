@@ -1,9 +1,15 @@
-﻿using UnityEngine;
+﻿using System;
+using DG.Tweening.Plugins.Options;
+using UI;
+using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Player
 {
     public class PlayerCamera : PlayerBehaviour
     {
+        
+        [SerializeField] private MeshRenderer rendererMesh;
         [SerializeField] private float maxVerticalAngle;
         [SerializeField] private float sensitivity;
         [SerializeField] private float fadeoutSpeed;
@@ -15,15 +21,18 @@ namespace Player
         private float _horizontalBobbingTimer;
         private float _verticalBobbingTimer;
         private float _amplitude;
-        
+        private Camera _camera;
+
         private void Start()
         {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+            _camera = Camera.main;
         }
 
         private void Update()
         {
+            if(PlayerData.IsInMannequin || PauseManager.GetPause()) 
+                return;
+            
             var velocity = PlayerData.Rigidbody.linearVelocity;
             velocity.y = 0;
             var speed = velocity.magnitude / maxMovementSpeed;
@@ -31,6 +40,24 @@ namespace Player
             HandleViewRotation();
             HandleBobbing(speed);
             UpdateRotation(speed);
+        }
+
+        public void GoToPosition(Transform pos)
+        {
+            _camera.gameObject.transform.position = pos.position;
+            _camera.gameObject.transform.rotation = pos.rotation;
+
+            if (rendererMesh)
+                rendererMesh.enabled = false;
+        }
+        
+        public void ReturnToPosition()
+        {
+            _camera.gameObject.transform.localPosition = Vector3.zero;
+            _camera.gameObject.transform.localRotation = Quaternion.identity;
+            
+            if (rendererMesh)
+                rendererMesh.enabled = true;
         }
 
         private void HandleViewRotation()

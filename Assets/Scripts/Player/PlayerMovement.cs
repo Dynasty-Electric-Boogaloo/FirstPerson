@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Player
 {
@@ -15,7 +16,7 @@ namespace Player
         }
 
         [SerializeField] private MovementConfig walkConfig;
-        [SerializeField] private MovementConfig crouchConfig;
+        [SerializeField] private MovementConfig slowConfig;
         [SerializeField] private LayerMask groundMask;
         [SerializeField] private float groundedGroundCheckLength;
         [SerializeField] private float airborneGroundCheckLength;
@@ -29,19 +30,22 @@ namespace Player
 
         private void Update()
         {
+            if(PlayerData.IsInMannequin)
+            { 
+                return;
+            }
+            
             UpdateMovement();
             UpdateGravity();
         }
 
         private void UpdateMovement()
         {
-            var moveConfig = PlayerData.Crouched ? crouchConfig : walkConfig;
+            var moveConfig = PlayerData.Reloading || PlayerData.Dancing ? slowConfig : walkConfig;
             var move = PlayerData.PlayerInputs.Controls.Move.ReadValue<Vector2>();
 
             if (move.sqrMagnitude < 0.01f)
-            {
                 move = Vector2.zero;
-            }
             
             var targetMovement = new Vector3(
                 move.x * PlayerData.Right.x + move.y * PlayerData.Forward.x, 
@@ -84,7 +88,7 @@ namespace Player
 
         private void GroundPlayer(float groundCheckLength)
         {
-            var moveConfig = PlayerData.Crouched ? crouchConfig : walkConfig;
+            var moveConfig = PlayerData.Reloading || PlayerData.Dancing ? slowConfig : walkConfig;
             var linearVelocity = PlayerData.Rigidbody.linearVelocity;
             linearVelocity.y = 0;
             PlayerData.Rigidbody.linearVelocity = linearVelocity;

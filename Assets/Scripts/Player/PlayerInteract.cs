@@ -1,4 +1,6 @@
-﻿using UI;
+﻿using System;
+using Interactables;
+using UI;
 using UnityEngine;
 
 namespace Player
@@ -14,20 +16,38 @@ namespace Player
         [SerializeField] private float grabSize = 0.1f;
         private Interactable _selectedObject;
         private GrabObject _grabbedObject;
+        private Mannequin _mannequin;
         private RaycastHit _raycastHit;
+        private PlayerCamera _playerCamera;
+        private PlayerMusicBox _playerMusicBox;
+
+        private void Start()
+        {
+            _playerCamera = GetComponent<PlayerCamera>();
+            _playerMusicBox = GetComponent<PlayerMusicBox>();
+        }
 
         private void Update()
         {
+            if (_mannequin)
+            {
+                if (!PlayerData.PlayerInputs.Controls.Interact.WasPressedThisFrame()) 
+                    return;
+
+                _mannequin = null;
+                PlayerRoot.SetIsInMannequin(false);
+                UiManager.InMannequin(false);
+                _playerCamera.ReturnToPosition();
+                return;
+            }
             if (!_grabbedObject)
             {
                 HandleHighlight();
-                
-                if(!_selectedObject) 
+
+                if (!_selectedObject)
                     return;
-                
+
                 TryInteract();
-                TryExtract();
-                
                 return;
             }
             HandleGrabbed();
@@ -89,29 +109,49 @@ namespace Player
 
         private void TryInteract()
         {
-            if (!PlayerData.PlayerInputs.Controls.Interact.WasPressedThisFrame()) return;
+            if (!PlayerData.PlayerInputs.Controls.Interact.WasPressedThisFrame()) 
+                return;
             
             _selectedObject.Interact();
+            TryExtract();
+
+            if (_selectedObject.TryGetComponent<Mannequin>(out var mannequin))
+            {
+                _mannequin = mannequin;
+                _playerCamera.GoToPosition(mannequin.GetCameraPos());
+                PlayerData.Rigidbody.linearVelocity = Vector3.zero;
                 
-            if (_selectedObject.TryGetComponent<Mimic>(out var mimic)) 
-                mimic.WakingUp();
+            }
+
+            if (_selectedObject.TryGetComponent<ObjectivePickUp>(out var objective))
+            {
+                objective.PickedUp();
+
+                if (!TryGetComponent<PlayerMusicBox>(out var music))
+                    return;
+                music.IncreaseState();
+            }
 
             if (_selectedObject is not GrabObject grab) 
                 return;
-                
+            
+            if(_playerMusicBox)
+                _playerMusicBox.SetMusicBox(false);
+            
             grab.Grab(grabPoint);
             _grabbedObject = grab;
         }
 
         private void TryExtract()
         {
-            if (!PlayerData.PlayerInputs.Controls.Extract.WasPressedThisFrame()) 
+            if (!_selectedObject.TryGetComponent<Mimic>(out var mimic)) 
                 return;
             
-            //QTE
-            if (_selectedObject.TryGetComponent<Mimic>(out var mimic))
-                mimic.DestroyMimic();
-                
+            
+            //GetComponent<PlayerDance>().SetDancing(true, true);
+            
+            mimic.DestroyMimic();
+
             _selectedObject.Break();
         }
 

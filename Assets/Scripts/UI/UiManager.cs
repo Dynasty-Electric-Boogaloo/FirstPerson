@@ -1,31 +1,26 @@
 using System;
+using DG.Tweening;
 using Game;
 using Interactables;
+using Player;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.Serialization;
 
 namespace UI
 {
     public class UiManager : MonoBehaviour
     {
-        [SerializeField] private Image inputShow;
-        [SerializeField] private Sprite normalSprite;
-        [SerializeField] private Sprite grabbingSprite;
+        [SerializeField] private DancePanel dancePanel;
         [SerializeField] private TMP_Text usageText;
-        //Code only for first playable, nuke it afterwards
-        [SerializeField] private TMP_Text collectedText;
-        [SerializeField] private TMP_Text helpText;
+        [SerializeField] private Image mannequinMask;
         
         private Interactable _current;
         
         private static UiManager _instance;
-        
-        //Code only for first playable, nuke it afterwards
-        private int _collectibleCount;
-        private int _collectedCount;
         
         private void Awake()
         {
@@ -36,37 +31,6 @@ namespace UI
 
             if (usageText)
                 usageText.text = "";
-            
-            //Code only for first playable, nuke it afterwards
-            _collectibleCount = FindObjectsByType<Collectible>(FindObjectsInactive.Exclude, FindObjectsSortMode.None).Length;
-            _collectedCount = 0;
-            collectedText.text = $"{_instance._collectedCount}/{_instance._collectibleCount}";
-        }
-
-        private void Update()
-        {
-            if (Keyboard.current.eKey.wasPressedThisFrame)
-                helpText.enabled = false;
-        }
-
-        //Code only for first playable, nuke it afterwards
-        public static void AddCollected()
-        {
-            if (!_instance)
-                return;
-            
-            _instance._collectedCount++;
-            if (_instance._collectedCount >= _instance._collectibleCount)
-            {
-                SceneLoader.LoadSceneGroup(4, LoadSceneMode.Single);
-                return;
-            }
-
-            if (!_instance.collectedText)
-                return;
-            
-            _instance.collectedText.text = $"{_instance._collectedCount}/{_instance._collectibleCount}";
-            
         }
 
         public static void SetInteract(Interactable interactable)
@@ -84,18 +48,51 @@ namespace UI
                 _instance.usageText.text = "";
                 return;
             }
-
+            
             _instance.usageText.text = interactable.GetInteractionType() switch
             {
+                InteractionType.Interactable => "Interact - E",
                 InteractionType.GrabObject => "Grab - E\\nDestroy - A",
                 InteractionType.Collectible => "Collect - E",
+                InteractionType.Mannequin => "Enter - E",
                 _ => throw new ArgumentOutOfRangeException()
             };
         }
 
         public static void SetGrab()
         {
-            _instance.usageText.text = "Drop - E\\nThrow - Left Click";
+            if(!_instance) 
+                return;
+            
+            if(_instance && _instance.usageText) 
+                _instance.usageText.text = "Drop - E\\nThrow - Left Click";
+        }
+
+        public static void SetDance(float tolerance, bool isMimic)
+        {
+            if(!_instance) 
+                return;
+            
+            var isDancing = PlayerRoot.GetIsDancing();
+            
+            if (!_instance.dancePanel) 
+                return;
+            
+            if(isDancing)
+                _instance.dancePanel.SetInput(tolerance);
+            else 
+                _instance.dancePanel.StartDance(!isMimic);
+        }
+
+        public static void InMannequin(bool isInMannequin = true)
+        {
+            if(!_instance) 
+                return;
+            
+            if(_instance && _instance.mannequinMask)
+                _instance.mannequinMask.gameObject.SetActive(isInMannequin);
+            if( _instance.usageText && isInMannequin) 
+                _instance.usageText.text = "Exit - E";
         }
     }
 }
