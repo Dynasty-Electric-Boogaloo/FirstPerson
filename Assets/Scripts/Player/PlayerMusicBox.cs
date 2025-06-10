@@ -34,7 +34,7 @@ namespace Player
             
             BatteryManager.Battery.UpdateBatteryWithHud();
 
-            if (Vector3.Distance(Monster.MonsterRoot.GetMonsterPosition(), transform.position) > thresholdDetectionDistance)
+            if (Vector3.Distance(Monster.MonsterRoot.GetMonsterPosition(), transform.position) > thresholdDetectionDistance) 
                 return;
 
             musicBoxObject.Using((Monster.MonsterRoot.GetMonsterPosition() - transform.position) / thresholdDetectionDistance, transform.forward);
@@ -72,6 +72,7 @@ namespace Player
             
             state -=  1;
             PlayerData.CurrentIndexObjective = (int)state;
+            ObjectiveManager.RemoveToFound();
             musicBoxObject.SetLevel((int)state);
         }
     

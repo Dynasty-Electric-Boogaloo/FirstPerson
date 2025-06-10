@@ -14,7 +14,6 @@ namespace Player
         private Vector3 _startPosition;
         private Quaternion _startRotation;
         private PlayerMusicBox _musicBox;
-
         public static Vector3 Position => _instance ? _instance.transform.position : Vector3.zero;
         
         public static int CurrentIndex  =>  _instance ? _instance._playerData.CurrentIndexObjective : -1;
@@ -41,6 +40,7 @@ namespace Player
             _startPosition = transform.position;
             _startRotation = transform.rotation;
             _musicBox = GetComponent<PlayerMusicBox>();
+            SetRedLight(false);
         }
 
         private void OnDestroy()
@@ -71,7 +71,7 @@ namespace Player
         {
             if(_instance == null)
                 return;
-            
+
             ResetPosition();
             if (_instance._musicBox)
                 _instance._musicBox.DecreaseState();
@@ -81,31 +81,30 @@ namespace Player
         
         public static void SetIsDancing(bool setOn)
         {
-            if(_instance == null)
-                return;
-            
-            _instance._playerData.Dancing = setOn;
+            if(_instance)
+                _instance._playerData.Dancing = setOn;
         }
         
-        public static bool GetIsDestroying => _instance && _instance._playerData.DestroyingMimic;
+        public static bool GetIsDestroying => _instance &&_instance._playerData.DestroyingMimic;
         
         public static void SetIsDestroying(bool setOn)
         {
-            if(_instance == null)
-                return;
-            
-            _instance._playerData.DestroyingMimic = setOn;
+            if(_instance)
+                _instance._playerData.DestroyingMimic = setOn;
         }
         
+        public static bool GetIsInMannequin() =>_instance && _instance._playerData.IsInMannequin;
         
-        public static bool GetIsInMannequin() =>_instance &&  _instance._playerData.IsInMannequin;
-        
-        public static void SetIsInMannequin(bool setOn) 
+        public static void SetIsInMannequin(bool setOn)
         {
-            if(_instance == null)
-                return;
-            
-            _instance._playerData.IsInMannequin = setOn;
+            if(_instance)
+                _instance._playerData.IsInMannequin = setOn;
+        }
+        
+        public static void SetRedLight(bool setOn) 
+        {
+            if(_instance)
+                _instance._playerData.RedLight = setOn;
         }
     }
 }

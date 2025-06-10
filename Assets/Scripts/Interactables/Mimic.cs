@@ -74,6 +74,7 @@ public class Mimic : MonoBehaviour
     {
         if(_isAwake) 
             return;
+        
         meshRenderer.sharedMaterial = isInfected && inLight ? regularMaterialSet.revealed : regularMaterialSet.normal;
     }
 
@@ -81,6 +82,7 @@ public class Mimic : MonoBehaviour
     {
         if(!BatteryManager.Battery) 
             return;
+        
         BatteryManager.Battery.AddBattery(1);
     }
     
