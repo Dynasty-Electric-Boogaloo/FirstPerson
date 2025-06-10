@@ -10,7 +10,7 @@ public class DanceManager : MonoBehaviour
     [SerializeField] private List<MimicDestructionQte> qteMimic = new List<MimicDestructionQte>();
     [SerializeField] private List<MimicDestructionQte> qteMonstre = new List<MimicDestructionQte>();
     [SerializeField] private float tolerance = 0.5f;
-    private PlayerInputs _inputs = new PlayerInputs(); 
+    private PlayerInputs _inputs;
     
     private MimicDestructionQte _currentMimicQTE;
     private PlayerDance _playerDance;
@@ -22,6 +22,7 @@ public class DanceManager : MonoBehaviour
     {
         if (_instance == null)
             _instance = this;
+        _inputs = new PlayerInputs(); 
         _inputs.Enable();
     }
     private void OnDestroy()
@@ -39,6 +40,8 @@ public class DanceManager : MonoBehaviour
             return;
         
         _timer += Time.deltaTime;
+        if (_timer > _currentMimicQTE.notes[_currentIndex] + tolerance )
+            SetNextQte(false);
         
         if(!_inputs.Controls.Dance.WasPressedThisFrame())
             return;
