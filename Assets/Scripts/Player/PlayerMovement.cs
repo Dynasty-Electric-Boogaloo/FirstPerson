@@ -31,9 +31,13 @@ namespace Player
 
         private void Update()
         {
-            if(PlayerData.IsInMannequin)
+            if (PlayerData.IsInMannequin)
+            {
+                PlayerData.Rigidbody.constraints = RigidbodyConstraints.FreezeAll;
                 return;
-            
+            }
+
+            PlayerData.Rigidbody.constraints = RigidbodyConstraints.FreezeRotation;
             UpdateMovement();
             UpdateGravity();
         }
