@@ -11,11 +11,6 @@ namespace Interactables
         public Transform GetCameraPos() => cameraPos;
 
         [SerializeField] private LayerMask groundMask;
-        public override void Interact()
-        {
-            PlayerRoot.SetIsInMannequin(!PlayerRoot.GetIsInMannequin());
-            UiManager.InMannequin(PlayerRoot.GetIsInMannequin());
-        }
 
         public override InteractionType GetInteractionType()
         {

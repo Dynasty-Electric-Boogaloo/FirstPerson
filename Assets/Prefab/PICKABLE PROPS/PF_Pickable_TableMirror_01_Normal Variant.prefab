@@ -75,6 +75,11 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 591449893863735788, guid: 32b36b3ebf9ce494292acca0abecb91a, type: 3}
   m_PrefabInstance: {fileID: 5548084323577244856}
   m_PrefabAsset: {fileID: 0}
+--- !u!33 &7147061488243186078 stripped
+MeshFilter:
+  m_CorrespondingSourceObject: {fileID: 3445737236184708390, guid: 32b36b3ebf9ce494292acca0abecb91a, type: 3}
+  m_PrefabInstance: {fileID: 5548084323577244856}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8614842410477940730
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -119,6 +124,26 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 8275dc484064d7046b1dc4998be0cbc1, type: 2}
+    - target: {fileID: 6249242940813101897, guid: 821d7aa0646bbc74ca1f2912225dd725, type: 3}
+      propertyPath: index
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249242940813101897, guid: 821d7aa0646bbc74ca1f2912225dd725, type: 3}
+      propertyPath: _renderer
+      value: 
+      objectReference: {fileID: 4957198508169686356}
+    - target: {fileID: 6249242940813101897, guid: 821d7aa0646bbc74ca1f2912225dd725, type: 3}
+      propertyPath: _meshFilter
+      value: 
+      objectReference: {fileID: 7147061488243186078}
+    - target: {fileID: 6249242940813101897, guid: 821d7aa0646bbc74ca1f2912225dd725, type: 3}
+      propertyPath: possible.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6249242940813101897, guid: 821d7aa0646bbc74ca1f2912225dd725, type: 3}
+      propertyPath: 'possible.Array.data[0]'
+      value: '"My old Mirror..."'
+      objectReference: {fileID: 0}
     - target: {fileID: 6658004721324067104, guid: 821d7aa0646bbc74ca1f2912225dd725, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
