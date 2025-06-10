@@ -14,8 +14,7 @@ public class BatteryManager : MonoBehaviour
     [Range(0, 100)]
     [SerializeField] private int startBatteryPercent;
     [SerializeField] private Hud hud;
-
-
+    
     private void Awake()
     {
         if (Battery == null) 

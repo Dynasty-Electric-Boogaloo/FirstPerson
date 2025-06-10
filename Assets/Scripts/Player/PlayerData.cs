@@ -8,6 +8,7 @@ namespace Player
         public PlayerInputs PlayerInputs;
         public Rigidbody Rigidbody;
         public Transform CameraHolder;
+        public Transform CameraTransform;
         public Vector3 Forward;
         public Vector3 Right;
         public bool Grounded;

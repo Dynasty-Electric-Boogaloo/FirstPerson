@@ -1,13 +1,7 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using Player;
 using UI;
 using UnityEngine;
-using UnityEngine.InputSystem.Interactions;
-using UnityEngine.Serialization;
-using UnityEngine.UI;
 
 namespace Player
 {
@@ -73,9 +67,22 @@ namespace Player
 
         private void Update()
         {
+            UpdateLightPosition();
             LightUpdate();
             UpdateInfectedObjects();
         }
+
+        private void UpdateLightPosition()
+        {
+            if (!PlayerData.IsInMannequin)
+            {
+                flashLightTransform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
+                return;
+            }
+            
+            flashLightTransform.SetPositionAndRotation(PlayerData.CameraTransform.position + Vector3.down * .5f + PlayerData.CameraTransform.forward, PlayerData.CameraTransform.rotation);
+        }
+        
         private void LightUpdate()
         {
             if (_playerInput.Controls.UseFlash.WasPressedThisFrame() && PlayerData.RedLight)
@@ -95,33 +102,39 @@ namespace Player
                     _battery -= Time.deltaTime;
                 else 
                     _batteryManager.ReduceBattery();
-                
-                if( CurrentBattery / CurrentBatteryMax < lightFalloffThreshold) 
-                    light.intensity = ((CurrentBattery  / CurrentBatteryMax ) * CurrentLightIntensity / lightFalloffThreshold ) ;
-
-                if (Mathf.Abs(CurrentBattery  / CurrentBatteryMax  - flicker) < 0.1 && !_isFlickering)
-                    StartCoroutine(Flickering());
             }
             
             if (hud)
                 hud.UpdateBattery(CurrentBattery, CurrentBatteryMax, _special);
-            
+
+            UpdateLightIntensity();
             RevealObjects();
         }
 
-        IEnumerator Flickering()
+        private void UpdateLightIntensity()
         {
-            _isFlickering = true;
-            for (int i = 0; i < 3; i++)
+            var intensity = CurrentLightIntensity;
+
+            if (PlayerData.IsInMannequin)
             {
-                light.gameObject.SetActive(false);
-                yield return new WaitForSeconds(flickerWait);
-                light.gameObject.SetActive(true);
-                yield return new WaitForSeconds(flickerWait);
+                light.intensity = intensity;
+                return;
             }
-            _isFlickering = false;
+
+            var factor = CurrentBattery / CurrentBatteryMax;
+            var flickerEnd = flicker - flickerWait * 6;
+                
+            if (factor < lightFalloffThreshold)
+                intensity = factor * CurrentLightIntensity / lightFalloffThreshold;
+
+            if (factor < flicker && factor >= flickerEnd && !PlayerData.Reloading)
+                intensity = (factor - flickerEnd) % (flickerWait * 2) < flickerWait ? intensity : 0;
+                
+            if (_battery <= 0)
+                intensity = 0;
+                
+            light.intensity = intensity;
         }
-        
         
         private void RevealObjects()
         {
