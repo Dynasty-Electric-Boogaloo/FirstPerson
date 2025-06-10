@@ -20,8 +20,6 @@ public class BatteryManager : MonoBehaviour
     {
         if (Battery == null) 
             Battery = this;
-        else 
-            Destroy(this);
     }
     
     private void OnDestroy()
