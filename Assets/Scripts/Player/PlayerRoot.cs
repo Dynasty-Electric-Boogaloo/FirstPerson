@@ -9,6 +9,7 @@ namespace Player
     public class PlayerRoot : MonoBehaviour
     {
         private static PlayerRoot _instance;
+        [SerializeField] private Transform cameraTransform;
         [SerializeField] private Transform cameraHolder;
         private PlayerData _playerData;
         private Vector3 _startPosition;
@@ -27,6 +28,7 @@ namespace Player
             {
                 PlayerInputs = new PlayerInputs(),
                 Rigidbody = GetComponent<Rigidbody>(),
+                CameraTransform = cameraTransform,
                 CameraHolder = cameraHolder
             };
             _playerData.PlayerInputs.Enable();

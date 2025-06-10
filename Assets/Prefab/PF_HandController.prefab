@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 688160689711914640}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.27, y: 0, z: 0.458}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -522,6 +522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d04ca2a8018c470687a357820d5ce543, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraTransform: {fileID: 4176607000255464154}
   cameraHolder: {fileID: 8213212419984779292}
 --- !u!114 &8077780547725054095
 MonoBehaviour:
@@ -748,7 +749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e263889cb821c74d829844df2cbad42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flashLightTransform: {fileID: 5027031290628114069}
+  flashLightTransform: {fileID: 1175449703356638748}
   light: {fileID: 7799891747133625662}
   hud: {fileID: 266798638669423720}
   batteryMax: 50
@@ -756,7 +757,7 @@ MonoBehaviour:
   lightIntensityMultiplier: 80
   lightFalloffThreshold: 0.2
   flicker: 0.2
-  flickerWait: 0.05
+  flickerWait: 0.001
   specialLightIntensityMultiplier: 80
   lightColor: {r: 1, g: 1, b: 1, a: 1}
   specialLightColor: {r: 1, g: 0.25943398, b: 0.25943398, a: 1}
@@ -904,7 +905,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 3758096511
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1469,7 +1470,7 @@ Transform:
   m_GameObject: {fileID: 7730566909539556764}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.02414571, z: -0, w: 0.9997085}
-  m_LocalPosition: {x: -0.39710003, y: -0.019000031, z: 0.394}
+  m_LocalPosition: {x: 0.8729, y: -0.019000031, z: 0.852}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children:
