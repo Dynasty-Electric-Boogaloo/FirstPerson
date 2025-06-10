@@ -37,12 +37,18 @@ public class ObjectiveManager : MonoBehaviour
 
    public static void AddToFound(ObjectivePickUp objectivePickUp)
    {
+      if (!instance)
+         return;
+      
       instance._pickedUp.Add(objectivePickUp);
       objectivePickUp.gameObject.SetActive(false);
    }
    
    public static void RemoveToFound()
    {
+      if (!instance)
+         return;
+      
       instance._pickedUp.RemoveAt( instance._pickedUp.Count);
    }
 
