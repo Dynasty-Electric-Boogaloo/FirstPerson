@@ -98,6 +98,9 @@ namespace Monster
 
         private bool CanChase()
         {
+            if (PlayerRoot.GetIsInMannequin())
+                return false;
+            
             var playerRoom = ZoneGraphManager.Pathfinding.GetPointRoom(PlayerRoot.Position);
             var monsterRoom = ZoneGraphManager.Pathfinding.GetPointRoom(transform.position);
             

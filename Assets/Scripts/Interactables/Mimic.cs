@@ -42,12 +42,12 @@ public class Mimic : MonoBehaviour
     
     private void CheckForPlayer()
     {
-        if(!isInfected || _isAwake) 
+        if(!isInfected || _isAwake || PlayerRoot.GetIsDancing() || PlayerRoot.GetIsInMannequin()) 
             return;
         
         _numColliders = Physics.OverlapSphereNonAlloc(transform.position, checkPlayerRadius, _hitColliders, playerLayer);
         
-        if (_numColliders > 0 && !PlayerRoot.GetIsDancing()) 
+        if (_numColliders > 0) 
             ReduceTime();
     }
     

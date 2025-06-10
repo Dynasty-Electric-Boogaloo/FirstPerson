@@ -21,16 +21,10 @@ namespace Player
         private float _horizontalBobbingTimer;
         private float _verticalBobbingTimer;
         private float _amplitude;
-        private Camera _camera;
-
-        private void Start()
-        {
-            _camera = Camera.main;
-        }
 
         private void Update()
         {
-            if(PlayerData.IsInMannequin ||  PauseManager.GetPause() ) 
+            if(PlayerData.IsInMannequin ||  PauseManager.GetPause()) 
                 return;
             
             var velocity = PlayerData.Rigidbody.linearVelocity;
@@ -44,8 +38,8 @@ namespace Player
 
         public void GoToPosition(Transform pos)
         {
-            _camera.gameObject.transform.position = pos.position;
-            _camera.gameObject.transform.rotation = pos.rotation;
+            PlayerData.CameraTransform.transform.position = pos.position;
+            PlayerData.CameraTransform.transform.rotation = pos.rotation;
 
             if (rendererMesh)
                 rendererMesh.enabled = false;
@@ -53,8 +47,8 @@ namespace Player
         
         public void ReturnToPosition()
         {
-            _camera.gameObject.transform.localPosition = Vector3.zero;
-            _camera.gameObject.transform.localRotation = Quaternion.identity;
+            PlayerData.CameraTransform.transform.localPosition = Vector3.zero;
+            PlayerData.CameraTransform.transform.localRotation = Quaternion.identity;
             
             if (rendererMesh)
                 rendererMesh.enabled = true;
