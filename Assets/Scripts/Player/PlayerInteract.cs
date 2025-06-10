@@ -19,12 +19,14 @@ namespace Player
         private Mannequin _mannequin;
         private RaycastHit _raycastHit;
         private PlayerCamera _playerCamera;
+        private PlayerDance _playerDance;
         private PlayerMusicBox _playerMusicBox;
 
         private void Start()
         {
             _playerCamera = GetComponent<PlayerCamera>();
             _playerMusicBox = GetComponent<PlayerMusicBox>();
+            _playerDance = GetComponent<PlayerDance>();
         }
 
         private void Update()
@@ -46,6 +48,9 @@ namespace Player
 
                 if (!_selectedObject)
                     return;
+                
+                
+                TryInspect();
 
                 TryInteract();
                 return;
@@ -80,6 +85,8 @@ namespace Player
 
         private void HandleHighlight()
         {
+            if(InspectSystem.isOn())
+                return;
             
             var ray = new Ray(
                 PlayerData.CameraHolder.position + PlayerData.CameraHolder.forward * grabOffset,
@@ -114,21 +121,26 @@ namespace Player
             
             _selectedObject.Interact();
             TryExtract();
+            
+            if(_selectedObject.GetComponent<Mimic>())
+                return;
 
             if (_selectedObject.TryGetComponent<Mannequin>(out var mannequin))
             {
+                PlayerRoot.SetIsInMannequin(!PlayerRoot.GetIsInMannequin());
+                UiManager.InMannequin(PlayerRoot.GetIsInMannequin());
                 _mannequin = mannequin;
                 _playerCamera.GoToPosition(mannequin.GetCameraPos());
                 PlayerData.Rigidbody.linearVelocity = Vector3.zero;
-                
             }
 
             if (_selectedObject.TryGetComponent<ObjectivePickUp>(out var objective))
             {
                 objective.PickedUp();
 
-                if (!TryGetComponent<PlayerMusicBox>(out var music))
+                if (!TryGetComponent<PlayerMusicBox>(out var music) || objective.GetIsEvent)
                     return;
+                
                 music.IncreaseState();
             }
 
@@ -141,16 +153,31 @@ namespace Player
             grab.Grab(grabPoint);
             _grabbedObject = grab;
         }
+        
+        private void TryInspect()
+        {
+            if (!PlayerData.PlayerInputs.Controls.Inspect.WasPressedThisFrame()) 
+                return;
+            
+            if (InspectSystem.isOn())
+            {
+                InspectSystem.Hide();
+                return;
+            }
+            
+            if (!_selectedObject.TryGetComponent<Inspectable>(out var _inspectable)) 
+                return;
+
+            _inspectable.Inspect();
+        }
 
         private void TryExtract()
         {
             if (!_selectedObject.TryGetComponent<Mimic>(out var mimic)) 
                 return;
             
-            
-            //GetComponent<PlayerDance>().SetDancing(true, true);
-            
-            mimic.DestroyMimic();
+            _playerDance.SetCurrentMimic(mimic);
+            _playerDance.SetDancing();
 
             _selectedObject.Break();
         }

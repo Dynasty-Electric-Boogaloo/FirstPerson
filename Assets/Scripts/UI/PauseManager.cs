@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace UI
 {
@@ -7,6 +8,7 @@ namespace UI
       public static PauseManager instance;
       [SerializeField] private GameObject pausePanel;
       private bool _pause;
+      private PlayerInputs _inputs = new PlayerInputs();
 
       private void Awake()
       {
@@ -15,20 +17,31 @@ namespace UI
          
          if(pausePanel)
             pausePanel.SetActive(false);
+         
+
       }
+      
+      private void OnDestroy()
+      {
+         if (instance == this)
+            instance = null;
+         
+         _inputs.Disable();
+      }
+
       
       private void Update()
       {
-         if(Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
-            PauseGame(!_pause);
+         if(_inputs.Controls.Return.WasPressedThisFrame())
+            PauseGame(!instance._pause);
       }
       
-      public static void PauseGame(bool setPause)
+      public static void PauseGame(bool setPause, bool showMenu = true)
       {
          if(instance == null)
             return;
          
-         if(instance &&  instance.pausePanel)
+         if(instance.pausePanel && showMenu)
             instance.pausePanel.SetActive(setPause);
             
          instance._pause = setPause;

@@ -68,6 +68,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b7f59f3f5b76074e85385d1dd7e5496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normal: {fileID: 0}
+  highlight: {fileID: 0}
+  rend: {fileID: 0}
+  onRestore:
+    m_PersistentCalls:
+      m_Calls: []
+  trap: {fileID: 0}
+  indexObjective: 0
+  isEvent: 0
 --- !u!114 &5422498337614504146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,6 +89,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc135b98038b8a4cb74053d3c3a531e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normal: {fileID: 0}
+  highlight: {fileID: 0}
+  rend: {fileID: 0}
   onRestore:
     m_PersistentCalls:
       m_Calls: []

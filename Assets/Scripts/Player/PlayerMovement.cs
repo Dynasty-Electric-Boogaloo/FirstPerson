@@ -1,4 +1,5 @@
 ﻿using System;
+using UI;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -31,9 +32,7 @@ namespace Player
         private void Update()
         {
             if(PlayerData.IsInMannequin)
-            { 
                 return;
-            }
             
             UpdateMovement();
             UpdateGravity();
