@@ -9,7 +9,8 @@ namespace Player
     public class PlayerDance : PlayerBehaviour
     {
         [SerializeField] private float timeBetween = 1f;
-        [SerializeField] [Range(0.0f, 1.0f)] private float tolerance = 0.5f;
+        [SerializeField] private ParticleSystem getEnergy;
+        [SerializeField] private ParticleSystem setEnergy;
         private Mimic currentMimic; 
         private float _timer;
 
@@ -34,7 +35,13 @@ namespace Player
         public void SetQteResult(bool win)
         {
             if(win)
+            {
                 currentMimic.DestroyMimic();
+                if(getEnergy)
+                    getEnergy.Play();
+                if(setEnergy)
+                    setEnergy.Play();
+            }
             else
                 MonsterNavigation.Alert(transform.position);
             
