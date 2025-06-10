@@ -22,6 +22,11 @@ public class DanceManager : MonoBehaviour
         if (_instance == null)
             _instance = this;
     }
+    private void OnDestroy()
+    {
+        if (_instance == this)
+            _instance = null;
+    }
     
     public bool GetIsInQte => qteIsPlaying;
 

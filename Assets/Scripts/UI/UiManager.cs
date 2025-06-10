@@ -25,13 +25,15 @@ namespace UI
         {
             if (_instance == null) 
                 _instance = this;
-            else 
-                Destroy(this);
-
             if (usageText)
                 usageText.text = "";
         }
-        
+
+        private void OnDestroy()
+        {
+            if (_instance == this)
+                _instance = null;
+        }
 
         public static void SetInteract(Interactable interactable)
         {

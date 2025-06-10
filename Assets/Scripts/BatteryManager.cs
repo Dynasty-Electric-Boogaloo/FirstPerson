@@ -18,8 +18,16 @@ public class BatteryManager : MonoBehaviour
 
     private void Awake()
     {
-        if (Battery == null) Battery = this;
-        else Destroy(this);
+        if (Battery == null) 
+            Battery = this;
+        else 
+            Destroy(this);
+    }
+    
+    private void OnDestroy()
+    {
+        if (Battery == this)
+            Battery = null;
     }
 
     private void Start()

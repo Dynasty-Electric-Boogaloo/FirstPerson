@@ -18,6 +18,13 @@ namespace UI
             pausePanel.SetActive(false);
       }
       
+      private void OnDestroy()
+      {
+         if (instance == this)
+            instance = null;
+      }
+
+      
       public static void CallPause()
       {
          PauseGame(!instance._pause);
