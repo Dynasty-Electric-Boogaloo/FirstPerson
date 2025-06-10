@@ -31,9 +31,6 @@ namespace Player
 
         private void Update()
         {
-            if(PlayerData.PlayerInputs.Controls.Return.WasPressedThisFrame())
-                PauseManager.CallPause();
-            
             if(PlayerData.IsInMannequin)
                 return;
             

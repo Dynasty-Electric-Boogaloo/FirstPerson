@@ -8,6 +8,7 @@ namespace UI
       public static PauseManager instance;
       [SerializeField] private GameObject pausePanel;
       private bool _pause;
+      private PlayerInputs _inputs = new PlayerInputs();
 
       private void Awake()
       {
@@ -16,18 +17,23 @@ namespace UI
          
          if(pausePanel)
             pausePanel.SetActive(false);
+         
+
       }
       
       private void OnDestroy()
       {
          if (instance == this)
             instance = null;
+         
+         _inputs.Disable();
       }
 
       
-      public static void CallPause()
+      private void Update()
       {
-         PauseGame(!instance._pause);
+         if(_inputs.Controls.Return.WasPressedThisFrame())
+            PauseGame(!instance._pause);
       }
       
       public static void PauseGame(bool setPause, bool showMenu = true)
