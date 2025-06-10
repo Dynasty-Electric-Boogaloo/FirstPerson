@@ -8,7 +8,7 @@ namespace UI
       public static PauseManager instance;
       [SerializeField] private GameObject pausePanel;
       private bool _pause;
-      private PlayerInputs _inputs = new PlayerInputs();
+      private PlayerInputs _inputs;
 
       private void Awake()
       {
@@ -18,7 +18,9 @@ namespace UI
          if(pausePanel)
             pausePanel.SetActive(false);
          
-
+         _inputs = new PlayerInputs(); 
+         _inputs.Enable();
+         
       }
       
       private void OnDestroy()
