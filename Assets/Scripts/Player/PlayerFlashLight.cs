@@ -78,7 +78,7 @@ namespace Player
         }
         private void LightUpdate()
         {
-            if (_playerInput.Controls.UseFlash.WasPressedThisFrame())
+            if (_playerInput.Controls.UseFlash.WasPressedThisFrame() && PlayerData.RedLight)
                 CheckSwitch();
 
             var reload = _playerInput.Controls.ReloadFlash.IsPressed();
@@ -98,9 +98,8 @@ namespace Player
                 
                 if( CurrentBattery / CurrentBatteryMax < lightFalloffThreshold) 
                     light.intensity = ((CurrentBattery  / CurrentBatteryMax ) * CurrentLightIntensity / lightFalloffThreshold ) ;
-                
 
-                if (Mathf.Abs((CurrentBattery  / CurrentBatteryMax ) - flicker) < 0.01f && !_isFlickering)
+                if (Mathf.Abs(CurrentBattery  / CurrentBatteryMax  - flicker) < 0.1 && !_isFlickering)
                     StartCoroutine(Flickering());
             }
             

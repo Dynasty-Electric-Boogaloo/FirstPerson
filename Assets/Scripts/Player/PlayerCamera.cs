@@ -30,7 +30,7 @@ namespace Player
 
         private void Update()
         {
-            if(PlayerData.IsInMannequin || PauseManager.GetPause()) 
+            if(PlayerData.IsInMannequin ||  PauseManager.GetPause() ) 
                 return;
             
             var velocity = PlayerData.Rigidbody.linearVelocity;
@@ -74,7 +74,7 @@ namespace Player
         {
             if (!PlayerData.Grounded)
             {
-                FadeoutBobbing();
+                FadeoutBobbing(); 
                 return;
             }
 
