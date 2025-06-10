@@ -31,7 +31,12 @@ public class BatteryManager : MonoBehaviour
     private void Update()
     {
         if (!PlayerRoot.GetIsInMannequin()) return;
-        
+
+        UpdateBatteryWithHud();
+    }
+
+    public void UpdateBatteryWithHud()
+    {
         if(hud)
             hud.UpdateBattery(_currentPower, maxPowerByBattery, true);
         ReduceBattery();

@@ -17,12 +17,12 @@ public class ButtonAnim : MonoBehaviour
  
     public void OnPointerEnter()
     {
-        transform.DOScale(sizeToGo, enterTransitionTime);
+        transform.DOScale(sizeToGo, enterTransitionTime).SetUpdate(true);
     }
 
     public void OnPointerExit()
     {
-        transform.DOScale(_defaultSize, exitTransitionTime);
+        transform.DOScale(_defaultSize, exitTransitionTime).SetUpdate(true);
     }
 
 }

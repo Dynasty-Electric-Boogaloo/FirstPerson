@@ -55,8 +55,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.2373123, y: 0.94076395, z: 0.6148033}
-  m_Center: {x: -0.006548643, y: 0.46420443, z: -0.026598006}
+  m_Size: {x: 1.2373123, y: 0.9369692, z: 0.6148033}
+  m_Center: {x: -0.006548643, y: 0.46230707, z: -0.026598006}
 --- !u!1001 &873039805712522947
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -129,6 +129,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: 8ce42429a0e54b8418a19994f90a508a, type: 2}
+    - target: {fileID: -5366800059819554373, guid: 6da573efca60b124c85e7f65c86badd5, type: 3}
+      propertyPath: 'm_Materials.Array.data[5]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 05fdb48954d93454e82cce3f75019fe2, type: 2}
     - target: {fileID: 919132149155446097, guid: 6da573efca60b124c85e7f65c86badd5, type: 3}
       propertyPath: m_Name
       value: SM_DressingTableBigMirror_02

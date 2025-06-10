@@ -6,7 +6,6 @@ using Player;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using UnityEngine.Serialization;
@@ -15,16 +14,13 @@ namespace UI
 {
     public class UiManager : MonoBehaviour
     {
-        [SerializeField] private Image pausePanel;
         [SerializeField] private DancePanel dancePanel;
         [SerializeField] private TMP_Text usageText;
         [SerializeField] private Image mannequinMask;
         
-        
         private Interactable _current;
         
         private static UiManager _instance;
-        private bool _pause;
         
         private void Awake()
         {
@@ -65,12 +61,18 @@ namespace UI
 
         public static void SetGrab()
         {
+            if(!_instance) 
+                return;
+            
             if(_instance && _instance.usageText) 
                 _instance.usageText.text = "Drop - E\\nThrow - Left Click";
         }
 
         public static void SetDance(float tolerance, bool isMimic)
         {
+            if(!_instance) 
+                return;
+            
             var isDancing = PlayerRoot.GetIsDancing();
             
             if (!_instance.dancePanel) 
@@ -81,27 +83,16 @@ namespace UI
             else 
                 _instance.dancePanel.StartDance(!isMimic);
         }
-        
-        
-        
 
         public static void InMannequin(bool isInMannequin = true)
         {
+            if(!_instance) 
+                return;
+            
             if(_instance && _instance.mannequinMask)
                 _instance.mannequinMask.gameObject.SetActive(isInMannequin);
             if( _instance.usageText && isInMannequin) 
                 _instance.usageText.text = "Exit - E";
         }
-
-        public static void PauseGame(bool setPause)
-        {
-            if(_instance &&  _instance.pausePanel)
-                _instance.pausePanel.gameObject.SetActive(setPause);
-            
-            _instance._pause = setPause;
-            Time.timeScale = setPause ? 0f : 1f;
-        }
-
-        public bool GetPause() => _pause;
     }
 }
