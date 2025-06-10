@@ -8,8 +8,11 @@ using EventReference = FMODUnity.EventReference;
 public class FMODEvents : MonoBehaviour
 {
     
-    [field: Header("Musics")]
+    [field: Header("Ambiant")]
     [field: SerializeField] public EventReference Phonographe { get; private set;}
+    [field: SerializeField] public EventReference Whispers { get; private set;}
+    
+    
     public static FMODEvents instance {get; private set;}
     private void Awake()
     {
