@@ -50,7 +50,7 @@ namespace Player
         private HashSet<Mimic> _lastUpdateLightObjects => _lightObjectBuffers[1 ^ _bufferSelection];
         private HashSet<Mimic> _currentLightObjects => _lightObjectBuffers[_bufferSelection];
 
-        private bool isFlickering;
+        private bool _isFlickering;
         
 
         private void Start()
@@ -99,7 +99,7 @@ namespace Player
                 if( CurrentBattery / CurrentBatteryMax < lightFalloffThreshold) 
                     light.intensity = ((CurrentBattery  / CurrentBatteryMax ) * CurrentLightIntensity / lightFalloffThreshold ) ;
 
-                if (Mathf.Abs(CurrentBattery  / CurrentBatteryMax  - flicker) < 0.1 && !isFlickering)
+                if (Mathf.Abs(CurrentBattery  / CurrentBatteryMax  - flicker) < 0.1 && !_isFlickering)
                     StartCoroutine(Flickering());
             }
             
@@ -111,7 +111,7 @@ namespace Player
 
         IEnumerator Flickering()
         {
-            isFlickering = true;
+            _isFlickering = true;
             for (int i = 0; i < 3; i++)
             {
                 light.gameObject.SetActive(false);
@@ -119,7 +119,7 @@ namespace Player
                 light.gameObject.SetActive(true);
                 yield return new WaitForSeconds(flickerWait);
             }
-            isFlickering = false;
+            _isFlickering = false;
         }
         
         
