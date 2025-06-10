@@ -46,7 +46,7 @@ public class ObjectiveManager : MonoBehaviour
    
    public static void RemoveToFound()
    {
-      if (!instance)
+      if (!instance || instance._pickedUp.Count < 1)
          return;
       
       instance._pickedUp.RemoveAt( instance._pickedUp.Count);
