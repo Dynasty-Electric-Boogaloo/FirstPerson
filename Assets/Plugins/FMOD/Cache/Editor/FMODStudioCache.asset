@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &11400000
+--- !u!114 &-8247509355975188147
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9,21 +9,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
-  m_Name: FMODStudioCache
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Piano
   m_EditorClassIdentifier: 
-  EditorBanks:
-  - {fileID: 585487107537120717}
-  - {fileID: 1903531518345560971}
-  EditorEvents: []
-  EditorParameters: []
-  MasterBanks:
-  - {fileID: 1903531518345560971}
-  StringsBanks:
-  - {fileID: 585487107537120717}
-  cacheTime: 638851597278940609
-  cacheVersion: 131624
---- !u!114 &585487107537120717
+  Path: event:/Piano
+  Guid:
+    Data1: 522429024
+    Data2: 1247434783
+    Data3: -1678374257
+    Data4: 1369346368
+  Banks:
+  - {fileID: 1070121992018484207}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 125759
+--- !u!114 &-4820392486234759060
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -38,12 +42,57 @@ MonoBehaviour:
   Path: FPV_FmodProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638851597278940609
+  lastModified: 638851714111216327
   FileSizes:
   - Name: Desktop
-    Value: 712
+    Value: 802
   Exists: 1
---- !u!114 &1903531518345560971
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: -4820392486234759060}
+  - {fileID: 8485003931774457982}
+  - {fileID: 1070121992018484207}
+  EditorEvents:
+  - {fileID: -8247509355975188147}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 8485003931774457982}
+  StringsBanks:
+  - {fileID: -4820392486234759060}
+  cacheTime: 638851714111838799
+  cacheVersion: 131624
+--- !u!114 &1070121992018484207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Musics.bank
+  m_EditorClassIdentifier: 
+  Path: FPV_FmodProject/Build/Desktop/Musics.bank
+  Name: Musics
+  StudioPath: bank:/Musics
+  lastModified: 638851714111838799
+  FileSizes:
+  - Name: Desktop
+    Value: 1333952
+  Exists: 1
+--- !u!114 &8485003931774457982
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -58,7 +107,7 @@ MonoBehaviour:
   Path: FPV_FmodProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638851597278910686
+  lastModified: 638851714111196383
   FileSizes:
   - Name: Desktop
     Value: 1036
