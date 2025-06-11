@@ -9,7 +9,7 @@ public class FMODEvents : MonoBehaviour
 {
     
     [field: Header("Ambiant")]
-    [field: SerializeField] public EventReference Phonographe { get; private set;}
+    [field: SerializeField public EventReference Phonographe { get; private set;}
     [field: SerializeField] public EventReference Whispers { get; private set;}
     
     
@@ -21,5 +21,11 @@ public class FMODEvents : MonoBehaviour
             Debug.LogError("Found more than one FMOD Events instance in this scene.");
         }
         instance = this;
+    }
+    
+    private void OnDestroy()
+    {
+        if (instance == this)
+            instance = null;
     }
 }

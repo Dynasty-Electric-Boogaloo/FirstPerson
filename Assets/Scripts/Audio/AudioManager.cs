@@ -22,4 +22,10 @@ public class AudioManager : MonoBehaviour
     {
         RuntimeManager.PlayOneShot(sound, worldpos);
     }
+    
+    private void OnDestroy()
+    {
+        if (instance == this)
+            instance = null;
+    }
 }

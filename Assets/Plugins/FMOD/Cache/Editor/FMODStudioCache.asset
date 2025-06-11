@@ -20,6 +20,53 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1499328
   Exists: 1
+--- !u!114 &-7298638540459083219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiant/Piano
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiant/Piano
+  Guid:
+    Data1: 522429024
+    Data2: 1247434783
+    Data3: -1678374257
+    Data4: 1369346368
+  Banks:
+  - {fileID: 9114343498915680935}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 125759
+--- !u!114 &-7223487971066838564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Musics.bank
+  m_EditorClassIdentifier: 
+  Path: FPV_FmodProject/Build/Desktop/Musics.bank
+  Name: Musics
+  StudioPath: bank:/Musics
+  lastModified: 638852580418155302
+  FileSizes:
+  - Name: Desktop
+    Value: 494
+  Exists: 1
 --- !u!114 &-4820392486234759060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53,19 +100,19 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -4820392486234759060}
-  - {fileID: 8485003931774457982}
-  - {fileID: 1070121992018484207}
-  - {fileID: -8255126302451059764}
+  - {fileID: 7256561144888839811}
+  - {fileID: 9114343498915680935}
+  - {fileID: 2507752660864224238}
+  - {fileID: -7223487971066838564}
   EditorEvents:
-  - {fileID: 6769147869635055946}
-  - {fileID: 4746933716444386982}
+  - {fileID: 1259629446839271884}
+  - {fileID: -7298638540459083219}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 8485003931774457982}
+  - {fileID: 2507752660864224238}
   StringsBanks:
-  - {fileID: -4820392486234759060}
-  cacheTime: 638851763506471868
+  - {fileID: 7256561144888839811}
+  cacheTime: 638852580418155302
   cacheVersion: 131624
 --- !u!114 &1070121992018484207
 MonoBehaviour:
@@ -86,6 +133,53 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 494
+  Exists: 1
+--- !u!114 &1259629446839271884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiant/Whispers
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiant/Whispers
+  Guid:
+    Data1: -441136062
+    Data2: 1166121787
+    Data3: 1090449075
+    Data4: -62117938
+  Banks:
+  - {fileID: 9114343498915680935}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 21064
+--- !u!114 &2507752660864224238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: FPV_FmodProject/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 638852580417777823
+  FileSizes:
+  - Name: Desktop
+    Value: 1036
   Exists: 1
 --- !u!114 &4746933716444386982
 MonoBehaviour:
@@ -141,6 +235,26 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 21064
+--- !u!114 &7256561144888839811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: FPV_FmodProject/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638852580417975734
+  FileSizes:
+  - Name: Desktop
+    Value: 912
+  Exists: 1
 --- !u!114 &8485003931774457982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,4 +274,24 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 1036
+  Exists: 1
+--- !u!114 &9114343498915680935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambiant.bank
+  m_EditorClassIdentifier: 
+  Path: FPV_FmodProject/Build/Desktop/Ambiant.bank
+  Name: Ambiant
+  StudioPath: bank:/Ambiant
+  lastModified: 638852580417595014
+  FileSizes:
+  - Name: Desktop
+    Value: 1499328
   Exists: 1
