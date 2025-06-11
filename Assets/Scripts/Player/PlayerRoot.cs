@@ -15,6 +15,7 @@ namespace Player
         private Vector3 _startPosition;
         private Quaternion _startRotation;
         private PlayerMusicBox _musicBox;
+        private PlayerFeedback _playerFeedback;
         public static Vector3 Position => _instance ? _instance.transform.position : Vector3.zero;
         
         public static int CurrentIndex  =>  _instance ? _instance._playerData.CurrentIndexObjective : -1;
@@ -42,6 +43,7 @@ namespace Player
             _startPosition = transform.position;
             _startRotation = transform.rotation;
             _musicBox = GetComponent<PlayerMusicBox>();
+            _playerFeedback = GetComponent<PlayerFeedback>();
             SetRedLight(false);
         }
 
@@ -113,7 +115,7 @@ namespace Player
             if (!setOn) 
                 return;
             
-            _instance.GetComponent<PlayerFeedback>().GetEnergy();
+            _instance._playerFeedback.GetEnergy();
             BatteryManager.WakeUpBattery();
 
         }
