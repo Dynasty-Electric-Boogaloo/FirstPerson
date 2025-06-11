@@ -62,7 +62,7 @@ MonoBehaviour:
   Path: FPV_FmodProject/Build/Desktop/Musics.bank
   Name: Musics
   StudioPath: bank:/Musics
-  lastModified: 638852580418155302
+  lastModified: 638852692963402810
   FileSizes:
   - Name: Desktop
     Value: 494
@@ -104,15 +104,17 @@ MonoBehaviour:
   - {fileID: 9114343498915680935}
   - {fileID: 2507752660864224238}
   - {fileID: -7223487971066838564}
+  - {fileID: 7293557864363161157}
   EditorEvents:
   - {fileID: 1259629446839271884}
   - {fileID: -7298638540459083219}
+  - {fileID: 5907295305770836799}
   EditorParameters: []
   MasterBanks:
   - {fileID: 2507752660864224238}
   StringsBanks:
   - {fileID: 7256561144888839811}
-  cacheTime: 638852580418155302
+  cacheTime: 638852692964280287
   cacheVersion: 131624
 --- !u!114 &1070121992018484207
 MonoBehaviour:
@@ -176,7 +178,7 @@ MonoBehaviour:
   Path: FPV_FmodProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638852580417777823
+  lastModified: 638852692963229625
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -208,6 +210,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 125759
+--- !u!114 &5907295305770836799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Lamp/Lamp Flick
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Lamp/Lamp Flick
+  Guid:
+    Data1: -912790834
+    Data2: 1241185614
+    Data3: -1141823357
+    Data4: 203142410
+  Banks:
+  - {fileID: 7293557864363161157}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &6769147869635055946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,10 +279,30 @@ MonoBehaviour:
   Path: FPV_FmodProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638852580417975734
+  lastModified: 638852692963249573
   FileSizes:
   - Name: Desktop
-    Value: 912
+    Value: 1014
+  Exists: 1
+--- !u!114 &7293557864363161157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: FPV_FmodProject/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638852692964280287
+  FileSizes:
+  - Name: Desktop
+    Value: 8960
   Exists: 1
 --- !u!114 &8485003931774457982
 MonoBehaviour:
@@ -290,7 +339,7 @@ MonoBehaviour:
   Path: FPV_FmodProject/Build/Desktop/Ambiant.bank
   Name: Ambiant
   StudioPath: bank:/Ambiant
-  lastModified: 638852580417595014
+  lastModified: 638852692963050114
   FileSizes:
   - Name: Desktop
     Value: 1499328
