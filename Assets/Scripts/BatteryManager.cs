@@ -38,8 +38,8 @@ public class BatteryManager : MonoBehaviour
 
     public static void WakeUpBattery()
     {
-        Battery._currentBattery =  Battery.maxBattery;
-        Battery. _currentPower = Battery.maxPowerByBattery * ((float)Battery.startBatteryPercent/100);
+        Battery._currentBattery = Battery.maxBattery;
+        Battery._currentPower = Battery.maxPowerByBattery * ((float)Battery.startBatteryPercent / 100);
     }
 
     private void Update()
