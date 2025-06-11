@@ -9,14 +9,14 @@ namespace Player
     public class PlayerDance : PlayerBehaviour
     {
         [SerializeField] private float timeBetween = 1f;
-        [SerializeField] private ParticleSystem getEnergy;
-        [SerializeField] private ParticleSystem setEnergy;
         private Mimic currentMimic; 
         private float _timer;
+        private PlayerFeedback _playerFeedback;
 
         private void Start()
         {
             _timer = timeBetween;
+            _playerFeedback = GetComponent<PlayerFeedback>();
         }
 
         public void SetDancing( )
@@ -29,10 +29,6 @@ namespace Player
             if(win)
             {
                 currentMimic.DestroyMimic();
-                if(getEnergy)
-                    getEnergy.Play();
-                if(setEnergy)
-                    setEnergy.Play();
             }
             else
                 MonsterNavigation.Alert(transform.position);
@@ -44,10 +40,6 @@ namespace Player
         {
             currentMimic = newMimic;
         }
-
-        public void PlayAnim()
-        {
-            getEnergy.Play();
-        }
+        
     }
 }

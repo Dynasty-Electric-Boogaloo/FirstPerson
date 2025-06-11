@@ -113,7 +113,7 @@ namespace Player
             if (!setOn) 
                 return;
             
-            _instance.GetComponent<PlayerDance>().PlayAnim();
+            _instance.GetComponent<PlayerFeedback>().GetEnergy();
             BatteryManager.WakeUpBattery();
 
         }
