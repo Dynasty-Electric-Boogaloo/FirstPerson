@@ -43,7 +43,7 @@ namespace UI
             if (BatteryManager.Battery.GetCurrentBattery() > eyes.Count || BatteryManager.Battery.GetCurrentBattery() <= 0) 
                 return;
             
-            eyes[(int)BatteryManager.Battery.GetCurrentBattery()-1].Play($"ClosingEye", 0, 1 -currentBattery / currentMax);
+            eyes[(int)BatteryManager.Battery.GetCurrentBattery()-1].Play("ClosingEye", 0, 1 -currentBattery / currentMax);
         }
         
     }

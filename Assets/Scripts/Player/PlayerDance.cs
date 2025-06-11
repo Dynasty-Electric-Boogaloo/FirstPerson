@@ -29,6 +29,7 @@ namespace Player
             if(win)
             {
                 currentMimic.DestroyMimic();
+                _playerFeedback.GetEnergy();
             }
             else
                 MonsterNavigation.Alert(transform.position);

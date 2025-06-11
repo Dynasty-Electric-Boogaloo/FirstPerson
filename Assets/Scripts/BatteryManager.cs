@@ -30,8 +30,8 @@ public class BatteryManager : MonoBehaviour
 
     private void Start()
     {
-        Battery._currentBattery =  0;
-        Battery. _currentPower =0;
+        Battery._currentBattery = 0;
+        Battery._currentPower = 0;
         if(hud)
             hud.UpdateBattery(_currentPower, maxPowerByBattery, true);
     }
