@@ -31,6 +31,7 @@ namespace Player
 
         private void Update()
         {
+            
             if (_mannequin)
             {
                 if (!PlayerData.PlayerInputs.Controls.Interact.WasPressedThisFrame()) 
@@ -49,8 +50,10 @@ namespace Player
                 if (!_selectedObject)
                     return;
                 
-                
                 TryInspect();
+                
+                if(PauseManager.GetPause)
+                    return;
 
                 TryInteract();
                 return;

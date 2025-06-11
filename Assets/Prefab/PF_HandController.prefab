@@ -485,6 +485,7 @@ GameObject:
   - component: {fileID: 2331429056364898136}
   - component: {fileID: 4941221304825508424}
   - component: {fileID: 2989312559492078843}
+  - component: {fileID: 5071861691116933039}
   m_Layer: 30
   m_Name: PF_HandController
   m_TagString: Untagged
@@ -817,8 +818,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBetween: 1
-  getEnergy: {fileID: 2252233724926353938}
-  setEnergy: {fileID: 0}
 --- !u!114 &2989312559492078843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -834,6 +833,20 @@ MonoBehaviour:
   thresholdDetectionDistance: 25
   musicBoxObject: {fileID: 4005241433360813804}
   state: 0
+--- !u!114 &5071861691116933039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2439608249139616169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 955a41b121477f5408242127bb312f91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  getEnergy: {fileID: 2252233724926353938}
+  setEnergy: {fileID: 0}
 --- !u!1 &4167932192429471914
 GameObject:
   m_ObjectHideFlags: 0

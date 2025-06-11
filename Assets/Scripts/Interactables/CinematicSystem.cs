@@ -28,6 +28,7 @@ public class CinematicSystem : MonoBehaviour
         source.Stop();
         image.gameObject.SetActive(false);
         PauseManager.PauseGame(false, false);
+        PauseManager.SetForcePause(false);
     }
 
     private void OnDestroy()
@@ -50,6 +51,8 @@ public class CinematicSystem : MonoBehaviour
         instance._videoPlayer.clip = instance.clips[index];
         instance._videoPlayer.Play();
         PauseManager.PauseGame(true, false);
+        PauseManager.SetForcePause(true);
         instance.image.gameObject.SetActive(true);
+        
     }
 }

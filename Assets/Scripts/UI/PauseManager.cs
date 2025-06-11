@@ -8,6 +8,7 @@ namespace UI
       public static PauseManager instance;
       [SerializeField] private GameObject pausePanel;
       private bool _pause;
+      private bool _forcePause;
       private PlayerInputs _inputs;
 
       private void Awake()
@@ -34,6 +35,9 @@ namespace UI
       
       private void Update()
       {
+         if(_forcePause)
+            return;
+         
          if(_inputs.Controls.Return.WasPressedThisFrame())
             PauseGame(!instance._pause);
       }
@@ -56,7 +60,15 @@ namespace UI
       {
          Application.Quit();
       }
+
+      public static void SetForcePause(bool setOn)
+      {
+         if(!instance)
+            return;
+         
+         instance._forcePause = setOn;
+      }
       
-      public static bool GetPause() =>instance && instance._pause;
+      public static bool GetPause =>instance && instance._pause || instance._forcePause;
    }
 }
