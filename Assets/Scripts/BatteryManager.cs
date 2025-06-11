@@ -32,6 +32,8 @@ public class BatteryManager : MonoBehaviour
     {
         Battery._currentBattery =  0;
         Battery. _currentPower =0;
+        if(hud)
+            hud.UpdateBattery(_currentPower, maxPowerByBattery, true);
     }
 
     public static void WakeUpBattery()
@@ -50,7 +52,7 @@ public class BatteryManager : MonoBehaviour
 
     public void UpdateBatteryWithHud()
     {
-        if(hud)
+        if(hud && PlayerRoot.GetRedLightUnlocked)
             hud.UpdateBattery(_currentPower, maxPowerByBattery, true);
         ReduceBattery();
     }

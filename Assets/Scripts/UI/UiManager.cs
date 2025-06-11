@@ -45,7 +45,7 @@ namespace UI
             if (!_instance.usageText)
                 return;
 
-            if (!interactable || (interactable is Mannequin && !PlayerRoot.GetRedLightUnlocked))
+            if (!interactable || ((interactable is Mannequin || interactable.TryGetComponent<Mimic>(out _)) && !PlayerRoot.GetRedLightUnlocked))
             {
                 _instance.usageText.text = "";
                 return;

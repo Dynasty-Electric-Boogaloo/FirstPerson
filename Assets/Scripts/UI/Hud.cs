@@ -18,10 +18,6 @@ namespace UI
         private void Start()
         {
             SetFlashLight(false, false);
-            foreach (var eye in eyes)
-            {
-                eye.Play("ClosingEye", 0, 1);
-            }
         }
 
         public void SetFlashLight(bool special, bool isOn)
@@ -47,7 +43,7 @@ namespace UI
             if (BatteryManager.Battery.GetCurrentBattery() > eyes.Count || BatteryManager.Battery.GetCurrentBattery() <= 0) 
                 return;
             
-            eyes[(int)BatteryManager.Battery.GetCurrentBattery()-1].Play("ClosingEye", 0, 1 -currentBattery / currentMax);
+            eyes[(int)BatteryManager.Battery.GetCurrentBattery()-1].Play($"ClosingEye", 0, 1 -currentBattery / currentMax);
         }
         
     }

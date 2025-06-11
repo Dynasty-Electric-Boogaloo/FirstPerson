@@ -111,7 +111,8 @@ namespace Player
                 DeselectObject();
                 return;
             }
-            SelectObject(interactable);
+            if(!interactable.GetComponent<Mimic>() || PlayerData.RedLight)
+                SelectObject(interactable);
         }
 
         private void TryInteract()
@@ -173,7 +174,7 @@ namespace Player
 
         private void TryExtract()
         {
-            if (!_selectedObject.TryGetComponent<Mimic>(out var mimic)) 
+            if (!_selectedObject.TryGetComponent<Mimic>(out var mimic) || !PlayerData.RedLight) 
                 return;
             
             _playerDance.SetCurrentMimic(mimic);
@@ -215,7 +216,6 @@ namespace Player
             
             _selectedObject = interactable;
             _selectedObject.Highlight(interactable);
-            
             
             UiManager.SetInteract(interactable);
         }
