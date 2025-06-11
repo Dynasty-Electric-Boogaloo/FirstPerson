@@ -179,6 +179,11 @@ namespace Player
             _playerDance.SetCurrentMimic(mimic);
             _playerDance.SetDancing();
 
+            if (_selectedObject.GetComponent<Mannequin>())
+            {
+                mimic.SetInfected(false);
+                return;
+            }
             _selectedObject.Break();
         }
 
