@@ -1,33 +1,19 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class ShowCaseObject : MonoBehaviour
+namespace Interactables
 {
-    [SerializeField] private float _sensitivity = 2;
-    private Vector3 _rotation;
-    private bool _isRotating;
-    
-
-    private void OnMouseDrag()
+    public class ShowCaseObject : MonoBehaviour
     {
-        if (!_isRotating) 
-            return;
-        
-        _rotation.y = -Mouse.current.delta.x.ReadValue() * _sensitivity;
-        _rotation.z = Mouse.current.delta.y.ReadValue() *_sensitivity;
-        
-        var rotation = transform.localRotation;
-        rotation.eulerAngles += _rotation;
-        transform.localRotation = rotation;
-    }
+        [SerializeField] private float sensitivity = 1;
 
-    private void OnMouseDown()
-    {
-        _isRotating = true;
-    }
+        private void Update()
+        {
+            if (!Mouse.current.leftButton.isPressed) 
+                return;
 
-    private void OnMouseUp()
-    {
-        _isRotating = false;
+            transform.Rotate(Vector3.up, -Mouse.current.delta.x.ReadValue() * sensitivity, Space.World);
+            transform.Rotate(Vector3.forward, Mouse.current.delta.y.ReadValue() * sensitivity, Space.World);
+        }
     }
 }
