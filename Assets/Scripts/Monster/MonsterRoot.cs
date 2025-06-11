@@ -48,7 +48,7 @@ namespace Monster
         {
             proceduralHead.SetPose(_monsterData.chasing ? "Chasing" : "Patrolling");
 
-            if (PlayerRoot.GetIsInMannequin())
+            if (PlayerRoot.GetIsInMannequin)
                 return;
             
             var diff = PlayerRoot.Position - transform.position;
