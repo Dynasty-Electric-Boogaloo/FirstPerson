@@ -125,16 +125,16 @@ namespace Player
             if(_selectedObject.GetComponent<Mimic>())
                 return;
 
-            if (_selectedObject.TryGetComponent<Mannequin>(out var mannequin))
+            if (_selectedObject.TryGetComponent<Mannequin>(out var mannequin) && PlayerRoot.GetRedLightUnlocked)
             {
-                PlayerRoot.SetIsInMannequin(!PlayerRoot.GetIsInMannequin());
-                UiManager.InMannequin(PlayerRoot.GetIsInMannequin());
+                PlayerRoot.SetIsInMannequin(!PlayerRoot.GetIsInMannequin);
+                UiManager.InMannequin(PlayerRoot.GetIsInMannequin);
                 _mannequin = mannequin;
                 _playerCamera.GoToPosition(mannequin.GetCameraPos());
                 PlayerData.Rigidbody.linearVelocity = Vector3.zero;
             }
 
-            if (_selectedObject.TryGetComponent<ObjectivePickUp>(out var objective))
+            if (_selectedObject.TryGetComponent<ObjectivePickUp>(out var objective) )
             {
                 objective.PickedUp();
 
@@ -165,10 +165,10 @@ namespace Player
                 return;
             }
             
-            if (!_selectedObject.TryGetComponent<Inspectable>(out var _inspectable)) 
+            if (!_selectedObject.TryGetComponent<Inspectable>(out var inspectable)) 
                 return;
 
-            _inspectable.Inspect();
+            inspectable.Inspect();
         }
 
         private void TryExtract()
@@ -215,6 +215,8 @@ namespace Player
             
             _selectedObject = interactable;
             _selectedObject.Highlight(interactable);
+            
+            
             UiManager.SetInteract(interactable);
         }
 

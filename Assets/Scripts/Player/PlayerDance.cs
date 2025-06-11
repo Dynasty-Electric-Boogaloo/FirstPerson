@@ -21,14 +21,6 @@ namespace Player
 
         public void SetDancing( )
         {
-            /*
-            UiManager.SetDance(tolerance, isMimic);
-            
-            if(!isMimic)
-                PlayerData.Dancing = setOn;
-            
-            PlayerData.DestroyingMimic = isMimic;
-            */
             DanceManager.StartQte(this);
         }
 
@@ -51,6 +43,11 @@ namespace Player
         public void SetCurrentMimic(Mimic newMimic)
         {
             currentMimic = newMimic;
+        }
+
+        public void PlayAnim()
+        {
+            getEnergy.Play();
         }
     }
 }

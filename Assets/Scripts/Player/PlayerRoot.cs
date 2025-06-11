@@ -95,7 +95,7 @@ namespace Player
                 _instance._playerData.DestroyingMimic = setOn;
         }
         
-        public static bool GetIsInMannequin() =>_instance && _instance._playerData.IsInMannequin;
+        public static bool GetIsInMannequin =>_instance && _instance._playerData.IsInMannequin;
         
         public static void SetIsInMannequin(bool setOn)
         {
@@ -103,10 +103,21 @@ namespace Player
                 _instance._playerData.IsInMannequin = setOn;
         }
         
-        public static void SetRedLight(bool setOn) 
+        public static void SetRedLight(bool setOn)
         {
-            if(_instance)
-                _instance._playerData.RedLight = setOn;
+            if (!_instance) 
+                return;
+            
+            _instance._playerData.RedLight = setOn;
+
+            if (!setOn) 
+                return;
+            
+            _instance.GetComponent<PlayerDance>().PlayAnim();
+            BatteryManager.WakeUpBattery();
+
         }
+        
+        public static bool GetRedLightUnlocked =>_instance && _instance._playerData.RedLight;
     }
 }
