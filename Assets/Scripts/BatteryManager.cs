@@ -52,6 +52,7 @@ public class BatteryManager : MonoBehaviour
         _currentBattery += newBattery;
         if (_currentBattery > maxPowerByBattery)
             _currentBattery = maxPowerByBattery;
+        hud.UpdateBattery(_currentPower, maxPowerByBattery, true);
     }
     
     public void ReduceBattery(float multiplier = 1)
