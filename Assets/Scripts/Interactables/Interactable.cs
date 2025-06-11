@@ -13,7 +13,7 @@ public class Interactable : MonoBehaviour
     private Quaternion _startRotation;
     public UnityEvent onRestore;
 
-    private void Start()
+    protected virtual void Start()
     {
         _startPosition = transform.position;
         _startRotation = transform.rotation;
