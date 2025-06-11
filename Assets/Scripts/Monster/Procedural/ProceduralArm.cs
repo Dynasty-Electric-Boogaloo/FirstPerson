@@ -7,9 +7,9 @@ namespace Monster.Procedural
         [SerializeField] private Transform handTransform;
         [SerializeField] private Vector2 direction;
         [SerializeField] private Vector2 handDirection;
-        [SerializeField] private float armLength;
+        [SerializeField] private float forwardOffset;
+        [SerializeField] private InverseKinematicArm ikArm;
         [SerializeField] private float maximumArmOffset;
-        [SerializeField] private Vector3 shoulderOffset;
         [SerializeField] private LayerMask groundMask;
         [SerializeField] private float maxStickingDistance;
         [SerializeField] private Vector2 transitionTime;
@@ -56,13 +56,13 @@ namespace Monster.Procedural
 
         private void UpdateTargetPoint()
         {
-            var shoulder = transform.position + transform.rotation * shoulderOffset;
+            var shoulder = ikArm.GetShoulderPoint() + transform.up * forwardOffset; //transform.position + transform.rotation * shoulderOffset;
             
-            var rayDir = transform.forward * direction.y + transform.right * direction.x;
+            var rayDir = transform.up * direction.y + transform.right * direction.x;
             rayDir.Normalize();
             
-            Debug.DrawRay(shoulder, rayDir * armLength);
-            var hit = Physics.Raycast(shoulder, rayDir, out _raycastHit, armLength, groundMask);
+            Debug.DrawRay(shoulder, rayDir * ikArm.GetArmLength());
+            var hit = Physics.Raycast(shoulder, rayDir, out _raycastHit, ikArm.GetArmLength(), groundMask);
 
             if (hit)
             {
@@ -72,10 +72,10 @@ namespace Monster.Procedural
             }
 
             var height = _body.GetVerticalPosition() + shoulder.y;
-            var sideOffset = Mathf.Min(Mathf.Cos(Mathf.Asin( Mathf.Clamp01(height / armLength))) * armLength, maximumArmOffset);
+            var sideOffset = Mathf.Min(Mathf.Cos(Mathf.Asin( Mathf.Clamp01(height / ikArm.GetArmLength()))) * ikArm.GetArmLength(), maximumArmOffset);
             
-            Debug.DrawRay(shoulder + rayDir * sideOffset, -transform.up * (height + .25f));
-            hit = Physics.Raycast(shoulder + rayDir * sideOffset, -transform.up, out _raycastHit, Mathf.Min(armLength, height), groundMask);
+            Debug.DrawRay(shoulder + rayDir * sideOffset, transform.forward * (height + .25f));
+            hit = Physics.Raycast(shoulder + rayDir * sideOffset, transform.forward, out _raycastHit, Mathf.Min(ikArm.GetArmLength(), height), groundMask);
 
             if (hit)
             {
