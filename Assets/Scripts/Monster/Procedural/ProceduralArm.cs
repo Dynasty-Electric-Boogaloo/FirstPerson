@@ -5,10 +5,12 @@ namespace Monster.Procedural
     public class ProceduralArm : MonoBehaviour
     {
         [SerializeField] private Transform handTransform;
+        [SerializeField] private Transform elbowPoleTransform;
+        [SerializeField] private Transform shoulderTransform;
+        [SerializeField] private float armLength;
         [SerializeField] private Vector2 direction;
         [SerializeField] private Vector2 handDirection;
         [SerializeField] private float forwardOffset;
-        [SerializeField] private InverseKinematicArm ikArm;
         [SerializeField] private float maximumArmOffset;
         [SerializeField] private LayerMask groundMask;
         [SerializeField] private float maxStickingDistance;
@@ -50,19 +52,29 @@ namespace Monster.Procedural
             var normal = Vector3.Slerp(_currentStickingNormal, _previousStickingNormal, factor);
             var vertical = normal * transitionHeight.Evaluate(factor);
             var forward = transitionFoward.Evaluate(factor);
-            handTransform.position = Vector3.Lerp(_currentStickingPosition + vertical, _previousStickingPosition, forward);
+            var position = Vector3.Lerp(_currentStickingPosition + vertical, _previousStickingPosition, forward);
+            handTransform.position = float.IsNaN(position.x) ? Vector3.zero : position;
             handTransform.rotation = Quaternion.Lerp(_currentStickingRotation, _previousStickingRotation, forward);
+
+            var projectedHand =
+                Vector3.ProjectOnPlane(
+                    handTransform.position - 
+                    shoulderTransform.position, 
+                    -_body.transform.forward) +
+                shoulderTransform.position;
+
+            elbowPoleTransform.position = Vector3.Lerp(shoulderTransform.position, projectedHand, .5f) - _body.transform.forward * .5f;
         }
 
         private void UpdateTargetPoint()
         {
-            var shoulder = ikArm.GetShoulderPoint() + transform.up * forwardOffset; //transform.position + transform.rotation * shoulderOffset;
+            var shoulder = shoulderTransform.position + transform.up * forwardOffset;
             
             var rayDir = transform.up * direction.y + transform.right * direction.x;
             rayDir.Normalize();
             
-            Debug.DrawRay(shoulder, rayDir * ikArm.GetArmLength());
-            var hit = Physics.Raycast(shoulder, rayDir, out _raycastHit, ikArm.GetArmLength(), groundMask);
+            Debug.DrawRay(shoulder, rayDir * armLength);
+            var hit = Physics.Raycast(shoulder, rayDir, out _raycastHit, armLength, groundMask);
 
             if (hit)
             {
@@ -72,15 +84,15 @@ namespace Monster.Procedural
             }
 
             var height = _body.GetVerticalPosition() + shoulder.y;
-            var sideOffset = Mathf.Min(Mathf.Cos(Mathf.Asin( Mathf.Clamp01(height / ikArm.GetArmLength()))) * ikArm.GetArmLength(), maximumArmOffset);
+            var sideOffset = Mathf.Min(Mathf.Cos(Mathf.Asin( Mathf.Clamp01(height / armLength))) * armLength, maximumArmOffset);
             
             Debug.DrawRay(shoulder + rayDir * sideOffset, transform.forward * (height + .25f));
-            hit = Physics.Raycast(shoulder + rayDir * sideOffset, transform.forward, out _raycastHit, Mathf.Min(ikArm.GetArmLength(), height), groundMask);
+            hit = Physics.Raycast(shoulder + rayDir * sideOffset, transform.forward, out _raycastHit, Mathf.Min(armLength, height), groundMask);
 
             if (hit)
             {
-                _targetPosition = _raycastHit.point;
                 _targetNormal = _raycastHit.normal;
+                _targetPosition = _raycastHit.point + _targetNormal * .1f;
                 return;
             }
             
