@@ -53,6 +53,5 @@ public class CinematicSystem : MonoBehaviour
         PauseManager.PauseGame(true, false);
         PauseManager.SetForcePause(true);
         instance.image.gameObject.SetActive(true);
-        
     }
 }
