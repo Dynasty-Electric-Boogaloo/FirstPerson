@@ -31,6 +31,9 @@
 		<relationship name="parameters">
 			<destination>{a829df53-f4b1-430d-a013-07711859ff10}</destination>
 		</relationship>
+		<relationship name="banks">
+			<destination>{c8fb6d16-e05b-483a-8660-b23af5d5918b}</destination>
+		</relationship>
 	</object>
 	<object class="EventMixer" id="{5a247305-4437-4091-a5f1-5cf4112a54a9}">
 		<relationship name="masterBus">
@@ -70,7 +73,7 @@
 	</object>
 	<object class="EventMixerMaster" id="{4c933ab5-ef24-4f8a-8ff5-17eab021961c}">
 		<property name="volume">
-			<value>-2</value>
+			<value>-30</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{890649b2-dac6-4a45-9e74-1c73a3f4e733}</destination>
@@ -110,7 +113,7 @@
 	<object class="MixerBusFader" id="{79ce6a63-f0b4-4695-9acd-b705e5e05ddb}" />
 	<object class="PitchShifterEffect" id="{69d057c5-a995-4834-bc86-3f39f8230117}">
 		<property name="pitch">
-			<value>0.789999962</value>
+			<value>1</value>
 		</property>
 	</object>
 	<object class="SpatialiserEffect" id="{e764837f-e155-4beb-a9a1-e2272d881381}" />
