@@ -21,7 +21,7 @@ public class MannequinManager : MonoBehaviour
    
    public static void SwitchVessel(Mimic mimic)
    {
-      if (!instance._isInfected.Contains(mimic)) 
+      if (!instance || !instance._isInfected.Contains(mimic)) 
          return;
       
       var randomPickMimicSafe = instance._isSafe[Random.Range(0, instance._isSafe.Count)]; 
