@@ -70,7 +70,7 @@ namespace UI
       
       public void CancelPause()
       {
-         PauseGame(false, false);
+         PauseGame(false);
       }
       
       public static bool GetPause =>instance && instance._pause || instance._forcePause;

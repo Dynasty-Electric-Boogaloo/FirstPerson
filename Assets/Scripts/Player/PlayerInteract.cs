@@ -188,10 +188,8 @@ namespace Player
             _playerDance.SetDancing();
 
             if (_selectedObject.GetComponent<Mannequin>())
-            {
-                MannequinManager.SwitchVessel(mimic);
                 return;
-            }
+            
             _selectedObject.Break();
         }
 

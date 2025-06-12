@@ -9,13 +9,11 @@ namespace Player
     public class PlayerDance : PlayerBehaviour
     {
         [SerializeField] private float timeBetween = 1f;
-        private Mimic currentMimic; 
-        private float _timer;
+        private Mimic _currentMimic; 
         private PlayerFeedback _playerFeedback;
 
         private void Start()
         {
-            _timer = timeBetween;
             _playerFeedback = GetComponent<PlayerFeedback>();
         }
 
@@ -28,7 +26,7 @@ namespace Player
         {
             if(win)
             {
-                currentMimic.DestroyMimic();
+                _currentMimic.DestroyMimic();
                 _playerFeedback.GetEnergy();
             }
             else
@@ -39,7 +37,7 @@ namespace Player
 
         public void SetCurrentMimic(Mimic newMimic)
         {
-            currentMimic = newMimic;
+            _currentMimic = newMimic;
         }
         
     }

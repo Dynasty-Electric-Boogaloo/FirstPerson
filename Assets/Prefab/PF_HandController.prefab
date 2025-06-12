@@ -844,7 +844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 955a41b121477f5408242127bb312f91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  getEnergy: {fileID: 2252233724926353938}
+  getEnergy: {fileID: 0}
   setEnergy: {fileID: 0}
 --- !u!1 &4167932192429471914
 GameObject:
@@ -874,7 +874,7 @@ Transform:
   m_GameObject: {fileID: 4167932192429471914}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.033, z: 0.16600013}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1908,6 +1908,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_PlayerArms
       objectReference: {fileID: 0}
+    - target: {fileID: 2687213921976668570, guid: cf6394b90bf65a74ea9cd96c2e9b6627, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 4368235777b869f49a95e6c881a72c67, type: 2}
     - target: {fileID: 5576801885011694313, guid: cf6394b90bf65a74ea9cd96c2e9b6627, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
