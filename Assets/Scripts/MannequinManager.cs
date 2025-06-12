@@ -37,6 +37,9 @@ public class MannequinManager : MonoBehaviour
 
    public static void AddToList(Mimic mimic, bool isInfected)
    {
+      if (!instance)
+          return;
+      
       if(isInfected)
          instance._isInfected.Add(mimic);
       else
