@@ -40,8 +40,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3955025453335462236}
-  - component: {fileID: 5366147187913081849}
   - component: {fileID: 2564677442590060839}
+  - component: {fileID: 566925030736698279}
   m_Layer: 0
   m_Name: Mannequin
   m_TagString: Untagged
@@ -66,8 +66,30 @@ Transform:
   - {fileID: 5176703086146557756}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &5366147187913081849
-BoxCollider:
+--- !u!114 &2564677442590060839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3027110478792374705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5338bb7cb110cfc4a8c87cf7d8e3b455, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normal: {fileID: 0}
+  highlight: {fileID: 0}
+  rend: {fileID: 0}
+  onRestore:
+    m_PersistentCalls:
+      m_Calls: []
+  cameraPos: {fileID: 5176703086146557756}
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 8
+--- !u!136 &566925030736698279
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -84,28 +106,11 @@ BoxCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 2, z: 1}
+  serializedVersion: 2
+  m_Radius: 0.35
+  m_Height: 2
+  m_Direction: 1
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &2564677442590060839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3027110478792374705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5338bb7cb110cfc4a8c87cf7d8e3b455, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onRestore:
-    m_PersistentCalls:
-      m_Calls: []
-  cameraPos: {fileID: 5176703086146557756}
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 8
 --- !u!1001 &6970562907768164402
 PrefabInstance:
   m_ObjectHideFlags: 0

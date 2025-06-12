@@ -9,32 +9,28 @@ namespace Player
     public class PlayerDance : PlayerBehaviour
     {
         [SerializeField] private float timeBetween = 1f;
-        [SerializeField] [Range(0.0f, 1.0f)] private float tolerance = 0.5f;
         private Mimic currentMimic; 
         private float _timer;
+        private PlayerFeedback _playerFeedback;
 
         private void Start()
         {
             _timer = timeBetween;
+            _playerFeedback = GetComponent<PlayerFeedback>();
         }
 
         public void SetDancing( )
         {
-            /*
-            UiManager.SetDance(tolerance, isMimic);
-            
-            if(!isMimic)
-                PlayerData.Dancing = setOn;
-            
-            PlayerData.DestroyingMimic = isMimic;
-            */
             DanceManager.StartQte(this);
         }
 
         public void SetQteResult(bool win)
         {
             if(win)
+            {
                 currentMimic.DestroyMimic();
+                _playerFeedback.GetEnergy();
+            }
             else
                 MonsterNavigation.Alert(transform.position);
             
@@ -45,5 +41,6 @@ namespace Player
         {
             currentMimic = newMimic;
         }
+        
     }
 }
