@@ -21,7 +21,6 @@ namespace UI
          
          _inputs = new PlayerInputs(); 
          _inputs.Enable();
-         
       }
       
       private void OnDestroy()
@@ -69,7 +68,7 @@ namespace UI
          instance._forcePause = setOn;
       }
       
-      public  void CancelPause()
+      public void CancelPause()
       {
          PauseGame(false, false);
       }
