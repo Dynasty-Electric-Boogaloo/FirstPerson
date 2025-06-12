@@ -85,7 +85,7 @@ namespace Player
         
         private void LightUpdate()
         {
-            if (_playerInput.Controls.UseFlash.WasPressedThisFrame() && PlayerData.RedLight)
+            if (_playerInput.Controls.UseFlash.WasPressedThisFrame() && PlayerData.RedLight && !PlayerData.IsInMannequin)
                 CheckSwitch();
 
             var reload = _playerInput.Controls.ReloadFlash.IsPressed();
@@ -104,7 +104,7 @@ namespace Player
                     _batteryManager.ReduceBattery();
             }
             
-            if (hud)
+            if (hud && (PlayerData.RedLight || !_special))
                 hud.UpdateBattery(CurrentBattery, CurrentBatteryMax, _special);
 
             UpdateLightIntensity();
@@ -118,6 +118,8 @@ namespace Player
             if (PlayerData.IsInMannequin)
             {
                 light.intensity = intensity;
+                if(_special)
+                    CheckSwitch();
                 return;
             }
 
@@ -128,7 +130,20 @@ namespace Player
                 intensity = factor * CurrentLightIntensity / lightFalloffThreshold;
 
             if (factor < flicker && factor >= flickerEnd && !PlayerData.Reloading)
-                intensity = (factor - flickerEnd) % (flickerWait * 2) < flickerWait ? intensity : 0;
+            {
+                var flickering = (factor - flickerEnd) % (flickerWait * 2) < flickerWait;
+                intensity = flickering ? intensity : 0;
+
+                if (!flickering && _isFlickering)
+                    AudioManager.PlayOneShot(FMODEvents.GetFlicker(), transform.position);
+    
+                _isFlickering = flickering;
+            }
+            else
+            {
+                _isFlickering = true;
+            }
+                
                 
             if (_battery <= 0)
                 intensity = 0;

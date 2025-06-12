@@ -1,4 +1,6 @@
 using System;
+using FMODUnity;
+using Interactables;
 using Monster;
 using Player;
 using UnityEngine;
@@ -24,15 +26,26 @@ public class Mimic : MonoBehaviour
     private bool _isAwake;
     private Collider[] _hitColliders = new Collider[1];
     private int _numColliders;
+    private StudioEventEmitter _emitter;
 
     private void Awake()
     {
         _timer = maxTimeBeforeAlert;
         meshRenderer.enabled = isInfected || showObject;
         meshRenderer.material = regularMaterialSet.normal;
+        SetInfected(isInfected);
 
         if (TryGetComponent<Interactable>(out var interactable))
             interactable.onRestore.AddListener(OnRestore);
+        
+        if (TryGetComponent<Mannequin>(out _))
+           MannequinManager.AddToList(this, isInfected);
+        
+        _emitter = gameObject.AddComponent<StudioEventEmitter>();
+        _emitter.EventReference = EventReference.Find("event:/Ambiant/Whispers");
+        
+        if(isInfected)
+            _emitter.Play();
     }
     
     private void FixedUpdate()
@@ -42,7 +55,7 @@ public class Mimic : MonoBehaviour
     
     private void CheckForPlayer()
     {
-        if(!isInfected || _isAwake || PlayerRoot.GetIsDancing() || PlayerRoot.GetIsInMannequin()) 
+        if(!isInfected || _isAwake || PlayerRoot.GetIsDancing() || PlayerRoot.GetIsInMannequin) 
             return;
         
         _numColliders = Physics.OverlapSphereNonAlloc(transform.position, checkPlayerRadius, _hitColliders, playerLayer);
@@ -68,7 +81,7 @@ public class Mimic : MonoBehaviour
         SetLightened(false);
     }
     
-    public bool GetIsInfected() => isInfected;
+    public bool GetIsInfected => isInfected;
     
     public void SetLightened(bool inLight)
     {
@@ -82,6 +95,9 @@ public class Mimic : MonoBehaviour
     {
         if(!BatteryManager.Battery) 
             return;
+        
+        if(TryGetComponent<Mannequin>(out _))
+            MannequinManager.SwitchVessel(this);
         
         BatteryManager.Battery.AddBattery(1);
     }
@@ -106,6 +122,10 @@ public class Mimic : MonoBehaviour
     {
         isInfected = infection;
         meshRenderer.enabled = isInfected;
+        
+        if(isInfected)
+            _emitter.Play();
+        else
+            _emitter.Stop();
     }
-    
 }
