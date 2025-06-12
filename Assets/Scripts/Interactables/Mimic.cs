@@ -1,5 +1,6 @@
 using System;
 using FMODUnity;
+using Interactables;
 using Monster;
 using Player;
 using UnityEngine;
@@ -32,11 +33,12 @@ public class Mimic : MonoBehaviour
         _timer = maxTimeBeforeAlert;
         meshRenderer.enabled = isInfected || showObject;
         meshRenderer.material = regularMaterialSet.normal;
+        SetInfected(isInfected);
 
         if (TryGetComponent<Interactable>(out var interactable))
             interactable.onRestore.AddListener(OnRestore);
         
-        if (TryGetComponent<MannequinManager>(out _))
+        if (TryGetComponent<Mannequin>(out _))
            MannequinManager.AddToList(this, isInfected);
         
         _emitter = gameObject.AddComponent<StudioEventEmitter>();
@@ -93,6 +95,9 @@ public class Mimic : MonoBehaviour
     {
         if(!BatteryManager.Battery) 
             return;
+        
+        if(TryGetComponent<Mannequin>(out _))
+            MannequinManager.SwitchVessel(this);
         
         BatteryManager.Battery.AddBattery(1);
     }

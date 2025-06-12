@@ -24,15 +24,18 @@ public class MannequinManager : MonoBehaviour
       if (!instance || !instance._isInfected.Contains(mimic)) 
          return;
       
-      var randomPickMimicSafe = instance._isSafe[Random.Range(0, instance._isSafe.Count)]; 
+      if(instance._isSafe.Count > 0)
+      {
+         var randomPickMimicSafe = instance._isSafe[Random.Range(0, instance._isSafe.Count)];
+         instance._isSafe.Remove(randomPickMimicSafe);
+         instance._isInfected.Add(randomPickMimicSafe);
+         randomPickMimicSafe.SetInfected(true);
+      }
          
       mimic.SetInfected(false);
       instance._isSafe.Add(mimic);
       instance._isInfected.Remove(mimic);
-
-      instance._isSafe.Remove(randomPickMimicSafe);
-      instance._isInfected.Add(randomPickMimicSafe);
-      randomPickMimicSafe.SetInfected(true);
+      
    }
 
    public static void AddToList(Mimic mimic, bool isInfected)
