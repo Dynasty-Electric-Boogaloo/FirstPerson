@@ -129,8 +129,17 @@ namespace Player
 
             if (factor < flicker && factor >= flickerEnd && !PlayerData.Reloading)
             {
-                intensity = (factor - flickerEnd) % (flickerWait * 2) < flickerWait ? intensity : 0;
-                AudioManager.PlayOneShot(FMODEvents.GetFlicker(), this.transform.position);
+                var flickering = (factor - flickerEnd) % (flickerWait * 2) < flickerWait;
+                intensity = flickering ? intensity : 0;
+
+                if (!flickering && _isFlickering)
+                    AudioManager.PlayOneShot(FMODEvents.GetFlicker(), transform.position);
+    
+                _isFlickering = flickering;
+            }
+            else
+            {
+                _isFlickering = true;
             }
                 
                 
