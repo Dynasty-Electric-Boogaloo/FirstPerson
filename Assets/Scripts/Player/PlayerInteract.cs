@@ -49,8 +49,10 @@ namespace Player
                 if (!_selectedObject)
                     return;
                 
-                
                 TryInspect();
+                
+                if(PauseManager.GetPause)
+                    return;
 
                 TryInteract();
                 return;
@@ -111,7 +113,8 @@ namespace Player
                 DeselectObject();
                 return;
             }
-            if(!interactable.GetComponent<Mimic>() || PlayerData.RedLight)
+            
+            if(!(interactable.TryGetComponent<Mimic>(out var mimic) && mimic.GetIsInfected) || PlayerData.RedLight)
                 SelectObject(interactable);
         }
 
@@ -120,11 +123,12 @@ namespace Player
             if (!PlayerData.PlayerInputs.Controls.Interact.WasPressedThisFrame()) 
                 return;
             
-            _selectedObject.Interact();
             TryExtract();
             
-            if(_selectedObject.GetComponent<Mimic>())
+            if(_selectedObject.TryGetComponent<Mimic>(out var mimic) && mimic.GetIsInfected)
                 return;
+            
+            _selectedObject.Interact();
 
             if (_selectedObject.TryGetComponent<Mannequin>(out var mannequin) && PlayerRoot.GetRedLightUnlocked)
             {
@@ -177,12 +181,15 @@ namespace Player
             if (!_selectedObject.TryGetComponent<Mimic>(out var mimic) || !PlayerData.RedLight) 
                 return;
             
+            if(!mimic.GetIsInfected)
+                return;
+            
             _playerDance.SetCurrentMimic(mimic);
             _playerDance.SetDancing();
 
             if (_selectedObject.GetComponent<Mannequin>())
             {
-                mimic.SetInfected(false);
+                MannequinManager.SwitchVessel(mimic);
                 return;
             }
             _selectedObject.Break();
@@ -227,6 +234,7 @@ namespace Player
             
             _selectedObject.Highlight(false);
             _selectedObject = null;
+            
             UiManager.SetInteract(_selectedObject);
         }
     }
