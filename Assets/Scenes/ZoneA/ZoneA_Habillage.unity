@@ -48327,13 +48327,52 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8643769680750478849, guid: ea9c27550779cad4193a60fd9d3c60c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7827410444035871631}
   m_SourcePrefab: {fileID: 100100000, guid: ea9c27550779cad4193a60fd9d3c60c9, type: 3}
 --- !u!4 &7827410444035871629 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8478876563009619141, guid: ea9c27550779cad4193a60fd9d3c60c9, type: 3}
   m_PrefabInstance: {fileID: 7827410444035871628}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7827410444035871630 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8643769680750478849, guid: ea9c27550779cad4193a60fd9d3c60c9, type: 3}
+  m_PrefabInstance: {fileID: 7827410444035871628}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7827410444035871631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7827410444035871630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 522429024
+      Data2: 1247434783
+      Data3: -1678374257
+      Data4: 1369346368
+    Path: event:/Ambiant/Piano
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 10
 --- !u!1 &7882012991729851278
 GameObject:
   m_ObjectHideFlags: 0

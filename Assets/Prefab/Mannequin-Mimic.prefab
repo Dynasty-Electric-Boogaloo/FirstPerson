@@ -180,7 +180,7 @@ PrefabInstance:
       addedObject: {fileID: 346854845721823388}
     - targetCorrespondingSourceObject: {fileID: 3027110478792374705, guid: 36db5c7416ac82340ad30a596a9b4fbc, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 815129232652530506}
+      addedObject: {fileID: 561080676817521235}
   m_SourcePrefab: {fileID: 100100000, guid: 36db5c7416ac82340ad30a596a9b4fbc, type: 3}
 --- !u!1 &5548566461483408138 stripped
 GameObject:
@@ -211,7 +211,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 0
---- !u!114 &815129232652530506
+--- !u!114 &561080676817521235
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -226,22 +226,22 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -441136062
+      Data2: 1166121787
+      Data3: 1090449075
+      Data4: -62117938
+    Path: event:/Ambiant/Whispers
   Event: 
-  EventPlayTrigger: 0
-  EventStopTrigger: 12
+  EventPlayTrigger: 1
+  EventStopTrigger: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
   NonRigidbodyVelocity: 0
   Params: []
-  OverrideAttenuation: 0
-  OverrideMinDistance: -1
-  OverrideMaxDistance: -1
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 5
 --- !u!4 &5900016281211708391 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3955025453335462236, guid: 36db5c7416ac82340ad30a596a9b4fbc, type: 3}
