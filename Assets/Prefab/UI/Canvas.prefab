@@ -1076,10 +1076,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 44.1
-  m_fontSizeBase: 16
+  m_fontSize: 35
+  m_fontSizeBase: 35
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -1595,8 +1595,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3180633522840777666}
         m_TargetAssemblyTypeName: UI.PauseManager, Game
-        m_MethodName: PauseGame
-        m_Mode: 6
+        m_MethodName: CancelPause
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

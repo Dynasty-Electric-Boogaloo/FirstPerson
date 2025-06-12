@@ -79,6 +79,7 @@ namespace Interactables
             _instance._current =  _instance._showcase[index];
         
             UiManager.SetInspect();
+            PauseManager.SetForcePause(true);
         }
     
     
@@ -93,6 +94,7 @@ namespace Interactables
             _instance.cam.gameObject.SetActive(false);
             _instance.commentText.text = "";
             PauseManager.PauseGame(false, false);
+            PauseManager.SetForcePause(false);
         }
     }
 }
