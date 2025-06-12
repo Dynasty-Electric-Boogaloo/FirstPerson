@@ -112,5 +112,4 @@ public class Mimic : MonoBehaviour
         isInfected = infection;
         meshRenderer.enabled = isInfected;
     }
-
 }
