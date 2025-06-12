@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5977537095092787127}
+  - component: {fileID: 1213012887873931820}
   m_Layer: 0
   m_Name: PF_Radio01
   m_TagString: Untagged
@@ -32,6 +33,27 @@ Transform:
   - {fileID: 1065708303212787689}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1213012887873931820
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7480972886122257384}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.4266988, y: 0.26, z: 0.18118629}
+  m_Center: {x: 0.0018330142, y: 0.18, z: 0.0044860393}
 --- !u!1001 &666692669326741506
 PrefabInstance:
   m_ObjectHideFlags: 0
