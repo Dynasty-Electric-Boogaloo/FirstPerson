@@ -157,6 +157,7 @@ namespace Player
             
             grab.Grab(grabPoint);
             _grabbedObject = grab;
+            PlayerData.Holding = true;
         }
         
         private void TryInspect()
@@ -200,6 +201,7 @@ namespace Player
             
             _grabbedObject.Ungrab();
             _grabbedObject = null;
+            PlayerData.Holding = false;
             return true;
         }
 
@@ -211,6 +213,7 @@ namespace Player
             var throwVelocity = PlayerData.CameraHolder.forward * throwForce;
             _grabbedObject.Throw(throwVelocity);
             _grabbedObject = null;
+            PlayerData.Holding = false;
             return true;
         }
 
