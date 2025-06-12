@@ -31,7 +31,6 @@ namespace Player
 
         private void Update()
         {
-            
             if (_mannequin)
             {
                 if (!PlayerData.PlayerInputs.Controls.Interact.WasPressedThisFrame()) 
@@ -114,6 +113,7 @@ namespace Player
                 DeselectObject();
                 return;
             }
+            
             if(!(interactable.TryGetComponent<Mimic>(out var mimic) && mimic.GetIsInfected) || PlayerData.RedLight)
                 SelectObject(interactable);
         }
@@ -234,6 +234,7 @@ namespace Player
             
             _selectedObject.Highlight(false);
             _selectedObject = null;
+            
             UiManager.SetInteract(_selectedObject);
         }
     }
