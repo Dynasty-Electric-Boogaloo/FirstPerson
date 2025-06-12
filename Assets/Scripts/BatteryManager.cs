@@ -1,4 +1,5 @@
 using System;
+using NUnit.Framework;
 using Player;
 using UI;
 using UnityEngine;
@@ -11,7 +12,7 @@ public class BatteryManager : MonoBehaviour
     private float _currentBattery;
     [SerializeField] private float maxPowerByBattery;
     [SerializeField] private float maxBattery;
-    [Range(0, 100)]
+    [UnityEngine.Range(0, 100)]
     [SerializeField] private int startBatteryPercent;
     [SerializeField] private Hud hud;
     
@@ -29,20 +30,29 @@ public class BatteryManager : MonoBehaviour
 
     private void Start()
     {
-        _currentPower = maxPowerByBattery * ((float)startBatteryPercent/100);
-        _currentBattery = maxBattery;
+        Battery._currentBattery = 0;
+        Battery._currentPower = 0;
+        if(hud)
+            hud.UpdateBattery(_currentPower, maxPowerByBattery, true);
+    }
+
+    public static void WakeUpBattery()
+    {
+        Battery._currentBattery = Battery.maxBattery;
+        Battery._currentPower = Battery.maxPowerByBattery * ((float)Battery.startBatteryPercent / 100);
     }
 
     private void Update()
     {
-        if (!PlayerRoot.GetIsInMannequin()) return;
+        if (!PlayerRoot.GetIsInMannequin || !PlayerRoot.GetRedLightUnlocked) 
+            return;
 
         UpdateBatteryWithHud();
     }
 
     public void UpdateBatteryWithHud()
     {
-        if(hud)
+        if(hud && PlayerRoot.GetRedLightUnlocked)
             hud.UpdateBattery(_currentPower, maxPowerByBattery, true);
         ReduceBattery();
     }
@@ -52,6 +62,7 @@ public class BatteryManager : MonoBehaviour
         _currentBattery += newBattery;
         if (_currentBattery > maxPowerByBattery)
             _currentBattery = maxPowerByBattery;
+        hud.UpdateBattery(_currentPower, maxPowerByBattery, true);
     }
     
     public void ReduceBattery(float multiplier = 1)
