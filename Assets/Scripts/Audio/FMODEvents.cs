@@ -11,8 +11,10 @@ public class FMODEvents : MonoBehaviour
     [Header("Ambiant")]
     [field : SerializeField] public EventReference Piano { get; private set;}
     [field : SerializeField] public EventReference Whispers { get; private set;}
-    
-    
+    [field : SerializeField] public EventReference Flicker { get; private set;}
+
+    public static EventReference GetFlicker() => instance ? instance.Flicker : new EventReference();
+
     public static FMODEvents instance {get; private set;}
     private void Awake()
     {

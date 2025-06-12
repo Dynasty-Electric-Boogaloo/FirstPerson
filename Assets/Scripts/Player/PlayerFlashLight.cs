@@ -128,7 +128,11 @@ namespace Player
                 intensity = factor * CurrentLightIntensity / lightFalloffThreshold;
 
             if (factor < flicker && factor >= flickerEnd && !PlayerData.Reloading)
+            {
                 intensity = (factor - flickerEnd) % (flickerWait * 2) < flickerWait ? intensity : 0;
+                AudioManager.PlayOneShot(FMODEvents.GetFlicker()transform);
+            }
+                
                 
             if (_battery <= 0)
                 intensity = 0;
