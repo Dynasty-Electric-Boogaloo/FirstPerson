@@ -33,6 +33,11 @@ public class Mimic : MonoBehaviour
 
         if (TryGetComponent<Interactable>(out var interactable))
             interactable.onRestore.AddListener(OnRestore);
+        
+        if (TryGetComponent<MannequinManager>(out _))
+           MannequinManager.AddToList(this, isInfected);
+        
+        //FMod line
     }
     
     private void FixedUpdate()
@@ -68,7 +73,7 @@ public class Mimic : MonoBehaviour
         SetLightened(false);
     }
     
-    public bool GetIsInfected() => isInfected;
+    public bool GetIsInfected => isInfected;
     
     public void SetLightened(bool inLight)
     {
@@ -107,5 +112,5 @@ public class Mimic : MonoBehaviour
         isInfected = infection;
         meshRenderer.enabled = isInfected;
     }
-    
+
 }

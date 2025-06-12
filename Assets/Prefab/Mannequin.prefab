@@ -85,6 +85,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   cameraPos: {fileID: 5176703086146557756}
+  animator: {fileID: 77971667073114045}
   groundMask:
     serializedVersion: 2
     m_Bits: 8
@@ -172,6 +173,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3924a67172e095d4289575eacc3fb2de, type: 3}
+--- !u!95 &77971667073114045 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7037271174437998479, guid: 3924a67172e095d4289575eacc3fb2de, type: 3}
+  m_PrefabInstance: {fileID: 6970562907768164402}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6661060117179066714 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4381084250967112040, guid: 3924a67172e095d4289575eacc3fb2de, type: 3}
