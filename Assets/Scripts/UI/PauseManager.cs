@@ -69,6 +69,11 @@ namespace UI
          instance._forcePause = setOn;
       }
       
+      public  void CancelPause()
+      {
+         PauseGame(false, false);
+      }
+      
       public static bool GetPause =>instance && instance._pause || instance._forcePause;
    }
 }
