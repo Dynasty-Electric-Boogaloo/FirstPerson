@@ -85,7 +85,7 @@ namespace Player
         
         private void LightUpdate()
         {
-            if (_playerInput.Controls.UseFlash.WasPressedThisFrame() && PlayerData.RedLight)
+            if (_playerInput.Controls.UseFlash.WasPressedThisFrame() && PlayerData.RedLight && !PlayerData.IsInMannequin)
                 CheckSwitch();
 
             var reload = _playerInput.Controls.ReloadFlash.IsPressed();
@@ -118,6 +118,8 @@ namespace Player
             if (PlayerData.IsInMannequin)
             {
                 light.intensity = intensity;
+                if(_special)
+                    CheckSwitch();
                 return;
             }
 
