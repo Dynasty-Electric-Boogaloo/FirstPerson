@@ -1,4 +1,5 @@
 using System;
+using FMODUnity;
 using Monster;
 using Player;
 using UnityEngine;
@@ -24,6 +25,7 @@ public class Mimic : MonoBehaviour
     private bool _isAwake;
     private Collider[] _hitColliders = new Collider[1];
     private int _numColliders;
+    private StudioEventEmitter _emitter;
 
     private void Awake()
     {
@@ -37,7 +39,11 @@ public class Mimic : MonoBehaviour
         if (TryGetComponent<MannequinManager>(out _))
            MannequinManager.AddToList(this, isInfected);
         
-        //FMod line
+        _emitter = gameObject.AddComponent<StudioEventEmitter>();
+        _emitter.EventReference = EventReference.Find("event:/Ambiant/Whispers");
+        
+        if(isInfected)
+            _emitter.Play();
     }
     
     private void FixedUpdate()
@@ -111,5 +117,10 @@ public class Mimic : MonoBehaviour
     {
         isInfected = infection;
         meshRenderer.enabled = isInfected;
+        
+        if(isInfected)
+            _emitter.Play();
+        else
+            _emitter.Stop();
     }
 }
