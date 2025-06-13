@@ -1,4 +1,5 @@
 ﻿using System;
+using UI;
 using UnityEngine;
 
 namespace Monster
@@ -31,6 +32,9 @@ namespace Monster
 
         private void Update()
         {
+            if (PauseManager.GetPause)
+                return;
+            
             UpdateMovement();
             UpdateGravity();
         }

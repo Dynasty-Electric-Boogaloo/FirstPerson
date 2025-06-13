@@ -31,6 +31,9 @@ namespace Player
 
         private void Update()
         {
+            if (PauseManager.GetPause)
+                return;
+            
             if (PlayerData.IsInMannequin)
             {
                 PlayerData.Rigidbody.constraints = RigidbodyConstraints.FreezeAll;
