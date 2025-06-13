@@ -11,8 +11,7 @@ GameObject:
   - component: {fileID: 749144185575424972}
   - component: {fileID: 6697518376416177039}
   - component: {fileID: 4772182548497806421}
-  - component: {fileID: 5422498337614504146}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collectible
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,33 +67,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b7f59f3f5b76074e85385d1dd7e5496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normal: {fileID: 0}
-  highlight: {fileID: 0}
-  rend: {fileID: 0}
+  normal: {fileID: 2100000, guid: 114a3b85b3ec9074e858b963fb7bf863, type: 2}
+  highlight: {fileID: 2100000, guid: 47bfe1f39367b364b8af8f7d21f3c16b, type: 2}
+  rend: {fileID: 954451369262576641}
   onRestore:
     m_PersistentCalls:
       m_Calls: []
   trap: {fileID: 0}
   indexObjective: 0
   isEvent: 0
---- !u!114 &5422498337614504146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 402617983221924577}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efc135b98038b8a4cb74053d3c3a531e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  normal: {fileID: 0}
-  highlight: {fileID: 0}
-  rend: {fileID: 0}
-  onRestore:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &6743770788449256547
 GameObject:
   m_ObjectHideFlags: 0
