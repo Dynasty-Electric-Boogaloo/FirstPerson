@@ -31,6 +31,7 @@ public class InformationManager : MonoBehaviour
        Instance.Invoke(nameof(GoBack), time);
    }
 
+   //à clean
    private void GoBack()
    {
        tmpText.text = "";

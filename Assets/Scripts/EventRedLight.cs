@@ -14,6 +14,8 @@ public class EventRedLight : EventObject
             door.ChangeState(true);
         
         InformationManager.SetText("Press [F] to switch light", 2);
+        
+        //ça sera a nuke
         Invoke(nameof(SetTextObjectif), 2.25f);
     }
 
