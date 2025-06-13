@@ -803,7 +803,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPowerByBattery: 20
   maxBattery: 3
-  startBatteryPercent: 100
+  startBatteryPercent: 0
   hud: {fileID: 266798638669423720}
 --- !u!114 &4941221304825508424
 MonoBehaviour:
@@ -1921,6 +1921,10 @@ PrefabInstance:
     - target: {fileID: 613848470603984694, guid: cf6394b90bf65a74ea9cd96c2e9b6627, type: 3}
       propertyPath: m_Name
       value: PF_PlayerArms
+      objectReference: {fileID: 0}
+    - target: {fileID: 613848470603984694, guid: cf6394b90bf65a74ea9cd96c2e9b6627, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2687213921976668570, guid: cf6394b90bf65a74ea9cd96c2e9b6627, type: 3}
       propertyPath: m_Controller
