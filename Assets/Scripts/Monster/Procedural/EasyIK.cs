@@ -1,6 +1,8 @@
 ﻿using System.Linq;
-using UnityEditor;
 using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 namespace Monster.Procedural
 {
@@ -195,6 +197,8 @@ namespace Monster.Procedural
         {
             return _jointChainLength;
         }
+        
+        #if UNITY_EDITOR
 
         // Visual debugging
         private void OnDrawGizmos()
@@ -292,5 +296,6 @@ namespace Monster.Procedural
                 Handles.DrawWireDisc(Vector3.down * pointOffset, Vector3.up, radius);
             }
         }
+        #endif
     }
 }
