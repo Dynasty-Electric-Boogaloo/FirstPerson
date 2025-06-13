@@ -803,7 +803,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPowerByBattery: 20
   maxBattery: 3
-  startBatteryPercent: 0
+  startBatteryPercent: 100
   hud: {fileID: 266798638669423720}
 --- !u!114 &4941221304825508424
 MonoBehaviour:
@@ -2282,47 +2282,51 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3467699128774044572, guid: 880950684935f1b4eb8654649e8888f5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.095
+      value: -0.0623
       objectReference: {fileID: 0}
     - target: {fileID: 3467699128774044572, guid: 880950684935f1b4eb8654649e8888f5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.026
+      value: -0.1538
       objectReference: {fileID: 0}
     - target: {fileID: 3467699128774044572, guid: 880950684935f1b4eb8654649e8888f5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.023
+      value: -0.0623
       objectReference: {fileID: 0}
     - target: {fileID: 3467699128774044572, guid: 880950684935f1b4eb8654649e8888f5, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.94080305
+      value: 0.7624991
       objectReference: {fileID: 0}
     - target: {fileID: 3467699128774044572, guid: 880950684935f1b4eb8654649e8888f5, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.31846294
+      value: 0.60624045
       objectReference: {fileID: 0}
     - target: {fileID: 3467699128774044572, guid: 880950684935f1b4eb8654649e8888f5, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.08771222
+      value: 0.11763264
       objectReference: {fileID: 0}
     - target: {fileID: 3467699128774044572, guid: 880950684935f1b4eb8654649e8888f5, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0760108
+      value: -0.19295159
       objectReference: {fileID: 0}
     - target: {fileID: 3467699128774044572, guid: 880950684935f1b4eb8654649e8888f5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 37.775
+      value: 75.909
       objectReference: {fileID: 0}
     - target: {fileID: 3467699128774044572, guid: 880950684935f1b4eb8654649e8888f5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 8.485
+      value: -12.95
       objectReference: {fileID: 0}
     - target: {fileID: 3467699128774044572, guid: 880950684935f1b4eb8654649e8888f5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -6.331
+      value: -38.519
       objectReference: {fileID: 0}
     - target: {fileID: 8486433610409944157, guid: 880950684935f1b4eb8654649e8888f5, type: 3}
       propertyPath: m_Name
       value: PS_GiveEnergyL_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 9074753034238424417, guid: 880950684935f1b4eb8654649e8888f5, type: 3}
+      propertyPath: looping
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
