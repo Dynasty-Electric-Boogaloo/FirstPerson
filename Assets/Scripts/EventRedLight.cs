@@ -11,6 +11,6 @@ public class EventRedLight : EventObject
         PlayerRoot.SetRedLight(true);
         
         foreach (var door in doors)
-            door.ChangeState();
+            door.ChangeState(true);
     }
 }
