@@ -1,10 +1,10 @@
 using Player;
 using UnityEngine;
 
-public class EventObject : MonoBehaviour
+public class EventObject : SpecialEventPickUp
 {
-   public void DoEvent()
+   public virtual void DoEvent()
    {
-      PlayerRoot.SetRedLight(true);
+      
    }
 }
