@@ -18,6 +18,8 @@ public class ObjectivePickUp : Interactable
         
         if (TryGetComponent<EventObject>(out var eventObject))
             eventObject.DoEvent();
+        else 
+            InformationManager.SetText("New part of the music box found!", 2);
     }
 
     public override void Restore()

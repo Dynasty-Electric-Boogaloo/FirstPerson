@@ -12,5 +12,7 @@ public class EventRedLight : EventObject
         
         foreach (var door in doors)
             door.ChangeState(true);
+        
+        InformationManager.SetText("Press [F] to switch light", 2);
     }
 }

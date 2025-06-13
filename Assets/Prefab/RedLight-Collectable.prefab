@@ -55,7 +55,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.75, y: 0.75, z: 0.75}
+  m_Size: {x: 0.25, y: 0.25, z: 0.25}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4772182548497806421
 MonoBehaviour:
@@ -69,9 +69,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b7f59f3f5b76074e85385d1dd7e5496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normal: {fileID: 0}
-  highlight: {fileID: 0}
-  rend: {fileID: 0}
+  normal: {fileID: 2100000, guid: 114a3b85b3ec9074e858b963fb7bf863, type: 2}
+  highlight: {fileID: 2100000, guid: 47bfe1f39367b364b8af8f7d21f3c16b, type: 2}
+  rend: {fileID: 4949997228903873136}
   onRestore:
     m_PersistentCalls:
       m_Calls: []
@@ -90,9 +90,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc135b98038b8a4cb74053d3c3a531e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normal: {fileID: 0}
-  highlight: {fileID: 0}
-  rend: {fileID: 0}
+  normal: {fileID: 2100000, guid: 114a3b85b3ec9074e858b963fb7bf863, type: 2}
+  highlight: {fileID: 2100000, guid: 47bfe1f39367b364b8af8f7d21f3c16b, type: 2}
+  rend: {fileID: 4949997228903873136}
   onRestore:
     m_PersistentCalls:
       m_Calls: []
@@ -108,9 +108,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea0fff3b5ccb4fc48933e3f763c128dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normal: {fileID: 0}
-  highlight: {fileID: 0}
-  rend: {fileID: 0}
+  normal: {fileID: 2100000, guid: 114a3b85b3ec9074e858b963fb7bf863, type: 2}
+  highlight: {fileID: 2100000, guid: 47bfe1f39367b364b8af8f7d21f3c16b, type: 2}
+  rend: {fileID: 4949997228903873136}
   onRestore:
     m_PersistentCalls:
       m_Calls: []

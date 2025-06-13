@@ -933,7 +933,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 3758096511
+    m_Bits: 3758096767
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -2060,6 +2060,14 @@ PrefabInstance:
     - target: {fileID: 8162421299704881174, guid: 943d3ba41751a61408159ba04470a238, type: 3}
       propertyPath: m_Name
       value: SM_Eye-EYE2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794806870113893036, guid: 943d3ba41751a61408159ba04470a238, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.3686882
+      objectReference: {fileID: 0}
+    - target: {fileID: 8794806870113893036, guid: 943d3ba41751a61408159ba04470a238, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5265405
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
