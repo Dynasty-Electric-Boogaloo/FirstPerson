@@ -97,7 +97,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 73c176f402d2c2f4d929aa5da7585d17, type: 2}
+  - {fileID: -2172201063450408143, guid: 522ecfef40ee17f49841c23b73845b62, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -188,3 +188,5 @@ MonoBehaviour:
   doorPivot: {fileID: 69186806428970160}
   eulerRotationOpen: {x: 0, y: 90, z: 0}
   openingSpeed: 1
+  maxDistanceBeforeClosing: 3
+  autoClose: 1
