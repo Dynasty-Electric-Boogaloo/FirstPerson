@@ -83,10 +83,19 @@ namespace Player
 
         private void DoBobbing(float speed)
         {
+            var previousHorizontalTimer = (_horizontalBobbingTimer) / Mathf.PI;
             _horizontalBobbingTimer += horizontalBobbingFrequency.Evaluate(speed) * Time.deltaTime;
             _verticalBobbingTimer += verticalBobbingFrequency.Evaluate(speed) * Time.deltaTime;
             _horizontalBobbingTimer %= 2 * Mathf.PI;
             _verticalBobbingTimer %= 2 * Mathf.PI;
+
+            var nextHorizontalTimer = (_horizontalBobbingTimer) / Mathf.PI;
+
+            if (previousHorizontalTimer <= .4f && nextHorizontalTimer >= .4f ||
+                previousHorizontalTimer <= 1.4f && nextHorizontalTimer >= 1.4f)
+            {
+                AudioManager.PlayOneShot(FMODEvents.GetStep(), transform.position);
+            }
         }
 
         private void UpdateRotation(float speed)
