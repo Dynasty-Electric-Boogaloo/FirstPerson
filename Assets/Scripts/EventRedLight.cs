@@ -14,5 +14,11 @@ public class EventRedLight : EventObject
             door.ChangeState(true);
         
         InformationManager.SetText("Press [F] to switch light", 2);
+        Invoke(nameof(SetTextObjectif), 2.25f);
+    }
+
+    private void SetTextObjectif()
+    {
+        InformationManager.SetText("Find the missing parts of your music box ([C])", 2);
     }
 }

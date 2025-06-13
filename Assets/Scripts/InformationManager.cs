@@ -14,8 +14,6 @@ public class InformationManager : MonoBehaviour
 
        if (Instance.tmpText)
            tmpText.text = "";
-       
-       SetText("Find the missing parts of your music box ([C])", 2);
    }
 
    private void OnDestroy()
