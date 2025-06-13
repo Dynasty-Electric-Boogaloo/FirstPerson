@@ -30,7 +30,6 @@ namespace UI
          
          _inputs.Disable();
       }
-
       
       private void Update()
       {
@@ -38,7 +37,7 @@ namespace UI
             return;
          
          if(_inputs.Controls.Return.WasPressedThisFrame())
-            PauseGame(!instance._pause);
+            PauseGame(!_pause);
       }
       
       public static void PauseGame(bool setPause, bool showMenu = true)
@@ -73,6 +72,6 @@ namespace UI
          PauseGame(false);
       }
       
-      public static bool GetPause =>instance && instance._pause || instance._forcePause;
+      public static bool GetPause => instance && (instance._pause || instance._forcePause);
    }
 }

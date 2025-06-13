@@ -222,6 +222,7 @@ GameObject:
   - component: {fileID: 153862915}
   - component: {fileID: 153862917}
   - component: {fileID: 153862918}
+  - component: {fileID: 153862919}
   m_Layer: 0
   m_Name: InteractManager
   m_TagString: Untagged
@@ -297,6 +298,19 @@ MonoBehaviour:
     - 3
   qteMonstre: []
   tolerance: 0.75
+--- !u!114 &153862919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153862914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 359e65938097f9c4abf7fc35c56b644d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pausePanel: {fileID: 0}
 --- !u!1 &171594482
 GameObject:
   m_ObjectHideFlags: 0
