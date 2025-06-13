@@ -33,6 +33,10 @@ public class Mimic : MonoBehaviour
         _timer = maxTimeBeforeAlert;
         meshRenderer.enabled = isInfected || showObject;
         meshRenderer.material = regularMaterialSet.normal;
+        
+        _emitter = gameObject.AddComponent<StudioEventEmitter>();
+        _emitter.EventReference = RuntimeManager.PathToEventReference("event:/Ambiant/Whispers");
+        
         SetInfected(isInfected);
 
         if (TryGetComponent<Interactable>(out var interactable))
@@ -40,9 +44,6 @@ public class Mimic : MonoBehaviour
         
         if (TryGetComponent<Mannequin>(out _))
            MannequinManager.AddToList(this, isInfected);
-        
-        _emitter = gameObject.AddComponent<StudioEventEmitter>();
-        _emitter.EventReference = EventReference.Find("event:/Ambiant/Whispers");
         
         if(isInfected)
             _emitter.Play();
@@ -122,6 +123,9 @@ public class Mimic : MonoBehaviour
     {
         isInfected = infection;
         meshRenderer.enabled = isInfected;
+        
+        if(!_emitter)
+            return;
         
         if(isInfected)
             _emitter.Play();

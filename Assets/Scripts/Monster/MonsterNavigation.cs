@@ -110,7 +110,7 @@ namespace Monster
             var diff = PlayerRoot.Position - transform.position;
             var rayVector = diff.normalized;
 
-            if (diff.magnitude > detectionMaxDistance)
+            if (diff.magnitude > detectionMaxDistance || Mathf.Abs(diff.y) > 2)
                 return false;
             
             diff.y = 0;

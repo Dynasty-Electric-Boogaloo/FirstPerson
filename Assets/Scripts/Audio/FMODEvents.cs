@@ -1,6 +1,4 @@
 using System;
-using Mono.Cecil;
-using UnityEditor;
 using UnityEngine;
 using FMODUnity;
 using EventReference = FMODUnity.EventReference;

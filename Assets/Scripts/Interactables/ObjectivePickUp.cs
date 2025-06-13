@@ -13,11 +13,15 @@ public class ObjectivePickUp : Interactable
         if(trap)
             trap.ChangeState();
 
-        if (!isEvent) 
+        if (!isEvent)
+        {
+            InformationManager.SetText("New part of the music box found!", 2);
             return;
+        }
         
         if (TryGetComponent<EventObject>(out var eventObject))
             eventObject.DoEvent();
+        
     }
 
     public override void Restore()
