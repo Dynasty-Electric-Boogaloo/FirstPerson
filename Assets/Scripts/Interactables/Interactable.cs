@@ -29,6 +29,8 @@ public class Interactable : MonoBehaviour
 
     public virtual void Interact()
     {
+        if(TryGetComponent<EventObject>(out var eventObject))
+            eventObject.DoEvent();
     }
 
     public virtual bool IsInteractable()

@@ -18,6 +18,10 @@ namespace UI
         private void Start()
         {
             SetFlashLight(false, false);
+            foreach (var eye in eyes)
+            {
+                eye.Play("ClosingEye", 0, 1);
+            }
         }
 
         public void SetFlashLight(bool special, bool isOn)
