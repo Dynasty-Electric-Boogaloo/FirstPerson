@@ -30,9 +30,6 @@ public class ObjectiveManager : MonoBehaviour
    {
       if (instance == null)
          return;
-      
-      foreach (var objective in instance.objectifs)
-         objective.gameObject.SetActive(PlayerRoot.CurrentIndex+1 == objective.indexObjective);
    }
 
    public static void AddToFound(ObjectivePickUp objectivePickUp)

@@ -52,9 +52,10 @@ namespace Monster
                 return;
             
             var diff = PlayerRoot.Position - transform.position;
-            diff.y = 0;
+            var posDiff = diff;
+            posDiff.y = 0;
 
-            if (diff.magnitude > 1.5f) 
+            if (posDiff.magnitude > 1.5f || Mathf.Abs(diff.y) > 2) 
                 return;
             
             PlayerRoot.Die();
