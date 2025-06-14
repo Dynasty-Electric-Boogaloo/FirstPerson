@@ -9,6 +9,7 @@ public class Interactable : MonoBehaviour
     [SerializeField] private Material normal;
     [SerializeField] private Material highlight;
     [SerializeField] private Renderer rend;
+    [SerializeField] private UnityEvent isInteractedWith;
     private Vector3 _startPosition;
     private Quaternion _startRotation;
     public UnityEvent onRestore;
@@ -29,8 +30,7 @@ public class Interactable : MonoBehaviour
 
     public virtual void Interact()
     {
-        if(TryGetComponent<EventObject>(out var eventObject))
-            eventObject.DoEvent();
+        isInteractedWith.Invoke();
     }
 
     public virtual bool IsInteractable()

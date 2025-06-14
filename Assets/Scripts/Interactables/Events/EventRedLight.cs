@@ -9,12 +9,17 @@ using UnityEngine;
 public class EventRedLight : EventObject
 {
     [SerializeField] private SpriteRenderer wallClue;
+    private MeshRenderer mesh;
+    private BoxCollider box;
+    
     public override void DoEvent()
     {
         base.DoEvent();
-         if (GetComponentInChildren<MeshRenderer>())
-            GetComponentInChildren<MeshRenderer>().enabled = false;
-        if (TryGetComponent<BoxCollider>(out var box))
+        
+        if (mesh)
+            mesh.enabled = false;
+        
+        if(box)
             box.enabled = false;
         
         UiManager.SetEmpty();
@@ -52,5 +57,11 @@ public class EventRedLight : EventObject
         
         wallClue.gameObject.SetActive(false);
         wallClue.DOFade(0, 0);
+        
+        if (GetComponentInChildren<MeshRenderer>())
+           mesh = GetComponent<MeshRenderer>();
+        
+        if (TryGetComponent<BoxCollider>(out var col))
+            box = col;
     }
 }
