@@ -93,6 +93,12 @@ public class DanceManager : MonoBehaviour
             _instance._qteIsPlaying = false;
         }
     }
+
+    public static void ForceStopQte()
+    {
+        QteUiPanel.HideQte();
+        _instance._qteIsPlaying = false;
+    }
     
     [Serializable]
     private struct MimicDestructionQte

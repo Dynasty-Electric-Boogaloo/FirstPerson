@@ -82,8 +82,10 @@ namespace Player
         {
             if(_instance == null)
                 return;
-
+            
+            DanceManager.ForceStopQte();
             ResetPosition();
+            
             if (_instance._musicBox)
                 _instance._musicBox.DecreaseState();
         }
