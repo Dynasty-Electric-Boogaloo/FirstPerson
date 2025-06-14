@@ -49,6 +49,11 @@ namespace Player
             SetRedLight(false);
         }
 
+        private void Start()
+        {
+            DanceManager.OnQteOver.AddListener(OnQteOver);
+        }
+
         private void OnDestroy()
         {
             if (_instance == this)
@@ -96,7 +101,13 @@ namespace Player
             if (!_instance)
                 return;
             
+            SetIsLocked(true);
             DanceManager.StartQte(_instance._playerDance, isMimic);
+        }
+        
+        private void OnQteOver(bool win)
+        {
+            SetIsLocked(false);
         }
         
         public static bool GetIsDestroying => _instance &&_instance._playerData.DestroyingMimic;
@@ -127,9 +138,18 @@ namespace Player
             
             _instance._playerFeedback.GetEnergy();
             BatteryManager.WakeUpBattery();
-
         }
         
         public static bool GetRedLightUnlocked =>_instance && _instance._playerData.RedLight;
+        
+        public static bool GetIsLocked =>_instance && _instance._playerData.Locked;
+        
+        public static void SetIsLocked(bool setOn)
+        {
+            if (!_instance) 
+                return;
+            
+            _instance._playerData.Locked = setOn;
+        }
     }
 }

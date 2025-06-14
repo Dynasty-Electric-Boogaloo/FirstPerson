@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Game;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,6 +11,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private int menuGroup;
     [SerializeField] private int dressingRoomGroup;
     [SerializeField] private List<int> worldGroups;
+    private List<Task> _loadingTasks;
 
     private void Start()
     {
@@ -18,6 +20,12 @@ public class MenuManager : MonoBehaviour
         
         SceneLoader.LoadSceneGroup(menuGroup, LoadSceneMode.Additive);
         SceneLoader.LoadSceneGroup(dressingRoomGroup, LoadSceneMode.Additive);
+        _loadingTasks = new List<Task>();
+
+        foreach (var group in worldGroups)
+        {
+            _loadingTasks.Add(SceneLoader.LoadSceneGroupAsync(group, LoadSceneMode.Additive));
+        }
     }
 
     private void OnDestroy()
@@ -31,12 +39,14 @@ public class MenuManager : MonoBehaviour
         if (_instance == null)
             return;
         
-        SceneLoader.UnloadSceneGroupAsync(_instance.menuGroup);
+        _instance._loadingTasks.Add(SceneLoader.UnloadSceneGroupAsync(_instance.menuGroup));
         
-        foreach (var sceneGroup in _instance.worldGroups)
+        /*foreach (var sceneGroup in _instance.worldGroups)
         {
             SceneLoader.LoadSceneGroup(sceneGroup, LoadSceneMode.Additive);
-        }
+        }*/
+
+        Task.WhenAll(_instance._loadingTasks);
 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
