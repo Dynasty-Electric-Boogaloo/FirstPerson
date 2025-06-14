@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Player;
 using UnityEngine;
+using UnityEngine.Events;
 using Random = UnityEngine.Random;
 
 public class DanceManager : MonoBehaviour
@@ -17,6 +18,9 @@ public class DanceManager : MonoBehaviour
     private bool _qteIsPlaying;
     private float _timer;
     private int _currentIndex;
+    private UnityEvent<bool> _onQteOver = new();
+
+    public static UnityEvent<bool> OnQteOver => _instance ? _instance._onQteOver : null;
 
     private void Awake()
     {
@@ -76,13 +80,16 @@ public class DanceManager : MonoBehaviour
         {
             _playerDance.SetQteResult(false);
             _instance._qteIsPlaying = false;
+            OnQteOver?.Invoke(false);
             return;
         }
+        
         if(_currentIndex < _currentMimicQTE.notes.Count-1)
             PlayQte(_currentIndex + 1);
         else
         {
             _playerDance.SetQteResult(true);
+            OnQteOver?.Invoke(true);
             _instance._qteIsPlaying = false;
         }
     }

@@ -16,6 +16,7 @@ namespace Player
         private Quaternion _startRotation;
         private PlayerMusicBox _musicBox;
         private PlayerFeedback _playerFeedback;
+        private PlayerDance _playerDance;
         public static Vector3 Position => _instance ? _instance.transform.position : Vector3.zero;
         
         public static int CurrentIndex  =>  _instance ? _instance._playerData.CurrentIndexObjective : -1;
@@ -44,6 +45,7 @@ namespace Player
             _startRotation = transform.rotation;
             _musicBox = GetComponent<PlayerMusicBox>();
             _playerFeedback = GetComponent<PlayerFeedback>();
+            _playerDance = GetComponent<PlayerDance>();
             SetRedLight(false);
         }
 
@@ -87,6 +89,14 @@ namespace Player
         {
             if(_instance)
                 _instance._playerData.Dancing = setOn;
+        }
+
+        public static void StartQte(bool isMimic = true)
+        {
+            if (!_instance)
+                return;
+            
+            DanceManager.StartQte(_instance._playerDance, isMimic);
         }
         
         public static bool GetIsDestroying => _instance &&_instance._playerData.DestroyingMimic;
