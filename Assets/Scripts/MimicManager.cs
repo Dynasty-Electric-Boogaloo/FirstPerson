@@ -33,7 +33,7 @@ public class MimicManager : MonoBehaviour
    {
       _time += Time.deltaTime;
 
-      if (!(_time >= timer)) 
+      if (_time < timer) 
          return;
       
       _time = 0;

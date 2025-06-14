@@ -24,6 +24,9 @@ namespace Player
 
         public void SetQteResult(bool win)
         {
+            if(!_currentMimic)
+                return;
+            
             if(win)
             {
                 _currentMimic.DestroyMimic();
