@@ -122,7 +122,7 @@ public class Mimic : MonoBehaviour
     public void SetInfected(bool infection)
     {
         isInfected = infection;
-        meshRenderer.enabled = isInfected;
+        meshRenderer.enabled = isInfected || showObject;
         
         if(!_emitter)
             return;
