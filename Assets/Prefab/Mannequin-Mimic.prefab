@@ -128,6 +128,34 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 3404470308942068578, guid: 36db5c7416ac82340ad30a596a9b4fbc, type: 3}
+      propertyPath: isInfected
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404470308942068578, guid: 36db5c7416ac82340ad30a596a9b4fbc, type: 3}
+      propertyPath: showObject
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404470308942068578, guid: 36db5c7416ac82340ad30a596a9b4fbc, type: 3}
+      propertyPath: meshRenderer
+      value: 
+      objectReference: {fileID: 4318408400116542781}
+    - target: {fileID: 3404470308942068578, guid: 36db5c7416ac82340ad30a596a9b4fbc, type: 3}
+      propertyPath: checkPlayerRadius
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3404470308942068578, guid: 36db5c7416ac82340ad30a596a9b4fbc, type: 3}
+      propertyPath: regularMaterialSet.awake
+      value: 
+      objectReference: {fileID: 2100000, guid: 47bfe1f39367b364b8af8f7d21f3c16b, type: 2}
+    - target: {fileID: 3404470308942068578, guid: 36db5c7416ac82340ad30a596a9b4fbc, type: 3}
+      propertyPath: regularMaterialSet.normal
+      value: 
+      objectReference: {fileID: 2100000, guid: 47bfe1f39367b364b8af8f7d21f3c16b, type: 2}
+    - target: {fileID: 3404470308942068578, guid: 36db5c7416ac82340ad30a596a9b4fbc, type: 3}
+      propertyPath: regularMaterialSet.revealed
+      value: 
+      objectReference: {fileID: 2100000, guid: 08ad40672f8bdd84c8231727ae06ba48, type: 2}
     - target: {fileID: 3955025453335462236, guid: 36db5c7416ac82340ad30a596a9b4fbc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.47
@@ -174,40 +202,8 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3955025453335462236, guid: 36db5c7416ac82340ad30a596a9b4fbc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 984702780613199935}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3027110478792374705, guid: 36db5c7416ac82340ad30a596a9b4fbc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 346854845721823388}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36db5c7416ac82340ad30a596a9b4fbc, type: 3}
---- !u!1 &5548566461483408138 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3027110478792374705, guid: 36db5c7416ac82340ad30a596a9b4fbc, type: 3}
-  m_PrefabInstance: {fileID: 7422498699157529275}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &346854845721823388
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5548566461483408138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e5695be090262e4ab7cedb3e869b909, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  meshRenderer: {fileID: 4318408400116542781}
-  regularMaterialSet:
-    normal: {fileID: 2100000, guid: 47bfe1f39367b364b8af8f7d21f3c16b, type: 2}
-    revealed: {fileID: 2100000, guid: 08ad40672f8bdd84c8231727ae06ba48, type: 2}
-    awake: {fileID: 2100000, guid: 47bfe1f39367b364b8af8f7d21f3c16b, type: 2}
-  isInfected: 1
-  showObject: 1
-  maxTimeBeforeAlert: 15
-  checkPlayerRadius: 1.5
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 0
 --- !u!4 &5900016281211708391 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3955025453335462236, guid: 36db5c7416ac82340ad30a596a9b4fbc, type: 3}

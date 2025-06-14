@@ -71,6 +71,21 @@ MonoBehaviour:
   normal: {fileID: 2100000, guid: 114a3b85b3ec9074e858b963fb7bf863, type: 2}
   highlight: {fileID: 2100000, guid: 47bfe1f39367b364b8af8f7d21f3c16b, type: 2}
   rend: {fileID: 4949997228903873136}
+  isInteractedWith:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5678633069704033531}
+        m_TargetAssemblyTypeName: EventRedLight, Game
+        m_MethodName: DoEvent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onRestore:
     m_PersistentCalls:
       m_Calls: []
