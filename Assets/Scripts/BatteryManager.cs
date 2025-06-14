@@ -27,16 +27,6 @@ public class BatteryManager : MonoBehaviour
             Battery = null;
     }
 
-    private void Start()
-    {
-        Battery._currentPower = 0;
-        for (var battery = 0; battery < maxBattery; battery++)
-        {
-            Battery._currentBattery = battery;
-            hud.UpdateBattery(_currentPower, maxPowerByBattery, true);
-        }
-    }
-
     public static void WakeUpBattery()
     {
         Battery._currentBattery = Battery.maxBattery;
@@ -49,6 +39,16 @@ public class BatteryManager : MonoBehaviour
 
     private void Update()
     {
+        if (!PlayerRoot.GetRedLightUnlocked)
+        {
+            Battery._currentPower = 0;
+            for (var battery = 0; battery < maxBattery; battery++)
+            {
+                Battery._currentBattery = battery+1;
+                hud.UpdateBattery(_currentPower, maxPowerByBattery, true);
+            }
+        }
+        
         if(hud)
             hud.UpdateBattery(_currentPower, maxPowerByBattery, true);
         
