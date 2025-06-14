@@ -65,7 +65,6 @@ namespace Monster
                 return;
             }
             
-
             _refreshTimer = refreshTime;
 
             MonsterData.targetNode = EvaluateTargetNode();
@@ -190,7 +189,7 @@ namespace Monster
             }
 
             var bestNode = new NodeId(-1);
-            var bestScore = float.PositiveInfinity;
+            var bestScore = watchTime * 1.5f;
 
             foreach (var node in MonsterData.Heatmap.Data.Keys)
             {
