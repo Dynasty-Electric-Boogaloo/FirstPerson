@@ -34,21 +34,22 @@ public class Mimic : MonoBehaviour
         meshRenderer.enabled = isInfected || showObject;
         meshRenderer.material = regularMaterialSet.normal;
         
-        _emitter = gameObject.AddComponent<StudioEventEmitter>();
-        _emitter.EventReference = RuntimeManager.PathToEventReference("event:/Ambiant/Whispers");
+        //_emitter = gameObject.AddComponent<StudioEventEmitter>();
+        //_emitter.EventReference = RuntimeManager.PathToEventReference("event:/Ambiant/Whispers");
         
         SetInfected(isInfected);
 
         if (TryGetComponent<Interactable>(out var interactable))
             interactable.onRestore.AddListener(OnRestore);
-        
-        if (TryGetComponent<Mannequin>(out _))
-           MannequinManager.AddToList(this, isInfected);
-        
-        if(isInfected)
-            _emitter.Play();
     }
-    
+
+    private void Start()
+    {
+        MimicManager.AddToList(this, isInfected, TryGetComponent<Mannequin>(out _)); ;
+       /* if(isInfected)
+            _emitter.Play();*/
+    }
+
     private void FixedUpdate()
     {
         CheckForPlayer();
@@ -98,7 +99,7 @@ public class Mimic : MonoBehaviour
             return;
         
         if(TryGetComponent<Mannequin>(out _))
-            MannequinManager.SwitchVessel(this);
+            MimicManager.SwitchVessel(this);
         
         BatteryManager.Battery.AddBattery(1);
     }
