@@ -19,6 +19,7 @@ namespace Player
 
         public void SetDancing( )
         {
+            //TODO Add player lock call here
             DanceManager.StartQte(this);
         }
 

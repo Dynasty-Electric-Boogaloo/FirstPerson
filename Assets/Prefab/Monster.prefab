@@ -6479,7 +6479,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 1
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -1561755370504164045, guid: a1950068221954d43b15224df06123ca, type: 3}
+  m_Mesh: {fileID: -1561755370504164045, guid: b9d17e0ca15dc004fae98f223060970d, type: 3}
   m_Bones:
   - {fileID: 5564190773019379289}
   - {fileID: 847446911253596421}
@@ -10548,7 +10548,7 @@ SkinnedMeshRenderer:
   m_Quality: 0
   m_UpdateWhenOffscreen: 1
   m_SkinnedMotionVectors: 1
-  m_Mesh: {fileID: -2153531757946349791, guid: a1950068221954d43b15224df06123ca, type: 3}
+  m_Mesh: {fileID: -2153531757946349791, guid: b9d17e0ca15dc004fae98f223060970d, type: 3}
   m_Bones:
   - {fileID: 5498312295008148762}
   - {fileID: 5564190773019379289}
@@ -10646,6 +10646,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   proceduralHead: {fileID: 3210773535208791551}
+  hitStunTime: 1
 --- !u!114 &5990154029284292563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10769,13 +10770,15 @@ MonoBehaviour:
   idleDetectionDot: 0.75
   chasingDetectionDot: 0
   detectionRayOffset: 1
+  watchTime: 7
+  watchDistance: 15
   visionMask:
     serializedVersion: 2
     m_Bits: 1073741833
   playerMask:
     serializedVersion: 2
     m_Bits: 1073741824
-  chaseTime: 0.1
+  chaseTime: 0.5
   alertClip: {fileID: 8300000, guid: 3be83507e776a7145aac62375fcb1711, type: 3}
   stageLight: {fileID: 3678632192750588968}
 --- !u!54 &7354742177963990005
