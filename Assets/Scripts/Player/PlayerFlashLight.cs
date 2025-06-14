@@ -104,7 +104,7 @@ namespace Player
                     _batteryManager.ReduceBattery();
             }
             
-            if (hud && (PlayerData.RedLight || !_special))
+            if (hud && PlayerData.RedLight)
                 hud.UpdateBattery(CurrentBattery, CurrentBatteryMax, _special);
 
             UpdateLightIntensity();

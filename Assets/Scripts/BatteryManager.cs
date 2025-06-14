@@ -29,21 +29,32 @@ public class BatteryManager : MonoBehaviour
 
     private void Start()
     {
-        Battery._currentBattery = 0;
         Battery._currentPower = 0;
+        for (var battery = 0; battery < maxBattery; battery++)
+        {
+            Battery._currentBattery = battery;
+            hud.UpdateBattery(_currentPower, maxPowerByBattery, true);
+        }
     }
 
     public static void WakeUpBattery()
     {
         Battery._currentBattery = Battery.maxBattery;
-        Battery._currentPower = Battery.maxPowerByBattery;
+        for (var battery = 0; battery < Battery.maxBattery; battery++)
+        {
+            Battery._currentBattery = battery;
+            Battery.hud.UpdateBattery(Battery._currentPower, Battery.maxPowerByBattery, true);
+        }
     }
 
     private void Update()
     {
+        if(hud)
+            hud.UpdateBattery(_currentPower, maxPowerByBattery, true);
+        
         if (!PlayerRoot.GetIsInMannequin || !PlayerRoot.GetRedLightUnlocked) 
             return;
-
+        
         UpdateBatteryWithHud();
     }
 
