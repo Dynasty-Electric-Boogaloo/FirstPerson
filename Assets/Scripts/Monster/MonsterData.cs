@@ -16,6 +16,8 @@ namespace Monster
         public bool searching;
         public float stateTime;
         public HeatmapData Heatmap;
+        public float hitStunTimer;
+        public float watchTimer;
         public float chaseTimer;
         public NodeId targetNode;
     }

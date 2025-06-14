@@ -51,9 +51,15 @@ public class GrabObject : Interactable
             return;
         
         var numColliders = Physics.OverlapSphereNonAlloc(transform.position, breakRadius, _hitColliders, breakableLayers);
-        
-        if(numColliders > 0)
+
+        if (numColliders > 0)
+        {
             Break();
+            return;
+        }
+
+        if (MonsterRoot.IsPointInMonster(transform.position))
+            MonsterRoot.Hit();
     }
     
     public void Grab(Transform grabPoint)
