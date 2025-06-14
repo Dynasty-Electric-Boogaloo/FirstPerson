@@ -33,6 +33,7 @@ MonoBehaviour:
         m_Bits: 4294967291
   m_SceneGUIDs:
   - 7c9246be089d00f45b6f874366064a4a
+  - 41a22c42b73629049baed64b217ece0c
   obsoleteScenesToNotBake: []
   m_LightingScenarios:
   - Default
@@ -253,9 +254,15 @@ MonoBehaviour:
   m_SceneBakeData:
     m_Keys:
     - 7c9246be089d00f45b6f874366064a4a
+    - 41a22c42b73629049baed64b217ece0c
     m_Values:
     - hasProbeVolume: 0
       bakeScene: 1
       bounds:
         m_Center: {x: 0, y: 0, z: 0}
         m_Extent: {x: 81, y: 81, z: 81}
+    - hasProbeVolume: 0
+      bakeScene: 1
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}
