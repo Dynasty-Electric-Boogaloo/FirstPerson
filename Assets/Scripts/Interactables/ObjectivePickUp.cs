@@ -9,7 +9,9 @@ public class ObjectivePickUp : Interactable
     public bool GetIsEvent => isEvent;
     public void PickedUp()
     {
-        gameObject.SetActive(false);
+        if(!isEvent)
+            gameObject.SetActive(false);
+        
         if(trap)
             trap.ChangeState();
 

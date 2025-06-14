@@ -16,6 +16,7 @@ namespace UI
     {
         [SerializeField] private TMP_Text usageText;
         [SerializeField] private Image mannequinMask;
+        [SerializeField] private Image chaseBorder;
         
         private Interactable _current;
         
@@ -45,7 +46,7 @@ namespace UI
             if (!_instance.usageText)
                 return;
 
-            if (!interactable || ((interactable is Mannequin || interactable.TryGetComponent<Mimic>(out _)) && !PlayerRoot.GetRedLightUnlocked))
+            if (!interactable || ((interactable is Mannequin || interactable.TryGetComponent<Mimic>(out _)) && !PlayerRoot.GetRedLightUnlocked) || PlayerRoot.GetIsLocked)
             {
                 _instance.usageText.text = "";
                 return;
@@ -89,6 +90,22 @@ namespace UI
                 return;
             
             _instance.usageText.text = "Return - I";
+        }
+        
+        public static void SetEmpty()
+        {
+            if(!_instance) 
+                return;
+            
+            _instance.usageText.text = "";
+        }
+
+        public static void SetChaseBorder(bool setOn)
+        {
+            if(!_instance || !_instance.chaseBorder) 
+                return;
+            
+            _instance.chaseBorder.DOFade(setOn ? 1 : 0, 2);
         }
     }
 }
