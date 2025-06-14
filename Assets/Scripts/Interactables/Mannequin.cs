@@ -15,7 +15,8 @@ namespace Interactables
         
         protected override void Start()
         {
-            _currentPoseIndex = animator.GetCurrentAnimatorClipInfo(0)[0].clip.name;
+            if(animator)
+                _currentPoseIndex = animator.GetCurrentAnimatorClipInfo(0)[0].clip.name;
         }
 
         public override InteractionType GetInteractionType()
