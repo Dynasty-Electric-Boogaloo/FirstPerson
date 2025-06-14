@@ -1,6 +1,7 @@
 ﻿using System;
 using Heatmap;
 using Player;
+using UI;
 using UnityEngine;
 using ZoneGraph;
 
@@ -152,13 +153,15 @@ namespace Monster
                 case 1:
                     MonsterData.stateTime = 0;
                     HeatmapManager.StartRecording(room);
+                    UiManager.SetChaseBorder(false);
                     break;
                 case 2:
                     MonsterData.stateTime = 0;
                     Alert(PlayerRoot.Position, true);
                     if (MonsterData.watchTimer <= 0)
                         PlayerRoot.StartQte(false);
-                    MonsterData.watchTimer = float.MaxValue;
+                    MonsterData.watchTimer = watchTime * 1.5f;
+                    UiManager.SetChaseBorder(true);
                     break;
             }
         }
@@ -189,7 +192,7 @@ namespace Monster
             }
 
             var bestNode = new NodeId(-1);
-            var bestScore = watchTime * 1.5f;
+            var bestScore = float.MaxValue;
 
             foreach (var node in MonsterData.Heatmap.Data.Keys)
             {
