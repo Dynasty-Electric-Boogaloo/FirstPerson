@@ -18,6 +18,7 @@ namespace Player
         public bool IsInMannequin;
         public bool RedLight;
         public bool Holding;
+        public bool Locked;
         public int CurrentIndexObjective = 0;
         public Vector2 CameraRotation;
     }

@@ -31,6 +31,12 @@ namespace Player
 
         private void Update()
         {
+            if(PlayerData.Locked)
+            {
+                UiManager.SetEmpty();
+                return;
+            }
+            
             if (_mannequin)
             {
                 if (!PlayerData.PlayerInputs.Controls.Interact.WasPressedThisFrame()) 
