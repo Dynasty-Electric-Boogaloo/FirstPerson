@@ -47,7 +47,7 @@ namespace Monster
             move.y = 0;
             move.Normalize();
 
-            if (move.sqrMagnitude < 0.01f)
+            if (move.magnitude < 0.5f || MonsterData.hitStunTimer > 0)
             {
                 move = Vector2.zero;
             }
@@ -63,9 +63,12 @@ namespace Monster
 
             MonsterData.rigidbody.AddForce(diff * acceleration, ForceMode.Acceleration);
 
-            if (linearVelocity.magnitude < 0.1f)
+            if (linearVelocity.magnitude < 0.1f || MonsterData.hitStunTimer > 0)
+            {
+                MonsterData.rigidbody.linearVelocity = new Vector3(0, linearVelocity.y, 0);
                 return;
-            
+            }
+
             transform.rotation = Quaternion.Slerp(
                 transform.rotation, 
                 Quaternion.LookRotation(linearVelocity.normalized, Vector3.up),

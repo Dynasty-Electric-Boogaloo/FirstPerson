@@ -228,6 +228,11 @@ namespace Monster.Procedural
             return _positionRecording[point];
         }
 
+        public ProceduralBody[] GetBodyParts()
+        {
+            return _bodyParts;
+        }
+
         public void SetPose(string name)
         {
             if (!_posesDict.TryGetValue(name, out var value))
