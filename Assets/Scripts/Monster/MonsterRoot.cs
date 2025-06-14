@@ -16,6 +16,7 @@ namespace Monster
         private MonsterData _monsterData;
         private Vector3 _startPosition;
         private Quaternion _startRotation;
+        private MonsterBehaviour[] _behaviours;
         
         public static Vector3 GetMonsterPosition() => _instance.transform.position; 
         
@@ -30,8 +31,8 @@ namespace Monster
                 Heatmap = new HeatmapData("Monster map")
             };
             
-            var behaviours = GetComponents<MonsterBehaviour>();
-            foreach (var behaviour in behaviours)
+            _behaviours = GetComponents<MonsterBehaviour>();
+            foreach (var behaviour in _behaviours)
             {
                 behaviour.Setup(_monsterData);
             }
@@ -110,6 +111,20 @@ namespace Monster
         {
             if (_instance)
                 _instance._monsterData.hitStunTimer = _instance.hitStunTime;
+        }
+
+        public static void Freeze()
+        {
+            if (!_instance)
+                return;
+            
+            foreach (var behaviour in _instance._behaviours)
+            {
+                behaviour.enabled = false;
+            }
+
+            _instance._monsterData.rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+            _instance.enabled = false;
         }
     }
 }
