@@ -57,9 +57,7 @@ namespace Monster
             MonsterData.stateTime += Time.deltaTime;
             
             if (MonsterData.watchTimer > 0)
-            {
                 MonsterData.watchTimer -= Time.deltaTime;
-            }
             
             if (_refreshTimer > 0 && monsterPoint != MonsterData.targetNode)
             {
@@ -95,10 +93,7 @@ namespace Monster
         
         private void OnQteOver(bool win)
         {
-            if (win)
-                MonsterData.watchTimer = watchTime;
-            else
-                MonsterData.watchTimer = 0;
+            MonsterData.watchTimer = win ? watchTime : 0;
         }
 
         private NodeId EvaluateTargetNode()
