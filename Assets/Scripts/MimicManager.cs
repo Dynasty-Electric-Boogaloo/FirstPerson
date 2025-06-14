@@ -68,10 +68,8 @@ public class MimicManager : MonoBehaviour
 
    public static void AddToList(Mimic mimic, bool isInfected, bool isMannequin = true)
    {
-      print(mimic.name + " in");
       if (!instance)
           return;
-      print(mimic.name + " out");
       
       if(!isMannequin)
       {
