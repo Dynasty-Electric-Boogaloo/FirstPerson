@@ -1,4 +1,6 @@
-﻿using ScriptableObjects;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+using ScriptableObjects;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -84,7 +86,60 @@ namespace Game
             }
         }
 
-        public static void UnloadSceneGroupAsync(int index)
+        public static async Task LoadSceneGroupAsync(int index, LoadSceneMode mode)
+        {
+            if (_instance == null)
+            {
+                Debug.LogError("No SceneLoader instance exists!");
+                return;
+            }
+
+            if (index < 0 || index >= _instance.config.sceneIds.Length)
+            {
+                Debug.LogError("Scene group index out of bounds!");
+                return;
+            }
+
+            var sceneId = _instance.config.sceneIds[index];
+
+            if (sceneId.ids[0] == -1)
+            {
+                Debug.Log("Scene group is empty! Cannot load anything!");
+                return;
+            }
+
+            var asyncOperations = new List<AsyncOperation>(3);
+            asyncOperations.Add(SceneManager.LoadSceneAsync(sceneId.ids[0], mode));
+
+            for (var i = 1; i < 3; i++)
+            {
+                if (sceneId.ids[i] < 0)
+                    return;
+
+                if (SceneManager.GetSceneByBuildIndex(sceneId.ids[i]).isLoaded)
+                    continue;
+                
+                asyncOperations.Add(SceneManager.LoadSceneAsync(sceneId.ids[i], LoadSceneMode.Additive));
+            }
+
+            var finished = false;
+                
+            while (!finished)
+            {
+                finished = true;
+                    
+                foreach (var asyncOperation in asyncOperations)
+                {
+                    if (asyncOperation.isDone)
+                        continue;
+                    finished = false;
+                }
+
+                await Task.Yield();
+            }
+        }
+
+        public static async Task UnloadSceneGroupAsync(int index)
         {
             if (_instance == null)
             {
@@ -105,14 +160,31 @@ namespace Game
                 return;
             }
 
-            SceneManager.UnloadSceneAsync(sceneId.ids[0]);
+            var asyncOperations = new List<AsyncOperation>(3);
+            asyncOperations.Add(SceneManager.UnloadSceneAsync(sceneId.ids[0]));
 
             for (var i = 1; i < 3; i++)
             {
                 if (sceneId.ids[i] < 0)
                     return;
                 
-                SceneManager.UnloadSceneAsync(sceneId.ids[i]);
+                asyncOperations.Add(SceneManager.UnloadSceneAsync(sceneId.ids[i]));
+            }
+            
+            var finished = false;
+                
+            while (!finished)
+            {
+                finished = true;
+                    
+                foreach (var asyncOperation in asyncOperations)
+                {
+                    if (asyncOperation.isDone)
+                        continue;
+                    finished = false;
+                }
+
+                await Task.Yield();
             }
         }
     }
