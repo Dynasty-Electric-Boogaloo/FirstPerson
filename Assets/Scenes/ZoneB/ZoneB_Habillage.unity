@@ -726,6 +726,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 804376067}
     m_Modifications:
+    - target: {fileID: 3804981620137365636, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4961731410219995626, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 28.60809
@@ -769,6 +773,10 @@ PrefabInstance:
     - target: {fileID: 5816313683775919283, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
       propertyPath: m_Name
       value: PS_ElectricitySpark (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816313683775919283, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1000,6 +1008,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 804376067}
     m_Modifications:
+    - target: {fileID: 3804981620137365636, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4961731410219995626, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 35.30809
@@ -1043,6 +1055,10 @@ PrefabInstance:
     - target: {fileID: 5816313683775919283, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
       propertyPath: m_Name
       value: PS_ElectricitySpark (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816313683775919283, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1391,7 +1407,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -1826,6 +1842,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 285615320}
     m_Modifications:
+    - target: {fileID: 623441657086760170, guid: 48b2e05460e6050488086c6ba9e503fd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3503733795016637394, guid: 48b2e05460e6050488086c6ba9e503fd, type: 3}
       propertyPath: m_Name
       value: PF_CeilingLamp_02 (2)
@@ -2268,7 +2288,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -2508,7 +2528,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -3552,6 +3572,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 804376067}
     m_Modifications:
+    - target: {fileID: 3804981620137365636, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4961731410219995626, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.53
@@ -3595,6 +3619,10 @@ PrefabInstance:
     - target: {fileID: 5816313683775919283, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
       propertyPath: m_Name
       value: PS_ElectricitySpark (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816313683775919283, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3907,6 +3935,14 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 6976622400927937905, guid: 480e760c9dcdeaf40940ea133c9a671f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7345076466747126916, guid: 480e760c9dcdeaf40940ea133c9a671f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7371645991207377019, guid: 480e760c9dcdeaf40940ea133c9a671f, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -3915,7 +3951,23 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 8656992052879816447, guid: 480e760c9dcdeaf40940ea133c9a671f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8692244721239514326, guid: 480e760c9dcdeaf40940ea133c9a671f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8932700942566481099, guid: 480e760c9dcdeaf40940ea133c9a671f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9015315139105879818, guid: 480e760c9dcdeaf40940ea133c9a671f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135640987604114750, guid: 480e760c9dcdeaf40940ea133c9a671f, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -5187,7 +5239,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -6794,6 +6846,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9143379018124313514, guid: d3013d9fe41ec9d4e8163ec6559f6ad4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7165,7 +7221,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -7934,6 +7990,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 804376067}
     m_Modifications:
+    - target: {fileID: 3804981620137365636, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4961731410219995626, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 49.302
@@ -7977,6 +8037,10 @@ PrefabInstance:
     - target: {fileID: 5816313683775919283, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
       propertyPath: m_Name
       value: PS_ElectricitySpark (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816313683775919283, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8285,6 +8349,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 804376067}
     m_Modifications:
+    - target: {fileID: 3804981620137365636, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4961731410219995626, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 31.011
@@ -8328,6 +8396,10 @@ PrefabInstance:
     - target: {fileID: 5816313683775919283, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
       propertyPath: m_Name
       value: PS_ElectricitySpark (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816313683775919283, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9096,11 +9168,19 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 2263294059210984824, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3433282936956142881, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
       propertyPath: m_Name
       value: PF_HeadProjector_01 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 3433282936956142881, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314833327542165888, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -9112,6 +9192,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 03c03c54cc7dcc34bafd8b29447bc0a2, type: 2}
+    - target: {fileID: 8869898844114638987, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019393250848935231, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9449,7 +9537,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -9570,6 +9658,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1418763591}
     m_Modifications:
+    - target: {fileID: 1111664704509998181, guid: bc05a6c3822acf64e9d0e7a7ed73bcf4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1112879350763863559, guid: bc05a6c3822acf64e9d0e7a7ed73bcf4, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -10264,7 +10356,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -11062,11 +11154,27 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 2263294059210984824, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3433282936956142881, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
       propertyPath: m_Name
       value: PF_HeadProjector_01
       objectReference: {fileID: 0}
     - target: {fileID: 3433282936956142881, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314833327542165888, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869898844114638987, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019393250848935231, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -11285,11 +11393,19 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 2263294059210984824, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3433282936956142881, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
       propertyPath: m_Name
       value: PF_HeadProjector_01 (3)
       objectReference: {fileID: 0}
     - target: {fileID: 3433282936956142881, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314833327542165888, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -11301,6 +11417,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 1117460fbf05f7f4fa2ae865f239135b, type: 2}
+    - target: {fileID: 8869898844114638987, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019393250848935231, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12082,7 +12206,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -12386,6 +12510,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 804376067}
     m_Modifications:
+    - target: {fileID: 3804981620137365636, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4961731410219995626, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 35.017
@@ -12429,6 +12557,10 @@ PrefabInstance:
     - target: {fileID: 5816313683775919283, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
       propertyPath: m_Name
       value: PS_ElectricitySpark (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816313683775919283, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12789,7 +12921,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -13144,7 +13276,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -14092,7 +14224,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &804376067
 Transform:
@@ -14625,6 +14757,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 804376067}
     m_Modifications:
+    - target: {fileID: 3804981620137365636, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4961731410219995626, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 45.027
@@ -14668,6 +14804,10 @@ PrefabInstance:
     - target: {fileID: 5816313683775919283, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
       propertyPath: m_Name
       value: PS_ElectricitySpark (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816313683775919283, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15088,6 +15228,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 804376067}
     m_Modifications:
+    - target: {fileID: 3804981620137365636, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4961731410219995626, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 53.076
@@ -15131,6 +15275,10 @@ PrefabInstance:
     - target: {fileID: 5816313683775919283, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
       propertyPath: m_Name
       value: PS_ElectricitySpark (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816313683775919283, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15220,6 +15368,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1418763591}
     m_Modifications:
+    - target: {fileID: 396871619900796243, guid: 6871534827c3704458fb73aa959e2f14, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5977537095092787127, guid: 6871534827c3704458fb73aa959e2f14, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.38799953
@@ -15263,6 +15415,10 @@ PrefabInstance:
     - target: {fileID: 7480972886122257384, guid: 6871534827c3704458fb73aa959e2f14, type: 3}
       propertyPath: m_Name
       value: PF_Radio01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7480972886122257384, guid: 6871534827c3704458fb73aa959e2f14, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16844,6 +17000,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 804376067}
     m_Modifications:
+    - target: {fileID: 3804981620137365636, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4961731410219995626, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 39.50809
@@ -16887,6 +17047,10 @@ PrefabInstance:
     - target: {fileID: 5816313683775919283, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
       propertyPath: m_Name
       value: PS_ElectricitySpark (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816313683775919283, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17131,6 +17295,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9143379018124313514, guid: d3013d9fe41ec9d4e8163ec6559f6ad4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17231,6 +17399,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1132746291}
     m_Modifications:
+    - target: {fileID: 396871619900796243, guid: 6871534827c3704458fb73aa959e2f14, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5977537095092787127, guid: 6871534827c3704458fb73aa959e2f14, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.5466995
@@ -17274,6 +17446,10 @@ PrefabInstance:
     - target: {fileID: 7480972886122257384, guid: 6871534827c3704458fb73aa959e2f14, type: 3}
       propertyPath: m_Name
       value: PF_Radio01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7480972886122257384, guid: 6871534827c3704458fb73aa959e2f14, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17568,6 +17744,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 285615320}
     m_Modifications:
+    - target: {fileID: 623441657086760170, guid: 48b2e05460e6050488086c6ba9e503fd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3503733795016637394, guid: 48b2e05460e6050488086c6ba9e503fd, type: 3}
       propertyPath: m_Name
       value: PF_CeilingLamp_02 (5)
@@ -17814,7 +17994,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -18521,6 +18701,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9143379018124313514, guid: d3013d9fe41ec9d4e8163ec6559f6ad4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18748,6 +18932,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 285615320}
     m_Modifications:
+    - target: {fileID: 623441657086760170, guid: 48b2e05460e6050488086c6ba9e503fd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3503733795016637394, guid: 48b2e05460e6050488086c6ba9e503fd, type: 3}
       propertyPath: m_Name
       value: PF_CeilingLamp_02
@@ -19486,6 +19674,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1132746291}
     m_Modifications:
+    - target: {fileID: 1111664704509998181, guid: bc05a6c3822acf64e9d0e7a7ed73bcf4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1112879350763863559, guid: bc05a6c3822acf64e9d0e7a7ed73bcf4, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -19900,7 +20092,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -20140,7 +20332,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -20471,11 +20663,19 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 2263294059210984824, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3433282936956142881, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
       propertyPath: m_Name
       value: PF_HeadProjector_01 (3)
       objectReference: {fileID: 0}
     - target: {fileID: 3433282936956142881, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314833327542165888, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -20487,6 +20687,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 1117460fbf05f7f4fa2ae865f239135b, type: 2}
+    - target: {fileID: 8869898844114638987, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019393250848935231, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21680,6 +21888,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9143379018124313514, guid: d3013d9fe41ec9d4e8163ec6559f6ad4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22049,6 +22261,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 804376067}
     m_Modifications:
+    - target: {fileID: 3804981620137365636, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4961731410219995626, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 47.583
@@ -22093,6 +22309,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PS_ElectricitySpark (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 5816313683775919283, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22116,6 +22336,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 804376067}
     m_Modifications:
+    - target: {fileID: 3804981620137365636, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4961731410219995626, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 30.664
@@ -22159,6 +22383,10 @@ PrefabInstance:
     - target: {fileID: 5816313683775919283, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
       propertyPath: m_Name
       value: PS_ElectricitySpark
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816313683775919283, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22984,6 +23212,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 6334273588173665900, guid: 00c72be99d60f334a99087ea13585b77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: 00c72be99d60f334a99087ea13585b77, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.687
@@ -23760,6 +23992,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1132746291}
     m_Modifications:
+    - target: {fileID: 1111664704509998181, guid: bc05a6c3822acf64e9d0e7a7ed73bcf4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1112879350763863559, guid: bc05a6c3822acf64e9d0e7a7ed73bcf4, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -24235,7 +24471,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -24937,7 +25173,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -25215,6 +25451,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1418763591}
     m_Modifications:
+    - target: {fileID: 1111664704509998181, guid: bc05a6c3822acf64e9d0e7a7ed73bcf4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1112879350763863559, guid: bc05a6c3822acf64e9d0e7a7ed73bcf4, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -25905,11 +26145,19 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 2263294059210984824, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3433282936956142881, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
       propertyPath: m_Name
       value: PF_HeadProjector_01 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 3433282936956142881, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314833327542165888, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -25921,6 +26169,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9ba84a580815c7c44a940f4a5dc379aa, type: 2}
+    - target: {fileID: 8869898844114638987, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019393250848935231, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -26253,7 +26509,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -27077,6 +27333,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 6334273588173665900, guid: 00c72be99d60f334a99087ea13585b77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: 00c72be99d60f334a99087ea13585b77, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.76
@@ -27277,11 +27537,27 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 2263294059210984824, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3433282936956142881, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
       propertyPath: m_Name
       value: PF_HeadProjector_01 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 3433282936956142881, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314833327542165888, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869898844114638987, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019393250848935231, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -27442,6 +27718,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 804376067}
     m_Modifications:
+    - target: {fileID: 3804981620137365636, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4961731410219995626, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 50.986
@@ -27485,6 +27765,10 @@ PrefabInstance:
     - target: {fileID: 5816313683775919283, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
       propertyPath: m_Name
       value: PS_ElectricitySpark (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816313683775919283, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28555,11 +28839,27 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 2263294059210984824, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3433282936956142881, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
       propertyPath: m_Name
       value: PF_HeadProjector_01
       objectReference: {fileID: 0}
     - target: {fileID: 3433282936956142881, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314833327542165888, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869898844114638987, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019393250848935231, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -29837,7 +30137,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -30728,7 +31028,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -31831,11 +32131,19 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 2263294059210984824, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3433282936956142881, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
       propertyPath: m_Name
       value: PF_HeadProjector_01
       objectReference: {fileID: 0}
     - target: {fileID: 3433282936956142881, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314833327542165888, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -31847,6 +32155,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 9ba84a580815c7c44a940f4a5dc379aa, type: 2}
+    - target: {fileID: 8869898844114638987, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019393250848935231, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -32253,7 +32569,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -32309,6 +32625,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 285615320}
     m_Modifications:
+    - target: {fileID: 623441657086760170, guid: 48b2e05460e6050488086c6ba9e503fd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3503733795016637394, guid: 48b2e05460e6050488086c6ba9e503fd, type: 3}
       propertyPath: m_Name
       value: PF_CeilingLamp_02 (4)
@@ -32838,7 +33158,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -33629,11 +33949,19 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 2263294059210984824, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3433282936956142881, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
       propertyPath: m_Name
       value: PF_HeadProjector_01 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 3433282936956142881, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314833327542165888, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -33645,6 +33973,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 03c03c54cc7dcc34bafd8b29447bc0a2, type: 2}
+    - target: {fileID: 8869898844114638987, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019393250848935231, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33752,6 +34088,10 @@ PrefabInstance:
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6207274044830343367, guid: 00c72be99d60f334a99087ea13585b77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6334273588173665900, guid: 00c72be99d60f334a99087ea13585b77, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -34329,6 +34669,10 @@ PrefabInstance:
     - target: {fileID: 8945255293930420697, guid: d3013d9fe41ec9d4e8163ec6559f6ad4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9143379018124313514, guid: d3013d9fe41ec9d4e8163ec6559f6ad4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -35218,6 +35562,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 285615320}
     m_Modifications:
+    - target: {fileID: 623441657086760170, guid: 48b2e05460e6050488086c6ba9e503fd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3503733795016637394, guid: 48b2e05460e6050488086c6ba9e503fd, type: 3}
       propertyPath: m_Name
       value: PF_CeilingLamp_02 (1)
@@ -35604,7 +35952,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -35730,6 +36078,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 804376067}
     m_Modifications:
+    - target: {fileID: 3804981620137365636, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4961731410219995626, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 39.30809
@@ -35773,6 +36125,10 @@ PrefabInstance:
     - target: {fileID: 5816313683775919283, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
       propertyPath: m_Name
       value: PS_ElectricitySpark (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816313683775919283, guid: ac995a618d20b30498380aa200fc68f4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -35932,6 +36288,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 285615320}
     m_Modifications:
+    - target: {fileID: 623441657086760170, guid: 48b2e05460e6050488086c6ba9e503fd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3503733795016637394, guid: 48b2e05460e6050488086c6ba9e503fd, type: 3}
       propertyPath: m_Name
       value: PF_CeilingLamp_02 (3)
