@@ -34,7 +34,7 @@ namespace Player
             if (PauseManager.GetPause)
                 return;
             
-            if (PlayerData.IsInMannequin)
+            if (PlayerData.IsInMannequin || PlayerData.Locked)
             {
                 PlayerData.Rigidbody.constraints = RigidbodyConstraints.FreezeAll;
                 return;

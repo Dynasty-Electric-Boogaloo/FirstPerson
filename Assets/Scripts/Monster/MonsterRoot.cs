@@ -2,6 +2,7 @@
 using Interactables;
 using Monster.Procedural;
 using Player;
+using UI;
 using UnityEngine;
 using ZoneGraph;
 
@@ -49,6 +50,8 @@ namespace Monster
         {
             if (_monsterData.hitStunTimer > 0)
                 _monsterData.hitStunTimer -= Time.deltaTime;
+            
+            UiManager.SetChaseBorder(_monsterData.chasing);
             
             proceduralHead.SetPose(_monsterData.chasing && _monsterData.watchTimer <= 0 ? "Chasing" : "Patrolling");
 

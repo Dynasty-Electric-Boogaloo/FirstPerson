@@ -7,10 +7,14 @@ using UnityEngine;
 public class EventFirstHide : EventObject
 {
     [SerializeField] private List<Door> doors;
+    private bool _alreadyDid;
     public override void DoEvent()
     {
-        base.DoEvent();
+        if(_alreadyDid)
+            return;
         
+        base.DoEvent();
+        _alreadyDid = true;
         StartCoroutine(Event());
     }
 

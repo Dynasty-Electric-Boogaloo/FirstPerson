@@ -59,7 +59,7 @@ public class EventRedLight : EventObject
         wallClue.DOFade(0, 0);
         
         if (GetComponentInChildren<MeshRenderer>())
-           mesh = GetComponent<MeshRenderer>();
+           mesh = GetComponentInChildren<MeshRenderer>();
         
         if (TryGetComponent<BoxCollider>(out var col))
             box = col;
