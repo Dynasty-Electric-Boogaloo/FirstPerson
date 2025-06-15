@@ -144,6 +144,14 @@ namespace Player
             _instance._playerFeedback.GetEnergy();
             BatteryManager.WakeUpBattery();
         }
+
+        public static void SetPosition(Vector3 position)
+        {
+            if (!_instance) 
+                return;
+            
+            _instance.transform.position = position;
+        }
         
         public static bool GetRedLightUnlocked =>_instance && _instance._playerData.RedLight;
         
