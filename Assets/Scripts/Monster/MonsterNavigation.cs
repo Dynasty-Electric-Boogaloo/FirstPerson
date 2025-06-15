@@ -94,6 +94,7 @@ namespace Monster
         private void OnQteOver(bool win)
         {
             MonsterData.watchTimer = win ? watchTime : 0;
+            QteUiPanel.HideQte();
         }
 
         private NodeId EvaluateTargetNode()
