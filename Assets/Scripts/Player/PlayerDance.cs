@@ -19,11 +19,14 @@ namespace Player
 
         public void SetDancing( )
         {
-            DanceManager.StartQte(this);
+            PlayerRoot.StartQte();
         }
 
         public void SetQteResult(bool win)
         {
+            if(!_currentMimic)
+                return;
+            
             if(win)
             {
                 _currentMimic.DestroyMimic();

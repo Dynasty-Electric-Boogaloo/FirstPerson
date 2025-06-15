@@ -16,6 +16,7 @@ namespace Player
         private Quaternion _startRotation;
         private PlayerMusicBox _musicBox;
         private PlayerFeedback _playerFeedback;
+        private PlayerDance _playerDance;
         public static Vector3 Position => _instance ? _instance.transform.position : Vector3.zero;
         
         public static int CurrentIndex  =>  _instance ? _instance._playerData.CurrentIndexObjective : -1;
@@ -44,7 +45,13 @@ namespace Player
             _startRotation = transform.rotation;
             _musicBox = GetComponent<PlayerMusicBox>();
             _playerFeedback = GetComponent<PlayerFeedback>();
+            _playerDance = GetComponent<PlayerDance>();
             SetRedLight(false);
+        }
+
+        private void Start()
+        {
+            DanceManager.OnQteOver.AddListener(OnQteOver);
         }
 
         private void OnDestroy()
@@ -75,8 +82,10 @@ namespace Player
         {
             if(_instance == null)
                 return;
-
+            
+            DanceManager.ForceStopQte();
             ResetPosition();
+            
             if (_instance._musicBox)
                 _instance._musicBox.DecreaseState();
         }
@@ -87,6 +96,20 @@ namespace Player
         {
             if(_instance)
                 _instance._playerData.Dancing = setOn;
+        }
+
+        public static void StartQte(bool isMimic = true)
+        {
+            if (!_instance)
+                return;
+            
+            SetIsLocked(true);
+            DanceManager.StartQte(_instance._playerDance, isMimic);
+        }
+        
+        private void OnQteOver(bool win)
+        {
+            SetIsLocked(false);
         }
         
         public static bool GetIsDestroying => _instance &&_instance._playerData.DestroyingMimic;
@@ -117,9 +140,18 @@ namespace Player
             
             _instance._playerFeedback.GetEnergy();
             BatteryManager.WakeUpBattery();
-
         }
         
         public static bool GetRedLightUnlocked =>_instance && _instance._playerData.RedLight;
+        
+        public static bool GetIsLocked =>_instance && _instance._playerData.Locked;
+        
+        public static void SetIsLocked(bool setOn)
+        {
+            if (!_instance) 
+                return;
+            
+            _instance._playerData.Locked = setOn;
+        }
     }
 }

@@ -13,7 +13,6 @@ public class BatteryManager : MonoBehaviour
     [SerializeField] private float maxPowerByBattery;
     [SerializeField] private float maxBattery;
     [UnityEngine.Range(0, 100)]
-    [SerializeField] private int startBatteryPercent;
     [SerializeField] private Hud hud;
     
     private void Awake()
@@ -32,14 +31,12 @@ public class BatteryManager : MonoBehaviour
     {
         Battery._currentBattery = 0;
         Battery._currentPower = 0;
-        if(hud)
-            hud.UpdateBattery(_currentPower, maxPowerByBattery, true);
     }
 
     public static void WakeUpBattery()
     {
         Battery._currentBattery = Battery.maxBattery;
-        Battery._currentPower = Battery.maxPowerByBattery * ((float)Battery.startBatteryPercent / 100);
+        Battery._currentPower = Battery.maxPowerByBattery;
     }
 
     private void Update()

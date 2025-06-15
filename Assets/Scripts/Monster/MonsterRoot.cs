@@ -2,6 +2,7 @@
 using Interactables;
 using Monster.Procedural;
 using Player;
+using UI;
 using UnityEngine;
 using ZoneGraph;
 
@@ -11,15 +12,17 @@ namespace Monster
     {
         private static MonsterRoot _instance;
         [SerializeField] private ProceduralHead proceduralHead;
+        [SerializeField] private float hitStunTime;
         private MonsterData _monsterData;
         private Vector3 _startPosition;
         private Quaternion _startRotation;
+        private MonsterBehaviour[] _behaviours;
         
         public static Vector3 GetMonsterPosition() => _instance.transform.position; 
         
         private void Awake()
         {
-            if (_instance == null)
+            if (!_instance)
                 _instance = this;
 
             _monsterData = new MonsterData
@@ -28,8 +31,8 @@ namespace Monster
                 Heatmap = new HeatmapData("Monster map")
             };
             
-            var behaviours = GetComponents<MonsterBehaviour>();
-            foreach (var behaviour in behaviours)
+            _behaviours = GetComponents<MonsterBehaviour>();
+            foreach (var behaviour in _behaviours)
             {
                 behaviour.Setup(_monsterData);
             }
@@ -46,16 +49,15 @@ namespace Monster
 
         private void Update()
         {
-            proceduralHead.SetPose(_monsterData.chasing ? "Chasing" : "Patrolling");
+            if (_monsterData.hitStunTimer > 0)
+                _monsterData.hitStunTimer -= Time.deltaTime;
+            
+            proceduralHead.SetPose(_monsterData.chasing && _monsterData.watchTimer <= 0 ? "Chasing" : "Patrolling");
 
             if (PlayerRoot.GetIsInMannequin)
                 return;
-            
-            var diff = PlayerRoot.Position - transform.position;
-            var posDiff = diff;
-            posDiff.y = 0;
 
-            if (posDiff.magnitude > 1.5f || Mathf.Abs(diff.y) > 2) 
+            if (!ShouldKillPlayer())
                 return;
             
             PlayerRoot.Die();
@@ -70,11 +72,59 @@ namespace Monster
             _monsterData.targetNode = new NodeId(-1);
             InteractableManager.Restore();
         }
+
+        public bool ShouldKillPlayer()
+        {
+            var diff = PlayerRoot.Position - transform.position;
+            var posDiff = diff;
+            posDiff.y = 0;
+            
+            if (posDiff.magnitude < 1.5f && Mathf.Abs(diff.y) < 2)
+                return true;
+            
+            return IsPointInMonster(PlayerRoot.Position);
+        }
+
+        public static bool IsPointInMonster(Vector3 point)
+        {
+            if (!_instance)
+                return false;
+            
+            foreach (var bodyPart in _instance.proceduralHead.GetBodyParts())
+            {
+                var diff = point - bodyPart.transform.position;
+
+                if (diff.magnitude < .5f)
+                    return true;
+            }
+
+            return false;
+        }
         
         public static void SetVisible(bool visible)
         {
             if(_instance)
                 _instance.gameObject.SetActive(visible);
+        }
+
+        public static void Hit()
+        {
+            if (_instance)
+                _instance._monsterData.hitStunTimer = _instance.hitStunTime;
+        }
+
+        public static void Freeze()
+        {
+            if (!_instance)
+                return;
+            
+            foreach (var behaviour in _instance._behaviours)
+            {
+                behaviour.enabled = false;
+            }
+
+            _instance._monsterData.rigidbody.constraints = RigidbodyConstraints.FreezeAll;
+            _instance.enabled = false;
         }
     }
 }

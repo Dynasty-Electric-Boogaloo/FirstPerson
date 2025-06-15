@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4881f9a2c4d568047b316028d20a8dca, type: 3}
   m_Name: ZoneD_Habillage Baking Set
   m_EditorClassIdentifier: 
-  singleSceneMode: 1
+  singleSceneMode: 0
   dialogNoProbeVolumeInSetShown: 1
   settings:
     m_Version: 1
@@ -33,6 +33,7 @@ MonoBehaviour:
         m_Bits: 4294967291
   m_SceneGUIDs:
   - 7c9246be089d00f45b6f874366064a4a
+  - 41a22c42b73629049baed64b217ece0c
   obsoleteScenesToNotBake: []
   m_LightingScenarios:
   - Default
@@ -253,9 +254,15 @@ MonoBehaviour:
   m_SceneBakeData:
     m_Keys:
     - 7c9246be089d00f45b6f874366064a4a
+    - 41a22c42b73629049baed64b217ece0c
     m_Values:
     - hasProbeVolume: 0
       bakeScene: 1
       bounds:
         m_Center: {x: 0, y: 0, z: 0}
         m_Extent: {x: 81, y: 81, z: 81}
+    - hasProbeVolume: 0
+      bakeScene: 1
+      bounds:
+        m_Center: {x: 0, y: 0, z: 0}
+        m_Extent: {x: 0, y: 0, z: 0}

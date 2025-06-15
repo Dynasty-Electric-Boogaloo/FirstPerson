@@ -55,37 +55,5 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3027110478792374705, guid: 36db5c7416ac82340ad30a596a9b4fbc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 664603428432231533}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36db5c7416ac82340ad30a596a9b4fbc, type: 3}
---- !u!1 &7681772457760158317 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3027110478792374705, guid: 36db5c7416ac82340ad30a596a9b4fbc, type: 3}
-  m_PrefabInstance: {fileID: 4654848071319178204}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &664603428432231533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7681772457760158317}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e5695be090262e4ab7cedb3e869b909, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  meshRenderer: {fileID: 0}
-  regularMaterialSet:
-    normal: {fileID: 0}
-    revealed: {fileID: 0}
-    awake: {fileID: 0}
-  isInfected: 0
-  showObject: 0
-  maxTimeBeforeAlert: 15
-  checkPlayerRadius: 1
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 0

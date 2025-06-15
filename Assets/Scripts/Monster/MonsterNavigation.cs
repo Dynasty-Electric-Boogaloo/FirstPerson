@@ -1,6 +1,7 @@
 ﻿using System;
 using Heatmap;
 using Player;
+using UI;
 using UnityEngine;
 using ZoneGraph;
 
@@ -16,6 +17,8 @@ namespace Monster
         [SerializeField] private float idleDetectionDot;
         [SerializeField] private float chasingDetectionDot;
         [SerializeField] private float detectionRayOffset;
+        [SerializeField] private float watchTime;
+        [SerializeField] private float watchDistance;
         [SerializeField] private LayerMask visionMask;
         [SerializeField] private LayerMask playerMask;
         [SerializeField] private float chaseTime;
@@ -34,8 +37,9 @@ namespace Monster
         private void Start()
         {
             _baseRoom = ZoneGraphManager.Pathfinding.GetPointRoom(transform.position);
+            DanceManager.OnQteOver?.AddListener(OnQteOver);
         }
-
+        
         private void OnDestroy()
         {
             if (_instance == this)
@@ -53,12 +57,15 @@ namespace Monster
             
             MonsterData.stateTime += Time.deltaTime;
             
+            if (MonsterData.watchTimer > 0)
+                MonsterData.watchTimer -= Time.deltaTime;
+            
             if (_refreshTimer > 0 && monsterPoint != MonsterData.targetNode)
             {
                 _refreshTimer -= Time.deltaTime;
                 return;
             }
-
+            
             _refreshTimer = refreshTime;
 
             MonsterData.targetNode = EvaluateTargetNode();
@@ -83,15 +90,23 @@ namespace Monster
             if (_instance.alertClip && !silent)
                 AudioSource.PlayClipAtPoint(_instance.alertClip, point, .25f);
         }
+        
+        private void OnQteOver(bool win)
+        {
+            MonsterData.watchTimer = win ? watchTime : 0;
+        }
 
         private NodeId EvaluateTargetNode()
         {
             var shouldChase = CanChase();
 
-            HandleStateChange(MonsterData.chasing, shouldChase || MonsterData.chaseTimer > 0);
+            HandleStateChange(MonsterData.chasing, shouldChase || MonsterData.chaseTimer > 0 || MonsterData.watchTimer > 0);
 
-            MonsterData.chasing = shouldChase || MonsterData.chaseTimer > 0;
+            MonsterData.chasing = shouldChase || MonsterData.chaseTimer > 0 || MonsterData.watchTimer > 0;
             UpdateChaseTimer(shouldChase);
+
+            if (shouldChase && MonsterData.watchTimer > 0 && Vector3.Distance(transform.position, PlayerRoot.Position) < watchDistance)
+                return MonsterData.targetNode;
 
             return MonsterData.chasing ? EvaluateChasingTargetNode() : EvaluateSearchingTargetNode();
         }
@@ -138,10 +153,15 @@ namespace Monster
                 case 1:
                     MonsterData.stateTime = 0;
                     HeatmapManager.StartRecording(room);
+                    UiManager.SetChaseBorder(false);
                     break;
                 case 2:
                     MonsterData.stateTime = 0;
                     Alert(PlayerRoot.Position, true);
+                    if (MonsterData.watchTimer <= 0)
+                        PlayerRoot.StartQte(false);
+                    MonsterData.watchTimer = watchTime * 1.5f;
+                    UiManager.SetChaseBorder(true);
                     break;
             }
         }
@@ -172,7 +192,7 @@ namespace Monster
             }
 
             var bestNode = new NodeId(-1);
-            var bestScore = float.PositiveInfinity;
+            var bestScore = float.MaxValue;
 
             foreach (var node in MonsterData.Heatmap.Data.Keys)
             {

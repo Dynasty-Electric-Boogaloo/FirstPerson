@@ -599,6 +599,10 @@ PrefabInstance:
       propertyPath: 'objectifs.Array.data[5]'
       value: 
       objectReference: {fileID: 1760006370}
+    - target: {fileID: 3091280711656581046, guid: 426d86e8124c92d45ba3edf62f0b78a9, type: 3}
+      propertyPath: timer
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 8526513910176063201, guid: 426d86e8124c92d45ba3edf62f0b78a9, type: 3}
       propertyPath: m_Name
       value: InteractManager
@@ -668,13 +672,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 434917485}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0.0051904568, y: -0, z: -0, w: 0.9999866}
   m_LocalPosition: {x: 7.45, y: -1.78, z: 6.5}
   m_LocalScale: {x: 41, y: 4, z: 34}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1742200284}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -0.595, y: 0, z: 0}
 --- !u!65 &434917487
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1248,6 +1252,18 @@ PrefabInstance:
     - target: {fileID: 3657656217622314699, guid: eab028e0012386248bab747a1f03a100, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5712189399065842697, guid: eab028e0012386248bab747a1f03a100, type: 3}
+      propertyPath: hitStunTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6365327022629292588, guid: eab028e0012386248bab747a1f03a100, type: 3}
+      propertyPath: watchTime
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6365327022629292588, guid: eab028e0012386248bab747a1f03a100, type: 3}
+      propertyPath: watchDistance
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6381172404324561916, guid: eab028e0012386248bab747a1f03a100, type: 3}
       propertyPath: m_Mesh
@@ -2062,6 +2078,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   usageText: {fileID: 1569385599}
   mannequinMask: {fileID: 2121254568}
+  chaseBorder: {fileID: 1428306418}
 --- !u!4 &1353599516
 Transform:
   m_ObjectHideFlags: 0
@@ -2346,6 +2363,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 79cc7e3d8390d3b4dac52d227b47dc53, type: 3}
+--- !u!114 &1428306418 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 133674922097778511, guid: 79cc7e3d8390d3b4dac52d227b47dc53, type: 3}
+  m_PrefabInstance: {fileID: 1428306417}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1457849352
 GameObject:
   m_ObjectHideFlags: 0
