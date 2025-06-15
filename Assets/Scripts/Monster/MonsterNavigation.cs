@@ -69,7 +69,7 @@ namespace Monster
             _refreshTimer = refreshTime;
 
             MonsterData.targetNode = EvaluateTargetNode();
-
+            
             if (MonsterData.targetNode.id < 0)
                 MonsterData.targetNode = ZoneGraphManager.Pathfinding.GetPointClosestNode(transform.position, ZoneGraphManager.Pathfinding.GetPointRoom(transform.position));
             
