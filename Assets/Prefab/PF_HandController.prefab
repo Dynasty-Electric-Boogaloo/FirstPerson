@@ -803,7 +803,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxPowerByBattery: 20
   maxBattery: 3
-  startBatteryPercent: 100
   hud: {fileID: 266798638669423720}
 --- !u!114 &4941221304825508424
 MonoBehaviour:
@@ -2328,12 +2327,24 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -38.519
       objectReference: {fileID: 0}
+    - target: {fileID: 3521656134574131262, guid: 880950684935f1b4eb8654649e8888f5, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5801397980977143215, guid: 880950684935f1b4eb8654649e8888f5, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8486433610409944157, guid: 880950684935f1b4eb8654649e8888f5, type: 3}
       propertyPath: m_Name
       value: PS_GiveEnergyL_01
       objectReference: {fileID: 0}
     - target: {fileID: 9074753034238424417, guid: 880950684935f1b4eb8654649e8888f5, type: 3}
       propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9074753034238424417, guid: 880950684935f1b4eb8654649e8888f5, type: 3}
+      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

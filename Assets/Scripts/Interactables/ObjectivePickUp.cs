@@ -3,21 +3,18 @@ using UnityEngine;
 
 public class ObjectivePickUp : Interactable
 {
-    [SerializeField] private Door trap;
-    [SerializeField] public int indexObjective;
+    [SerializeField] private Transform teleportPoint;
     [SerializeField] private bool isEvent = true;
     public bool GetIsEvent => isEvent;
     public void PickedUp()
     {
         if(!isEvent)
             gameObject.SetActive(false);
-        
-        if(trap)
-            trap.ChangeState();
 
         if (!isEvent)
         {
             InformationManager.SetText("New part of the music box found!", 2);
+            PlayerRoot.SetPosition(teleportPoint.position);
             return;
         }
         
