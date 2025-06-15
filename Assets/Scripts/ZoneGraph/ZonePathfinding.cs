@@ -31,7 +31,7 @@ namespace ZoneGraph
 
             var currentNode = GetPointClosestNode(currentPoint, currentRoom);
             
-            if (currentNode.id < 0)
+            if (currentNode.id < 0 || targetRoom.id < 0)
                 return currentNode;
 
             if (currentRoom != targetRoom)
