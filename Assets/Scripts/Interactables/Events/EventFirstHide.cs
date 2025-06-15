@@ -10,7 +10,7 @@ public class EventFirstHide : EventObject
     private bool _alreadyDid;
     public override void DoEvent()
     {
-        if(_alreadyDid)
+        if(_alreadyDid || !PlayerRoot.GetRedLightUnlocked)
             return;
         
         base.DoEvent();
