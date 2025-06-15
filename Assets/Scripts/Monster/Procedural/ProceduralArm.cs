@@ -35,6 +35,7 @@ namespace Monster.Procedural
             direction.Normalize();
             handDirection.Normalize();
             _body = GetComponent<ProceduralBody>();
+            
             handTransform.SetParent(null);
             _currentStickingRotation = Quaternion.identity;
             _previousStickingRotation = Quaternion.identity;
