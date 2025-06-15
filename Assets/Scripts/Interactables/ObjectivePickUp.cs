@@ -6,6 +6,7 @@ public class ObjectivePickUp : Interactable
     [SerializeField] private Door trap;
     [SerializeField] public int indexObjective;
     [SerializeField] private bool isEvent = true;
+    [SerializeField] private Transform  teleportationPoint;
     public bool GetIsEvent => isEvent;
     public void PickedUp()
     {
