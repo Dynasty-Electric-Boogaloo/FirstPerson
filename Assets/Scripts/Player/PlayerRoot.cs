@@ -17,6 +17,7 @@ namespace Player
         private PlayerMusicBox _musicBox;
         private PlayerFeedback _playerFeedback;
         private PlayerDance _playerDance;
+        private PlayerFlashLight _playerFlashLight;
         public static Vector3 Position => _instance ? _instance.transform.position : Vector3.zero;
         
         public static int CurrentIndex  =>  _instance ? _instance._playerData.CurrentIndexObjective : -1;
@@ -46,6 +47,7 @@ namespace Player
             _musicBox = GetComponent<PlayerMusicBox>();
             _playerFeedback = GetComponent<PlayerFeedback>();
             _playerDance = GetComponent<PlayerDance>();
+            _playerFlashLight = GetComponent<PlayerFlashLight>();
             SetRedLight(false);
         }
 
@@ -84,6 +86,7 @@ namespace Player
                 return;
             
             DanceManager.ForceStopQte();
+            _instance._playerFlashLight.Death();
             ResetPosition();
             
             if (_instance._musicBox)

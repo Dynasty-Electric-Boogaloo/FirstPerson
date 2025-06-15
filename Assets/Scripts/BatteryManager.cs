@@ -19,6 +19,9 @@ public class BatteryManager : MonoBehaviour
     {
         if (Battery == null) 
             Battery = this;
+        
+        Battery._currentBattery = maxBattery;
+        Battery._currentPower = Battery.maxPowerByBattery;
     }
     
     private void OnDestroy()
@@ -29,29 +32,10 @@ public class BatteryManager : MonoBehaviour
 
     public static void WakeUpBattery()
     {
-        Battery._currentBattery = Battery.maxBattery;
-        for (var battery = 0; battery < Battery.maxBattery; battery++)
-        {
-            Battery._currentBattery = battery;
-            Battery.hud.UpdateBattery(Battery._currentPower, Battery.maxPowerByBattery, true);
-        }
     }
 
     private void Update()
     {
-        if (!PlayerRoot.GetRedLightUnlocked)
-        {
-            Battery._currentPower = 0;
-            for (var battery = 0; battery < maxBattery; battery++)
-            {
-                Battery._currentBattery = battery+1;
-                hud.UpdateBattery(_currentPower, maxPowerByBattery, true);
-            }
-        }
-        
-        if(hud)
-            hud.UpdateBattery(_currentPower, maxPowerByBattery, true);
-        
         if (!PlayerRoot.GetIsInMannequin || !PlayerRoot.GetRedLightUnlocked) 
             return;
         
@@ -87,6 +71,7 @@ public class BatteryManager : MonoBehaviour
         else
             _currentPower = maxPowerByBattery;
     }
+    
 
     public float GetCurrentPower() => _currentPower; 
     public float GetCurrentPowerMax() => maxPowerByBattery;
