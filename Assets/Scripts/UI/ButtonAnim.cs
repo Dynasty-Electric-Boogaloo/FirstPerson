@@ -12,7 +12,7 @@ public class ButtonAnim : MonoBehaviour
 
     private void Start()
     {
-        _defaultSize = transform.lossyScale;
+        _defaultSize = transform.localScale;
     }
  
     public void OnPointerEnter()
