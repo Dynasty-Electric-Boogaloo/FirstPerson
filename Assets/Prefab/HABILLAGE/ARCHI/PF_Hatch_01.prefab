@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 43591831536832019}
+  - component: {fileID: 2300477976172340982}
   m_Layer: 0
   m_Name: PF_Hatch_01
   m_TagString: Untagged
@@ -32,6 +33,23 @@ Transform:
   - {fileID: 7594326503987468555}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2300477976172340982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790736415764565084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 675cb27946d42b849aec18555ab3dbda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorPivot: {fileID: 7594326503987468555}
+  eulerRotationOpen: {x: 0, y: 0, z: 0}
+  openingSpeed: 1
+  maxDistanceBeforeClosing: 3
+  autoClose: 1
 --- !u!1001 &7993553736083226336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66,11 +84,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 66dc48d2476439f46a11937a8c0e949d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 66dc48d2476439f46a11937a8c0e949d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 66dc48d2476439f46a11937a8c0e949d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
