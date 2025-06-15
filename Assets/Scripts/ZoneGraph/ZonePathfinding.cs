@@ -7,6 +7,7 @@ namespace ZoneGraph
     {
         private ZoneGraphManager _graph;
         private HashSet<int> _openBuffer;
+        private HashSet<int> _closedBuffer;
         private Dictionary<int, int> _cameFromBuffer;
         private Dictionary<int, float> _costBuffer;
         private Dictionary<int, float> _guessCostBuffer;
@@ -17,6 +18,7 @@ namespace ZoneGraph
         {
             _graph = graphManager;
             _openBuffer = new HashSet<int>();
+            _closedBuffer = new HashSet<int>();
             _cameFromBuffer = new Dictionary<int, int>();
             _costBuffer = new Dictionary<int, float>();
             _guessCostBuffer = new Dictionary<int, float>();
@@ -31,7 +33,7 @@ namespace ZoneGraph
 
             var currentNode = GetPointClosestNode(currentPoint, currentRoom);
             
-            if (currentNode.id < 0)
+            if (currentNode.id < 0 || targetRoom.id < 0)
                 return currentNode;
 
             if (currentRoom != targetRoom)
@@ -110,6 +112,7 @@ namespace ZoneGraph
             var endPosition = nodes[endNode.id].Position;
             
             _openBuffer.Clear();
+            _closedBuffer.Clear();
             _costBuffer.Clear();
             _guessCostBuffer.Clear();
             _cameFromBuffer.Clear();
@@ -130,6 +133,7 @@ namespace ZoneGraph
                 }
 
                 _openBuffer.Remove(current);
+                _closedBuffer.Add(current);
                 foreach (var neighbor in nodes[current].Connexions)
                 {
                     _costBuffer.TryAdd(neighbor.id, float.PositiveInfinity);
@@ -151,6 +155,7 @@ namespace ZoneGraph
             var endPosition = rooms[endRoom.id].Position;
             
             _openBuffer.Clear();
+            _closedBuffer.Clear();
             _costBuffer.Clear();
             _guessCostBuffer.Clear();
             _cameFromBuffer.Clear();
@@ -171,6 +176,7 @@ namespace ZoneGraph
                 }
 
                 _openBuffer.Remove(current);
+                _closedBuffer.Add(current);
                 foreach (var neighbor in rooms[current].EntryPoints.Keys)
                 {
                     _costBuffer.TryAdd(neighbor.id, float.PositiveInfinity);
@@ -290,7 +296,9 @@ namespace ZoneGraph
             _costBuffer[neighbor] = cost;
             _guessCostBuffer[neighbor] = cost + guessCost;
             _cameFromBuffer[neighbor] = current;
-            _openBuffer.Add(neighbor);
+            
+            if (!_closedBuffer.Contains(neighbor))
+                _openBuffer.Add(neighbor);
         }
     }
 }

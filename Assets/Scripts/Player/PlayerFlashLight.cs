@@ -54,7 +54,7 @@ namespace Player
             _battery = batteryMax; 
             light.color = lightColor;
             if(hud)
-                hud.SetFlashLight(_special, true);
+                hud.SetFlashLight(false, true);
 
             _lightObjectBuffers[0] = new HashSet<Mimic>();
             _lightObjectBuffers[1] = new HashSet<Mimic>();
@@ -104,7 +104,7 @@ namespace Player
                     _batteryManager.ReduceBattery();
             }
             
-            if (hud && (PlayerData.RedLight || !_special))
+            if (hud && PlayerData.RedLight)
                 hud.UpdateBattery(CurrentBattery, CurrentBatteryMax, _special);
 
             UpdateLightIntensity();
@@ -199,6 +199,13 @@ namespace Player
             
             if(hud)
                 hud.SetFlashLight(_special, true);
+        }
+
+        public void Death()
+        {
+            _battery = batteryMax; 
+            if(hud)
+                hud.SetFlashLight(false, true);
         }
 
         private void OnDrawGizmosSelected()
