@@ -37,7 +37,7 @@ public class Mimic : MonoBehaviour
         _emitter = gameObject.AddComponent<StudioEventEmitter>();
         _emitter.EventReference = RuntimeManager.PathToEventReference("event:/Ambiant/Whispers");
         _emitter.OverrideAttenuation = true;
-        _emitter.OverrideMaxDistance = 2;
+        _emitter.OverrideMaxDistance = 1.5f;
         
         SetInfected(isInfected);
 
