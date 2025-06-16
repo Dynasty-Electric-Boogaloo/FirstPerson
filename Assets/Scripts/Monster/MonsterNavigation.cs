@@ -220,9 +220,14 @@ namespace Monster
         {
             if (!Application.isPlaying)
                 return;
+            
+            var targetRoom = ZoneGraphManager.Pathfinding.GetPointRoom(transform.position);
+            var currentNode = ZoneGraphManager.Pathfinding.GetPointClosestNode(transform.position, targetRoom);
 
             Gizmos.color = MonsterData.targetNode.id > 0 ? Color.white : Color.red;
-            Gizmos.DrawSphere(MonsterData.targetPoint, 1);
+            Gizmos.DrawSphere(MonsterData.targetPoint, .5f);
+            Gizmos.color = Color.green;
+            Gizmos.DrawSphere(ZoneGraphManager.Instance.Nodes[currentNode.id].Position, 1);
         }
     }
 }
