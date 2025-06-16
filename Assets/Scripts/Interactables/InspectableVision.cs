@@ -14,6 +14,7 @@ public class InspectableVision : Interactable
 
     public override InteractionType GetInteractionType()
     {
-        return InteractionType.Other;
+        return 
+            InteractionType.Other;
     }
 }
