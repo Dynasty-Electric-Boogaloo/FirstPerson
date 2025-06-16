@@ -61,10 +61,15 @@ namespace Monster
                 return;
             
             PlayerRoot.Die();
-            UiManager.SetChaseBorder(false);
             transform.position = _startPosition;
             transform.rotation = _startRotation;
-            ResetState();
+            _monsterData.targetPoint = transform.position;
+            _monsterData.stateTime = 0;
+            _monsterData.chasing = false;
+            _monsterData.searching = false;
+            _monsterData.Heatmap.Data.Clear();
+            _monsterData.chaseTimer = 0;
+            _monsterData.targetNode = new NodeId(-1);
             InteractableManager.Restore();
         }
 
@@ -106,21 +111,6 @@ namespace Monster
         {
             if (_instance)
                 _instance._monsterData.hitStunTimer = _instance.hitStunTime;
-        }
-
-        public static void ResetState()
-        {
-            if (!_instance)
-                return;
-            
-            _instance._monsterData.targetPoint = _instance.transform.position;
-            _instance._monsterData.stateTime = 0;
-            _instance._monsterData.chasing = false;
-            _instance._monsterData.searching = false;
-            _instance._monsterData.Heatmap.Data.Clear();
-            _instance._monsterData.chaseTimer = 0;
-            _instance._monsterData.watchTimer = 0;
-            _instance._monsterData.targetNode = new NodeId(-1);
         }
 
         public static void Freeze()

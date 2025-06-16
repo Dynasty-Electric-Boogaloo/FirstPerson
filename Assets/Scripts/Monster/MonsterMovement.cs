@@ -45,16 +45,13 @@ namespace Monster
             
             var move = MonsterData.targetPoint - transform.position;
             move.y = 0;
+            move.Normalize();
 
             if (move.magnitude < 0.5f || MonsterData.hitStunTimer > 0)
             {
                 move = Vector2.zero;
             }
-            else
-            {
-                move.Normalize();
-            }
-
+            
             var targetMovement = move * moveConfig.speed.Evaluate(MonsterData.stateTime);
 
             var linearVelocity = MonsterData.rigidbody.linearVelocity;
