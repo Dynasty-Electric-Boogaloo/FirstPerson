@@ -19,6 +19,7 @@ public class Mimic : MonoBehaviour
     [SerializeField] private MaterialSet regularMaterialSet;
     [SerializeField] private bool isInfected;
     [SerializeField] private bool showObject;
+    [SerializeField] private bool props;
     [SerializeField] private float maxTimeBeforeAlert = 15;
     [SerializeField] private float checkPlayerRadius = 1;
     [SerializeField] private LayerMask playerLayer;
@@ -34,8 +35,8 @@ public class Mimic : MonoBehaviour
         meshRenderer.enabled = isInfected || showObject;
         meshRenderer.material = regularMaterialSet.normal;
         
-        //_emitter = gameObject.AddComponent<StudioEventEmitter>();
-        //_emitter.EventReference = RuntimeManager.PathToEventReference("event:/Ambiant/Whispers");
+        _emitter = gameObject.AddComponent<StudioEventEmitter>();
+        _emitter.EventReference = RuntimeManager.PathToEventReference("event:/Ambiant/Whispers");
         
         SetInfected(isInfected);
 
@@ -57,7 +58,7 @@ public class Mimic : MonoBehaviour
     
     private void CheckForPlayer()
     {
-        if(!isInfected || _isAwake || PlayerRoot.GetIsDancing() || PlayerRoot.GetIsInMannequin) 
+        if(!isInfected || _isAwake || PlayerRoot.GetIsDancing() || PlayerRoot.GetIsInMannequin || props) 
             return;
         
         _numColliders = Physics.OverlapSphereNonAlloc(transform.position, checkPlayerRadius, _hitColliders, playerLayer);
@@ -70,7 +71,7 @@ public class Mimic : MonoBehaviour
     {
         _timer -= Time.deltaTime;
 
-        if (_timer > 0)
+        if (_timer > 0 || props)
             return;
         
         WakingUp();
