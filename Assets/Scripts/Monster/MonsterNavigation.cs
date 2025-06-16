@@ -161,7 +161,7 @@ namespace Monster
                     Alert(PlayerRoot.Position, true);
                     if (MonsterData.watchTimer <= 0)
                         PlayerRoot.StartQte(false);
-                    MonsterData.watchTimer = watchTime * 1.5f;
+                    MonsterData.watchTimer = 10;
                     UiManager.SetChaseBorder(true);
                     break;
             }
