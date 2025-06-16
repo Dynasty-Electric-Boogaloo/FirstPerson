@@ -32,6 +32,7 @@ namespace ZoneGraph
             var targetRoom = GetPointRoom(targetPoint);
 
             var currentNode = GetPointClosestNode(currentPoint, currentRoom);
+            currentRoom = ZoneGraphManager.Instance.Nodes[currentNode.id].Room;
             
             if (currentNode.id < 0 || targetRoom.id < 0)
                 return currentNode;
@@ -101,6 +102,20 @@ namespace ZoneGraph
                 
                 closestDistance = distance;
                 closestNodeId = nodeId;
+            }
+
+            foreach (var roomId in _graph.Rooms[room.id].EntryPoints.Keys)
+            {
+                foreach (var nodeId in _graph.Rooms[roomId.id].Nodes)
+                {
+                    var distance = Vector3.Distance(_graph.Nodes[nodeId.id].Position, position);
+
+                    if (!(distance < closestDistance)) 
+                        continue;
+                
+                    closestDistance = distance;
+                    closestNodeId = nodeId;
+                }
             }
 
             return closestNodeId;
