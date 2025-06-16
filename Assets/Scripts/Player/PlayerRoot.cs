@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Dynamic;
 using Interactables;
 using Monster;
 using UnityEngine;
@@ -18,6 +19,7 @@ namespace Player
         private PlayerFeedback _playerFeedback;
         private PlayerDance _playerDance;
         private PlayerFlashLight _playerFlashLight;
+        private PlayerCamera _playerCamera;
         public static Vector3 Position => _instance ? _instance.transform.position : Vector3.zero;
         
         public static int CurrentIndex  =>  _instance ? _instance._playerData.CurrentIndexObjective : -1;
@@ -48,6 +50,7 @@ namespace Player
             _playerFeedback = GetComponent<PlayerFeedback>();
             _playerDance = GetComponent<PlayerDance>();
             _playerFlashLight = GetComponent<PlayerFlashLight>();
+            _playerCamera = GetComponent<PlayerCamera>();
             SetRedLight(false);
         }
 
@@ -151,6 +154,16 @@ namespace Player
                 return;
             
             _instance.transform.position = position;
+        }
+        
+        public static void SetCamera(Transform position = null , bool start = false)
+        {
+            if (!_instance) 
+                return;
+            if(start)
+                _instance._playerCamera.GoToPosition(position);
+            else 
+                _instance. _playerCamera.ReturnToPosition();
         }
         
         public static bool GetRedLightUnlocked =>_instance && _instance._playerData.RedLight;
