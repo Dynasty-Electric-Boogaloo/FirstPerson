@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000002, guid: 3c53074212e0e6f4e976de8796358b19, type: 2}
+  m_LightingDataAsset: {fileID: 112000002, guid: b418feb676e691140bedf3a4bb678c2e, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 36ca72716a3a4064ca92a7c3f6476afa, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -350,7 +350,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 2802
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 6.71e-43, y: 1.84e-43, z: 0, w: -4.5305997e-38}
+  m_BoundingSphereOverride: {x: 2.7105054e-20, y: NaN, z: 7.5383e-41, w: 4e-45}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -1985,9 +1985,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1266189745420016272, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4132230478254387562, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
       propertyPath: m_Name
       value: PF_ClothingBagHanger_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132230478254387562, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5573926654851281261, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2028,6 +2036,14 @@ PrefabInstance:
     - target: {fileID: 5573926654851281261, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 34.999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6433345473702386294, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6663305043681827715, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2104,9 +2120,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1265110678922384643, guid: 888f59ab038863949b9287bbd3e5d4b8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1491138191802258678, guid: 888f59ab038863949b9287bbd3e5d4b8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6350743219565346761, guid: 888f59ab038863949b9287bbd3e5d4b8, type: 3}
       propertyPath: m_Name
       value: PF_ClothingBagHanger_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6350743219565346761, guid: 888f59ab038863949b9287bbd3e5d4b8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7270916912755023619, guid: 888f59ab038863949b9287bbd3e5d4b8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2147,6 +2175,10 @@ PrefabInstance:
     - target: {fileID: 7270916912755023619, guid: 888f59ab038863949b9287bbd3e5d4b8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 161.467
+      objectReference: {fileID: 0}
+    - target: {fileID: 8733415008353901760, guid: 888f59ab038863949b9287bbd3e5d4b8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2449,7 +2481,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 6.71e-43, y: 8e-44, z: 0, w: 4.3e-44}
+  m_BoundingSphereOverride: {x: 7.6204426e+31, y: -8.506023e+34, z: -4.684323e-21, w: 6.503247e-21}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -2694,7 +2726,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 6.71e-43, y: 8e-44, z: 0, w: 4.3e-44}
+  m_BoundingSphereOverride: {x: 6.7110912e+22, y: NaN, z: 2.8851363e+23, w: 59.36175}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -4854,7 +4886,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 6.71e-43, y: 8e-44, z: 0, w: 4.3e-44}
+  m_BoundingSphereOverride: {x: 0, y: 1.0622313e-28, z: 8.35e-43, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -5289,7 +5321,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 6.71e-43, y: 1.2e-43, z: 0, w: 4.3e-44}
+  m_BoundingSphereOverride: {x: 1e-45, y: NaN, z: 6.962908e-37, w: 2.69e-43}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -5502,6 +5534,10 @@ PrefabInstance:
     - target: {fileID: 4307184086453005727, guid: 9a432e117ea5b0447b75396948eef706, type: 3}
       propertyPath: m_Name
       value: PF_Poster_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971844248652355441, guid: 9a432e117ea5b0447b75396948eef706, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: 9a432e117ea5b0447b75396948eef706, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6370,9 +6406,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1265110678922384643, guid: 888f59ab038863949b9287bbd3e5d4b8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1491138191802258678, guid: 888f59ab038863949b9287bbd3e5d4b8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6350743219565346761, guid: 888f59ab038863949b9287bbd3e5d4b8, type: 3}
       propertyPath: m_Name
       value: PF_ClothingBagHanger_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6350743219565346761, guid: 888f59ab038863949b9287bbd3e5d4b8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7270916912755023619, guid: 888f59ab038863949b9287bbd3e5d4b8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6413,6 +6461,10 @@ PrefabInstance:
     - target: {fileID: 7270916912755023619, guid: 888f59ab038863949b9287bbd3e5d4b8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -28.531
+      objectReference: {fileID: 0}
+    - target: {fileID: 8733415008353901760, guid: 888f59ab038863949b9287bbd3e5d4b8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6903,7 +6955,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 6.71e-43, y: 8e-44, z: 0, w: 4.3e-44}
+  m_BoundingSphereOverride: {x: -6.1629795e-33, y: NaN, z: -2097152, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -7202,9 +7254,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1265110678922384643, guid: 888f59ab038863949b9287bbd3e5d4b8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1491138191802258678, guid: 888f59ab038863949b9287bbd3e5d4b8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6350743219565346761, guid: 888f59ab038863949b9287bbd3e5d4b8, type: 3}
       propertyPath: m_Name
       value: PF_ClothingBagHanger_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6350743219565346761, guid: 888f59ab038863949b9287bbd3e5d4b8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7270916912755023619, guid: 888f59ab038863949b9287bbd3e5d4b8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7245,6 +7309,10 @@ PrefabInstance:
     - target: {fileID: 7270916912755023619, guid: 888f59ab038863949b9287bbd3e5d4b8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -28.531
+      objectReference: {fileID: 0}
+    - target: {fileID: 8733415008353901760, guid: 888f59ab038863949b9287bbd3e5d4b8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8212,7 +8280,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.633959e-26, y: 9.1897e-41, z: 3.049e-42, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: NaN, z: 0, w: -1.439264e+10}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -8407,8 +8475,8 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 1, g: 0.7647059, b: 0.44705883, a: 1}
-  m_Intensity: 0.987264
-  m_Range: 2.35
+  m_Intensity: 1.9894367
+  m_Range: 3.44
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -8452,7 +8520,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 6.71e-43, y: -2.9729556e+34, z: 6.7e-43, w: 1.102025e-39}
+  m_BoundingSphereOverride: {x: 2.92008e-40, y: NaN, z: 2.87e-42, w: 2.87e-42}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -8701,9 +8769,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7879425855452901237, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9106027401101732312, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
       propertyPath: m_Name
       value: PF_BathroomMirror_01 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106027401101732312, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9789,9 +9865,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1266189745420016272, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4132230478254387562, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
       propertyPath: m_Name
       value: PF_ClothingBagHanger_02 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132230478254387562, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5573926654851281261, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9832,6 +9916,14 @@ PrefabInstance:
     - target: {fileID: 5573926654851281261, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -78.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 6433345473702386294, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6663305043681827715, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10524,8 +10616,8 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 1, g: 0.7647059, b: 0.44705883, a: 1}
-  m_Intensity: 0.987264
-  m_Range: 2.35
+  m_Intensity: 1.9894367
+  m_Range: 3.44
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -10569,7 +10661,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 6.71e-43, y: 8e-44, z: 0, w: 4.3e-44}
+  m_BoundingSphereOverride: {x: 0, y: NaN, z: 33556480, w: 1.1529215e+18}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -10956,7 +11048,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 3.5092916e+12, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 3.02225e-40, y: NaN, z: -2.224887e-10, w: 3569864.2}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -11013,9 +11105,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7879425855452901237, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9106027401101732312, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
       propertyPath: m_Name
       value: PF_BathroomMirror_01 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106027401101732312, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11268,7 +11368,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 7.8312e-41, y: 2.524355e-29, z: 0, w: 0.012288094}
+  m_BoundingSphereOverride: {x: 4.591775e-39, y: NaN, z: 9.1858e-41, w: -2.4405384e-30}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -12678,7 +12778,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 1e-45, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: -Infinity, y: NaN, z: 0, w: 2.69e-43}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -13028,7 +13128,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.113e-42, y: 2.524355e-29, z: 0, w: 8.945351e-39}
+  m_BoundingSphereOverride: {x: 7.9639e-41, y: NaN, z: 1.614e-42, w: 6.098e-42}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -13273,7 +13373,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 1e-45, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 9.1872e-41, z: 3.5624e-41, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -13640,7 +13740,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 7.7418e-41, y: 2.524355e-29, z: 0, w: 4.7425483e+30}
+  m_BoundingSphereOverride: {x: 7.9639e-41, y: NaN, z: 1.614e-42, w: 6.098e-42}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -16131,7 +16231,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 1e-45, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 6.8434255e-20, y: -1.718801e+13, z: 7.5869e-41, w: -23837522}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -16300,9 +16400,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1265110678922384643, guid: 888f59ab038863949b9287bbd3e5d4b8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1491138191802258678, guid: 888f59ab038863949b9287bbd3e5d4b8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6350743219565346761, guid: 888f59ab038863949b9287bbd3e5d4b8, type: 3}
       propertyPath: m_Name
       value: PF_ClothingBagHanger_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6350743219565346761, guid: 888f59ab038863949b9287bbd3e5d4b8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7270916912755023619, guid: 888f59ab038863949b9287bbd3e5d4b8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16343,6 +16455,10 @@ PrefabInstance:
     - target: {fileID: 7270916912755023619, guid: 888f59ab038863949b9287bbd3e5d4b8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 161.467
+      objectReference: {fileID: 0}
+    - target: {fileID: 8733415008353901760, guid: 888f59ab038863949b9287bbd3e5d4b8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16562,9 +16678,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2653049574126282859, guid: 0d6c6dab6a37a7241b850ad666b4eb4e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8517256071744287151, guid: 0d6c6dab6a37a7241b850ad666b4eb4e, type: 3}
       propertyPath: m_Name
       value: PF_ToiletWall_L_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8517256071744287151, guid: 0d6c6dab6a37a7241b850ad666b4eb4e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16807,7 +16931,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.1326e-40, y: 1.043839e-35, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1.3521626e+28, y: NaN, z: 3.4962e-41, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -17096,9 +17220,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7879425855452901237, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9106027401101732312, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
       propertyPath: m_Name
       value: PF_BathroomMirror_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106027401101732312, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18355,9 +18487,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1266189745420016272, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4132230478254387562, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
       propertyPath: m_Name
       value: PF_ClothingBagHanger_02 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132230478254387562, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5573926654851281261, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18398,6 +18538,14 @@ PrefabInstance:
     - target: {fileID: 5573926654851281261, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 111.467
+      objectReference: {fileID: 0}
+    - target: {fileID: 6433345473702386294, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6663305043681827715, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18793,9 +18941,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7879425855452901237, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9106027401101732312, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
       propertyPath: m_Name
       value: PF_BathroomMirror_01 (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106027401101732312, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19104,7 +19260,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: -1.8909956e-22, y: NaN, z: 1.2519023e-36, w: 0}
+  m_BoundingSphereOverride: {x: 4.306193e+21, y: NaN, z: 1.8178672e+31, w: 8.5764494e-33}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -20086,9 +20242,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7879425855452901237, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9106027401101732312, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
       propertyPath: m_Name
       value: PF_BathroomMirror_01 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106027401101732312, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20372,8 +20536,8 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 1, g: 0.7647059, b: 0.44705883, a: 1}
-  m_Intensity: 0.987264
-  m_Range: 2.35
+  m_Intensity: 1.9894367
+  m_Range: 3.44
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -20417,7 +20581,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 5.0930367e-20, y: 2.75612e-40, z: 7.4301e-41, w: 0.0000083553605}
+  m_BoundingSphereOverride: {x: 1.7584818e-20, y: NaN, z: 9.403961e-37, w: 2.364079e-32}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -22067,7 +22231,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 2.9401496e-15}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -22655,6 +22819,10 @@ PrefabInstance:
     - target: {fileID: 4307184086453005727, guid: f8795fae682564d4e9f4584ee466b87b, type: 3}
       propertyPath: m_Name
       value: PF_Poster_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971844248652355441, guid: f8795fae682564d4e9f4584ee466b87b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: f8795fae682564d4e9f4584ee466b87b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24373,7 +24541,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 2.7105054e-20, y: 6.244856e-38, z: 2.6458e-41, w: 0}
+  m_BoundingSphereOverride: {x: 1.03661675e+21, y: NaN, z: 0, w: 9.1835e-41}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -25743,9 +25911,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 474755271}
     m_Modifications:
+    - target: {fileID: 587508441173725834, guid: 8fb1c3defe167144696d1d7c9609bd0e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6047214171236031188, guid: 8fb1c3defe167144696d1d7c9609bd0e, type: 3}
       propertyPath: m_Name
       value: PF_ToiletWallR_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6047214171236031188, guid: 8fb1c3defe167144696d1d7c9609bd0e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7217061490953149338, guid: 8fb1c3defe167144696d1d7c9609bd0e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26998,7 +27174,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 5.7546067e+21}
+  m_BoundingSphereOverride: {x: 2.7107022e-20, y: 0.000000037771628, z: 7.614e-41, w: -6.251146e+12}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -27055,9 +27231,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7879425855452901237, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9106027401101732312, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
       propertyPath: m_Name
       value: PF_BathroomMirror_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106027401101732312, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27325,9 +27509,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7879425855452901237, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9106027401101732312, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
       propertyPath: m_Name
       value: PF_BathroomMirror_01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106027401101732312, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -29065,9 +29257,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1266189745420016272, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4132230478254387562, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
       propertyPath: m_Name
       value: PF_ClothingBagHanger_02 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132230478254387562, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5573926654851281261, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
       propertyPath: m_LocalPosition.x
@@ -29108,6 +29308,14 @@ PrefabInstance:
     - target: {fileID: 5573926654851281261, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 111.467
+      objectReference: {fileID: 0}
+    - target: {fileID: 6433345473702386294, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6663305043681827715, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -29531,7 +29739,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 2.7105054e-20, y: 9.194e-41, z: 7.9682e-41, w: 1.83671e-39}
+  m_BoundingSphereOverride: {x: 7.9032445e+35, y: NaN, z: 2.2e-44, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -30922,9 +31130,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7879425855452901237, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9106027401101732312, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
       propertyPath: m_Name
       value: PF_BathroomMirror_01 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106027401101732312, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -31167,7 +31383,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 5.7546067e+21}
+  m_BoundingSphereOverride: {x: 89, y: 0, z: 0, w: -2.043601e+30}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -31478,7 +31694,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 2802
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 1.4563539e+22, y: 1.0597458e-38, z: 6.356682e+22, w: 7.365175e+31}
+  m_BoundingSphereOverride: {x: 0, y: NaN, z: 4.500313e-39, w: 4.545857e-39}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -32559,9 +32775,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7879425855452901237, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9106027401101732312, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
       propertyPath: m_Name
       value: PF_BathroomMirror_01 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106027401101732312, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -32830,9 +33054,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7879425855452901237, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9106027401101732312, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
       propertyPath: m_Name
       value: PF_BathroomMirror_01 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106027401101732312, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -33723,9 +33955,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1266189745420016272, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4132230478254387562, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
       propertyPath: m_Name
       value: PF_ClothingBagHanger_02 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132230478254387562, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5573926654851281261, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
       propertyPath: m_LocalPosition.x
@@ -33767,6 +34007,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -78.53
       objectReference: {fileID: 0}
+    - target: {fileID: 6433345473702386294, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6663305043681827715, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33785,6 +34033,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 623441657086760170, guid: 48b2e05460e6050488086c6ba9e503fd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3503733795016637394, guid: 48b2e05460e6050488086c6ba9e503fd, type: 3}
       propertyPath: m_Name
       value: PF_CeilingLamp_02 (2)
@@ -34131,9 +34383,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7879425855452901237, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9106027401101732312, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
       propertyPath: m_Name
       value: PF_BathroomMirror_01 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106027401101732312, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -34519,7 +34779,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0.000003650519, y: -5.556525e-39, z: -21663.457, w: 17669308}
+  m_BoundingSphereOverride: {x: 1.7255942e+25, y: NaN, z: 7.2064755e+31, w: 976630.56}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -34759,7 +35019,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 3.4e-44, y: 6.3250305e+28, z: 3782.0867, w: 4.5442038e+30}
+  m_BoundingSphereOverride: {x: 7.8341e-41, y: 0, z: 0, w: 3e-45}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -35140,8 +35400,8 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 1, g: 0.7647059, b: 0.44705883, a: 1}
-  m_Intensity: 0.987264
-  m_Range: 2.35
+  m_Intensity: 1.9894367
+  m_Range: 3.44
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -35185,7 +35445,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 2.3265834e-35, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: NaN, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -35425,7 +35685,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 2802
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 0.0009280639, y: 6.409824e-10, z: 6.4096906e-10, w: 1.1693418e-19}
+  m_BoundingSphereOverride: {x: 2.7105054e-20, y: 9.194e-41, z: 7.9215e-41, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -35726,7 +35986,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 14.340438, y: 7.50155e-31, z: 1.3563128e-19, w: 3574.8203}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 2.0415537e+9, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -36443,9 +36703,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7879425855452901237, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9106027401101732312, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
       propertyPath: m_Name
       value: PF_BathroomMirror_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106027401101732312, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -37277,7 +37545,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 9.223372e+18, y: 2.75568e-40, z: 2.6464e-41, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 1.3e-42, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -38176,7 +38444,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 8.1135e-41, y: 0, z: 0, w: -7.5619458e-31}
+  m_BoundingSphereOverride: {x: 0, y: 4.010229e-29, z: 8.35e-43, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -38652,7 +38920,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 9.223372e+18, y: 3.67404e-40, z: 2.7083e-41, w: 0}
+  m_BoundingSphereOverride: {x: 7.8299e-41, y: 0, z: 0, w: 1e-45}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -39492,7 +39760,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 8.0984e-41, y: 0, z: 0, w: -7.5619458e-31}
+  m_BoundingSphereOverride: {x: 0, y: 1.3407145e-25, z: 8.35e-43, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -39874,7 +40142,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 2.7105054e-20, y: 5.51118e-40, z: 2.4608e-41, w: 4.5918e-41}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 1.83707e-40}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -40115,6 +40383,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 623441657086760170, guid: 48b2e05460e6050488086c6ba9e503fd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3503733795016637394, guid: 48b2e05460e6050488086c6ba9e503fd, type: 3}
       propertyPath: m_Name
       value: PF_CeilingLamp_02 (1)
@@ -40247,6 +40519,10 @@ PrefabInstance:
     - target: {fileID: 4307184086453005727, guid: 53ec1d572105a9745995f9b222b50076, type: 3}
       propertyPath: m_Name
       value: PF_Poster_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971844248652355441, guid: 53ec1d572105a9745995f9b222b50076, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: 53ec1d572105a9745995f9b222b50076, type: 3}
       propertyPath: m_LocalPosition.x
@@ -41275,7 +41551,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: -9.6424356e+36}
+  m_BoundingSphereOverride: {x: 8.35e-43, y: 2.44e-43, z: 0, w: 4.3e-44}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -41737,8 +42013,8 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 1, g: 0.7647059, b: 0.44705883, a: 1}
-  m_Intensity: 0.987264
-  m_Range: 2.35
+  m_Intensity: 1.9894367
+  m_Range: 3.44
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -41782,7 +42058,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.3064774e+21, y: 7.3964775e+31, z: 9.5963084e+26, w: 1.0598167e-38}
+  m_BoundingSphereOverride: {x: 0, y: -9.418416e+21, z: 0, w: -2.0146549e+14}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -42097,7 +42373,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 2.3509887e-38, z: -2.306054e+18, w: 2.1175824e-22}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -42506,7 +42782,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 2.7316813e-20, y: 8.26625e-40, z: 6.7819e-41, w: 7.80602e-40}
+  m_BoundingSphereOverride: {x: 0, y: 1e-45, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -43118,7 +43394,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 2802
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 5.596281e-14}
+  m_BoundingSphereOverride: {x: 0, y: 1.0292e-40, z: 0, w: 1.01552e-40}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -45353,7 +45629,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 2.7105054e-20, y: 6.42954e-40, z: 7.7862e-41, w: 0}
+  m_BoundingSphereOverride: {x: 2.7105054e-20, y: 9.194e-41, z: 7.8586e-41, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -47021,7 +47297,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: -3.4668152e-31}
+  m_BoundingSphereOverride: {x: 7.8355e-41, y: 0, z: 0, w: 9.1835e-41}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -47402,7 +47678,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0.48859274, y: NaN, z: -2.8058813, w: 0.66910875}
+  m_BoundingSphereOverride: {x: 2.7105054e-20, y: 9.194e-41, z: 7.8523e-41, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -47756,7 +48032,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.7019774e-38, y: 1.540744e-33, z: 2.3509887e-38, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: NaN, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -47776,6 +48052,10 @@ PrefabInstance:
     - target: {fileID: 4307184086453005727, guid: 5255f8875eeaad64fac851a2264be0d8, type: 3}
       propertyPath: m_Name
       value: PF_Poster_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971844248652355441, guid: 5255f8875eeaad64fac851a2264be0d8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: 5255f8875eeaad64fac851a2264be0d8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -48483,9 +48763,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7879425855452901237, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9106027401101732312, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
       propertyPath: m_Name
       value: PF_BathroomMirror_01 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106027401101732312, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -49048,7 +49336,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 2.7105054e-20, y: 2.75612e-40, z: 7.425e-41, w: 0}
+  m_BoundingSphereOverride: {x: 3.5607e-41, y: 0, z: 0, w: 1e-45}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -51707,7 +51995,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 2.9401496e-15}
+  m_BoundingSphereOverride: {x: -1.2510104e-24, y: 0, z: 3.854552e+20, w: 1.03661675e+21}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -51864,9 +52152,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1266189745420016272, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4132230478254387562, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
       propertyPath: m_Name
       value: PF_ClothingBagHanger_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4132230478254387562, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5573926654851281261, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
       propertyPath: m_LocalPosition.x
@@ -51907,6 +52203,14 @@ PrefabInstance:
     - target: {fileID: 5573926654851281261, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -19.999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6433345473702386294, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6663305043681827715, guid: a0517f2d79f2ec443bfb96ab6edbc620, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -52474,6 +52778,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 623441657086760170, guid: 48b2e05460e6050488086c6ba9e503fd, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3503733795016637394, guid: 48b2e05460e6050488086c6ba9e503fd, type: 3}
       propertyPath: m_Name
       value: PF_CeilingLamp_02
@@ -55109,6 +55417,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 749528447637457533}
     m_Modifications:
+    - target: {fileID: 384294948767848873, guid: 00c72be99d60f334a99087ea13585b77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4307184086453005727, guid: 00c72be99d60f334a99087ea13585b77, type: 3}
       propertyPath: m_Name
       value: PF_Cable_02 (1)
@@ -56270,6 +56582,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 749528447637457533}
     m_Modifications:
     - target: {fileID: -8800860214480512604, guid: 7b80146417460334bbd1a1fa32a82d94, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3968312139623719243, guid: 7b80146417460334bbd1a1fa32a82d94, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -60193,6 +60509,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 749528447637457533}
     m_Modifications:
+    - target: {fileID: 384294948767848873, guid: 00c72be99d60f334a99087ea13585b77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4307184086453005727, guid: 00c72be99d60f334a99087ea13585b77, type: 3}
       propertyPath: m_Name
       value: PF_Cable_02 (2)
@@ -68560,9 +68880,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7879425855452901237, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9106027401101732312, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
       propertyPath: m_Name
       value: PF_BathroomMirror_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 9106027401101732312, guid: 73ed3f3452a319e4085d95eeb3cee830, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -71414,6 +71742,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 749528447637457533}
     m_Modifications:
+    - target: {fileID: 384294948767848873, guid: 00c72be99d60f334a99087ea13585b77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4307184086453005727, guid: 00c72be99d60f334a99087ea13585b77, type: 3}
       propertyPath: m_Name
       value: PF_Cable_02
@@ -75085,14 +75417,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3434248023422787165}
     m_Modifications:
-    - target: {fileID: 1539711762294070737, guid: 4623bafaebbcac347b3d13a6fa0a1aa3, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 7806766078737226355, guid: 4623bafaebbcac347b3d13a6fa0a1aa3, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 623441657086760170, guid: 48b2e05460e6050488086c6ba9e503fd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -75144,6 +75468,14 @@ PrefabInstance:
     - target: {fileID: 5014179588648346712, guid: 48b2e05460e6050488086c6ba9e503fd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1539711762294070737, guid: 4623bafaebbcac347b3d13a6fa0a1aa3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7806766078737226355, guid: 4623bafaebbcac347b3d13a6fa0a1aa3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -77927,14 +78259,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3434248023422787165}
     m_Modifications:
-    - target: {fileID: 1539711762294070737, guid: 4623bafaebbcac347b3d13a6fa0a1aa3, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 7806766078737226355, guid: 4623bafaebbcac347b3d13a6fa0a1aa3, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 623441657086760170, guid: 48b2e05460e6050488086c6ba9e503fd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -77986,6 +78310,14 @@ PrefabInstance:
     - target: {fileID: 5014179588648346712, guid: 48b2e05460e6050488086c6ba9e503fd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1539711762294070737, guid: 4623bafaebbcac347b3d13a6fa0a1aa3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7806766078737226355, guid: 4623bafaebbcac347b3d13a6fa0a1aa3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -78219,18 +78551,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3434248023422787165}
     m_Modifications:
-    - target: {fileID: 1539711762294070737, guid: 4623bafaebbcac347b3d13a6fa0a1aa3, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 6707594321963049548, guid: 4623bafaebbcac347b3d13a6fa0a1aa3, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 9ba84a580815c7c44a940f4a5dc379aa, type: 2}
-    - target: {fileID: 7806766078737226355, guid: 4623bafaebbcac347b3d13a6fa0a1aa3, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 623441657086760170, guid: 48b2e05460e6050488086c6ba9e503fd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -78282,6 +78602,18 @@ PrefabInstance:
     - target: {fileID: 5014179588648346712, guid: 48b2e05460e6050488086c6ba9e503fd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1539711762294070737, guid: 4623bafaebbcac347b3d13a6fa0a1aa3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6707594321963049548, guid: 4623bafaebbcac347b3d13a6fa0a1aa3, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9ba84a580815c7c44a940f4a5dc379aa, type: 2}
+    - target: {fileID: 7806766078737226355, guid: 4623bafaebbcac347b3d13a6fa0a1aa3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -78662,6 +78994,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 749528447637457533}
     m_Modifications:
     - target: {fileID: -8800860214480512604, guid: 7b80146417460334bbd1a1fa32a82d94, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3968312139623719243, guid: 7b80146417460334bbd1a1fa32a82d94, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
