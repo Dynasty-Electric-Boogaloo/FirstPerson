@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5014179588648346712}
+  - component: {fileID: -978321469606810406}
   m_Layer: 0
   m_Name: PF_Sign_Map_01
   m_TagString: Untagged
@@ -32,6 +33,23 @@ Transform:
   - {fileID: 4837851821157195879}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-978321469606810406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3503733795016637394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 845510d683f1d3346a211d4f206128cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  possible:
+  - C'est... Plus petit que dans mes souvenirs.
+  - "Il y a les loges, les couloirs... La sc\xE8ne."
+  - "Elle ne quitte la sc\xE8ne qu'avec une bonne raison de le faire..."
+  index: 78
 --- !u!1001 &4947549317372069772
 PrefabInstance:
   m_ObjectHideFlags: 0
