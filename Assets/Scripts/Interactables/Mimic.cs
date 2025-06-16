@@ -46,8 +46,8 @@ public class Mimic : MonoBehaviour
     private void Start()
     {
         MimicManager.AddToList(this, isInfected, TryGetComponent<Mannequin>(out _)); ;
-       /* if(isInfected)
-            _emitter.Play();*/
+       if(_emitter && isInfected)
+            _emitter.Play();
     }
 
     private void FixedUpdate()
@@ -108,7 +108,6 @@ public class Mimic : MonoBehaviour
     {
         if (!isInfected)
             return;
-        
         MonsterNavigation.Alert(transform.position);
         _isAwake = true;
         meshRenderer.sharedMaterial = regularMaterialSet.awake;
