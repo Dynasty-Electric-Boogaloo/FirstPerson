@@ -1,5 +1,7 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Dynamic;
 using Monster;
 using Player;
 using UnityEngine;
@@ -7,8 +9,10 @@ using UnityEngine;
 public class ObjectiveManager : MonoBehaviour
 {
    public static ObjectiveManager instance;
-   [SerializeField] private Animation animator;
+   [SerializeField] private Animator animator;
+   [SerializeField] private Transform endCamera;
    private List<ObjectivePickUp> _pickedUp = new List<ObjectivePickUp>();
+   private static readonly int Animate = Animator.StringToHash("Animate");
 
    private void Awake()
    {
@@ -55,7 +59,21 @@ public class ObjectiveManager : MonoBehaviour
    {
       MonsterRoot.Freeze();
       instance.animator.gameObject.SetActive(true);
-      instance.animator.Play();
+      instance.animator.SetTrigger(Animate);
+      if(instance.endCamera)
+      {
+         PlayerRoot.SetCamera(instance.endCamera, true);
+         instance.StartCoroutine(nameof(GoBack));
+      }
+   }
+
+   private IEnumerator GoBack()
+   {
+      if (!instance.endCamera)
+         yield break;
+
+      yield return new WaitForSeconds(3);
+      PlayerRoot.SetCamera();
    }
 
    public static bool isInList(ObjectivePickUp pickUp) => instance && instance._pickedUp.Contains(pickUp);

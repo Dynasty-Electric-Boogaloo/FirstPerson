@@ -1,3 +1,4 @@
+using Monster;
 using Player;
 using UnityEngine;
 
@@ -17,6 +18,7 @@ public class ObjectivePickUp : Interactable
             ObjectiveManager.AddToFound(this);
             if(!ObjectiveManager.isLast)
                 PlayerRoot.SetPosition(teleportPoint.position);
+            //MonsterRoot.ResetState();
             return;
         }
         
