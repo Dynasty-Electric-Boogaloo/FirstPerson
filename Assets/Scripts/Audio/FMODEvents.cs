@@ -11,10 +11,8 @@ public class FMODEvents : MonoBehaviour
     [field : SerializeField] public EventReference Whispers { get; private set;}
     [field : SerializeField] public EventReference Flicker { get; private set;}
     [field : SerializeField] public EventReference Step { get; private set;}
-    [field : SerializeField] public EventReference LightSwap { get; private set;}
-    
+
     public static EventReference GetStep() => instance ? instance.Step : new EventReference();
-    public static EventReference GetLightSwap() => instance ? instance.LightSwap : new EventReference();
     public static EventReference GetFlicker() => instance ? instance.Flicker : new EventReference();
 
     public static FMODEvents instance {get; private set;}
