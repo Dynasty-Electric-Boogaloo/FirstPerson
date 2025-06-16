@@ -73,7 +73,7 @@
 	</object>
 	<object class="EventMixerMaster" id="{5ea33ca4-961d-49fa-a6be-2e6b5bbca457}">
 		<property name="volume">
-			<value>-10</value>
+			<value>-15</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{a27a1388-4c57-4bf5-8c09-2bf7306419be}</destination>
@@ -112,11 +112,7 @@
 	</object>
 	<object class="MixerBusFader" id="{2cb633fb-0d3b-405e-a81c-8f0782b94b73}" />
 	<object class="MixerBusFader" id="{24eb8a07-966c-4fe2-bd33-9002af7e1734}" />
-	<object class="PitchShifterEffect" id="{c3af98d0-0a37-47e9-96f7-a7482a558b0e}">
-		<property name="pitch">
-			<value>0.589999974</value>
-		</property>
-	</object>
+	<object class="PitchShifterEffect" id="{c3af98d0-0a37-47e9-96f7-a7482a558b0e}" />
 	<object class="SFXReverbEffect" id="{90acc59a-a2ac-47bd-b1e3-be5719385755}">
 		<property name="decayTime">
 			<value>350</value>

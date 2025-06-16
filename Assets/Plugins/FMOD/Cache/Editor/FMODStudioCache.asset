@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: FPV_FmodProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638857004024276174
+  lastModified: 638857023255559928
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -215,12 +215,13 @@ MonoBehaviour:
   - {fileID: -2270743492041092712}
   - {fileID: 2704324435013900933}
   - {fileID: 6995241175767117795}
+  - {fileID: 5008663808899680261}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8423727960163797245}
   StringsBanks:
   - {fileID: 1820093026848505179}
-  cacheTime: 638857005584892347
+  cacheTime: 638857025639514288
   cacheVersion: 131624
 --- !u!114 &404036638437148411
 MonoBehaviour:
@@ -311,10 +312,10 @@ MonoBehaviour:
   Path: FPV_FmodProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638857004024306089
+  lastModified: 638857023255579876
   FileSizes:
   - Name: Desktop
-    Value: 1272
+    Value: 1308
   Exists: 1
 --- !u!114 &2447146612615732400
 MonoBehaviour:
@@ -437,6 +438,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 21064
+--- !u!114 &5008663808899680261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Death
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Death
+  Guid:
+    Data1: 250323727
+    Data2: 1177972471
+    Data3: 553593984
+    Data4: -494077541
+  Banks:
+  - {fileID: 5706887857312195769}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &5706887857312195769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -452,10 +480,10 @@ MonoBehaviour:
   Path: FPV_FmodProject/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638857003660994604
+  lastModified: 638857025639514288
   FileSizes:
   - Name: Desktop
-    Value: 158048
+    Value: 181696
   Exists: 1
 --- !u!114 &5907295305770836799
 MonoBehaviour:
@@ -667,7 +695,7 @@ MonoBehaviour:
   Path: FPV_FmodProject/Build/Desktop/Ambiant.bank
   Name: Ambiant
   StudioPath: bank:/Ambiant
-  lastModified: 638857005584892347
+  lastModified: 638857024639696856
   FileSizes:
   - Name: Desktop
     Value: 3772064
