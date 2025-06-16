@@ -61,6 +61,7 @@ namespace Monster
                 return;
             
             PlayerRoot.Die();
+            UiManager.SetChaseBorder(false);
             transform.position = _startPosition;
             transform.rotation = _startRotation;
             _monsterData.targetPoint = transform.position;
@@ -69,6 +70,7 @@ namespace Monster
             _monsterData.searching = false;
             _monsterData.Heatmap.Data.Clear();
             _monsterData.chaseTimer = 0;
+            _monsterData.watchTimer = 0;
             _monsterData.targetNode = new NodeId(-1);
             InteractableManager.Restore();
         }
