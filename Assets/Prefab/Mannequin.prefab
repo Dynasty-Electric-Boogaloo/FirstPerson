@@ -79,9 +79,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5338bb7cb110cfc4a8c87cf7d8e3b455, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normal: {fileID: 0}
-  highlight: {fileID: 0}
-  rend: {fileID: 0}
+  normal: {fileID: 2100000, guid: 786a6196d270f0a48844c6dac64e8193, type: 2}
+  highlight: {fileID: 2100000, guid: a3f5df3e73bbff0488eb4b8ca0c6f7ee, type: 2}
+  rend: {fileID: 1333098770334286279}
   isInteractedWith:
     m_PersistentCalls:
       m_Calls: []
@@ -89,7 +89,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   cameraPos: {fileID: 5176703086146557756}
-  animator: {fileID: 77971667073114045}
+  animator: {fileID: 0}
   groundMask:
     serializedVersion: 2
     m_Bits: 8
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e5695be090262e4ab7cedb3e869b909, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meshRenderer: {fileID: 8828624054336850521}
+  meshRenderer: {fileID: 1333098770334286279}
   regularMaterialSet:
     normal: {fileID: 2100000, guid: 786a6196d270f0a48844c6dac64e8193, type: 2}
     revealed: {fileID: 2100000, guid: f9f63e054b0edc84586674aaa96c30b3, type: 2}
@@ -201,18 +201,13 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3924a67172e095d4289575eacc3fb2de, type: 3}
---- !u!95 &77971667073114045 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 7037271174437998479, guid: 3924a67172e095d4289575eacc3fb2de, type: 3}
+--- !u!137 &1333098770334286279 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8231582091683303925, guid: 3924a67172e095d4289575eacc3fb2de, type: 3}
   m_PrefabInstance: {fileID: 6970562907768164402}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &6661060117179066714 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4381084250967112040, guid: 3924a67172e095d4289575eacc3fb2de, type: 3}
-  m_PrefabInstance: {fileID: 6970562907768164402}
-  m_PrefabAsset: {fileID: 0}
---- !u!137 &8828624054336850521 stripped
-SkinnedMeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 1889815045064268395, guid: 3924a67172e095d4289575eacc3fb2de, type: 3}
   m_PrefabInstance: {fileID: 6970562907768164402}
   m_PrefabAsset: {fileID: 0}
