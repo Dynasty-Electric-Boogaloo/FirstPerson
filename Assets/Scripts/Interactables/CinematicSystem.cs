@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using DG.Tweening;
 using Player;
 using UI;
 using UnityEngine;
@@ -24,11 +26,16 @@ public class CinematicSystem : MonoBehaviour
         image.gameObject.SetActive(false);
     }
 
+    private void Start()
+    {
+        PlayCinematic();
+    }
+
     private void EndOfCinematic(VideoPlayer source)
     {
         source.Stop();
         image.gameObject.SetActive(false);
-        PauseManager.PauseGame(false, false);
+        PauseManager.PauseGame(false, false, false);
         PauseManager.SetForcePause(false);
     }
 
@@ -38,15 +45,9 @@ public class CinematicSystem : MonoBehaviour
             instance = null;
     }
 
-    [ContextMenu("Testing cinematique")]
-    private void Testing()
-    {
-        PlayCinematic();
-    }
-
     private static void PlayCinematic(int index = 0)
     {
-        if(index > instance.clips.Count)
+        if(!instance || index > instance.clips.Count)
             return;
 
         instance._videoPlayer.clip = instance.clips[index];
@@ -54,6 +55,16 @@ public class CinematicSystem : MonoBehaviour
         PauseManager.PauseGame(true, false);
         PauseManager.SetForcePause(true);
         instance.image.gameObject.SetActive(true);
+    }
+    
+    private static void EndGame()
+    {
+        if(!instance)
+            return;
+
+        instance.image.DOColor(Color.clear, 0);
+        instance.image.texture = null;
+        instance.image.DOColor(Color.black, 1);
     }
     
 }
