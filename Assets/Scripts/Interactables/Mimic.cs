@@ -113,8 +113,7 @@ public class Mimic : MonoBehaviour
         
         if (!_isAwake)
         {
-            Debug.Log("BITE");
-            // AudioManager.PlayOneShot(FMODEvents.GetAlert(), transform.position);
+            AudioManager.PlayOneShot(FMODEvents.GetAlert(), transform.position);
         }
         MonsterNavigation.Alert(transform.position);
         _isAwake = true;
