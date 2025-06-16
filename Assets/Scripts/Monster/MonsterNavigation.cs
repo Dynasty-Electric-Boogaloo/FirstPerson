@@ -59,8 +59,18 @@ namespace Monster
             
             if (MonsterData.watchTimer > 0)
                 MonsterData.watchTimer -= Time.deltaTime;
-            
-            if (_refreshTimer > 0 && monsterPoint != MonsterData.targetNode)
+
+            var close = true;
+
+            if (MonsterData.targetNode.id >= 0)
+            {
+                var diff = ZoneGraphManager.Instance.Nodes[MonsterData.targetNode.id].Position - transform.position;
+                diff.y = 0;
+
+                close = diff.magnitude < .25f;
+            }
+
+            if (_refreshTimer > 0 && close)
             {
                 _refreshTimer -= Time.deltaTime;
                 return;
@@ -219,9 +229,14 @@ namespace Monster
         {
             if (!Application.isPlaying)
                 return;
+            
+            var targetRoom = ZoneGraphManager.Pathfinding.GetPointRoom(transform.position);
+            var currentNode = ZoneGraphManager.Pathfinding.GetPointClosestNode(transform.position, targetRoom);
 
             Gizmos.color = MonsterData.targetNode.id > 0 ? Color.white : Color.red;
-            Gizmos.DrawSphere(MonsterData.targetPoint, 1);
+            Gizmos.DrawSphere(MonsterData.targetPoint, .5f);
+            Gizmos.color = Color.green;
+            Gizmos.DrawSphere(ZoneGraphManager.Instance.Nodes[currentNode.id].Position, 1);
         }
     }
 }
