@@ -30,9 +30,7 @@ namespace ZoneGraph
                 var distance = Vector3.Distance(point, col.ClosestPoint(point));
                 
                 if (distance < closestDistance)
-                {
                     closestDistance = distance;
-                }
             }
             
             return closestDistance < 0.01f;

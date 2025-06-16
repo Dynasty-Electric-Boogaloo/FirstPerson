@@ -67,6 +67,12 @@ namespace Player
             _playerData.PlayerInputs.Disable();
         }
 
+        private void Update()
+        {
+            if (transform.position.y < -10)
+                MonsterRoot.Die();
+        }
+
         public static void ResetPosition()
         {
             if(_instance == null)

@@ -97,7 +97,7 @@ namespace ZoneGraph
             {
                 var distance = Vector3.Distance(_graph.Nodes[nodeId.id].Position, position);
 
-                if (!(distance < closestDistance)) 
+                if (distance > closestDistance) 
                     continue;
                 
                 closestDistance = distance;
@@ -110,7 +110,7 @@ namespace ZoneGraph
                 {
                     var distance = Vector3.Distance(_graph.Nodes[nodeId.id].Position, position);
 
-                    if (!(distance < closestDistance)) 
+                    if (distance > closestDistance) 
                         continue;
                 
                     closestDistance = distance;

@@ -59,12 +59,8 @@ namespace Monster
 
             if (!ShouldKillPlayer())
                 return;
-            
-            PlayerRoot.Die();
-            transform.position = _startPosition;
-            transform.rotation = _startRotation;
-            ResetState();
-            InteractableManager.Restore();
+
+            Die();
         }
 
         public bool ShouldKillPlayer()
@@ -77,6 +73,19 @@ namespace Monster
                 return true;
             
             return IsPointInMonster(PlayerRoot.Position);
+        }
+
+        public static void Die()
+        {
+            if (!_instance)
+                return;
+            
+            PlayerRoot.Die();
+            _instance.transform.position = _instance._startPosition;
+            _instance.transform.rotation = _instance._startRotation;
+            ResetState();
+            UiManager.SetChaseBorder(false);
+            InteractableManager.Restore();
         }
 
         public static bool IsPointInMonster(Vector3 point)
@@ -112,6 +121,7 @@ namespace Monster
             _instance._monsterData.searching = false;
             _instance._monsterData.Heatmap.Data.Clear();
             _instance._monsterData.chaseTimer = 0;
+            _instance._monsterData.watchTimer = 0;
             _instance._monsterData.targetNode = new NodeId(-1);
         }
 
