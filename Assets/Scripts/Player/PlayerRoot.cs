@@ -160,6 +160,8 @@ namespace Player
         {
             if (!_instance) 
                 return;
+            
+            SetIsInMannequin(start);
             if(start)
                 _instance._playerCamera.GoToPosition(position);
             else 

@@ -9,6 +9,8 @@ public class QteUiPanel : MonoBehaviour
     
     [SerializeField] Image _qteTarget;
     [SerializeField] Image _qtePlayerImpulse;
+    [SerializeField] private Color winColor;
+    [SerializeField] private Color looseColor;
 
     private void Awake()
     {
@@ -37,6 +39,12 @@ public class QteUiPanel : MonoBehaviour
 
         _instance._qtePlayerImpulse.transform.DOScale(0, 0);
         _instance._qtePlayerImpulse.transform.DOScale(1, timing);
+    }
+
+    public static void SetResult(bool win)
+    {
+        _instance._qteTarget.color = win ? _instance.winColor : _instance.looseColor;
+        _instance._qtePlayerImpulse.color = win ? _instance.winColor : _instance.looseColor;
     }
 
     public static void HideQte()
