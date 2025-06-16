@@ -135,7 +135,7 @@ namespace Player
                 intensity = flickering ? intensity : 0;
 
                 if (!flickering && _isFlickering)
-                    AudioManager.PlayOneShot(FMODEvents.GetFlicker(), transform.position);
+                    AudioManager.PlayOneShot2D(FMODEvents.GetFlicker());
     
                 _isFlickering = flickering;
             }

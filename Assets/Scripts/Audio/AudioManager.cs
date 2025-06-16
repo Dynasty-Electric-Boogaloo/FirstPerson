@@ -20,7 +20,11 @@ public class AudioManager : MonoBehaviour
     {
         RuntimeManager.PlayOneShot(sound, worldpos);
     }
-    
+
+    public static void PlayOneShot2D(EventReference sound)
+    {
+        RuntimeManager.PlayOneShot(sound);
+    }
     private void OnDestroy()
     {
         if (instance == this)

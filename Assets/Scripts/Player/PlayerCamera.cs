@@ -94,7 +94,7 @@ namespace Player
             if (previousHorizontalTimer <= .4f && nextHorizontalTimer >= .4f ||
                 previousHorizontalTimer <= 1.4f && nextHorizontalTimer >= 1.4f)
             {
-                AudioManager.PlayOneShot(FMODEvents.GetStep(), transform.position);
+                AudioManager.PlayOneShot(FMODEvents.Step,this.transform.position);
             }
         }
 
