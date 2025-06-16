@@ -88,6 +88,7 @@ namespace Player
             if(_instance == null)
                 return;
             
+            AudioManager.PlayOneShot(FMODEvents.GetDeath(), Position);
             DanceManager.ForceStopQte();
             _instance._playerFlashLight.Death();
             ResetPosition();
@@ -160,8 +161,6 @@ namespace Player
         {
             if (!_instance) 
                 return;
-            
-            SetIsInMannequin(start);
             if(start)
                 _instance._playerCamera.GoToPosition(position);
             else 
