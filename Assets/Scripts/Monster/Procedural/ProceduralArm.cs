@@ -42,17 +42,15 @@ namespace Monster.Procedural
             handTransform.SetParent(null);
             _currentStickingRotation = Quaternion.identity;
             _previousStickingRotation = Quaternion.identity;
-
-            _defaultHandPosition = Quaternion.Inverse(_body.transform.rotation) * (handTransform.position - _body.transform.position);
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
             UpdateTargetPoint();
             UpdateStickingPoint();
 
             if (_transitionTimer > 0)
-                _transitionTimer -= Time.fixedDeltaTime;
+                _transitionTimer -= Time.deltaTime;
 
             var factor = _transitionTimer / _transitionTime;
             var normal = Vector3.Slerp(_currentStickingNormal, _previousStickingNormal, factor);
@@ -86,6 +84,7 @@ namespace Monster.Procedural
             {
                 _targetPosition = _raycastHit.point;
                 _targetNormal = _raycastHit.normal;
+                _hasTarget = true;
                 return;
             }
 
@@ -99,16 +98,18 @@ namespace Monster.Procedural
             {
                 _targetNormal = _raycastHit.normal;
                 _targetPosition = _raycastHit.point + _targetNormal * .1f;
+                _hasTarget = true;
                 return;
             }
 
             _targetNormal = _body.transform.forward;
-            _targetPosition = _body.transform.position + _body.transform.rotation * _defaultHandPosition;
+            _targetPosition = _body.transform.position;
+            _hasTarget = false;
         }
 
         private void UpdateStickingPoint()
         {
-            if (Vector3.Distance(_currentStickingPosition, _targetPosition) < maxStickingDistance || _transitionTimer > 0)
+            if ((Vector3.Distance(_currentStickingPosition, _targetPosition) < maxStickingDistance || _transitionTimer > 0) && _hasTarget)
                 return;
 
             _previousStickingPosition = _currentStickingPosition;
@@ -119,12 +120,16 @@ namespace Monster.Procedural
             rayDir.Normalize();
             var forward = Vector3.ProjectOnPlane(rayDir, _targetNormal);
             
-            _currentStickingPosition = _targetPosition;
-            _currentStickingRotation = Quaternion.LookRotation(forward, _targetNormal);
-            _currentStickingNormal = _targetNormal;
+            var armDir = transform.up * direction.y + transform.right * direction.x;
+            armDir.Normalize();
+            var defaultPosition = _body.transform.position + armDir * .5f;
+            
+            _currentStickingPosition = _hasTarget ? _targetPosition : defaultPosition;
+            _currentStickingRotation = Quaternion.LookRotation(forward, _hasTarget ? _targetNormal : _body.transform.forward);
+            _currentStickingNormal = _hasTarget ? _targetNormal : _body.transform.forward;
             
             _transitionTime = Random.Range(transitionTime.x, transitionTime.y);
-            _transitionTimer = _transitionTime;
+            _transitionTimer = _hasTarget ? _transitionTime : 0;
         }
     }
 }
