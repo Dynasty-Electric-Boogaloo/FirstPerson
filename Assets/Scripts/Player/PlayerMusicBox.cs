@@ -56,11 +56,9 @@ namespace Player
             PlayerData.CurrentIndexObjective = (int)state;
             musicBoxObject.SetLevel((int)state);
             
-            
-            //a nuke
             if (state == State.Picture)
             {
-                SceneManager.LoadScene("Win_Logique");
+               ObjectiveManager.Win();
             }
         }
         

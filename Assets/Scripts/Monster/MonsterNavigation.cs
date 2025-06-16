@@ -69,7 +69,7 @@ namespace Monster
             _refreshTimer = refreshTime;
 
             MonsterData.targetNode = EvaluateTargetNode();
-
+            
             if (MonsterData.targetNode.id < 0)
                 MonsterData.targetNode = ZoneGraphManager.Pathfinding.GetPointClosestNode(transform.position, ZoneGraphManager.Pathfinding.GetPointRoom(transform.position));
             
@@ -94,6 +94,7 @@ namespace Monster
         private void OnQteOver(bool win)
         {
             MonsterData.watchTimer = win ? watchTime : 0;
+            QteUiPanel.HideQte();
         }
 
         private NodeId EvaluateTargetNode()
@@ -160,7 +161,7 @@ namespace Monster
                     Alert(PlayerRoot.Position, true);
                     if (MonsterData.watchTimer <= 0)
                         PlayerRoot.StartQte(false);
-                    MonsterData.watchTimer = watchTime * 1.5f;
+                    MonsterData.watchTimer = 10;
                     UiManager.SetChaseBorder(true);
                     break;
             }

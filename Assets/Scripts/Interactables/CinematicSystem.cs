@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Player;
 using UI;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,6 +10,7 @@ public class CinematicSystem : MonoBehaviour
     public static CinematicSystem instance;
     [SerializeField] private List<VideoClip> clips;
     [SerializeField] private RawImage image;
+    [SerializeField] private Transform endCamera;
     private VideoPlayer _videoPlayer;
     private void Awake()
     {
@@ -53,4 +55,5 @@ public class CinematicSystem : MonoBehaviour
         PauseManager.SetForcePause(true);
         instance.image.gameObject.SetActive(true);
     }
+    
 }
