@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8596904966076986361}
   - component: {fileID: 3717412976460800301}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PF_Debris
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,6 +110,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: aec63c06a3f97d4499e333747fc7d29a, type: 3}
       propertyPath: m_Name
       value: SM_Debris_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aec63c06a3f97d4499e333747fc7d29a, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: aec63c06a3f97d4499e333747fc7d29a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
