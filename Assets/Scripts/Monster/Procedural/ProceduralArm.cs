@@ -44,13 +44,13 @@ namespace Monster.Procedural
             _previousStickingRotation = Quaternion.identity;
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
             UpdateTargetPoint();
             UpdateStickingPoint();
 
             if (_transitionTimer > 0)
-                _transitionTimer -= Time.deltaTime;
+                _transitionTimer -= Time.fixedDeltaTime;
 
             var factor = _transitionTimer / _transitionTime;
             var normal = Vector3.Slerp(_currentStickingNormal, _previousStickingNormal, factor);
