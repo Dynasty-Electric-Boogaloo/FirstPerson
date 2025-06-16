@@ -59,8 +59,17 @@ namespace Monster
             
             if (MonsterData.watchTimer > 0)
                 MonsterData.watchTimer -= Time.deltaTime;
-            
-            if (_refreshTimer > 0 && monsterPoint != MonsterData.targetNode)
+
+            var atTarget = true;
+            if (MonsterData.targetNode.id >= 0)
+            {
+                var diff = ZoneGraphManager.Instance.Nodes[MonsterData.targetNode.id].Position - transform.position;
+                diff.y = 0;
+
+                atTarget = diff.magnitude < .25f;
+            }
+
+            if (_refreshTimer > 0 && !atTarget)
             {
                 _refreshTimer -= Time.deltaTime;
                 return;
@@ -94,6 +103,7 @@ namespace Monster
         private void OnQteOver(bool win)
         {
             MonsterData.watchTimer = win ? watchTime : 0;
+            QteUiPanel.HideQte();
         }
 
         private NodeId EvaluateTargetNode()
