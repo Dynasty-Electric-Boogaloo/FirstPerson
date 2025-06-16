@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5977537095092787127}
   - component: {fileID: 1213012887873931820}
+  - component: {fileID: 203309360822859619}
   m_Layer: 0
   m_Name: PF_Radio01
   m_TagString: Untagged
@@ -54,6 +55,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.4266988, y: 0.26, z: 0.18118629}
   m_Center: {x: 0.0018330142, y: 0.18, z: 0.0044860393}
+--- !u!114 &203309360822859619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7480972886122257384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -822283510
+      Data2: 1278608027
+      Data3: 658535070
+      Data4: -1037227129
+    Path: event:/Ambiant/RADIOS
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 6
 --- !u!1001 &666692669326741506
 PrefabInstance:
   m_ObjectHideFlags: 0
