@@ -34,14 +34,14 @@ namespace ZoneGraph
             var currentNode = GetPointClosestNode(currentPoint, currentRoom);
             currentRoom = ZoneGraphManager.Instance.Nodes[currentNode.id].Room;
             
-            if (currentNode.id < 0 || targetRoom.id < 0)
+            if (currentNode.id < 0 || targetRoom.id <= 0)
                 return currentNode;
 
             if (currentRoom != targetRoom)
             {
                 var travelRoom = PathfindToRoom(currentRoom, targetRoom);
 
-                if (travelRoom.id < 0)
+                if (travelRoom.id <= 0)
                     return new NodeId(-1);
                 
                 var targetNode = GetClosestConnexionToRoom(currentNode, currentRoom, travelRoom);
