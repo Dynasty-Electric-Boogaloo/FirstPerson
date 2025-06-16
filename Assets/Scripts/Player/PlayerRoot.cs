@@ -96,6 +96,7 @@ namespace Player
             
             AudioManager.PlayOneShot(FMODEvents.GetDeath(), Position);
             DanceManager.ForceStopQte();
+            SetIsLocked(false);
             _instance._playerFlashLight.Death();
             ResetPosition();
             
