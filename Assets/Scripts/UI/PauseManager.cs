@@ -40,7 +40,7 @@ namespace UI
             PauseGame(!_pause);
       }
       
-      public static void PauseGame(bool setPause, bool showMenu = true)
+      public static void PauseGame(bool setPause, bool showMenu = true, bool forceLockMouse = true)
       {
          if(instance == null)
             return;
@@ -50,8 +50,12 @@ namespace UI
             
          instance._pause = setPause;
          Time.timeScale = setPause ? 0f : 1f;
-         Cursor.visible = setPause;
-         Cursor.lockState = setPause ? CursorLockMode.None : CursorLockMode.Locked;
+         Cursor.visible = !forceLockMouse || setPause;
+         
+         if (!forceLockMouse)
+            Cursor.lockState = CursorLockMode.None;
+         else
+            Cursor.lockState = setPause ? CursorLockMode.None : CursorLockMode.Locked ;
       }
 
       public static void Quit()

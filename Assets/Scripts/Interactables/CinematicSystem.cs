@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Player;
 using UI;
@@ -24,11 +25,17 @@ public class CinematicSystem : MonoBehaviour
         image.gameObject.SetActive(false);
     }
 
+    private void Start()
+    {
+        PlayCinematic();
+        print("ffff");
+    }
+
     private void EndOfCinematic(VideoPlayer source)
     {
         source.Stop();
         image.gameObject.SetActive(false);
-        PauseManager.PauseGame(false, false);
+        PauseManager.PauseGame(false, false, false);
         PauseManager.SetForcePause(false);
     }
 
@@ -36,12 +43,6 @@ public class CinematicSystem : MonoBehaviour
     {
         if (instance == this)
             instance = null;
-    }
-
-    [ContextMenu("Testing cinematique")]
-    private void Testing()
-    {
-        PlayCinematic();
     }
 
     private static void PlayCinematic(int index = 0)
