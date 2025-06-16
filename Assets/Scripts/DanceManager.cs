@@ -79,6 +79,7 @@ public class DanceManager : MonoBehaviour
         if (!isWon)
         {
             _playerDance.SetQteResult(false);
+            QteUiPanel.SetResult(false);
             _instance._qteIsPlaying = false;
             OnQteOver?.Invoke(false);
             return;
@@ -89,6 +90,7 @@ public class DanceManager : MonoBehaviour
         else
         {
             _playerDance.SetQteResult(true);
+            QteUiPanel.SetResult(true);
             OnQteOver?.Invoke(true);
             _instance._qteIsPlaying = false;
         }

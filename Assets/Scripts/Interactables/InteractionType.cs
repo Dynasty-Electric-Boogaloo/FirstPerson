@@ -5,6 +5,7 @@
 		Interactable,
 		GrabObject,
 		Collectible,
-		Mannequin
+		Mannequin,
+		Other
 	}
 }
