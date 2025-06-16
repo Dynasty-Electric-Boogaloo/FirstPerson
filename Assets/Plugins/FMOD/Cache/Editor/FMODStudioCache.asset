@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: FPV_FmodProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638856843683475040
+  lastModified: 638856969230257777
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -184,12 +184,13 @@ MonoBehaviour:
   - {fileID: 404036638437148411}
   - {fileID: -4486521221394012019}
   - {fileID: 8046162681260069834}
+  - {fileID: 8082196220171449635}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8423727960163797245}
   StringsBanks:
   - {fileID: 1820093026848505179}
-  cacheTime: 638856951628357335
+  cacheTime: 638856969231399937
   cacheVersion: 131624
 --- !u!114 &404036638437148411
 MonoBehaviour:
@@ -280,10 +281,10 @@ MonoBehaviour:
   Path: FPV_FmodProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638856951628337389
+  lastModified: 638856969230277720
   FileSizes:
   - Name: Desktop
-    Value: 1062
+    Value: 1108
   Exists: 1
 --- !u!114 &2447146612615732400
 MonoBehaviour:
@@ -300,7 +301,7 @@ MonoBehaviour:
   Path: FPV_FmodProject/Build/Desktop/Musics.bank
   Name: Musics
   StudioPath: bank:/Musics
-  lastModified: 638856823381053474
+  lastModified: 638856969230353374
   FileSizes:
   - Name: Desktop
     Value: 494
@@ -394,10 +395,10 @@ MonoBehaviour:
   Path: FPV_FmodProject/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638856951628357335
+  lastModified: 638856969231399937
   FileSizes:
   - Name: Desktop
-    Value: 15552
+    Value: 23488
   Exists: 1
 --- !u!114 &5907295305770836799
 MonoBehaviour:
@@ -520,6 +521,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &8082196220171449635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Lamp/Lamp Swap
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Lamp/Lamp Swap
+  Guid:
+    Data1: -2118749006
+    Data2: 1115084054
+    Data3: 531320749
+    Data4: -664268671
+  Banks:
+  - {fileID: 5706887857312195769}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &8485003931774457982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -555,7 +583,7 @@ MonoBehaviour:
   Path: FPV_FmodProject/Build/Desktop/Ambiant.bank
   Name: Ambiant
   StudioPath: bank:/Ambiant
-  lastModified: 638856823380719019
+  lastModified: 638856969230182975
   FileSizes:
   - Name: Desktop
     Value: 2145408
