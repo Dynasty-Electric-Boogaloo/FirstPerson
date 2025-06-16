@@ -37,6 +37,8 @@ public class Mimic : MonoBehaviour
         
         _emitter = gameObject.AddComponent<StudioEventEmitter>();
         _emitter.EventReference = RuntimeManager.PathToEventReference("event:/Ambiant/Whispers");
+        _emitter.OverrideMaxDistance = 2.5f;
+        _emitter.OverrideAttenuation = true;
         
         SetInfected(isInfected);
 
@@ -47,7 +49,7 @@ public class Mimic : MonoBehaviour
     private void Start()
     {
         MimicManager.AddToList(this, isInfected, TryGetComponent<Mannequin>(out _)); ;
-       if(_emitter && isInfected)
+        if(isInfected)
             _emitter.Play();
     }
 
@@ -109,6 +111,11 @@ public class Mimic : MonoBehaviour
     {
         if (!isInfected)
             return;
+        
+        if (!_isAwake)
+        {
+            AudioManager.PlayOneShot(FMODEvents.GetAlert(), transform.position);
+        }
         MonsterNavigation.Alert(transform.position);
         _isAwake = true;
         meshRenderer.sharedMaterial = regularMaterialSet.awake;

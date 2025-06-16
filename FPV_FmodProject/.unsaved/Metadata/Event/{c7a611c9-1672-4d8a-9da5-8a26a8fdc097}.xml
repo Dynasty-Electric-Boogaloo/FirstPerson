@@ -31,6 +31,9 @@
 		<relationship name="parameters">
 			<destination>{e4497217-e906-4a49-8b82-f5433d10f597}</destination>
 		</relationship>
+		<relationship name="banks">
+			<destination>{c8fb6d16-e05b-483a-8660-b23af5d5918b}</destination>
+		</relationship>
 	</object>
 	<object class="EventMixer" id="{b859c1ef-44dc-4104-a928-26cf1bcb0361}">
 		<relationship name="masterBus">
@@ -70,7 +73,7 @@
 	</object>
 	<object class="EventMixerMaster" id="{518622c5-5d10-4e5d-aa6f-094761012ab8}">
 		<property name="volume">
-			<value>-14</value>
+			<value>-9</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{3da84a6e-a14c-43d4-ae1d-bc6a13adcdbb}</destination>
@@ -122,5 +125,24 @@
 			<value>40</value>
 		</property>
 	</object>
-	<object class="SpatialiserEffect" id="{f65395b5-1df5-46f1-b2a2-d14faaa86224}" />
+	<object class="SpatialiserEffect" id="{f65395b5-1df5-46f1-b2a2-d14faaa86224}">
+		<property name="distanceRolloffType">
+			<value>2</value>
+		</property>
+		<property name="minimumDistance">
+			<value>6.80000019</value>
+		</property>
+		<property name="maximumDistance">
+			<value>1600</value>
+		</property>
+		<property name="extentMode">
+			<value>1</value>
+		</property>
+		<property name="soundSize">
+			<value>10000</value>
+		</property>
+		<property name="userStereoSeparation">
+			<value>-18.8793945</value>
+		</property>
+	</object>
 </objects>
