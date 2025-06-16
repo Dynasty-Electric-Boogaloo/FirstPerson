@@ -58,6 +58,7 @@ namespace UI
                 InteractionType.GrabObject => "Grab - E",
                 InteractionType.Collectible => "Collect - E",
                 InteractionType.Mannequin => "Enter - E",
+                InteractionType.Other => "",
                 _ => throw new ArgumentOutOfRangeException()
             };
 
