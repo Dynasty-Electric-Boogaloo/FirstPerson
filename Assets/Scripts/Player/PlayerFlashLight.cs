@@ -88,7 +88,8 @@ namespace Player
             if (_playerInput.Controls.UseFlash.WasPressedThisFrame() && PlayerData.RedLight &&!PlayerData.IsInMannequin)
             {
                 CheckSwitch();
-                
+                AudioManager.PlayOneShot(FMODEvents.GetSwap(), transform.position);
+
             }
             
 

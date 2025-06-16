@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: FPV_FmodProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638856977110605089
+  lastModified: 638856993231865737
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -161,6 +161,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-2270743492041092712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Monster/MIMICS/Mimics TRIGGER
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Monster/MIMICS/Mimics TRIGGER
+  Guid:
+    Data1: 1649210801
+    Data2: 1112481574
+    Data3: -812603516
+    Data4: -80336325
+  Banks:
+  - {fileID: 5706887857312195769}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,12 +212,14 @@ MonoBehaviour:
   - {fileID: -4486521221394012019}
   - {fileID: 8046162681260069834}
   - {fileID: 8082196220171449635}
+  - {fileID: -2270743492041092712}
+  - {fileID: 2704324435013900933}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8423727960163797245}
   StringsBanks:
   - {fileID: 1820093026848505179}
-  cacheTime: 638856989526255211
+  cacheTime: 638856994719091011
   cacheVersion: 131624
 --- !u!114 &404036638437148411
 MonoBehaviour:
@@ -281,10 +310,10 @@ MonoBehaviour:
   Path: FPV_FmodProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638856989526135505
+  lastModified: 638856993231891564
   FileSizes:
   - Name: Desktop
-    Value: 1108
+    Value: 1234
   Exists: 1
 --- !u!114 &2447146612615732400
 MonoBehaviour:
@@ -326,6 +355,33 @@ MonoBehaviour:
   - Name: Desktop
     Value: 1036
   Exists: 1
+--- !u!114 &2704324435013900933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Monster/Spot Player
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Monster/Spot Player
+  Guid:
+    Data1: -945417783
+    Data2: 1300895346
+    Data3: 646620573
+    Data4: -1748959832
+  Banks:
+  - {fileID: 5706887857312195769}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4746933716444386982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -395,10 +451,10 @@ MonoBehaviour:
   Path: FPV_FmodProject/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638856989526255211
+  lastModified: 638856994719091011
   FileSizes:
   - Name: Desktop
-    Value: 23488
+    Value: 158048
   Exists: 1
 --- !u!114 &5907295305770836799
 MonoBehaviour:
