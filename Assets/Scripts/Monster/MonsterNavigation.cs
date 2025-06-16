@@ -59,18 +59,8 @@ namespace Monster
             
             if (MonsterData.watchTimer > 0)
                 MonsterData.watchTimer -= Time.deltaTime;
-
-            var close = true;
-
-            if (MonsterData.targetNode.id >= 0)
-            {
-                var diff = ZoneGraphManager.Instance.Nodes[MonsterData.targetNode.id].Position - transform.position;
-                diff.y = 0;
-
-                close = diff.magnitude < .25f;
-            }
-
-            if (_refreshTimer > 0 && close)
+            
+            if (_refreshTimer > 0 && monsterPoint != MonsterData.targetNode)
             {
                 _refreshTimer -= Time.deltaTime;
                 return;
@@ -169,6 +159,7 @@ namespace Monster
                 case 2:
                     MonsterData.stateTime = 0;
                     Alert(PlayerRoot.Position, true);
+                    AudioManager.PlayOneShot(FMODEvents.GetSpotted(), transform.position);
                     if (MonsterData.watchTimer <= 0)
                         PlayerRoot.StartQte(false);
                     MonsterData.watchTimer = 10;
