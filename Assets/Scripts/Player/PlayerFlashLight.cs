@@ -135,7 +135,8 @@ namespace Player
                 intensity = flickering ? intensity : 0;
 
                 if (!flickering && _isFlickering)
-                    AudioManager.PlayOneShot(FMODEvents.GetFlicker(), transform.position);
+                    //AudioManager.PlayOneShot(FMODEvents.GetFlicker(), transform.position);
+                    Debug.Log("step");
     
                 _isFlickering = flickering;
             }
