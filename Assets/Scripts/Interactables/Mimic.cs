@@ -109,6 +109,11 @@ public class Mimic : MonoBehaviour
         if (!isInfected)
             return;
         
+        if (!_isAwake)
+        {
+            Debug.Log(_isAwake);
+            // AudioManager.PlayOneShot(FMODEvents.GetAlert(), transform.position);
+        }
         MonsterNavigation.Alert(transform.position);
         _isAwake = true;
         meshRenderer.sharedMaterial = regularMaterialSet.awake;

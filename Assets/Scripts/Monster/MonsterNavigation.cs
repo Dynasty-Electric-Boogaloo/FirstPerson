@@ -159,6 +159,7 @@ namespace Monster
                 case 2:
                     MonsterData.stateTime = 0;
                     Alert(PlayerRoot.Position, true);
+                    AudioManager.PlayOneShot(FMODEvents.GetSpotted(), transform.position);
                     if (MonsterData.watchTimer <= 0)
                         PlayerRoot.StartQte(false);
                     MonsterData.watchTimer = 10;
