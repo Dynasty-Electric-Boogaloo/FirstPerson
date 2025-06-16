@@ -57,7 +57,7 @@ public class CinematicSystem : MonoBehaviour
         instance.image.gameObject.SetActive(true);
     }
     
-    private static void EndGame()
+    public static void EndGame()
     {
         if(!instance)
             return;
