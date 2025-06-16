@@ -52,7 +52,7 @@ public class ObjectiveManager : MonoBehaviour
       if (!instance || instance._pickedUp.Count < 1)
          return;
       
-      instance._pickedUp.RemoveAt( instance._pickedUp.Count);
+      instance._pickedUp.RemoveAt( instance._pickedUp.Count-1);
    }
 
    public static void Win()
