@@ -1,12 +1,13 @@
 using System;
 using System.Collections.Generic;
+using Monster;
 using Player;
 using UnityEngine;
 
 public class ObjectiveManager : MonoBehaviour
 {
    public static ObjectiveManager instance;
-   public List<ObjectivePickUp> objectifs = new List<ObjectivePickUp>();
+   [SerializeField] private Animation animator;
    private List<ObjectivePickUp> _pickedUp = new List<ObjectivePickUp>();
 
    private void Awake()
@@ -24,6 +25,7 @@ public class ObjectiveManager : MonoBehaviour
    private void Start()
    {
       UpdateObjective();
+      animator.gameObject.SetActive(false);
    }
 
    public static void UpdateObjective()
@@ -49,5 +51,13 @@ public class ObjectiveManager : MonoBehaviour
       instance._pickedUp.RemoveAt( instance._pickedUp.Count);
    }
 
+   public static void Win()
+   {
+      MonsterRoot.Freeze();
+      instance.animator.gameObject.SetActive(true);
+      instance.animator.Play();
+   }
+
    public static bool isInList(ObjectivePickUp pickUp) => instance && instance._pickedUp.Contains(pickUp);
+   public static bool isLast => instance && instance._pickedUp.Count >= 3;
 }

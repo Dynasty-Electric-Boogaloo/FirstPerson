@@ -14,7 +14,9 @@ public class ObjectivePickUp : Interactable
         if (!isEvent)
         {
             InformationManager.SetText("New part of the music box found!", 2);
-            PlayerRoot.SetPosition(teleportPoint.position);
+            ObjectiveManager.AddToFound(this);
+            if(!ObjectiveManager.isLast)
+                PlayerRoot.SetPosition(teleportPoint.position);
             return;
         }
         
