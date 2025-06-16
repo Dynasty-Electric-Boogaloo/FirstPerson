@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: FPV_FmodProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638856993231865737
+  lastModified: 638857004024276174
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -214,12 +214,13 @@ MonoBehaviour:
   - {fileID: 8082196220171449635}
   - {fileID: -2270743492041092712}
   - {fileID: 2704324435013900933}
+  - {fileID: 6995241175767117795}
   EditorParameters: []
   MasterBanks:
   - {fileID: -8423727960163797245}
   StringsBanks:
   - {fileID: 1820093026848505179}
-  cacheTime: 638856994719091011
+  cacheTime: 638857004024306089
   cacheVersion: 131624
 --- !u!114 &404036638437148411
 MonoBehaviour:
@@ -310,10 +311,10 @@ MonoBehaviour:
   Path: FPV_FmodProject/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638856993231891564
+  lastModified: 638857004024306089
   FileSizes:
   - Name: Desktop
-    Value: 1234
+    Value: 1272
   Exists: 1
 --- !u!114 &2447146612615732400
 MonoBehaviour:
@@ -451,7 +452,7 @@ MonoBehaviour:
   Path: FPV_FmodProject/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 638856994719091011
+  lastModified: 638857003660994604
   FileSizes:
   - Name: Desktop
     Value: 158048
@@ -510,6 +511,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 21064
+--- !u!114 &6995241175767117795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiant/RADIOS
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiant/RADIOS
+  Guid:
+    Data1: -822283510
+    Data2: 1278608027
+    Data3: 658535070
+    Data4: -1037227129
+  Banks:
+  - {fileID: 8829275218688595092}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &7256561144888839811
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -639,10 +667,10 @@ MonoBehaviour:
   Path: FPV_FmodProject/Build/Desktop/Ambiant.bank
   Name: Ambiant
   StudioPath: bank:/Ambiant
-  lastModified: 638856969230182975
+  lastModified: 638857004024176461
   FileSizes:
   - Name: Desktop
-    Value: 2145408
+    Value: 3772064
   Exists: 1
 --- !u!114 &9114343498915680935
 MonoBehaviour:
