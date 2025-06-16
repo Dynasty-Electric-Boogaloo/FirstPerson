@@ -29,6 +29,9 @@ namespace Monster.Procedural
         private Quaternion _previousStickingRotation;
         private float _transitionTimer;
         private float _transitionTime;
+        private bool _hasTarget;
+
+        private Vector3 _defaultHandPosition;
 
         private void Start()
         {
@@ -39,6 +42,8 @@ namespace Monster.Procedural
             handTransform.SetParent(null);
             _currentStickingRotation = Quaternion.identity;
             _previousStickingRotation = Quaternion.identity;
+
+            _defaultHandPosition = Quaternion.Inverse(_body.transform.rotation) * (handTransform.position - _body.transform.position);
         }
 
         private void FixedUpdate()
@@ -96,8 +101,9 @@ namespace Monster.Procedural
                 _targetPosition = _raycastHit.point + _targetNormal * .1f;
                 return;
             }
-            
-            _targetPosition = Vector3.zero;
+
+            _targetNormal = _body.transform.forward;
+            _targetPosition = _body.transform.position + _body.transform.rotation * _defaultHandPosition;
         }
 
         private void UpdateStickingPoint()
