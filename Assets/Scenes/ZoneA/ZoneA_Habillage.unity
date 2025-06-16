@@ -7052,6 +7052,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1374620160}
     m_Modifications:
+    - target: {fileID: -5003573748023808677, guid: 6871534827c3704458fb73aa959e2f14, type: 3}
+      propertyPath: EventReference.Path
+      value: event:/Ambiant/Radios
+      objectReference: {fileID: 0}
+    - target: {fileID: -5003573748023808677, guid: 6871534827c3704458fb73aa959e2f14, type: 3}
+      propertyPath: OverrideAttenuation
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5003573748023808677, guid: 6871534827c3704458fb73aa959e2f14, type: 3}
+      propertyPath: OverrideMaxDistance
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: -5003573748023808677, guid: 6871534827c3704458fb73aa959e2f14, type: 3}
+      propertyPath: OverrideMinDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -5003573748023808677, guid: 6871534827c3704458fb73aa959e2f14, type: 3}
+      propertyPath: EventReference.Guid.Data1
+      value: -1240531702
+      objectReference: {fileID: 0}
+    - target: {fileID: -5003573748023808677, guid: 6871534827c3704458fb73aa959e2f14, type: 3}
+      propertyPath: EventReference.Guid.Data2
+      value: 1192945634
+      objectReference: {fileID: 0}
+    - target: {fileID: -5003573748023808677, guid: 6871534827c3704458fb73aa959e2f14, type: 3}
+      propertyPath: EventReference.Guid.Data3
+      value: 659986615
+      objectReference: {fileID: 0}
+    - target: {fileID: -5003573748023808677, guid: 6871534827c3704458fb73aa959e2f14, type: 3}
+      propertyPath: EventReference.Guid.Data4
+      value: 50584319
+      objectReference: {fileID: 0}
     - target: {fileID: 396871619900796243, guid: 6871534827c3704458fb73aa959e2f14, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -9275,6 +9307,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6378336916757261466, guid: 39aad184b14c33346bf5332799f609aa, type: 3}
   m_PrefabInstance: {fileID: 432578651}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &432836845 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6829352241447686328, guid: ea9c27550779cad4193a60fd9d3c60c9, type: 3}
+  m_PrefabInstance: {fileID: 1535329274140567665}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &436265796
 GameObject:
@@ -33085,6 +33122,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8478876563009619141, guid: ea9c27550779cad4193a60fd9d3c60c9, type: 3}
   m_PrefabInstance: {fileID: 1535329274140567665}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1681784038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432836845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 522429024
+      Data2: 1247434783
+      Data3: -1678374257
+      Data4: 1369346368
+    Path: event:/Ambiant/Piano
+  Event: 
+  EventPlayTrigger: 1
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 1
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 15
 --- !u!1001 &1684052917
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44217,6 +44285,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6829352241447686328, guid: ea9c27550779cad4193a60fd9d3c60c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1681784038}
     - targetCorrespondingSourceObject: {fileID: 8643769680750478849, guid: ea9c27550779cad4193a60fd9d3c60c9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1031284436}

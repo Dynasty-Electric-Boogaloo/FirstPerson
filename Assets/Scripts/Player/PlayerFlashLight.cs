@@ -85,9 +85,13 @@ namespace Player
         
         private void LightUpdate()
         {
-            if (_playerInput.Controls.UseFlash.WasPressedThisFrame() && PlayerData.RedLight && !PlayerData.IsInMannequin)
+            if (_playerInput.Controls.UseFlash.WasPressedThisFrame() && PlayerData.RedLight &&
+                !PlayerData.IsInMannequin)
+            {
                 CheckSwitch();
+                AudioManager.PlayOneShot(FMODEvents.GetLightSwap(), transform.position);
 
+            }
             var reload = _playerInput.Controls.ReloadFlash.IsPressed();
             PlayerData.Reloading = reload;
             if (reload)
