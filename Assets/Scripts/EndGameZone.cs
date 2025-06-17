@@ -1,12 +1,13 @@
 using System;
 using Player;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndGameZone : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.TryGetComponent<PlayerRoot>(out _))
-            CinematicSystem.EndGame();
+            SceneManager.LoadScene("Win_Logique");
     }
 }

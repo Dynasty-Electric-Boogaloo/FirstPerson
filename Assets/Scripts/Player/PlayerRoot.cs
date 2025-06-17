@@ -168,6 +168,9 @@ namespace Player
         {
             if (!_instance) 
                 return;
+            
+            SetIsLocked(start);
+            
             if(start)
                 _instance._playerCamera.GoToPosition(position);
             else 
