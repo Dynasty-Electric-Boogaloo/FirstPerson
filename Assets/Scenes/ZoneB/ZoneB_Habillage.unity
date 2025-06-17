@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000004, guid: 814ab8ad316cac642ba0c35245f5ed63, type: 2}
+  m_LightingDataAsset: {fileID: 112000004, guid: d914085cd22268a40974759a376f4307, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -274,6 +274,10 @@ PrefabInstance:
     - target: {fileID: 4307184086453005727, guid: efb6e00afabf70441a0b074410b894c7, type: 3}
       propertyPath: m_Name
       value: PF_Polaroid_06
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971844248652355441, guid: efb6e00afabf70441a0b074410b894c7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: efb6e00afabf70441a0b074410b894c7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -552,6 +556,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1418763591}
     m_Modifications:
+    - target: {fileID: 3466564076922936939, guid: 6667a4d22635f484dbd0b57ea8ff6404, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4018451975733623416, guid: 6667a4d22635f484dbd0b57ea8ff6404, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.499995
@@ -658,6 +666,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_CeilingPipes_Light_01 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 9026771436748596662, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -681,6 +693,14 @@ PrefabInstance:
       value: PF_Shelf_02 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 1220598517231043397, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4352530178604100203, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440268566667768421, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -1010,6 +1030,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_CeilingPipes_Light_01 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 9026771436748596662, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1026,6 +1050,10 @@ PrefabInstance:
     - target: {fileID: 4307184086453005727, guid: 9487f8d127c0ede469493027d5f6abae, type: 3}
       propertyPath: m_Name
       value: PF_Poster_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971844248652355441, guid: 9487f8d127c0ede469493027d5f6abae, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: 9487f8d127c0ede469493027d5f6abae, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1567,6 +1595,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1132746291}
     m_Modifications:
+    - target: {fileID: 514927706874917009, guid: 4752678151785774aa51b12a23324b39, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4018451975733623416, guid: 4752678151785774aa51b12a23324b39, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.5000057
@@ -1694,6 +1726,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1418763591}
     m_Modifications:
+    - target: {fileID: 3466564076922936939, guid: 6667a4d22635f484dbd0b57ea8ff6404, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4018451975733623416, guid: 6667a4d22635f484dbd0b57ea8ff6404, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.4999876
@@ -2495,7 +2531,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 1.5e-44, z: 2078.2468, w: 3.238698e-35}
+  m_BoundingSphereOverride: {x: 8.21e-43, y: 8.8607e-41, z: 2.7106948e-20, w: 3e-45}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -2515,6 +2551,10 @@ PrefabInstance:
     - target: {fileID: 4307184086453005727, guid: 8880f8a8ef4c9ed4895df52e5fcd0a27, type: 3}
       propertyPath: m_Name
       value: PF_Polaroid_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971844248652355441, guid: 8880f8a8ef4c9ed4895df52e5fcd0a27, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: 8880f8a8ef4c9ed4895df52e5fcd0a27, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2797,7 +2837,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 7.409781e+28, y: 0.0000000025665625, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 7.2064716e+31, y: 6.530188e+28, z: 6.7130534e+22, w: 7.185382e+22}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -2998,6 +3038,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_CeilingPipes_Light_02 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 9026771436748596662, guid: da46bd3c66aa9484b907e3b766cf5dc4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3016,6 +3060,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1132746291}
     m_Modifications:
+    - target: {fileID: 3466564076922936939, guid: 6667a4d22635f484dbd0b57ea8ff6404, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4018451975733623416, guid: 6667a4d22635f484dbd0b57ea8ff6404, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.500007
@@ -3258,9 +3306,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7369424714095477859, guid: da46bd3c66aa9484b907e3b766cf5dc4, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1117460fbf05f7f4fa2ae865f239135b, type: 2}
     - target: {fileID: 8032476272702080558, guid: da46bd3c66aa9484b907e3b766cf5dc4, type: 3}
       propertyPath: m_Name
       value: PF_CeilingPipes_Light_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 9026771436748596662, guid: da46bd3c66aa9484b907e3b766cf5dc4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3430,7 +3486,7 @@ Transform:
   m_GameObject: {fileID: 157497166}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.7199993, y: 0.67999995, z: -21.94}
+  m_LocalPosition: {x: -6.2199993, y: 0.67999995, z: -19.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3589,7 +3645,7 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 1, g: 0.23016784, b: 0, a: 1}
-  m_Intensity: 2.6919117
+  m_Intensity: 0.7957747
   m_Range: 5.9229465
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -3634,7 +3690,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 9.1837e-41, z: -9.84e-43, w: 1.64e-43}
+  m_BoundingSphereOverride: {x: 2.3509887e-38, y: 6.3108872e-30, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -3694,6 +3750,10 @@ PrefabInstance:
     - target: {fileID: 8032476272702080558, guid: da46bd3c66aa9484b907e3b766cf5dc4, type: 3}
       propertyPath: m_Name
       value: PF_CeilingPipes_Light_02 (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9026771436748596662, guid: da46bd3c66aa9484b907e3b766cf5dc4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3900,6 +3960,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_Shelf_02
       objectReference: {fileID: 0}
+    - target: {fileID: 4352530178604100203, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440268566667768421, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6922506771305217638, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.5
@@ -4023,9 +4091,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1132746291}
     m_Modifications:
+    - target: {fileID: 2055969841074646190, guid: 98cb69f19e6dac24c91cf9148b1d9c92, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4924621485462914595, guid: 98cb69f19e6dac24c91cf9148b1d9c92, type: 3}
       propertyPath: m_Name
       value: PF_Paint_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4924621485462914595, guid: 98cb69f19e6dac24c91cf9148b1d9c92, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8719647032213403409, guid: 98cb69f19e6dac24c91cf9148b1d9c92, type: 3}
       propertyPath: m_LocalScale.x
@@ -5360,6 +5436,14 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 4352530178604100203, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440268566667768421, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5614949558707997856, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -6371,6 +6455,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1418763591}
     m_Modifications:
+    - target: {fileID: 514927706874917009, guid: 4752678151785774aa51b12a23324b39, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4018451975733623416, guid: 4752678151785774aa51b12a23324b39, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.4999976
@@ -6788,6 +6876,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_Poster_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7971844248652355441, guid: 9a432e117ea5b0447b75396948eef706, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: 9a432e117ea5b0447b75396948eef706, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.948
@@ -7131,6 +7223,14 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 4352530178604100203, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440268566667768421, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5614949558707997856, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -7193,9 +7293,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1132746291}
     m_Modifications:
+    - target: {fileID: 2055969841074646190, guid: 98cb69f19e6dac24c91cf9148b1d9c92, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4924621485462914595, guid: 98cb69f19e6dac24c91cf9148b1d9c92, type: 3}
       propertyPath: m_Name
       value: PF_Paint_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4924621485462914595, guid: 98cb69f19e6dac24c91cf9148b1d9c92, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8719647032213403409, guid: 98cb69f19e6dac24c91cf9148b1d9c92, type: 3}
       propertyPath: m_LocalScale.x
@@ -7421,7 +7529,7 @@ Transform:
   m_GameObject: {fileID: 333430987}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.106, y: 1.15, z: -29.918}
+  m_LocalPosition: {x: -13.585, y: 1.523, z: -30.805}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7580,7 +7688,7 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 0, g: 0.9489832, b: 1, a: 1}
-  m_Intensity: 6.5238853
+  m_Intensity: 5.4305077
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -7625,7 +7733,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: NaN, z: NaN, w: -3.9242299e-38}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 1.83733e-40}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -7682,9 +7790,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2263294059210984824, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3433282936956142881, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
       propertyPath: m_Name
       value: PF_HeadProjector_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314833327542165888, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869898844114638987, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019393250848935231, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8093,6 +8217,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_CeilingPipes_Light_01 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 9026771436748596662, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8213,6 +8341,10 @@ PrefabInstance:
     - target: {fileID: 4307184086453005727, guid: e4361e7acd96d2745b0aaa3ad2db7c45, type: 3}
       propertyPath: m_Name
       value: PF_Polaroid_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971844248652355441, guid: e4361e7acd96d2745b0aaa3ad2db7c45, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: e4361e7acd96d2745b0aaa3ad2db7c45, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8659,7 +8791,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.469367e-39, y: -2.015625, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 2.9401496e-15}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -9447,6 +9579,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1418763591}
     m_Modifications:
+    - target: {fileID: 514927706874917009, guid: 4752678151785774aa51b12a23324b39, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4018451975733623416, guid: 4752678151785774aa51b12a23324b39, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.499998
@@ -9693,6 +9829,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9143379018124313514, guid: d3013d9fe41ec9d4e8163ec6559f6ad4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9781,6 +9921,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1132746291}
     m_Modifications:
+    - target: {fileID: 3466564076922936939, guid: 6667a4d22635f484dbd0b57ea8ff6404, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4018451975733623416, guid: 6667a4d22635f484dbd0b57ea8ff6404, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.499988
@@ -9846,6 +9990,10 @@ PrefabInstance:
     - target: {fileID: 4307184086453005727, guid: 8880f8a8ef4c9ed4895df52e5fcd0a27, type: 3}
       propertyPath: m_Name
       value: PF_Polaroid_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971844248652355441, guid: 8880f8a8ef4c9ed4895df52e5fcd0a27, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: 8880f8a8ef4c9ed4895df52e5fcd0a27, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10225,6 +10373,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9143379018124313514, guid: d3013d9fe41ec9d4e8163ec6559f6ad4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10316,6 +10468,10 @@ PrefabInstance:
     - target: {fileID: 4307184086453005727, guid: f8795fae682564d4e9f4584ee466b87b, type: 3}
       propertyPath: m_Name
       value: PF_Poster_03 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971844248652355441, guid: f8795fae682564d4e9f4584ee466b87b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: f8795fae682564d4e9f4584ee466b87b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10652,6 +10808,10 @@ PrefabInstance:
     - target: {fileID: 4307184086453005727, guid: 9487f8d127c0ede469493027d5f6abae, type: 3}
       propertyPath: m_Name
       value: PF_Poster_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971844248652355441, guid: 9487f8d127c0ede469493027d5f6abae, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: 9487f8d127c0ede469493027d5f6abae, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11242,6 +11402,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_Letter_04
       objectReference: {fileID: 0}
+    - target: {fileID: 7971844248652355441, guid: 976e39273f0451149afff6db9f67bdba, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: 976e39273f0451149afff6db9f67bdba, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.1809998
@@ -11639,6 +11803,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_CeilingPipes_Light_02 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 9026771436748596662, guid: da46bd3c66aa9484b907e3b766cf5dc4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11776,6 +11944,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5217508361011821277, guid: 8d7d5cdfa9147f946ad40a399679b009, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11794,6 +11966,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2027798360}
     m_Modifications:
+    - target: {fileID: 3203104628794127306, guid: 38441f06152f9494bbb882a5ffa55b5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4025578179378163837, guid: 38441f06152f9494bbb882a5ffa55b5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4094670302787483356, guid: 38441f06152f9494bbb882a5ffa55b5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4940069851554727516, guid: 38441f06152f9494bbb882a5ffa55b5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5227414268901906338, guid: 38441f06152f9494bbb882a5ffa55b5d, type: 3}
       propertyPath: m_Name
       value: PF_Chest_01
@@ -11837,6 +12025,10 @@ PrefabInstance:
     - target: {fileID: 5713249328356679503, guid: 38441f06152f9494bbb882a5ffa55b5d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5978106056806935758, guid: 38441f06152f9494bbb882a5ffa55b5d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11936,6 +12128,14 @@ PrefabInstance:
       value: PF_Shelf_02 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1220598517231043397, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4352530178604100203, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440268566667768421, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -12354,7 +12554,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 7.7371252e+25, y: 4.7019774e-38, z: 1.3743895e+11, w: 2.3509887e-38}
+  m_BoundingSphereOverride: {x: 2.7105054e-20, y: 2.75612e-40, z: 5.105e-42, w: NaN}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -12752,6 +12952,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_CeilingPipes_Light_02 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 9026771436748596662, guid: da46bd3c66aa9484b907e3b766cf5dc4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12770,6 +12974,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1132746291}
     m_Modifications:
+    - target: {fileID: 3466564076922936939, guid: 6667a4d22635f484dbd0b57ea8ff6404, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4018451975733623416, guid: 6667a4d22635f484dbd0b57ea8ff6404, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.4999876
@@ -13210,6 +13418,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1418763591}
     m_Modifications:
+    - target: {fileID: 514927706874917009, guid: 4752678151785774aa51b12a23324b39, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4018451975733623416, guid: 4752678151785774aa51b12a23324b39, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.499998
@@ -13619,6 +13831,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_CeilingPipes_Light_01 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 9026771436748596662, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13632,6 +13848,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1132746291}
     m_Modifications:
+    - target: {fileID: 514927706874917009, guid: 4752678151785774aa51b12a23324b39, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4018451975733623416, guid: 4752678151785774aa51b12a23324b39, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.500007
@@ -13788,6 +14008,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1418763591}
     m_Modifications:
+    - target: {fileID: 514927706874917009, guid: 4752678151785774aa51b12a23324b39, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4018451975733623416, guid: 4752678151785774aa51b12a23324b39, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.500006
@@ -13850,6 +14074,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 860551872}
     m_Modifications:
+    - target: {fileID: 1111664704509998181, guid: bc05a6c3822acf64e9d0e7a7ed73bcf4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1473030776131559378, guid: bc05a6c3822acf64e9d0e7a7ed73bcf4, type: 3}
       propertyPath: 'm_Materials.Array.data[3]'
       value: 
@@ -14139,7 +14367,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 3.67342e-40, y: -1.7014118e+38, z: 56983548, w: 9.713252e-11}
+  m_BoundingSphereOverride: {x: 0, y: 8.8388e-41, z: 4.5916e-41, w: 6.3250305e+28}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -14631,9 +14859,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1132746291}
     m_Modifications:
+    - target: {fileID: 2055969841074646190, guid: dacf05b3012d4f64c9d89abaaf8847af, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4924621485462914595, guid: dacf05b3012d4f64c9d89abaaf8847af, type: 3}
       propertyPath: m_Name
       value: PF_Paintbrush_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4924621485462914595, guid: dacf05b3012d4f64c9d89abaaf8847af, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8719647032213403409, guid: dacf05b3012d4f64c9d89abaaf8847af, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14696,6 +14932,10 @@ PrefabInstance:
     - target: {fileID: 4307184086453005727, guid: 9a432e117ea5b0447b75396948eef706, type: 3}
       propertyPath: m_Name
       value: PF_Poster_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971844248652355441, guid: 9a432e117ea5b0447b75396948eef706, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: 9a432e117ea5b0447b75396948eef706, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14978,7 +15218,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.3632e-41, y: -1.0842353e-19, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 2.3693558e-38, y: -1.1375273e+30, z: 8.21e-43, w: 5.76e-43}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -14995,6 +15235,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 860551872}
     m_Modifications:
+    - target: {fileID: 611873512177434149, guid: ef4b78a575367aa4792d2ffbce442b3f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1594166203698256125, guid: ef4b78a575367aa4792d2ffbce442b3f, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.4487143
@@ -15038,6 +15282,14 @@ PrefabInstance:
     - target: {fileID: 4687833842921729405, guid: ef4b78a575367aa4792d2ffbce442b3f, type: 3}
       propertyPath: m_Name
       value: PF_Case_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4687833842921729405, guid: ef4b78a575367aa4792d2ffbce442b3f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6279205052937953733, guid: ef4b78a575367aa4792d2ffbce442b3f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15395,7 +15647,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 3.26016e-39, y: 3.67342e-40, z: 8.2652e-40, w: 9.1835e-41}
+  m_BoundingSphereOverride: {x: 6.9776278e+22, y: 2.4810396e+27, z: 7.140484e+31, w: 6.271147e-39}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -15576,6 +15828,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1132746291}
     m_Modifications:
+    - target: {fileID: 3466564076922936939, guid: 6667a4d22635f484dbd0b57ea8ff6404, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4018451975733623416, guid: 6667a4d22635f484dbd0b57ea8ff6404, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.5
@@ -16212,6 +16468,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1132746291}
     m_Modifications:
+    - target: {fileID: 514927706874917009, guid: 4752678151785774aa51b12a23324b39, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4018451975733623416, guid: 4752678151785774aa51b12a23324b39, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.4999976
@@ -17216,6 +17476,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_CeilingPipes_Light_01 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 9026771436748596662, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17439,6 +17703,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 114684435}
     m_Modifications:
+    - target: {fileID: 3139445869610232053, guid: 998db9c49936cc04aa9645c600ff4d81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5303473164179108937, guid: 998db9c49936cc04aa9645c600ff4d81, type: 3}
       propertyPath: m_LocalPosition.x
       value: -29.491
@@ -17483,6 +17751,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_ClothesRail_03
       objectReference: {fileID: 0}
+    - target: {fileID: 5923545221668920235, guid: 998db9c49936cc04aa9645c600ff4d81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17501,9 +17773,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1132746291}
     m_Modifications:
+    - target: {fileID: 2055969841074646190, guid: 98cb69f19e6dac24c91cf9148b1d9c92, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4924621485462914595, guid: 98cb69f19e6dac24c91cf9148b1d9c92, type: 3}
       propertyPath: m_Name
       value: PF_Paint_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4924621485462914595, guid: 98cb69f19e6dac24c91cf9148b1d9c92, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8719647032213403409, guid: 98cb69f19e6dac24c91cf9148b1d9c92, type: 3}
       propertyPath: m_LocalScale.x
@@ -18075,6 +18355,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1132746291}
     m_Modifications:
+    - target: {fileID: 3466564076922936939, guid: 6667a4d22635f484dbd0b57ea8ff6404, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4018451975733623416, guid: 6667a4d22635f484dbd0b57ea8ff6404, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.499995
@@ -18137,6 +18421,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1132746291}
     m_Modifications:
+    - target: {fileID: 3466564076922936939, guid: 6667a4d22635f484dbd0b57ea8ff6404, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4018451975733623416, guid: 6667a4d22635f484dbd0b57ea8ff6404, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.5000067
@@ -18377,7 +18665,7 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 0.5529412, g: 1, b: 0.7176471, a: 1}
-  m_Intensity: 2.7852113
+  m_Intensity: 2.387324
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -18422,7 +18710,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 2.3509887e-38, w: -2.3063356e+18}
+  m_BoundingSphereOverride: {x: 8.21e-43, y: 2.73e-43, z: 0, w: -1.1174023e+30}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -19002,6 +19290,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_Letter_02
       objectReference: {fileID: 0}
+    - target: {fileID: 7971844248652355441, guid: 22816e2d54e65c648b4dbc4a2f189211, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: 22816e2d54e65c648b4dbc4a2f189211, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.4639997
@@ -19238,7 +19530,7 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 0, g: 0.9490196, b: 1, a: 1}
-  m_Intensity: 0.8801194
+  m_Intensity: 0.39788735
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -19283,7 +19575,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.4785518e-38, y: 1.9055865e-38, z: 3.67342e-40, w: 2.387723e-39}
+  m_BoundingSphereOverride: {x: 80.34257, y: 0, z: 3.9938227e+24, w: NaN}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -19303,6 +19595,18 @@ PrefabInstance:
     - target: {fileID: 2767157413652861554, guid: 788f3423ce2abdb43be72d5bf38ef75f, type: 3}
       propertyPath: m_Name
       value: PF_WoodDebris_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2767157413652861554, guid: 788f3423ce2abdb43be72d5bf38ef75f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5601640596572461659, guid: 788f3423ce2abdb43be72d5bf38ef75f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6012513088813179065, guid: 788f3423ce2abdb43be72d5bf38ef75f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 7778729903051471958, guid: 788f3423ce2abdb43be72d5bf38ef75f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19410,6 +19714,10 @@ PrefabInstance:
     - target: {fileID: 8032476272702080558, guid: da46bd3c66aa9484b907e3b766cf5dc4, type: 3}
       propertyPath: m_Name
       value: PF_CeilingPipes_Light_02 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9026771436748596662, guid: da46bd3c66aa9484b907e3b766cf5dc4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19621,6 +19929,10 @@ PrefabInstance:
     - target: {fileID: 4307184086453005727, guid: f8795fae682564d4e9f4584ee466b87b, type: 3}
       propertyPath: m_Name
       value: PF_Poster_03 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971844248652355441, guid: f8795fae682564d4e9f4584ee466b87b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: f8795fae682564d4e9f4584ee466b87b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19939,8 +20251,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 0
-  m_Color: {r: 1, g: 0.5124423, b: 0.3820755, a: 1}
-  m_Intensity: 90.909744
+  m_Color: {r: 0.21176471, g: 1, b: 0.5019608, a: 1}
+  m_Intensity: 50.505413
   m_Range: 3.9588542
   m_SpotAngle: 65.20312
   m_InnerSpotAngle: 21.80208
@@ -19985,7 +20297,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.8e-43, y: 0, z: 9.1835e-41, w: 6.979499e-39}
+  m_BoundingSphereOverride: {x: 0, y: 2.3509887e-38, z: 0.0000000018773108, w: 0.0000000037252903}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -20917,6 +21229,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_Polaroid_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7971844248652355441, guid: 8880f8a8ef4c9ed4895df52e5fcd0a27, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: 8880f8a8ef4c9ed4895df52e5fcd0a27, type: 3}
       propertyPath: m_LocalPosition.x
       value: -33.99172
@@ -21470,7 +21786,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 2.7376664e+20, y: 4.4628077e+30, z: 7.27084e+31, w: 0.23774107}
+  m_BoundingSphereOverride: {x: 0, y: NaN, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -21492,6 +21808,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1418763591}
     m_Modifications:
+    - target: {fileID: 3466564076922936939, guid: 6667a4d22635f484dbd0b57ea8ff6404, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4018451975733623416, guid: 6667a4d22635f484dbd0b57ea8ff6404, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.4999952
@@ -21698,6 +22018,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_Poster_03 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7971844248652355441, guid: f8795fae682564d4e9f4584ee466b87b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: f8795fae682564d4e9f4584ee466b87b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.090275
@@ -21831,6 +22155,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1132746291}
     m_Modifications:
+    - target: {fileID: 514927706874917009, guid: 4752678151785774aa51b12a23324b39, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4018451975733623416, guid: 4752678151785774aa51b12a23324b39, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.499998
@@ -22330,6 +22658,14 @@ PrefabInstance:
       value: PF_Shelf_02 (2)
       objectReference: {fileID: 0}
     - target: {fileID: 1220598517231043397, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4352530178604100203, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440268566667768421, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -23390,6 +23726,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 1473030776131559378, guid: bc05a6c3822acf64e9d0e7a7ed73bcf4, type: 3}
+      propertyPath: 'm_Materials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9ba84a580815c7c44a940f4a5dc379aa, type: 2}
     - target: {fileID: 2461642215645281323, guid: bc05a6c3822acf64e9d0e7a7ed73bcf4, type: 3}
       propertyPath: m_Name
       value: PF_BigProjector_01
@@ -23855,8 +24195,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 2
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_Intensity: 2.6919117
+  m_Color: {r: 0.21176471, g: 1, b: 0.5019608, a: 1}
+  m_Intensity: 0.7957747
   m_Range: 4.96
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -23901,7 +24241,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 7.71463e+31, y: 6.7125833e+22, z: 1.7077718e+19, w: 2.9392982e+29}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 5.7546067e+21}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -24141,7 +24481,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 1.3958644e+10, z: 3015.1533, w: 7.564175e+28}
+  m_BoundingSphereOverride: {x: 0.00000016986594, y: 0.000010561753, z: 8.3450963e-10, w: 1.1693484e-19}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -24708,6 +25048,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1132746291}
     m_Modifications:
+    - target: {fileID: 514927706874917009, guid: 4752678151785774aa51b12a23324b39, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4018451975733623416, guid: 4752678151785774aa51b12a23324b39, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.500006
@@ -24773,6 +25117,10 @@ PrefabInstance:
     - target: {fileID: 4307184086453005727, guid: adafd9a8a23ad324b94d446f57cdd6a9, type: 3}
       propertyPath: m_Name
       value: PF_Polaroid_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971844248652355441, guid: adafd9a8a23ad324b94d446f57cdd6a9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: adafd9a8a23ad324b94d446f57cdd6a9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -25541,7 +25889,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 2.3510604e-38, z: 2.7264e-41, w: 8.5558e-41}
+  m_BoundingSphereOverride: {x: 1.5046328e-36, y: 6.3108872e-30, z: 2.3509887e-38, w: 4.5918e-41}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -26004,6 +26352,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1132746291}
     m_Modifications:
+    - target: {fileID: 3466564076922936939, guid: 6667a4d22635f484dbd0b57ea8ff6404, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4018451975733623416, guid: 6667a4d22635f484dbd0b57ea8ff6404, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.4999957
@@ -26280,6 +26632,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_Poster_03 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7971844248652355441, guid: f8795fae682564d4e9f4584ee466b87b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: f8795fae682564d4e9f4584ee466b87b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -31.644958
@@ -26341,6 +26697,14 @@ PrefabInstance:
     - target: {fileID: 1220598517231043397, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
       propertyPath: m_Name
       value: PF_Shelf_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4352530178604100203, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440268566667768421, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6922506771305217638, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -26817,6 +27181,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1132746291}
     m_Modifications:
+    - target: {fileID: 514927706874917009, guid: 4752678151785774aa51b12a23324b39, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4018451975733623416, guid: 4752678151785774aa51b12a23324b39, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.4999933
@@ -26879,6 +27247,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1132746291}
     m_Modifications:
+    - target: {fileID: 514927706874917009, guid: 4752678151785774aa51b12a23324b39, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4018451975733623416, guid: 4752678151785774aa51b12a23324b39, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.499998
@@ -27206,6 +27578,10 @@ PrefabInstance:
     - target: {fileID: 8032476272702080558, guid: da46bd3c66aa9484b907e3b766cf5dc4, type: 3}
       propertyPath: m_Name
       value: PF_CeilingPipes_Light_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 9026771436748596662, guid: da46bd3c66aa9484b907e3b766cf5dc4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -27985,6 +28361,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_CeilingPipes_Light_01 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 9026771436748596662, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -28664,7 +29044,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 2.112216e-39, y: 9.1835e-41, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1.09002504e+27, y: 1.69325e+22, z: 1.9204577e+31, w: 0.0009095581}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -29015,7 +29395,7 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 0, g: 0.9490196, b: 1, a: 1}
-  m_Intensity: 5.2697153
+  m_Intensity: 0.7957747
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -29060,7 +29440,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.4785518e-38, y: 1.9055865e-38, z: 3.67342e-40, w: 2.387723e-39}
+  m_BoundingSphereOverride: {x: 5.00555e-20, y: 7.34789e-40, z: 5.793e-42, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -29415,6 +29795,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_CeilingPipes_Light_02 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 9026771436748596662, guid: da46bd3c66aa9484b907e3b766cf5dc4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -29656,7 +30040,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 9.1835e-41, y: 5.1134013e-37, z: 3.811173e-39, w: 7.34684e-40}
+  m_BoundingSphereOverride: {x: 1.0947097e+27, y: 0.0000000023316258, z: 1.3555853e-19, w: 6.209108e+22}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -29860,9 +30244,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2537102388267028619, guid: d38fc9cd96c0d774c80675558ef60f6d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4687833842921729405, guid: d38fc9cd96c0d774c80675558ef60f6d, type: 3}
       propertyPath: m_Name
       value: PF_StorageUnitBackstage_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4687833842921729405, guid: d38fc9cd96c0d774c80675558ef60f6d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803433227129995856, guid: d38fc9cd96c0d774c80675558ef60f6d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7301303711069717791, guid: d38fc9cd96c0d774c80675558ef60f6d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7756247922614994046, guid: d38fc9cd96c0d774c80675558ef60f6d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -29882,9 +30286,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1132746291}
     m_Modifications:
+    - target: {fileID: 2055969841074646190, guid: dacf05b3012d4f64c9d89abaaf8847af, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4924621485462914595, guid: dacf05b3012d4f64c9d89abaaf8847af, type: 3}
       propertyPath: m_Name
       value: PF_Paintbrush_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4924621485462914595, guid: dacf05b3012d4f64c9d89abaaf8847af, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8719647032213403409, guid: dacf05b3012d4f64c9d89abaaf8847af, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30027,6 +30439,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 1473030776131559378, guid: bc05a6c3822acf64e9d0e7a7ed73bcf4, type: 3}
+      propertyPath: 'm_Materials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9ba84a580815c7c44a940f4a5dc379aa, type: 2}
     - target: {fileID: 2461642215645281323, guid: bc05a6c3822acf64e9d0e7a7ed73bcf4, type: 3}
       propertyPath: m_Name
       value: PF_BigProjector_01
@@ -30171,9 +30587,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1132746291}
     m_Modifications:
+    - target: {fileID: 2055969841074646190, guid: dacf05b3012d4f64c9d89abaaf8847af, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4924621485462914595, guid: dacf05b3012d4f64c9d89abaaf8847af, type: 3}
       propertyPath: m_Name
       value: PF_Paintbrush_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4924621485462914595, guid: dacf05b3012d4f64c9d89abaaf8847af, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8719647032213403409, guid: dacf05b3012d4f64c9d89abaaf8847af, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30238,6 +30662,14 @@ PrefabInstance:
       value: PF_Shelf_02
       objectReference: {fileID: 0}
     - target: {fileID: 1220598517231043397, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4352530178604100203, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440268566667768421, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -30446,6 +30878,14 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 4352530178604100203, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440268566667768421, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5614949558707997856, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -30578,6 +31018,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1418763591}
     m_Modifications:
+    - target: {fileID: 3466564076922936939, guid: 6667a4d22635f484dbd0b57ea8ff6404, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4018451975733623416, guid: 6667a4d22635f484dbd0b57ea8ff6404, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.499988
@@ -30938,7 +31382,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.4785518e-38, y: 1.9055865e-38, z: 3.67342e-40, w: 2.387723e-39}
+  m_BoundingSphereOverride: {x: 1.3555853e-19, y: 2.7454022e+20, z: 1.5788372e-19, w: 1.3555853e-19}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -30999,6 +31443,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 947707501010304980, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: 'm_Materials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9ba84a580815c7c44a940f4a5dc379aa, type: 2}
     - target: {fileID: 1279705953135492882, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -31156,6 +31604,14 @@ PrefabInstance:
     - target: {fileID: 3995965919922752556, guid: c22b557b4654670439e0f5c8ff9ffa35, type: 3}
       propertyPath: m_Name
       value: PF_Stool_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995965919922752556, guid: c22b557b4654670439e0f5c8ff9ffa35, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7226735530899542632, guid: c22b557b4654670439e0f5c8ff9ffa35, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -31538,7 +31994,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.191e-42, y: -3.435974e+10, z: 2.2229886e+37, w: -1.6675464e-16}
+  m_BoundingSphereOverride: {x: 2.7105054e-20, y: 1.83776e-40, z: 4.805e-42, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -31840,6 +32296,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1418763591}
     m_Modifications:
+    - target: {fileID: 514927706874917009, guid: 4752678151785774aa51b12a23324b39, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4018451975733623416, guid: 4752678151785774aa51b12a23324b39, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.5000057
@@ -32083,6 +32543,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1132746291}
     m_Modifications:
+    - target: {fileID: 514927706874917009, guid: 4752678151785774aa51b12a23324b39, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4018451975733623416, guid: 4752678151785774aa51b12a23324b39, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.5000067
@@ -32648,6 +33112,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 947707501010304980, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: 'm_Materials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9ba84a580815c7c44a940f4a5dc379aa, type: 2}
     - target: {fileID: 1279705953135492882, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -32734,9 +33202,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2263294059210984824, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3433282936956142881, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
       propertyPath: m_Name
       value: PF_HeadProjector_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314833327542165888, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869898844114638987, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019393250848935231, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -33080,9 +33564,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1117460fbf05f7f4fa2ae865f239135b, type: 2}
     - target: {fileID: 8032476272702080558, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: m_Name
       value: PF_CeilingPipes_Light_01 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9026771436748596662, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -33182,6 +33674,14 @@ PrefabInstance:
       value: PF_Shelf_02 (4)
       objectReference: {fileID: 0}
     - target: {fileID: 1220598517231043397, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4352530178604100203, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440268566667768421, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -34052,6 +34552,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_Stool_01
       objectReference: {fileID: 0}
+    - target: {fileID: 3995965919922752556, guid: c22b557b4654670439e0f5c8ff9ffa35, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7226735530899542632, guid: c22b557b4654670439e0f5c8ff9ffa35, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -34373,7 +34881,7 @@ Light:
   m_BounceIntensity: 3
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 2.3509887e-38, w: -2.3063356e+18}
+  m_BoundingSphereOverride: {x: 0, y: 1e-45, z: 1e-45, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -34434,6 +34942,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 947707501010304980, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: 'm_Materials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9ba84a580815c7c44a940f4a5dc379aa, type: 2}
     - target: {fileID: 1279705953135492882, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -35265,7 +35777,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 2.3265834e-35, z: 0, w: 1e-45}
+  m_BoundingSphereOverride: {x: 1.469367e-39, y: -2.015625, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -35506,7 +36018,7 @@ Transform:
   m_GameObject: {fileID: 1794001373}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.49, y: 0.67999995, z: 5.868}
+  m_LocalPosition: {x: 12.74, y: 0.67999995, z: 5.868}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -35665,7 +36177,7 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_Intensity: 10.05387
+  m_Intensity: 0.39788735
   m_Range: 4.96
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -35710,7 +36222,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.2513594e+20, y: 0, z: -2.434966e+23, w: 2.5642629e+14}
+  m_BoundingSphereOverride: {x: 7.8738093e+31, y: 1.1483328e+27, z: 7.5551766e+31, w: 0.0034849185}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -36085,7 +36597,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 3.4e-44, y: 6.3250305e+28, z: 3782.0867, w: 4.5442038e+30}
+  m_BoundingSphereOverride: {x: 2.7105054e-20, y: 6.42954e-40, z: 1.1876e-41, w: NaN}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -36445,9 +36957,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1132746291}
     m_Modifications:
+    - target: {fileID: 2055969841074646190, guid: dacf05b3012d4f64c9d89abaaf8847af, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4924621485462914595, guid: dacf05b3012d4f64c9d89abaaf8847af, type: 3}
       propertyPath: m_Name
       value: PF_Paintbrush_01 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4924621485462914595, guid: dacf05b3012d4f64c9d89abaaf8847af, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8719647032213403409, guid: dacf05b3012d4f64c9d89abaaf8847af, type: 3}
       propertyPath: m_LocalPosition.x
@@ -37100,7 +37620,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 7.9810225e-10, y: 1.3e-43, z: 0, w: 6e-45}
+  m_BoundingSphereOverride: {x: 0, y: 2.3509887e-38, z: 33555456, w: -0.0009765625}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -37231,6 +37751,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_CeilingPipes_Light_01 (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 9026771436748596662, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -37314,6 +37838,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1418763591}
     m_Modifications:
+    - target: {fileID: 3466564076922936939, guid: 6667a4d22635f484dbd0b57ea8ff6404, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4018451975733623416, guid: 6667a4d22635f484dbd0b57ea8ff6404, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.5
@@ -37672,6 +38200,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1132746291}
     m_Modifications:
+    - target: {fileID: 3466564076922936939, guid: 6667a4d22635f484dbd0b57ea8ff6404, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4018451975733623416, guid: 6667a4d22635f484dbd0b57ea8ff6404, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.4999952
@@ -37982,7 +38514,7 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 0.5518868, g: 1, b: 0.8777873, a: 1}
-  m_Intensity: 0.55007464
+  m_Intensity: 0.07957747
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -38027,7 +38559,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.224433e-39, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 1.7727741e+28, y: 6.976833e+22, z: 0.0000000023316256, w: 1.3555853e-19}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -38557,6 +39089,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 947707501010304980, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: 'm_Materials.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9ba84a580815c7c44a940f4a5dc379aa, type: 2}
     - target: {fileID: 1279705953135492882, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -38714,6 +39250,10 @@ PrefabInstance:
     - target: {fileID: 8032476272702080558, guid: da46bd3c66aa9484b907e3b766cf5dc4, type: 3}
       propertyPath: m_Name
       value: PF_CeilingPipes_Light_02 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9026771436748596662, guid: da46bd3c66aa9484b907e3b766cf5dc4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -39026,7 +39566,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 2.152e-42, y: 3.59e-43, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 4.7019774e-38, y: 6.3108872e-30, z: 2.3509887e-38, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -39252,6 +39792,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1418763591}
     m_Modifications:
+    - target: {fileID: 514927706874917009, guid: 4752678151785774aa51b12a23324b39, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4018451975733623416, guid: 4752678151785774aa51b12a23324b39, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.4999933
@@ -39314,6 +39858,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1418763591}
     m_Modifications:
+    - target: {fileID: 3466564076922936939, guid: 6667a4d22635f484dbd0b57ea8ff6404, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4018451975733623416, guid: 6667a4d22635f484dbd0b57ea8ff6404, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.4999957
@@ -39599,7 +40147,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 6.018715e-36, y: 7.9639e-41, z: 1.03853e-40, w: 1.435e-42}
+  m_BoundingSphereOverride: {x: 5.00555e-20, y: 9.194e-41, z: 1.00355e-40, w: 0.003479004}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -39919,7 +40467,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 7.9639e-41, y: 8.071e-42, z: 1.435e-42, w: 3.229e-42}
+  m_BoundingSphereOverride: {x: 5.23e-43, y: 2.817689e+20, z: -1.7070408e+38, w: -0.0072722062}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -40338,6 +40886,14 @@ PrefabInstance:
     - target: {fileID: 3995965919922752556, guid: c22b557b4654670439e0f5c8ff9ffa35, type: 3}
       propertyPath: m_Name
       value: PF_Stool_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995965919922752556, guid: c22b557b4654670439e0f5c8ff9ffa35, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7226735530899542632, guid: c22b557b4654670439e0f5c8ff9ffa35, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -41072,7 +41628,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 3427
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 2.3510604e-38, w: 3.35056e-40}
+  m_BoundingSphereOverride: {x: NaN, y: 2.001896e+32, z: 4.5916e-41, w: 9.1897e-41}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -41911,6 +42467,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2027798360}
     m_Modifications:
+    - target: {fileID: 396871619900796243, guid: 6871534827c3704458fb73aa959e2f14, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5977537095092787127, guid: 6871534827c3704458fb73aa959e2f14, type: 3}
       propertyPath: m_LocalPosition.x
       value: -12.607358
@@ -41955,6 +42515,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_Radio01
       objectReference: {fileID: 0}
+    - target: {fileID: 7480972886122257384, guid: 6871534827c3704458fb73aa959e2f14, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -41973,6 +42537,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1132746291}
     m_Modifications:
+    - target: {fileID: 514927706874917009, guid: 4752678151785774aa51b12a23324b39, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4018451975733623416, guid: 4752678151785774aa51b12a23324b39, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.499989
@@ -42255,9 +42823,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1132746291}
     m_Modifications:
+    - target: {fileID: 2055969841074646190, guid: 98cb69f19e6dac24c91cf9148b1d9c92, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4924621485462914595, guid: 98cb69f19e6dac24c91cf9148b1d9c92, type: 3}
       propertyPath: m_Name
       value: PF_Paint_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4924621485462914595, guid: 98cb69f19e6dac24c91cf9148b1d9c92, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8719647032213403409, guid: 98cb69f19e6dac24c91cf9148b1d9c92, type: 3}
       propertyPath: m_LocalScale.x
@@ -42614,6 +43190,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1132746291}
     m_Modifications:
+    - target: {fileID: 3466564076922936939, guid: 6667a4d22635f484dbd0b57ea8ff6404, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4018451975733623416, guid: 6667a4d22635f484dbd0b57ea8ff6404, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.4999914
@@ -42778,9 +43358,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2824727892826848063, guid: 76253cf4ca7cb6c488c4f2bf85fb3170, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4687833842921729405, guid: 76253cf4ca7cb6c488c4f2bf85fb3170, type: 3}
       propertyPath: m_Name
       value: PF_Case_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4687833842921729405, guid: 76253cf4ca7cb6c488c4f2bf85fb3170, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7950367572287940207, guid: 76253cf4ca7cb6c488c4f2bf85fb3170, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -43157,6 +43749,10 @@ PrefabInstance:
     - target: {fileID: 4307184086453005727, guid: f8795fae682564d4e9f4584ee466b87b, type: 3}
       propertyPath: m_Name
       value: PF_Poster_03 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971844248652355441, guid: f8795fae682564d4e9f4584ee466b87b, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: f8795fae682564d4e9f4584ee466b87b, type: 3}
       propertyPath: m_LocalPosition.x
