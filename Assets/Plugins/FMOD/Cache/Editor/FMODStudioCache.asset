@@ -1,46 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8423727960163797245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: FPV_FmodProject/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638857023255559928
-  FileSizes:
-  - Name: Desktop
-    Value: 1036
-  Exists: 1
---- !u!114 &-8255126302451059764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Ambiant.bank
-  m_EditorClassIdentifier: 
-  Path: FPV_FmodProject/Build/Desktop/Ambiant.bank
-  Name: Ambiant
-  StudioPath: bank:/Ambiant
-  lastModified: 638851763506471868
-  FileSizes:
-  - Name: Desktop
-    Value: 1499328
-  Exists: 1
---- !u!114 &-7298638540459083219
+--- !u!114 &-2514182724186576670
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -50,138 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambiant/Piano
+  m_Name: event:/Ambiant/RADIOS
   m_EditorClassIdentifier: 
-  Path: event:/Ambiant/Piano
+  Path: event:/Ambiant/RADIOS
   Guid:
-    Data1: 522429024
-    Data2: 1247434783
-    Data3: -1678374257
-    Data4: 1369346368
+    Data1: -822283510
+    Data2: 1278608027
+    Data3: 658535070
+    Data4: -1037227129
   Banks:
-  - {fileID: 9114343498915680935}
+  - {fileID: 1881058472508578972}
   IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 146976
---- !u!114 &-7223487971066838564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Musics.bank
-  m_EditorClassIdentifier: 
-  Path: FPV_FmodProject/Build/Desktop/Musics.bank
-  Name: Musics
-  StudioPath: bank:/Musics
-  lastModified: 638853575383802639
-  FileSizes:
-  - Name: Desktop
-    Value: 494
-  Exists: 1
---- !u!114 &-6635771469048436003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Player/Step
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Player/Step
-  Guid:
-    Data1: -1454251677
-    Data2: 1341746127
-    Data3: 92454055
-    Data4: 1903019612
-  Banks:
-  - {fileID: 7293557864363161157}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-4820392486234759060
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: FPV_FmodProject/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638851750835742209
-  FileSizes:
-  - Name: Desktop
-    Value: 912
-  Exists: 1
---- !u!114 &-4486521221394012019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Player/Step
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Player/Step
-  Guid:
-    Data1: -1454251677
-    Data2: 1341746127
-    Data3: 92454055
-    Data4: 1903019612
-  Banks:
-  - {fileID: 5706887857312195769}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &-2270743492041092712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Monster/MIMICS/Mimics TRIGGER
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Monster/MIMICS/Mimics TRIGGER
-  Guid:
-    Data1: 1649210801
-    Data2: 1112481574
-    Data3: -812603516
-    Data4: -80336325
-  Banks:
-  - {fileID: 5706887857312195769}
-  IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters: []
@@ -201,29 +40,83 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 1820093026848505179}
-  - {fileID: 8829275218688595092}
-  - {fileID: -8423727960163797245}
-  - {fileID: 2447146612615732400}
-  - {fileID: 5706887857312195769}
+  - {fileID: 6304385254640952042}
+  - {fileID: 1881058472508578972}
+  - {fileID: 5699296702892698232}
+  - {fileID: 1940774015738555458}
+  - {fileID: 5301412457560898030}
   EditorEvents:
-  - {fileID: 4842274508258384219}
-  - {fileID: 404036638437148411}
-  - {fileID: -4486521221394012019}
-  - {fileID: 8046162681260069834}
-  - {fileID: 8082196220171449635}
-  - {fileID: -2270743492041092712}
-  - {fileID: 2704324435013900933}
-  - {fileID: 6995241175767117795}
-  - {fileID: 5008663808899680261}
+  - {fileID: -2514182724186576670}
+  - {fileID: 4740328062010701229}
+  - {fileID: 1712799559015793276}
+  - {fileID: 8526287235178707039}
+  - {fileID: 1227237391563523761}
+  - {fileID: 660110954916810594}
+  - {fileID: 4228518098977998299}
+  - {fileID: 4249965183537771924}
+  - {fileID: 7875659635590423510}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -8423727960163797245}
+  - {fileID: 5699296702892698232}
   StringsBanks:
-  - {fileID: 1820093026848505179}
-  cacheTime: 638857052074780225
+  - {fileID: 6304385254640952042}
+  cacheTime: 638857213213682674
   cacheVersion: 131624
---- !u!114 &404036638437148411
+--- !u!114 &660110954916810594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Monster/MIMICS/Mimics TRIGGER
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Monster/MIMICS/Mimics TRIGGER
+  Guid:
+    Data1: 1649210801
+    Data2: 1112481574
+    Data3: -812603516
+    Data4: -80336325
+  Banks:
+  - {fileID: 5301412457560898030}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1227237391563523761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Step
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Step
+  Guid:
+    Data1: -1454251677
+    Data2: 1341746127
+    Data3: 92454055
+    Data4: 1903019612
+  Banks:
+  - {fileID: 5301412457560898030}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1712799559015793276
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -242,7 +135,7 @@ MonoBehaviour:
     Data3: -1678374257
     Data4: 1369346368
   Banks:
-  - {fileID: 8829275218688595092}
+  - {fileID: 1881058472508578972}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -250,7 +143,27 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 146976
---- !u!114 &1070121992018484207
+--- !u!114 &1881058472508578972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Ambiant.bank
+  m_EditorClassIdentifier: 
+  Path: FPV_FmodProject/Build/Desktop/Ambiant.bank
+  Name: Ambiant
+  StudioPath: bank:/Ambiant
+  lastModified: 638857213213642674
+  FileSizes:
+  - Name: Desktop
+    Value: 3772064
+  Exists: 1
+--- !u!114 &1940774015738555458
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -265,375 +178,12 @@ MonoBehaviour:
   Path: FPV_FmodProject/Build/Desktop/Musics.bank
   Name: Musics
   StudioPath: bank:/Musics
-  lastModified: 638851750835811756
+  lastModified: 638854636560732893
   FileSizes:
   - Name: Desktop
     Value: 494
   Exists: 1
---- !u!114 &1259629446839271884
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambiant/Whispers
-  m_EditorClassIdentifier: 
-  Path: event:/Ambiant/Whispers
-  Guid:
-    Data1: -441136062
-    Data2: 1166121787
-    Data3: 1090449075
-    Data4: -62117938
-  Banks:
-  - {fileID: 9114343498915680935}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 21064
---- !u!114 &1820093026848505179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: FPV_FmodProject/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638857052074740336
-  FileSizes:
-  - Name: Desktop
-    Value: 1308
-  Exists: 1
---- !u!114 &2447146612615732400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Musics.bank
-  m_EditorClassIdentifier: 
-  Path: FPV_FmodProject/Build/Desktop/Musics.bank
-  Name: Musics
-  StudioPath: bank:/Musics
-  lastModified: 638856969230353374
-  FileSizes:
-  - Name: Desktop
-    Value: 494
-  Exists: 1
---- !u!114 &2507752660864224238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: FPV_FmodProject/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 638853575383792605
-  FileSizes:
-  - Name: Desktop
-    Value: 1036
-  Exists: 1
---- !u!114 &2704324435013900933
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Monster/Spot Player
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Monster/Spot Player
-  Guid:
-    Data1: -945417783
-    Data2: 1300895346
-    Data3: 646620573
-    Data4: -1748959832
-  Banks:
-  - {fileID: 5706887857312195769}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &4746933716444386982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambiant/Piano
-  m_EditorClassIdentifier: 
-  Path: event:/Ambiant/Piano
-  Guid:
-    Data1: 522429024
-    Data2: 1247434783
-    Data3: -1678374257
-    Data4: 1369346368
-  Banks:
-  - {fileID: -8255126302451059764}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 125759
---- !u!114 &4842274508258384219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambiant/Whispers
-  m_EditorClassIdentifier: 
-  Path: event:/Ambiant/Whispers
-  Guid:
-    Data1: -441136062
-    Data2: 1166121787
-    Data3: 1090449075
-    Data4: -62117938
-  Banks:
-  - {fileID: 8829275218688595092}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 21064
---- !u!114 &5008663808899680261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Player/Death
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Player/Death
-  Guid:
-    Data1: 250323727
-    Data2: 1177972471
-    Data3: 553593984
-    Data4: -494077541
-  Banks:
-  - {fileID: 5706887857312195769}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &5706887857312195769
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX.bank
-  m_EditorClassIdentifier: 
-  Path: FPV_FmodProject/Build/Desktop/SFX.bank
-  Name: SFX
-  StudioPath: bank:/SFX
-  lastModified: 638857052074780225
-  FileSizes:
-  - Name: Desktop
-    Value: 181696
-  Exists: 1
---- !u!114 &5907295305770836799
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Player/Lamp/Lamp Flick
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Player/Lamp/Lamp Flick
-  Guid:
-    Data1: -912790834
-    Data2: 1241185614
-    Data3: -1141823357
-    Data4: 203142410
-  Banks:
-  - {fileID: 7293557864363161157}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &6769147869635055946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambiant/Whispers
-  m_EditorClassIdentifier: 
-  Path: event:/Ambiant/Whispers
-  Guid:
-    Data1: -441136062
-    Data2: 1166121787
-    Data3: 1090449075
-    Data4: -62117938
-  Banks:
-  - {fileID: -8255126302451059764}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 21064
---- !u!114 &6995241175767117795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Ambiant/RADIOS
-  m_EditorClassIdentifier: 
-  Path: event:/Ambiant/RADIOS
-  Guid:
-    Data1: -822283510
-    Data2: 1278608027
-    Data3: 658535070
-    Data4: -1037227129
-  Banks:
-  - {fileID: 8829275218688595092}
-  IsStream: 1
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &7256561144888839811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: FPV_FmodProject/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 638853575865620512
-  FileSizes:
-  - Name: Desktop
-    Value: 1062
-  Exists: 1
---- !u!114 &7293557864363161157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX.bank
-  m_EditorClassIdentifier: 
-  Path: FPV_FmodProject/Build/Desktop/SFX.bank
-  Name: SFX
-  StudioPath: bank:/SFX
-  lastModified: 638853575865620512
-  FileSizes:
-  - Name: Desktop
-    Value: 15552
-  Exists: 1
---- !u!114 &8046162681260069834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/SFX/Player/Lamp/Lamp Flick
-  m_EditorClassIdentifier: 
-  Path: event:/SFX/Player/Lamp/Lamp Flick
-  Guid:
-    Data1: -912790834
-    Data2: 1241185614
-    Data3: -1141823357
-    Data4: 203142410
-  Banks:
-  - {fileID: 5706887857312195769}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 1
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 0
---- !u!114 &8082196220171449635
+--- !u!114 &4228518098977998299
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -652,7 +202,7 @@ MonoBehaviour:
     Data3: 531320749
     Data4: -664268671
   Banks:
-  - {fileID: 5706887857312195769}
+  - {fileID: 5301412457560898030}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -660,7 +210,81 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
---- !u!114 &8485003931774457982
+--- !u!114 &4249965183537771924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Monster/Spot Player
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Monster/Spot Player
+  Guid:
+    Data1: -945417783
+    Data2: 1300895346
+    Data3: 646620573
+    Data4: -1748959832
+  Banks:
+  - {fileID: 5301412457560898030}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4740328062010701229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambiant/Whispers
+  m_EditorClassIdentifier: 
+  Path: event:/Ambiant/Whispers
+  Guid:
+    Data1: -441136062
+    Data2: 1166121787
+    Data3: 1090449075
+    Data4: -62117938
+  Banks:
+  - {fileID: 1881058472508578972}
+  IsStream: 1
+  Is3D: 1
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 21064
+--- !u!114 &5301412457560898030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: FPV_FmodProject/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX
+  lastModified: 638857213213682674
+  FileSizes:
+  - Name: Desktop
+    Value: 181696
+  Exists: 1
+--- !u!114 &5699296702892698232
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -675,12 +299,12 @@ MonoBehaviour:
   Path: FPV_FmodProject/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638851750835722259
+  lastModified: 638854636560722894
   FileSizes:
   - Name: Desktop
     Value: 1036
   Exists: 1
---- !u!114 &8829275218688595092
+--- !u!114 &6304385254640952042
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -690,17 +314,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Ambiant.bank
+  m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: 
-  Path: FPV_FmodProject/Build/Desktop/Ambiant.bank
-  Name: Ambiant
-  StudioPath: bank:/Ambiant
-  lastModified: 638857052074710425
+  Path: FPV_FmodProject/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 638857213213662684
   FileSizes:
   - Name: Desktop
-    Value: 3772064
+    Value: 1308
   Exists: 1
---- !u!114 &9114343498915680935
+--- !u!114 &7875659635590423510
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -709,14 +333,48 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Ambiant.bank
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Lamp/Lamp Flick
   m_EditorClassIdentifier: 
-  Path: FPV_FmodProject/Build/Desktop/Ambiant.bank
-  Name: Ambiant
-  StudioPath: bank:/Ambiant
-  lastModified: 638853575865607475
-  FileSizes:
-  - Name: Desktop
-    Value: 2145408
-  Exists: 1
+  Path: event:/SFX/Player/Lamp/Lamp Flick
+  Guid:
+    Data1: -912790834
+    Data2: 1241185614
+    Data3: -1141823357
+    Data4: 203142410
+  Banks:
+  - {fileID: 5301412457560898030}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8526287235178707039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Player/Death
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Player/Death
+  Guid:
+    Data1: 250323727
+    Data2: 1177972471
+    Data3: 553593984
+    Data4: -494077541
+  Banks:
+  - {fileID: 5301412457560898030}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
