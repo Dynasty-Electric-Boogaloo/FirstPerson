@@ -4,6 +4,7 @@ using DG.Tweening;
 using Player;
 using UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
@@ -57,14 +58,5 @@ public class CinematicSystem : MonoBehaviour
         instance.image.gameObject.SetActive(true);
     }
     
-    private static void EndGame()
-    {
-        if(!instance)
-            return;
-
-        instance.image.DOColor(Color.clear, 0);
-        instance.image.texture = null;
-        instance.image.DOColor(Color.black, 1);
-    }
     
 }
