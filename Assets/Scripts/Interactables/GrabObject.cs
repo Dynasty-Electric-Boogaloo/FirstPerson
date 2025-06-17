@@ -9,6 +9,8 @@ public class GrabObject : Interactable
 {
     [SerializeField] private LayerMask breakableLayers;
     [SerializeField] private float breakRadius = 0.2f;
+    [SerializeField] private Vector3 position;
+    [SerializeField] private Vector3 rotation;
     private Collider _collider;
     private Rigidbody _rigidbody;
     private bool _isThrown;
@@ -66,8 +68,10 @@ public class GrabObject : Interactable
     {
         Highlight(false);
         transform.SetParent(grabPoint, false);
-        transform.localPosition = Vector3.zero;
-        transform.localRotation = Quaternion.identity;
+        transform.localPosition = position;
+        var quaternion = transform.localRotation;
+        quaternion.eulerAngles = rotation;
+        transform.localRotation = quaternion;
         _collider.enabled = false;
         _rigidbody.constraints = RigidbodyConstraints.FreezeAll;
     }

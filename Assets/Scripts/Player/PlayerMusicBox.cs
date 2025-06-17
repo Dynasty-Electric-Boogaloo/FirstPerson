@@ -29,6 +29,7 @@ namespace Player
             if (PlayerData.PlayerInputs.Controls.UseMusicBox.WasPressedThisFrame())
                 SetMusicBox(!_isOnDisplay);
             
+            
             if(!_isOnDisplay)
                 return;
             
@@ -43,6 +44,7 @@ namespace Player
         public void SetMusicBox(bool setOn)
         {
             _isOnDisplay = setOn;
+            PlayerData.MusicBoxIsOut = setOn;
             musicBoxObject.gameObject.SetActive(setOn);
         }
 

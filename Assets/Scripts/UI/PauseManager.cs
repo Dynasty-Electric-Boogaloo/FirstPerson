@@ -1,3 +1,4 @@
+using Player;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -42,7 +43,7 @@ namespace UI
       
       public static void PauseGame(bool setPause, bool showMenu = true, bool forceLockMouse = true)
       {
-         if(instance == null)
+         if(instance == null || !PlayerRoot.GetRedLightUnlocked)
             return;
          
          if(instance.pausePanel && showMenu)

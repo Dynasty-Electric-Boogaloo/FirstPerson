@@ -31,6 +31,7 @@ namespace Player
 
         private void Update()
         {
+            PlayerData.Holding = _grabbedObject;
             if(PlayerData.Locked)
             {
                 UiManager.SetEmpty();
@@ -76,8 +77,8 @@ namespace Player
             if (!_grabbedObject)
                 return;
             
-            grabPoint.localPosition = Vector3.forward * (grabHoldOffset + _grabbedObject.GetBounds().extents.z);
-            grabHinge.localRotation = Quaternion.Euler(-PlayerData.CameraRotation.y, 0, 0);
+            //grabPoint.localPosition = Vector3.forward * (grabHoldOffset + _grabbedObject.GetBounds().extents.z);
+            //grabHinge.localRotation = Quaternion.Euler(-PlayerData.CameraRotation.y, 0, 0);
         }
 
         private void HandleGrabbed()
@@ -159,7 +160,9 @@ namespace Player
                 return;
             
             if(_playerMusicBox)
+            {
                 _playerMusicBox.SetMusicBox(false);
+            }
             
             grab.Grab(grabPoint);
             _grabbedObject = grab;

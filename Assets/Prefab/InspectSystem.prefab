@@ -251,7 +251,6 @@ GameObject:
   - component: {fileID: 7365950328068495174}
   - component: {fileID: 1411312602201055498}
   - component: {fileID: 4559983260918922197}
-  - component: {fileID: 869062564730898166}
   m_Layer: 28
   m_Name: Plane
   m_TagString: Untagged
@@ -327,28 +326,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &869062564730898166
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3213270204539656221}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &4665385060391769332
 GameObject:
   m_ObjectHideFlags: 0
@@ -929,10 +906,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '"Oh wow...this...this is useless..."'
+  m_text: "&&&&\xE0\xE0\xE0\xE0\xE0fr\xE0re\xE0\xE0"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c01c866329a20694b89a8cede29612bf, type: 2}
-  m_sharedMaterial: {fileID: -5398638826977842146, guid: c01c866329a20694b89a8cede29612bf, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9bc3113e9614e824bb9114c70b5d986e, type: 2}
+  m_sharedMaterial: {fileID: 2948462171646466665, guid: 9bc3113e9614e824bb9114c70b5d986e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -962,7 +939,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 2
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535

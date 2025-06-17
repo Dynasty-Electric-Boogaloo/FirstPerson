@@ -11,6 +11,8 @@ namespace Player
         [SerializeField] private Transform flashLightTransform;
         [SerializeField] private new Light light;
         [SerializeField] private Hud hud;
+        [SerializeField] private GameObject lightObject;
+        [SerializeField] private GameObject redLightObject;
         
         [Header("Variables")]
         [SerializeField] private float batteryMax;
@@ -63,6 +65,8 @@ namespace Player
                 _batteryManager = GetComponent<BatteryManager>();
 
             light.intensity = CurrentLightIntensity;
+            lightObject.SetActive(!_special);
+            redLightObject.SetActive(_special);
         }
 
         private void Update()
@@ -199,7 +203,10 @@ namespace Player
             if(!_batteryManager) 
                 return;
 
+            PlayerData.IsSpecialLight = !PlayerData.IsSpecialLight;
             _special = !_special;
+            lightObject.SetActive(!_special);
+            redLightObject.SetActive(_special);
             light.color =  light.color == lightColor ? specialLightColor : lightColor;
             
             if(hud)

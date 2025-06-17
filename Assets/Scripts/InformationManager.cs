@@ -15,7 +15,7 @@ public class InformationManager : MonoBehaviour
        if (Instance.tmpText)
            tmpText.text = "";
    }
-
+   
    private void OnDestroy()
    {
        if (Instance == this)

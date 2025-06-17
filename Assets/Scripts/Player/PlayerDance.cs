@@ -11,6 +11,7 @@ namespace Player
         [SerializeField] private float timeBetween = 1f;
         private Mimic _currentMimic; 
         private PlayerFeedback _playerFeedback;
+        private bool _alreadyDid;
 
         private void Start()
         {
@@ -20,6 +21,11 @@ namespace Player
         public void SetDancing( )
         {
             PlayerRoot.StartQte();
+            if (!_alreadyDid)
+            {
+                _alreadyDid = true;
+                InformationManager.SetText("Utiliser la touche [Espace] pour danser", 1);
+            }
         }
 
         public void SetQteResult(bool win)

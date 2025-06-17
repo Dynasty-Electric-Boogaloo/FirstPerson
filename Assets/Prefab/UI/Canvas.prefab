@@ -260,10 +260,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Objective : Find the three missing pieces of your music box'
+  m_text: "Objectif : Retrouver les trois morceau de la boite \xE0 musique disperc\xE9s
+    sur sc\xE8ne"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c01c866329a20694b89a8cede29612bf, type: 2}
-  m_sharedMaterial: {fileID: -5398638826977842146, guid: c01c866329a20694b89a8cede29612bf, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9bc3113e9614e824bb9114c70b5d986e, type: 2}
+  m_sharedMaterial: {fileID: 2948462171646466665, guid: 9bc3113e9614e824bb9114c70b5d986e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -776,8 +777,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Grab - E\nDestroy - A
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c01c866329a20694b89a8cede29612bf, type: 2}
-  m_sharedMaterial: {fileID: -5398638826977842146, guid: c01c866329a20694b89a8cede29612bf, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9bc3113e9614e824bb9114c70b5d986e, type: 2}
+  m_sharedMaterial: {fileID: 2948462171646466665, guid: 9bc3113e9614e824bb9114c70b5d986e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -893,6 +894,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _qteTarget: {fileID: 6404189793609057834}
   _qtePlayerImpulse: {fileID: 7890599251344063381}
+  winColor: {r: 0, g: 0, b: 0, a: 0}
+  looseColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &3611304979612742382
 GameObject:
   m_ObjectHideFlags: 0
@@ -1184,11 +1187,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "D\xE9placement - ZQSD\r\nToggle music box - C\r\nToggle flashlight - F\r\nReload
-    flashlight - R\r\nInteract - E\r\nThrow held object - Left click\r\nDance - Space"
+  m_text: "D\xE9placement - ZQSD\r\nOuvrir la boite \xE0 musique - C\r\nChanger de
+    lampe - F\r\nRecharger la lampe classique - R\r\nInteragir - E\r\nLancer un objet
+    - Clic Gauche\r"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: c01c866329a20694b89a8cede29612bf, type: 2}
-  m_sharedMaterial: {fileID: -5398638826977842146, guid: c01c866329a20694b89a8cede29612bf, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9bc3113e9614e824bb9114c70b5d986e, type: 2}
+  m_sharedMaterial: {fileID: 2948462171646466665, guid: 9bc3113e9614e824bb9114c70b5d986e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1212,7 +1216,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
+  m_fontSize: 32.8
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1563,8 +1567,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9198625184673471242}
-  - {fileID: 7592937345138342152}
   - {fileID: 6832117517871445702}
+  - {fileID: 7592937345138342152}
   - {fileID: 7481345740103927769}
   - {fileID: 1944329077205795559}
   - {fileID: 2232204712009067337}
@@ -1732,8 +1736,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9bc3113e9614e824bb9114c70b5d986e, type: 2}
+  m_sharedMaterial: {fileID: 2948462171646466665, guid: 9bc3113e9614e824bb9114c70b5d986e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
