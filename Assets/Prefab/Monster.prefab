@@ -10949,6 +10949,7 @@ GameObject:
   - component: {fileID: 6365327022629292588}
   - component: {fileID: 7354742177963990005}
   - component: {fileID: 6766313148343871119}
+  - component: {fileID: 3955976472522338697}
   m_Layer: 29
   m_Name: Monster
   m_TagString: Untagged
@@ -11171,6 +11172,31 @@ CapsuleCollider:
   m_Height: 2.175
   m_Direction: 1
   m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &3955976472522338697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8082506935737427434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e5695be090262e4ab7cedb3e869b909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  meshRenderer: {fileID: 9139685165375228773}
+  regularMaterialSet:
+    normal: {fileID: 2100000, guid: 86c2cda19cb76614eb1b4c6c6974c4bd, type: 2}
+    revealed: {fileID: 2100000, guid: 0d2d930f5715f2149a7f3a3e536005ec, type: 2}
+    awake: {fileID: 2100000, guid: 0d2d930f5715f2149a7f3a3e536005ec, type: 2}
+  isInfected: 1
+  showObject: 1
+  props: 1
+  maxTimeBeforeAlert: 15
+  checkPlayerRadius: 1
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &8173048216211448780
 GameObject:
   m_ObjectHideFlags: 0
@@ -12430,5 +12456,10 @@ PrefabInstance:
 --- !u!4 &7970671945639718922 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: af4efe094d1994e4e80b017a9cdc9e14, type: 3}
+  m_PrefabInstance: {fileID: 7572585731742996449}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &9139685165375228773 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: af4efe094d1994e4e80b017a9cdc9e14, type: 3}
   m_PrefabInstance: {fileID: 7572585731742996449}
   m_PrefabAsset: {fileID: 0}

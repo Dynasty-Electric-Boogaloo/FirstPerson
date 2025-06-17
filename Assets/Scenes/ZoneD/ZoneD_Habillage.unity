@@ -93,7 +93,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000004, guid: 27cc923397ff2b448a312956f11225bd, type: 2}
+  m_LightingDataAsset: {fileID: 112000004, guid: db0e52e54ae8b14439a7e62793917566, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 36ca72716a3a4064ca92a7c3f6476afa, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -589,7 +589,7 @@ PrefabInstance:
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 1117460fbf05f7f4fa2ae865f239135b, type: 2}
+      objectReference: {fileID: 2100000, guid: 7210ed90bff77714485da388c0b0626a, type: 2}
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
@@ -623,6 +623,10 @@ PrefabInstance:
     - target: {fileID: 4307184086453005727, guid: 976e39273f0451149afff6db9f67bdba, type: 3}
       propertyPath: m_Name
       value: PF_Letter_04
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971844248652355441, guid: 976e39273f0451149afff6db9f67bdba, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: 976e39273f0451149afff6db9f67bdba, type: 3}
       propertyPath: m_LocalPosition.x
@@ -725,7 +729,7 @@ PrefabInstance:
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 1117460fbf05f7f4fa2ae865f239135b, type: 2}
+      objectReference: {fileID: 2100000, guid: 7210ed90bff77714485da388c0b0626a, type: 2}
     - target: {fileID: 8032476272702080558, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: m_Name
       value: PF_CeilingPipes_Light_01 (18)
@@ -2385,7 +2389,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 9912
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 0, y: 3.6e-44, z: 0, w: -5.928e-41}
+  m_BoundingSphereOverride: {x: -3.1554447e-30, y: NaN, z: 1.6940658e-21, w: 8}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -2645,7 +2649,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 9912
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 2.7105054e-20, w: 2.75568e-40}
+  m_BoundingSphereOverride: {x: 1.1708733e-19, y: 1.209874e+25, z: 1.511571e-19, w: NaN}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -3733,7 +3737,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 9912
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 0.00087519555, y: 1.1693397e-19, z: 3574.8203, w: -1.0741367e-36}
+  m_BoundingSphereOverride: {x: 1.4582594e-19, y: 248.38057, z: 1.7888567e+22, w: NaN}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -4624,7 +4628,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 9912
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 0, y: -3.718172e+19, z: 6.7e-43, w: 9e-44}
+  m_BoundingSphereOverride: {x: 5.2e-42, y: 0, z: 0, w: 1e-45}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -4951,6 +4955,10 @@ PrefabInstance:
     - target: {fileID: 4307184086453005727, guid: 22816e2d54e65c648b4dbc4a2f189211, type: 3}
       propertyPath: m_Name
       value: PF_Letter_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971844248652355441, guid: 22816e2d54e65c648b4dbc4a2f189211, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: 22816e2d54e65c648b4dbc4a2f189211, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5604,6 +5612,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 27.877
       objectReference: {fileID: 0}
+    - target: {fileID: 4352530178604100203, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440268566667768421, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6922506771305217638, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20.907
@@ -5789,9 +5805,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2263294059210984824, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 3433282936956142881, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
       propertyPath: m_Name
       value: PF_HeadProjector_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6314833327542165888, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869898844114638987, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 9019393250848935231, guid: f35e3f538904d124587c5423ebcafc8c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6135,7 +6167,7 @@ PrefabInstance:
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 1117460fbf05f7f4fa2ae865f239135b, type: 2}
+      objectReference: {fileID: 2100000, guid: 7210ed90bff77714485da388c0b0626a, type: 2}
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
@@ -6209,7 +6241,7 @@ PrefabInstance:
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 1117460fbf05f7f4fa2ae865f239135b, type: 2}
+      objectReference: {fileID: 2100000, guid: 7210ed90bff77714485da388c0b0626a, type: 2}
     - target: {fileID: 8032476272702080558, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: m_Name
       value: PF_CeilingPipes_Light_01 (17)
@@ -6430,7 +6462,7 @@ PrefabInstance:
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 1117460fbf05f7f4fa2ae865f239135b, type: 2}
+      objectReference: {fileID: 2100000, guid: 7210ed90bff77714485da388c0b0626a, type: 2}
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
@@ -6741,6 +6773,14 @@ PrefabInstance:
     - target: {fileID: 2366027539186699917, guid: 2bb15af80f89c994293da221c8070241, type: 3}
       propertyPath: m_Name
       value: PF_CoatHanger_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 2366027539186699917, guid: 2bb15af80f89c994293da221c8070241, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2732230043070582648, guid: 2bb15af80f89c994293da221c8070241, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6279316492089895850, guid: 2bb15af80f89c994293da221c8070241, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7353,7 +7393,7 @@ PrefabInstance:
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 1117460fbf05f7f4fa2ae865f239135b, type: 2}
+      objectReference: {fileID: 2100000, guid: 7210ed90bff77714485da388c0b0626a, type: 2}
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
@@ -10524,7 +10564,7 @@ PrefabInstance:
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 1117460fbf05f7f4fa2ae865f239135b, type: 2}
+      objectReference: {fileID: 2100000, guid: 7210ed90bff77714485da388c0b0626a, type: 2}
     - target: {fileID: 8032476272702080558, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: m_Name
       value: PF_CeilingPipes_Light_01 (6)
@@ -10692,6 +10732,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3139445869610232053, guid: 998db9c49936cc04aa9645c600ff4d81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5303473164179108937, guid: 998db9c49936cc04aa9645c600ff4d81, type: 3}
       propertyPath: m_LocalPosition.x
       value: -61.597
@@ -10735,6 +10779,10 @@ PrefabInstance:
     - target: {fileID: 5923545221668920235, guid: 998db9c49936cc04aa9645c600ff4d81, type: 3}
       propertyPath: m_Name
       value: PF_ClothesRail_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923545221668920235, guid: 998db9c49936cc04aa9645c600ff4d81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11105,6 +11153,10 @@ PrefabInstance:
     - target: {fileID: 4307184086453005727, guid: eb6dcb6a6ae4f404abe131dcef9d9fe9, type: 3}
       propertyPath: m_Name
       value: PF_Letter_03 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971844248652355441, guid: eb6dcb6a6ae4f404abe131dcef9d9fe9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: eb6dcb6a6ae4f404abe131dcef9d9fe9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11875,6 +11927,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_Letter_04 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7971844248652355441, guid: 976e39273f0451149afff6db9f67bdba, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: 976e39273f0451149afff6db9f67bdba, type: 3}
       propertyPath: m_LocalPosition.x
       value: -20.67
@@ -12368,7 +12424,7 @@ PrefabInstance:
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 1117460fbf05f7f4fa2ae865f239135b, type: 2}
+      objectReference: {fileID: 2100000, guid: 7210ed90bff77714485da388c0b0626a, type: 2}
     - target: {fileID: 8032476272702080558, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: m_Name
       value: PF_CeilingPipes_Light_01 (20)
@@ -12790,7 +12846,7 @@ PrefabInstance:
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 1117460fbf05f7f4fa2ae865f239135b, type: 2}
+      objectReference: {fileID: 2100000, guid: 7210ed90bff77714485da388c0b0626a, type: 2}
     - target: {fileID: 8032476272702080558, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: m_Name
       value: PF_CeilingPipes_Light_01 (06)
@@ -13222,7 +13278,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 9912
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 5.7023e-41, y: 2.524355e-29, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 9.1897e-41}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -14012,7 +14068,7 @@ PrefabInstance:
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 1117460fbf05f7f4fa2ae865f239135b, type: 2}
+      objectReference: {fileID: 2100000, guid: 7210ed90bff77714485da388c0b0626a, type: 2}
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
@@ -14182,6 +14238,10 @@ PrefabInstance:
     - target: {fileID: 4307184086453005727, guid: 976e39273f0451149afff6db9f67bdba, type: 3}
       propertyPath: m_Name
       value: PF_Letter_04 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971844248652355441, guid: 976e39273f0451149afff6db9f67bdba, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: 976e39273f0451149afff6db9f67bdba, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14396,7 +14456,7 @@ PrefabInstance:
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 1117460fbf05f7f4fa2ae865f239135b, type: 2}
+      objectReference: {fileID: 2100000, guid: 7210ed90bff77714485da388c0b0626a, type: 2}
     - target: {fileID: 8032476272702080558, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: m_Name
       value: PF_CeilingPipes_Light_01 (16)
@@ -14772,7 +14832,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 9912
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 1.435e-42, y: 1.435e-42, z: 1.53e-43, w: 0}
+  m_BoundingSphereOverride: {x: 4.317862e-19, y: 0, z: 0, w: NaN}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -15476,7 +15536,7 @@ PrefabInstance:
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 1117460fbf05f7f4fa2ae865f239135b, type: 2}
+      objectReference: {fileID: 2100000, guid: 7210ed90bff77714485da388c0b0626a, type: 2}
     - target: {fileID: 8032476272702080558, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: m_Name
       value: PF_CeilingPipes_Light_01 (1)
@@ -15498,6 +15558,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 384294948767848873, guid: 00c72be99d60f334a99087ea13585b77, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4307184086453005727, guid: 00c72be99d60f334a99087ea13585b77, type: 3}
       propertyPath: m_Name
       value: PF_Cable_Floor_01
@@ -16276,7 +16340,7 @@ PrefabInstance:
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 1117460fbf05f7f4fa2ae865f239135b, type: 2}
+      objectReference: {fileID: 2100000, guid: 7210ed90bff77714485da388c0b0626a, type: 2}
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
@@ -17493,6 +17557,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 17.989
       objectReference: {fileID: 0}
+    - target: {fileID: 4352530178604100203, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440268566667768421, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6922506771305217638, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -19.072
@@ -17798,7 +17870,7 @@ PrefabInstance:
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 1117460fbf05f7f4fa2ae865f239135b, type: 2}
+      objectReference: {fileID: 2100000, guid: 7210ed90bff77714485da388c0b0626a, type: 2}
     - target: {fileID: 8032476272702080558, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: m_Name
       value: PF_CeilingPipes_Light_01 (12)
@@ -18130,7 +18202,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 9912
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 1.7077761e+19, y: 1.0667843e+12, z: 1.1319237e+21, w: 7.007149e+22}
+  m_BoundingSphereOverride: {x: 2.8399125e-29, y: 0, z: 0, w: 9.1897e-41}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -18436,6 +18508,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_Letter_03
       objectReference: {fileID: 0}
+    - target: {fileID: 7971844248652355441, guid: eb6dcb6a6ae4f404abe131dcef9d9fe9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: eb6dcb6a6ae4f404abe131dcef9d9fe9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -23.433254
@@ -18710,6 +18786,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3139445869610232053, guid: 998db9c49936cc04aa9645c600ff4d81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 5303473164179108937, guid: 998db9c49936cc04aa9645c600ff4d81, type: 3}
       propertyPath: m_LocalPosition.x
       value: -60.36956
@@ -18753,6 +18833,10 @@ PrefabInstance:
     - target: {fileID: 5923545221668920235, guid: 998db9c49936cc04aa9645c600ff4d81, type: 3}
       propertyPath: m_Name
       value: PF_ClothesRail_03 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5923545221668920235, guid: 998db9c49936cc04aa9645c600ff4d81, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20067,6 +20151,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_Shelf_02
       objectReference: {fileID: 0}
+    - target: {fileID: 4352530178604100203, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440268566667768421, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 6922506771305217638, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16.777
@@ -21080,9 +21172,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3897430457336116595, guid: 7eaf17aba37c74944a7640f1230f27a9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4687833842921729405, guid: 7eaf17aba37c74944a7640f1230f27a9, type: 3}
       propertyPath: m_Name
       value: PF_DrawerMid_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4687833842921729405, guid: 7eaf17aba37c74944a7640f1230f27a9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22682,6 +22782,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_Letter_02 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7971844248652355441, guid: 22816e2d54e65c648b4dbc4a2f189211, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: 22816e2d54e65c648b4dbc4a2f189211, type: 3}
       propertyPath: m_LocalPosition.x
       value: -32.62409
@@ -23098,7 +23202,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1036990316
 Transform:
@@ -25004,7 +25108,7 @@ PrefabInstance:
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 1117460fbf05f7f4fa2ae865f239135b, type: 2}
+      objectReference: {fileID: 2100000, guid: 7210ed90bff77714485da388c0b0626a, type: 2}
     - target: {fileID: 8032476272702080558, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: m_Name
       value: PF_CeilingPipes_Light_01 (13)
@@ -25026,6 +25130,54 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 45212108908129824, guid: b734d2477743dc74598a92159c3b0f2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 778035334166584894, guid: b734d2477743dc74598a92159c3b0f2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1149304381673250763, guid: b734d2477743dc74598a92159c3b0f2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374013422145171395, guid: b734d2477743dc74598a92159c3b0f2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2723892295054421558, guid: b734d2477743dc74598a92159c3b0f2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 2912255871224792538, guid: b734d2477743dc74598a92159c3b0f2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3317057690449539572, guid: b734d2477743dc74598a92159c3b0f2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3844542141378757144, guid: b734d2477743dc74598a92159c3b0f2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5228020555727067522, guid: b734d2477743dc74598a92159c3b0f2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5598728336941635703, guid: b734d2477743dc74598a92159c3b0f2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6971523891567199548, guid: b734d2477743dc74598a92159c3b0f2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7314075832222188745, guid: b734d2477743dc74598a92159c3b0f2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7558788839242229623, guid: b734d2477743dc74598a92159c3b0f2e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -59.686665
@@ -25065,6 +25217,10 @@ PrefabInstance:
     - target: {fileID: 7558788839242229623, guid: b734d2477743dc74598a92159c3b0f2e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460711441987616788, guid: b734d2477743dc74598a92159c3b0f2e, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8565809667992413490, guid: b734d2477743dc74598a92159c3b0f2e, type: 3}
       propertyPath: m_Name
@@ -25939,7 +26095,7 @@ PrefabInstance:
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 1117460fbf05f7f4fa2ae865f239135b, type: 2}
+      objectReference: {fileID: 2100000, guid: 7210ed90bff77714485da388c0b0626a, type: 2}
     - target: {fileID: 8032476272702080558, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: m_Name
       value: PF_CeilingPipes_Light_01 (9)
@@ -26471,7 +26627,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1157697256
 Transform:
@@ -27574,7 +27730,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 3.923456e-39}
+  m_BoundingSphereOverride: {x: 2.5381154e+11, y: 7.1449484e+31, z: 5.4213887e-11, w: -1.7014362e+38}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -27955,6 +28111,14 @@ PrefabInstance:
     - target: {fileID: 3995965919922752556, guid: c22b557b4654670439e0f5c8ff9ffa35, type: 3}
       propertyPath: m_Name
       value: PF_Stool_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995965919922752556, guid: c22b557b4654670439e0f5c8ff9ffa35, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7226735530899542632, guid: c22b557b4654670439e0f5c8ff9ffa35, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -28414,6 +28578,14 @@ PrefabInstance:
     - target: {fileID: 1220598517231043397, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
       propertyPath: m_Name
       value: PF_Shelf_02 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4352530178604100203, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440268566667768421, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6922506771305217638, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -30091,6 +30263,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_Letter_03 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7971844248652355441, guid: eb6dcb6a6ae4f404abe131dcef9d9fe9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: eb6dcb6a6ae4f404abe131dcef9d9fe9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -21.534
@@ -30775,6 +30951,10 @@ PrefabInstance:
     - target: {fileID: 4307184086453005727, guid: eb6dcb6a6ae4f404abe131dcef9d9fe9, type: 3}
       propertyPath: m_Name
       value: PF_Letter_03 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971844248652355441, guid: eb6dcb6a6ae4f404abe131dcef9d9fe9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: eb6dcb6a6ae4f404abe131dcef9d9fe9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -31573,9 +31753,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3897430457336116595, guid: 7eaf17aba37c74944a7640f1230f27a9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4687833842921729405, guid: 7eaf17aba37c74944a7640f1230f27a9, type: 3}
       propertyPath: m_Name
       value: PF_DrawerMid_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4687833842921729405, guid: 7eaf17aba37c74944a7640f1230f27a9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -31965,6 +32153,14 @@ PrefabInstance:
     - target: {fileID: 1220598517231043397, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
       propertyPath: m_Name
       value: PF_Shelf_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4352530178604100203, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5440268566667768421, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6922506771305217638, guid: 7af37ef830aac6c43bf803bf9ceecab9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -32731,7 +32927,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 9912
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 1.960383e+31, y: 1.7858523e+31, z: 2.840702e+20, w: 1.6925876e+22}
+  m_BoundingSphereOverride: {x: 3.397913e-39, y: NaN, z: 2.24e-43, w: 8.0457e-41}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -32811,7 +33007,7 @@ PrefabInstance:
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 1117460fbf05f7f4fa2ae865f239135b, type: 2}
+      objectReference: {fileID: 2100000, guid: 7210ed90bff77714485da388c0b0626a, type: 2}
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
@@ -33714,7 +33910,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.3064774e+21, y: 7.3964775e+31, z: 9.5963084e+26, w: 1.0598167e-38}
+  m_BoundingSphereOverride: {x: 2.1160376e-37, y: 2.1748123e-37, z: 2.1895053e-37, w: 2.1601188e-37}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -34499,7 +34695,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 9912
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 4.3064774e+21, y: 7.3964775e+31, z: 9.5963084e+26, w: 1.0598167e-38}
+  m_BoundingSphereOverride: {x: 6.2305017e-37, y: 6.406826e-37, z: 6.406825e-37, w: 6.3480515e-37}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -34786,7 +34982,7 @@ PrefabInstance:
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 1117460fbf05f7f4fa2ae865f239135b, type: 2}
+      objectReference: {fileID: 2100000, guid: 7210ed90bff77714485da388c0b0626a, type: 2}
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
@@ -36712,7 +36908,7 @@ PrefabInstance:
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 1117460fbf05f7f4fa2ae865f239135b, type: 2}
+      objectReference: {fileID: 2100000, guid: 7210ed90bff77714485da388c0b0626a, type: 2}
     - target: {fileID: 8032476272702080558, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: m_Name
       value: PF_CeilingPipes_Light_01 (5)
@@ -36911,6 +37107,14 @@ PrefabInstance:
     - target: {fileID: 3995965919922752556, guid: c22b557b4654670439e0f5c8ff9ffa35, type: 3}
       propertyPath: m_Name
       value: PF_Stool_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 3995965919922752556, guid: c22b557b4654670439e0f5c8ff9ffa35, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7226735530899542632, guid: c22b557b4654670439e0f5c8ff9ffa35, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -38746,6 +38950,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_Letter_04 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7971844248652355441, guid: 976e39273f0451149afff6db9f67bdba, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: 976e39273f0451149afff6db9f67bdba, type: 3}
       propertyPath: m_LocalPosition.x
       value: -21.523
@@ -39045,7 +39253,7 @@ PrefabInstance:
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 1117460fbf05f7f4fa2ae865f239135b, type: 2}
+      objectReference: {fileID: 2100000, guid: 7210ed90bff77714485da388c0b0626a, type: 2}
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
@@ -39865,7 +40073,7 @@ PrefabInstance:
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 1117460fbf05f7f4fa2ae865f239135b, type: 2}
+      objectReference: {fileID: 2100000, guid: 7210ed90bff77714485da388c0b0626a, type: 2}
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
@@ -40512,7 +40720,7 @@ PrefabInstance:
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 1117460fbf05f7f4fa2ae865f239135b, type: 2}
+      objectReference: {fileID: 2100000, guid: 7210ed90bff77714485da388c0b0626a, type: 2}
     - target: {fileID: 8032476272702080558, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: m_Name
       value: PF_CeilingPipes_Light_01 (21)
@@ -40577,7 +40785,7 @@ PrefabInstance:
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 1117460fbf05f7f4fa2ae865f239135b, type: 2}
+      objectReference: {fileID: 2100000, guid: 7210ed90bff77714485da388c0b0626a, type: 2}
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
@@ -41025,6 +41233,10 @@ PrefabInstance:
     - target: {fileID: 4307184086453005727, guid: 976e39273f0451149afff6db9f67bdba, type: 3}
       propertyPath: m_Name
       value: PF_Letter_04 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971844248652355441, guid: 976e39273f0451149afff6db9f67bdba, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: 976e39273f0451149afff6db9f67bdba, type: 3}
       propertyPath: m_LocalPosition.x
@@ -41721,7 +41933,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 9912
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 4.3064774e+21, y: 7.3964775e+31, z: 9.5963084e+26, w: 1.0598167e-38}
+  m_BoundingSphereOverride: {x: 6.9048e-41, y: 0, z: 0, w: 1e-45}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -42320,7 +42532,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 9912
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 4.3064774e+21, y: 7.3964775e+31, z: 9.5963084e+26, w: 1.0598167e-38}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 6.2e-44}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -42453,9 +42665,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3408216977248484223, guid: 568606381f27fec479e94ef11b6289dc, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4687833842921729405, guid: 568606381f27fec479e94ef11b6289dc, type: 3}
       propertyPath: m_Name
       value: PF_DrawerLit_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4687833842921729405, guid: 568606381f27fec479e94ef11b6289dc, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -42888,7 +43108,7 @@ PrefabInstance:
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 1117460fbf05f7f4fa2ae865f239135b, type: 2}
+      objectReference: {fileID: 2100000, guid: 7210ed90bff77714485da388c0b0626a, type: 2}
     - target: {fileID: 8032476272702080558, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: m_Name
       value: PF_CeilingPipes_Light_01 (4)
@@ -42913,6 +43133,10 @@ PrefabInstance:
     - target: {fileID: 4307184086453005727, guid: 22816e2d54e65c648b4dbc4a2f189211, type: 3}
       propertyPath: m_Name
       value: PF_Letter_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7971844248652355441, guid: 22816e2d54e65c648b4dbc4a2f189211, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: 22816e2d54e65c648b4dbc4a2f189211, type: 3}
       propertyPath: m_LocalPosition.x
@@ -44339,6 +44563,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF_Letter_04 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7971844248652355441, guid: 976e39273f0451149afff6db9f67bdba, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 8596904966076986361, guid: 976e39273f0451149afff6db9f67bdba, type: 3}
       propertyPath: m_LocalPosition.x
       value: -33.0801
@@ -45513,7 +45741,7 @@ PrefabInstance:
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 1117460fbf05f7f4fa2ae865f239135b, type: 2}
+      objectReference: {fileID: 2100000, guid: 7210ed90bff77714485da388c0b0626a, type: 2}
     - target: {fileID: 7369424714095477859, guid: c6bbbee9139f7ce4695d8b9aaca818e0, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
@@ -45832,6 +46060,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9143379018124313514, guid: d3013d9fe41ec9d4e8163ec6559f6ad4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -46063,7 +46295,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 9912
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 4.3064774e+21, y: 7.3964775e+31, z: 9.5963084e+26, w: 1.0598167e-38}
+  m_BoundingSphereOverride: {x: 7.530623e-39, y: 7.62246e-39, z: 7.714298e-39, w: 7.714297e-39}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
@@ -48813,9 +49045,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2537102388267028619, guid: d38fc9cd96c0d774c80675558ef60f6d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4687833842921729405, guid: d38fc9cd96c0d774c80675558ef60f6d, type: 3}
       propertyPath: m_Name
       value: PF_StorageUnitBackstage_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4687833842921729405, guid: d38fc9cd96c0d774c80675558ef60f6d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803433227129995856, guid: d38fc9cd96c0d774c80675558ef60f6d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7301303711069717791, guid: d38fc9cd96c0d774c80675558ef60f6d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7756247922614994046, guid: d38fc9cd96c0d774c80675558ef60f6d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
