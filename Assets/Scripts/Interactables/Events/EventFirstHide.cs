@@ -29,5 +29,6 @@ public class EventFirstHide : EventObject
         foreach (var door in doors)
             door.ChangeState(true);
         enabled = false;
+        InformationManager.SetText("Objectif : Recupérer les 3 morceaux de la boite à musique sur la scène", 2);
     }
 }

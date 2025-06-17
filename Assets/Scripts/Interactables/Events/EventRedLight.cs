@@ -26,7 +26,7 @@ public class EventRedLight : EventObject
         
         PlayerRoot.SetRedLight(true);
         
-        InformationManager.SetText("Press [F] to switch light", 2);
+        InformationManager.SetText("Changer de lumiere avec [F], recharger la lampe blanche avec [R]", 2);
         StartCoroutine(Event());
     }
 
@@ -37,6 +37,7 @@ public class EventRedLight : EventObject
         UiManager.SetChaseBorder(true);
         //bruitFakeChase
         yield return new WaitForSeconds(0.5f);
+        InformationManager.SetText("Interagir avec [E]", 2);
         //Son tapper la porte
         
         if(wallClue)
